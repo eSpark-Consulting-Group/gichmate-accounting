@@ -1,0 +1,314 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FlexMold.MVVM.View.Firm"
+        xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls" x:Class="FlexMold.MVVM.View.Firm.FirmDetails"
+        WindowStartupLocation="CenterScreen"
+        mc:Ignorable="d"      
+        Title="FirmDetails" Height="900" Width="1123">
+
+    <Window.Resources>
+        <!-- Label Style -->
+        <Style x:Key="AngledLabelStyle" TargetType="{x:Type TextBlock}">
+            <Setter Property="Foreground" Value="WhiteSmoke"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="TextAlignment" Value="Right"/>
+            <Setter Property="Margin" Value="10,5,0,5"/>
+        </Style>
+
+        <!-- Base Angled TextBox Style -->
+        <Style x:Key="AngledTextBoxStyle" TargetType="{x:Type TextBox}">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="BorderBrush" Value="#FF801336"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding" Value="4"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TextBox}">
+                        <Grid>
+                            <Border Background="{TemplateBinding Background}"
+                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    CornerRadius="4"/>
+                            <Path Data="M0,0 L10,0 L0,10 Z"
+                                  Fill="#FF801336"
+                                  HorizontalAlignment="Left"
+                                  VerticalAlignment="Top"
+                                  Margin="2"/>
+                            <Path Data="M0,10 L10,10 L10,0 Z"
+                                  Fill="#FF801336"
+                                  HorizontalAlignment="Right"
+                                  VerticalAlignment="Bottom"
+                                  Margin="2"/>
+                            <ScrollViewer x:Name="PART_ContentHost" Margin="2"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Common TextBox Style -->
+        <Style x:Key="CommonTextBoxStyle" BasedOn="{StaticResource AngledTextBoxStyle}" TargetType="{x:Type TextBox}">
+            <Setter Property="Width" Value="300"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+        </Style>
+
+        <!-- Angled PasswordBox Style -->
+        <Style x:Key="AngledPasswordBoxStyle" TargetType="{x:Type PasswordBox}">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="BorderBrush" Value="#FF801336"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding" Value="4"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type PasswordBox}">
+                        <Grid>
+                            <Border Background="{TemplateBinding Background}"
+                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    CornerRadius="4"/>
+                            <Path Data="M0,0 L10,0 L0,10 Z"
+                                  Fill="#FF801336"
+                                  HorizontalAlignment="Left"
+                                  VerticalAlignment="Top"
+                                  Margin="2"/>
+                            <Path Data="M0,10 L10,10 L10,0 Z"
+                                  Fill="#FF801336"
+                                  HorizontalAlignment="Right"
+                                  VerticalAlignment="Bottom"
+                                  Margin="2"/>
+                            <ScrollViewer x:Name="PART_ContentHost" Margin="2"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <!-- Common PasswordBox Style -->
+        <Style x:Key="CommonPasswordBoxStyle" BasedOn="{StaticResource AngledPasswordBoxStyle}" TargetType="{x:Type PasswordBox}">
+            <Setter Property="Width" Value="300"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FFEE4540"/>
+                <GradientStop Color="#FF2D142C" Offset="1"/>
+                <GradientStop Color="#FF510A32" Offset="0.565"/>
+                <GradientStop Color="#FFC72C41" Offset="0.157"/>
+                <GradientStop Color="#FF801336" Offset="0.365"/>
+                <GradientStop Color="#FF670E33" Offset="0.426"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="161"/>
+            <ColumnDefinition Width="509"/>
+            <ColumnDefinition Width="450"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Left Sidebar / Branding -->
+        <Grid Grid.Column="0" Margin="0,67,0,10">
+            <StackPanel>
+                <TextBlock Text="Company Details"
+                   FontWeight="Bold"
+                   Style="{StaticResource AngledLabelStyle}"
+                   FontSize="19"
+                   Margin="-10,-54,6,0"
+                   VerticalAlignment="Top"
+                   Height="28"/>
+
+
+                <Expander Header="More Info"
+                  Margin="0,10,0,0"
+                  IsExpanded="False"
+                  Foreground="White"
+                  Background="#20FFFFFF">
+
+                    <StackPanel>
+                        <Expander Header="📍 Location"
+                          Margin="5"
+                          Foreground="White"
+                          Background="#30FFFFFF">
+
+                            <TextBlock Text="Company is based in Karachi, Pakistan."
+                               Foreground="White"
+                               TextWrapping="Wrap"
+                               Margin="10,5"/>
+                        </Expander>
+
+                        <Expander Header="💼 Services"
+                          Margin="5"
+                          Foreground="White"
+                          Background="#30FFFFFF">
+                            <TextBlock Text="We specialize in enterprise-grade WPF and SQL Server applications."
+                               Foreground="White"
+                               TextWrapping="Wrap"
+                               Margin="10,5"/>
+                        </Expander>
+
+                        <Expander Header="📞 Contact"
+                          Margin="5"
+                          Foreground="White"
+                          Background="#30FFFFFF">
+                            <TextBlock Text="Email: info@company.com | Phone: +92-300-1234567"
+                               Foreground="White"
+                               TextWrapping="Wrap"
+                               Margin="10,5"/>
+                        </Expander>
+                    </StackPanel>
+                </Expander>
+            </StackPanel>
+        </Grid>
+
+        <!-- Column 1 -->
+        <Grid Grid.Column="1" Height="786" VerticalAlignment="Center" Margin="10,0,10,0">
+
+            <StackPanel Orientation="Vertical" VerticalAlignment="Top">
+
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Company Name : " Style="{StaticResource AngledLabelStyle}" Width="130"/>
+                    <TextBox Style="{StaticResource CommonTextBoxStyle}" Margin="13"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Place : " Style="{StaticResource AngledLabelStyle}" Width="130"/>
+                    <TextBox Style="{StaticResource CommonTextBoxStyle}" Margin="13"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Address : " Style="{StaticResource AngledLabelStyle}" Width="130"/>
+                    <TextBox Style="{StaticResource CommonTextBoxStyle}" Margin="13" Height="70"  
+                      AcceptsReturn="True"
+                      VerticalScrollBarVisibility="Auto" Text=""/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="State : " Style="{StaticResource AngledLabelStyle}" Width="130"/>
+                    <TextBox Style="{StaticResource CommonTextBoxStyle}" Margin="13"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Country : " Style="{StaticResource AngledLabelStyle}" Width="130"/>
+                    <TextBox Style="{StaticResource CommonTextBoxStyle}" Margin="13"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Phone No : " Style="{StaticResource AngledLabelStyle}" Width="130"/>
+                    <TextBox Style="{StaticResource CommonTextBoxStyle}" Margin="13"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Fax No : " Style="{StaticResource AngledLabelStyle}" Width="130"/>
+                    <TextBox Style="{StaticResource CommonTextBoxStyle}" Margin="13"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Website : " Style="{StaticResource AngledLabelStyle}" Width="130"/>
+                    <TextBox Style="{StaticResource CommonTextBoxStyle}" Margin="13"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Email Address : " Style="{StaticResource AngledLabelStyle}" Width="130"/>
+                    <TextBox Style="{StaticResource CommonTextBoxStyle}" Margin="13"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Type : " Style="{StaticResource AngledLabelStyle}" Width="130"/>
+                    <ComboBox x:Name="MyComboBox" Width="300" Margin="13" Height="30">
+                        <ComboBoxItem Content="Private Ltd"/>
+                        <ComboBoxItem Content="Enterprise"/>
+                        <ComboBoxItem Content="Corporate"/>
+                    </ComboBox>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="GST No : " Style="{StaticResource AngledLabelStyle}" Width="130"/>
+                    <TextBox Style="{StaticResource CommonTextBoxStyle}" Margin="13"/>
+                </StackPanel>
+
+
+
+            </StackPanel>
+        </Grid>
+
+
+
+        <!-- Column 2 -->
+        <Grid Grid.Column="1" Height="843" VerticalAlignment="Top" Margin="492,57,7,0" Grid.ColumnSpan="2">
+
+            <StackPanel Orientation="Vertical" VerticalAlignment="Top">
+
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Bank : " Style="{StaticResource AngledLabelStyle}" Width="130"/>
+                    <TextBox Style="{StaticResource CommonTextBoxStyle}" Margin="13"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Branch : " Style="{StaticResource AngledLabelStyle}" Width="130"/>
+                    <TextBox Style="{StaticResource CommonTextBoxStyle}" Margin="13"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="SWIFT Code : " Style="{StaticResource AngledLabelStyle}" Width="130"/>
+                    <TextBox Style="{StaticResource CommonTextBoxStyle}" Margin="13"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="A/C No : " Style="{StaticResource AngledLabelStyle}" Width="130"/>
+                    <TextBox Style="{StaticResource CommonTextBoxStyle}" Margin="13"/>
+                </StackPanel>
+
+                <Button Content="Save"
+                        Width="150" Height="45" Margin="120,40,150,-44"
+                        FontSize="21" FontWeight="Medium"
+                        Foreground="White"
+                        HorizontalAlignment="Center" >
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FFDC6969"/>
+                            <GradientStop Color="Red" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Button.Background>
+                    <Button.Effect>
+                        <DropShadowEffect/>
+                    </Button.Effect>
+                </Button>
+
+                <Button Content="Clear"
+                        Width="150" Height="45" Margin="300,0,0,0"
+                        FontSize="21" FontWeight="Medium"
+                        Foreground="White"
+                        HorizontalAlignment="Center" >
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FFDC6969"/>
+                            <GradientStop Color="Red" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Button.Background>
+                    <Button.Effect>
+                        <DropShadowEffect/>
+                    </Button.Effect>
+                </Button>
+            </StackPanel>
+            <Button Content="GO TO NEXT PAGE" 
+                    FontSize="30"
+                    HorizontalAlignment="Center" 
+                    Height="44" Margin="0,776,0,0" 
+                    VerticalAlignment="Top" 
+                    Width="278"
+                    Click="Button_Click"/>
+        </Grid>
+      
+    </Grid>
+</Window>
