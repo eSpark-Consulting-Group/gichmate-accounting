@@ -1,0 +1,1506 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="label12.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="panel2.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="cmbBankOthers.Size" type="System.Drawing.Size, System.Drawing">
+    <value>224, 24</value>
+  </data>
+  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;txtCashPaid.Parent" xml:space="preserve">
+    <value>tpCash</value>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>Account :</value>
+  </data>
+  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="btnClear.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS Reference Sans Serif, 9.75pt, style=Bold</value>
+  </data>
+  <data name="ashGradientPanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+    <value>tpCash</value>
+  </data>
+  <data name="cmbBankOthers.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="tabPayments.Location" type="System.Drawing.Point, System.Drawing">
+    <value>144, 49</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>8, 16</value>
+  </data>
+  <data name="&gt;&gt;label15.Name" xml:space="preserve">
+    <value>label15</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>798, 304</value>
+  </data>
+  <data name="tpCash.Size" type="System.Drawing.Size, System.Drawing">
+    <value>423, 160</value>
+  </data>
+  <data name="&gt;&gt;txtCardPaid.Parent" xml:space="preserve">
+    <value>tpCard</value>
+  </data>
+  <data name="btnCashPayment.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="label14.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;label14.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblPaidAmount.Name" xml:space="preserve">
+    <value>lblPaidAmount</value>
+  </data>
+  <data name="&gt;&gt;lblOnlinePayment.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="nkPOS.Location" type="System.Drawing.Point, System.Drawing">
+    <value>559, 20</value>
+  </data>
+  <data name="lblInvoiceAmount.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="tpCard.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="lblOnlinePayment.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="label11.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="lblOnlinePayment.Size" type="System.Drawing.Size, System.Drawing">
+    <value>124, 16</value>
+  </data>
+  <data name="btnOtherPayment.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="&gt;&gt;label15.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tpCash.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>63, 83</value>
+  </data>
+  <data name="txtOtherPaid.WaterMark" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;lblPaidAmount.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="label12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 16</value>
+  </data>
+  <data name="txtCashPaid.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblBalanceAmount.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
+    <value>tpCard</value>
+  </data>
+  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="btnClose.Text" xml:space="preserve">
+    <value>C&amp;lose</value>
+  </data>
+  <data name="txtOtherPaid.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
+    <value>tpCash</value>
+  </data>
+  <data name="&gt;&gt;cmbBankAccount.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="cmbCashAccount.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="btnCashPayment.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
+  </data>
+  <data name="btnOtherPayment.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="txtOtherPaid.Size" type="System.Drawing.Size, System.Drawing">
+    <value>224, 16</value>
+  </data>
+  <data name="lblBalanceAmount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>122, 23</value>
+  </data>
+  <data name="txtCardPaid.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="lblBalanceAmount.TabIndex" type="System.Int32, mscorlib">
+    <value>162</value>
+  </data>
+  <data name="&gt;&gt;txtOtherPaid.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="cmbCashAccount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>224, 24</value>
+  </data>
+  <data name="&gt;&gt;btnEnd.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>63, 83</value>
+  </data>
+  <data name="lblInvoiceAmount.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;label11.Name" xml:space="preserve">
+    <value>label11</value>
+  </data>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>150, 232</value>
+  </data>
+  <data name="btnOK.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lblInvoiceAmount.Type" xml:space="preserve">
+    <value>AshUsercontrol.AshNumericLabel, AshUsercontrol, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lblBalanceAmount.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;cmbCashAccount.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lblInvoiceAmount.TabIndex" type="System.Int32, mscorlib">
+    <value>162</value>
+  </data>
+  <data name="&gt;&gt;txtOtherPaid.Name" xml:space="preserve">
+    <value>txtOtherPaid</value>
+  </data>
+  <data name="&gt;&gt;lblBalanceAmount.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;tpCash.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lblTitle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnOtherPayment.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;lblTitle.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;tpCard.Parent" xml:space="preserve">
+    <value>tabPayments</value>
+  </data>
+  <data name="&gt;&gt;lblPaidAmount.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;txtOtherPaid.Type" xml:space="preserve">
+    <value>AshUsercontrol.AshTextBoxNormal, AshUsercontrol, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;tpOthers.Parent" xml:space="preserve">
+    <value>tabPayments</value>
+  </data>
+  <data name="btnClear.Size" type="System.Drawing.Size, System.Drawing">
+    <value>125, 45</value>
+  </data>
+  <data name="&gt;&gt;btnClose.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPayments.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>101, 16</value>
+  </data>
+  <data name="&gt;&gt;tabPayments.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="txtOtherPaid.Location" type="System.Drawing.Point, System.Drawing">
+    <value>151, 87</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btnClear.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="tpCard.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 25</value>
+  </data>
+  <data name="&gt;&gt;btnOK.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="cmbBankOthers.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;label7.Parent" xml:space="preserve">
+    <value>tpCard</value>
+  </data>
+  <data name="label14.Size" type="System.Drawing.Size, System.Drawing">
+    <value>122, 16</value>
+  </data>
+  <data name="&gt;&gt;btnEnd.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnClose.Location" type="System.Drawing.Point, System.Drawing">
+    <value>285, 14</value>
+  </data>
+  <data name="&gt;&gt;cmbBankAccount.Name" xml:space="preserve">
+    <value>cmbBankAccount</value>
+  </data>
+  <data name="nkPOS.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>138, 18</value>
+  </data>
+  <data name="&gt;&gt;btnCashPayment.Name" xml:space="preserve">
+    <value>btnCashPayment</value>
+  </data>
+  <data name="lblBalanceAmount.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11pt, style=Bold</value>
+  </data>
+  <data name="tpCash.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>112, 16</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>AshFramework.BaseForm, AshFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;label14.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="label4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS Reference Sans Serif, 9.75pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;ashGradientPanel1.Name" xml:space="preserve">
+    <value>ashGradientPanel1</value>
+  </data>
+  <data name="&gt;&gt;ashGradientPanel1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;btnOtherPayment.Parent" xml:space="preserve">
+    <value>ashGradientPanel1</value>
+  </data>
+  <data name="label11.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 16</value>
+  </data>
+  <data name="btnOtherPayment.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 176</value>
+  </data>
+  <data name="btnCardPayment.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+</value>
+  </data>
+  <data name="&gt;&gt;tpCard.Name" xml:space="preserve">
+    <value>tpCard</value>
+  </data>
+  <data name="&gt;&gt;btnEnd.Name" xml:space="preserve">
+    <value>btnEnd</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="label15.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;txtCashPaid.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="txtCardPaid.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS Reference Sans Serif, 9.75pt</value>
+  </data>
+  <data name="tpCard.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label11.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label15.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;btnClear.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblPaidAmount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>141, 39</value>
+  </data>
+  <data name="&gt;&gt;tpCash.Name" xml:space="preserve">
+    <value>tpCash</value>
+  </data>
+  <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnOtherPayment.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+</value>
+  </data>
+  <data name="tpOthers.Text" xml:space="preserve">
+    <value>Others</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>Card Payment</value>
+  </data>
+  <data name="label8.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label12.Location" type="System.Drawing.Point, System.Drawing">
+    <value>63, 83</value>
+  </data>
+  <data name="&gt;&gt;label14.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="label12.Text" xml:space="preserve">
+    <value>Payment :</value>
+  </data>
+  <data name="&gt;&gt;nkPOS.Name" xml:space="preserve">
+    <value>nkPOS</value>
+  </data>
+  <data name="tabPayments.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>tpCash</value>
+  </data>
+  <data name="label11.Location" type="System.Drawing.Point, System.Drawing">
+    <value>65, 60</value>
+  </data>
+  <data name="nkPOS.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="lblTitle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 8</value>
+  </data>
+  <data name="&gt;&gt;lblPaidAmount.Type" xml:space="preserve">
+    <value>AshUsercontrol.AshNumericLabel, AshUsercontrol, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cmbCashAccount.Name" xml:space="preserve">
+    <value>cmbCashAccount</value>
+  </data>
+  <data name="btnOtherPayment.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;cmbBankAccount.Type" xml:space="preserve">
+    <value>AshUsercontrol.AshComboBox, AshUsercontrol, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lblBalanceAmount.Type" xml:space="preserve">
+    <value>AshUsercontrol.AshNumericLabel, AshUsercontrol, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;btnOtherPayment.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btnOtherPayment.Name" xml:space="preserve">
+    <value>btnOtherPayment</value>
+  </data>
+  <data name="btnCardPayment.Size" type="System.Drawing.Size, System.Drawing">
+    <value>148, 70</value>
+  </data>
+  <data name="btnCardPayment.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>114, 16</value>
+  </data>
+  <data name="&gt;&gt;label5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblOnlinePayment.Name" xml:space="preserve">
+    <value>lblOnlinePayment</value>
+  </data>
+  <data name="&gt;&gt;label8.Name" xml:space="preserve">
+    <value>label8</value>
+  </data>
+  <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>65, 60</value>
+  </data>
+  <data name="btnCashPayment.Size" type="System.Drawing.Size, System.Drawing">
+    <value>148, 70</value>
+  </data>
+  <data name="&gt;&gt;label15.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="txtOtherPaid.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="cmbBankAccount.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="tpCard.Text" xml:space="preserve">
+    <value>Card</value>
+  </data>
+  <data name="label14.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 18</value>
+  </data>
+  <data name="txtCardPaid.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="txtCashPaid.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS Reference Sans Serif, 9.75pt</value>
+  </data>
+  <data name="&gt;&gt;tabPayments.Name" xml:space="preserve">
+    <value>tabPayments</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="label7.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;label7.Name" xml:space="preserve">
+    <value>label7</value>
+  </data>
+  <data name="txtCashPaid.Location" type="System.Drawing.Point, System.Drawing">
+    <value>151, 87</value>
+  </data>
+  <data name="&gt;&gt;btnClear.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="lblPaidAmount.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblTitle.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;btnClose.Name" xml:space="preserve">
+    <value>btnClose</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Cash Payment</value>
+  </data>
+  <data name="&gt;&gt;btnCashPayment.Parent" xml:space="preserve">
+    <value>ashGradientPanel1</value>
+  </data>
+  <data name="btnCashPayment.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 29</value>
+  </data>
+  <data name="lblTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>98, 24</value>
+  </data>
+  <data name="&gt;&gt;btnClear.Name" xml:space="preserve">
+    <value>btnClear</value>
+  </data>
+  <data name="btnCashPayment.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+</value>
+  </data>
+  <data name="&gt;&gt;btnOK.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label12.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cmbBankOthers.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>411, 67</value>
+  </data>
+  <data name="lblPaidAmount.Text" xml:space="preserve">
+    <value>0.00</value>
+  </data>
+  <data name="label7.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;lblTitle.Name" xml:space="preserve">
+    <value>lblTitle</value>
+  </data>
+  <data name="cmbBankAccount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>151, 56</value>
+  </data>
+  <data name="&gt;&gt;label11.Parent" xml:space="preserve">
+    <value>tpOthers</value>
+  </data>
+  <data name="lblInvoiceAmount.Text" xml:space="preserve">
+    <value>0.00</value>
+  </data>
+  <data name="label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="cmbBankAccount.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnCashPayment.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 16</value>
+  </data>
+  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>65, 60</value>
+  </data>
+  <data name="lblTitle.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS Reference Sans Serif, 14.25pt, style=Bold, Underline</value>
+  </data>
+  <data name="label4.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="lblInvoiceAmount.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="btnCashPayment.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;btnCashPayment.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 16</value>
+  </data>
+  <data name="&gt;&gt;btnCashPayment.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;nkPOS.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtCashPaid.Type" xml:space="preserve">
+    <value>AshUsercontrol.AshTextBoxNormal, AshUsercontrol, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="txtCashPaid.Size" type="System.Drawing.Size, System.Drawing">
+    <value>224, 16</value>
+  </data>
+  <data name="&gt;&gt;btnEnd.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="txtCashPaid.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="btnCardPayment.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="&gt;&gt;txtCardPaid.Type" xml:space="preserve">
+    <value>AshUsercontrol.AshTextBoxNormal, AshUsercontrol, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="btnClear.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;label11.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Paid Amount :</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Payment :</value>
+  </data>
+  <data name="&gt;&gt;btnCardPayment.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="txtCashPaid.WaterMark" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="btnOtherPayment.Size" type="System.Drawing.Size, System.Drawing">
+    <value>148, 70</value>
+  </data>
+  <data name="label15.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="cmbBankAccount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>224, 24</value>
+  </data>
+  <data name="label3.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblPaidAmount.TabIndex" type="System.Int32, mscorlib">
+    <value>162</value>
+  </data>
+  <data name="label11.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label8.Text" xml:space="preserve">
+    <value>Payment :</value>
+  </data>
+  <data name="lblInvoiceAmount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>119, 23</value>
+  </data>
+  <data name="tabPayments.Size" type="System.Drawing.Size, System.Drawing">
+    <value>431, 189</value>
+  </data>
+  <data name="&gt;&gt;nkPOS.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="btnClear.Location" type="System.Drawing.Point, System.Drawing">
+    <value>149, 14</value>
+  </data>
+  <data name="ashGradientPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 41</value>
+  </data>
+  <data name="&gt;&gt;btnOK.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="label14.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;ashGradientPanel1.Type" xml:space="preserve">
+    <value>AshUsercontrol.AshGradientPanel, AshUsercontrol, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="label8.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tpCash.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 25</value>
+  </data>
+  <data name="label15.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 16</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;tpOthers.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tpOthers.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="&gt;&gt;btnOK.Name" xml:space="preserve">
+    <value>btnOK</value>
+  </data>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>425, 73</value>
+  </data>
+  <data name="&gt;&gt;lblOnlinePayment.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;tpCash.Parent" xml:space="preserve">
+    <value>tabPayments</value>
+  </data>
+  <data name="btnCardPayment.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="lblTitle.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;cmbBankOthers.Name" xml:space="preserve">
+    <value>cmbBankOthers</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>155, 20</value>
+  </data>
+  <data name="txtOtherPaid.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS Reference Sans Serif, 9.75pt</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tpOthers.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 25</value>
+  </data>
+  <data name="&gt;&gt;label12.Parent" xml:space="preserve">
+    <value>tpOthers</value>
+  </data>
+  <data name="lblOnlinePayment.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;btnClose.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;tabPayments.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tpCard.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblTitle.Text" xml:space="preserve">
+    <value>Payment</value>
+  </data>
+  <data name="lblOnlinePayment.Location" type="System.Drawing.Point, System.Drawing">
+    <value>155, 20</value>
+  </data>
+  <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>150, 19</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>Account :</value>
+  </data>
+  <data name="lblOnlinePayment.Text" xml:space="preserve">
+    <value>Online Payment</value>
+  </data>
+  <data name="&gt;&gt;btnOtherPayment.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>POSCashPayment</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS Reference Sans Serif, 9.75pt</value>
+  </data>
+  <data name="lblPaidAmount.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 11pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="btnCashPayment.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="btnOK.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 14</value>
+  </data>
+  <data name="btnCardPayment.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt, style=Bold</value>
+  </data>
+  <data name="tpCash.Text" xml:space="preserve">
+    <value>Cash</value>
+  </data>
+  <data name="&gt;&gt;label12.Name" xml:space="preserve">
+    <value>label12</value>
+  </data>
+  <data name="label5.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="lblBalanceAmount.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;tpCard.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label5.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;label12.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;lblInvoiceAmount.Name" xml:space="preserve">
+    <value>lblInvoiceAmount</value>
+  </data>
+  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 16</value>
+  </data>
+  <data name="txtOtherPaid.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;ashGradientPanel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="txtCashPaid.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;txtOtherPaid.Parent" xml:space="preserve">
+    <value>tpOthers</value>
+  </data>
+  <data name="&gt;&gt;btnClose.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="txtCardPaid.Size" type="System.Drawing.Size, System.Drawing">
+    <value>224, 16</value>
+  </data>
+  <data name="&gt;&gt;nkPOS.Type" xml:space="preserve">
+    <value>AshUsercontrol.DashboardPOSKeyboard, AshUsercontrol, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="btnClose.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="lblOnlinePayment.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS Reference Sans Serif, 9.75pt, style=Bold</value>
+  </data>
+  <data name="btnOK.Text" xml:space="preserve">
+    <value>&amp;OK</value>
+  </data>
+  <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;panel2.Name" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;cmbCashAccount.Type" xml:space="preserve">
+    <value>AshUsercontrol.AshComboBox, AshUsercontrol, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="cmbCashAccount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>151, 56</value>
+  </data>
+  <data name="label11.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;cmbBankAccount.Parent" xml:space="preserve">
+    <value>tpCard</value>
+  </data>
+  <data name="&gt;&gt;txtCardPaid.Name" xml:space="preserve">
+    <value>txtCardPaid</value>
+  </data>
+  <data name="label12.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="label15.Text" xml:space="preserve">
+    <value>Balance Amount :</value>
+  </data>
+  <data name="&gt;&gt;lblInvoiceAmount.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="ashGradientPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 263</value>
+  </data>
+  <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="cmbBankOthers.Location" type="System.Drawing.Point, System.Drawing">
+    <value>151, 56</value>
+  </data>
+  <data name="&gt;&gt;panel2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtCashPaid.Name" xml:space="preserve">
+    <value>txtCashPaid</value>
+  </data>
+  <data name="tpOthers.Size" type="System.Drawing.Size, System.Drawing">
+    <value>423, 160</value>
+  </data>
+  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;tpOthers.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;cmbCashAccount.Parent" xml:space="preserve">
+    <value>tpCash</value>
+  </data>
+  <data name="nkPOS.Size" type="System.Drawing.Size, System.Drawing">
+    <value>235, 284</value>
+  </data>
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnOtherPayment.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;lblTitle.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnCardPayment.Parent" xml:space="preserve">
+    <value>ashGradientPanel1</value>
+  </data>
+  <data name="&gt;&gt;lblInvoiceAmount.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="lblInvoiceAmount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 39</value>
+  </data>
+  <data name="tpCard.Size" type="System.Drawing.Size, System.Drawing">
+    <value>423, 160</value>
+  </data>
+  <data name="&gt;&gt;txtCardPaid.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="lblOnlinePayment.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="btnOK.Size" type="System.Drawing.Size, System.Drawing">
+    <value>125, 45</value>
+  </data>
+  <data name="tpOthers.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;btnCardPayment.Name" xml:space="preserve">
+    <value>btnCardPayment</value>
+  </data>
+  <data name="lblPaidAmount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>122, 23</value>
+  </data>
+  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS Reference Sans Serif, 9.75pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;label7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label4.Name" xml:space="preserve">
+    <value>label4</value>
+  </data>
+  <data name="btnCardPayment.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="txtCardPaid.WaterMark" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="btnEnd.Location" type="System.Drawing.Point, System.Drawing">
+    <value>448, -3</value>
+  </data>
+  <data name="btnOK.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS Reference Sans Serif, 9.75pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="txtCardPaid.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;lblOnlinePayment.Parent" xml:space="preserve">
+    <value>tpOthers</value>
+  </data>
+  <data name="tpCash.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;label5.Name" xml:space="preserve">
+    <value>label5</value>
+  </data>
+  <data name="&gt;&gt;btnCardPayment.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;label8.Parent" xml:space="preserve">
+    <value>tpCard</value>
+  </data>
+  <data name="&gt;&gt;lblBalanceAmount.Name" xml:space="preserve">
+    <value>lblBalanceAmount</value>
+  </data>
+  <data name="&gt;&gt;tpOthers.Name" xml:space="preserve">
+    <value>tpOthers</value>
+  </data>
+  <data name="txtCardPaid.Location" type="System.Drawing.Point, System.Drawing">
+    <value>151, 87</value>
+  </data>
+  <data name="nkPOS.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>155, 20</value>
+  </data>
+  <data name="btnOtherPayment.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="cmbCashAccount.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnClear.Text" xml:space="preserve">
+    <value>&amp;Clear</value>
+  </data>
+  <data name="btnOK.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnClear.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnClose.Size" type="System.Drawing.Size, System.Drawing">
+    <value>125, 45</value>
+  </data>
+  <data name="label15.Size" type="System.Drawing.Size, System.Drawing">
+    <value>125, 16</value>
+  </data>
+  <data name="label14.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label11.Text" xml:space="preserve">
+    <value>Account :</value>
+  </data>
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblBalanceAmount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>269, 39</value>
+  </data>
+  <data name="label15.Location" type="System.Drawing.Point, System.Drawing">
+    <value>266, 18</value>
+  </data>
+  <data name="label14.Text" xml:space="preserve">
+    <value>Invoice Amount :</value>
+  </data>
+  <data name="btnClose.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="lblBalanceAmount.Text" xml:space="preserve">
+    <value>0.00</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="btnCardPayment.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 102</value>
+  </data>
+  <data name="&gt;&gt;cmbBankOthers.Parent" xml:space="preserve">
+    <value>tpOthers</value>
+  </data>
+  <data name="btnClose.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS Reference Sans Serif, 9.75pt, style=Bold</value>
+  </data>
+  <data name="label12.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;cmbBankOthers.Type" xml:space="preserve">
+    <value>AshUsercontrol.AshComboBox, AshUsercontrol, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="lblPaidAmount.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;label14.Name" xml:space="preserve">
+    <value>label14</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+</root>

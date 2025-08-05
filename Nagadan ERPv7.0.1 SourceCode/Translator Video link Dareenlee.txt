@@ -1,0 +1,11 @@
+https://www.youtube.com/watch?v=I0l0vbOOSso&ab_channel=DarrenLee
+
+API link
+http://api.microsofttranslator.com/V1/soap.svc
+
+Leon_97@hotmail.fr
+
+
+
+Visual Studio Resx. problem
+https://docs.telerik.com/devtools/winforms/knowledge-base/unblock-resx-files-downloaded-in-source-code

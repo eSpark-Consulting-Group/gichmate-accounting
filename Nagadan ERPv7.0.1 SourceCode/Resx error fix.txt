@@ -1,0 +1,5 @@
+Opn Terminal and type below the command
+
+Get-ChildItem *.resx -Recurse | Unblock-File
+
+https://docs.telerik.com/devtools/winforms/knowledge-base/unblock-resx-files-downloaded-in-source-code

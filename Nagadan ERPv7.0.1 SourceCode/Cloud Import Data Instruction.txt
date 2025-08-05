@@ -1,0 +1,6 @@
+1. Login Sql Server Management studio Authentication Mode
+2. click right btn PSVAT db
+3. Task > Export Data Tier Application > Choose the path and save it
+4. Login Azure > Import Data Tier Application Choose the path and save it
+
+https://www.youtube.com/watch?v=m9QbTIPxiok&ab_channel=ArifurRahman

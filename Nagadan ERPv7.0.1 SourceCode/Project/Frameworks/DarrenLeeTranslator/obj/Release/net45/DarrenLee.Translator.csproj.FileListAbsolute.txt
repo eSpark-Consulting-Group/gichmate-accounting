@@ -1,0 +1,7 @@
+F:\Code Canyon\Ash Pro Dlls Etc\DarrenLeeTranslator\bin\Release\net45\DarrenLee.Translator.dll
+F:\Code Canyon\Ash Pro Dlls Etc\DarrenLeeTranslator\bin\Release\net45\DarrenLee.Translator.pdb
+F:\Code Canyon\Ash Pro Dlls Etc\DarrenLeeTranslator\obj\Release\net45\DarrenLee.Translator.csproj.AssemblyReference.cache
+F:\Code Canyon\Ash Pro Dlls Etc\DarrenLeeTranslator\obj\Release\net45\DarrenLee.Translator.GeneratedMSBuildEditorConfig.editorconfig
+F:\Code Canyon\Ash Pro Dlls Etc\DarrenLeeTranslator\obj\Release\net45\DarrenLee.Translator.csproj.CoreCompileInputs.cache
+F:\Code Canyon\Ash Pro Dlls Etc\DarrenLeeTranslator\obj\Release\net45\DarrenLee.Translator.dll
+F:\Code Canyon\Ash Pro Dlls Etc\DarrenLeeTranslator\obj\Release\net45\DarrenLee.Translator.pdb

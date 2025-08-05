@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)system.runtime.compilerservices.unsafe\6.1.0\buildTransitive\net461\System.Runtime.CompilerServices.Unsafe.targets" Condition="Exists('$(NuGetPackageRoot)system.runtime.compilerservices.unsafe\6.1.0\buildTransitive\net461\System.Runtime.CompilerServices.Unsafe.targets')" />
+    <Import Project="$(NuGetPackageRoot)system.numerics.vectors\4.6.0\buildTransitive\net461\System.Numerics.Vectors.targets" Condition="Exists('$(NuGetPackageRoot)system.numerics.vectors\4.6.0\buildTransitive\net461\System.Numerics.Vectors.targets')" />
+    <Import Project="$(NuGetPackageRoot)system.buffers\4.6.0\buildTransitive\net461\System.Buffers.targets" Condition="Exists('$(NuGetPackageRoot)system.buffers\4.6.0\buildTransitive\net461\System.Buffers.targets')" />
+    <Import Project="$(NuGetPackageRoot)system.memory\4.6.0\buildTransitive\net461\System.Memory.targets" Condition="Exists('$(NuGetPackageRoot)system.memory\4.6.0\buildTransitive\net461\System.Memory.targets')" />
+    <Import Project="$(NuGetPackageRoot)system.text.encodings.web\9.0.6\buildTransitive\net461\System.Text.Encodings.Web.targets" Condition="Exists('$(NuGetPackageRoot)system.text.encodings.web\9.0.6\buildTransitive\net461\System.Text.Encodings.Web.targets')" />
+    <Import Project="$(NuGetPackageRoot)system.io.pipelines\9.0.6\buildTransitive\net461\System.IO.Pipelines.targets" Condition="Exists('$(NuGetPackageRoot)system.io.pipelines\9.0.6\buildTransitive\net461\System.IO.Pipelines.targets')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.bcl.asyncinterfaces\9.0.6\buildTransitive\net461\Microsoft.Bcl.AsyncInterfaces.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.bcl.asyncinterfaces\9.0.6\buildTransitive\net461\Microsoft.Bcl.AsyncInterfaces.targets')" />
+    <Import Project="$(NuGetPackageRoot)system.text.json\9.0.6\buildTransitive\net461\System.Text.Json.targets" Condition="Exists('$(NuGetPackageRoot)system.text.json\9.0.6\buildTransitive\net461\System.Text.Json.targets')" />
+    <Import Project="$(NuGetPackageRoot)system.net.http.json\9.0.6\buildTransitive\net461\System.Net.Http.Json.targets" Condition="Exists('$(NuGetPackageRoot)system.net.http.json\9.0.6\buildTransitive\net461\System.Net.Http.Json.targets')" />
+    <Import Project="$(NuGetPackageRoot)system.diagnostics.diagnosticsource\8.0.0\buildTransitive\net461\System.Diagnostics.DiagnosticSource.targets" Condition="Exists('$(NuGetPackageRoot)system.diagnostics.diagnosticsource\8.0.0\buildTransitive\net461\System.Diagnostics.DiagnosticSource.targets')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.netframework.referenceassemblies.net461\1.0.3\build\Microsoft.NETFramework.ReferenceAssemblies.net461.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.netframework.referenceassemblies.net461\1.0.3\build\Microsoft.NETFramework.ReferenceAssemblies.net461.targets')" />
+  </ImportGroup>
+</Project>

@@ -1,0 +1,684 @@
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <AssemblyName>The360Pro</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <OutputType>WinExe</OutputType>
+    <UseWindowsForms>True</UseWindowsForms>
+    <TargetFramework>net461</TargetFramework>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>8.0</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>nagadanpro_M2D_icon.ico</ApplicationIcon>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <RootNamespace />
+    <PackageIcon>ico_logo.png</PackageIcon>
+    <PackageIconUrl />
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="obj\**" />
+    <EmbeddedResource Remove="obj\**" />
+    <None Remove="obj\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Ashpro\ReportForms.rptPendingKOT.rdlc" />
+    <None Remove="Ashpro\ReportForms.rptVoidKOTReports.rdlc" />
+    <None Remove="The360Pro.exe.licenses" />
+    <Content Include="bin\Debug\net461\amd64\Microsoft.VC90.CRT\README_ENU.txt" />
+    <Content Include="bin\Debug\net461\ashpro-2020-firebase-adminsdk-bi046-2a9ab64680.json" />
+    <Content Include="bin\Debug\net461\debug\20210528_1724 Connect Failed.txt" />
+    <Content Include="bin\Debug\net461\debug\20210528_6280 Connect Failed.txt" />
+    <Content Include="bin\Debug\net461\debug\20210529_10204 Connect Failed.txt" />
+    <Content Include="bin\Debug\net461\debug\20210529_10960 Connect Failed.txt" />
+    <Content Include="bin\Debug\net461\debug\20210529_2360 Connect Failed.txt" />
+    <Content Include="bin\Debug\net461\debug\20210529_9240 Connect Failed.txt" />
+    <Content Include="bin\Debug\net461\debug\20210530_10836 Connect Failed.txt" />
+    <Content Include="bin\Debug\net461\debug\20210530_13628 Connect Failed.txt" />
+    <Content Include="bin\Debug\net461\debug\20210530_9748 Connect Failed.txt" />
+    <Content Include="bin\Debug\net461\debug\20210601_4412 Connect Failed.txt" />
+    <Content Include="bin\Debug\net461\debug\20210604_10384 Connect Failed.txt" />
+    <Content Include="bin\Debug\net461\debug\20210604_11688 Connect Failed.txt" />
+    <Content Include="bin\Debug\net461\debug\20210816_2292 Connect Failed.txt" />
+    <Content Include="bin\Debug\net461\Form\A4 Delivery Note.jpg" />
+    <Content Include="bin\Debug\net461\Form\A4 simple Purchase Return.jpg" />
+    <Content Include="bin\Debug\net461\Form\A4 simple sales.jpg" />
+    <Content Include="bin\Debug\net461\Form\Bill-Invoice -VAT-A4 fFull.jpg" />
+    <Content Include="bin\Debug\net461\Form\Bill-Invoice 4-GSTA4.jpg" />
+    <Content Include="bin\Debug\net461\Form\Bill-Invoice GSTA5Half.jpg" />
+    <Content Include="bin\Debug\net461\Form\Bill-Invoice VATA4Half.jpg" />
+    <Content Include="bin\Debug\net461\Form\Bill-Invoice-GSTA4 -.jpg" />
+    <Content Include="bin\Debug\net461\Form\Delivery Note - A4 sp.png" />
+    <Content Include="bin\Debug\net461\Form\Form.png" />
+    <Content Include="bin\Debug\net461\Form\VAT A4 invoice.jpg" />
+    <Content Include="bin\Debug\net461\ico logo.ico" />
+    <Content Include="bin\Debug\net461\ico logo1.ico" />
+    <Content Include="bin\Debug\net461\Images\Dashboard.JPG" />
+    <Content Include="bin\Debug\net461\Images\Splash-Screen.JPG" />
+    <Content Include="bin\Debug\net461\Images\SplashScreen.png" />
+    <Content Include="bin\Debug\net461\Images\wall_demo.JPG" />
+    <Content Include="bin\Debug\net461\KeaniaOne-Regular.ttf" />
+    <Content Include="bin\Debug\net461\LibreBarcode39-Regular.ttf" />
+    <Content Include="bin\Debug\net461\Microsoft.Bcl.AsyncInterfaces.xml" />
+    <Content Include="bin\Debug\net461\Microsoft.IO.RecyclableMemoryStream.xml" />
+    <Content Include="bin\Debug\net461\Microsoft.Threading.Tasks.Extensions.Desktop.xml" />
+    <Content Include="bin\Debug\net461\Microsoft.Threading.Tasks.Extensions.xml" />
+    <Content Include="bin\Debug\net461\Microsoft.Threading.Tasks.xml" />
+    <Content Include="bin\Debug\net461\Newtonsoft.Json.xml" />
+    <Content Include="bin\Debug\net461\PLU_0.txt" />
+    <Content Include="bin\Debug\net461\String.txt" />
+    <Content Include="bin\Debug\net461\System.Buffers.xml" />
+    <Content Include="bin\Debug\net461\System.Collections.Immutable.xml" />
+    <Content Include="bin\Debug\net461\System.Diagnostics.DiagnosticSource.xml" />
+    <Content Include="bin\Debug\net461\System.Linq.Async.xml" />
+    <Content Include="bin\Debug\net461\System.Memory.xml" />
+    <Content Include="bin\Debug\net461\System.Net.Http.Extensions.xml" />
+    <Content Include="bin\Debug\net461\System.Net.Http.Primitives.xml" />
+    <Content Include="bin\Debug\net461\System.Numerics.Vectors.xml" />
+    <Content Include="bin\Debug\net461\System.Runtime.CompilerServices.Unsafe.xml" />
+    <Content Include="bin\Debug\net461\System.Text.Encodings.Web.xml" />
+    <Content Include="bin\Debug\net461\System.Text.Json.xml" />
+    <Content Include="bin\Debug\net461\System.Threading.Tasks.Extensions.xml" />
+    <Content Include="bin\Debug\net461\System.ValueTuple.xml" />
+    <Content Include="bin\Debug\net461\x86\Microsoft.VC90.CRT\README_ENU.txt" />
+    <Content Include="bin\Debug\net461\zxing.presentation.xml" />
+    <Content Include="bin\Debug\net461\zxing.xml" />
+    <Content Include="bin\Release\net461\Newtonsoft.Json.xml" />
+    <Content Include="bin\Release\net461\zxing.xml" />
+    <EmbeddedResource Include="Ashpro\ReportForms.rptPendingKOT.rdlc" />
+    <EmbeddedResource Include="Ashpro\ReportForms.rptVoidKOTReports.rdlc" />
+    <EmbeddedResource Include="The360Pro.exe.licenses" />
+    <None Include="bin\Debug\net461\12\MiniReportForm\rptCashClosePOS.rdlc" />
+    <None Include="bin\Debug\net461\12\MiniReportForm\rptCashFlow.rdlc" />
+    <None Include="bin\Debug\net461\12\MiniReportForm\rptCloseCash.rdlc" />
+    <None Include="bin\Debug\net461\12\MiniReportForm\rptCloseCashNew.rdlc" />
+    <None Include="bin\Debug\net461\12\MiniReportForm\rptCustomerItemSalesReportPOS.rdlc" />
+    <None Include="bin\Debug\net461\12\MiniReportForm\rptCustomerLedgerReportPOS.rdlc" />
+    <None Include="bin\Debug\net461\12\MiniReportForm\rptCustomerReportPOS.rdlc" />
+    <None Include="bin\Debug\net461\12\MiniReportForm\rptCustomerSalesReportPOS.rdlc" />
+    <None Include="bin\Debug\net461\12\MiniReportForm\rptPOSPayment.rdlc" />
+    <None Include="bin\Debug\net461\12\MiniReportForm\rptProductDifferencePOS.rdlc" />
+    <None Include="bin\Debug\net461\12\MiniReportForm\rptProductGroupSales.rdlc" />
+    <None Include="bin\Debug\net461\12\MiniReportForm\rptProductProfitSalePOS.rdlc" />
+    <None Include="bin\Debug\net461\12\MiniReportForm\rptProductSaleCloseCash.rdlc" />
+    <None Include="bin\Debug\net461\12\MiniReportForm\rptProductStockReportPOS.rdlc" />
+    <None Include="bin\Debug\net461\12\MiniReportForm\rptProGroupForCashClose.rdlc" />
+    <None Include="bin\Debug\net461\12\MiniReportForm\rptProwisePurchasePO.rdlc" />
+    <None Include="bin\Debug\net461\12\MiniReportForm\rptSaleByProductPOS.rdlc" />
+    <None Include="bin\Debug\net461\12\MiniReportForm\rptSalesSummaryReportPOS.rdlc" />
+    <None Include="bin\Debug\net461\12\MiniReportForm\rptSalesTaxReportPOS.rdlc" />
+    <None Include="bin\Debug\net461\12\MiniReportForm\rptStockAndProfitPOS.rdlc" />
+    <None Include="bin\Debug\net461\12\MiniReportForm\rptSupplierItemPurchaseReportPOS.rdlc" />
+    <None Include="bin\Debug\net461\12\MiniReportForm\rptSupplierLedgerPOS.rdlc" />
+    <None Include="bin\Debug\net461\12\MiniReportForm\rptSupplierPurchaseReportPOS.rdlc" />
+    <None Include="bin\Debug\net461\12\MiniReportForm\rptSupplierReportPOS.rdlc" />
+    <None Include="bin\Debug\net461\12\MiniReportForm\rptTaxCategoryReportPOS.rdlc" />
+    <None Include="bin\Debug\net461\12\MiniReportForm\rptTransactionReportPOS.rdlc" />
+    <None Include="bin\Debug\net461\12\MiniReportForm\rptUserSales.rdlc" />
+    <None Include="bin\Debug\net461\12\ReportForms\Barcode.rdlc" />
+    <None Include="bin\Debug\net461\12\ReportForms\rptCashClosePOS.rdlc" />
+    <None Include="bin\Debug\net461\12\ReportForms\rptCashFlow.rdlc" />
+    <None Include="bin\Debug\net461\12\ReportForms\rptCloseCash.rdlc" />
+    <None Include="bin\Debug\net461\12\ReportForms\rptCloseCashNew.rdlc" />
+    <None Include="bin\Debug\net461\12\ReportForms\rptCustomerItemSalesReportPOS.rdlc" />
+    <None Include="bin\Debug\net461\12\ReportForms\rptCustomerLedgerReportPOS.rdlc" />
+    <None Include="bin\Debug\net461\12\ReportForms\rptCustomerReportPOS.rdlc" />
+    <None Include="bin\Debug\net461\12\ReportForms\rptCustomerSalesReportPOS.rdlc" />
+    <None Include="bin\Debug\net461\12\ReportForms\rptPendingKOT.rdlc" />
+    <None Include="bin\Debug\net461\12\ReportForms\rptPOSPayment.rdlc" />
+    <None Include="bin\Debug\net461\12\ReportForms\rptPOSPrintWithInvoiceNo.rdlc" />
+    <None Include="bin\Debug\net461\12\ReportForms\rptProductDifferencePOS.rdlc" />
+    <None Include="bin\Debug\net461\12\ReportForms\rptProductGroupSales.rdlc" />
+    <None Include="bin\Debug\net461\12\ReportForms\rptProductOpeningStockReport.rdlc" />
+    <None Include="bin\Debug\net461\12\ReportForms\rptProductProfitSalePOS.rdlc" />
+    <None Include="bin\Debug\net461\12\ReportForms\rptProductStockReportPOS.rdlc" />
+    <None Include="bin\Debug\net461\12\ReportForms\rptProGroupForCashClose.rdlc" />
+    <None Include="bin\Debug\net461\12\ReportForms\rptProwisePurchasePO.rdlc" />
+    <None Include="bin\Debug\net461\12\ReportForms\rptSaleByProductPOS.rdlc" />
+    <None Include="bin\Debug\net461\12\ReportForms\rptSalesSummaryReportPOS.rdlc" />
+    <None Include="bin\Debug\net461\12\ReportForms\rptSalesTaxReportPOS.rdlc" />
+    <None Include="bin\Debug\net461\12\ReportForms\rptStockAndProfitPOS.rdlc" />
+    <None Include="bin\Debug\net461\12\ReportForms\rptSupplierItemPurchaseReportPOS.rdlc" />
+    <None Include="bin\Debug\net461\12\ReportForms\rptSupplierLedgerPOS.rdlc" />
+    <None Include="bin\Debug\net461\12\ReportForms\rptSupplierPurchaseReportPOS.rdlc" />
+    <None Include="bin\Debug\net461\12\ReportForms\rptSupplierReportPOS.rdlc" />
+    <None Include="bin\Debug\net461\12\ReportForms\rptTaxCategoryReportPOS.rdlc" />
+    <None Include="bin\Debug\net461\12\ReportForms\rptTransactionReportPOS.rdlc" />
+    <None Include="bin\Debug\net461\12\ReportForms\rptUserSales.rdlc" />
+    <None Include="bin\Debug\net461\12\ReportForms\rptVatSubmissionAr.rdlc" />
+    <None Include="bin\Debug\net461\12\ReportForms\rptVatSubmissionEn.rdlc" />
+    <None Include="bin\Debug\net461\12\ReportForms\rptVoidKOTReports.rdlc" />
+    <None Include="bin\Debug\net461\12\ReportForms\rptVoucherInvoice.rdlc" />
+    <None Include="bin\Debug\net461\130\MiniReportForm\rptCashClosePOS.rdlc" />
+    <None Include="bin\Debug\net461\130\MiniReportForm\rptCashFlow.rdlc" />
+    <None Include="bin\Debug\net461\130\MiniReportForm\rptCloseCash.rdlc" />
+    <None Include="bin\Debug\net461\130\MiniReportForm\rptCloseCashNew.rdlc" />
+    <None Include="bin\Debug\net461\130\MiniReportForm\rptCustomerItemSalesReportPOS.rdlc" />
+    <None Include="bin\Debug\net461\130\MiniReportForm\rptCustomerLedgerReportPOS.rdlc" />
+    <None Include="bin\Debug\net461\130\MiniReportForm\rptCustomerReportPOS.rdlc" />
+    <None Include="bin\Debug\net461\130\MiniReportForm\rptCustomerSalesReportPOS.rdlc" />
+    <None Include="bin\Debug\net461\130\MiniReportForm\rptPOSPayment.rdlc" />
+    <None Include="bin\Debug\net461\130\MiniReportForm\rptProductDifferencePOS.rdlc" />
+    <None Include="bin\Debug\net461\130\MiniReportForm\rptProductGroupSales.rdlc" />
+    <None Include="bin\Debug\net461\130\MiniReportForm\rptProductProfitSalePOS.rdlc" />
+    <None Include="bin\Debug\net461\130\MiniReportForm\rptProductSaleCloseCash.rdlc" />
+    <None Include="bin\Debug\net461\130\MiniReportForm\rptProductStockReportPOS.rdlc" />
+    <None Include="bin\Debug\net461\130\MiniReportForm\rptProGroupForCashClose.rdlc" />
+    <None Include="bin\Debug\net461\130\MiniReportForm\rptProwisePurchasePO.rdlc" />
+    <None Include="bin\Debug\net461\130\MiniReportForm\rptSaleByProductPOS.rdlc" />
+    <None Include="bin\Debug\net461\130\MiniReportForm\rptSalesSummaryReportPOS.rdlc" />
+    <None Include="bin\Debug\net461\130\MiniReportForm\rptSalesTaxReportPOS.rdlc" />
+    <None Include="bin\Debug\net461\130\MiniReportForm\rptStockAndProfitPOS.rdlc" />
+    <None Include="bin\Debug\net461\130\MiniReportForm\rptSupplierItemPurchaseReportPOS.rdlc" />
+    <None Include="bin\Debug\net461\130\MiniReportForm\rptSupplierLedgerPOS.rdlc" />
+    <None Include="bin\Debug\net461\130\MiniReportForm\rptSupplierPurchaseReportPOS.rdlc" />
+    <None Include="bin\Debug\net461\130\MiniReportForm\rptSupplierReportPOS.rdlc" />
+    <None Include="bin\Debug\net461\130\MiniReportForm\rptTaxCategoryReportPOS.rdlc" />
+    <None Include="bin\Debug\net461\130\MiniReportForm\rptTransactionReportPOS.rdlc" />
+    <None Include="bin\Debug\net461\130\MiniReportForm\rptUserSales.rdlc" />
+    <None Include="bin\Debug\net461\130\ReportForms\rptCashClosePOS.rdlc" />
+    <None Include="bin\Debug\net461\130\ReportForms\rptCashFlow.rdlc" />
+    <None Include="bin\Debug\net461\130\ReportForms\rptCloseCash.rdlc" />
+    <None Include="bin\Debug\net461\130\ReportForms\rptCloseCashNew.rdlc" />
+    <None Include="bin\Debug\net461\130\ReportForms\rptCustomerItemSalesReportPOS.rdlc" />
+    <None Include="bin\Debug\net461\130\ReportForms\rptCustomerLedgerReportPOS.rdlc" />
+    <None Include="bin\Debug\net461\130\ReportForms\rptCustomerReportPOS.rdlc" />
+    <None Include="bin\Debug\net461\130\ReportForms\rptCustomerSalesReportPOS.rdlc" />
+    <None Include="bin\Debug\net461\130\ReportForms\rptPendingKOT.rdlc" />
+    <None Include="bin\Debug\net461\130\ReportForms\rptPOSPayment.rdlc" />
+    <None Include="bin\Debug\net461\130\ReportForms\rptPOSPrintWithInvoiceNo.rdlc" />
+    <None Include="bin\Debug\net461\130\ReportForms\rptProductDifferencePOS.rdlc" />
+    <None Include="bin\Debug\net461\130\ReportForms\rptProductGroupSales.rdlc" />
+    <None Include="bin\Debug\net461\130\ReportForms\rptProductOpeningStockReport.rdlc" />
+    <None Include="bin\Debug\net461\130\ReportForms\rptProductProfitSalePOS.rdlc" />
+    <None Include="bin\Debug\net461\130\ReportForms\rptProductSaleCloseCash.rdlc" />
+    <None Include="bin\Debug\net461\130\ReportForms\rptProductStockReportPOS.rdlc" />
+    <None Include="bin\Debug\net461\130\ReportForms\rptProGroupForCashClose.rdlc" />
+    <None Include="bin\Debug\net461\130\ReportForms\rptProwisePurchasePO.rdlc" />
+    <None Include="bin\Debug\net461\130\ReportForms\rptSaleByProductPOS.rdlc" />
+    <None Include="bin\Debug\net461\130\ReportForms\rptSalesSummaryReportPOS.rdlc" />
+    <None Include="bin\Debug\net461\130\ReportForms\rptSalesTaxReportPOS.rdlc" />
+    <None Include="bin\Debug\net461\130\ReportForms\rptStockAndProfitPOS.rdlc" />
+    <None Include="bin\Debug\net461\130\ReportForms\rptSupplierItemPurchaseReportPOS.rdlc" />
+    <None Include="bin\Debug\net461\130\ReportForms\rptSupplierLedgerPOS.rdlc" />
+    <None Include="bin\Debug\net461\130\ReportForms\rptSupplierPurchaseReportPOS.rdlc" />
+    <None Include="bin\Debug\net461\130\ReportForms\rptSupplierReportPOS.rdlc" />
+    <None Include="bin\Debug\net461\130\ReportForms\rptTaxCategoryReportPOS.rdlc" />
+    <None Include="bin\Debug\net461\130\ReportForms\rptTransactionReportPOS.rdlc" />
+    <None Include="bin\Debug\net461\130\ReportForms\rptUserSales.rdlc" />
+    <None Include="bin\Debug\net461\130\ReportForms\rptVatSubmissionAr.rdlc" />
+    <None Include="bin\Debug\net461\130\ReportForms\rptVatSubmissionEn.rdlc" />
+    <None Include="bin\Debug\net461\130\ReportForms\rptVoidKOTReports.rdlc" />
+    <None Include="bin\Debug\net461\130\ReportForms\rptVoucherInvoice.rdlc" />
+    <None Include="bin\Debug\net461\AclasSDK.dll" />
+    <None Include="bin\Debug\net461\amd64\Microsoft.VC90.CRT\Microsoft.VC90.CRT.manifest" />
+    <None Include="bin\Debug\net461\amd64\Microsoft.VC90.CRT\msvcr90.dll" />
+    <None Include="bin\Debug\net461\amd64\sqlceca40.dll" />
+    <None Include="bin\Debug\net461\amd64\sqlcecompact40.dll" />
+    <None Include="bin\Debug\net461\amd64\sqlceer40EN.dll" />
+    <None Include="bin\Debug\net461\amd64\sqlceme40.dll" />
+    <None Include="bin\Debug\net461\amd64\sqlceqp40.dll" />
+    <None Include="bin\Debug\net461\amd64\sqlcese40.dll" />
+    <None Include="bin\Debug\net461\ar\AshproMessage.resources.dll" />
+    <None Include="bin\Debug\net461\ar\The360Pro.resources.dll" />
+    <None Include="bin\Debug\net461\AshFramework.dll" />
+    <None Include="bin\Debug\net461\AshFramework.dll.config" />
+    <None Include="bin\Debug\net461\AshproMessage.dll" />
+    <None Include="bin\Debug\net461\AshUsercontrol.dll" />
+    <None Include="bin\Debug\net461\AxInterop.WMPLib.dll" />
+    <None Include="bin\Debug\net461\BarcodeLib.dll" />
+    <None Include="bin\Debug\net461\BarcodeStandard.dll" />
+    <None Include="bin\Debug\net461\Customer.xlsx" />
+    <None Include="bin\Debug\net461\DarrenLee.Translator.dll" />
+    <None Include="bin\Debug\net461\debug\debug.ini" />
+    <None Include="bin\Debug\net461\de\Microsoft.ReportViewer.Common.resources.dll" />
+    <None Include="bin\Debug\net461\de\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <None Include="bin\Debug\net461\de\Microsoft.ReportViewer.Design.resources.dll" />
+    <None Include="bin\Debug\net461\de\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <None Include="bin\Debug\net461\EnvDTE.dll" />
+    <None Include="bin\Debug\net461\EPPlus.dll" />
+    <None Include="bin\Debug\net461\es\Microsoft.ReportViewer.Common.resources.dll" />
+    <None Include="bin\Debug\net461\es\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <None Include="bin\Debug\net461\es\Microsoft.ReportViewer.Design.resources.dll" />
+    <None Include="bin\Debug\net461\es\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <None Include="bin\Debug\net461\fr\Microsoft.ReportViewer.Common.resources.dll" />
+    <None Include="bin\Debug\net461\fr\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <None Include="bin\Debug\net461\fr\Microsoft.ReportViewer.Design.resources.dll" />
+    <None Include="bin\Debug\net461\fr\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <None Include="bin\Debug\net461\Interop.WMPLib.dll" />
+    <None Include="bin\Debug\net461\it\Microsoft.ReportViewer.Common.resources.dll" />
+    <None Include="bin\Debug\net461\it\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <None Include="bin\Debug\net461\it\Microsoft.ReportViewer.Design.resources.dll" />
+    <None Include="bin\Debug\net461\it\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <None Include="bin\Debug\net461\ja\Microsoft.ReportViewer.Common.resources.dll" />
+    <None Include="bin\Debug\net461\ja\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <None Include="bin\Debug\net461\ja\Microsoft.ReportViewer.Design.resources.dll" />
+    <None Include="bin\Debug\net461\ja\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <None Include="bin\Debug\net461\ko\Microsoft.ReportViewer.Common.resources.dll" />
+    <None Include="bin\Debug\net461\ko\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <None Include="bin\Debug\net461\ko\Microsoft.ReportViewer.Design.resources.dll" />
+    <None Include="bin\Debug\net461\ko\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <None Include="bin\Debug\net461\MessageBoxManager.dll" />
+    <None Include="bin\Debug\net461\Microsoft.Bcl.AsyncInterfaces.dll" />
+    <None Include="bin\Debug\net461\Microsoft.IO.RecyclableMemoryStream.dll" />
+    <None Include="bin\Debug\net461\Microsoft.MSXML.dll" />
+    <None Include="bin\Debug\net461\Microsoft.Office.Interop.Excel.dll" />
+    <None Include="bin\Debug\net461\Microsoft.ReportViewer.Common.dll" />
+    <None Include="bin\Debug\net461\Microsoft.ReportViewer.DataVisualization.dll" />
+    <None Include="bin\Debug\net461\Microsoft.ReportViewer.Design.dll" />
+    <None Include="bin\Debug\net461\Microsoft.ReportViewer.ProcessingObjectModel.DLL" />
+    <None Include="bin\Debug\net461\Microsoft.ReportViewer.WebForms.DLL" />
+    <None Include="bin\Debug\net461\Microsoft.ReportViewer.WinForms.dll" />
+    <None Include="bin\Debug\net461\Microsoft.SqlServer.ConnectionInfo.dll" />
+    <None Include="bin\Debug\net461\Microsoft.SqlServer.ConnectionInfoExtended.dll" />
+    <None Include="bin\Debug\net461\Microsoft.SqlServer.Dmf.dll" />
+    <None Include="bin\Debug\net461\Microsoft.SqlServer.RegSvrEnum.dll" />
+    <None Include="bin\Debug\net461\Microsoft.SqlServer.ServiceBrokerEnum.dll" />
+    <None Include="bin\Debug\net461\Microsoft.SqlServer.Smo.dll" />
+    <None Include="bin\Debug\net461\Microsoft.SqlServer.SmoExtended.dll" />
+    <None Include="bin\Debug\net461\Microsoft.SqlServer.SqlEnum.dll" />
+    <None Include="bin\Debug\net461\Microsoft.SqlServer.Types.dll" />
+    <None Include="bin\Debug\net461\Microsoft.Threading.Tasks.dll" />
+    <None Include="bin\Debug\net461\Microsoft.Threading.Tasks.Extensions.Desktop.dll" />
+    <None Include="bin\Debug\net461\Microsoft.Threading.Tasks.Extensions.dll" />
+    <None Include="bin\Debug\net461\Microsoft.VisualBasic.PowerPacks.dll" />
+    <None Include="bin\Debug\net461\Microsoft.VisualStudio.OLE.Interop.dll" />
+    <None Include="bin\Debug\net461\Microsoft.VisualStudio.Shell.Interop.8.0.dll" />
+    <None Include="bin\Debug\net461\Microsoft.VisualStudio.Shell.Interop.dll" />
+    <None Include="bin\Debug\net461\Microsoft.VisualStudio.TextManager.Interop.8.0.dll" />
+    <None Include="bin\Debug\net461\Microsoft.VisualStudio.TextManager.Interop.dll" />
+    <None Include="bin\Debug\net461\Microsoft.Win32.Primitives.dll" />
+    <None Include="bin\Debug\net461\MigraDoc.DocumentObjectModel.dll" />
+    <None Include="bin\Debug\net461\MigraDoc.Rendering.dll" />
+    <None Include="bin\Debug\net461\MigraDoc.RtfRendering.dll" />
+    <None Include="bin\Debug\net461\MiniReportForm\rptCashClosePOS.rdlc" />
+    <None Include="bin\Debug\net461\MiniReportForm\rptCashFlow.rdlc" />
+    <None Include="bin\Debug\net461\MiniReportForm\rptCloseCash.rdlc" />
+    <None Include="bin\Debug\net461\MiniReportForm\rptCloseCashNew.rdlc" />
+    <None Include="bin\Debug\net461\MiniReportForm\rptCustomerItemSalesReportPOS.rdlc" />
+    <None Include="bin\Debug\net461\MiniReportForm\rptCustomerLedgerReportPOS.rdlc" />
+    <None Include="bin\Debug\net461\MiniReportForm\rptCustomerReportPOS.rdlc" />
+    <None Include="bin\Debug\net461\MiniReportForm\rptCustomerSalesReportPOS.rdlc" />
+    <None Include="bin\Debug\net461\MiniReportForm\rptPOSPayment.rdlc" />
+    <None Include="bin\Debug\net461\MiniReportForm\rptProductDifferencePOS.rdlc" />
+    <None Include="bin\Debug\net461\MiniReportForm\rptProductGroupSales.rdlc" />
+    <None Include="bin\Debug\net461\MiniReportForm\rptProductProfitSalePOS.rdlc" />
+    <None Include="bin\Debug\net461\MiniReportForm\rptProductSaleCloseCash.rdlc" />
+    <None Include="bin\Debug\net461\MiniReportForm\rptProductStockReportPOS.rdlc" />
+    <None Include="bin\Debug\net461\MiniReportForm\rptProGroupForCashClose.rdlc" />
+    <None Include="bin\Debug\net461\MiniReportForm\rptProwisePurchasePO.rdlc" />
+    <None Include="bin\Debug\net461\MiniReportForm\rptSaleByProductPOS.rdlc" />
+    <None Include="bin\Debug\net461\MiniReportForm\rptSalesSummaryReportPOS.rdlc" />
+    <None Include="bin\Debug\net461\MiniReportForm\rptSalesTaxReportPOS.rdlc" />
+    <None Include="bin\Debug\net461\MiniReportForm\rptStockAndProfitPOS.rdlc" />
+    <None Include="bin\Debug\net461\MiniReportForm\rptSupplierItemPurchaseReportPOS.rdlc" />
+    <None Include="bin\Debug\net461\MiniReportForm\rptSupplierLedgerPOS.rdlc" />
+    <None Include="bin\Debug\net461\MiniReportForm\rptSupplierPurchaseReportPOS.rdlc" />
+    <None Include="bin\Debug\net461\MiniReportForm\rptSupplierReportPOS.rdlc" />
+    <None Include="bin\Debug\net461\MiniReportForm\rptTaxCategoryReportPOS.rdlc" />
+    <None Include="bin\Debug\net461\MiniReportForm\rptTransactionReportPOS.rdlc" />
+    <None Include="bin\Debug\net461\MiniReportForm\rptUserSales.rdlc" />
+    <None Include="bin\Debug\net461\netstandard.dll" />
+    <None Include="bin\Debug\net461\Newtonsoft.Json.dll" />
+    <None Include="bin\Debug\net461\PdfSharp.Charting.dll" />
+    <None Include="bin\Debug\net461\PdfSharp.dll" />
+    <None Include="bin\Debug\net461\pt\Microsoft.ReportViewer.Common.resources.dll" />
+    <None Include="bin\Debug\net461\pt\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <None Include="bin\Debug\net461\pt\Microsoft.ReportViewer.Design.resources.dll" />
+    <None Include="bin\Debug\net461\pt\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <None Include="bin\Debug\net461\ReportForms\Barcode.rdlc" />
+    <None Include="bin\Debug\net461\ReportForms\rptCashClosePOS.rdlc" />
+    <None Include="bin\Debug\net461\ReportForms\rptCashFlow.rdlc" />
+    <None Include="bin\Debug\net461\ReportForms\rptCloseCash.rdlc" />
+    <None Include="bin\Debug\net461\ReportForms\rptCloseCashNew.rdlc" />
+    <None Include="bin\Debug\net461\ReportForms\rptCustomerItemSalesReportPOS.rdlc" />
+    <None Include="bin\Debug\net461\ReportForms\rptCustomerLedgerReportPOS.rdlc" />
+    <None Include="bin\Debug\net461\ReportForms\rptCustomerReportPOS.rdlc" />
+    <None Include="bin\Debug\net461\ReportForms\rptCustomerSalesReportPOS.rdlc" />
+    <None Include="bin\Debug\net461\ReportForms\rptPendingKOT.rdlc" />
+    <None Include="bin\Debug\net461\ReportForms\rptPOSPayment.rdlc" />
+    <None Include="bin\Debug\net461\ReportForms\rptPOSPrintWithInvoiceNo.rdlc" />
+    <None Include="bin\Debug\net461\ReportForms\rptProductDifferencePOS.rdlc" />
+    <None Include="bin\Debug\net461\ReportForms\rptProductGroupSales.rdlc" />
+    <None Include="bin\Debug\net461\ReportForms\rptProductOpeningStockReport.rdlc" />
+    <None Include="bin\Debug\net461\ReportForms\rptProductProfitSalePOS.rdlc" />
+    <None Include="bin\Debug\net461\ReportForms\rptProductStockReportPOS.rdlc" />
+    <None Include="bin\Debug\net461\ReportForms\rptProGroupForCashClose.rdlc" />
+    <None Include="bin\Debug\net461\ReportForms\rptProwisePurchasePO.rdlc" />
+    <None Include="bin\Debug\net461\ReportForms\rptSaleByProductPOS.rdlc" />
+    <None Include="bin\Debug\net461\ReportForms\rptSalesSummaryReportPOS.rdlc" />
+    <None Include="bin\Debug\net461\ReportForms\rptSalesTaxReportPOS.rdlc" />
+    <None Include="bin\Debug\net461\ReportForms\rptStockAndProfitPOS.rdlc" />
+    <None Include="bin\Debug\net461\ReportForms\rptSupplierItemPurchaseReportPOS.rdlc" />
+    <None Include="bin\Debug\net461\ReportForms\rptSupplierLedgerPOS.rdlc" />
+    <None Include="bin\Debug\net461\ReportForms\rptSupplierPurchaseReportPOS.rdlc" />
+    <None Include="bin\Debug\net461\ReportForms\rptSupplierReportPOS.rdlc" />
+    <None Include="bin\Debug\net461\ReportForms\rptTaxCategoryReportPOS.rdlc" />
+    <None Include="bin\Debug\net461\ReportForms\rptTransactionReportPOS.rdlc" />
+    <None Include="bin\Debug\net461\ReportForms\rptUserSales.rdlc" />
+    <None Include="bin\Debug\net461\ReportForms\rptVatSubmissionAr.rdlc" />
+    <None Include="bin\Debug\net461\ReportForms\rptVatSubmissionEn.rdlc" />
+    <None Include="bin\Debug\net461\ReportForms\rptVoidKOTReports.rdlc" />
+    <None Include="bin\Debug\net461\ReportForms\rptVoucherInvoice.rdlc" />
+    <None Include="bin\Debug\net461\ru\Microsoft.ReportViewer.Common.resources.dll" />
+    <None Include="bin\Debug\net461\ru\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <None Include="bin\Debug\net461\ru\Microsoft.ReportViewer.Design.resources.dll" />
+    <None Include="bin\Debug\net461\ru\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <None Include="bin\Debug\net461\SqlServerTypes\x64\msvcr120.dll" />
+    <None Include="bin\Debug\net461\SqlServerTypes\x64\SqlServerSpatial140.dll" />
+    <None Include="bin\Debug\net461\SqlServerTypes\x86\msvcr120.dll" />
+    <None Include="bin\Debug\net461\SqlServerTypes\x86\SqlServerSpatial140.dll" />
+    <None Include="bin\Debug\net461\stdole.dll" />
+    <None Include="bin\Debug\net461\Stock Report as on the date 16-Jul-2021" />
+    <None Include="bin\Debug\net461\System.AppContext.dll" />
+    <None Include="bin\Debug\net461\System.Buffers.dll" />
+    <None Include="bin\Debug\net461\System.Collections.Concurrent.dll" />
+    <None Include="bin\Debug\net461\System.Collections.dll" />
+    <None Include="bin\Debug\net461\System.Collections.Immutable.dll" />
+    <None Include="bin\Debug\net461\System.Collections.NonGeneric.dll" />
+    <None Include="bin\Debug\net461\System.Collections.Specialized.dll" />
+    <None Include="bin\Debug\net461\System.ComponentModel.Annotations.dll" />
+    <None Include="bin\Debug\net461\System.ComponentModel.dll" />
+    <None Include="bin\Debug\net461\System.ComponentModel.EventBasedAsync.dll" />
+    <None Include="bin\Debug\net461\System.ComponentModel.Primitives.dll" />
+    <None Include="bin\Debug\net461\System.ComponentModel.TypeConverter.dll" />
+    <None Include="bin\Debug\net461\System.Console.dll" />
+    <None Include="bin\Debug\net461\System.Data.Common.dll" />
+    <None Include="bin\Debug\net461\System.Diagnostics.Contracts.dll" />
+    <None Include="bin\Debug\net461\System.Diagnostics.Debug.dll" />
+    <None Include="bin\Debug\net461\System.Diagnostics.DiagnosticSource.dll" />
+    <None Include="bin\Debug\net461\System.Diagnostics.FileVersionInfo.dll" />
+    <None Include="bin\Debug\net461\System.Diagnostics.Process.dll" />
+    <None Include="bin\Debug\net461\System.Diagnostics.StackTrace.dll" />
+    <None Include="bin\Debug\net461\System.Diagnostics.TextWriterTraceListener.dll" />
+    <None Include="bin\Debug\net461\System.Diagnostics.Tools.dll" />
+    <None Include="bin\Debug\net461\System.Diagnostics.TraceSource.dll" />
+    <None Include="bin\Debug\net461\System.Diagnostics.Tracing.dll" />
+    <None Include="bin\Debug\net461\System.Drawing.Common.dll" />
+    <None Include="bin\Debug\net461\System.Drawing.Primitives.dll" />
+    <None Include="bin\Debug\net461\System.Dynamic.Runtime.dll" />
+    <None Include="bin\Debug\net461\System.Globalization.Calendars.dll" />
+    <None Include="bin\Debug\net461\System.Globalization.dll" />
+    <None Include="bin\Debug\net461\System.Globalization.Extensions.dll" />
+    <None Include="bin\Debug\net461\System.IO.Compression.dll" />
+    <None Include="bin\Debug\net461\System.IO.Compression.ZipFile.dll" />
+    <None Include="bin\Debug\net461\System.IO.dll" />
+    <None Include="bin\Debug\net461\System.IO.FileSystem.dll" />
+    <None Include="bin\Debug\net461\System.IO.FileSystem.DriveInfo.dll" />
+    <None Include="bin\Debug\net461\System.IO.FileSystem.Primitives.dll" />
+    <None Include="bin\Debug\net461\System.IO.FileSystem.Watcher.dll" />
+    <None Include="bin\Debug\net461\System.IO.IsolatedStorage.dll" />
+    <None Include="bin\Debug\net461\System.IO.MemoryMappedFiles.dll" />
+    <None Include="bin\Debug\net461\System.IO.Packaging.dll" />
+    <None Include="bin\Debug\net461\System.IO.Pipes.dll" />
+    <None Include="bin\Debug\net461\System.IO.UnmanagedMemoryStream.dll" />
+    <None Include="bin\Debug\net461\System.Linq.Async.dll" />
+    <None Include="bin\Debug\net461\System.Linq.dll" />
+    <None Include="bin\Debug\net461\System.Linq.Expressions.dll" />
+    <None Include="bin\Debug\net461\System.Linq.Parallel.dll" />
+    <None Include="bin\Debug\net461\System.Linq.Queryable.dll" />
+    <None Include="bin\Debug\net461\System.Memory.dll" />
+    <None Include="bin\Debug\net461\System.Net.Http.dll" />
+    <None Include="bin\Debug\net461\System.Net.Http.Extensions.dll" />
+    <None Include="bin\Debug\net461\System.Net.Http.Primitives.dll" />
+    <None Include="bin\Debug\net461\System.Net.NameResolution.dll" />
+    <None Include="bin\Debug\net461\System.Net.NetworkInformation.dll" />
+    <None Include="bin\Debug\net461\System.Net.Ping.dll" />
+    <None Include="bin\Debug\net461\System.Net.Primitives.dll" />
+    <None Include="bin\Debug\net461\System.Net.Requests.dll" />
+    <None Include="bin\Debug\net461\System.Net.Security.dll" />
+    <None Include="bin\Debug\net461\System.Net.Sockets.dll" />
+    <None Include="bin\Debug\net461\System.Net.WebHeaderCollection.dll" />
+    <None Include="bin\Debug\net461\System.Net.WebSockets.Client.dll" />
+    <None Include="bin\Debug\net461\System.Net.WebSockets.dll" />
+    <None Include="bin\Debug\net461\System.Numerics.Vectors.dll" />
+    <None Include="bin\Debug\net461\System.ObjectModel.dll" />
+    <None Include="bin\Debug\net461\System.Reflection.dll" />
+    <None Include="bin\Debug\net461\System.Reflection.Extensions.dll" />
+    <None Include="bin\Debug\net461\System.Reflection.Primitives.dll" />
+    <None Include="bin\Debug\net461\System.Resources.Reader.dll" />
+    <None Include="bin\Debug\net461\System.Resources.ResourceManager.dll" />
+    <None Include="bin\Debug\net461\System.Resources.Writer.dll" />
+    <None Include="bin\Debug\net461\System.Runtime.CompilerServices.Unsafe.dll" />
+    <None Include="bin\Debug\net461\System.Runtime.CompilerServices.VisualC.dll" />
+    <None Include="bin\Debug\net461\System.Runtime.dll" />
+    <None Include="bin\Debug\net461\System.Runtime.Extensions.dll" />
+    <None Include="bin\Debug\net461\System.Runtime.Handles.dll" />
+    <None Include="bin\Debug\net461\System.Runtime.InteropServices.dll" />
+    <None Include="bin\Debug\net461\System.Runtime.InteropServices.RuntimeInformation.dll" />
+    <None Include="bin\Debug\net461\System.Runtime.Numerics.dll" />
+    <None Include="bin\Debug\net461\System.Runtime.Serialization.Formatters.dll" />
+    <None Include="bin\Debug\net461\System.Runtime.Serialization.Json.dll" />
+    <None Include="bin\Debug\net461\System.Runtime.Serialization.Primitives.dll" />
+    <None Include="bin\Debug\net461\System.Runtime.Serialization.Xml.dll" />
+    <None Include="bin\Debug\net461\System.Security.Claims.dll" />
+    <None Include="bin\Debug\net461\System.Security.Cryptography.Algorithms.dll" />
+    <None Include="bin\Debug\net461\System.Security.Cryptography.Csp.dll" />
+    <None Include="bin\Debug\net461\System.Security.Cryptography.Encoding.dll" />
+    <None Include="bin\Debug\net461\System.Security.Cryptography.Primitives.dll" />
+    <None Include="bin\Debug\net461\System.Security.Cryptography.X509Certificates.dll" />
+    <None Include="bin\Debug\net461\System.Security.Principal.dll" />
+    <None Include="bin\Debug\net461\System.Security.SecureString.dll" />
+    <None Include="bin\Debug\net461\System.Text.Encoding.dll" />
+    <None Include="bin\Debug\net461\System.Text.Encoding.Extensions.dll" />
+    <None Include="bin\Debug\net461\System.Text.Encodings.Web.dll" />
+    <None Include="bin\Debug\net461\System.Text.Json.dll" />
+    <None Include="bin\Debug\net461\System.Text.RegularExpressions.dll" />
+    <None Include="bin\Debug\net461\System.Threading.dll" />
+    <None Include="bin\Debug\net461\System.Threading.Overlapped.dll" />
+    <None Include="bin\Debug\net461\System.Threading.Tasks.dll" />
+    <None Include="bin\Debug\net461\System.Threading.Tasks.Extensions.dll" />
+    <None Include="bin\Debug\net461\System.Threading.Tasks.Parallel.dll" />
+    <None Include="bin\Debug\net461\System.Threading.Thread.dll" />
+    <None Include="bin\Debug\net461\System.Threading.ThreadPool.dll" />
+    <None Include="bin\Debug\net461\System.Threading.Timer.dll" />
+    <None Include="bin\Debug\net461\System.ValueTuple.dll" />
+    <None Include="bin\Debug\net461\System.Xml.ReaderWriter.dll" />
+    <None Include="bin\Debug\net461\System.Xml.XDocument.dll" />
+    <None Include="bin\Debug\net461\System.Xml.XmlDocument.dll" />
+    <None Include="bin\Debug\net461\System.Xml.XmlSerializer.dll" />
+    <None Include="bin\Debug\net461\System.Xml.XPath.dll" />
+    <None Include="bin\Debug\net461\System.Xml.XPath.XDocument.dll" />
+    <None Include="bin\Debug\net461\The360Pro.exe" />
+    <None Include="bin\Debug\net461\The360Pro.exe.config" />
+    <None Include="bin\Debug\net461\The360Pro.pdb" />
+    <None Include="bin\Debug\net461\Tulpep.NotificationWindow.dll" />
+    <None Include="bin\Debug\net461\unins000.dat" />
+    <None Include="bin\Debug\net461\unins000.exe" />
+    <None Include="bin\Debug\net461\UpdationTool.exe" />
+    <None Include="bin\Debug\net461\WebCam_Capture.dll" />
+    <None Include="bin\Debug\net461\x86\Microsoft.VC90.CRT\Microsoft.VC90.CRT.manifest" />
+    <None Include="bin\Debug\net461\x86\Microsoft.VC90.CRT\msvcr90.dll" />
+    <None Include="bin\Debug\net461\x86\sqlceca40.dll" />
+    <None Include="bin\Debug\net461\x86\sqlcecompact40.dll" />
+    <None Include="bin\Debug\net461\x86\sqlceer40EN.dll" />
+    <None Include="bin\Debug\net461\x86\sqlceme40.dll" />
+    <None Include="bin\Debug\net461\x86\sqlceqp40.dll" />
+    <None Include="bin\Debug\net461\x86\sqlcese40.dll" />
+    <None Include="bin\Debug\net461\zh-CHS\Microsoft.ReportViewer.Common.resources.dll" />
+    <None Include="bin\Debug\net461\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <None Include="bin\Debug\net461\zh-CHS\Microsoft.ReportViewer.Design.resources.dll" />
+    <None Include="bin\Debug\net461\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <None Include="bin\Debug\net461\zh-CHT\Microsoft.ReportViewer.Common.resources.dll" />
+    <None Include="bin\Debug\net461\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <None Include="bin\Debug\net461\zh-CHT\Microsoft.ReportViewer.Design.resources.dll" />
+    <None Include="bin\Debug\net461\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <None Include="bin\Debug\net461\zxing.dll" />
+    <None Include="bin\Debug\net461\zxing.pdb" />
+    <None Include="bin\Debug\net461\zxing.presentation.dll" />
+    <None Include="bin\Debug\net461\zxing.presentation.pdb" />
+    <None Include="bin\Release\net461\ar\AshproMessage.resources.dll" />
+    <None Include="bin\Release\net461\AshFramework.dll" />
+    <None Include="bin\Release\net461\AshFramework.dll.config" />
+    <None Include="bin\Release\net461\AshproMessage.dll" />
+    <None Include="bin\Release\net461\AshUsercontrol.dll" />
+    <None Include="bin\Release\net461\BarcodeLib.dll" />
+    <None Include="bin\Release\net461\de\Microsoft.ReportViewer.Common.resources.dll" />
+    <None Include="bin\Release\net461\de\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <None Include="bin\Release\net461\de\Microsoft.ReportViewer.Design.resources.dll" />
+    <None Include="bin\Release\net461\de\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <None Include="bin\Release\net461\EPPlus.dll" />
+    <None Include="bin\Release\net461\es\Microsoft.ReportViewer.Common.resources.dll" />
+    <None Include="bin\Release\net461\es\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <None Include="bin\Release\net461\es\Microsoft.ReportViewer.Design.resources.dll" />
+    <None Include="bin\Release\net461\es\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <None Include="bin\Release\net461\fr\Microsoft.ReportViewer.Common.resources.dll" />
+    <None Include="bin\Release\net461\fr\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <None Include="bin\Release\net461\fr\Microsoft.ReportViewer.Design.resources.dll" />
+    <None Include="bin\Release\net461\fr\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <None Include="bin\Release\net461\it\Microsoft.ReportViewer.Common.resources.dll" />
+    <None Include="bin\Release\net461\it\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <None Include="bin\Release\net461\it\Microsoft.ReportViewer.Design.resources.dll" />
+    <None Include="bin\Release\net461\it\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <None Include="bin\Release\net461\ja\Microsoft.ReportViewer.Common.resources.dll" />
+    <None Include="bin\Release\net461\ja\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <None Include="bin\Release\net461\ja\Microsoft.ReportViewer.Design.resources.dll" />
+    <None Include="bin\Release\net461\ja\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <None Include="bin\Release\net461\ko\Microsoft.ReportViewer.Common.resources.dll" />
+    <None Include="bin\Release\net461\ko\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <None Include="bin\Release\net461\ko\Microsoft.ReportViewer.Design.resources.dll" />
+    <None Include="bin\Release\net461\ko\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <None Include="bin\Release\net461\MessageBoxManager.dll" />
+    <None Include="bin\Release\net461\Microsoft.Office.Interop.Excel.dll" />
+    <None Include="bin\Release\net461\Microsoft.ReportViewer.Common.dll" />
+    <None Include="bin\Release\net461\Microsoft.ReportViewer.DataVisualization.dll" />
+    <None Include="bin\Release\net461\Microsoft.ReportViewer.Design.dll" />
+    <None Include="bin\Release\net461\Microsoft.ReportViewer.ProcessingObjectModel.DLL" />
+    <None Include="bin\Release\net461\Microsoft.ReportViewer.WebForms.DLL" />
+    <None Include="bin\Release\net461\Microsoft.ReportViewer.WinForms.dll" />
+    <None Include="bin\Release\net461\Microsoft.SqlServer.Types.dll" />
+    <None Include="bin\Release\net461\Microsoft.VisualBasic.PowerPacks.dll" />
+    <None Include="bin\Release\net461\Newtonsoft.Json.dll" />
+    <None Include="bin\Release\net461\PdfSharp.dll" />
+    <None Include="bin\Release\net461\pt\Microsoft.ReportViewer.Common.resources.dll" />
+    <None Include="bin\Release\net461\pt\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <None Include="bin\Release\net461\pt\Microsoft.ReportViewer.Design.resources.dll" />
+    <None Include="bin\Release\net461\pt\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <None Include="bin\Release\net461\ru\Microsoft.ReportViewer.Common.resources.dll" />
+    <None Include="bin\Release\net461\ru\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <None Include="bin\Release\net461\ru\Microsoft.ReportViewer.Design.resources.dll" />
+    <None Include="bin\Release\net461\ru\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <None Include="bin\Release\net461\System.Drawing.Common.dll" />
+    <None Include="bin\Release\net461\System.Net.Http.dll" />
+    <None Include="bin\Release\net461\The360Pro.exe" />
+    <None Include="bin\Release\net461\The360Pro.exe.config" />
+    <None Include="bin\Release\net461\The360Pro.pdb" />
+    <None Include="bin\Release\net461\Tulpep.NotificationWindow.dll" />
+    <None Include="bin\Release\net461\WebCam_Capture.dll" />
+    <None Include="bin\Release\net461\zh-CHS\Microsoft.ReportViewer.Common.resources.dll" />
+    <None Include="bin\Release\net461\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <None Include="bin\Release\net461\zh-CHS\Microsoft.ReportViewer.Design.resources.dll" />
+    <None Include="bin\Release\net461\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <None Include="bin\Release\net461\zh-CHT\Microsoft.ReportViewer.Common.resources.dll" />
+    <None Include="bin\Release\net461\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <None Include="bin\Release\net461\zh-CHT\Microsoft.ReportViewer.Design.resources.dll" />
+    <None Include="bin\Release\net461\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <None Include="bin\Release\net461\zxing.dll" />
+    <None Include="bin\Release\net461\zxing.pdb" />
+    <None Include="E:\Imgaes Resource\ico_logo.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Report.Viewer" Version="11.0.0" />
+    <PackageReference Include="Microsoft.ReportingServices.ReportViewerControl.Winforms" Version="150.1484.0" />
+    <PackageReference Include="Microsoft.ReportViewer.Runtime.WinForms" Version="12.0.2402.15" />
+    <PackageReference Include="Microsoft.ReportViewer.WinForms" Version="10.0.40219.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="ServiceStack.Text" Version="8.8.0" />
+    <PackageReference Include="System.Drawing.Common" Version="6.0.2-mauipre.1.22054.8" />
+    <PackageReference Include="System.Net.Http.Json" Version="9.0.6" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="AshFramework">
+      <HintPath>C:\Program Files (x86)\Ashpro\AshFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="AshproMessage">
+      <HintPath>C:\Program Files (x86)\Ashpro\AshproMessage.dll</HintPath>
+    </Reference>
+    <Reference Include="AshUsercontrol">
+      <HintPath>C:\Program Files (x86)\Ashpro\AshUsercontrol.dll</HintPath>
+    </Reference>
+    <Reference Include="BarcodeLib">
+      <HintPath>..\..\NagadanPro\bin\Debug\BarcodeLib.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus">
+      <HintPath>C:\Program Files (x86)\Ashpro\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="MessageBoxManager">
+      <HintPath>C:\Program Files (x86)\Ashpro\MessageBoxManager.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Office.Interop.Excel">
+      <HintPath>..\..\..\Ashpro All\Crack\ashpro\Ash Pro New\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms">
+      <HintPath>C:\Program Files (x86)\Ashpro\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks">
+      <HintPath>C:\Program Files (x86)\Ashpro\Microsoft.VisualBasic.PowerPacks.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>C:\Program Files (x86)\Ashpro\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp">
+      <HintPath>..\..\..\Ashpro All\Crack\Debug Folder\PdfSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <HintPath>F:\C Data Sam\Ashpro\Ashpro\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Speech" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Management" />
+    <Reference Include="Tulpep.NotificationWindow">
+      <HintPath>C:\Program Files (x86)\Ashpro\Tulpep.NotificationWindow.dll</HintPath>
+    </Reference>
+    <Reference Include="WebCam_Capture">
+      <HintPath>C:\Program Files (x86)\Ashpro\WebCam_Capture.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing">
+      <HintPath>C:\Program Files (x86)\Ashpro\zxing.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="PSVAT5DataSet.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>PSVAT5DataSet.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+    </None>
+    <None Update="PSVAT5DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PSVAT5DataSet.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\net461\net461\" />
+    <Folder Include="Properties\DataSources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Frameworks\DarrenLeeTranslator\DarrenLee.Translator.csproj" />
+  </ItemGroup>
+</Project>

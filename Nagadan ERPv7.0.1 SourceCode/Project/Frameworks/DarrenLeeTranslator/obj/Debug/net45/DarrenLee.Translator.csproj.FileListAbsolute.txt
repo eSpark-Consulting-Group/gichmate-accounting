@@ -1,0 +1,49 @@
+F:\Code Canyon\Ash Pro Dlls Etc\DarrenLeeTranslator\bin\Debug\net45\DarrenLee.Translator.dll
+F:\Code Canyon\Ash Pro Dlls Etc\DarrenLeeTranslator\bin\Debug\net45\DarrenLee.Translator.pdb
+F:\Code Canyon\Ash Pro Dlls Etc\DarrenLeeTranslator\obj\Debug\net45\DarrenLee.Translator.csproj.AssemblyReference.cache
+F:\Code Canyon\Ash Pro Dlls Etc\DarrenLeeTranslator\obj\Debug\net45\DarrenLee.Translator.GeneratedMSBuildEditorConfig.editorconfig
+F:\Code Canyon\Ash Pro Dlls Etc\DarrenLeeTranslator\obj\Debug\net45\DarrenLee.Translator.csproj.CoreCompileInputs.cache
+F:\Code Canyon\Ash Pro Dlls Etc\DarrenLeeTranslator\obj\Debug\net45\DarrenLee.Translator.dll
+F:\Code Canyon\Ash Pro Dlls Etc\DarrenLeeTranslator\obj\Debug\net45\DarrenLee.Translator.pdb
+F:\Offline Apps\C#\Clients Folder\New Noble\Frameworks\DarrenLeeTranslator\bin\Debug\net45\DarrenLee.Translator.dll
+F:\Offline Apps\C#\Clients Folder\New Noble\Frameworks\DarrenLeeTranslator\bin\Debug\net45\DarrenLee.Translator.pdb
+F:\Offline Apps\C#\Clients Folder\New Noble\Frameworks\DarrenLeeTranslator\obj\Debug\net45\DarrenLee.Translator.csproj.AssemblyReference.cache
+F:\Offline Apps\C#\Clients Folder\New Noble\Frameworks\DarrenLeeTranslator\obj\Debug\net45\DarrenLee.Translator.GeneratedMSBuildEditorConfig.editorconfig
+F:\Offline Apps\C#\Clients Folder\New Noble\Frameworks\DarrenLeeTranslator\obj\Debug\net45\DarrenLee.Translator.csproj.CoreCompileInputs.cache
+F:\Offline Apps\C#\Clients Folder\New Noble\Frameworks\DarrenLeeTranslator\obj\Debug\net45\DarrenLee.Translator.dll
+F:\Offline Apps\C#\Clients Folder\New Noble\Frameworks\DarrenLeeTranslator\obj\Debug\net45\DarrenLee.Translator.pdb
+F:\Offline Apps\C#\Clients Folder\Nagdan Update\Frameworks\DarrenLeeTranslator\bin\Debug\net45\DarrenLee.Translator.dll
+F:\Offline Apps\C#\Clients Folder\Nagdan Update\Frameworks\DarrenLeeTranslator\bin\Debug\net45\DarrenLee.Translator.pdb
+F:\Offline Apps\C#\Clients Folder\Nagdan Update\Frameworks\DarrenLeeTranslator\obj\Debug\net45\DarrenLee.Translator.csproj.AssemblyReference.cache
+F:\Offline Apps\C#\Clients Folder\Nagdan Update\Frameworks\DarrenLeeTranslator\obj\Debug\net45\DarrenLee.Translator.GeneratedMSBuildEditorConfig.editorconfig
+F:\Offline Apps\C#\Clients Folder\Nagdan Update\Frameworks\DarrenLeeTranslator\obj\Debug\net45\DarrenLee.Translator.csproj.CoreCompileInputs.cache
+F:\Offline Apps\C#\Clients Folder\Nagdan Update\Frameworks\DarrenLeeTranslator\obj\Debug\net45\DarrenLee.Translator.dll
+F:\Offline Apps\C#\Clients Folder\Nagdan Update\Frameworks\DarrenLeeTranslator\obj\Debug\net45\DarrenLee.Translator.pdb
+F:\Offline Apps\C#\Nagadan Pro\Project\Frameworks\DarrenLeeTranslator\bin\Debug\net45\DarrenLee.Translator.dll
+F:\Offline Apps\C#\Nagadan Pro\Project\Frameworks\DarrenLeeTranslator\bin\Debug\net45\DarrenLee.Translator.pdb
+F:\Offline Apps\C#\Nagadan Pro\Project\Frameworks\DarrenLeeTranslator\obj\Debug\net45\DarrenLee.Translator.GeneratedMSBuildEditorConfig.editorconfig
+F:\Offline Apps\C#\Nagadan Pro\Project\Frameworks\DarrenLeeTranslator\obj\Debug\net45\DarrenLee.Translator.csproj.CoreCompileInputs.cache
+F:\Offline Apps\C#\Nagadan Pro\Project\Frameworks\DarrenLeeTranslator\obj\Debug\net45\DarrenLee.Translator.dll
+F:\Offline Apps\C#\Nagadan Pro\Project\Frameworks\DarrenLeeTranslator\obj\Debug\net45\DarrenLee.Translator.pdb
+F:\Offline Apps\C#\Nagadan Pro\Project\Frameworks\DarrenLeeTranslator\obj\Debug\net45\DarrenLee.Translator.csproj.AssemblyReference.cache
+F:\Offline Apps\C#\Nagadan Pro\Nagadan-The360 project and DB\Project\Frameworks\DarrenLeeTranslator\bin\Debug\net45\DarrenLee.Translator.dll
+F:\Offline Apps\C#\Nagadan Pro\Nagadan-The360 project and DB\Project\Frameworks\DarrenLeeTranslator\bin\Debug\net45\DarrenLee.Translator.pdb
+F:\Offline Apps\C#\Nagadan Pro\Nagadan-The360 project and DB\Project\Frameworks\DarrenLeeTranslator\obj\Debug\net45\DarrenLee.Translator.csproj.AssemblyReference.cache
+F:\Offline Apps\C#\Nagadan Pro\Nagadan-The360 project and DB\Project\Frameworks\DarrenLeeTranslator\obj\Debug\net45\DarrenLee.Translator.GeneratedMSBuildEditorConfig.editorconfig
+F:\Offline Apps\C#\Nagadan Pro\Nagadan-The360 project and DB\Project\Frameworks\DarrenLeeTranslator\obj\Debug\net45\DarrenLee.Translator.csproj.CoreCompileInputs.cache
+F:\Offline Apps\C#\Nagadan Pro\Nagadan-The360 project and DB\Project\Frameworks\DarrenLeeTranslator\obj\Debug\net45\DarrenLee.Translator.dll
+F:\Offline Apps\C#\Nagadan Pro\Nagadan-The360 project and DB\Project\Frameworks\DarrenLeeTranslator\obj\Debug\net45\DarrenLee.Translator.pdb
+F:\Offline Apps\C#\Nagadan Pro\DeskCloud-The360 project and DB\DeskCloud ERP Source Code V20.21\Project\Frameworks\DarrenLeeTranslator\bin\Debug\net45\DarrenLee.Translator.dll
+F:\Offline Apps\C#\Nagadan Pro\DeskCloud-The360 project and DB\DeskCloud ERP Source Code V20.21\Project\Frameworks\DarrenLeeTranslator\bin\Debug\net45\DarrenLee.Translator.pdb
+F:\Offline Apps\C#\Nagadan Pro\DeskCloud-The360 project and DB\DeskCloud ERP Source Code V20.21\Project\Frameworks\DarrenLeeTranslator\obj\Debug\net45\DarrenLee.Translator.csproj.AssemblyReference.cache
+F:\Offline Apps\C#\Nagadan Pro\DeskCloud-The360 project and DB\DeskCloud ERP Source Code V20.21\Project\Frameworks\DarrenLeeTranslator\obj\Debug\net45\DarrenLee.Translator.GeneratedMSBuildEditorConfig.editorconfig
+F:\Offline Apps\C#\Nagadan Pro\DeskCloud-The360 project and DB\DeskCloud ERP Source Code V20.21\Project\Frameworks\DarrenLeeTranslator\obj\Debug\net45\DarrenLee.Translator.csproj.CoreCompileInputs.cache
+F:\Offline Apps\C#\Nagadan Pro\DeskCloud-The360 project and DB\DeskCloud ERP Source Code V20.21\Project\Frameworks\DarrenLeeTranslator\obj\Debug\net45\DarrenLee.Translator.dll
+F:\Offline Apps\C#\Nagadan Pro\DeskCloud-The360 project and DB\DeskCloud ERP Source Code V20.21\Project\Frameworks\DarrenLeeTranslator\obj\Debug\net45\DarrenLee.Translator.pdb
+F:\Offline Apps\DeskCloud ERP\Project\Frameworks\DarrenLeeTranslator\bin\Debug\net45\DarrenLee.Translator.dll
+F:\Offline Apps\DeskCloud ERP\Project\Frameworks\DarrenLeeTranslator\bin\Debug\net45\DarrenLee.Translator.pdb
+F:\Offline Apps\DeskCloud ERP\Project\Frameworks\DarrenLeeTranslator\obj\Debug\net45\DarrenLee.Translator.csproj.AssemblyReference.cache
+F:\Offline Apps\DeskCloud ERP\Project\Frameworks\DarrenLeeTranslator\obj\Debug\net45\DarrenLee.Translator.GeneratedMSBuildEditorConfig.editorconfig
+F:\Offline Apps\DeskCloud ERP\Project\Frameworks\DarrenLeeTranslator\obj\Debug\net45\DarrenLee.Translator.csproj.CoreCompileInputs.cache
+F:\Offline Apps\DeskCloud ERP\Project\Frameworks\DarrenLeeTranslator\obj\Debug\net45\DarrenLee.Translator.dll
+F:\Offline Apps\DeskCloud ERP\Project\Frameworks\DarrenLeeTranslator\obj\Debug\net45\DarrenLee.Translator.pdb

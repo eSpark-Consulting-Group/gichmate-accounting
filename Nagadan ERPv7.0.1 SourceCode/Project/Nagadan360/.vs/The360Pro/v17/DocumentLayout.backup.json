@@ -1,0 +1,89 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "F:\\Offline Apps\\DeskCloud ERP\\Project\\Nagadan360\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{84428B0F-1800-4CD4-866B-AD2C9792C98B}|The360Pro.csproj|f:\\offline apps\\deskcloud erp\\project\\nagadan360\\ashpro\\license\\licenseform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{84428B0F-1800-4CD4-866B-AD2C9792C98B}|The360Pro.csproj|solutionrelative:ashpro\\license\\licenseform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84428B0F-1800-4CD4-866B-AD2C9792C98B}|The360Pro.csproj|f:\\offline apps\\deskcloud erp\\project\\nagadan360\\ashpro\\license\\licenseform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84428B0F-1800-4CD4-866B-AD2C9792C98B}|The360Pro.csproj|solutionrelative:ashpro\\license\\licenseform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84428B0F-1800-4CD4-866B-AD2C9792C98B}|The360Pro.csproj|F:\\Offline Apps\\DeskCloud ERP\\Project\\Nagadan360\\ashpro\\activation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{84428B0F-1800-4CD4-866B-AD2C9792C98B}|The360Pro.csproj|solutionrelative:ashpro\\activation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84428B0F-1800-4CD4-866B-AD2C9792C98B}|The360Pro.csproj|f:\\offline apps\\deskcloud erp\\project\\nagadan360\\ashpro\\activation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84428B0F-1800-4CD4-866B-AD2C9792C98B}|The360Pro.csproj|solutionrelative:ashpro\\activation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Activation.cs",
+              "DocumentMoniker": "F:\\Offline Apps\\DeskCloud ERP\\Project\\Nagadan360\\Ashpro\\Activation.cs",
+              "RelativeDocumentMoniker": "Ashpro\\Activation.cs",
+              "ToolTip": "F:\\Offline Apps\\DeskCloud ERP\\Project\\Nagadan360\\Ashpro\\Activation.cs",
+              "RelativeToolTip": "Ashpro\\Activation.cs",
+              "ViewState": "AgIAANoAAAAAAAAAAAAAwOoAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-12T07:44:30.19Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Activation.cs [Design]",
+              "DocumentMoniker": "F:\\Offline Apps\\DeskCloud ERP\\Project\\Nagadan360\\Ashpro\\Activation.cs",
+              "RelativeDocumentMoniker": "Ashpro\\Activation.cs",
+              "ToolTip": "F:\\Offline Apps\\DeskCloud ERP\\Project\\Nagadan360\\Ashpro\\Activation.cs [Design]",
+              "RelativeToolTip": "Ashpro\\Activation.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-12T07:31:07.462Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LicenseForm.cs",
+              "DocumentMoniker": "F:\\Offline Apps\\DeskCloud ERP\\Project\\Nagadan360\\Ashpro\\License\\LicenseForm.cs",
+              "RelativeDocumentMoniker": "Ashpro\\License\\LicenseForm.cs",
+              "ToolTip": "F:\\Offline Apps\\DeskCloud ERP\\Project\\Nagadan360\\Ashpro\\License\\LicenseForm.cs",
+              "RelativeToolTip": "Ashpro\\License\\LicenseForm.cs",
+              "ViewState": "AgIAAHIAAAAAAAAAAADwv3cAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-10T13:20:08.11Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LicenseForm.cs [Design]",
+              "DocumentMoniker": "F:\\Offline Apps\\DeskCloud ERP\\Project\\Nagadan360\\Ashpro\\License\\LicenseForm.cs",
+              "RelativeDocumentMoniker": "Ashpro\\License\\LicenseForm.cs",
+              "ToolTip": "F:\\Offline Apps\\DeskCloud ERP\\Project\\Nagadan360\\Ashpro\\License\\LicenseForm.cs [Design]",
+              "RelativeToolTip": "Ashpro\\License\\LicenseForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T07:02:53.543Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+Don't Touch the Frameworks Folder. Keep it Default.
+Follow the instruction below
+
+
+1. Create a Database Name PSVAT5
+2. Execute the Script to SQL server to PSVAT5 Database.
+3. Run the project.
+4. Login Username: admin, Password: 741
+5. for open POS and MDI Dashboard alt+ctrl+z 
+
+

@@ -1,0 +1,119 @@
+F:\Code Canyon\Ash Pro Dlls Etc\AshUserControl\obj\Debug\net461\AshUsercontrol.csproj.AssemblyReference.cache
+F:\Code Canyon\Ash Pro Dlls Etc\AshUserControl\obj\Debug\net461\AshUsercontrol.NumKeyBoardLogi.resources
+F:\Code Canyon\Ash Pro Dlls Etc\AshUserControl\obj\Debug\net461\AshUsercontrol.NumKeyBoardPOS.resources
+F:\Code Canyon\Ash Pro Dlls Etc\AshUserControl\obj\Debug\net461\AshUsercontrol.ProgressBar.resources
+F:\Code Canyon\Ash Pro Dlls Etc\AshUserControl\obj\Debug\net461\AshUsercontrol.Properties.Reso.resources
+F:\Code Canyon\Ash Pro Dlls Etc\AshUserControl\obj\Debug\net461\AshUsercontrol.RestaurantKeybo.resources
+F:\Code Canyon\Ash Pro Dlls Etc\AshUserControl\obj\Debug\net461\AshUsercontrol.csproj.GenerateResource.cache
+F:\Code Canyon\Ash Pro Dlls Etc\AshUserControl\obj\Debug\net461\AshUsercontrol.GeneratedMSBuildEditorConfig.editorconfig
+F:\Code Canyon\Ash Pro Dlls Etc\AshUserControl\obj\Debug\net461\AshUsercontrol.csproj.CoreCompileInputs.cache
+F:\Code Canyon\Ash Pro Dlls Etc\AshUserControl\bin\Debug\net461\AshUsercontrol.dll
+F:\Code Canyon\Ash Pro Dlls Etc\AshUserControl\bin\Debug\net461\AshUsercontrol.pdb
+F:\Code Canyon\Ash Pro Dlls Etc\AshUserControl\bin\Debug\net461\AshFramework.dll
+F:\Code Canyon\Ash Pro Dlls Etc\AshUserControl\bin\Debug\net461\AshFramework.pdb
+F:\Code Canyon\Ash Pro Dlls Etc\AshUserControl\bin\Debug\net461\AshFramework.dll.config
+F:\Code Canyon\Ash Pro Dlls Etc\AshUserControl\obj\Debug\net461\AshUsercontrol.csproj.CopyComplete
+F:\Code Canyon\Ash Pro Dlls Etc\AshUserControl\obj\Debug\net461\AshUsercontrol.dll
+F:\Code Canyon\Ash Pro Dlls Etc\AshUserControl\obj\Debug\net461\AshUsercontrol.pdb
+F:\Offline Apps\C#\Clients Folder\New Noble\Frameworks\AshUserControl\bin\Debug\net461\AshUsercontrol.dll
+F:\Offline Apps\C#\Clients Folder\New Noble\Frameworks\AshUserControl\bin\Debug\net461\AshUsercontrol.pdb
+F:\Offline Apps\C#\Clients Folder\New Noble\Frameworks\AshUserControl\bin\Debug\net461\AshFramework.dll
+F:\Offline Apps\C#\Clients Folder\New Noble\Frameworks\AshUserControl\bin\Debug\net461\AshFramework.pdb
+F:\Offline Apps\C#\Clients Folder\New Noble\Frameworks\AshUserControl\bin\Debug\net461\AshFramework.dll.config
+F:\Offline Apps\C#\Clients Folder\New Noble\Frameworks\AshUserControl\obj\Debug\net461\AshUsercontrol.csproj.AssemblyReference.cache
+F:\Offline Apps\C#\Clients Folder\New Noble\Frameworks\AshUserControl\obj\Debug\net461\AshUsercontrol.NumKeyBoardLogi.resources
+F:\Offline Apps\C#\Clients Folder\New Noble\Frameworks\AshUserControl\obj\Debug\net461\AshUsercontrol.NumKeyBoardPOS.resources
+F:\Offline Apps\C#\Clients Folder\New Noble\Frameworks\AshUserControl\obj\Debug\net461\AshUsercontrol.ProgressBar.resources
+F:\Offline Apps\C#\Clients Folder\New Noble\Frameworks\AshUserControl\obj\Debug\net461\AshUsercontrol.Properties.Reso.resources
+F:\Offline Apps\C#\Clients Folder\New Noble\Frameworks\AshUserControl\obj\Debug\net461\AshUsercontrol.RestaurantKeybo.resources
+F:\Offline Apps\C#\Clients Folder\New Noble\Frameworks\AshUserControl\obj\Debug\net461\AshUsercontrol.csproj.GenerateResource.cache
+F:\Offline Apps\C#\Clients Folder\New Noble\Frameworks\AshUserControl\obj\Debug\net461\AshUsercontrol.GeneratedMSBuildEditorConfig.editorconfig
+F:\Offline Apps\C#\Clients Folder\New Noble\Frameworks\AshUserControl\obj\Debug\net461\AshUsercontrol.csproj.CoreCompileInputs.cache
+F:\Offline Apps\C#\Clients Folder\New Noble\Frameworks\AshUserControl\obj\Debug\net461\AshUsercontrol.csproj.CopyComplete
+F:\Offline Apps\C#\Clients Folder\New Noble\Frameworks\AshUserControl\obj\Debug\net461\AshUsercontrol.dll
+F:\Offline Apps\C#\Clients Folder\New Noble\Frameworks\AshUserControl\obj\Debug\net461\AshUsercontrol.pdb
+F:\Offline Apps\C#\Clients Folder\Nagdan Update\Frameworks\AshUserControl\bin\Debug\net461\AshUsercontrol.dll
+F:\Offline Apps\C#\Clients Folder\Nagdan Update\Frameworks\AshUserControl\bin\Debug\net461\AshUsercontrol.pdb
+F:\Offline Apps\C#\Clients Folder\Nagdan Update\Frameworks\AshUserControl\bin\Debug\net461\AshFramework.dll
+F:\Offline Apps\C#\Clients Folder\Nagdan Update\Frameworks\AshUserControl\bin\Debug\net461\AshFramework.pdb
+F:\Offline Apps\C#\Clients Folder\Nagdan Update\Frameworks\AshUserControl\bin\Debug\net461\AshFramework.dll.config
+F:\Offline Apps\C#\Clients Folder\Nagdan Update\Frameworks\AshUserControl\obj\Debug\net461\AshUsercontrol.csproj.AssemblyReference.cache
+F:\Offline Apps\C#\Clients Folder\Nagdan Update\Frameworks\AshUserControl\obj\Debug\net461\AshUsercontrol.NumKeyBoardLogi.resources
+F:\Offline Apps\C#\Clients Folder\Nagdan Update\Frameworks\AshUserControl\obj\Debug\net461\AshUsercontrol.NumKeyBoardPOS.resources
+F:\Offline Apps\C#\Clients Folder\Nagdan Update\Frameworks\AshUserControl\obj\Debug\net461\AshUsercontrol.ProgressBar.resources
+F:\Offline Apps\C#\Clients Folder\Nagdan Update\Frameworks\AshUserControl\obj\Debug\net461\AshUsercontrol.Properties.Reso.resources
+F:\Offline Apps\C#\Clients Folder\Nagdan Update\Frameworks\AshUserControl\obj\Debug\net461\AshUsercontrol.RestaurantKeybo.resources
+F:\Offline Apps\C#\Clients Folder\Nagdan Update\Frameworks\AshUserControl\obj\Debug\net461\AshUsercontrol.csproj.GenerateResource.cache
+F:\Offline Apps\C#\Clients Folder\Nagdan Update\Frameworks\AshUserControl\obj\Debug\net461\AshUsercontrol.GeneratedMSBuildEditorConfig.editorconfig
+F:\Offline Apps\C#\Clients Folder\Nagdan Update\Frameworks\AshUserControl\obj\Debug\net461\AshUsercontrol.csproj.CoreCompileInputs.cache
+F:\Offline Apps\C#\Clients Folder\Nagdan Update\Frameworks\AshUserControl\obj\Debug\net461\AshUsercontrol.csproj.CopyComplete
+F:\Offline Apps\C#\Clients Folder\Nagdan Update\Frameworks\AshUserControl\obj\Debug\net461\AshUsercontrol.dll
+F:\Offline Apps\C#\Clients Folder\Nagdan Update\Frameworks\AshUserControl\obj\Debug\net461\AshUsercontrol.pdb
+F:\Offline Apps\C#\Nagadan Pro\Project\Frameworks\AshUserControl\bin\Debug\net461\AshUsercontrol.dll
+F:\Offline Apps\C#\Nagadan Pro\Project\Frameworks\AshUserControl\bin\Debug\net461\AshUsercontrol.pdb
+F:\Offline Apps\C#\Nagadan Pro\Project\Frameworks\AshUserControl\bin\Debug\net461\AshFramework.dll
+F:\Offline Apps\C#\Nagadan Pro\Project\Frameworks\AshUserControl\bin\Debug\net461\AshFramework.pdb
+F:\Offline Apps\C#\Nagadan Pro\Project\Frameworks\AshUserControl\bin\Debug\net461\AshFramework.dll.config
+F:\Offline Apps\C#\Nagadan Pro\Project\Frameworks\AshUserControl\obj\Debug\net461\AshUsercontrol.csproj.AssemblyReference.cache
+F:\Offline Apps\C#\Nagadan Pro\Project\Frameworks\AshUserControl\obj\Debug\net461\AshUsercontrol.NumKeyBoardLogi.resources
+F:\Offline Apps\C#\Nagadan Pro\Project\Frameworks\AshUserControl\obj\Debug\net461\AshUsercontrol.NumKeyBoardPOS.resources
+F:\Offline Apps\C#\Nagadan Pro\Project\Frameworks\AshUserControl\obj\Debug\net461\AshUsercontrol.ProgressBar.resources
+F:\Offline Apps\C#\Nagadan Pro\Project\Frameworks\AshUserControl\obj\Debug\net461\AshUsercontrol.Properties.Reso.resources
+F:\Offline Apps\C#\Nagadan Pro\Project\Frameworks\AshUserControl\obj\Debug\net461\AshUsercontrol.RestaurantKeybo.resources
+F:\Offline Apps\C#\Nagadan Pro\Project\Frameworks\AshUserControl\obj\Debug\net461\AshUsercontrol.csproj.GenerateResource.cache
+F:\Offline Apps\C#\Nagadan Pro\Project\Frameworks\AshUserControl\obj\Debug\net461\AshUsercontrol.GeneratedMSBuildEditorConfig.editorconfig
+F:\Offline Apps\C#\Nagadan Pro\Project\Frameworks\AshUserControl\obj\Debug\net461\AshUsercontrol.csproj.CoreCompileInputs.cache
+F:\Offline Apps\C#\Nagadan Pro\Project\Frameworks\AshUserControl\obj\Debug\net461\AshUsercontrol.csproj.CopyComplete
+F:\Offline Apps\C#\Nagadan Pro\Project\Frameworks\AshUserControl\obj\Debug\net461\AshUsercontrol.dll
+F:\Offline Apps\C#\Nagadan Pro\Project\Frameworks\AshUserControl\obj\Debug\net461\AshUsercontrol.pdb
+F:\Offline Apps\C#\Nagadan Pro\Nagadan-The360 project and DB\Project\Frameworks\AshUserControl\bin\Debug\net461\AshUsercontrol.dll
+F:\Offline Apps\C#\Nagadan Pro\Nagadan-The360 project and DB\Project\Frameworks\AshUserControl\bin\Debug\net461\AshUsercontrol.pdb
+F:\Offline Apps\C#\Nagadan Pro\Nagadan-The360 project and DB\Project\Frameworks\AshUserControl\bin\Debug\net461\AshFramework.dll
+F:\Offline Apps\C#\Nagadan Pro\Nagadan-The360 project and DB\Project\Frameworks\AshUserControl\bin\Debug\net461\AshFramework.pdb
+F:\Offline Apps\C#\Nagadan Pro\Nagadan-The360 project and DB\Project\Frameworks\AshUserControl\bin\Debug\net461\AshFramework.dll.config
+F:\Offline Apps\C#\Nagadan Pro\Nagadan-The360 project and DB\Project\Frameworks\AshUserControl\obj\Debug\net461\AshUsercontrol.csproj.AssemblyReference.cache
+F:\Offline Apps\C#\Nagadan Pro\Nagadan-The360 project and DB\Project\Frameworks\AshUserControl\obj\Debug\net461\AshUsercontrol.NumKeyBoardLogi.resources
+F:\Offline Apps\C#\Nagadan Pro\Nagadan-The360 project and DB\Project\Frameworks\AshUserControl\obj\Debug\net461\AshUsercontrol.NumKeyBoardPOS.resources
+F:\Offline Apps\C#\Nagadan Pro\Nagadan-The360 project and DB\Project\Frameworks\AshUserControl\obj\Debug\net461\AshUsercontrol.ProgressBar.resources
+F:\Offline Apps\C#\Nagadan Pro\Nagadan-The360 project and DB\Project\Frameworks\AshUserControl\obj\Debug\net461\AshUsercontrol.Properties.Reso.resources
+F:\Offline Apps\C#\Nagadan Pro\Nagadan-The360 project and DB\Project\Frameworks\AshUserControl\obj\Debug\net461\AshUsercontrol.RestaurantKeybo.resources
+F:\Offline Apps\C#\Nagadan Pro\Nagadan-The360 project and DB\Project\Frameworks\AshUserControl\obj\Debug\net461\AshUsercontrol.csproj.GenerateResource.cache
+F:\Offline Apps\C#\Nagadan Pro\Nagadan-The360 project and DB\Project\Frameworks\AshUserControl\obj\Debug\net461\AshUsercontrol.GeneratedMSBuildEditorConfig.editorconfig
+F:\Offline Apps\C#\Nagadan Pro\Nagadan-The360 project and DB\Project\Frameworks\AshUserControl\obj\Debug\net461\AshUsercontrol.csproj.CoreCompileInputs.cache
+F:\Offline Apps\C#\Nagadan Pro\Nagadan-The360 project and DB\Project\Frameworks\AshUserControl\obj\Debug\net461\AshUsercontrol.csproj.CopyComplete
+F:\Offline Apps\C#\Nagadan Pro\Nagadan-The360 project and DB\Project\Frameworks\AshUserControl\obj\Debug\net461\AshUsercontrol.dll
+F:\Offline Apps\C#\Nagadan Pro\Nagadan-The360 project and DB\Project\Frameworks\AshUserControl\obj\Debug\net461\AshUsercontrol.pdb
+F:\Offline Apps\C#\Nagadan Pro\DeskCloud-The360 project and DB\DeskCloud ERP Source Code V20.21\Project\Frameworks\AshUserControl\bin\Debug\net461\AshUsercontrol.dll
+F:\Offline Apps\C#\Nagadan Pro\DeskCloud-The360 project and DB\DeskCloud ERP Source Code V20.21\Project\Frameworks\AshUserControl\bin\Debug\net461\AshUsercontrol.pdb
+F:\Offline Apps\C#\Nagadan Pro\DeskCloud-The360 project and DB\DeskCloud ERP Source Code V20.21\Project\Frameworks\AshUserControl\bin\Debug\net461\AshFramework.dll
+F:\Offline Apps\C#\Nagadan Pro\DeskCloud-The360 project and DB\DeskCloud ERP Source Code V20.21\Project\Frameworks\AshUserControl\bin\Debug\net461\AshFramework.pdb
+F:\Offline Apps\C#\Nagadan Pro\DeskCloud-The360 project and DB\DeskCloud ERP Source Code V20.21\Project\Frameworks\AshUserControl\bin\Debug\net461\AshFramework.dll.config
+F:\Offline Apps\C#\Nagadan Pro\DeskCloud-The360 project and DB\DeskCloud ERP Source Code V20.21\Project\Frameworks\AshUserControl\obj\Debug\net461\AshUsercontrol.csproj.AssemblyReference.cache
+F:\Offline Apps\C#\Nagadan Pro\DeskCloud-The360 project and DB\DeskCloud ERP Source Code V20.21\Project\Frameworks\AshUserControl\obj\Debug\net461\AshUsercontrol.NumKeyBoardLogi.resources
+F:\Offline Apps\C#\Nagadan Pro\DeskCloud-The360 project and DB\DeskCloud ERP Source Code V20.21\Project\Frameworks\AshUserControl\obj\Debug\net461\AshUsercontrol.NumKeyBoardPOS.resources
+F:\Offline Apps\C#\Nagadan Pro\DeskCloud-The360 project and DB\DeskCloud ERP Source Code V20.21\Project\Frameworks\AshUserControl\obj\Debug\net461\AshUsercontrol.ProgressBar.resources
+F:\Offline Apps\C#\Nagadan Pro\DeskCloud-The360 project and DB\DeskCloud ERP Source Code V20.21\Project\Frameworks\AshUserControl\obj\Debug\net461\AshUsercontrol.Properties.Reso.resources
+F:\Offline Apps\C#\Nagadan Pro\DeskCloud-The360 project and DB\DeskCloud ERP Source Code V20.21\Project\Frameworks\AshUserControl\obj\Debug\net461\AshUsercontrol.RestaurantKeybo.resources
+F:\Offline Apps\C#\Nagadan Pro\DeskCloud-The360 project and DB\DeskCloud ERP Source Code V20.21\Project\Frameworks\AshUserControl\obj\Debug\net461\AshUsercontrol.csproj.GenerateResource.cache
+F:\Offline Apps\C#\Nagadan Pro\DeskCloud-The360 project and DB\DeskCloud ERP Source Code V20.21\Project\Frameworks\AshUserControl\obj\Debug\net461\AshUsercontrol.GeneratedMSBuildEditorConfig.editorconfig
+F:\Offline Apps\C#\Nagadan Pro\DeskCloud-The360 project and DB\DeskCloud ERP Source Code V20.21\Project\Frameworks\AshUserControl\obj\Debug\net461\AshUsercontrol.csproj.CoreCompileInputs.cache
+F:\Offline Apps\C#\Nagadan Pro\DeskCloud-The360 project and DB\DeskCloud ERP Source Code V20.21\Project\Frameworks\AshUserControl\obj\Debug\net461\AshUsercontrol.csproj.CopyComplete
+F:\Offline Apps\C#\Nagadan Pro\DeskCloud-The360 project and DB\DeskCloud ERP Source Code V20.21\Project\Frameworks\AshUserControl\obj\Debug\net461\AshUsercontrol.dll
+F:\Offline Apps\C#\Nagadan Pro\DeskCloud-The360 project and DB\DeskCloud ERP Source Code V20.21\Project\Frameworks\AshUserControl\obj\Debug\net461\AshUsercontrol.pdb
+F:\Offline Apps\DeskCloud ERP\Project\Frameworks\AshUserControl\bin\Debug\net461\AshUsercontrol.dll
+F:\Offline Apps\DeskCloud ERP\Project\Frameworks\AshUserControl\bin\Debug\net461\AshUsercontrol.pdb
+F:\Offline Apps\DeskCloud ERP\Project\Frameworks\AshUserControl\bin\Debug\net461\AshFramework.dll
+F:\Offline Apps\DeskCloud ERP\Project\Frameworks\AshUserControl\bin\Debug\net461\AshFramework.pdb
+F:\Offline Apps\DeskCloud ERP\Project\Frameworks\AshUserControl\bin\Debug\net461\AshFramework.dll.config
+F:\Offline Apps\DeskCloud ERP\Project\Frameworks\AshUserControl\obj\Debug\net461\AshUsercontrol.csproj.AssemblyReference.cache
+F:\Offline Apps\DeskCloud ERP\Project\Frameworks\AshUserControl\obj\Debug\net461\AshUsercontrol.NumKeyBoardLogi.resources
+F:\Offline Apps\DeskCloud ERP\Project\Frameworks\AshUserControl\obj\Debug\net461\AshUsercontrol.NumKeyBoardPOS.resources
+F:\Offline Apps\DeskCloud ERP\Project\Frameworks\AshUserControl\obj\Debug\net461\AshUsercontrol.ProgressBar.resources
+F:\Offline Apps\DeskCloud ERP\Project\Frameworks\AshUserControl\obj\Debug\net461\AshUsercontrol.Properties.Reso.resources
+F:\Offline Apps\DeskCloud ERP\Project\Frameworks\AshUserControl\obj\Debug\net461\AshUsercontrol.RestaurantKeybo.resources
+F:\Offline Apps\DeskCloud ERP\Project\Frameworks\AshUserControl\obj\Debug\net461\AshUsercontrol.csproj.GenerateResource.cache
+F:\Offline Apps\DeskCloud ERP\Project\Frameworks\AshUserControl\obj\Debug\net461\AshUsercontrol.GeneratedMSBuildEditorConfig.editorconfig
+F:\Offline Apps\DeskCloud ERP\Project\Frameworks\AshUserControl\obj\Debug\net461\AshUsercontrol.csproj.CoreCompileInputs.cache
+F:\Offline Apps\DeskCloud ERP\Project\Frameworks\AshUserControl\obj\Debug\net461\AshUserc.95F95406.Up2Date
+F:\Offline Apps\DeskCloud ERP\Project\Frameworks\AshUserControl\obj\Debug\net461\AshUsercontrol.dll
+F:\Offline Apps\DeskCloud ERP\Project\Frameworks\AshUserControl\obj\Debug\net461\AshUsercontrol.pdb

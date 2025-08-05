@@ -1,0 +1,1156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="btnPrint.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;label6.Name" xml:space="preserve">
+    <value>label6</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnShow.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="cbDetailed.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="cbDetailed.Text" xml:space="preserve">
+    <value>Detailed</value>
+  </data>
+  <data name="label6.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="cmbOppStock.Items1" xml:space="preserve">
+    <value>Purchase Price</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="cbDetailed.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS Reference Sans Serif, 9.75pt</value>
+  </data>
+  <data name="dtmDate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>250, 42</value>
+  </data>
+  <data name="cmbOppStock.TabIndex" type="System.Int32, mscorlib">
+    <value>152</value>
+  </data>
+  <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS Reference Sans Serif, 9.75pt</value>
+  </data>
+  <data name="&gt;&gt;columnHeader1.Name" xml:space="preserve">
+    <value>columnHeader1</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="btnMail.TabIndex" type="System.Int32, mscorlib">
+    <value>146</value>
+  </data>
+  <data name="btnPrint.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS Reference Sans Serif, 10pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;cbDetailed.Name" xml:space="preserve">
+    <value>cbDetailed</value>
+  </data>
+  <data name="btnMail.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnClose.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cmbOppStock.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmbBranch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>151, 24</value>
+  </data>
+  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;cbShowCloStck.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="btnClear.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 30</value>
+  </data>
+  <data name="btnMail.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="cbDetailed.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 20</value>
+  </data>
+  <data name="&gt;&gt;livDetails.Name" xml:space="preserve">
+    <value>livDetails</value>
+  </data>
+  <data name="btnClose.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS Reference Sans Serif, 10pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;cmbBranch.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>197, 16</value>
+  </data>
+  <data name="cmbClosingStock.Location" type="System.Drawing.Point, System.Drawing">
+    <value>646, 42</value>
+  </data>
+  <data name="cmbOppStock.Items3" xml:space="preserve">
+    <value>Last Selling Price</value>
+  </data>
+  <data name="livDetails.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 8</value>
+  </data>
+  <data name="panel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="btnShow.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 30</value>
+  </data>
+  <data name="btnMail.Text" xml:space="preserve">
+    <value>Mail</value>
+  </data>
+  <data name="&gt;&gt;btnExcel.Name" xml:space="preserve">
+    <value>btnExcel</value>
+  </data>
+  <data name="&gt;&gt;cmbOppStock.Type" xml:space="preserve">
+    <value>AshUsercontrol.AshComboBox, AshUsercontrol, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="cbShowCloStck.Text" xml:space="preserve">
+    <value>Show Closing Stock</value>
+  </data>
+  <data name="&gt;&gt;cmbOppStock.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="dtmDate.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="livDetails.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="cmbOppStock.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS Reference Sans Serif, 9.75pt</value>
+  </data>
+  <data name="&gt;&gt;btnShow.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cbShowCloStck.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;columnHeader4.Name" xml:space="preserve">
+    <value>columnHeader4</value>
+  </data>
+  <data name="&gt;&gt;btnClose.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="cmbBranch.Items1" xml:space="preserve">
+    <value>Purchase Price</value>
+  </data>
+  <data name="btnClose.Location" type="System.Drawing.Point, System.Drawing">
+    <value>440, 7</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAMAEBAAAAEAIABoBAAANgAAACAgAAABACAAqBAAAJ4EAAAwMAAAAQAgAKglAABGFQAAKAAAABAA
+        AAAgAAAAAQAgAAAAAAAABAAAww4AAMMOAAAAAAAAAAAAAJaKf+OWin/olop/55aKf+eWin/nlop/55aK
+        f+eWin/nlop/55aKf+eWin/nlop/55aKf+eViX7nlIh96IyAduSWin//lop//5WJfv+UiH3/lIh9/5SI
+        ff+UiH3/lIh9/5SIff+UiH3/lIh9/5WJfv+Xi4D/pZuS/5uQhv+MgHX/lop//5aKf/+MgXf/hXtx/4Z7
+        cf+Ge3H/hntx/4Z7cf+Ge3H/hntx/4V7cf+Ognj/m5CG/9DNyv+wqKH/i350/5aKf/+Win//lYl+/5WJ
+        fv+ViX7/lYl+/5aKf/+Win//lop//5aKf/+ViX7/lYl//5eLgP+il47/mY6E/4yAdv+Win+5lop/vpaK
+        f76Win++lop/vJGGe9eMgXb/jIF2/4yBdv+IfXP/j4N51ZaKf7yWin++lYl+vpSIfb6MgHa6lop/B5aK
+        fweWin8Flop/Bf///wFwZ19nb2Ze/29mXv9vZl7/X1dR/ldQSWD///8Blop/BZqOgwWViX4HjIB1CJaK
+        fwCWin8ylYl+hZOHe4aTh3yDiX5ztYF3bf+Bd23/gXdt/3pwZ/+DeG6ylIh8g5OHfIaOgneFin50Lop+
+        dACWin8AlIh9ZaKWjP/Atq//wrix/8O4sv/EubP/xLmz/8O5sv/DubH/xLmw/8O5sP+9sqv/mI2D/4h8
+        cl+KfnQAlop/AJKGemW2q6P/9PLq/+Lt1f/c6s//3uvR/93qz//q8N7/7u/0/8zd9//R3/b/7Ofp/6me
+        lv+Gem9fin50AJaKfwCShnplt6yk/+Pr1v+h1Iv/ls+A/5vRhP+Xz4D/vd6n/8vc8/9jpP//cav9/9zf
+        6f+qnpb/hnpvX4p+dACWin8AkoZ6ZbespP/h6tX/ndKH/5POff+Xz4D/k859/7fcpP/r7fD/ydr1/87d
+        9P/r5+j/qZ6W/4Z6b1+KfnQAlop/AJKGemW3rKT/4erV/53Sh/+Tzn3/l8+A/5TOff+33KT/9vLt/+rl
+        4f/t6OT/8enn/6ielv+Gem9fin50AJaKfwCShnplt6yk/+Hq1P+c0YX/kc17/5XPfv+SzXv/tdui//Xx
+        7f/n4+H/6ubk//Hp5/+onpb/hnpvX4p+dACWin8AkoV6ZbespP/v8eT/yOS3/7/grf/C4bH/wOCu/9jp
+        yf/79vL/+/Xy//v18v/z6+n/qZ6W/4Z5b1+KfnQAlop/AJOHfGWroJf/3NTP/97W0f/e1tH/3tbR/97W
+        0f/e1tH/3tbR/97W0f/e1tH/187J/6CVjP+He3Ffin50AJaKfwCWin9Zl4uA6JmNguiZjYPnmY2D55mN
+        g+eZjYPnmY2D55mNg+eZjYPnmY2D55mNguiPg3nnin50U4p+dAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AACAAQAAgAEAAIABAACAAQAAgAEAAIABAACAAQAAgAEAAIABAACAAQAAKAAAACAAAABAAAAAAQAgAAAA
+        AAAAEAAAww4AAMMOAAAAAAAAAAAAAJaKf7SWin/Mlop/y5aKf8uWin/Llop/y5aKf8uWin/Llop/y5aK
+        f8uWin/Llop/y5aKf8uWin/Llop/y5aKf8uWin/Llop/y5aKf8uWin/Llop/y5aKf8uWin/Llop/y5aK
+        f8uWin/Llop/y5aKf8uWin/LlIh9zIt/dc6KfnS2lop//paKf/+Win//lop//5aKf/+Win//lop//5aK
+        f/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aK
+        f/+Win//lop//5aKf/+Win//lop//5aKf/+ViX7/jIB2/4p+dP6Win//lop//5aKf/+Win//lop//5aK
+        f/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aK
+        f/+Win//lop//5aKf/+Win//lop//5WJfv+ViH3/lYl+/5WJfv+MgHb/in50/5aKf/+Win//lop//5aK
+        f/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aK
+        f/+Win//lop//5aKf/+Win//lop//5aKf/+Win//ppyT/7qzrf+kmpD/lYl+/4yAdv+KfnT/lop//5aK
+        f/+Win//lop//5CFev+Bdm3/gHVs/4B1bP+AdWz/gHVs/4B1bP+AdWz/gHVs/4B1bP+AdWz/gHVs/4B1
+        bP+AdWz/gHVs/4B1bP+AdWz/gHVs/4N5b/+UiH3/lop//5qPhf/U0c7/6urq/8/LyP+XjIH/jIB2/4p+
+        dP+Win//lop//5aKf/+Win//koZ7/4Z7cf+FenD/hXpw/4V6cP+FenD/hXpw/4V6cP+FenD/hXpw/4V6
+        cP+FenD/hXpw/4V6cP+FenD/hXpw/4V6cP+FenD/iH1z/5SIfv+Win//mo6E/8/LyP/n5+j/ysXB/5eL
+        gP+MgHb/in50/5aKf/+Win//lop//5aKf/+Win//l4uA/5eLgP+Xi4D/l4uA/5eLgP+Xi4D/l4uA/5eL
+        gP+Xi4D/l4uA/5eLgP+Xi4D/l4uA/5eLgP+Xi4D/l4uA/5eLgP+Xi4D/lop//5aKf/+Win//oJWM/6+n
+        n/+elIr/lYl+/4yAdv+KfnT/lop//5aKf/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aK
+        f/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aK
+        f/+ViX7/lYh9/5aJfv+ViX7/jIB2/4p+dP+Win/9lop//5aKf/+Win//lop//5aKf/+Win//lop//5aK
+        f/+Win//lop//5aKf/+Xi4D/l4uA/5eLgP+Xi4D/l4uA/5eLgP+Xi4D/l4uA/5eLgP+Win//lop//5aK
+        f/+Win//lop//5aKf/+Win//lop//5WJfv+MgHb/in50/ZaKf32Win+Slop/kZaKf5GWin+Rlop/kZaK
+        f5GWin+Rlop/kZaKf5GViX6UiH1z4IV6cP+FenD/hXpw/4V6cP+FenD/hXpx/4J3bv96cGf/gHZs2paK
+        f5KWin+Rlop/kZaKf5GWin+Rlop/kZaKf5GWin+RlIh9k4t/dZWKfnR/AAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAbmRcAG5kXAZuZV22bmVd/25lXf9uZV3/bmVd/25lXf9uZV3/Zl5W/1RN
+        R/9UTUepWVJKAlZPSQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABuZFwAbmRcBm5lXbZuZV3/bmVd/25lXf9uZV3/bmVd/25l
+        Xf9mXlb/VE1H/1RNR6lZUkoCVk9JAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AACWin8AloqAAJaKfxWWin8olop/J5aKfyeWin8nlop/J5aKfyeShnssdmxkwXRrYv90a2L/dGti/3Rr
+        Yv90a2L/dGtj/25lXf9eV1D/YlpTtpOIfSmWin8nlop/J5aKfyeWin8nkYV6KIp+dCiLf3QUiX1zAI6B
+        dgAAAAAAAAAAAJaKfwCWin8Flop/oJaKf+uWin/olop/6JaKf+iWin/olop/6JaKf+iTh3z4koZ7/5KG
+        fP+Shnz/koZ8/5KGfP+Shnz/kYZ7/5CEev+Shnv3lop/6JaKf+iWin/olop/6JaKf+iShnvoin507Ip+
+        dJWNgXYCjH91AAAAAAAAAAAAlop/AJaKfweWin+7lop//5eLgP+bj4T/m4+F/5uPhf+bj4X/m4+F/5uQ
+        hf+bkIX/m5CF/5uQhf+bkIX/m5CF/5uQhf+bkIX/m5CF/5uQhf+bj4X/m4+F/5uPhf+bj4X/m4+F/5SI
+        ff+KfnT/in50royAdgSLf3UAAAAAAAAAAACWin8Alop/B5aKf7uViX7/u7Gp/+Xe2f/l3tn/5d7Z/+Xe
+        2f/l3tn/5d7Z/+Xe2f/l3tn/5d7Z/+Xe2f/l3tn/5d7Z/+Xe2f/l3tn/5d7Z/+Xe2f/l3tn/5d7Z/+HZ
+        1f/d1ND/sKWe/4l9c/+KfnSujIB2BIt/dQAAAAAAAAAAAJaKfwCWin8Hlop/u5WJfv/Pxr///vj1//33
+        9P/99/T//ff0//339P/99/T//ff0//339P/99/T//ff0//339P/99/T//Pb0//738//+9/P//vfz//73
+        8//++PT/+PHu//Lr6f/AtrD/iX1z/4p+dK6MgHYEi391AAAAAAAAAAAAlop/AJaKfweWin+7lYl+/87F
+        v//99/X/6+/g/8vkuv/K47j/vt6t/8Lgsf/K5Ln/xOGz/73drP/J47j/yuO5/+fu2//99vP/1OH1/6XH
+        +f+myPn/pcf5/7LO+P/s6u3/8urn/8C2r/+JfXP/in50royAdgSLf3UAAAAAAAAAAACWin8Alop/B5aK
+        f7uViX7/zsW///739v/Y6cn/pdaO/6bXjv+TzXz/mtGD/6fXj/+c0oX/kMx6/6XWjv+l1o3/0ObA//72
+        8/+lx/n/Vp3//1mf//9Ynv//Z6b+/9zh7//z6uf/wLav/4l9c/+KfnSujIB2BIt/dQAAAAAAAAAAAJaK
+        fwCWin8Hlop/u5WJfv/Oxb///vf2/9Dlwf+Uzn3/lM5+/43Kd/+QzHn/lc5+/5HMev+Mynb/lM5+/5PN
+        fP/H4bf//vfz/6XH+f9Wnf//WJ///1ie//9npv7/2+Hv//Pq5//Atq//iX1z/4p+dK6MgHYEi391AAAA
+        AAAAAAAAlop/AJaKfweWin+7lYl+/87Fv//+9/b/0+bE/5vRhP+c0YX/kMx5/5TOfv+c0oX/ls9//47L
+        eP+b0YT/mtGD/8vju//99vP/0+D1/6PG+f+kx/n/o8b5/7DN+P/r6u3/8urn/8C2r/+JfXP/in50royA
+        dgSLf3UAAAAAAAAAAACWin8Alop/B5aKf7uViX7/zsW///739v/V58f/oNSK/6HUiv+SzXz/l9CB/6LV
+        i/+a0YP/kMx6/6HUiv+g1In/zeS9//z18//89vL//ffy//338v/99/L//ffy//bv7f/x6ef/wLav/4l9
+        c/+KfnSujIB2BIt/dQAAAAAAAAAAAJaKfwCWin8Hlop/u5WJfv/Oxb///vf2/87kv/+QzHr/kcx6/4vK
+        df+Ny3f/kcx7/47LeP+LyXX/kcx6/4/Mef/F4LX//fb0//bx7v/k4eD/4t/e/+Lf3v/t6eb/9u/t//Hp
+        5//Atq//iX1z/4p+dK6MgHYEi391AAAAAAAAAAAAlop/AJaKfweWin+7lYl+/87Fv//+9/b/1+jJ/6XW
+        jv+l1o7/lM59/5rRhP+m14//ndKG/5LNe/+l1o7/pNaN/9DlwP/89vT/9vHu/+Th3//i397/4t/e/+3p
+        5v/27+3/8enn/8C2r/+JfXP/in50royAdgSLf3UAAAAAAAAAAACWin8Alop/B5aKf7uViX7/zsW///73
+        9v/Q5MH/k859/5TOfv+Nynf/j8x5/5TOfv+QzHr/jMp2/5TOff+TzXz/x+G3//329P/38u//6OTi/+bi
+        4f/m4uD/7+ro//bv7f/x6ef/wLav/4l9c/+KfnSujIB2BIt/dQAAAAAAAAAAAJaKfwCWin8Hlop/u5WJ
+        fv/Oxb///vf2/9PmxP+b0YT/nNGF/5DMef+Uzn7/nNKF/5bPf/+Oy3j/m9GE/5rRg//K47r//fb0//bw
+        7v/h3t3/393b/9/c2//r5+X/9u/t//Hp5//Atq//iX1z/4p+dK6MgHYEi391AAAAAAAAAAAAlop/AJaK
+        fweWin+7lYl+/87Fv//+9/b/2+nM/6jYkf+o2JH/lc5//5zShv+p2JL/n9OI/5PNff+o15H/p9eQ/9Pn
+        xP/89fP/+/Xy//z18v/79fL//PXy//z28//27+3/8enn/8C2r/+JfXP/in50royAdgSLf3UAAAAAAAAA
+        AACWin8Alop/B5aKf7uViX7/zsW///339P/z8un/4OvS/9/r0f/Y6Mv/2+nN/9/r0f/c6c7/2OjK/97r
+        0f/f69L/8fHm//v18v/79fL/+/Xy//v18v/79fL/+/Xy//bv7f/x6ef/wLav/4l9c/+KfnSujIB2BIt/
+        dQAAAAAAAAAAAJaKfwCWin8Hlop/u5WJfv/Nxb7//vj1//339P/+9/X//vf1//739v/+9/b//vf1//73
+        9v/+9/b//vf1//739f/99/T//Pf0//z39P/89/T//Pf0//z39P/99/T/9/Hu//Pr6f+/ta//iX1z/4p+
+        dK6MgHYEi391AAAAAAAAAAAAlop/AJaKfweWin+7lYl+/6yhmP/Kwbr/ysK7/8rBu//Kwbv/ysG7/8rB
+        u//Kwbv/ysG7/8rBu//Kwbv/ysG7/8rBu//Kwbv/ysG7/8rBu//Kwbv/ysG7/8vCu//Iv7j/xbu1/6SZ
+        kP+KfnT/in50royAdgSLf3UAAAAAAAAAAACWin8Alop/B5aKf7qWin//lYl+/5WJfv+ViX7/lYl+/5WJ
+        fv+ViX7/lYl+/5WJfv+ViX7/lYl+/5WJfv+ViX7/lYl+/5WJfv+ViX7/lYl+/5WJfv+ViX7/lYl+/5WJ
+        fv+ViX7/koZ7/4p+dP+KfnSujIB2A4t/dQAAAAAAAAAAAJaKfwCWin8Dlop/hZaKf86Win/Llop/y5aK
+        f8uWin/Llop/y5aKf8uWin/Llop/y5aKf8uWin/Llop/y5aKf8uWin/Llop/y5aKf8uWin/Llop/y5aK
+        f8uWin/Llop/y5aKf8uShnvNin500Yp+dHyQhHoBi4B1AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAA/8AD///AA//gAAAHwAAAA8AAAAPAAAADwAAAA8AAAAPAAAADwAAAA8AA
+        AAPAAAADwAAAA8AAAAPAAAADwAAAA8AAAAPAAAADwAAAA8AAAAPAAAADwAAAAygAAAAwAAAAYAAAAAEA
+        IAAAAAAAACQAAMMOAADDDgAAAAAAAAAAAACWin93lop/qpaKf6uWin+qlop/qpaKf6qWin+qlop/qpaK
+        f6qWin+qlop/qpaKf6qWin+qlop/qpaKf6qWin+qlop/qpaKf6qWin+qlop/qpaKf6qWin+qlop/qpaK
+        f6qWin+qlop/qpaKf6qWin+qlop/qpaKf6qWin+qlop/qpaKf6qWin+qlop/qpaKf6qWin+qlop/qpaK
+        f6qWin+qlop/qpaKf6qWin+qlop/q5KGfK6Lf3Wvin50rot/dXmWin/3lop//5aKf/+Win//lop//5aK
+        f/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aK
+        f/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aK
+        f/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5WJfv+MgHb/in50/4p/dPeWin//lop//5aK
+        f/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aK
+        f/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aK
+        f/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5WJfv+MgHb/in50/4p+
+        dP+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aK
+        f/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aK
+        f/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5WJ
+        fv+MgHb/in50/4p+dP+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aK
+        f/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aK
+        f/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aKf/+ViX7/lop//5eL
+        gP+ViX7/lop//5WJfv+MgHb/in50/4p+dP+Win//lop//5aKf/+Win//lop//5aKf/+Win//l4p//5eL
+        gP+Xi4D/l4uA/5eLgP+Xi4D/l4uA/5eLgP+Xi4D/l4uA/5eLgP+Xi4D/l4uA/5eLgP+Xi4D/l4uA/5eL
+        gP+Xi4D/l4uA/5eLgP+Xi4D/l4uA/5eLgP+Xi4D/l4uA/5eLgP+Xi4D/lop//5aKf/+Win//lop//5WJ
+        fv+hl43/xL66/8vHw/+upp7/lop//5WJfv+MgHb/in50/4p+dP+Win//lop//5aKf/+Win//lop//5aK
+        f/+Win//jIF3/4d8cv+IfXP/iH1z/4h9c/+IfXP/iH1z/4h9c/+IfXP/iH1z/4h9c/+IfXP/iH1z/4h9
+        c/+IfXP/iH1z/4h9c/+IfXP/iH1z/4h9c/+IfXP/iH1z/4h9c/+IfXP/iH1z/4d9c/+IfXP/kIV6/5aK
+        f/+Win//lop//5iMgf/LxsP/6enp/+np6f/e3dv/pJqR/5SIff+MgHb/in50/4p+dP+Win//lop//5aK
+        f/+Win//lop//5aKf/+UiH3/enBn/3FnX/9xaGD/cWhg/3FoYP9xaGD/cWhg/3FoYP9xaGD/cWhg/3Fo
+        YP9xaGD/cWhg/3FoYP9xaGD/cWhg/3FoYP9xaGD/cWhg/3FoYP9xaGD/cWhg/3FoYP9xaGD/cWhg/3Fo
+        YP9xaF//hXpx/5aKf/+Win//lop//5yQhv/Y1tT/6Ojo/+fn5//m5ub/rqae/5SIff+MgHb/in50/4p+
+        dP+Win//lop//5aKf/+Win//lop//5aKf/+Win//kYZ7/46Def+Pg3n/j4N5/4+Def+Pg3n/j4N5/4+D
+        ef+Pg3n/j4N5/4+Def+Pg3n/j4N5/4+Def+Pg3n/j4N5/4+Def+Pg3n/j4N5/4+Def+Pg3n/j4N5/4+D
+        ef+Pg3n/j4N5/4+Def+Pg3n/lIh9/5aKf/+Win//lop//5eLgP/CvLf/5+fn/+jo6f/X1NL/oJWM/5WI
+        ff+MgHb/in50/4p+dP+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aK
+        f/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aK
+        f/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aKf/+bj4X/tKyl/7q0
+        rv+jmZD/lop//5WJfv+MgHb/in50/4p+dP+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aK
+        f/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aK
+        f/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aK
+        f/+Win//lYl9/5WJff+ViX7/lop//5WJfv+MgHb/in50/4p+dP+Win//lop//5aKf/+Win//lop//5aK
+        f/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aK
+        f/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aK
+        f/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5WJfv+MgHb/in50/4p+dP+Win//lop//5aK
+        f/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aK
+        f/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aK
+        f/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5WJfv+MgHb/in50/4p+
+        dP+Win/qlop//5aKf/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aK
+        f/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aK
+        f/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5SI
+        fv+MgHX/in50/4t/dOuWin89lop/YZaKf2KWin9ilop/YpaKf2KWin9ilop/YpaKf2KWin9ilop/YpaK
+        f2KWin9ilop/YpaKf2KXi4BgjIF3gX50a/V9c2r/fXNq/31zav99c2r/fXNq/31zav99c2r/fXNq/31z
+        av98cmn/cWdf/21kXP9vZl7vin91eJeLgGGWin9ilop/YpaKf2KWin9ilop/YpaKf2KWin9ilop/YpaK
+        f2KWin9ilop/YpKGe2WLf3Vmin90ZYt/dT8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABtZFwAbWRcMm1kXO9tZFz/bWRc/21kXP9tZFz/bWRc/21k
+        XP9tZFz/bWRc/21kXf9sY1v/WFFK/1NMRv9TTEbkVE1HI1RNRwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABuZV0AbmVdMm5lXe9uZV3/bmVd/25l
+        Xf9uZV3/bmVd/25lXf9uZV3/bmVd/25lXf9sY1z/WVJL/1RNR/9UTUfkVU5II1VOSAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABuZV0AbmVdMm5l
+        Xe9uZV3/bmVd/25lXf9uZV3/bmVd/25lXf9uZV3/bmVd/25lXf9sY1z/WVJL/1RNR/9UTUfkVU5II1VO
+        SAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AABuZV0AbmVdMm5lXe9uZV3/bmVd/25lXf9uZV3/bmVd/25lXf9uZV3/bmVd/25lXf9sY1v/WVFL/1NM
+        Rv9UTUfkVU5II1VOSAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACWin8Alop/D5aKf3eWin+Vlop/k5aKf5OWin+Tlop/k5aK
+        f5OWin+Tlop/k5aKf5OWin+SkYV7qIZ7cfiFenH/hXpx/4V6cf+FenH/hXpx/4V6cf+FenH/hXpx/4V6
+        cf+EenD/fHJp/3pwZ/98cmn0kIV6opaKf5KWin+Tlop/k5aKf5OWin+Tlop/k5aKf5OUiH2Ui391lYp+
+        dJaKfnRwi391Cot/dQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACWin8Alop/NZaKf/CWin//lop//5aK
+        f/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5eLgP+Xi4D/l4uA/5eLgP+Xi4D/l4uA/5eL
+        gP+Xi4D/l4uA/5eLgP+Xi4D/l4uA/5eLgP+Xi4D/lop//5aKf/+Win//lop//5aKf/+Win//lop//5aK
+        f/+ViX7/jIB2/4p+dP+KfnTmi391Jot/dQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACWin8Alop/OZaK
+        f/KWin//lop//5WJfv+UiH3/lIh9/5SIff+UiH3/lIh9/5SIff+UiH3/lIh9/5SIff+UiH3/lIh9/5SI
+        ff+UiH3/lIh9/5SIff+UiH3/lIh9/5SIff+UiH3/lIh9/5SIff+UiH3/lIh9/5SIff+UiH3/lIh9/5SI
+        ff+UiH3/lIh9/5WIff+ViX7/jYF2/4p+dP+KfnTpi391KYt/dQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AACWin8Alop/OZaKf/KWin//lop//6OYjv+0qaH/tKqh/7Sqof+0qqH/tKqh/7Sqof+0qqH/tKqh/7Sq
+        of+0qqH/tKqh/7Sqof+0qqH/tKqh/7Sqof+0qqH/tKqh/7Sqof+0qqH/tKqh/7Sqof+0qqH/tKqh/7Sq
+        of+0qqH/tKqh/7Sqof+0qaH/s6ig/7Knn/+flIr/jIB2/4p+dP+KfnTpi391KYt/dQAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAACWin8Alop/OZaKf/KWin//mY2C/9rSzf/69PH/+fPw//nz8P/58/D/+fPw//nz
+        8P/58/D/+fPw//nz8P/58/D/+fPw//nz8P/58/D/+fPw//nz8P/58/D/+fPw//nz8P/58/D/+fPw//nz
+        8P/58/D/+fPw//nz8P/58/D/+fPw//nz8P/27+3/7+fl//Do5v/Mw73/jYF3/4p+dP+KfnTpi391KYt/
+        dQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACWin8Alop/OZaKf/KWin//m4+F/+Xe2f/99/T/+/Xy//v1
+        8v/79fP//PXz//z18//89fP//PXz//z18//89fP//PXz//z18//89fP//PXz//z18//89fP/+/Xy//v1
+        8v/79fL/+/Xy//v18v/89fL//PXy//z18v/89fL//PXy//z18v/58u//8enn//Lq6P/Wzcj/j4N5/4p+
+        dP+KfnTpi391KYt/dQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACWin8Alop/OZaKf/KWin//m4+F/+Xd
+        2f/89vT/+/Xy//r18f/18+z/9fPr//Xz6//z8un/8vLo//Tz6v/18+v/9fPr//Ty6v/y8uj/9PPq//Xz
+        6//18+v/9/Tt//v18v/79fL/+/Xy//n08v/18vP/9fLz//Xy8//18vP/9fLz//jz8v/58u//8Onn//Hq
+        6P/VzMj/j4N5/4p+dP+KfnTpi391KYt/dQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACWin8Alop/OZaK
+        f/KWin//m4+F/+Xd2f/89vT//PXz/93qz/+33aL/ttyi/7fdov+q15b/ntGK/7Pbnv+23aL/t92i/6zY
+        mP+e0Yr/stqd/7bdov+23KH/vt+q/+7w4//89fP/+fTy/67M+P+BtPz/grX8/4K1/P+Ctfz/gbT8/5S/
+        +//q6vD/8enm//Hq6P/VzMj/j4N5/4p+dP+KfnTpi391KYt/dQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AACWin8Alop/OZaKf/KWin//m4+F/+Xd2f/89vT/+/Xy/8njuP+l1o3/pteP/6fXkP+Y0IH/isl0/6LV
+        i/+m14//p9eQ/5rRg/+JyXP/odSK/6fXj/+m14//qNeR/+Ls1f/99vT/9fLz/4G0/P9Wnf//WZ///1mf
+        //9Zn///WJ7//2Sl/v/a4vL/8urm//Hq6P/VzMj/j4N5/4p+dP+KfnTpi391KYt/dQAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAACWin8Alop/OZaKf/KWin//m4+F/+Xd2f/89vT/+/Xy/8fitv+j1Yz/pNaN/6XW
+        jv+Y0IH/i8l1/6HUiv+l1o7/pdaO/5nQg/+KyXT/n9OJ/6XWjv+k1o3/ptaP/+Hs1P/99vT/9fLz/4K1
+        /P9Zn///W6D//1ug//9boP//WqD//2am/v/a4vL/8urm//Hq6P/VzMj/j4N5/4p+dP+KfnTpi391KYt/
+        dQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACWin8Alop/OZaKf/KWin//m4+F/+Xd2f/89vT/+/Xy/7jb
+        p/+LyXT/jcp2/43Kdv+LyXT/iMhy/4zKdv+Nynb/jcp2/4vJdf+IyHL/jMp2/43Kdv+Mynb/j8t5/9ro
+        zf/99vT/9fLz/4G0/P9Wnv//WZ///1mf//9Zn///WJ7//2Sl/v/a4vL/8urm//Hq6P/VzMj/j4N5/4p+
+        dP+KfnTpi391KYt/dQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACWin8Alop/OZaKf/KWin//m4+F/+Xd
+        2f/89vT/+/Xy/7/erf+Vzn7/l8+A/5fPgP+QzHr/islz/5XOfv+Xz4D/l8+A/5HMe/+JyXP/lM5+/5fP
+        gP+Xz4D/mdCC/93q0P/99vT/+fTy/6zL+P9+s/z/gLT8/4C0/P+AtPz/f7P8/5K9+//p6vH/8enm//Hq
+        6P/VzMj/j4N5/4p+dP+KfnTpi391KYt/dQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACWin8Alop/OZaK
+        f/KWin//m4+F/+Xd2f/89vT/+/Xy/8rjuP+m14//qNeR/6jYkf+a0YP/i8p1/6TVjf+o2JH/qNiR/5zR
+        hf+KyXT/otWL/6jYkf+o15H/qdiT/+Ls1f/89fT/+/Xy//n08v/08fP/9PHz//Tx8//08fP/9PHz//fz
+        8//58u//8Onn//Hq6P/VzMj/j4N5/4p+dP+KfnTpi391KYt/dQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AACWin8Alop/OZaKf/KWin//m4+F/+Xd2f/89vT/+/Xy/8Ths/+e04f/n9OJ/6DUif+Vzn7/isl0/5zS
+        hv+g04n/oNSJ/5bPgP+KyXT/m9GF/6DUif+f04n/odSL/+Dr0//89vT/+/Xy//v18v/89vP//Pbz//z2
+        8//89vP//Pbz//z28v/48u//8Onn//Hq6P/VzMj/j4N5/4p+dP+KfnTpi391KYt/dQAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAACWin8Alop/OZaKf/KWin//m4+F/+Xd2f/89vT/+/Xy/7bapf+IyHL/isl0/4rJ
+        dP+JyXP/iMhy/4rJdP+KyXT/isl0/4nJc/+IyHL/islz/4rJdP+KyXT/jMp2/9nozP/99vT/+/Xy//nz
+        8P/w6+n/7urn/+7q6P/u6uf/7+ro//fx7//58u//8Onn//Hq6P/VzMj/j4N5/4p+dP+KfnTpi391KYt/
+        dQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACWin8Alop/OZaKf/KWin//m4+F/+Xd2f/89vT/+/Xy/8Pg
+        sv+c0oX/ntOH/57Th/+Uzn7/isl0/5vRhP+e04f/ntOH/5XPf/+KyXT/mtGD/57Th/+e04f/oNOJ/9/r
+        0v/99vT//Pbz/+/q6P/Ozc3/zMvL/8zMy//MzMv/zMvL/+bi4f/58/D/8Onn//Hq6P/VzMj/j4N5/4p+
+        dP+KfnTpi391KYt/dQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACWin8Alop/OZaKf/KWin//m4+F/+Xd
+        2f/89vT/+/Xy/8rkuP+n14//qNeR/6nYkf+a0YP/i8p1/6TVjf+o2JH/qdiS/5zShf+LyXT/otWM/6jY
+        kf+o15H/qtiT/+Ps1f/89fT/+/Xy//jz8P/v6uj/7enn/+3p5//t6ef/7unn//bx7v/58u//8Onn//Hq
+        6P/VzMj/j4N5/4p+dP+KfnTpi391KYt/dQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACWin8Alop/OZaK
+        f/KWin//m4+F/+Xd2f/89vT/+/Xy/8Dfr/+Xz4D/mNCC/5nQgv+RzHv/isl0/5bPgP+Z0IL/mdCC/5LN
+        fP+JyXP/ls9//5nQgv+Y0IL/mtGE/97q0f/99vT/+/Xy//r08f/z7uz/8u3r//Lt6//y7ev/8+7r//jz
+        8P/58u//8Onn//Hq6P/VzMj/j4N5/4p+dP+KfnTpi391KYt/dQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AACWin8Alop/OZaKf/KWin//m4+F/+Xd2f/89vT/+/Xy/7fbpv+KyXP/i8p1/4zKdf+KyXT/iMhy/4vJ
+        df+MynX/jMp1/4rJdP+IyHL/i8l1/4zKdf+LynX/jsp4/9rozf/99vT//Pbz/+/q6P/Pzs7/zczM/83M
+        zP/NzMz/zczM/+bj4f/58/D/8Onn//Hq6P/VzMj/j4N5/4p+dP+KfnTpi391KYt/dQAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAACWin8Alop/OZaKf/KWin//m4+F/+Xd2f/89vT/+/Xy/8fitf+i1Yv/o9WM/6TV
+        jf+Xz4H/i8l1/6DTif+k1Y3/pNWN/5nQgv+KyXT/n9OI/6TVjf+j1Yz/pdaO/+Hs1P/89vT/+/Xy//fy
+        7//r5+X/6eXj/+nl4//p5eP/6ebk//Tv7f/58u//8Onn//Hq6P/VzMj/j4N5/4p+dP+KfnTpi391KYt/
+        dQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACWin8Alop/OZaKf/KWin//m4+F/+Xd2f/89vT/+/Xy/8nj
+        t/+l1o7/pteP/6fXkP+Y0IL/isl0/6LVi/+n15D/p9eQ/5rRhP+JyXP/odSK/6fXkP+m14//qNeR/+Ls
+        1f/89fT/+/Xy//v18v/89vP//Pbz//z28//89vP//Pbz//z18v/48u//8Onn//Hq6P/VzMj/j4N5/4p+
+        dP+KfnTpi391KYt/dQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACWin8Alop/OZaKf/KWin//m4+F/+Xd
+        2f/89vT//PXz/9rpzP+z257/stud/7Pbnv+n1ZL/m9CG/6/Zmv+z257/s9ue/6jWlP+az4b/rtmZ/7Pb
+        nv+y253/ut6m/+3w4v/89fP/+/Xy//v18v/79fL/+/Xy//v18v/79fL/+/Xy//v18v/48u//8Onn//Hq
+        6P/VzMj/j4N5/4p+dP+KfnTpi391KYt/dQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACWin8Alop/OZaK
+        f/KWin//m4+F/+Xd2f/89vT/+/Xy//r08P/z8un/8vLo//Ly6P/x8eb/7/Dl//Ly5//y8uj/8vLo//Hx
+        5//v8OX/8vLn//Ly6P/y8uj/9fPr//v18v/79fL/+/Xy//v18v/79fL/+/Xy//v18v/79fL/+/Xy//v1
+        8v/48u//8Onn//Hq6P/VzMj/j4N5/4p+dP+KfnTpi391KYt/dQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AACWin8Alop/OZaKf/KWin//m4+F/+Xe2f/89/T/+/Xy//v18v/89fP//PXz//z18//89fP//PXz//z1
+        8//89fP//PXz//z18//89fP//PXz//z18//89fP/+/Xz//v18v/79fL/+/Xy//v18v/79fL/+/Xy//v1
+        8v/79fL/+/Xy//v18v/58u//8enn//Lq6P/Wzcj/j4N5/4p+dP+KfnTpi391KYt/dQAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAACWin8Alop/OZaKf/KWin//mY2C/9vTzf/79fL/+fPw//nz8P/58/D/+fPw//nz
+        8P/58/D/+fPw//nz8P/58/D/+fPw//nz8P/58/D/+fPw//nz8P/58/D/+fPw//nz8P/58/D/+fPw//nz
+        8P/58/D/+fPw//nz8P/58/D/+fPw//r08P/28O3/7+fl//Do5v/Nw77/jYF3/4p+dP+KfnTpi391KYt/
+        dQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACWin8Alop/OZaKf/KWin//lop//6SYjv+1q6L/tquj/7ar
+        o/+2q6P/tquj/7aro/+2q6P/tquj/7aro/+2q6P/tquj/7aro/+2q6P/tquj/7aro/+2q6P/tquj/7ar
+        o/+2q6P/tquj/7aro/+2q6P/tquj/7aro/+2q6P/tquj/7aso/+1q6P/tKmh/7OooP+glIr/jIB2/4p+
+        dP+KfnTpi391KYt/dQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACWin8Alop/OZaKf/KWin//lop//5WJ
+        fv+UiH3/lIh9/5SIff+UiH3/lIh9/5SIff+UiH3/lIh9/5SIff+UiH3/lIh9/5SIff+UiH3/lIh9/5SI
+        ff+UiH3/lIh9/5SIff+UiH3/lIh9/5SIff+UiH3/lIh9/5SIff+UiH3/lIh9/5SIff+UiH3/lIh9/5WI
+        ff+ViX7/jYF2/4p+dP+KfnTpi391KYt/dQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACWin8Alop/NZaK
+        f/CWin//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aK
+        f/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aKf/+Win//lop//5aK
+        f/+Win//lop//5aKf/+ViX7/jIB2/4p+dP+KfnTmi391Jot/dQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AACWin8Alop/EpaKf4uWin+slop/qpaKf6qWin+qlop/qpaKf6qWin+qlop/qpaKf6qWin+qlop/qpaK
+        f6qWin+qlop/qpaKf6qWin+qlop/qpaKf6qWin+qlop/qpaKf6qWin+qlop/qpaKf6qWin+qlop/qpaK
+        f6qWin+qlop/qpaKf6qWin+qlop/qpaKf6qUiH2ti391r4p+dLGKfnSEi391DIt/dQAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAPAAAAAADwAA8AAAAAAPAADwAAAAAA8AAPAA
+        AAAADwAA8AAAAAAPAADwAAAAAA8AAPAAAAAADwAA8AAAAAAPAADwAAAAAA8AAPAAAAAADwAA8AAAAAAP
+        AADwAAAAAA8AAPAAAAAADwAA8AAAAAAPAADwAAAAAA8AAPAAAAAADwAA8AAAAAAPAADwAAAAAA8AAPAA
+        AAAADwAA8AAAAAAPAADwAAAAAA8AAPAAAAAADwAA8AAAAAAPAADwAAAAAA8AAPAAAAAADwAA8AAAAAAP
+        AADwAAAAAA8AAPAAAAAADwAA8AAAAAAPAAA=
+</value>
+  </data>
+  <data name="cmbBranch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>253, 69</value>
+  </data>
+  <data name="&gt;&gt;btnClear.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cmbClosingStock.TabIndex" type="System.Int32, mscorlib">
+    <value>151</value>
+  </data>
+  <data name="btnClear.Location" type="System.Drawing.Point, System.Drawing">
+    <value>353, 7</value>
+  </data>
+  <data name="&gt;&gt;lblBranch.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="cmbOppStock.Items5" xml:space="preserve">
+    <value>Average Selling Price</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;toolTip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 95</value>
+  </data>
+  <data name="btnShow.TabIndex" type="System.Int32, mscorlib">
+    <value>147</value>
+  </data>
+  <data name="&gt;&gt;dtmDate.Type" xml:space="preserve">
+    <value>AshUsercontrol.AshDateTimePicker, AshUsercontrol, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="btnClear.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS Reference Sans Serif, 10pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;cmbBranch.Type" xml:space="preserve">
+    <value>AshUsercontrol.AshComboBox, AshUsercontrol, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="btnMail.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS Reference Sans Serif, 10pt, style=Bold</value>
+  </data>
+  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="columnHeader5.Width" type="System.Int32, mscorlib">
+    <value>120</value>
+  </data>
+  <data name="&gt;&gt;printDocument1.Type" xml:space="preserve">
+    <value>System.Drawing.Printing.PrintDocument, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cmbClosingStock.Items6" xml:space="preserve">
+    <value>Average Purchase Price</value>
+  </data>
+  <data name="&gt;&gt;columnHeader5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;cmbClosingStock.Type" xml:space="preserve">
+    <value>AshUsercontrol.AshComboBox, AshUsercontrol, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="cmbOppStock.Size" type="System.Drawing.Size, System.Drawing">
+    <value>163, 24</value>
+  </data>
+  <data name="columnHeader2.Text" xml:space="preserve">
+    <value>LIABILITY AMOUNT</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="btnShow.Text" xml:space="preserve">
+    <value>Show</value>
+  </data>
+  <data name="btnExcel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS Reference Sans Serif, 10pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;cbDetailed.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="cmbOppStock.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="&gt;&gt;cmbBranch.Name" xml:space="preserve">
+    <value>cmbBranch</value>
+  </data>
+  <data name="cbShowCloStck.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;btnExcel.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="cbShowCloStck.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Opp Stock Validation Using :</value>
+  </data>
+  <data name="cmbOppStock.Items7" xml:space="preserve">
+    <value>First Selling Price</value>
+  </data>
+  <data name="&gt;&gt;btnExcel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label6.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnShow.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS Reference Sans Serif, 10pt, style=Bold</value>
+  </data>
+  <data name="lblBranch.Text" xml:space="preserve">
+    <value>Branch :</value>
+  </data>
+  <data name="cmbBranch.Items6" xml:space="preserve">
+    <value>Average Purchase Price</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>447, 68</value>
+  </data>
+  <data name="cmbClosingStock.Items8" xml:space="preserve">
+    <value>First Purchase Price</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>Balance_Sheet</value>
+  </data>
+  <data name="&gt;&gt;dtmDate.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;btnClear.Name" xml:space="preserve">
+    <value>btnClear</value>
+  </data>
+  <data name="cmbOppStock.Items" xml:space="preserve">
+    <value>Selling Price</value>
+  </data>
+  <data name="lblBranch.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;btnPrint.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cmbOppStock.Items6" xml:space="preserve">
+    <value>Average Purchase Price</value>
+  </data>
+  <data name="cbDetailed.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;toolTip1.Name" xml:space="preserve">
+    <value>toolTip1</value>
+  </data>
+  <data name="btnExcel.Text" xml:space="preserve">
+    <value>Excel</value>
+  </data>
+  <data name="dtmDate.TabIndex" type="System.Int32, mscorlib">
+    <value>150</value>
+  </data>
+  <data name="dtmDate.CustomFormat" xml:space="preserve">
+    <value>dd-MM-yyyy</value>
+  </data>
+  <data name="columnHeader4.Text" xml:space="preserve">
+    <value>ASSET</value>
+  </data>
+  <data name="btnMail.Location" type="System.Drawing.Point, System.Drawing">
+    <value>179, 7</value>
+  </data>
+  <data name="&gt;&gt;columnHeader2.Name" xml:space="preserve">
+    <value>columnHeader2</value>
+  </data>
+  <data name="cmbClosingStock.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="cmbClosingStock.Items7" xml:space="preserve">
+    <value>First Selling Price</value>
+  </data>
+  <data name="cmbBranch.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS Reference Sans Serif, 9.75pt</value>
+  </data>
+  <data name="&gt;&gt;btnShow.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnMail.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnPrint.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="&gt;&gt;columnHeader1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cmbOppStock.Location" type="System.Drawing.Point, System.Drawing">
+    <value>646, 68</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>217, 16</value>
+  </data>
+  <data name="&gt;&gt;cmbClosingStock.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;livDetails.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;livDetails.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>Manual</value>
+  </data>
+  <data name="&gt;&gt;lblBranch.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;btnExcel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnMail.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="cmbBranch.Items4" xml:space="preserve">
+    <value>Last Purchase Price</value>
+  </data>
+  <data name="btnClear.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="cmbOppStock.Items8" xml:space="preserve">
+    <value>First Purchase Price</value>
+  </data>
+  <data name="btnPrint.Text" xml:space="preserve">
+    <value>Print</value>
+  </data>
+  <data name="cbDetailed.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 45</value>
+  </data>
+  <data name="columnHeader2.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="columnHeader5.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="dtmDate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>154, 23</value>
+  </data>
+  <data name="cbDetailed.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>807, 444</value>
+  </data>
+  <data name="cmbBranch.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="cbShowCloStck.Size" type="System.Drawing.Size, System.Drawing">
+    <value>157, 20</value>
+  </data>
+  <data name="&gt;&gt;btnPrint.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="cmbBranch.Items8" xml:space="preserve">
+    <value>First Purchase Price</value>
+  </data>
+  <data name="btnClose.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="columnHeader2.Width" type="System.Int32, mscorlib">
+    <value>120</value>
+  </data>
+  <data name="livDetails.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Balance_Sheet</value>
+  </data>
+  <data name="lblBranch.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="cbShowCloStck.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 68</value>
+  </data>
+  <data name="&gt;&gt;lblBranch.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnMail.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 30</value>
+  </data>
+  <data name="cmbOppStock.Items4" xml:space="preserve">
+    <value>Last Purchase Price</value>
+  </data>
+  <data name="lblBranch.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;btnClose.Name" xml:space="preserve">
+    <value>btnClose</value>
+  </data>
+  <data name="cmbClosingStock.Items4" xml:space="preserve">
+    <value>Last Purchase Price</value>
+  </data>
+  <data name="&gt;&gt;btnClose.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="btnClear.TabIndex" type="System.Int32, mscorlib">
+    <value>147</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;cmbClosingStock.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="btnClose.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label6.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="livDetails.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10pt</value>
+  </data>
+  <data name="columnHeader1.Text" xml:space="preserve">
+    <value>LIABILITY</value>
+  </data>
+  <data name="btnExcel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 30</value>
+  </data>
+  <data name="cmbBranch.Items2" xml:space="preserve">
+    <value>MRP</value>
+  </data>
+  <data name="&gt;&gt;dtmDate.Name" xml:space="preserve">
+    <value>dtmDate</value>
+  </data>
+  <data name="cmbBranch.Items3" xml:space="preserve">
+    <value>Last Selling Price</value>
+  </data>
+  <data name="lblBranch.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS Reference Sans Serif, 9.75pt</value>
+  </data>
+  <data name="cmbClosingStock.Items3" xml:space="preserve">
+    <value>Last Selling Price</value>
+  </data>
+  <data name="btnClose.TabIndex" type="System.Int32, mscorlib">
+    <value>148</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbShowCloStck.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="cmbClosingStock.Items5" xml:space="preserve">
+    <value>Average Selling Price</value>
+  </data>
+  <data name="&gt;&gt;btnPrint.Name" xml:space="preserve">
+    <value>btnPrint</value>
+  </data>
+  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="btnExcel.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="lblBranch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 16</value>
+  </data>
+  <data name="&gt;&gt;btnMail.Name" xml:space="preserve">
+    <value>btnMail</value>
+  </data>
+  <data name="btnMail.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="livDetails.Size" type="System.Drawing.Size, System.Drawing">
+    <value>793, 427</value>
+  </data>
+  <data name="&gt;&gt;label6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="panel1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cmbBranch.Items7" xml:space="preserve">
+    <value>First Selling Price</value>
+  </data>
+  <data name="btnExcel.TabIndex" type="System.Int32, mscorlib">
+    <value>149</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Closing Stock Validation Using :</value>
+  </data>
+  <data name="cmbClosingStock.Items" xml:space="preserve">
+    <value>Selling Price</value>
+  </data>
+  <data name="label2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnClear.Text" xml:space="preserve">
+    <value>Clear</value>
+  </data>
+  <data name="btnExcel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="cmbBranch.Items" xml:space="preserve">
+    <value>Selling Price</value>
+  </data>
+  <data name="btnPrint.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="columnHeader4.Width" type="System.Int32, mscorlib">
+    <value>250</value>
+  </data>
+  <data name="btnExcel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>266, 7</value>
+  </data>
+  <data name="btnPrint.TabIndex" type="System.Int32, mscorlib">
+    <value>147</value>
+  </data>
+  <data name="btnShow.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 7</value>
+  </data>
+  <data name="&gt;&gt;cmbBranch.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;columnHeader4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cmbClosingStock.Items1" xml:space="preserve">
+    <value>Purchase Price</value>
+  </data>
+  <data name="&gt;&gt;btnPrint.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="lblBranch.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;cbDetailed.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblBranch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>179, 68</value>
+  </data>
+  <data name="&gt;&gt;cmbOppStock.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="cmbBranch.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="$this.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnExcel.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmbOppStock.Items2" xml:space="preserve">
+    <value>MRP</value>
+  </data>
+  <data name="cmbClosingStock.Size" type="System.Drawing.Size, System.Drawing">
+    <value>163, 24</value>
+  </data>
+  <data name="livDetails.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 16</value>
+  </data>
+  <data name="cmbBranch.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>As On :</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>427, 46</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="cbShowCloStck.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS Reference Sans Serif, 9.75pt</value>
+  </data>
+  <data name="btnShow.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="cmbClosingStock.Items2" xml:space="preserve">
+    <value>MRP</value>
+  </data>
+  <data name="&gt;&gt;printDocument1.Name" xml:space="preserve">
+    <value>printDocument1</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>821, 546</value>
+  </data>
+  <data name="dtmDate.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS Reference Sans Serif, 9.75pt</value>
+  </data>
+  <data name="label1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="btnPrint.Location" type="System.Drawing.Point, System.Drawing">
+    <value>92, 7</value>
+  </data>
+  <data name="btnShow.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS Reference Sans Serif, 9.75pt</value>
+  </data>
+  <data name="&gt;&gt;cmbClosingStock.Name" xml:space="preserve">
+    <value>cmbClosingStock</value>
+  </data>
+  <data name="&gt;&gt;btnShow.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="btnClose.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 30</value>
+  </data>
+  <data name="&gt;&gt;livDetails.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbDetailed.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="btnClear.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnClose.Text" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="cbShowCloStck.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnClear.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="&gt;&gt;cmbOppStock.Name" xml:space="preserve">
+    <value>cmbOppStock</value>
+  </data>
+  <data name="&gt;&gt;btnClear.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;btnShow.Name" xml:space="preserve">
+    <value>btnShow</value>
+  </data>
+  <data name="&gt;&gt;cbShowCloStck.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnPrint.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 30</value>
+  </data>
+  <data name="&gt;&gt;dtmDate.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="label6.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS Reference Sans Serif, 9.75pt</value>
+  </data>
+  <data name="cmbBranch.Items5" xml:space="preserve">
+    <value>Average Selling Price</value>
+  </data>
+  <data name="&gt;&gt;btnClose.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="columnHeader5.Text" xml:space="preserve">
+    <value>ASSET AMOUNT</value>
+  </data>
+  <data name="&gt;&gt;btnClear.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="cmbClosingStock.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS Reference Sans Serif, 9.75pt</value>
+  </data>
+  <data name="&gt;&gt;columnHeader5.Name" xml:space="preserve">
+    <value>columnHeader5</value>
+  </data>
+  <data name="&gt;&gt;columnHeader2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbShowCloStck.Name" xml:space="preserve">
+    <value>cbShowCloStck</value>
+  </data>
+  <data name="&gt;&gt;lblBranch.Name" xml:space="preserve">
+    <value>lblBranch</value>
+  </data>
+  <data name="&gt;&gt;btnMail.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="columnHeader1.Width" type="System.Int32, mscorlib">
+    <value>250</value>
+  </data>
+  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>185, 46</value>
+  </data>
+  <data name="cmbClosingStock.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="cmbBranch.TabIndex" type="System.Int32, mscorlib">
+    <value>152</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="printDocument1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>114, 17</value>
+  </metadata>
+</root>

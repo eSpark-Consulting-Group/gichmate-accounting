@@ -1,0 +1,475 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CustomerReport" xml:space="preserve">
+    <value>Customer Report</value>
+  </data>
+  <data name="SalesByProductReport" xml:space="preserve">
+    <value>Sales By Product Report</value>
+  </data>
+  <data name="Supplier" xml:space="preserve">
+    <value>Supplier</value>
+  </data>
+  <data name="POSSalesTaxCategoryReport" xml:space="preserve">
+    <value>POS Sales Tax Category Report</value>
+  </data>
+  <data name="CustomerDiaryReport" xml:space="preserve">
+    <value>Customer Diary Report</value>
+  </data>
+  <data name="ProWisePurchaseReport" xml:space="preserve">
+    <value>Product Wise Purchase Report</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Ignore" xml:space="preserve">
+    <value>Ignore</value>
+  </data>
+  <data name="CloseCashReport" xml:space="preserve">
+    <value>Close Cash Report</value>
+  </data>
+  <data name="POSItemMesearmentCaption" xml:space="preserve">
+    <value>Please enter weight sacale</value>
+  </data>
+  <data name="DeleteButton" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="CashFlowReport" xml:space="preserve">
+    <value>Cash Flow Report</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="ProductSalesProfitReport" xml:space="preserve">
+    <value>Product Sales Profit Report</value>
+  </data>
+  <data name="Expense_Account" xml:space="preserve">
+    <value>Expense Account</value>
+  </data>
+  <data name="SupplierPurchaseReport" xml:space="preserve">
+    <value>Supplier Purchase Report</value>
+  </data>
+  <data name="SupplierLedgerReport" xml:space="preserve">
+    <value>Supplier Ledger Report</value>
+  </data>
+  <data name="Customers" xml:space="preserve">
+    <value>Customers</value>
+  </data>
+  <data name="CustomerItemSalesReport" xml:space="preserve">
+    <value>Customer Item Sales Report</value>
+  </data>
+  <data name="POSBarcodeSelectionLabel" xml:space="preserve">
+    <value>Barcode</value>
+  </data>
+  <data name="POSItemMesearment" xml:space="preserve">
+    <value>Item Mesearment</value>
+  </data>
+  <data name="StockAndProfitReport" xml:space="preserve">
+    <value>Stock And Profit Report</value>
+  </data>
+  <data name="UpdateMessage" xml:space="preserve">
+    <value>Updated successfully</value>
+  </data>
+  <data name="POSItemMesearmentLabel" xml:space="preserve">
+    <value>Mesearment</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="OpeningStockReport" xml:space="preserve">
+    <value>Opening Stock Report</value>
+  </data>
+  <data name="CustomerSalesReport" xml:space="preserve">
+    <value>Customer Sales Report</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="Abort" xml:space="preserve">
+    <value>Abort</value>
+  </data>
+  <data name="Group" xml:space="preserve">
+    <value>Group :</value>
+  </data>
+  <data name="Retry" xml:space="preserve">
+    <value>Retry</value>
+  </data>
+  <data name="NewButton" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="CashAccount" xml:space="preserve">
+    <value>Cash Account :</value>
+  </data>
+  <data name="UserSale" xml:space="preserve">
+    <value>User Wise Sales Report</value>
+  </data>
+  <data name="UserName" xml:space="preserve">
+    <value>User Name :</value>
+  </data>
+  <data name="POSSalesSummaryReport" xml:space="preserve">
+    <value>POS Sales Summary Report</value>
+  </data>
+  <data name="POSSalesTaxReport" xml:space="preserve">
+    <value>POS Sales Tax Report</value>
+  </data>
+  <data name="CategorySalesReport" xml:space="preserve">
+    <value>Category Sales Report</value>
+  </data>
+  <data name="ReferenceExistsMessageForUpdate" xml:space="preserve">
+    <value>You can't update,reference exist</value>
+  </data>
+  <data name="SaleTransactionReport" xml:space="preserve">
+    <value>Sale Transaction Report</value>
+  </data>
+  <data name="SavedMessage" xml:space="preserve">
+    <value>Saved successfully</value>
+  </data>
+  <data name="Customer" xml:space="preserve">
+    <value>Customer :</value>
+  </data>
+  <data name="CloseConfirmationMessage" xml:space="preserve">
+    <value>Are you sure to exit ?</value>
+  </data>
+  <data name="Restaurant" xml:space="preserve">
+    <value>Restaurant</value>
+  </data>
+  <data name="DeleteConfirmationMessage" xml:space="preserve">
+    <value>Are you sure to delete the record?</value>
+  </data>
+  <data name="SupplierReport" xml:space="preserve">
+    <value>Supplier Report</value>
+  </data>
+  <data name="Chart_Of_Account" xml:space="preserve">
+    <value>Chart Of Account</value>
+  </data>
+  <data name="ReferenceExistsMessage" xml:space="preserve">
+    <value>You can't delete,reference exist</value>
+  </data>
+  <data name="BuiltinMessage" xml:space="preserve">
+    <value>This is Built. So this can't be deleted</value>
+  </data>
+  <data name="SupplierItemPurchaseReport" xml:space="preserve">
+    <value>Supplier Item wise Purchase Report</value>
+  </data>
+  <data name="DeleteMessage" xml:space="preserve">
+    <value>Deleted successfully</value>
+  </data>
+  <data name="POSBarcodeSelection" xml:space="preserve">
+    <value>Barcode Selection</value>
+  </data>
+  <data name="POSBarcodeSelectionCaption" xml:space="preserve">
+    <value>Please enter Barcode to be selected</value>
+  </data>
+  <data name="SaveButton" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="ProductStockReport" xml:space="preserve">
+    <value>Product Stock Report</value>
+  </data>
+  <data name="WarningMessage" xml:space="preserve">
+    <value>Please enter full details.</value>
+  </data>
+  <data name="ProTranSummaryReport" xml:space="preserve">
+    <value>Product Transaction Summary Report</value>
+  </data>
+  <data name="Bank" xml:space="preserve">
+    <value>Bank</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Abort1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Abort;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Bank1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Bank;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="BuiltinMessage1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\BuiltinMessage;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Cancel1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Cancel;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="CashAccount1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\CashAccount;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="CashFlowReport1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\CashFlowReport;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="CategorySalesReport1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\CategorySalesReport;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Chart_Of_Account1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Chart_Of_Account;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="CloseCashReport1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\CloseCashReport;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="CloseConfirmationMessage1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\CloseConfirmationMessage;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Customer1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Customer;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="CustomerDiaryReport1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\CustomerDiaryReport;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="CustomerItemSalesReport1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\CustomerItemSalesReport;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="CustomerReport1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\CustomerReport;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Customers1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Customers;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="CustomerSalesReport1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\CustomerSalesReport;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="DeleteButton1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\DeleteButton;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="DeleteConfirmationMessage1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\DeleteConfirmationMessage;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="DeleteMessage1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\DeleteMessage;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Expense_Account1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Expense_Account;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Group1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Group;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Ignore1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Ignore;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="NewButton1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\NewButton;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="No1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\No;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="OK1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\OK;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="OpeningStockReport1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\OpeningStockReport;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="POSBarcodeSelection1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\POSBarcodeSelection;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="POSBarcodeSelectionCaption1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\POSBarcodeSelectionCaption;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="POSBarcodeSelectionLabel1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\POSBarcodeSelectionLabel;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="POSItemMesearment1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\POSItemMesearment;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="POSItemMesearmentCaption1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\POSItemMesearmentCaption;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="POSItemMesearmentLabel1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\POSItemMesearmentLabel;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="POSSalesSummaryReport1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\POSSalesSummaryReport;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="POSSalesTaxCategoryReport1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\POSSalesTaxCategoryReport;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="POSSalesTaxReport1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\POSSalesTaxReport;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ProductSalesProfitReport1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\ProductSalesProfitReport;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ProductStockReport1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\ProductStockReport;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ProTranSummaryReport1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\ProTranSummaryReport;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ProWisePurchaseReport1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\ProWisePurchaseReport;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ReferenceExistsMessage1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\ReferenceExistsMessage;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ReferenceExistsMessageForUpdate1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\ReferenceExistsMessageForUpdate;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Restaurant1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Restaurant;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Retry1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Retry;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="SalesByProductReport1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\SalesByProductReport;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="SaleTransactionReport1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\SaleTransactionReport;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="SaveButton1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\SaveButton;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="SavedMessage1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\SavedMessage;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Search1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Search;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="StockAndProfitReport1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\StockAndProfitReport;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Supplier1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Supplier;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="SupplierItemPurchaseReport1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\SupplierItemPurchaseReport;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="SupplierLedgerReport1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\SupplierLedgerReport;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="SupplierPurchaseReport1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\SupplierPurchaseReport;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="SupplierReport1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\SupplierReport;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="UpdateMessage1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\UpdateMessage;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="UserName1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\UserName;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="UserSale1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\UserSale;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="WarningMessage1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\WarningMessage;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Yes1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Yes;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>

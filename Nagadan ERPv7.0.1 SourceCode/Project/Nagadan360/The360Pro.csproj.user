@@ -1,0 +1,599 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ShowAllFiles>true</ShowAllFiles>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Update="Ashpro\About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\Account.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\AccountGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\AccountGroupReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\AccountsView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\Activation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\ActivationTransfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\AddOns.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\ApplicationPatch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\Application_Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\AshReportViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\BackupDatabase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\Balance_Sheet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\BankReconciliation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\BarcodeDesign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\BatchAddForPurchase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\BatchView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\BillGeneration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\BillPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\BranchView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\Brand.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\BulkReceiptView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\Calculator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\Calendar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\ChangeDate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\ChequeRecipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\ChequeReportView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\CloseCash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\ClosingDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\CompanyDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\CompanyView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\ContactUs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\Cost_Centres.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\CounterOpeningCashEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\CreditNoteView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\CurrencyView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\CustomeMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\CustomerHistoryView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\CustomerPrevilegeCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\Customers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\CustomerSearchPOS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\CustomTransReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\DailyAccountView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\DashboardPOS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\DashboardPOSView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\DashboardView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\DatabaseAutoBackup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\DatabaseConnection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\DatabaseInitialCreation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\DateDifference.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\DayClose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\DBConnectionSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\DebitCreditCardMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\DebitNoteView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\DemoDialogView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\DiscountChangerPOS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\EmployeeDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\EmployeeSelectionView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\ExpenseMapping.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\ExpenseMasterView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\ExportAndImport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\ExportView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\FavouriteProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\FinancialPeriod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\FirstPurchase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\FormSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\FormTypes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\Godown.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\GodownStockReportView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\GSTSalesRptView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\ImportView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\InputBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\InventoryReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\InventorySalesRegisterView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\ItemNoteView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\ItemWiseSalesReportView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\JournalEntryReportView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\JournalEntryView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\KOTPrinterView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\LabelScale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\LedgerReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\License\LicenseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\LockApplication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\MasterSerchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\MiniPOSReportView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\MyMsgBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\NewCompany.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\NoteMasterView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\OpeningBalance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\OrderFormView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\OutstandingReportView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\PartyListView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\PaymentAndReceiptView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\PaymentReceiptReportView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\PaymentView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\PendingOrderReportView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\POSCashPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\POSFormSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\POSInputBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\POSItemCreation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\POSLineEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\POSLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\POSProductView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\POSReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\POSReportView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\POSStockView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\POSView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\PriceCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\PriceListView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\PrintBarcode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\PrintDesignView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\Product.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\ProductCombinationView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\ProductDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\ProductEditing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\ProductGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\ProductLedgerReportView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\ProductManufacturingView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\ProductPriceView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\ProductPrinterAllocation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\ProductSubView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\ProductTracing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\ProductWiseGSTReportView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\Product_Flow_Report_Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\Product_Register_Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\Profit_and_Lose_Account.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\PurchaseInvoiceView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\PurchaseReportView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\PurchaseReturnReportView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\PurchaseReturnView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\QRCodeGenerator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\RateFormatView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\RawmaterialMapping.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\ReceiptView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\ReminderView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\RemoteSyncView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\ReportBugs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\ReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\ReportView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\ResetDatabase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\RestaurantForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\RestaurantPOSView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\RestoreDatabase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\RotatingLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Ashpro\Route.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\SalaryProcessView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\Sales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\SalesAndSalesReturnReportView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\SalesCounter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\SalesEstimateView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\SalesFormType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\SalesInvoiceView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\SalesOrderReportView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\SalesReportView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\SalesReturnReportView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\SalesReturnView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\SalesSummaryReportView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\SalesView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\SecondDisplaySettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\SecondDisplayView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\SelectCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\SendMail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\ServerOrClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\SettingsLoad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\SettingsView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\Shelfs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\ShowItemList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\ShowItemListBatch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\ShowProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\Splash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\StaffAttendanceView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\Stock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\StockAdjusterView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\StockReportView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\StockTransferView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\StockTrnasferReportView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\Supplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\TaxCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\ThemeChanger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\TransactionReportView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\TransactionWithoutInventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\TranslatorInputForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\TrialBalanceView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\Unit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\UnSoldProductReportView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\UpdateRateForPurchase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\UpgradeHelper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\UserManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\UserPrevilegeView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\VehicleView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\VideoTutorial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\WebcamView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\WeighScaleView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>

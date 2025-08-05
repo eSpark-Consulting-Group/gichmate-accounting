@@ -1,0 +1,3 @@
+cd c:\StripeCLI
+.\stripe listen --forward-to https://localhost:7209/webhook/stripe
+Now Stripe will listening...

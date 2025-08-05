@@ -1,0 +1,16 @@
+Don't Touch the Frameworks Folder. Keep it Default.
+Follow the instrcution below
+
+
+1. Create a Database Name PSVAT5 in MS SQL Server 2019 or higher.
+2. Execute the Script to SQL server to PSVAT5 Database.
+3. Change the server address from Program.cs file in the project folder.
+4. Run the project.
+5. Login Username: admin, Password: 741
+6. for open POS and MDI Dashboard alt+ctrl+z 
+
+
+If you don't Understand please contact with us feel free to waatechnologies@gmail.com
+
+
+Thank you!

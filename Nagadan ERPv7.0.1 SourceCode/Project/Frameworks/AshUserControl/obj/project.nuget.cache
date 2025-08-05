@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "OsEr77n+Jmw=",
+  "success": true,
+  "projectFilePath": "F:\\Offline Apps\\DeskCloud ERP\\Project\\Frameworks\\AshUserControl\\AshUsercontrol.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\mdbas\\.nuget\\packages\\microsoft.netframework.referenceassemblies\\1.0.3\\microsoft.netframework.referenceassemblies.1.0.3.nupkg.sha512",
+    "C:\\Users\\mdbas\\.nuget\\packages\\microsoft.netframework.referenceassemblies.net461\\1.0.3\\microsoft.netframework.referenceassemblies.net461.1.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

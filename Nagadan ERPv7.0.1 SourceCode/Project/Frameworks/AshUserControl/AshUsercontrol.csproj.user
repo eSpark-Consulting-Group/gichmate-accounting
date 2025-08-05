@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <Compile Update="AshUsercontrol\AshButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="AshUsercontrol\AshComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="AshUsercontrol\AshDataGridview.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="AshUsercontrol\AshDateTimePicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="AshUsercontrol\AshGradientPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="AshUsercontrol\AshNumericLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="AshUsercontrol\AshPagedPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="AshUsercontrol\AshTBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="AshUsercontrol\AshTextBoxNormal.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="AshUsercontrol\AshUpDown.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="AshUsercontrol\CalendarEditingControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="AshUsercontrol\DashboardPOSKeyboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="AshUsercontrol\ExButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="AshUsercontrol\NumKeyBoardLogin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="AshUsercontrol\NumKeyBoardPOS.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="AshUsercontrol\POSButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="AshUsercontrol\ProgressBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="AshUsercontrol\RestaurantKeyboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="AshUsercontrol\TexboxEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>

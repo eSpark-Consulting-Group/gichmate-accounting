@@ -1,0 +1,62 @@
+F:\Code Canyon\Ash Pro Dlls Etc\AshProMessage\bin\Debug\net461\AshproMessage.dll
+F:\Code Canyon\Ash Pro Dlls Etc\AshProMessage\bin\Debug\net461\AshproMessage.pdb
+F:\Code Canyon\Ash Pro Dlls Etc\AshProMessage\obj\Debug\net461\AshproMessage.MessageKeys.resources
+F:\Code Canyon\Ash Pro Dlls Etc\AshProMessage\obj\Debug\net461\AshproMessage.csproj.GenerateResource.cache
+F:\Code Canyon\Ash Pro Dlls Etc\AshProMessage\obj\Debug\net461\AshproMessage.GeneratedMSBuildEditorConfig.editorconfig
+F:\Code Canyon\Ash Pro Dlls Etc\AshProMessage\obj\Debug\net461\AshproMessage.csproj.CoreCompileInputs.cache
+F:\Code Canyon\Ash Pro Dlls Etc\AshProMessage\obj\Debug\net461\AshproMessage.dll
+F:\Code Canyon\Ash Pro Dlls Etc\AshProMessage\obj\Debug\net461\AshproMessage.pdb
+F:\Code Canyon\Ash Pro Dlls Etc\AshProMessage\obj\Debug\net461\AshproMessage.csproj.AssemblyReference.cache
+F:\Offline Apps\C#\Clients Folder\New Noble\Frameworks\AshProMessage\bin\Debug\net461\AshproMessage.dll
+F:\Offline Apps\C#\Clients Folder\New Noble\Frameworks\AshProMessage\bin\Debug\net461\AshproMessage.pdb
+F:\Offline Apps\C#\Clients Folder\New Noble\Frameworks\AshProMessage\obj\Debug\net461\AshproMessage.csproj.AssemblyReference.cache
+F:\Offline Apps\C#\Clients Folder\New Noble\Frameworks\AshProMessage\obj\Debug\net461\AshproMessage.MessageKeys.resources
+F:\Offline Apps\C#\Clients Folder\New Noble\Frameworks\AshProMessage\obj\Debug\net461\AshproMessage.csproj.GenerateResource.cache
+F:\Offline Apps\C#\Clients Folder\New Noble\Frameworks\AshProMessage\obj\Debug\net461\AshproMessage.GeneratedMSBuildEditorConfig.editorconfig
+F:\Offline Apps\C#\Clients Folder\New Noble\Frameworks\AshProMessage\obj\Debug\net461\AshproMessage.csproj.CoreCompileInputs.cache
+F:\Offline Apps\C#\Clients Folder\New Noble\Frameworks\AshProMessage\obj\Debug\net461\AshproMessage.dll
+F:\Offline Apps\C#\Clients Folder\New Noble\Frameworks\AshProMessage\obj\Debug\net461\AshproMessage.pdb
+F:\Offline Apps\C#\Clients Folder\Nagdan Update\Frameworks\AshProMessage\bin\Debug\net461\AshproMessage.dll
+F:\Offline Apps\C#\Clients Folder\Nagdan Update\Frameworks\AshProMessage\bin\Debug\net461\AshproMessage.pdb
+F:\Offline Apps\C#\Clients Folder\Nagdan Update\Frameworks\AshProMessage\obj\Debug\net461\AshproMessage.MessageKeys.resources
+F:\Offline Apps\C#\Clients Folder\Nagdan Update\Frameworks\AshProMessage\obj\Debug\net461\AshproMessage.csproj.GenerateResource.cache
+F:\Offline Apps\C#\Clients Folder\Nagdan Update\Frameworks\AshProMessage\obj\Debug\net461\AshproMessage.GeneratedMSBuildEditorConfig.editorconfig
+F:\Offline Apps\C#\Clients Folder\Nagdan Update\Frameworks\AshProMessage\obj\Debug\net461\AshproMessage.csproj.CoreCompileInputs.cache
+F:\Offline Apps\C#\Clients Folder\Nagdan Update\Frameworks\AshProMessage\obj\Debug\net461\AshproMessage.dll
+F:\Offline Apps\C#\Clients Folder\Nagdan Update\Frameworks\AshProMessage\obj\Debug\net461\AshproMessage.pdb
+F:\Offline Apps\C#\Nagadan Pro\Project\Frameworks\AshProMessage\bin\Debug\net461\AshproMessage.dll
+F:\Offline Apps\C#\Nagadan Pro\Project\Frameworks\AshProMessage\bin\Debug\net461\AshproMessage.pdb
+F:\Offline Apps\C#\Nagadan Pro\Project\Frameworks\AshProMessage\obj\Debug\net461\AshproMessage.MessageKeys.resources
+F:\Offline Apps\C#\Nagadan Pro\Project\Frameworks\AshProMessage\obj\Debug\net461\AshproMessage.csproj.GenerateResource.cache
+F:\Offline Apps\C#\Nagadan Pro\Project\Frameworks\AshProMessage\obj\Debug\net461\AshproMessage.GeneratedMSBuildEditorConfig.editorconfig
+F:\Offline Apps\C#\Nagadan Pro\Project\Frameworks\AshProMessage\obj\Debug\net461\AshproMessage.csproj.CoreCompileInputs.cache
+F:\Offline Apps\C#\Nagadan Pro\Project\Frameworks\AshProMessage\obj\Debug\net461\AshproMessage.dll
+F:\Offline Apps\C#\Nagadan Pro\Project\Frameworks\AshProMessage\obj\Debug\net461\AshproMessage.pdb
+F:\Offline Apps\C#\Nagadan Pro\Project\Frameworks\AshProMessage\obj\Debug\net461\AshproMessage.csproj.AssemblyReference.cache
+F:\Offline Apps\C#\Nagadan Pro\Nagadan-The360 project and DB\Project\Frameworks\AshProMessage\bin\Debug\net461\AshproMessage.dll
+F:\Offline Apps\C#\Nagadan Pro\Nagadan-The360 project and DB\Project\Frameworks\AshProMessage\bin\Debug\net461\AshproMessage.pdb
+F:\Offline Apps\C#\Nagadan Pro\Nagadan-The360 project and DB\Project\Frameworks\AshProMessage\obj\Debug\net461\AshproMessage.csproj.AssemblyReference.cache
+F:\Offline Apps\C#\Nagadan Pro\Nagadan-The360 project and DB\Project\Frameworks\AshProMessage\obj\Debug\net461\AshproMessage.MessageKeys.resources
+F:\Offline Apps\C#\Nagadan Pro\Nagadan-The360 project and DB\Project\Frameworks\AshProMessage\obj\Debug\net461\AshproMessage.csproj.GenerateResource.cache
+F:\Offline Apps\C#\Nagadan Pro\Nagadan-The360 project and DB\Project\Frameworks\AshProMessage\obj\Debug\net461\AshproMessage.GeneratedMSBuildEditorConfig.editorconfig
+F:\Offline Apps\C#\Nagadan Pro\Nagadan-The360 project and DB\Project\Frameworks\AshProMessage\obj\Debug\net461\AshproMessage.csproj.CoreCompileInputs.cache
+F:\Offline Apps\C#\Nagadan Pro\Nagadan-The360 project and DB\Project\Frameworks\AshProMessage\obj\Debug\net461\AshproMessage.dll
+F:\Offline Apps\C#\Nagadan Pro\Nagadan-The360 project and DB\Project\Frameworks\AshProMessage\obj\Debug\net461\AshproMessage.pdb
+F:\Offline Apps\C#\Nagadan Pro\DeskCloud-The360 project and DB\DeskCloud ERP Source Code V20.21\Project\Frameworks\AshProMessage\bin\Debug\net461\AshproMessage.dll
+F:\Offline Apps\C#\Nagadan Pro\DeskCloud-The360 project and DB\DeskCloud ERP Source Code V20.21\Project\Frameworks\AshProMessage\bin\Debug\net461\AshproMessage.pdb
+F:\Offline Apps\C#\Nagadan Pro\DeskCloud-The360 project and DB\DeskCloud ERP Source Code V20.21\Project\Frameworks\AshProMessage\obj\Debug\net461\AshproMessage.csproj.AssemblyReference.cache
+F:\Offline Apps\C#\Nagadan Pro\DeskCloud-The360 project and DB\DeskCloud ERP Source Code V20.21\Project\Frameworks\AshProMessage\obj\Debug\net461\AshproMessage.MessageKeys.resources
+F:\Offline Apps\C#\Nagadan Pro\DeskCloud-The360 project and DB\DeskCloud ERP Source Code V20.21\Project\Frameworks\AshProMessage\obj\Debug\net461\AshproMessage.csproj.GenerateResource.cache
+F:\Offline Apps\C#\Nagadan Pro\DeskCloud-The360 project and DB\DeskCloud ERP Source Code V20.21\Project\Frameworks\AshProMessage\obj\Debug\net461\AshproMessage.GeneratedMSBuildEditorConfig.editorconfig
+F:\Offline Apps\C#\Nagadan Pro\DeskCloud-The360 project and DB\DeskCloud ERP Source Code V20.21\Project\Frameworks\AshProMessage\obj\Debug\net461\AshproMessage.csproj.CoreCompileInputs.cache
+F:\Offline Apps\C#\Nagadan Pro\DeskCloud-The360 project and DB\DeskCloud ERP Source Code V20.21\Project\Frameworks\AshProMessage\obj\Debug\net461\AshproMessage.dll
+F:\Offline Apps\C#\Nagadan Pro\DeskCloud-The360 project and DB\DeskCloud ERP Source Code V20.21\Project\Frameworks\AshProMessage\obj\Debug\net461\AshproMessage.pdb
+F:\Offline Apps\DeskCloud ERP\Project\Frameworks\AshProMessage\bin\Debug\net461\AshproMessage.dll
+F:\Offline Apps\DeskCloud ERP\Project\Frameworks\AshProMessage\bin\Debug\net461\AshproMessage.pdb
+F:\Offline Apps\DeskCloud ERP\Project\Frameworks\AshProMessage\obj\Debug\net461\AshproMessage.csproj.AssemblyReference.cache
+F:\Offline Apps\DeskCloud ERP\Project\Frameworks\AshProMessage\obj\Debug\net461\AshproMessage.MessageKeys.resources
+F:\Offline Apps\DeskCloud ERP\Project\Frameworks\AshProMessage\obj\Debug\net461\AshproMessage.csproj.GenerateResource.cache
+F:\Offline Apps\DeskCloud ERP\Project\Frameworks\AshProMessage\obj\Debug\net461\AshproMessage.GeneratedMSBuildEditorConfig.editorconfig
+F:\Offline Apps\DeskCloud ERP\Project\Frameworks\AshProMessage\obj\Debug\net461\AshproMessage.csproj.CoreCompileInputs.cache
+F:\Offline Apps\DeskCloud ERP\Project\Frameworks\AshProMessage\obj\Debug\net461\AshproMessage.dll
+F:\Offline Apps\DeskCloud ERP\Project\Frameworks\AshProMessage\obj\Debug\net461\AshproMessage.pdb
