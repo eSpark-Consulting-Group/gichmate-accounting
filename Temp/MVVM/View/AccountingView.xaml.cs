@@ -13,13 +13,17 @@ namespace FlexMold.MVVM.View
     /// </summary>
     public partial class AccountingView : UserControl
     {
-        private bool isSidebarExpanded = false;
+        private bool isSidebarExpanded = true;
 
-        private IAccountingViewModel _AccountingViewModel { get { return App.AppHost.Services.GetRequiredService<IAccountingViewModel>(); } }
+        private IAccountingViewModel _AccountingViewModel
+        {
+            get { return App.AppHost.Services.GetRequiredService<IAccountingViewModel>(); }
+        }
+
         public AccountingView()
         {
-            DataContext = _AccountingViewModel;
             InitializeComponent();
+            DataContext = _AccountingViewModel;
         }
 
         private void ToggleSidebar_Click(object sender, RoutedEventArgs e)
@@ -32,6 +36,24 @@ namespace FlexMold.MVVM.View
             isSidebarExpanded = !isSidebarExpanded;
         }
 
+        private void TopBarAccountsButton_Click(object sender, RoutedEventArgs e)
+        {
+            TopBarAccountsButton.ContextMenu.PlacementTarget = TopBarReportsButton;
+            TopBarAccountsButton.ContextMenu.Placement = System.Windows.Controls.Primitives.PlacementMode.Bottom;
+            TopBarAccountsButton.ContextMenu.IsOpen = true;
+        }
+
+        /// ///////////////////////////////////////////////////////////////
+
+
+
+        private void TopBarReportsButton_Click(object sender, RoutedEventArgs e)
+        {
+            TopBarReportsButton.ContextMenu.PlacementTarget = TopBarReportsButton;
+            TopBarReportsButton.ContextMenu.Placement = System.Windows.Controls.Primitives.PlacementMode.Bottom;
+            TopBarReportsButton.ContextMenu.IsOpen = true;
+        }
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             var adminSettings = new AdminSettingsView();
@@ -40,14 +62,8 @@ namespace FlexMold.MVVM.View
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            var userSettings = new UserSettingsVikew();
+            var userSettings = new UserSettingsView(); // double-check spelling if it was intentional
             userSettings.Show();
-        }
-
-        private void Button_Click_2(object sender, RoutedEventArgs e)
-        {
-            var accountsScreens = new AccountsScreens();
-            accountsScreens.Show();
         }
     }
 }

@@ -36,7 +36,7 @@
             <RowDefinition Height="40"/>
             <RowDefinition Height="100"/>
             <RowDefinition Height="650"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/> 
         </Grid.RowDefinitions>
 
         <DataGrid Grid.Row="2"
@@ -76,7 +76,7 @@
 
         <StackPanel Grid.Row="1" Orientation="Horizontal" Grid.ColumnSpan="3" >
             <Label Content="Bank Account : " VerticalAlignment="Center"/>
-            <ComboBox VerticalAlignment="Center" Width="300" Height="40">
+            <ComboBox VerticalAlignment="Center" Width="300" Height="40" VerticalContentAlignment="Center">
                 <ComboBoxItem Content="Bank Account"/>
             </ComboBox>
         </StackPanel>

@@ -28,6 +28,9 @@
     <Compile Update="MVVM\View\Accounts\DebitNoteView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="MVVM\View\Accounts\DefaultAccountScreenView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="MVVM\View\Accounts\PaymentAndReceiptView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -49,7 +52,7 @@
     <Compile Update="MVVM\View\Firm\FirmDetails.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="MVVM\View\UserSettingsVikew.xaml.cs">
+    <Compile Update="MVVM\View\UserSettingsView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>

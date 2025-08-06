@@ -1,14 +1,14 @@
 ﻿<UserControl
-    x:Class="FlexMold.MVVM.View.AccountingView"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:FlexMold.MVVM.View"
     xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:accounts="clr-namespace:FlexMold.MVVM.View.Accounts"
     xmlns:viewmodel="clr-namespace:FlexMold.MVVM.ViewModel"
-    Height="1000" Width="1900"
+    xmlns:Project="clr-namespace:FlexMold.MVVM.View.Project"
+    x:Class="FlexMold.MVVM.View.AccountingView"
+    Height="1000" Width="1850"
     mc:Ignorable="d">
 
     <UserControl.Resources>
@@ -35,8 +35,20 @@
     </UserControl.Resources>
 
     <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Red"/>
+                <GradientStop Color="#FF730000" Offset="1"/>
+                <GradientStop Color="White" Offset="0.323"/>
+                <GradientStop Color="#FFEDDFDF" Offset="0.406"/>
+                <GradientStop Color="#FEE3CDCD" Offset="0.453"/>
+                <GradientStop Color="#FEDFC7C7" Offset="0.479"/>
+                <GradientStop Color="#FFF5EEEE" Offset="0.365"/>
+                <GradientStop Color="#FEFFFFFF" Offset="0.682"/>
+            </LinearGradientBrush>
+        </Grid.Background>
         <!-- Top Bar -->
-        <Grid Background="#EE4540" Height="30" VerticalAlignment="Top">
+        <Grid Background="#EE4540" Height="36" VerticalAlignment="Top">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="27"/>
                 <ColumnDefinition Width="100"/>
@@ -105,88 +117,114 @@
                 </Button.RenderTransform>
             </Button>
 
-            <Button Content="ACCOUNTS"
-                Foreground="WhiteSmoke"
-                Background="Transparent"
-                BorderThickness="0"
-                Grid.Column="3"
-                VerticalAlignment="Center"
-                HorizontalAlignment="Center"
-                FontSize="17"
-                FontFamily="Fonts/#myfont"
-                FontWeight="UltraLight"
-                RenderTransformOrigin="0.5,0.5" Height="22" Width="86" Click="Button_Click_2">
-                <Button.Style>
-                    <Style/>
-                </Button.Style>
-                <Button.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </Button.RenderTransform>
+            <Button x:Name="TopBarAccountsButton"
+                    Content="ACCOUNTS"
+                    Foreground="WhiteSmoke"
+                    Background="Transparent"
+                    BorderThickness="0"
+                    Grid.Column="3"
+                    HorizontalAlignment="Center"
+                    FontSize="17"
+                    FontFamily="Fonts/#myfont"
+                    FontWeight="UltraLight"
+                    Click="TopBarAccountsButton_Click"
+                    RenderTransformOrigin="0.5,0.5"
+                    Margin="0,3,0,1" Width="110">
+                <Button.ContextMenu>
+                    <ContextMenu x:Name="AccountsContextMenu">
+                        <MenuItem Header="Account Screens" IsEnabled="False"/>
+                        <Separator/>
+
+                        <MenuItem Header="Default Account Screen"
+                         Command="{Binding DefaultAccountScreenCommand}"/>
+
+                        <MenuItem Header="Bank Payment"
+                         Command="{Binding BankPaymentCommand}"/>
+
+                        <MenuItem Header="Bank Receipt"
+                         Command="{Binding BankReceiptCommand}"/>
+
+                        <MenuItem Header="Bank Reconciliation"
+                         Command="{Binding BankReconciliationCommand}"/>
+
+                        <MenuItem Header="Cash Payment"
+                         Command="{Binding CashPaymentCommand}"/>
+
+                        <MenuItem Header="Cash Receipt"
+                         Command="{Binding CashReceiptCommand}"/>
+
+                        <MenuItem Header="Credit Note"
+                         Command="{Binding CreditNoteCommand}"/>
+
+                        <MenuItem Header="Debit Note"
+                         Command="{Binding DebitNoteCommand}"/>
+
+                        <MenuItem Header="Payment And Receipt"
+                         Command="{Binding PaymentAndReceiptCommand}"/>
+
+                        <MenuItem Header="Post Dated Cheque Payment"
+                         Command="{Binding PostDatedChequePaymentCommand}"/>
+
+                        <MenuItem Header="Post Dated Cheque Receipt"
+                         Command="{Binding PostDatedChequeReceiptCommand}"/>
+
+                        <MenuItem Header="Receipt"
+                        Command="{Binding ReceiptCommand}"/>
+                    </ContextMenu>
+                </Button.ContextMenu>
             </Button>
 
-            <Button x:Name="TopBarReportsButton" Content="REPORTS"
-                Foreground="WhiteSmoke"
-                Background="Transparent"
-                BorderThickness="0"
-                Grid.Column="4"
-                VerticalAlignment="Center"
-                HorizontalAlignment="Center"
-                FontSize="17"
-                FontFamily="Fonts/#myfont"
-                FontWeight="UltraLight"
-                RenderTransformOrigin="0.5,0.5" Height="22" Width="68">
-                <Button.Style>
-                    <Style/>
-                </Button.Style>
-                <Button.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </Button.RenderTransform>
+            <Button x:Name="TopBarReportsButton"
+                    Content="REPORTS"
+                    Foreground="WhiteSmoke"
+                    Background="Transparent"
+                    BorderThickness="0"
+                    Grid.Column="4"
+                    HorizontalAlignment="Center"
+                    FontSize="17"
+                    FontFamily="Fonts/#myfont"
+                    FontWeight="UltraLight"        
+                    RenderTransformOrigin="0.5,0.5"
+                    Margin="0,2,0,2" Width="110" Click="TopBarReportsButton_Click">
+                <Button.ContextMenu>
+                    <ContextMenu x:Name="ReportsContextMenu" >
+                        <MenuItem Header="Report Screens" IsEnabled="False"/>
+                        <Separator/>
+                        <MenuItem Header="Reports Demo" />
+                        <MenuItem Header="Reports Menu" />
+                        <MenuItem Header="AdvanceReport" />
+                        <MenuItem Header="Sales Report" />
+                        <MenuItem Header="Sales Return Report" />
+                        <MenuItem Header="Purchase Report" />
+                        <MenuItem Header="Purchase Return Report" />
+                        <MenuItem Header="Sales Estimate Report" />
+                        <MenuItem Header="Sales Order Report" />
+                        <MenuItem Header="Sales Quotation Report"/>
+                        <MenuItem Header="Purchase Order Report" />
+                        <MenuItem Header="Price List" />
+                        <MenuItem Header="Party List" />
+                        <MenuItem Header="Account Payable and Recievable Report" />
+                        <MenuItem Header="Rootwise Collection Report" />
+                        <MenuItem Header="Transaction Report" />
+                        <MenuItem Header="Other Reports" />
+                        <MenuItem Header="Customer Report" />
+                        <MenuItem Header="Supplier Report" />
+                    </ContextMenu>
+                </Button.ContextMenu>
             </Button>
 
-            <Button Content="PROFILES"
-                Foreground="WhiteSmoke"
-                Background="Transparent"
-                BorderThickness="0"
-                Grid.Column="5"
-                VerticalAlignment="Center"
-                HorizontalAlignment="Center"
-                FontSize="17"
-                FontFamily="Fonts/#myfont"
-                FontWeight="UltraLight" RenderTransformOrigin="0.5,0.5" Height="22" Width="70">
-                <Button.Style>
-                    <Style/>
-                </Button.Style>
-                <Button.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </Button.RenderTransform>
-            </Button>
 
             <Button Content="SEARCH"
-                Foreground="WhiteSmoke"
-                Background="Transparent"
-                BorderThickness="0"
-                Grid.Column="6"
-                VerticalAlignment="Center"
-                HorizontalAlignment="Center"
-                FontSize="17"
-                FontFamily="Fonts/#myfont"
-                FontWeight="UltraLight"
-                RenderTransformOrigin="0.5,0.5" Height="22" Width="62">
+                    Foreground="WhiteSmoke"
+                    Background="Transparent"
+                    BorderThickness="0"
+                    Grid.Column="6"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    FontSize="17"
+                    FontFamily="Fonts/#myfont"
+                    FontWeight="UltraLight"
+                    RenderTransformOrigin="0.5,0.5" Height="22" Width="62">
                 <Button.Style>
                     <Style/>
                 </Button.Style>
@@ -201,16 +239,16 @@
             </Button>
 
             <Button Content="ADMIN SETTINGS"
-                Foreground="WhiteSmoke"
-                Background="Transparent"
-                BorderThickness="0"
-                Grid.Column="7"
-                VerticalAlignment="Center"
-                HorizontalAlignment="Center"
-                FontSize="17"
-                FontFamily="Fonts/#myfont"
-                FontWeight="UltraLight"
-                RenderTransformOrigin="0.5,0.5" Width="132" Height="22" Click="Button_Click" >
+                    Foreground="WhiteSmoke"
+                    Background="Transparent"
+                    BorderThickness="0"
+                    Grid.Column="7"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    FontSize="17"
+                    FontFamily="Fonts/#myfont"
+                    FontWeight="UltraLight"
+                    RenderTransformOrigin="0.5,0.5" Width="132" Height="22" Click="Button_Click" >
                 <Button.Style>
                     <Style/>
                 </Button.Style>
@@ -301,10 +339,33 @@
                     </TransformGroup>
                 </Button.RenderTransform>
             </Button>
+            <Button Content="SEARCH"
+                Foreground="WhiteSmoke"
+                Background="Transparent"
+                BorderThickness="0"
+                Grid.Column="5"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                FontSize="17"
+                FontFamily="Fonts/#myfont"
+                FontWeight="UltraLight"
+                RenderTransformOrigin="0.5,0.5" Height="22" Width="62">
+                <Button.Style>
+                    <Style/>
+                </Button.Style>
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
         </Grid>
 
         <!-- Sidebar -->
-        <Grid x:Name="SidebarPanel" Width="75"
+        <Grid x:Name="SidebarPanel" Width="94"
               Background="{DynamicResource SidebarBrush}"
               Margin="0,30,0,0"
               HorizontalAlignment="Left" RenderTransformOrigin="1.367,0.57">
@@ -368,28 +429,37 @@
             </StackPanel>
         </Grid>
 
-        <!-- Main content -->
-        <Grid Margin="60,30,0,0">
+
+
+
+        <Grid Margin="99,46,10,0">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="100"/>
-                <ColumnDefinition Width="287*"/>
+                <ColumnDefinition Width="306*"/>
+                <ColumnDefinition Width="11*"/>
+                <ColumnDefinition Width="1123*"/>
             </Grid.ColumnDefinitions>
             <Grid.Background>
                 <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
-                    <GradientStop Color="#FFEE4540"/>
-                    <GradientStop Color="#FF2D142C" Offset="1"/>
-                    <GradientStop Color="#FF510A32" Offset="0.565"/>
-                    <GradientStop Color="#FFC72C41" Offset="0.157"/>
                     <GradientStop Color="#FF801336" Offset="0.365"/>
                     <GradientStop Color="#FF670E33" Offset="0.426"/>
                 </LinearGradientBrush>
             </Grid.Background>
+
+            <!-- USER CONTROLS VISIBILITY -->
+            <Grid HorizontalAlignment="Left" Height="932"  VerticalAlignment="Center" Width="1394" Margin="347,0,0,0" Grid.ColumnSpan="3">
+
+                <GroupBox ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" Margin="-129,0,20,0" BorderBrush="White" BorderThickness="3">
+
+                    <ContentControl Content="{Binding CurrentView}" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,0,0,10" />
+
+                </GroupBox>
+
+            </Grid>
+
         </Grid>
 
-        <Grid Grid.Column="1" >
-            <accounts:BankReconciliationView/>
-            <Border BorderBrush="White" BorderThickness="5" HorizontalAlignment="Center" Height="900" VerticalAlignment="Center" Width="1472"/>
-        </Grid>
+
 
     </Grid>
+
 </UserControl>

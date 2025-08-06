@@ -11,5 +11,7 @@ namespace FlexMold.MVVM.View.MachineTest
         {
             InitializeComponent();
         }
+
+       
     }
 }

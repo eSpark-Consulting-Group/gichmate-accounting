@@ -1,4 +1,5 @@
 ﻿using FlexMold.MVVM.View;
+using FlexMold.MVVM.View.Accounts;
 using FlexMold.MVVM.View.Home;
 using FlexMold.MVVM.View.MachineTest;
 using FlexMold.MVVM.View.Project;
@@ -50,7 +51,7 @@ namespace FlexMold
 
                 services.AddSingleton<IHomeViewModel, HomeViewModel>();
                 services.AddSingleton<IAccountingViewModel, AccountingViewModel>();
-                //services.AddSingleton<AccountingView>();
+                //services.AddSingleton<aAccountingView>();
 
                 services.AddSingleton<IMachineDetailViewModel, MachineDetailViewModel>();
                 services.AddSingleton<IMotorStatusViewmodel, MotorStatusViewmodel>();
@@ -71,6 +72,20 @@ namespace FlexMold
                 services.AddSingleton<RenumberingView>();
                 services.AddSingleton<PositionView>();
                 services.AddSingleton<ResetView>();
+
+                services.AddSingleton<IAccountingViewModel, AccountingViewModel>();
+                services.AddSingleton<DefaultAccountScreenView>();
+                services.AddSingleton<BankPaymentView>();
+                services.AddSingleton<BankReceiptView >();
+                services.AddSingleton<BankReconciliationView>();
+                services.AddSingleton<CashPaymentView>();
+                services.AddSingleton<CashReceiptView>(); 
+                services.AddSingleton<CreditNoteView>();
+                services.AddSingleton<DebitNoteView>();
+                services.AddSingleton<PaymentAndReceiptView>();
+                services.AddSingleton<PostDatedChequePaymentView>();
+                services.AddSingleton<PostDatedChequeReceiptView>(); 
+                services.AddSingleton<ReceiptView>();
 
                 services.AddSingleton<ISettingViewModel, SettingViewModel>();
                 services.AddSingleton<IMotorSettingViewModel, MotorSettingViewModel>(); 

@@ -5,8 +5,9 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
              xmlns:local="clr-namespace:FlexMold.MVVM.View.Accounts"
-            xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="FlexMold.MVVM.View.Accounts.DebitNoteView"
-            Height="900" Width="1123">
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
+             x:Class="FlexMold.MVVM.View.Accounts.DebitNoteView"
+             Height="900" Width="1123">
 
     <UserControl.Background>
         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -21,10 +22,6 @@
 
 
     <Grid Margin="10,20,0,10">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="613*"/>
-            <ColumnDefinition Width="501*"/>
-        </Grid.ColumnDefinitions>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                 <GradientStop Color="#FFEE4540"/>
@@ -35,6 +32,10 @@
                 <GradientStop Color="#FF670E33" Offset="0.426"/>
             </LinearGradientBrush>
         </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="613*"/>
+            <ColumnDefinition Width="501*"/>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
 
             <RowDefinition Height="Auto" MinHeight="28"/>
@@ -44,48 +45,100 @@
             <RowDefinition Height="Auto" MinHeight="39.62"/>
         </Grid.RowDefinitions>
 
-
-        <DataGrid Grid.Row="2"
+        <DataGrid ItemsSource="{Binding DebitNotes}"
                   AutoGenerateColumns="False"
-                  HeadersVisibility="Column"
-                  CanUserAddRows="False"
-                  CanUserDeleteRows="False"
-                  Margin="22,44,22,321" RenderTransformOrigin="0.499,0.42" Grid.ColumnSpan="2" Grid.RowSpan="2">
+                  CanUserAddRows="True"
+                  CanUserDeleteRows="True"
+                  Margin="22,44,22,321"
+                  Grid.Row="2"
+                  Grid.RowSpan="2"
+                  Grid.ColumnSpan="2">
             <DataGrid.Columns>
                 <DataGridCheckBoxColumn Header="SL" Width="50" Binding="{Binding SL}"/>
-                <DataGridTextColumn Header="Voucher No" Width="120" Binding="{Binding VoucherNo}"/>
+                <DataGridTextColumn Header="Voucher No" Width="120" Binding="{Binding VoucherNo}"
+         />
                 <DataGridTextColumn Header="Date" Width="110" Binding="{Binding Date}"/>
                 <DataGridTextColumn Header="Account Name" Width="160" Binding="{Binding PartyAccount}"/>
-                <DataGridTextColumn Header="Party/Supplier" Width="150" Binding="{Binding Amount}"/>
-                <DataGridTextColumn Header="Amount" Width="110" Binding="{Binding Delete}"/>
-                <DataGridTextColumn Header="Narration" Width="*" Binding="{Binding}" />
+                <DataGridTextColumn Header="Party/Supplier" Width="150" Binding="{Binding SupplierName}"/>
+                <DataGridTextColumn Header="Amount" Width="110" Binding="{Binding Amount}"/>
+                <DataGridTextColumn Header="Narration" Width="*" Binding="{Binding Narration}"/>
             </DataGrid.Columns>
         </DataGrid>
 
 
+
         <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Left" Margin="188,3,0,-2" Width="360">
-            <Button Content="Save" Width="80" Margin="5" Background="#FF6F0404" Foreground="White">
-                <Button.Effect>
-                    <DropShadowEffect/>
-                </Button.Effect>
-            </Button>
-            <Button Content="Edit" Width="80" Margin="5" Background="#FF6F0404" Foreground="White">
-                <Button.Effect>
-                    <DropShadowEffect/>
-                </Button.Effect>
-            </Button>
-            <Button Content="Delete" Width="80" Margin="5" Background="#FF6F0404" Foreground="White" >
-                <Button.Effect>
-                    <DropShadowEffect/>
-                </Button.Effect>
-            </Button>
-            <Button Content="Clear" Width="80" Margin="5" Background="#FF6F0404" Foreground="White">
-                <Button.Effect>
-                    <DropShadowEffect/>
-                </Button.Effect>
-            </Button>
+            <StackPanel.Resources>
+                <Style TargetType="Button" x:Key="AnimatedRedButton">
+                    <Setter Property="Width" Value="80"/>
+                    <Setter Property="Margin" Value="5"/>
+                    <Setter Property="Foreground" Value="White"/>
+                    <Setter Property="Background" Value="#FF6F0404"/>
+                    <Setter Property="Cursor" Value="Hand"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="Button">
+                                <Border Background="{TemplateBinding Background}"
+                                CornerRadius="5"
+                                SnapsToDevicePixels="True">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Trigger.EnterActions>
+                                            <BeginStoryboard>
+                                                <Storyboard>
+                                                    <ColorAnimation To="#FFAA0000"
+                                                            Duration="0:0:0.3"
+                                                            Storyboard.TargetProperty="(Background).(SolidColorBrush.Color)"/>
+                                                    <DoubleAnimation To="1.2"
+                                                             Duration="0:0:0.3"
+                                                             Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleX)"/>
+                                                    <DoubleAnimation To="1.2"
+                                                             Duration="0:0:0.3"
+                                                             Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleY)"/>
+                                                </Storyboard>
+                                            </BeginStoryboard>
+                                        </Trigger.EnterActions>
+                                        <Trigger.ExitActions>
+                                            <BeginStoryboard>
+                                                <Storyboard>
+                                                    <ColorAnimation To="#FF6F0404"
+                                                            Duration="0:0:0.3"
+                                                            Storyboard.TargetProperty="(Background).(SolidColorBrush.Color)"/>
+                                                    <DoubleAnimation To="1.0"
+                                                             Duration="0:0:0.3"
+                                                             Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleX)"/>
+                                                    <DoubleAnimation To="1.0"
+                                                             Duration="0:0:0.3"
+                                                             Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleY)"/>
+                                                </Storyboard>
+                                            </BeginStoryboard>
+                                        </Trigger.ExitActions>
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Setter Property="RenderTransformOrigin" Value="0.5,0.5"/>
+                    <Setter Property="RenderTransform">
+                        <Setter.Value>
+                            <ScaleTransform ScaleX="1" ScaleY="1"/>
+                        </Setter.Value>
+                    </Setter>
+                    <Setter Property="Effect">
+                        <Setter.Value>
+                            <DropShadowEffect BlurRadius="5" ShadowDepth="2" Color="Black" Opacity="0.5"/>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </StackPanel.Resources>
+
+            <Button Style="{StaticResource AnimatedRedButton}" Content="Save" />
+            <Button Style="{StaticResource AnimatedRedButton}" Content="Edit" />
+            <Button Style="{StaticResource AnimatedRedButton}" Content="Delete" />
+            <Button Style="{StaticResource AnimatedRedButton}" Content="Clear" />
         </StackPanel>
-        <Border BorderBrush="White" BorderThickness="4" Margin="-10,-20,0,4" Grid.ColumnSpan="2" />
         <TextBlock HorizontalAlignment="Left" Foreground="White"
             Height="26" Margin="802,107,0,0" FontSize="15"
             Grid.Row="3" TextWrapping="Wrap" FontWeight="Bold"
@@ -143,6 +196,8 @@
         <StackPanel Orientation="Horizontal" Margin="595,188,130,183" Grid.Row="3" Grid.ColumnSpan="2">
             <TextBlock Text="Amount :" FontWeight="Bold" VerticalAlignment="Center" FontSize="15" Foreground="White"/>
             <TextBox Width="300" Margin="10,0,0,0" Height="27" RenderTransformOrigin="0.594,0.542" Text="0.00"/>
+            <TextBlock Margin="40,0,0,0" Width="50" Foreground="White" Text="{Binding DebitNotes.Count}" />
+
         </StackPanel>
 
 

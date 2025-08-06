@@ -82,12 +82,12 @@
 
 
         <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Left" Margin="193,1,0,0" Width="366" Grid.Column="1">
-            <Button Content="Save" Width="80" Margin="5" Background="#FF6F0404" Foreground="White">
+            <Button Content="Save" Width="80" Margin="5" Background="#FF6F0404" Foreground="White" >
                 <Button.Effect>
                     <DropShadowEffect/>
                 </Button.Effect>
             </Button>
-            <Button Content="Edit" Width="80" Margin="5" Background="#FF6F0404" Foreground="White">
+            <Button Content="Edit" Width="80" Margin="5" Background="#FF6F0404" Foreground="White" >
                 <Button.Effect>
                     <DropShadowEffect/>
                 </Button.Effect>

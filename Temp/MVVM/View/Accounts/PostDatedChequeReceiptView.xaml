@@ -104,9 +104,9 @@
                 </Button.Effect>
             </Button>
         </StackPanel>
-        <StackPanel Orientation="Horizontal" Margin="30,200,359,160" Grid.Row="3">
+        <StackPanel Orientation="Horizontal" Margin="30,190,359,160" Grid.Row="3">
             <TextBlock Text="Voucher No : " VerticalAlignment="Center" FontSize="15" FontWeight="Bold" Foreground="White"/>
-            <mah:NumericUpDown Height="27" Width="300"
+            <mah:NumericUpDown Height="34" Width="300" VerticalContentAlignment="Center"
                                Maximum="9999"
                                Minimum="0"/>
 

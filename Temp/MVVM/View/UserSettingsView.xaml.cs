@@ -1,0 +1,37 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Shapes;
+
+namespace FlexMold.MVVM.View
+{
+    /// <summary>
+    /// Interaction logic for UserSettingsVikew.xaml
+    /// </summary>
+    public partial class UserSettingsView : Window
+    {
+        public UserSettingsView()
+        {
+            InitializeComponent();
+        }
+
+        public class PrivilegeRow
+        {
+            public bool Enable { get; set; }
+            public string MenuName { get; set; }
+            public string MenuTitle { get; set; }
+            public bool Save { get; set; }
+            public bool Edit { get; set; }
+            public bool Delete { get; set; }
+        }
+    }
+}
