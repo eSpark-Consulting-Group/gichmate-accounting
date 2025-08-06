@@ -204,7 +204,7 @@
 
         <StackPanel Margin="208,157,0,10" Grid.Row="3" Grid.Column="1">
             <!-- Toggle Button -->
-            <Button Content="..." Click="ToggleFields_Click" Margin="0,0,0,10" Width="54" HorizontalAlignment="Left" Background="#FF9E9C9C"/>
+            <Button Content="..." Click="ToggleFields_Click" Margin="0,0,0,10" Width="54" HorizontalAlignment="Left" Background="White"/>
 
             <!-- Field Container -->
             <StackPanel Name="FieldContainer" Visibility="Collapsed">
@@ -218,18 +218,6 @@
                 <StackPanel Orientation="Horizontal" Margin="5">
                     <Label Content="Account:" Width="120" VerticalAlignment="Center"/>
                     <TextBox Name="AccountTextBox" Width="150"/>
-                </StackPanel>
-
-                <!-- Date To -->
-                <StackPanel Orientation="Horizontal" Margin="5">
-                    <Label Content="Date To:" Width="120" VerticalAlignment="Center"/>
-                    <TextBox Name="DateToTextBox" Width="150"/>
-                </StackPanel>
-
-                <!-- Opening Balance -->
-                <StackPanel Orientation="Horizontal" Margin="5">
-                    <Label Content="Opening Balance:" Width="120" VerticalAlignment="Center"/>
-                    <TextBox Name="OpeningBalanceTextBox" Width="150"/>
                 </StackPanel>
             </StackPanel>
         </StackPanel>
