@@ -6,7 +6,9 @@
              xmlns:local="clr-namespace:FlexMold.MVVM.View.Accounts"
              xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls" x:Class="FlexMold.MVVM.View.Accounts.PaymentAndReceiptView"
              mc:Ignorable="d" 
-                      Height="900" Width="1300">
+             BorderThickness="7" 
+             BorderBrush="White"
+             Height="900" Width="1300">
 
     <UserControl.Background>
         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">

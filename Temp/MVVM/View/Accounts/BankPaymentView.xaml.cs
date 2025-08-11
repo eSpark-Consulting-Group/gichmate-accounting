@@ -16,7 +16,7 @@ using System.Windows.Shapes;
 namespace FlexMold.MVVM.View.Accounts
 {
     /// <summary>
-    /// Interaction logic for BankPaymentView.xaml
+    /// Interaction logic for BankPaymentNew.xaml
     /// </summary>
     public partial class BankPaymentView : UserControl
     {
@@ -24,12 +24,12 @@ namespace FlexMold.MVVM.View.Accounts
         {
             InitializeComponent();
         }
-
         private void ToggleFields_Click(object sender, RoutedEventArgs e)
         {
             FieldContainer.Visibility = FieldContainer.Visibility == Visibility.Visible
-                ? Visibility.Collapsed
-                : Visibility.Visible;
+               ? Visibility.Collapsed
+               : Visibility.Visible;
         }
+
     }
 }

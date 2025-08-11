@@ -4,7 +4,9 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:FlexMold.MVVM.View.Accounts"
-                         xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+             BorderThickness="7" 
+             BorderBrush="White"
+             xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
              mc:Ignorable="d" 
              Height="900" Width="1300">
 
@@ -47,7 +49,7 @@
 
 
         <StackPanel Orientation="Horizontal" Margin="26,20,26,349" Grid.Row="2">
-            <TextBlock Text="Collected By :" VerticalAlignment="Center" Foreground="White" FontSize="20"/>
+            <TextBlock Text="Collected By :" VerticalAlignment="Center" Foreground="White" FontSize="14"/>
             <ComboBox Width="500" Margin="10,0,0,0" Height="27" RenderTransformOrigin="0.594,0.542">
                 <ComboBoxItem Content="Admin"/>
                 <ComboBoxItem Content="Office"/>
@@ -57,7 +59,7 @@
 
 
         <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Margin="4,17,0,343" Width="148" Grid.Row="2" Grid.Column="1">
-            <CheckBox  Content="Auto Refresh" Foreground="White" Height="17" Width="149" FontSize="20"/>
+            <CheckBox  Content="Auto Refresh" Foreground="White" Height="17" Width="149" FontSize="14"/>
         </StackPanel>
 
 
@@ -66,7 +68,7 @@
                   HeadersVisibility="Column"
                   CanUserAddRows="False"
                   CanUserDeleteRows="False" FontSize="15"
-                  Margin="20,59,30,307" RenderTransformOrigin="0.499,0.42" Grid.ColumnSpan="2" Grid.RowSpan="2">
+                  Margin="20,59,30,394" RenderTransformOrigin="0.499,0.42" Grid.ColumnSpan="2" Grid.RowSpan="2">
             <DataGrid.Columns>
                 <DataGridCheckBoxColumn Header="SL" Width="50" Binding="{Binding}"/>
                 <DataGridTextColumn Header="Voucher No" Width="120" Binding="{Binding}"/>
@@ -80,7 +82,7 @@
         </DataGrid>
 
 
-        <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Left" Margin="26,4,0,-2" Width="552" Grid.Column="1">
+        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Left" Margin="15,295,0,61" Width="552" Grid.Column="1">
             <Button Content="Save" Width="80" Margin="5" Background="#FF6F0404" Foreground="White">
                 <Button.Effect>
                     <DropShadowEffect/>
@@ -113,13 +115,13 @@
             </Button>
         </StackPanel>
         <TextBlock HorizontalAlignment="Left" 
-                   Height="22" Margin="370,107,0,0"
+                   Height="22" Margin="360,16,0,0"
                    Grid.Row="3" TextWrapping="Wrap" 
                    Text="Total : "  FontWeight="Bold"
                    Foreground="White" FontSize="15"
                    VerticalAlignment="Top" Width="47"/>
         <TextBlock HorizontalAlignment="Left" Foreground="White"
-                   Height="22" Margin="439,107,0,0"  FontSize="15"
+                   Height="22" Margin="429,16,0,0"  FontSize="15"
                    Grid.Row="3" TextWrapping="Wrap" 
                    Text="0.00" FontWeight="Bold" VerticalAlignment="Top" Width="69" RenderTransformOrigin="0.5,0.5">
             <TextBlock.RenderTransform>
@@ -132,7 +134,7 @@
             </TextBlock.RenderTransform>
         </TextBlock>
         <TextBlock HorizontalAlignment="Left" FontWeight="Bold"
-            Height="26" Margin="669,107,0,0"
+            Height="26" Margin="659,16,0,0"
             Grid.Row="3" TextWrapping="Wrap" 
             Text="Bank Account Balance :" 
             Foreground="White" FontSize="15"
@@ -141,48 +143,48 @@
             Height="26" Margin="802,107,0,0" FontSize="15"
             Grid.Row="3" TextWrapping="Wrap" FontWeight="Bold"
             Text="0.00" VerticalAlignment="Top" Width="68" Grid.Column="1"/>
-        <StackPanel Orientation="Horizontal" Margin="38,148,260,212" Grid.Row="3">
-            <TextBlock Text="Voucher No : " VerticalAlignment="Center" FontSize="15" FontWeight="Bold" Foreground="White"/>
+        <StackPanel Orientation="Horizontal" Margin="28,57,239,293" Grid.Row="3">
+            <TextBlock Text="Voucher No : " VerticalAlignment="Center" FontSize="15"  Foreground="White"/>
             <mah:NumericUpDown Height="33" Width="300"
                                Maximum="9999"
                                Minimum="0"/>
 
         </StackPanel>
-        <StackPanel Orientation="Horizontal" Margin="64,204,260,166" Grid.Row="3">
-            <TextBlock Text="Account :" FontWeight="Bold" VerticalAlignment="Center" FontSize="15" Foreground="White"/>
-            <ComboBox Width="300" Margin="10,0,0,0" Height="27" RenderTransformOrigin="0.594,0.542">
+        <StackPanel Orientation="Horizontal" Margin="54,113,239,250" Grid.Row="3">
+            <TextBlock Text="Account :" VerticalAlignment="Center" FontSize="15" Foreground="White"/>
+            <ComboBox Width="296" Margin="10,0,0,0" Height="27" RenderTransformOrigin="0.594,0.542">
                 <ComboBoxItem Content="Admin"/>
                 <ComboBoxItem Content="Office"/>
                 <ComboBoxItem Content="ALL"/>
             </ComboBox>
         </StackPanel>
-        <StackPanel Orientation="Horizontal" Margin="68,249,260,112" Grid.Row="3">
-            <TextBlock Text="Amount :" FontWeight="Bold" VerticalAlignment="Center" FontSize="15" Foreground="White"/>
-            <TextBox Width="300" Margin="10,0,0,0" Height="27" RenderTransformOrigin="0.594,0.542">
+        <StackPanel Orientation="Horizontal" Margin="54,158,239,202" Grid.Row="3">
+            <TextBlock Text="Amount :" VerticalAlignment="Center" FontSize="15" Foreground="White"/>
+            <TextBox Width="298" Margin="10,0,0,0" Height="27" RenderTransformOrigin="0.594,0.542">
             </TextBox>
         </StackPanel>
-        <StackPanel Orientation="Horizontal" Margin="72,305,260,75" Grid.Row="3">
-            <TextBlock Text="Collected By :" FontWeight="Bold" VerticalAlignment="Center" FontSize="15" Foreground="White"/>
-            <ComboBox Width="300" Margin="10,0,0,0" Height="27" RenderTransformOrigin="0.594,0.542">
+        <StackPanel Orientation="Horizontal" Margin="25,209,234,155" Grid.Row="3">
+            <TextBlock Text="Collected By :"  VerticalAlignment="Center" FontSize="15" Foreground="White" Width="90"/>
+            <ComboBox Width="298" Margin="10,0,0,0" Height="27" RenderTransformOrigin="0.594,0.542">
                 <ComboBoxItem Content="Admin"/>
                 <ComboBoxItem Content="Office"/>
                 <ComboBoxItem Content="ALL"/>
             </ComboBox>
         </StackPanel>
-        <StackPanel Orientation="Horizontal" Margin="58,341,260,32" Grid.Row="3">
-            <TextBlock Text="Narration :" FontWeight="Bold" VerticalAlignment="Center" FontSize="15" Foreground="White"/>
-            <TextBox Width="300" Margin="10,0,0,0" Height="27" RenderTransformOrigin="0.594,0.542"/>
+        <StackPanel Orientation="Horizontal" Margin="44,255,243,109" Grid.Row="3">
+            <TextBlock Text="Narration :" VerticalAlignment="Center" FontSize="15" Foreground="White" Width="70"/>
+            <TextBox Width="300" Margin="10,0,0,0" Height="18" RenderTransformOrigin="0.594,0.542"/>
         </StackPanel>
         <TextBlock HorizontalAlignment="Left" 
                    Height="74" Margin="0,-21,0,0" 
-                   TextWrapping="Wrap" FontSize="35"
+                   TextWrapping="Wrap" FontSize="25"
                    Text="Bank Receipt" Foreground="White" FontWeight="Bold"
                    VerticalAlignment="Top" Width="292" Grid.RowSpan="3"/>
-        <StackPanel Orientation="Horizontal" Margin="552,156,382,217" Grid.Row="3" Grid.ColumnSpan="2">
-            <TextBlock Text="Date :" FontWeight="Bold" VerticalAlignment="Center" FontSize="15" Foreground="White"/>
-            <DatePicker Width="303" Margin="10,0,0,0" Height="27" RenderTransformOrigin="0.594,0.542"/>
+        <StackPanel Orientation="Horizontal" Margin="539,65,374,302" Grid.Row="3" Grid.ColumnSpan="2">
+            <TextBlock Text="Date :" VerticalAlignment="Center" FontSize="15" Foreground="White" Width="45"/>
+            <DatePicker Width="301" Margin="10,0,0,0" Height="27" RenderTransformOrigin="0.594,0.542"/>
         </StackPanel>
-        <StackPanel Orientation="Horizontal" Margin="424,220,262,0" Grid.Row="3" Grid.ColumnSpan="2" Height="0" VerticalAlignment="Top">
+        <StackPanel Orientation="Horizontal" Margin="414,121,272,0" Grid.Row="3" Grid.ColumnSpan="2" Height="0" VerticalAlignment="Top">
             <TextBlock Text="Cash Account :" FontWeight="Bold" VerticalAlignment="Center" FontSize="15" Foreground="White"/>
             <ComboBox Width="300" Margin="10,0,0,0" Height="27" RenderTransformOrigin="0.594,0.542">
                 <ComboBoxItem Content="Admin"/>
@@ -190,28 +192,28 @@
                 <ComboBoxItem Content="ALL"/>
             </ComboBox>
         </StackPanel>
-        <Border BorderBrush="white" BorderThickness="4" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="7" Margin="26,133,0,0" Grid.Row="3" VerticalAlignment="Top" Width="1234"/>
-        <StackPanel Orientation="Horizontal" Margin="490,209,378,171" Grid.Row="3" Grid.ColumnSpan="2">
-            <TextBlock Text="Bank Account : " FontWeight="Bold" VerticalAlignment="Center" FontSize="15" Foreground="White" Width="105"/>
+        <Border BorderBrush="white" BorderThickness="4" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="7" Margin="16,42,0,0" Grid.Row="3" VerticalAlignment="Top" Width="1234"/>
+        <StackPanel Orientation="Horizontal" Margin="480,105,372,257" Grid.Row="3" Grid.ColumnSpan="2">
+            <TextBlock Text="Bank Account : " VerticalAlignment="Center" FontSize="15" Foreground="White" Width="105"/>
             <ComboBox Width="300" Margin="10,0,0,0" Height="27" RenderTransformOrigin="0.594,0.542">
                 <ComboBoxItem Content="Cash Account"/>
                 <ComboBoxItem Content="Other Account"/>
                 <ComboBoxItem Content="Other Payment Method"/>
             </ComboBox>
         </StackPanel>
-        <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Margin="496,242,0,120" Width="98" Grid.Row="3">
-            <CheckBox  Content="Discount :" Foreground="White" Height="17" Width="61" FontWeight="Bold" FontSize="15"/>
+        <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Margin="486,143,0,218" Width="98" Grid.Row="3">
+            <CheckBox  Content="Discount :" Foreground="White" Height="17" Width="61" FontSize="15"/>
         </StackPanel>
         <TextBox 
                  HorizontalAlignment="Left" 
                  Height="26" 
-                 Margin="606,249,0,0" 
+                 Margin="596,150,0,0" 
                  Grid.Row="3" 
                  TextWrapping="Wrap" 
                  Text="0.00" 
                  VerticalAlignment="Top" Width="300" Grid.ColumnSpan="2"/>
         <TextBlock HorizontalAlignment="Left" Foreground="White"
-            Height="22" Margin="241,107,0,0"  FontSize="15"
+            Height="22" Margin="232,16,0,0"  FontSize="15"
             Grid.Row="3" TextWrapping="Wrap" 
             Text="0.00" FontWeight="Bold" VerticalAlignment="Top" Width="69" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
             <TextBlock.RenderTransform>
@@ -224,7 +226,7 @@
             </TextBlock.RenderTransform>
         </TextBlock>
 
-        <StackPanel Margin="217,158,0,36" Grid.Row="3" Grid.Column="1">
+        <StackPanel Margin="208,67,10,126" Grid.Row="3" Grid.Column="1">
             <!-- Toggle Button -->
             <Button Content="..." Click="ToggleFields_Click" Margin="0,0,0,10" Width="54" HorizontalAlignment="Left" Background="White">
                 <Button.Effect>

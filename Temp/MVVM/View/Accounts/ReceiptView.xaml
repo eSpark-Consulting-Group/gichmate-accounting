@@ -6,6 +6,8 @@
              xmlns:local="clr-namespace:FlexMold.MVVM.View.Accounts"
              xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
              mc:Ignorable="d"            
+             BorderThickness="7" 
+             BorderBrush="White"
              Height="900" Width="1400">
 
     <UserControl.Background>
@@ -47,6 +49,8 @@
             </ComboBox>
 
             <DatePicker Width="350" Height="40" VerticalAlignment="Center" FontSize="20" VerticalContentAlignment="Center" Margin="20,0,0,0"/>
+
+            
         </StackPanel>
 
         <StackPanel Grid.Row="2" Orientation="Horizontal" VerticalAlignment="Center">
@@ -57,15 +61,39 @@
             </ComboBox>
             <DatePicker Width="350" Height="40" VerticalAlignment="Center" VerticalContentAlignment="Center" FontSize="20" Margin="15,0,0,0"/>
 
+            <Label Content="Narration"
+                   Margin="20,0,0,0"/>
+
+            <TextBox Text="..."
+                     Width="350"
+                     Height="40"
+                     VerticalAlignment="Center"
+                     VerticalContentAlignment="Center"/>
         </StackPanel>
 
         <StackPanel Grid.Row="3" Orientation="Horizontal" VerticalAlignment="Center">
             <Label Content="    Sales Exi :"/>
-            <TextBox Width="350" VerticalAlignment="Center" Height="40" VerticalContentAlignment="Center" FontSize="20"/>
+            <TextBox Width="350" 
+                     VerticalAlignment="Center" 
+                     Height="40" 
+                     VerticalContentAlignment="Center" FontSize="20"/>
 
-            <Label Content=" Remarks :" VerticalAlignment="Center"/>
-            <TextBox Width="450" Height="40" VerticalAlignment="Center"/>
-            <Button Content="Load" VerticalAlignment="Center" FontSize="20" Height="40" Width="100" Margin="100,0,0,10" Foreground="white" Background="#FF6F0404">
+            <Label Content=" Remarks :" 
+                   VerticalAlignment="Center"/>
+            <TextBox Text=".." 
+                     Width="450" 
+                     Height="40" 
+                     VerticalAlignment="Center"
+                     VerticalContentAlignment="Center"/>
+           
+ <Button  Content="Load" 
+                     VerticalAlignment="Center" 
+                     FontSize="20" 
+                     Height="40"
+                     Width="100" 
+                     Margin="100,0,0,10"
+                     Foreground="white" 
+                     Background="#FF6F0404">
                 <Button.Effect>
                     <DropShadowEffect/>
                 </Button.Effect>

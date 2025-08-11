@@ -5,6 +5,8 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:FlexMold.MVVM.View.Accounts"
              mc:Ignorable="d" 
+             BorderThickness="7" 
+             BorderBrush="White"
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
              Height="900" Width="1123">
 
@@ -90,7 +92,7 @@
             Height="26" Margin="802,107,0,0" FontSize="15"
             Grid.Row="3" TextWrapping="Wrap" FontWeight="Bold"
             Text="0.00" VerticalAlignment="Top" Width="68" Grid.Column="1"/>
-        <StackPanel Orientation="Horizontal" Margin="127,135,78,225" Grid.Row="3">
+        <StackPanel Orientation="Horizontal" Margin="127,135,78,217" Grid.Row="3">
             <TextBlock Text="Voucher No : " VerticalAlignment="Center" FontSize="15" FontWeight="Bold" Foreground="White"/>
             <mah:NumericUpDown Height="33" Width="300"
                                Maximum="9999"
@@ -105,7 +107,7 @@
                 <ComboBoxItem Content="eSpark"/>
             </ComboBox>
         </StackPanel>
-        <StackPanel Orientation="Horizontal" Margin="106,242,81,138" Grid.Row="3">
+        <StackPanel Orientation="Horizontal" Margin="106,236,61,128" Grid.Row="3">
             <TextBlock Text="Account Name :" FontWeight="Bold" VerticalAlignment="Center" FontSize="15" Foreground="White"/>
             <ComboBox Width="300" Margin="10,0,0,0" Height="27" RenderTransformOrigin="0.594,0.542">
                 <ComboBoxItem Content="Admin"/>
@@ -113,9 +115,9 @@
                 <ComboBoxItem Content="ALL"/>
             </ComboBox>
         </StackPanel>
-        <StackPanel Orientation="Horizontal" Margin="144,282,79,91" Grid.Row="3">
+        <StackPanel Orientation="Horizontal" Margin="141,282,55,70" Grid.Row="3">
             <TextBlock Text="Narration :" FontWeight="Bold" VerticalAlignment="Center" FontSize="15" Foreground="White"/>
-            <TextBox Width="300" Margin="10,0,0,0" Height="27" RenderTransformOrigin="0.594,0.542"/>
+            <TextBox Width="300" Margin="10,0,0,0" Height="5" RenderTransformOrigin="0.594,0.542"/>
         </StackPanel>
         
         
@@ -126,7 +128,7 @@
                    VerticalAlignment="Top" Width="194"/>
         
         
-        <StackPanel Orientation="Horizontal" Margin="6,141,106,232" Grid.Row="3" Grid.Column="1">
+        <StackPanel Orientation="Horizontal" Margin="6,141,112,225" Grid.Row="3" Grid.Column="1">
             <TextBlock Text="Date :" FontWeight="Bold" VerticalAlignment="Center" FontSize="15" Foreground="White"/>
             <DatePicker Width="300" Margin="10,0,0,0" Height="27" RenderTransformOrigin="0.594,0.542"/>
         </StackPanel>
@@ -144,13 +146,13 @@
             TextWrapping="Wrap" FontSize="20"
             Text="Search" Foreground="White" FontWeight="Light"
             VerticalAlignment="Top" Width="194" Grid.Row="2"/>
-        <StackPanel Orientation="Horizontal" Margin="595,188,130,183" Grid.Row="3" Grid.ColumnSpan="2">
+        <StackPanel Orientation="Horizontal" Margin="586,188,93,170" Grid.Row="3" Grid.ColumnSpan="2">
             <TextBlock Text="Amount :" FontWeight="Bold" VerticalAlignment="Center" FontSize="15" Foreground="White"/>
-            <TextBox Width="300" Margin="10,0,0,0" Height="27" RenderTransformOrigin="0.594,0.542" Text="0.00"/>
+            <TextBox Width="300" Margin="10,0,0,0" Height="30" RenderTransformOrigin="0.594,0.542" Text="0.00"/>
         </StackPanel>
 
 
-        <StackPanel Grid.Column="1" Margin="22,254,10,10" Grid.Row="3" Grid.RowSpan="2">
+        <StackPanel Grid.Column="1" Margin="53,254,22,10" Grid.Row="3" Grid.RowSpan="2">
             <!-- Toggle Button -->
             <Button Content="..." Click="ToggleFields_Click" Margin="0,0,0,10" Width="54" HorizontalAlignment="Left" Background="White"/>
 

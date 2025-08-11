@@ -24,6 +24,9 @@ namespace FlexMold.MVVM.View.Accounts
             InitializeComponent();
         }
 
-       
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

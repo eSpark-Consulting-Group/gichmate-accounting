@@ -7,6 +7,8 @@
              xmlns:local="clr-namespace:FlexMold.MVVM.View.Accounts"
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
              x:Class="FlexMold.MVVM.View.Accounts.DebitNoteView"
+             BorderThickness="7" 
+             BorderBrush="White"
              Height="900" Width="1123">
 
     <UserControl.Background>
@@ -143,39 +145,39 @@
             Height="26" Margin="802,107,0,0" FontSize="15"
             Grid.Row="3" TextWrapping="Wrap" FontWeight="Bold"
             Text="0.00" VerticalAlignment="Top" Width="68" Grid.Column="1"/>
-        <StackPanel Orientation="Horizontal" Margin="127,135,78,225" Grid.Row="3">
+        <StackPanel Orientation="Horizontal" Margin="127,135,57,217" Grid.Row="3">
             <TextBlock Text="Voucher No : " VerticalAlignment="Center" FontSize="15" FontWeight="Bold" Foreground="White"/>
-            <mah:NumericUpDown Height="33" Width="300"
+            <mah:NumericUpDown Height="33" Width="267"
                                Maximum="9999"
                                Minimum="0"/>
 
         </StackPanel>
-        <StackPanel Orientation="Horizontal" Margin="108,192,70,178" Grid.Row="3">
+        <StackPanel Orientation="Horizontal" Margin="108,192,40,170" Grid.Row="3">
             <TextBlock Text="Party/Supplier :" FontWeight="Bold" VerticalAlignment="Center" FontSize="15" Foreground="White"/>
-            <ComboBox Width="300" Margin="10,0,0,0" Height="27" RenderTransformOrigin="0.594,0.542">
+            <ComboBox Width="267" Margin="10,0,0,0" Height="27" RenderTransformOrigin="0.594,0.542">
                 <ComboBoxItem Content="Sample Suppliers"/>
                 <ComboBoxItem Content="Supplier 1"/>
                 <ComboBoxItem Content="eSpark"/>
             </ComboBox>
         </StackPanel>
-        <StackPanel Orientation="Horizontal" Margin="106,242,81,138" Grid.Row="3">
+        <StackPanel Orientation="Horizontal" Margin="106,240,55,124" Grid.Row="3">
             <TextBlock Text="Account Name :" FontWeight="Bold" VerticalAlignment="Center" FontSize="15" Foreground="White"/>
-            <ComboBox Width="300" Margin="10,0,0,0" Height="27" RenderTransformOrigin="0.594,0.542">
+            <ComboBox Width="268" Margin="10,0,0,0" Height="27" RenderTransformOrigin="0.594,0.542">
                 <ComboBoxItem Content="Admin"/>
                 <ComboBoxItem Content="Office"/>
                 <ComboBoxItem Content="ALL"/>
             </ComboBox>
         </StackPanel>
-        <StackPanel Orientation="Horizontal" Margin="144,282,79,91" Grid.Row="3">
+        <StackPanel Orientation="Horizontal" Margin="142,282,65,81" Grid.Row="3">
             <TextBlock Text="Narration :" FontWeight="Bold" VerticalAlignment="Center" FontSize="15" Foreground="White"/>
-            <TextBox Width="300" Margin="10,0,0,0" Height="27" RenderTransformOrigin="0.594,0.542"/>
+            <TextBox Width="268" Margin="10,0,0,0" Height="12" RenderTransformOrigin="0.594,0.542"/>
         </StackPanel>
         <TextBlock HorizontalAlignment="Left" 
                    Height="36" Margin="0,-12,0,0" 
                    TextWrapping="Wrap" FontSize="24"
                    Text="Debit Note" Foreground="White" FontWeight="Bold"
                    VerticalAlignment="Top" Width="194"/>
-        <StackPanel Orientation="Horizontal" Margin="6,141,106,232" Grid.Row="3" Grid.Column="1">
+        <StackPanel Orientation="Horizontal" Margin="6,141,91,225" Grid.Row="3" Grid.Column="1">
             <TextBlock Text="Date :" FontWeight="Bold" VerticalAlignment="Center" FontSize="15" Foreground="White"/>
             <DatePicker Width="300" Margin="10,0,0,0" Height="27" RenderTransformOrigin="0.594,0.542"/>
         </StackPanel>
@@ -193,7 +195,7 @@
             TextWrapping="Wrap" FontSize="20"
             Text="Search" Foreground="White" FontWeight="Light"
             VerticalAlignment="Top" Width="194" Grid.Row="2"/>
-        <StackPanel Orientation="Horizontal" Margin="595,188,130,183" Grid.Row="3" Grid.ColumnSpan="2">
+        <StackPanel Orientation="Horizontal" Margin="586,188,105,178" Grid.Row="3" Grid.ColumnSpan="2">
             <TextBlock Text="Amount :" FontWeight="Bold" VerticalAlignment="Center" FontSize="15" Foreground="White"/>
             <TextBox Width="300" Margin="10,0,0,0" Height="27" RenderTransformOrigin="0.594,0.542" Text="0.00"/>
             <TextBlock Margin="40,0,0,0" Width="50" Foreground="White" Text="{Binding DebitNotes.Count}" />
@@ -201,7 +203,7 @@
         </StackPanel>
 
 
-        <StackPanel Grid.Column="1" Margin="22,254,10,10" Grid.Row="3" Grid.RowSpan="2">
+        <StackPanel Grid.Column="1" Margin="61,254,22,10" Grid.Row="3" Grid.RowSpan="2">
             <!-- Toggle Button -->
             <Button Content="..." Click="ToggleFields_Click" Margin="0,0,0,10" Width="54" HorizontalAlignment="Left" Background="White"/>
 
