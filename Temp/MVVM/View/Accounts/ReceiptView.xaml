@@ -6,9 +6,9 @@
              xmlns:local="clr-namespace:FlexMold.MVVM.View.Accounts"
              xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
              mc:Ignorable="d"            
-             BorderThickness="7" 
+             BorderThickness="3" 
              BorderBrush="White"
-             Height="900" Width="1400">
+             Height="907" Width="1400">
 
     <UserControl.Background>
         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -62,7 +62,8 @@
             <DatePicker Width="350" Height="40" VerticalAlignment="Center" VerticalContentAlignment="Center" FontSize="20" Margin="15,0,0,0"/>
 
             <Label Content="Narration"
-                   Margin="20,0,0,0"/>
+                   Margin="20,0,0,0"
+                   VerticalAlignment="Center"/>
 
             <TextBox Text="..."
                      Width="350"
@@ -128,7 +129,7 @@
             <TextBox Text="0.00" Width="200" Height="40" VerticalAlignment="Center" VerticalContentAlignment="Center"/>
         </StackPanel>
 
-        <StackPanel Grid.Row="6" Orientation="Horizontal" VerticalAlignment="Center">
+        <StackPanel Grid.Row="6" Orientation="Horizontal" VerticalAlignment="Center" Height="56">
             <Label Content="Total Card :" VerticalAlignment="Center"/>
             <TextBox Text="0.00" Width="200" Height="40" VerticalAlignment="Center" VerticalContentAlignment="Center"/>
 
@@ -136,7 +137,7 @@
             <TextBox Text="0.00" Width="200" Height="40" VerticalAlignment="Center" VerticalContentAlignment="Center"/>
 
             <Label Content="Total Amount :" VerticalAlignment="Center" Margin="20,0,0,0"/>
-            <TextBox Text="0.00" Width="200" Height="40" VerticalAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Text="0.00" Width="200" Height="42" VerticalAlignment="Center" VerticalContentAlignment="Center"/>
 
             <Button Height="40" Width="100" Content="Save"  Margin="100,0,0,0" VerticalAlignment="Center" Background="#FF6F0404" Foreground="White">
                 <Button.Effect>

@@ -1,38 +1,99 @@
-﻿<UserControl x:Class="FlexMold.MVVM.View.Accounts.BankReconciliationView"
+﻿<!-- BankReconciliationView.xaml -->
+<UserControl x:Class="FlexMold.MVVM.View.Accounts.BankReconciliationView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:FlexMold.MVVM.View.Accounts" 
              xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
-             BorderThickness="7" 
+             BorderThickness="3" 
              BorderBrush="White"
              mc:Ignorable="d" 
              Height="850" Width="1300">
 
+
+
+    <Control.Resources>
+        <Style TargetType="Button" x:Key="AnimatedRedButton">
+            <Setter Property="Width" Value="70"/>
+            <Setter Property="Height" Value="35"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Background" Value="#FF6F0404"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+          CornerRadius="5"
+          SnapsToDevicePixels="True">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Trigger.EnterActions>
+                                    <BeginStoryboard>
+                                        <Storyboard>
+                                            <ColorAnimation To="#FFAA0000"
+                                      Duration="0:0:0.3"
+                                      Storyboard.TargetProperty="(Background).(SolidColorBrush.Color)"/>
+                                            <DoubleAnimation To="1.2"
+                                       Duration="0:0:0.3"
+                                       Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleX)"/>
+                                            <DoubleAnimation To="1.2"
+                                       Duration="0:0:0.3"
+                                       Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleY)"/>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </Trigger.EnterActions>
+                                <Trigger.ExitActions>
+                                    <BeginStoryboard>
+                                        <Storyboard>
+                                            <ColorAnimation To="#FF6F0404"
+                                      Duration="0:0:0.3"
+                                      Storyboard.TargetProperty="(Background).(SolidColorBrush.Color)"/>
+                                            <DoubleAnimation To="1.0"
+                                       Duration="0:0:0.3"
+                                       Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleX)"/>
+                                            <DoubleAnimation To="1.0"
+                                       Duration="0:0:0.3"
+                                       Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleY)"/>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </Trigger.ExitActions>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="RenderTransformOrigin" Value="0.5,0.5"/>
+            <Setter Property="RenderTransform">
+                <Setter.Value>
+                    <ScaleTransform ScaleX="1" ScaleY="1"/>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect BlurRadius="5" ShadowDepth="9" Color="White" Opacity="0.7"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+    </Control.Resources>
+
+
     <Control.Background>
-        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-            <GradientStop Color="#FFEE4540"/>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#FFEE4540" Offset="0"/>
+            <GradientStop Color="#FFC72C41" Offset="0.2"/>
+            <GradientStop Color="#FF801336" Offset="0.4"/>
+            <GradientStop Color="#FF670E33" Offset="0.6"/>
+            <GradientStop Color="#FF510A32" Offset="0.8"/>
             <GradientStop Color="#FF2D142C" Offset="1"/>
-            <GradientStop Color="#FF510A32" Offset="0.565"/>
-            <GradientStop Color="#FFC72C41" Offset="0.157"/>
-            <GradientStop Color="#FF801336" Offset="0.365"/>
-            <GradientStop Color="#FF670E33" Offset="0.426"/>
         </LinearGradientBrush>
     </Control.Background>
 
-
     <Grid Margin="10,20,0,10">
-        <Grid.Background>
-            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                <GradientStop Color="#FFEE4540"/>
-                <GradientStop Color="#FF2D142C" Offset="1"/>
-                <GradientStop Color="#FF510A32" Offset="0.565"/>
-                <GradientStop Color="#FFC72C41" Offset="0.157"/>
-                <GradientStop Color="#FF801336" Offset="0.365"/>
-                <GradientStop Color="#FF670E33" Offset="0.426"/>
-            </LinearGradientBrush>
-        </Grid.Background>
 
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
@@ -41,65 +102,84 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <DataGrid Grid.Row="2"
-                  AutoGenerateColumns="False"
-                  HeadersVisibility="All"
-                  CanUserAddRows="False"
-                  CanUserDeleteRows="False"
-                  FontSize="15"
-                  FontWeight="ExtraBold"
-                  Margin="-14,0,0,106" RenderTransformOrigin="0.499,0.42" >
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="SL" Width="50" Binding="{Binding }"/>
-                <DataGridTextColumn Header="Invoice No" Width="120" Binding="{Binding }"/>
-                <DataGridTextColumn Header="Invoice Type" Width="160" Binding="{Binding }"/>
-                <DataGridTextColumn Header="Particulars" Width="170" Binding="{Binding }"/>
-                <DataGridTextColumn Header="Invoice Date" Width="130" Binding="{Binding }"/>
-                <DataGridTextColumn Header="Bank Date " Width="130" Binding="{Binding}" />
-                <DataGridTextColumn Header="Debit" Width="150" Binding="{Binding}" />
-                <DataGridTextColumn Header="Credit" Width="150" Binding="{Binding}" />
-                <DataGridTextColumn Header="Remarks" Width="*" Binding="{Binding}" />
-            </DataGrid.Columns>
-        </DataGrid>
-        <TextBlock
+        <!-- Title -->
+        <TextBlock Grid.Row="0"
                    HorizontalAlignment="Left" 
-                   Height="62" 
-                   TextWrapping="Wrap" FontSize="35"
+                   Height="40" 
+                   TextWrapping="Wrap" FontSize="30"
                    Text="Bank Reconciliation" Foreground="White" FontWeight="Bold" 
                    VerticalAlignment="Center" Width="336"/>
 
-        <Button Grid.Row="2" Content="Update" FontSize="20"
-                Margin="1067,590,106,21"
-                Background="#FF6F0404" Foreground="White">
+        <!-- Filter Row -->
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Grid.ColumnSpan="3">
+            <Label Content="Bank Account : " VerticalAlignment="Center"/>
+            <ComboBox x:Name="cmbBankAccount"
+                      VerticalAlignment="Center" Width="300" Height="40" VerticalContentAlignment="Center"/>
+
+            <Label Content="Date: " 
+                   VerticalAlignment="Center" 
+                   Margin="50,0,0,0"/>
+            <DatePicker x:Name="dpDate"
+                        VerticalAlignment="Center" 
+                        Width="300" Height="40" 
+                        VerticalContentAlignment="Center"/>
+
+            <Button x:Name="btnLoad"
+                    Style="{StaticResource AnimatedRedButton}" 
+                    VerticalAlignment="Center" Width="120" Height="40" Margin="50,0,0,0" 
+                    Foreground="White"                  
+                    Content="Load"
+                    Background="#FF6F0404"
+                    FontSize="20"
+                    Click="btnLoad_Click">
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+            </Button>
+        </StackPanel>
+
+        <DataGrid x:Name="dgBankReconciliation"
+          Grid.Row="2"
+          AutoGenerateColumns="False"
+          HeadersVisibility="All"
+          CanUserAddRows="False"
+          CanUserDeleteRows="False"
+          FontSize="14"
+          FontWeight="ExtraBold"
+          Margin="0,0,0,60"
+          IsReadOnly="False">
+            <DataGrid.Columns>
+                <!-- Hidden column for VchrId -->
+                <DataGridTextColumn Header="VchrId" Binding="{Binding VchrId}" Visibility="Collapsed"/>
+                <DataGridTextColumn Header="SL" Width="40" Binding="{Binding SL}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="INV No" Width="80" Binding="{Binding InvoiceNo}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Invoice Type" Width="140" Binding="{Binding InvoiceType}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Particulars" Width="170" Binding="{Binding Particulars}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Invoice Date" Width="170" Binding="{Binding InvoiceDate, StringFormat=d}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Bank Date" Width="130" 
+                            Binding="{Binding BankDate, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <DataGridTextColumn Header="Debit" Width="150" Binding="{Binding Debit}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Credit" Width="150" Binding="{Binding Credit}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Remarks" Width="*" Binding="{Binding Remarks}" IsReadOnly="True"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+
+
+        <!-- Update Button -->
+        <Button x:Name="btnUpdate"
+                Style="{StaticResource AnimatedRedButton}" 
+                Width="NaN" Height="NaN"
+                Grid.Row="2" 
+                Content="Update" 
+                FontSize="20"
+                Margin="1067,590,84,21"
+                Background="#FF6F0404" Foreground="White"
+                Click="btnUpdate_Click">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-
-        <StackPanel Grid.Row="1" Orientation="Horizontal" Grid.ColumnSpan="3" >
-            <Label Content="Bank Account : " VerticalAlignment="Center"/>
-            <ComboBox VerticalAlignment="Center" Width="300" Height="40" VerticalContentAlignment="Center">
-                <ComboBoxItem Content="Bank Account"/>
-            </ComboBox>
-        </StackPanel>
-
-        <StackPanel Grid.Row="1" Orientation="Horizontal" Grid.ColumnSpan="3">
-            <Label Content="Date: " VerticalAlignment="Center" Margin="550,0,0,0"/>
-            <DatePicker VerticalAlignment="Center" Width="300" Height="40" VerticalContentAlignment="center"/>
-        </StackPanel>
-
-        <StackPanel Grid.Row="1" Orientation="Horizontal" Grid.ColumnSpan="3">
-            <Button VerticalAlignment="Center" Width="120" Height="40" Margin="1050,0,0,0" 
-                    Foreground="White"                  
-                    Content="Load"
-                    Background="#FF6F0404"
-                    FontSize="20">
-                <Button.Effect>
-                    <DropShadowEffect/>
-                </Button.Effect>
-
-            </Button>
-        </StackPanel>
 
     </Grid>
 </UserControl>

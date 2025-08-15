@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:FlexMold.MVVM.View.Accounts"
              xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"        
              mc:Ignorable="d"
-             BorderThickness="7" 
+             BorderThickness="3" 
              BorderBrush="White"
              Height="900" Width="1473">
 

@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:FlexMold.MVVM.View.Accounts"
              mc:Ignorable="d" 
-             BorderThickness="7" 
+             BorderThickness="3" 
              BorderBrush="White"
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
              Height="900" Width="1123">
@@ -92,9 +92,9 @@
             Height="26" Margin="802,107,0,0" FontSize="15"
             Grid.Row="3" TextWrapping="Wrap" FontWeight="Bold"
             Text="0.00" VerticalAlignment="Top" Width="68" Grid.Column="1"/>
-        <StackPanel Orientation="Horizontal" Margin="127,135,78,217" Grid.Row="3">
+        <StackPanel Orientation="Horizontal" Margin="127,135,54,217" Grid.Row="3">
             <TextBlock Text="Voucher No : " VerticalAlignment="Center" FontSize="15" FontWeight="Bold" Foreground="White"/>
-            <mah:NumericUpDown Height="33" Width="300"
+            <mah:NumericUpDown Height="33" Width="302"
                                Maximum="9999"
                                Minimum="0"/>
 
@@ -115,9 +115,9 @@
                 <ComboBoxItem Content="ALL"/>
             </ComboBox>
         </StackPanel>
-        <StackPanel Orientation="Horizontal" Margin="141,282,55,70" Grid.Row="3">
+        <StackPanel Orientation="Horizontal" Margin="140,277,57,75" Grid.Row="3">
             <TextBlock Text="Narration :" FontWeight="Bold" VerticalAlignment="Center" FontSize="15" Foreground="White"/>
-            <TextBox Width="300" Margin="10,0,0,0" Height="5" RenderTransformOrigin="0.594,0.542"/>
+            <TextBox Width="302" Margin="10,0,0,0" Height="5" RenderTransformOrigin="0.594,0.542"/>
         </StackPanel>
         
         
