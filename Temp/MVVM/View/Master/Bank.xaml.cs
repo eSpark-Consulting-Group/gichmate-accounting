@@ -203,7 +203,8 @@ namespace FlexMold.MVVM.View.Master
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            // Empty implementation
+            var searchAccountsGroup = new AccountsGroup();
+            searchAccountsGroup.Show();
         }
 
         private void SearchButton_Click(object sender, RoutedEventArgs e)

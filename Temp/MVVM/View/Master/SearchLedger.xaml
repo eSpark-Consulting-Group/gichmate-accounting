@@ -9,6 +9,7 @@
         BorderBrush="Black"
         BorderThickness="3"
         Title="SearchLedger" Height="500" Width="800">
+    
     <Grid>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -42,6 +43,7 @@
                      Height="30"
                      VerticalContentAlignment="Center"/>
         </StackPanel>
+        
 
         <StackPanel Grid.Row="3">
             <DataGrid x:Name="SearchLedgerDataGrid"
@@ -58,6 +60,7 @@
             </DataGrid>
         </StackPanel>
 
+        
         <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,30,0" VerticalAlignment="Center">
             <Button Content="Select"
                     FontSize="14"

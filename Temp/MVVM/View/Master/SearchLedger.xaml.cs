@@ -120,7 +120,7 @@ namespace FlexMold.MVVM.View.Master
                         }
 
                         MessageBox.Show("Account deleted successfully.", "Deleted", MessageBoxButton.OK, MessageBoxImage.Information);
-                        LoadLedgerAccounts(); // Refresh the grid
+                        LoadLedgerAccounts(); 
                     }
                     catch (Exception ex)
                     {
