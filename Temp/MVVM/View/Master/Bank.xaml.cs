@@ -136,38 +136,6 @@ namespace FlexMold.MVVM.View.Master
             }
         }
 
-        private void DeleteButton_Click(object sender, RoutedEventArgs e)
-        {
-            if (currentAccountId == null)
-            {
-                MessageBox.Show("No account selected");
-                return;
-            }
-
-            if (MessageBox.Show("Are you sure you want to delete this account?",
-                "Confirm Delete", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
-            {
-                try
-                {
-                    using (SqlConnection conn = new SqlConnection(connectionString))
-                    {
-                        conn.Open();
-                        SqlCommand cmd = new SqlCommand(
-                            "DELETE FROM Account WHERE AccountId = @AccountId", conn);
-                        cmd.Parameters.AddWithValue("@AccountId", currentAccountId);
-                        cmd.ExecuteNonQuery();
-                        MessageBox.Show("Account deleted successfully");
-                        ClearForm();
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Error deleting account: {ex.Message}");
-                }
-            }
-        }
-
-
         private void NewButton_Click(object sender, RoutedEventArgs e)
         {
             ClearForm();

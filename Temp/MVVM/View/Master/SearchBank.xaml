@@ -9,6 +9,7 @@
         BorderBrush="Black"
         BorderThickness="3"
         Title="SearchBank" Height="500" Width="950">
+    
     <Grid>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">

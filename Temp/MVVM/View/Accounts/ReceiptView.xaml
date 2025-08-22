@@ -94,6 +94,7 @@
                      Width="100" 
                      Margin="100,0,0,10"
                      Foreground="white" 
+                     Style="{StaticResource AnimatedRedButton}"
                      Background="#FF6F0404">
                 <Button.Effect>
                     <DropShadowEffect/>
@@ -120,6 +121,7 @@
                 </DataGrid.Columns>
             </DataGrid>
         </StackPanel>
+        
 
         <StackPanel Grid.Row="5" Orientation="Horizontal" VerticalAlignment="Center">
             <Label Content="Total Cash :" VerticalAlignment="Center"/>
@@ -139,15 +141,30 @@
             <Label Content="Total Amount :" VerticalAlignment="Center" Margin="20,0,0,0"/>
             <TextBox Text="0.00" Width="200" Height="42" VerticalAlignment="Center" VerticalContentAlignment="Center"/>
 
-            <Button Height="40" Width="100" Content="Save"  Margin="100,0,0,0" VerticalAlignment="Center" Background="#FF6F0404" Foreground="White">
-                <Button.Effect>
-                    <DropShadowEffect/>
-                </Button.Effect>
+            
+            <Button Height="40" 
+                    Width="100" 
+                    Content="Save"  
+                    FontSize="20"
+                    Margin="100,0,0,0"
+                    VerticalAlignment="Center" 
+                    Background="#FF6F0404" 
+                    Foreground="White"
+                    Style="{StaticResource AnimatedRedButton}">
+                
             </Button>
-            <Button Height="40" Width="100" Content="Clear" Margin="20,0,0,0" VerticalAlignment="Center" Background="#FF6F0404" Foreground="White">
-                <Button.Effect>
-                    <DropShadowEffect/>
-                </Button.Effect>
+            
+            
+            <Button Height="40" 
+                    Width="100" 
+                    Content="Clear" 
+                    Margin="20,0,0,0"
+                    FontSize="20"
+                    Style="{StaticResource AnimatedRedButton}"
+                    VerticalAlignment="Center" 
+                    Background="#FF6F0404" 
+                    Foreground="White">
+               
             </Button>
         </StackPanel>
 

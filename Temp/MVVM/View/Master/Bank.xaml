@@ -385,11 +385,6 @@
                     Style="{StaticResource AnimatedRedButton}"
                     Click="SaveButton_Click"/>
 
-            <Button Content="Delete"
-                    FontSize="14" 
-                    Style="{StaticResource AnimatedRedButton}"
-                    Click="DeleteButton_Click"/>
-
             <Button Content="New"
                     FontSize="14"
                     Style="{StaticResource AnimatedRedButton}"

@@ -4,11 +4,11 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:FlexMold.MVVM.View.Accounts"
+             xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
              mc:Ignorable="d" 
              BorderThickness="3" 
              BorderBrush="White"
-             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
-             Height="900" Width="1123">
+             Height="902" Width="1123">
 
     <UserControl.Background>
         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -21,24 +21,12 @@
         </LinearGradientBrush>
     </UserControl.Background>
 
-
-    <Grid Margin="10,20,0,10">
+    <Grid Margin="10,20,0,19">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="613*"/>
             <ColumnDefinition Width="501*"/>
         </Grid.ColumnDefinitions>
-        <Grid.Background>
-            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                <GradientStop Color="#FFEE4540"/>
-                <GradientStop Color="#FF2D142C" Offset="1"/>
-                <GradientStop Color="#FF510A32" Offset="0.565"/>
-                <GradientStop Color="#FFC72C41" Offset="0.157"/>
-                <GradientStop Color="#FF801336" Offset="0.365"/>
-                <GradientStop Color="#FF670E33" Offset="0.426"/>
-            </LinearGradientBrush>
-        </Grid.Background>
         <Grid.RowDefinitions>
-
             <RowDefinition Height="Auto" MinHeight="28"/>
             <RowDefinition Height="Auto" MinHeight="0"/>
             <RowDefinition Height="200*"/>
@@ -46,142 +34,85 @@
             <RowDefinition Height="Auto" MinHeight="39.62"/>
         </Grid.RowDefinitions>
 
-
-        <DataGrid Grid.Row="2"
-                  AutoGenerateColumns="False"
-                  HeadersVisibility="Column"
-                  CanUserAddRows="False"
-                  CanUserDeleteRows="False"
-                  Margin="22,44,22,321" RenderTransformOrigin="0.499,0.42" Grid.ColumnSpan="2" Grid.RowSpan="2">
+        <DataGrid x:Name="dgVouchers" Grid.Row="2" Grid.ColumnSpan="2" Grid.RowSpan="2"
+                  AutoGenerateColumns="False" HeadersVisibility="Column"
+                  CanUserAddRows="False" CanUserDeleteRows="False"
+                  Margin="22,44,22,321" SelectionChanged="dgVouchers_SelectionChanged">
             <DataGrid.Columns>
-                <DataGridCheckBoxColumn Header="SL" Width="50" Binding="{Binding SL}"/>
-                <DataGridTextColumn Header="Voucher No" Width="120" Binding="{Binding VoucherNo}"/>
-                <DataGridTextColumn Header="Date" Width="110" Binding="{Binding Date}"/>
-                <DataGridTextColumn Header="Account Name" Width="160" Binding="{Binding PartyAccount}"/>
-                <DataGridTextColumn Header="Party/Supplier" Width="150" Binding="{Binding Amount}"/>
-                <DataGridTextColumn Header="Amount" Width="110" Binding="{Binding Delete}"/>
-                <DataGridTextColumn Header="Narration" Width="*" Binding="{Binding}" />
+                <DataGridTextColumn Header="SL" Width="50" Binding="{Binding SL}"/>
+                <DataGridTextColumn Header="Voucher No" Width="120" Binding="{Binding VchrNo}"/>
+                <DataGridTextColumn Header="Date" Width="110" Binding="{Binding VchrDate, StringFormat=dd-MM-yyyy}"/>
+                <DataGridTextColumn Header="Party Account" Width="160" Binding="{Binding PartyAccountName}"/>
+                <DataGridTextColumn Header="Credit Account" Width="150" Binding="{Binding CreditAccountName}"/>
+                <DataGridTextColumn Header="Amount" Width="110" Binding="{Binding VchrAmount, StringFormat=N2}"/>
+                <DataGridTextColumn Header="Narration" Width="*" Binding="{Binding Narration}"/>
             </DataGrid.Columns>
         </DataGrid>
 
-
         <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Left" Margin="188,3,0,-2" Width="360">
-            <Button Content="Save" Width="80" Margin="5" Background="#FF6F0404" Foreground="White">
+            <Button x:Name="btnSave" Content="Save" Width="80" Margin="5" Background="#FF6F0404" Foreground="White" Click="btnSave_Click">
                 <Button.Effect>
                     <DropShadowEffect/>
                 </Button.Effect>
             </Button>
-            <Button Content="Edit" Width="80" Margin="5" Background="#FF6F0404" Foreground="White">
+            <Button x:Name="btnEdit" Content="Edit" Width="80" Margin="5" Background="#FF6F0404" Foreground="White" Click="btnEdit_Click">
                 <Button.Effect>
                     <DropShadowEffect/>
                 </Button.Effect>
             </Button>
-            <Button Content="Delete" Width="80" Margin="5" Background="#FF6F0404" Foreground="White" >
+            <Button x:Name="btnDelete" Content="Delete" Width="80" Margin="5" Background="#FF6F0404" Foreground="White" Click="btnDelete_Click">
                 <Button.Effect>
                     <DropShadowEffect/>
                 </Button.Effect>
             </Button>
-            <Button Content="Clear" Width="80" Margin="5" Background="#FF6F0404" Foreground="White">
+            <Button x:Name="btnClear" Content="Clear" Width="80" Margin="5" Background="#FF6F0404" Foreground="White" Click="btnClear_Click">
                 <Button.Effect>
                     <DropShadowEffect/>
                 </Button.Effect>
             </Button>
         </StackPanel>
+
         <Border BorderBrush="White" BorderThickness="4" Margin="-10,-20,0,4" Grid.ColumnSpan="2" />
-        <TextBlock HorizontalAlignment="Left" Foreground="White"
-            Height="26" Margin="802,107,0,0" FontSize="15"
-            Grid.Row="3" TextWrapping="Wrap" FontWeight="Bold"
-            Text="0.00" VerticalAlignment="Top" Width="68" Grid.Column="1"/>
+
         <StackPanel Orientation="Horizontal" Margin="127,135,54,217" Grid.Row="3">
             <TextBlock Text="Voucher No : " VerticalAlignment="Center" FontSize="15" FontWeight="Bold" Foreground="White"/>
-            <mah:NumericUpDown Height="33" Width="302"
-                               Maximum="9999"
-                               Minimum="0"/>
-
+            <TextBox x:Name="txtVoucherNo" Height="33" Width="302" IsReadOnly="True"/>
         </StackPanel>
+
         <StackPanel Orientation="Horizontal" Margin="108,192,70,178" Grid.Row="3">
             <TextBlock Text="Party/Supplier :" FontWeight="Bold" VerticalAlignment="Center" FontSize="15" Foreground="White"/>
-            <ComboBox Width="300" Margin="10,0,0,0" Height="27" RenderTransformOrigin="0.594,0.542">
-                <ComboBoxItem Content="Sample Suppliers"/>
-                <ComboBoxItem Content="Supplier 1"/>
-                <ComboBoxItem Content="eSpark"/>
-            </ComboBox>
+            <ComboBox x:Name="cmbPartyAccount" Width="300" Margin="10,0,0,0" Height="27" DisplayMemberPath="AccountName" SelectedValuePath="AccountId"/>
         </StackPanel>
+
         <StackPanel Orientation="Horizontal" Margin="106,236,61,128" Grid.Row="3">
             <TextBlock Text="Account Name :" FontWeight="Bold" VerticalAlignment="Center" FontSize="15" Foreground="White"/>
-            <ComboBox Width="300" Margin="10,0,0,0" Height="27" RenderTransformOrigin="0.594,0.542">
-                <ComboBoxItem Content="Admin"/>
-                <ComboBoxItem Content="Office"/>
-                <ComboBoxItem Content="ALL"/>
-            </ComboBox>
+            <ComboBox x:Name="cmbCreditAccount" Width="300" Margin="10,0,0,0" Height="27" DisplayMemberPath="AccountName" SelectedValuePath="AccountId"/>
         </StackPanel>
+
         <StackPanel Orientation="Horizontal" Margin="140,277,57,75" Grid.Row="3">
             <TextBlock Text="Narration :" FontWeight="Bold" VerticalAlignment="Center" FontSize="15" Foreground="White"/>
-            <TextBox Width="302" Margin="10,0,0,0" Height="5" RenderTransformOrigin="0.594,0.542"/>
+            <TextBox x:Name="txtNarration" Width="302" Margin="10,0,0,0" Height="30"/>
         </StackPanel>
-        
-        
-        <TextBlock HorizontalAlignment="Left" 
-                   Height="36" Margin="0,-12,0,0" 
-                   TextWrapping="Wrap" FontSize="24"
-                   Text="Credit Note" Foreground="White" FontWeight="Bold"
-                   VerticalAlignment="Top" Width="194"/>
-        
-        
+
+        <TextBlock HorizontalAlignment="Left" Height="36" Margin="0,-12,0,0" 
+                   TextWrapping="Wrap" FontSize="24" Text="Credit Note" 
+                   Foreground="White" FontWeight="Bold" VerticalAlignment="Top" Width="194"/>
+
         <StackPanel Orientation="Horizontal" Margin="6,141,112,225" Grid.Row="3" Grid.Column="1">
             <TextBlock Text="Date :" FontWeight="Bold" VerticalAlignment="Center" FontSize="15" Foreground="White"/>
-            <DatePicker Width="300" Margin="10,0,0,0" Height="27" RenderTransformOrigin="0.594,0.542"/>
+            <DatePicker x:Name="dtpDate" Width="300" Margin="10,0,0,0" Height="27"/>
         </StackPanel>
-        <StackPanel Orientation="Horizontal" Margin="506,183,181,219" Grid.Row="3" Grid.ColumnSpan="2">
-            <TextBlock Text="Cash Account :" FontWeight="Bold" VerticalAlignment="Center" FontSize="15" Foreground="White"/>
-            <ComboBox Width="300" Margin="10,0,0,0" Height="27" RenderTransformOrigin="0.594,0.542">
-                <ComboBoxItem Content="Admin"/>
-                <ComboBoxItem Content="Office"/>
-                <ComboBoxItem Content="ALL"/>
-            </ComboBox>
-        </StackPanel>
-        <Border BorderBrush="white" BorderThickness="4" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="3" Margin="106,107,0,0" Grid.Row="3" VerticalAlignment="Top" Width="900"/>
-        <TextBlock HorizontalAlignment="Left" 
-            Height="25" Margin="22,17,0,0" 
-            TextWrapping="Wrap" FontSize="20"
-            Text="Search" Foreground="White" FontWeight="Light"
-            VerticalAlignment="Top" Width="194" Grid.Row="2"/>
+
         <StackPanel Orientation="Horizontal" Margin="586,188,93,170" Grid.Row="3" Grid.ColumnSpan="2">
             <TextBlock Text="Amount :" FontWeight="Bold" VerticalAlignment="Center" FontSize="15" Foreground="White"/>
-            <TextBox Width="300" Margin="10,0,0,0" Height="30" RenderTransformOrigin="0.594,0.542" Text="0.00"/>
+            <TextBox x:Name="txtAmount" Width="300" Margin="10,0,0,0" Height="30" Text="0.00"/>
         </StackPanel>
 
+        <Border BorderBrush="white" BorderThickness="4" Grid.ColumnSpan="2" HorizontalAlignment="Left" 
+                Height="3" Margin="106,107,0,0" Grid.Row="3" VerticalAlignment="Top" Width="900"/>
 
-        <StackPanel Grid.Column="1" Margin="53,254,22,10" Grid.Row="3" Grid.RowSpan="2">
-            <!-- Toggle Button -->
-            <Button Content="..." Click="ToggleFields_Click" Margin="0,0,0,10" Width="54" HorizontalAlignment="Left" Background="White"/>
-
-            <!-- Field Container -->
-            <StackPanel Name="FieldContainer" Visibility="Collapsed">
-                <!-- Account Group -->
-                <StackPanel Orientation="Horizontal" Margin="5">
-                    <Label Content="Account Group:" Width="120" VerticalAlignment="Center"/>
-                    <TextBox Name="AccountGroupTextBox" Width="150"/>
-                </StackPanel>
-
-                <!-- Account -->
-                <StackPanel Orientation="Horizontal" Margin="5">
-                    <Label Content="Account:" Width="120" VerticalAlignment="Center"/>
-                    <TextBox Name="AccountTextBox" Width="150"/>
-                </StackPanel>
-            </StackPanel>
-        </StackPanel>
-
-        <!--<CheckBox Grid.Column="1" Content="" 
-                  HorizontalAlignment="Left" 
-                  Height="37" 
-                  Margin="58,237,0,0"
-                  Grid.Row="3"
-
-
-                  BorderThickness="1"
-                  VerticalAlignment="Top" 
-                  Width="54"/>-->
+        <TextBlock HorizontalAlignment="Left" Height="25" Margin="22,17,0,0" 
+                   TextWrapping="Wrap" FontSize="20" Text="Search" 
+                   Foreground="White" FontWeight="Light" VerticalAlignment="Top" Width="194" Grid.Row="2"/>
     </Grid>
 </UserControl>
-
