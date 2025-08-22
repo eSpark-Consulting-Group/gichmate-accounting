@@ -52,7 +52,7 @@
                     Grid.Row="1" 
                     Grid.RowSpan="6" Margin="0,0,0,1"
                     >
-            <Border BorderThickness="1000">
+            <Border BorderThickness="1000" Height="530">
                 <Border.BorderBrush>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="#FF5B0000" Offset="0"/>
@@ -187,10 +187,6 @@
                     FontSize="14" 
                     Click="SaveButton_Click"
                     Style="{StaticResource AnimatedRedButton}"/>
-
-            <Button x:Name="DeleteButton" Content="Delete"
-                    FontSize="14" 
-                    Style="{StaticResource AnimatedRedButton}" Click="DeleteButton_Click"/>
 
             <Button Content="New"
                     FontSize="14"

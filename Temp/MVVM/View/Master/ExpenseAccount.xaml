@@ -52,7 +52,7 @@
                     Grid.Row="1" 
                     Grid.RowSpan="6" Margin="0,0,0,1"
                     >
-            <Border BorderThickness="1000">
+            <Border BorderThickness="1000" Height="527">
                 <Border.BorderBrush>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="#FF5B0000" Offset="0"/>
@@ -193,15 +193,7 @@
 
             <Button x:Name="NewButton" Content="New"
                     FontSize="14"
-                    Style="{StaticResource AnimatedRedButton}" RenderTransformOrigin="0.5,0.5" Click="NewButton_Click">
-                <Button.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform Angle="1.096"/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </Button.RenderTransform>
+                    Style="{StaticResource AnimatedRedButton}" Click="NewButton_Click" Height="35" Width="70">
             </Button>
 
             <Button Content="Search"

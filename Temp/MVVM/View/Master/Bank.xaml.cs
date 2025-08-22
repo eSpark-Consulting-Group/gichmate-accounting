@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Data;
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -9,7 +9,7 @@ namespace FlexMold.MVVM.View.Master
     public partial class Bank : Window
     {
         private int? currentAccountId = null;
-        private string connectionString = "Your_Connection_String_Here";
+        private string connectionString = "Server=DESKTOP-E09TG4T;Database=PSVAT5;Trusted_Connection=True; TrustServerCertificate=True;";
 
         public Bank()
         {
@@ -22,6 +22,9 @@ namespace FlexMold.MVVM.View.Master
         {
             try
             {
+                // Clear existing items first to avoid ItemsSource error
+                AccountGroupComboBox.Items.Clear();
+
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
@@ -61,11 +64,11 @@ namespace FlexMold.MVVM.View.Master
                     {
                         cmd = new SqlCommand(@"INSERT INTO Account (
                             AccountName, AGroupId, OpeningBalance, DebitOrCridt, isActive, 
-                            Date, Remarks, AddressOne, AddressTwo, AddressThree, PhoneOne, 
+                            AccountDate, Remarks, AddressOne, AddressTwo, AddressThree, PhoneOne, 
                             MobileNo, FaxNo, EMailOne, TinNo, BankName, BankAddress, AccountNo
                         ) VALUES (
                             @AccountName, @AGroupId, @OpeningBalance, @DebitOrCridt, @isActive, 
-                            @Date, @Remarks, @AddressOne, @AddressTwo, @AddressThree, @PhoneOne, 
+                            @AccountDate, @Remarks, @AddressOne, @AddressTwo, @AddressThree, @PhoneOne, 
                             @MobileNo, @FaxNo, @EMailOne, @TinNo, @BankName, @BankAddress, @AccountNo
                         ); SELECT SCOPE_IDENTITY();", conn);
                     }
@@ -77,7 +80,7 @@ namespace FlexMold.MVVM.View.Master
                             OpeningBalance = @OpeningBalance, 
                             DebitOrCridt = @DebitOrCridt, 
                             isActive = @isActive, 
-                            Date = @Date, 
+                            AccountDate = @AccountDate, 
                             Remarks = @Remarks, 
                             AddressOne = @AddressOne, 
                             AddressTwo = @AddressTwo, 
@@ -100,7 +103,7 @@ namespace FlexMold.MVVM.View.Master
                     cmd.Parameters.AddWithValue("@OpeningBalance", decimal.Parse(OpeningBalanceTextBox.Text));
                     cmd.Parameters.AddWithValue("@DebitOrCridt", (DrCrComboBox.SelectedItem as ComboBoxItem)?.Content.ToString() ?? "DR");
                     cmd.Parameters.AddWithValue("@isActive", ActiveCheckbox.IsChecked ?? false);
-                    cmd.Parameters.AddWithValue("@Date", DatePickBox.SelectedDate ?? DateTime.Now);
+                    cmd.Parameters.AddWithValue("@AccountDate", DatePickBox.SelectedDate ?? DateTime.Now);
                     cmd.Parameters.AddWithValue("@Remarks", DescriptionInputBox.Text);
                     cmd.Parameters.AddWithValue("@AddressOne", RoadTextBox.Text);
                     cmd.Parameters.AddWithValue("@AddressTwo", BuildingTextBox.Text);
@@ -164,6 +167,7 @@ namespace FlexMold.MVVM.View.Master
             }
         }
 
+
         private void NewButton_Click(object sender, RoutedEventArgs e)
         {
             ClearForm();
@@ -199,17 +203,13 @@ namespace FlexMold.MVVM.View.Master
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            var accountsGroup = new AccountsGroup();
-            accountsGroup.Show();
+            // Empty implementation
         }
 
         private void SearchButton_Click(object sender, RoutedEventArgs e)
         {
             var searchBank = new SearchBank();
-            if (searchBank.ShowDialog() == true)
-            {
-                LoadAccount(searchBank.SelectedAccountId);
-            }
+            searchBank.Show();
         }
 
         private void LoadAccount(int accountId)
@@ -233,7 +233,7 @@ namespace FlexMold.MVVM.View.Master
                             OpeningBalanceTextBox.Text = reader["OpeningBalance"].ToString();
                             DrCrComboBox.Text = reader["DebitOrCridt"].ToString();
                             ActiveCheckbox.IsChecked = Convert.ToBoolean(reader["isActive"]);
-                            DatePickBox.SelectedDate = Convert.ToDateTime(reader["Date"]);
+                            DatePickBox.SelectedDate = Convert.ToDateTime(reader["AccountDate"]);
                             DescriptionInputBox.Text = reader["Remarks"].ToString();
                             RoadTextBox.Text = reader["AddressOne"].ToString();
                             BuildingTextBox.Text = reader["AddressTwo"].ToString();

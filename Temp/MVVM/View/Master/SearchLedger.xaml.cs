@@ -75,9 +75,7 @@ namespace FlexMold.MVVM.View.Master
         {
             if (SearchLedgerDataGrid.SelectedItem is DataRowView row)
             {
-                SelectedAccountRow = row;
-                DialogResult = true;
-                Close();
+                SelectedAccountRow = row;                      
             }
             else
             {
@@ -98,6 +96,42 @@ namespace FlexMold.MVVM.View.Master
         private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             // Optional
+        }
+
+        private void DeleteButton(object sender, RoutedEventArgs e)
+        {
+            if (SearchLedgerDataGrid.SelectedItem is DataRowView row)
+            {
+                int accountId = Convert.ToInt32(row["ID"]);
+
+                MessageBoxResult result = MessageBox.Show("Are you sure you want to delete this account?", "Confirm Delete", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+                if (result == MessageBoxResult.Yes)
+                {
+                    try
+                    {
+                        using (SqlConnection conn = new SqlConnection(connectionString))
+                        {
+                            conn.Open();
+                            using (SqlCommand cmd = new SqlCommand("DELETE FROM Account WHERE AccountId = @AccountId", conn))
+                            {
+                                cmd.Parameters.AddWithValue("@AccountId", accountId);
+                                cmd.ExecuteNonQuery();
+                            }
+                        }
+
+                        MessageBox.Show("Account deleted successfully.", "Deleted", MessageBoxButton.OK, MessageBoxImage.Information);
+                        LoadLedgerAccounts(); // Refresh the grid
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Error deleting account: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select an account to delete.", "No Selection", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
         }
     }
 }
