@@ -104,10 +104,22 @@ namespace FlexMold.MVVM.View
             expenseAccount.Show();
         }
 
-        private void MasterBankButton_click(object name, RoutedEventArgs e)
+        private void MasterBankButton_click(object sender, RoutedEventArgs e)
         {
             var bankMaster = new Bank();
             bankMaster.Show();
+        }
+
+        private void MasterBalanceSheetButton_click(object sender, RoutedEventArgs e)
+        {
+            var balanceSheet = new BalanceSheet();
+            balanceSheet.Show();
+        }
+
+        private void MasterJournalEntryButton_Click(object sender, RoutedEventArgs e)
+        {
+            var journalEntry = new JournalEntry();
+            journalEntry.Show();
         }
 
     }

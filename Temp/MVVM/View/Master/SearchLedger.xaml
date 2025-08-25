@@ -64,20 +64,24 @@
         <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,30,0" VerticalAlignment="Center">
             <Button Content="Select"
                     FontSize="14"
+                    Background="ForestGreen" 
                     Style="{StaticResource AnimatedRedButton}"
                     Click="SelectButton"/>
 
             <Button Content="Delete"
                     FontSize="14"
+                    Background="ForestGreen" 
                     Style="{StaticResource AnimatedRedButton}"
                     Click="DeleteButton"/>
             
             <Button Content="Cancel"
                     FontSize="14"
+                    Background="ForestGreen" 
                     Style="{StaticResource AnimatedRedButton}"
                     Click="CancelButton"/>
             <Button Content="Clear"
                     FontSize="14"
+                    Background="ForestGreen" 
                     Style="{StaticResource AnimatedRedButton}"
                     Click="ClearButton"/>
         </StackPanel>

@@ -76,16 +76,19 @@
 
             <Button Content="Select" 
                     FontSize="14"
+                    Background="ForestGreen" 
                     Style="{StaticResource AnimatedRedButton}"
                     Click="SelectButton"/>
 
             <Button Content="Cancel"
                     FontSize="14" 
+                    Background="ForestGreen" 
                     Style="{StaticResource AnimatedRedButton}"
                     Click="CancelButton"/>
 
             <Button Content="Delete"
                     FontSize="14"
+                    Background="ForestGreen" 
                     Style="{StaticResource AnimatedRedButton}"
                     Click="DeleteButton"/>
 

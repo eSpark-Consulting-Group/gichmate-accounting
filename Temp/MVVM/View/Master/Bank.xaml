@@ -144,7 +144,7 @@
 
                 <Button Content="+" 
                         FontSize="15" 
-                        Background="#FF008800" 
+                        Background="ForestGreen" 
                         Foreground="White" 
                         Height="27" 
                         Width="28"
@@ -382,21 +382,27 @@
 
             <Button Content="Save" 
                     FontSize="14" 
+                    Background="ForestGreen" 
                     Style="{StaticResource AnimatedRedButton}"
                     Click="SaveButton_Click"/>
 
             <Button Content="New"
                     FontSize="14"
+                    Background="ForestGreen" 
                     Style="{StaticResource AnimatedRedButton}"
                     Click="NewButton_Click"/>
 
             <Button Content="Search"
                     FontSize="14"
-                    Style="{StaticResource AnimatedRedButton}" Click="SearchButton_Click"/>
+                    Background="ForestGreen" 
+                    Style="{StaticResource AnimatedRedButton}" 
+                    Click="SearchButton_Click"/>
 
             <Button x:Name="ClearButton" Content="Clear"
                     FontSize="14"
-                    Style="{StaticResource AnimatedRedButton}" Click="ClearButton_Click"/>
+                    Background="ForestGreen" 
+                    Style="{StaticResource AnimatedRedButton}" 
+                    Click="ClearButton_Click"/>
 
         </StackPanel>
 

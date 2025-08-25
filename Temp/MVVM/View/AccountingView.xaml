@@ -216,20 +216,22 @@
                     Foreground="WhiteSmoke"
                     Background="Transparent"
                     BorderThickness="0"
-                    Grid.Column="5"
-                    HorizontalAlignment="Center"
+                    Grid.Column="4"
+                    HorizontalAlignment="Right"
                     FontSize="17"                   
                     FontFamily="Fonts/#myfont"
                     FontWeight="UltraLight"        
-                    RenderTransformOrigin="0.5,0.5" Width="110" Click="TopBarMasterButton_Click" Height="38" VerticalAlignment="Center">
+                    RenderTransformOrigin="0.5,0.5" Width="110" Click="TopBarMasterButton_Click" Height="38" VerticalAlignment="Center" Grid.ColumnSpan="3" Margin="0,0,95,0">
                 <Button.ContextMenu>
                     <ContextMenu x:Name="MasterContextMenu" >
                         <MenuItem Header="Ledger and Account Groups" IsEnabled="False"/>
                         <Separator/>
-                        <MenuItem Header="Accounts Group" Click="MasterGroupButton_click"/>
+                        <MenuItem Header="Accounts Group"  Click="MasterGroupButton_click"/>
                         <MenuItem Header="Accounts Ledger" Click="MasterLedgerButton_click"/>
+                        <MenuItem Header="Journal Entries" Click="MasterJournalEntryButton_Click"/>
                         <MenuItem Header="Expense Account" Click="MasterExpenseButton_click"/>
-                        <MenuItem Header="Bank" Click="MasterBankButton_click"/>
+                        <MenuItem Header="Bank"            Click="MasterBankButton_click"/>
+                        <MenuItem Header="Balance Sheet"   Click="MasterBalanceSheetButton_click"/>
                     </ContextMenu>
                 </Button.ContextMenu>
             </Button>
@@ -440,7 +442,8 @@
         <Grid Margin="99,46,10,0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="273*"/>
-                <ColumnDefinition Width="620*"/>
+                <ColumnDefinition Width="122*"/>
+                <ColumnDefinition Width="498*"/>
                 <ColumnDefinition Width="848*"/>
             </Grid.ColumnDefinitions>
             <Grid.Background>
@@ -455,7 +458,7 @@
                   VerticalAlignment="Center" 
                   Width="1600" 
                   Margin="121,0,0,0" 
-                  Grid.ColumnSpan="3">
+                  Grid.ColumnSpan="4">
 
                 <ContentControl Content="{Binding CurrentView}" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,0,0,10" />
 

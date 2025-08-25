@@ -1,0 +1,176 @@
+﻿<Window x:Class="FlexMold.MVVM.View.Master.BalanceSheet"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FlexMold.MVVM.View.Master"
+        mc:Ignorable="d"
+        ResizeMode="NoResize"
+        BorderThickness="3"
+        BorderBrush="White"
+        WindowStartupLocation="CenterScreen"
+        Title="BalanceSheet" Height="820" Width="1200">
+
+    <Window.Resources>
+        <Style TargetType="{x:Type Label}" x:Key="LabelBalanceSheet">
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+
+        <Style TargetType="StackPanel" x:Key="StackPanelBalanceSheet">
+            <Setter Property="Orientation" Value="Horizontal"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+        </Style>
+
+        <Style TargetType="TextBox" x:Key="TextboxBalanceSheet">
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+
+        <Style TargetType="ComboBox" x:Key="ComboBoxBalanceSheet">
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Width" Value="250"/>
+            <Setter Property="FontSize" Value="14"/>
+        </Style>
+    </Window.Resources>
+    
+    
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FFEE4540"/>
+                <GradientStop Color="#FF2D142C" Offset="1"/>
+                <GradientStop Color="#FF510A32" Offset="0.565"/>
+                <GradientStop Color="#FFC72C41" Offset="0.157"/>
+                <GradientStop Color="#FF801336" Offset="0.365"/>
+                <GradientStop Color="#FF670E33" Offset="0.426"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        
+       <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="50"/>           
+            <RowDefinition Height="600"/>
+            <RowDefinition Height="*"/> <!--FYI, Buttons will come here, Row size is 70-->
+        </Grid.RowDefinitions>
+
+
+        <StackPanel Grid.Row="0">
+            <Label Content="Balance Sheet"
+                   FontSize="20"
+                   FontWeight="Bold"/>
+        </StackPanel>
+
+
+
+        <StackPanel Grid.Row="1" 
+                    Style="{StaticResource StackPanelBalanceSheet}"
+                    >
+
+            <Label Content="As on : "
+                   Margin="18,0,0,0"
+                   Style="{StaticResource LabelBalanceSheet}"/>
+
+            <DatePicker Height="30"
+                        Width="200"
+                        VerticalContentAlignment="Center"/>
+
+            <Label Content="Closing Stock Validation Using : " 
+                   Style="{StaticResource LabelBalanceSheet}"
+                   Margin="70,0,0,0"/>
+
+            <ComboBox Style="{StaticResource ComboBoxBalanceSheet}"/>
+
+        </StackPanel>
+
+        <StackPanel Grid.Row="2"
+                   Style="{StaticResource StackPanelBalanceSheet}">
+
+            <Label Content="Opening Stock Validation Using : "
+                   Style="{StaticResource LabelBalanceSheet}"
+                   Margin="340,0,0,0"/>
+
+            <ComboBox Style="{StaticResource ComboBoxBalanceSheet}"
+                      />
+        </StackPanel>
+        
+
+        <!--Stored prcedures need to be applied on the DataGrid(Out of my scope)-->
+        <StackPanel Grid.Row="3" 
+                    Style="{StaticResource StackPanelBalanceSheet}">
+
+            <ListView Height="590"
+                      Width="1190"
+                      FontSize="15"
+                      >
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Liability"
+                                        DisplayMemberBinding="{Binding Liability}" 
+                                        Width="250"/>
+                        
+                        <GridViewColumn Header="Liability Amount" 
+                                        DisplayMemberBinding="{Binding LiabilityAmount}"
+                                        Width="250"/>
+
+                        <GridViewColumn Header="Asset"
+                                        DisplayMemberBinding="{Binding Asset}"
+                                        Width="250"/>
+
+                        <GridViewColumn Header="Asset Amount"
+                                        DisplayMemberBinding="{Binding AssetAmount}"
+                                        Width="250"/>
+
+                        <GridViewColumn Header="Equity"
+                                        DisplayMemberBinding="{Binding Equity}"
+                                        Width="200"
+                                        />
+                    </GridView>
+                </ListView.View>
+            </ListView>
+                        
+        </StackPanel>
+
+        <StackPanel Grid.Row="4" Style="{StaticResource StackPanelBalanceSheet}">
+            <StackPanel Style="{StaticResource StackPanelBalanceSheet}">
+                
+                <Button Style="{StaticResource AnimatedRedButton}"
+                        Content="Show"
+                        FontSize="15"                        
+                        Background="ForestGreen" />
+                
+                <Button Style="{StaticResource AnimatedRedButton}"
+                        Content="Print"
+                        FontSize="15"
+                        Background="ForestGreen" />
+                
+                <Button Style="{StaticResource AnimatedRedButton}"
+                        Content="Clear"
+                        FontSize="15"
+                        Background="ForestGreen" />
+                
+                <Button Style="{StaticResource AnimatedRedButton}"
+                        Content="Close"
+                        FontSize="15"
+                        Background="ForestGreen" />
+                
+            </StackPanel>
+        </StackPanel>
+        
+        
+        
+        
+
+
+
+    </Grid>
+</Window>

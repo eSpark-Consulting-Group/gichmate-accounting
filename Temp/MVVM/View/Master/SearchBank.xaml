@@ -8,8 +8,8 @@
         ResizeMode="NoResize"        
         BorderBrush="Black"
         BorderThickness="3"
-        Title="SearchBank" Height="500" Width="950">
-    
+        Title="SearchBank" Height="600" Width="950">
+
     <Grid>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -24,23 +24,13 @@
 
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="50"/>
+            <RowDefinition Height="10"/>
             <RowDefinition Height="0"/>
             <!--This Row (Row 1) is only added for marginal aesthetics only-->
             <RowDefinition Height="50"/>
-            <RowDefinition Height="310"/>
+            <RowDefinition Height="440"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-
-
-
-        <StackPanel Grid.Row="0" HorizontalAlignment="Left">
-
-            <Label Content="Search"
-                   FontSize="25"
-                   FontWeight="Bold"/>
-
-        </StackPanel>
 
 
         <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center">
@@ -57,7 +47,8 @@
 
         <StackPanel Grid.Row="3">
 
-            <DataGrid x:Name="AccountsDataGrid" Width="900" HorizontalAlignment="Center" Height="310"
+            <DataGrid x:Name="AccountsDataGrid" 
+                      Width="930" HorizontalAlignment="Center" Height="440"
                       AutoGenerateColumns="True">
             </DataGrid>
 
@@ -65,24 +56,28 @@
 
         <StackPanel Grid.Row="6" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,30,0" VerticalAlignment="Center">
             <Button Content="Select" 
-            FontSize="14"
-            Style="{StaticResource AnimatedRedButton}"
-            Click="SelectButton"/>
+                    FontSize="14"
+                    Background="ForestGreen" 
+                    Style="{StaticResource AnimatedRedButton}"
+                    Click="SelectButton"/>
 
             <Button Content="Delete"
-            FontSize="14"
-            Style="{StaticResource AnimatedRedButton}"
-            Click="DeleteButton"/>
+                    FontSize="14"
+                    Background="ForestGreen" 
+                    Style="{StaticResource AnimatedRedButton}"
+                    Click="DeleteButton"/>
 
             <Button Content="Cancel"
-            FontSize="14" 
-            Style="{StaticResource AnimatedRedButton}"
-            Click="CancelButton"/>
+                    FontSize="14" 
+                    Background="ForestGreen" 
+                    Style="{StaticResource AnimatedRedButton}"
+                    Click="CancelButton"/>
 
             <Button Content="Clear"
-            FontSize="14"
-            Style="{StaticResource AnimatedRedButton}"
-            Click="ClearButton"/>
+                    FontSize="14"
+                    Background="ForestGreen" 
+                    Style="{StaticResource AnimatedRedButton}"
+                    Click="ClearButton"/>
         </StackPanel>
 
 

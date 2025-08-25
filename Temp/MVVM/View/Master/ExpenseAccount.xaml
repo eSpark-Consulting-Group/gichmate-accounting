@@ -113,7 +113,7 @@
 
                 <Button Content="+" 
                         FontSize="15" 
-                        Background="#FF008800" 
+                        Background="ForestGreen" 
                         Foreground="White" 
                         Height="27" 
                         Width="28"
@@ -183,26 +183,40 @@
 
         <StackPanel Grid.Row="6" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
 
-            <Button x:Name="SaveButton" Content="Save" 
-                    FontSize="14" 
-                    Style="{StaticResource AnimatedRedButton}" Click="SaveButton_Click"/>
-
-            <Button x:Name="DeleteButton" Content="Delete"
-                    FontSize="14" 
-                    Style="{StaticResource AnimatedRedButton}" Click="DeleteButton_Click"/>
-
-            <Button x:Name="NewButton" Content="New"
+            <Button x:Name="SaveButton" 
+                    Content="Save" 
                     FontSize="14"
-                    Style="{StaticResource AnimatedRedButton}" Click="NewButton_Click" Height="35" Width="70">
+                    Background="ForestGreen" 
+                    Style="{StaticResource AnimatedRedButton}" 
+                    Click="SaveButton_Click"/>
+
+            <Button x:Name="DeleteButton" 
+                    Content="Delete"
+                    FontSize="14" 
+                    Background="ForestGreen" 
+                    Style="{StaticResource AnimatedRedButton}" 
+                    Click="DeleteButton_Click"/>
+
+            <Button x:Name="NewButton" 
+                    Content="New"
+                    FontSize="14"
+                    Background="ForestGreen" 
+                    Style="{StaticResource AnimatedRedButton}" 
+                    Click="NewButton_Click">
             </Button>
 
             <Button Content="Search"
                     FontSize="14"
-                    Style="{StaticResource AnimatedRedButton}" Click="Button_Click_1"  />
+                    Background="ForestGreen" 
+                    Style="{StaticResource AnimatedRedButton}" 
+                    Click="Button_Click_1"  />
 
-            <Button x:Name="ClearButton" Content="Clear"
+            <Button x:Name="ClearButton" 
+                    Content="Clear"
                     FontSize="14"
-                    Style="{StaticResource AnimatedRedButton}" Click="ClearButton_Click"/>
+                    Background="ForestGreen" 
+                    Style="{StaticResource AnimatedRedButton}" 
+                    Click="ClearButton_Click"/>
 
         </StackPanel>
 
