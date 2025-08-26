@@ -8,7 +8,7 @@
         BorderThickness="3"
         ResizeMode="NoResize"
         mc:Ignorable="d"
-        Title="DoubleJournalEntries" Height="650" Width="1100">
+        Title="DoubleJournalEntries" Height="670" Width="1100">
 
 
     <Window.Resources>
@@ -35,7 +35,7 @@
                 <GradientStop Color="#FF670E33" Offset="0.426"/>
             </LinearGradientBrush>
         </Grid.Background>
-        
+
 
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
@@ -151,6 +151,58 @@
                       VerticalContentAlignment="Center"/>
         </StackPanel>
 
+        <StackPanel Grid.Row="7"
+                    Style="{StaticResource StackPanelJournalEntries}">
+            <Label Content="Narration : "
+                   Margin="65,0,0,0"
+                   Style="{StaticResource LabelJournalEntries}"/>
+
+            <TextBox Width="660"
+                     Height="30"
+                     FontSize="15"
+                     VerticalAlignment="Center"
+                     VerticalContentAlignment="Center"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="8"
+                    Style="{StaticResource StackPanelJournalEntries}">
+
+            <CheckBox Content="Customer Only"
+                      Margin="150,0,0,0"/>
+
+            <CheckBox Content="Supplier Only"
+                      Margin="10,0,0,0"/>
+
+            <CheckBox Content="Others"
+                      Margin="10,0,0,0"/>
+
+            <CheckBox Content="All"/>
+
+            <!--StackPanel inside StackPanel for buttons-->
+            <StackPanel Margin="0,0,0,0" Orientation="Horizontal" VerticalAlignment="Center">
+
+                <Button Content="Save"
+                        FontSize="15"
+                        Background="ForestGreen"
+                        Style="{StaticResource AnimatedRedButton}"/>
+
+                <Button Content="Edit"
+                        FontSize="15"
+                        Background="ForestGreen"
+                        Style="{StaticResource AnimatedRedButton}"/>
+
+                <Button Content="Delete"
+                        FontSize="15"
+                        Background="ForestGreen"
+                        Style="{StaticResource AnimatedRedButton}"/>
+
+                <Button Content="Clear"
+                        FontSize="15"
+                        Background="ForestGreen"
+                        Style="{StaticResource AnimatedRedButton}"/>
+
+            </StackPanel>
+        </StackPanel>
 
 
 
