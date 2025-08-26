@@ -121,6 +121,11 @@ namespace FlexMold.MVVM.View
             var journalEntry = new JournalEntry();
             journalEntry.Show();
         }
+        private void MasterDoubleJournalEntries_Click(object sender, RoutedEventArgs e)
+        {
+            var doubleJournalEntries = new DoubleJournalEntries();
+            doubleJournalEntries.Show();
+        }
 
     }
 }

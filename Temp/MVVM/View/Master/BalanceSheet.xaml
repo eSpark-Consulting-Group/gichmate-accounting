@@ -40,13 +40,9 @@
             <Setter Property="FontSize" Value="14"/>
         </Style>
     </Window.Resources>
-
-
+    
+    
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="593*"/>
-            <ColumnDefinition Width="4*"/>
-        </Grid.ColumnDefinitions>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                 <GradientStop Color="#FFEE4540"/>
@@ -58,18 +54,17 @@
             </LinearGradientBrush>
         </Grid.Background>
 
-
-        <Grid.RowDefinitions>
+        
+       <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
             <RowDefinition Height="30"/>
-            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>           
             <RowDefinition Height="600"/>
-            <RowDefinition Height="*"/>
-            <!--FYI, Buttons will come here, Row size is 70-->
+            <RowDefinition Height="*"/> <!--FYI, Buttons will come here, Row size is 70-->
         </Grid.RowDefinitions>
 
 
-        <StackPanel Grid.Row="0" Grid.ColumnSpan="2">
+        <StackPanel Grid.Row="0">
             <Label Content="Balance Sheet"
                    FontSize="20"
                    FontWeight="Bold"/>
@@ -78,14 +73,14 @@
 
 
         <StackPanel Grid.Row="1" 
-                    Style="{StaticResource StackPanelBalanceSheet}" HorizontalAlignment="Left" Margin="188,0,0,0"
+                    Style="{StaticResource StackPanelBalanceSheet}"
                     >
 
             <Label Content="As on : "
                    Margin="18,0,0,0"
                    Style="{StaticResource LabelBalanceSheet}"/>
 
-            <DatePicker x:Name="DatePickerBox" Height="30"
+            <DatePicker Height="30"
                         Width="200"
                         VerticalContentAlignment="Center"/>
 
@@ -93,25 +88,25 @@
                    Style="{StaticResource LabelBalanceSheet}"
                    Margin="70,0,0,0"/>
 
-            <ComboBox x:Name="ClosingValidationComboBox" Style="{StaticResource ComboBoxBalanceSheet}"/>
+            <ComboBox Style="{StaticResource ComboBoxBalanceSheet}"/>
 
         </StackPanel>
 
         <StackPanel Grid.Row="2"
-                   Style="{StaticResource StackPanelBalanceSheet}" HorizontalAlignment="Left" Margin="187,0,0,0">
+                   Style="{StaticResource StackPanelBalanceSheet}">
 
             <Label Content="Opening Stock Validation Using : "
                    Style="{StaticResource LabelBalanceSheet}"
                    Margin="340,0,0,0"/>
 
-            <ComboBox x:Name="OpeningValidationComboBox" Style="{StaticResource ComboBoxBalanceSheet}"
+            <ComboBox Style="{StaticResource ComboBoxBalanceSheet}"
                       />
         </StackPanel>
-
+        
 
         <!--Stored prcedures need to be applied on the DataGrid(Out of my scope)-->
         <StackPanel Grid.Row="3" 
-                    Style="{StaticResource StackPanelBalanceSheet}" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="2,0,0,0">
+                    Style="{StaticResource StackPanelBalanceSheet}">
 
             <ListView Height="590"
                       Width="1190"
@@ -122,7 +117,7 @@
                         <GridViewColumn Header="Liability"
                                         DisplayMemberBinding="{Binding Liability}" 
                                         Width="250"/>
-
+                        
                         <GridViewColumn Header="Liability Amount" 
                                         DisplayMemberBinding="{Binding LiabilityAmount}"
                                         Width="250"/>
@@ -142,40 +137,38 @@
                     </GridView>
                 </ListView.View>
             </ListView>
-
+                        
         </StackPanel>
 
-        <StackPanel Grid.Row="4" Style="{StaticResource StackPanelBalanceSheet}" HorizontalAlignment="Left" Margin="437,0,0,0">
+        <StackPanel Grid.Row="4" Style="{StaticResource StackPanelBalanceSheet}">
             <StackPanel Style="{StaticResource StackPanelBalanceSheet}">
-
+                
                 <Button Style="{StaticResource AnimatedRedButton}"
                         Content="Show"
                         FontSize="15"                        
                         Background="ForestGreen" />
-
+                
                 <Button Style="{StaticResource AnimatedRedButton}"
                         Content="Print"
                         FontSize="15"
                         Background="ForestGreen" />
-
+                
                 <Button Style="{StaticResource AnimatedRedButton}"
                         Content="Clear"
                         FontSize="15"
-                        Background="ForestGreen" 
-                        Click="ClearWindow_Click"/>
-
+                        Background="ForestGreen" />
+                
                 <Button Style="{StaticResource AnimatedRedButton}"
                         Content="Close"
                         FontSize="15"
-                        Background="ForestGreen"
-                        Click="CloseWindow_Click" />
-
+                        Background="ForestGreen" />
+                
             </StackPanel>
         </StackPanel>
-
-
-
-
+        
+        
+        
+        
 
 
 

@@ -28,9 +28,13 @@ namespace FlexMold.MVVM.View.Master
                 {
                     conn.Open();
                     string query = @"SELECT AccountId, AccountName, AGroupId, OpeningBalance, DebitOrCridt, 
-                                            isActive, AccountDate, Remarks, AddressOne, AddressTwo, AddressThree, 
-                                            PhoneOne, MobileNo, FaxNo, EMailOne, TinNo, BankName, BankAddress, AccountNo 
-                                            FROM Account";
+                                    isActive, Remarks, AddressOne, AddressTwo, AddressThree, AddressFour,
+                                    PhoneOne, MobileNo, FaxNo, EMailOne, TinNo, CstNo,
+                                    BankName, BankAddress, AccountNo,
+                                    RootId, PCategoryId, IsBuiltIn, DebitLimit, IsLimitApplicable,
+                                    FieldOne, FieldTwo, FieldThree, FieldFour
+                             FROM Account";
+
 
                     SqlCommand cmd = new SqlCommand(query, conn);
                     SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -54,13 +58,17 @@ namespace FlexMold.MVVM.View.Master
                 {
                     conn.Open();
                     string query = @"SELECT AccountId, AccountName, AGroupId, OpeningBalance, DebitOrCridt, 
-                                            isActive, AccountDate, Remarks, AddressOne, AddressTwo, AddressThree, 
-                                            PhoneOne, MobileNo, FaxNo, EMailOne, TinNo, BankName, BankAddress, AccountNo 
-                                            FROM Account 
-                                            WHERE AccountName LIKE @SearchText 
-                                            OR AccountNo LIKE @SearchText 
-                                            OR BankName LIKE @SearchText 
-                                            OR BankAddress LIKE @SearchText";
+                                    isActive, Remarks, AddressOne, AddressTwo, AddressThree, AddressFour,
+                                    PhoneOne, MobileNo, FaxNo, EMailOne, TinNo, CstNo,
+                                    BankName, BankAddress, AccountNo,
+                                    RootId, PCategoryId, IsBuiltIn, DebitLimit, IsLimitApplicable,
+                                    FieldOne, FieldTwo, FieldThree, FieldFour
+                             FROM Account 
+                             WHERE AccountName LIKE @SearchText 
+                             OR AccountNo LIKE @SearchText 
+                             OR BankName LIKE @SearchText 
+                             OR BankAddress LIKE @SearchText";
+
 
                     SqlCommand cmd = new SqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("@SearchText", "%" + searchText + "%");

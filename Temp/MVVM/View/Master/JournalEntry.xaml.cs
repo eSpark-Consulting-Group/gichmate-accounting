@@ -23,5 +23,10 @@ namespace FlexMold.MVVM.View.Master
         {
             InitializeComponent();
         }
+
+        private void ClearButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -49,7 +49,7 @@ namespace FlexMold.MVVM.ViewModel
             )
         {
             //set currentview from here!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-            CurrentView = debitNoteView;
+            CurrentView = defaultAccountScreenView;
 
 
 

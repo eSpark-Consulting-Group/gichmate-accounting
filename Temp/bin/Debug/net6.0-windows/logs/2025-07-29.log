@@ -1,0 +1,37 @@
+2025-07-29 14:12:19.1441|INFO|Machine Selection|FlexMold.MVVM.ViewModel.SplashScreenViewModel..ctor|Flexmold application loading
+2025-07-29 14:12:19.6251|INFO|Machine Selection|FlexMold.MVVM.ViewModel.SplashScreenViewModel..ctor|4 Machines Found
+2025-07-29 14:12:27.3325|ERROR|Machine Selection|FlexMold.MVVM.ViewModel.SplashScreenViewModel.RunMainWindow|MAIN Application Exception = 'The invocation of the constructor on type 'FlexMold.MVVM.View.Project.LaserProjectorView' that matches the specified binding constraints threw an exception.' Line number '144' and line position '18'.
+2025-07-29 14:12:27.5792|INFO|Project|FlexMold.MVVM.ViewModel.Project.ProjectViewModel.PositionProcess_Elapsed|This is four444555100
+2025-07-29 14:12:30.5856|INFO|Project|FlexMold.MVVM.ViewModel.Project.ProjectViewModel.PositionProcess_Elapsed|This is four444555100
+2025-07-29 14:12:33.6392|INFO|Project|FlexMold.MVVM.ViewModel.Project.ProjectViewModel.PositionProcess_Elapsed|This is four444555100
+2025-07-29 14:12:36.6407|INFO|Project|FlexMold.MVVM.ViewModel.Project.ProjectViewModel.PositionProcess_Elapsed|This is four444555100
+2025-07-29 14:12:39.6398|INFO|Project|FlexMold.MVVM.ViewModel.Project.ProjectViewModel.PositionProcess_Elapsed|This is four444555100
+2025-07-29 14:12:42.6706|INFO|Project|FlexMold.MVVM.ViewModel.Project.ProjectViewModel.PositionProcess_Elapsed|This is four444555100
+2025-07-29 14:12:45.8607|INFO|Project|FlexMold.MVVM.ViewModel.Project.ProjectViewModel.PositionProcess_Elapsed|This is four444555100
+2025-07-29 14:12:48.8897|INFO|Project|FlexMold.MVVM.ViewModel.Project.ProjectViewModel.PositionProcess_Elapsed|This is four444555100
+2025-07-29 14:12:51.9057|INFO|Project|FlexMold.MVVM.ViewModel.Project.ProjectViewModel.PositionProcess_Elapsed|This is four444555100
+2025-07-29 14:12:54.9263|INFO|Project|FlexMold.MVVM.ViewModel.Project.ProjectViewModel.PositionProcess_Elapsed|This is four444555100
+2025-07-29 14:12:57.9377|INFO|Project|FlexMold.MVVM.ViewModel.Project.ProjectViewModel.PositionProcess_Elapsed|This is four444555100
+2025-07-29 14:13:00.9527|INFO|Project|FlexMold.MVVM.ViewModel.Project.ProjectViewModel.PositionProcess_Elapsed|This is four444555100
+2025-07-29 14:13:04.0764|INFO|Project|FlexMold.MVVM.ViewModel.Project.ProjectViewModel.PositionProcess_Elapsed|This is four444555100
+2025-07-29 14:13:07.1091|INFO|Project|FlexMold.MVVM.ViewModel.Project.ProjectViewModel.PositionProcess_Elapsed|This is four444555100
+2025-07-29 14:13:10.1256|INFO|Project|FlexMold.MVVM.ViewModel.Project.ProjectViewModel.PositionProcess_Elapsed|This is four444555100
+2025-07-29 14:13:13.1261|INFO|Project|FlexMold.MVVM.ViewModel.Project.ProjectViewModel.PositionProcess_Elapsed|This is four444555100
+2025-07-29 14:13:16.1240|INFO|Project|FlexMold.MVVM.ViewModel.Project.ProjectViewModel.PositionProcess_Elapsed|This is four444555100
+2025-07-29 14:13:19.1265|INFO|Project|FlexMold.MVVM.ViewModel.Project.ProjectViewModel.PositionProcess_Elapsed|This is four444555100
+2025-07-29 14:13:22.1321|INFO|Project|FlexMold.MVVM.ViewModel.Project.ProjectViewModel.PositionProcess_Elapsed|This is four444555100
+2025-07-29 14:13:25.1244|INFO|Project|FlexMold.MVVM.ViewModel.Project.ProjectViewModel.PositionProcess_Elapsed|This is four444555100
+2025-07-29 14:13:28.1859|INFO|Project|FlexMold.MVVM.ViewModel.Project.ProjectViewModel.PositionProcess_Elapsed|This is four444555100
+2025-07-29 14:13:31.3608|INFO|Project|FlexMold.MVVM.ViewModel.Project.ProjectViewModel.PositionProcess_Elapsed|This is four444555100
+2025-07-29 14:13:34.3581|INFO|Project|FlexMold.MVVM.ViewModel.Project.ProjectViewModel.PositionProcess_Elapsed|This is four444555100
+2025-07-29 14:13:37.3632|INFO|Project|FlexMold.MVVM.ViewModel.Project.ProjectViewModel.PositionProcess_Elapsed|This is four444555100
+2025-07-29 14:13:40.4047|INFO|Project|FlexMold.MVVM.ViewModel.Project.ProjectViewModel.PositionProcess_Elapsed|This is four444555100
+2025-07-29 14:13:43.4221|INFO|Project|FlexMold.MVVM.ViewModel.Project.ProjectViewModel.PositionProcess_Elapsed|This is four444555100
+2025-07-29 14:13:46.5773|INFO|Project|FlexMold.MVVM.ViewModel.Project.ProjectViewModel.PositionProcess_Elapsed|This is four444555100
+2025-07-29 14:13:49.6230|INFO|Project|FlexMold.MVVM.ViewModel.Project.ProjectViewModel.PositionProcess_Elapsed|This is four444555100
+2025-07-29 14:13:52.6701|INFO|Project|FlexMold.MVVM.ViewModel.Project.ProjectViewModel.PositionProcess_Elapsed|This is four444555100
+2025-07-29 14:13:55.8422|INFO|Project|FlexMold.MVVM.ViewModel.Project.ProjectViewModel.PositionProcess_Elapsed|This is four444555100
+2025-07-29 14:13:58.8439|INFO|Project|FlexMold.MVVM.ViewModel.Project.ProjectViewModel.PositionProcess_Elapsed|This is four444555100
+2025-07-29 14:14:01.8738|INFO|Project|FlexMold.MVVM.ViewModel.Project.ProjectViewModel.PositionProcess_Elapsed|This is four444555100
+2025-07-29 14:14:04.9108|INFO|Project|FlexMold.MVVM.ViewModel.Project.ProjectViewModel.PositionProcess_Elapsed|This is four444555100
+2025-07-29 14:14:07.9202|INFO|Project|FlexMold.MVVM.ViewModel.Project.ProjectViewModel.PositionProcess_Elapsed|This is four444555100

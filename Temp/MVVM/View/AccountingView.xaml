@@ -228,7 +228,8 @@
                         <Separator/>
                         <MenuItem Header="Accounts Group"  Click="MasterGroupButton_click"/>
                         <MenuItem Header="Accounts Ledger" Click="MasterLedgerButton_click"/>
-                        <MenuItem Header="Journal Entries" Click="MasterJournalEntryButton_Click"/>
+                        <MenuItem Header="Single Journal Entry" Click="MasterJournalEntryButton_Click"/>
+                        <MenuItem Header="Double Journal Entries" Click="MasterDoubleJournalEntries_Click"/>
                         <MenuItem Header="Expense Account" Click="MasterExpenseButton_click"/>
                         <MenuItem Header="Bank"            Click="MasterBankButton_click"/>
                         <MenuItem Header="Balance Sheet"   Click="MasterBalanceSheetButton_click"/>
@@ -442,7 +443,8 @@
         <Grid Margin="99,46,10,0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="273*"/>
-                <ColumnDefinition Width="122*"/>
+                <ColumnDefinition Width="84*"/>
+                <ColumnDefinition Width="38*"/>
                 <ColumnDefinition Width="498*"/>
                 <ColumnDefinition Width="848*"/>
             </Grid.ColumnDefinitions>
@@ -458,7 +460,7 @@
                   VerticalAlignment="Center" 
                   Width="1600" 
                   Margin="121,0,0,0" 
-                  Grid.ColumnSpan="4">
+                  Grid.ColumnSpan="5">
 
                 <ContentControl Content="{Binding CurrentView}" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,0,0,10" />
 

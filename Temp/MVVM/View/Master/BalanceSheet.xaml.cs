@@ -23,17 +23,5 @@ namespace FlexMold.MVVM.View.Master
         {
             InitializeComponent();
         }
-
-        private void ClearWindow_Click(object sender, RoutedEventArgs e)
-        {
-            DatePickerBox.SelectedDate = null;
-            OpeningValidationComboBox.SelectedIndex = -1;
-            ClosingValidationComboBox.SelectedIndex = -1;
-        }
-
-        private void CloseWindow_Click(object sender, RoutedEventArgs e)
-        {
-            Close();
-        }
     }
 }
