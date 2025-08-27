@@ -54,7 +54,6 @@ namespace FlexMold.MVVM.View.Accounts
                 using (var con = new SqlConnection(connectionString))
                 {
                     con.Open();
-
                     string sql;
                     using (var cmd = new SqlCommand())
                     {

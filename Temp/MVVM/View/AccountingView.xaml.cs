@@ -13,7 +13,7 @@ namespace FlexMold.MVVM.View
     /// <summary>
     /// Interaction logic for AccountingView.xaml
     /// </summary>
-    public partial class AccountingView : UserControl
+    public partial class MasterTransaction_Click : UserControl
     {
         private bool isSidebarExpanded = true;
 
@@ -22,7 +22,7 @@ namespace FlexMold.MVVM.View
             get { return App.AppHost.Services.GetRequiredService<IAccountingViewModel>(); }
         }
 
-        public AccountingView()
+        public MasterTransaction_Click()
         {
             InitializeComponent();
             DataContext = _AccountingViewModel;
@@ -121,11 +121,18 @@ namespace FlexMold.MVVM.View
             var journalEntry = new JournalEntry();
             journalEntry.Show();
         }
+        
         private void MasterDoubleJournalEntries_Click(object sender, RoutedEventArgs e)
         {
             var doubleJournalEntries = new DoubleJournalEntries();
             doubleJournalEntries.Show();
         }
 
+
+        private void MasterTransactionButton_Click(object sender, RoutedEventArgs e)
+        {
+            var transactionWithoutInventory = new TransactionWithoutInventory();
+            transactionWithoutInventory.Show(); 
+        }
     }
 }

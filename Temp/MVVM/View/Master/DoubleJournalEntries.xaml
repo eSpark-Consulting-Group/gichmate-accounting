@@ -93,7 +93,7 @@
                    Margin="50,0,0,0"
                    Style="{StaticResource LabelJournalEntries}"/>
 
-            <mah:NumericUpDown x:Name="VoucherNoBox" 
+            <mah:NumericUpDown x:Name="UpDownBox" 
                                Width="250"
                                Height="30"
                                FontSize="15"
@@ -103,7 +103,7 @@
                    Margin="100,0,0,0"
                    Style="{StaticResource LabelJournalEntries}"/>
 
-            <DatePicker Width="250"
+            <DatePicker x:Name="DatePickBox" Width="250"
                         Height="30"
                         VerticalContentAlignment="Center"
                         FontSize="15"/>
@@ -119,7 +119,7 @@
                    Margin="20,0,0,0"
                    Style="{StaticResource LabelJournalEntries}"/>
 
-            <ComboBox Width="250"
+            <ComboBox x:Name="FromAccCreditBox" Width="250"
                       Height="30"
                       VerticalAlignment="Center"
                       VerticalContentAlignment="Center"
@@ -128,7 +128,7 @@
             <Label Content="Amount : "
                    Margin="80,0,0,0"
                    Style="{StaticResource LabelJournalEntries}" Width="70"/>
-            <TextBox Width="250"
+            <TextBox x:Name="AmountBox" Width="250"
                      Height="30"
                      Text="0.00"
                      FontSize="15"
@@ -144,7 +144,7 @@
                    Margin="40,0,0,0"
                    Style="{StaticResource LabelJournalEntries}"/>
 
-            <ComboBox Width="250"
+            <ComboBox x:Name="ToAccDebitBox" Width="250"
                       Height="30"
                       FontSize="15"
                       VerticalAlignment="Center"
@@ -157,7 +157,7 @@
                    Margin="65,0,0,0"
                    Style="{StaticResource LabelJournalEntries}"/>
 
-            <TextBox Width="660"
+            <TextBox x:Name="NarrationBox" Width="660"
                      Height="30"
                      FontSize="15"
                      VerticalAlignment="Center"
@@ -167,16 +167,16 @@
         <StackPanel Grid.Row="8"
                     Style="{StaticResource StackPanelJournalEntries}">
 
-            <CheckBox Content="Customer Only"
+            <CheckBox x:Name="CustomerOnlyCheckBox" Content="Customer Only"
                       Margin="150,0,0,0"/>
 
-            <CheckBox Content="Supplier Only"
+            <CheckBox x:Name="SupplierOnlyCheckBox" Content="Supplier Only"
                       Margin="10,0,0,0"/>
 
-            <CheckBox Content="Others"
+            <CheckBox x:Name="OthersCheckBox" Content="Others"
                       Margin="10,0,0,0"/>
 
-            <CheckBox Content="All"/>
+            <CheckBox x:Name="AllSelectCheckBox" Content="All"/>
 
             <!--StackPanel inside StackPanel for buttons-->
             <StackPanel Margin="0,0,0,0" Orientation="Horizontal" VerticalAlignment="Center">
@@ -199,7 +199,7 @@
                 <Button Content="Clear"
                         FontSize="15"
                         Background="ForestGreen"
-                        Style="{StaticResource AnimatedRedButton}"/>
+                        Style="{StaticResource AnimatedRedButton}" Click="ClearButton_Click"/>
 
             </StackPanel>
         </StackPanel>

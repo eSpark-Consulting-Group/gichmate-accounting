@@ -12,8 +12,6 @@
         mc:Ignorable="d"
         Height="750" Width="850">
 
-
-
     <Window.Resources>
         <Style TargetType="{x:Type TextBox}" x:Key="MyTextbox">
             <Setter Property="Width" Value="250" />
@@ -63,24 +61,18 @@
             <RowDefinition Height="70"/>
         </Grid.RowDefinitions>
 
-
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="220"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-
         <StackPanel Grid.Row="0" Grid.Column="0" Margin="0,0,0,83" Grid.RowSpan="2">
             <Label Content="BANK"
                    FontSize="25"
                    FontWeight="Bold" Width="114"/>
-
         </StackPanel>
 
-        <StackPanel Grid.Column="0" 
-                    Grid.Row="1" 
-                    Grid.RowSpan="16" Margin="0,0,0,-30"
-                    >
+        <StackPanel Grid.Column="0" Grid.Row="1" Grid.RowSpan="16" Margin="0,0,0,-30">
             <Border BorderThickness="1000" Height="882">
                 <Border.BorderBrush>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -95,16 +87,13 @@
             </Border>
         </StackPanel>
 
-
         <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Vertical">
-
             <StackPanel Orientation="Horizontal" Height="30">
-
-                <Label   Margin="26.5,0,0,0"
-                         Content="Account Name :"
-                         FontSize="14" VerticalAlignment="Center"/>
-                <TextBox x:Name="AccountName" 
-                         Margin="10,0,0,0" 
+                <Label Margin="26.5,0,0,0"
+                       Content="Account Name :"
+                       FontSize="14" VerticalAlignment="Center"/>
+                <TextBox x:Name="AccountName"
+                         Margin="10,0,0,0"
                          VerticalAlignment="Center"
                          VerticalContentAlignment="Center"
                          Height="25"
@@ -112,112 +101,75 @@
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Height="40" VerticalAlignment="Center">
-
                 <Label Content="Accounting Group :"
                        FontSize="14"
                        VerticalAlignment="Center"/>
-                <ComboBox x:Name="AccountGroupComboBox" 
+                <ComboBox x:Name="AccountGroupComboBox"
                           Margin="5,0,0,0"
                           Width="362" VerticalContentAlignment="Center"
-                          Height="25" VerticalAlignment="Center">                   
-                         <ComboBoxItem/>
-                         <ComboBoxItem/>
-                         <ComboBoxItem/>
-                         <ComboBoxItem/>
-                         <ComboBoxItem/>
-                         <ComboBoxItem/>
-                         <ComboBoxItem/>
-                         <ComboBoxItem/>
-                         <ComboBoxItem/>
-                         <ComboBoxItem/>
-                         <ComboBoxItem/>
-                         <ComboBoxItem/>
-                         <ComboBoxItem/>
-                         <ComboBoxItem/>
-                         <ComboBoxItem/>
-                         <ComboBoxItem/>
-                         <ComboBoxItem/>
-                         <ComboBoxItem/>
-                         <ComboBoxItem/>
-                        <ComboBoxItem/>
-                </ComboBox>
-
-                <Button Content="+" 
-                        FontSize="15" 
-                        Background="ForestGreen" 
-                        Foreground="White" 
-                        Height="27" 
+                          Height="25" VerticalAlignment="Center"
+                          SelectionChanged="AccountGroupComboBox_SelectionChanged"/>
+                <Button Content="+"
+                        FontSize="15"
+                        Background="ForestGreen"
+                        Foreground="White"
+                        Height="27"
                         Width="28"
                         Style="{StaticResource AnimatedRedButton}"
-                        VerticalContentAlignment="Center" 
-                        Click="Button_Click">
-                </Button>
+                        VerticalContentAlignment="Center"
+                        Click="Button_Click"/>
+            </StackPanel>
 
-             </StackPanel>
-
-
+            
             <StackPanel Orientation="Horizontal" Height="30">
-
                 <Label Margin="13,0,0,0"
                        VerticalAlignment="Center"
                        Content="Opening Balance :"
                        FontSize="14"/>
-
                 <TextBox x:Name="OpeningBalanceTextBox" Margin="10,0,0,0"
                          VerticalAlignment="Center"
                          Height="25"
-                         Text="0" 
-                         Width="200" 
+                         Text="0"
+                         Width="200"
                          VerticalContentAlignment="Center"/>
-
-                <ComboBox x:Name="DrCrComboBox" Margin="17,0,0,0" Width="100" 
-                          Height="25" VerticalAlignment="Center" 
+                <ComboBox x:Name="DrCrComboBox" Margin="17,0,0,0" Width="100"
+                          Height="25" VerticalAlignment="Center"
                           VerticalContentAlignment="Center">
                     <ComboBoxItem IsSelected="True" Content="DR" />
                     <ComboBoxItem Content="CR"/>
                 </ComboBox>
-
                 <CheckBox x:Name="ActiveCheckbox"  Margin="17,0,0,0" Content="Active"
                           FontSize="14" Width="96"/>
-
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Height="40">
-
                 <Label Margin="88,0,0,0"
                        Content="Date :"
                        VerticalAlignment="Center"
                        FontSize="14"/>
-
                 <DatePicker x:Name="DatePickBox" Margin="10,0,0,0"
                             VerticalAlignment="Center"
-                            VerticalContentAlignment="Center" 
+                            VerticalContentAlignment="Center"
                             Height="25"
                             Width="200"/>
-
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Height="35">
-
                 <Label Margin="47,0,0,0" Content="Description :"
                        FontSize="14"
                        VerticalAlignment="Center"/>
-
                 <TextBox x:Name="DescriptionInputBox" Width="400"
                          Height="25"
                          Margin="10,0,0,0"
                          VerticalAlignment="Center"
                          VerticalContentAlignment="Center"
                          Text=""/>
-
             </StackPanel>
         </StackPanel>
 
-
         <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center">
-
             <Border BorderBrush="White"
-                    BorderThickness="2" 
+                    BorderThickness="2"
                     Width="30"
                     Height="3"
                     VerticalAlignment="Center"/>
@@ -228,102 +180,74 @@
                     BorderThickness="3"
                     Width="500"
                     Height="3"/>
-
         </StackPanel>
 
-
-
         <StackPanel Grid.Row="3" Grid.Column="1" Orientation="Horizontal">
-            <Label Margin="30,0,0,0" 
+            <Label Margin="30,0,0,0"
                    Content="Road :"
                    Style="{StaticResource MyLabel}"/>
-
             <TextBox x:Name="RoadTextBox" Style="{StaticResource MyTextbox}"
-                     Margin="60,0,0,0"
-                     />
+                     Margin="60,0,0,0"/>
         </StackPanel>
 
         <StackPanel Grid.Row="4" Grid.Column="1" Orientation="Horizontal">
-
             <Label Margin="30,0,0,0"
                    Content="Building :"
                    Style="{StaticResource MyLabel}"/>
-
             <TextBox x:Name="BuildingTextBox" Style="{StaticResource MyTextbox}"
                      Margin="42,0,0,0"/>
-
         </StackPanel>
 
-
         <StackPanel Grid.Row="5" Grid.Column="1" Orientation="Horizontal">
-
-            <Label Content="Block :" 
+            <Label Content="Block :"
                    Style="{StaticResource MyLabel}"
                    Margin="30,0,0,0"/>
-
             <TextBox x:Name="BlockTextBox" Style="{StaticResource MyTextbox}"
                      Margin="60,0,0,0"/>
         </StackPanel>
 
-
         <StackPanel Grid.Row="6" Grid.Column="1" Orientation="Horizontal">
-
             <Label Content="Phone No :"
                    Margin="30,0,0,0"
                    Style="{StaticResource MyLabel}"/>
-
             <TextBox x:Name="PhoneTextBox" Margin="32,0,0,0"
                      Style="{StaticResource MyTextbox}"/>
         </StackPanel>
 
-
         <StackPanel Grid.Row="7" Grid.Column="1" Orientation="Horizontal">
-
             <Label Content="Mobile No :"
                    Style="{StaticResource MyLabel}"
                    Margin="30,0,0,0"/>
             <TextBox x:Name="MobileTextBox"
                      Margin="28,0,0,0"
                      Style="{StaticResource MyTextbox}"/>
-
         </StackPanel>
 
-
         <StackPanel Grid.Row="8" Grid.Column="1" Orientation="Horizontal">
-
             <Label Content="Fax :"
                    Margin="30,0,0,0"
                    Style="{StaticResource MyLabel}"/>
             <TextBox x:Name="FaxTextBox" Style="{StaticResource MyTextbox}"
                      Margin="74,0,0,0"/>
-
         </StackPanel>
 
         <StackPanel Grid.Row="9" Grid.Column="1" Orientation="Horizontal">
-
             <Label Margin="30,0,0,0"
                    Content="Email Address :"
                    Style="{StaticResource MyLabel}"/>
-
             <TextBox x:Name="EmailAddressTextBox" Style="{StaticResource MyTextbox}"
                      Margin="8,0,0,0"/>
         </StackPanel>
 
-
         <StackPanel Grid.Row="10" Grid.Column="1" Orientation="Horizontal">
-
             <Label Content=" GST No :"
                    Margin="30,0,0,0"
                    Style="{StaticResource MyLabel}"/>
-
             <TextBox x:Name="GSTNoTextBox" Style="{StaticResource MyTextbox}"
                      Margin="45,0,0,0"/>
-
         </StackPanel>
 
-
         <StackPanel Grid.Row="11" Grid.Column="1" Orientation="Horizontal">
-
             <Border BorderBrush="White"
                     BorderThickness="3"
                     Height="3"
@@ -337,75 +261,50 @@
         </StackPanel>
 
         <StackPanel Grid.Row="12" Grid.Column="1" Orientation="Horizontal">
-
             <Label Content="Bank Name :"
                    Margin="30,0,0,0"
                    Style="{StaticResource MyLabel}"/>
-
             <TextBox x:Name="BankNameTextBox" Style="{StaticResource MyTextbox}"
                      Margin="27,0,0,0"/>
-
         </StackPanel>
 
         <StackPanel Grid.Row="13" Grid.Column="1" Orientation="Horizontal">
-
             <Label Content="Address :"
                    Margin="30,0,0,0"
                    Style="{StaticResource MyLabel}"/>
-
             <TextBox x:Name="BankDetailsAddress" Style="{StaticResource MyTextbox}"
                      Margin="48,0,0,0"/>
-
         </StackPanel>
 
-
         <StackPanel Grid.Row="14" Grid.Column="1" Orientation="Horizontal">
-
             <Label Content="Account No. :"
                    Style="{StaticResource MyLabel}"
                    Margin="30,0,0,0"/>
-
             <TextBox x:Name="AccountNoTextBox" Style="{StaticResource MyTextbox}"
                      Margin="22,0,0,0"/>
         </StackPanel>
 
-
-
-
-
-
-
-
-
-
         <StackPanel Grid.Row="16" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center" >
-
-            <Button Content="Save" 
-                    FontSize="14" 
-                    Background="ForestGreen" 
+            <Button Content="Save"
+                    FontSize="14"
+                    Background="ForestGreen"
                     Style="{StaticResource AnimatedRedButton}"
                     Click="SaveButton_Click"/>
-
             <Button Content="New"
                     FontSize="14"
-                    Background="ForestGreen" 
+                    Background="ForestGreen"
                     Style="{StaticResource AnimatedRedButton}"
                     Click="NewButton_Click"/>
-
             <Button Content="Search"
                     FontSize="14"
-                    Background="ForestGreen" 
-                    Style="{StaticResource AnimatedRedButton}" 
+                    Background="ForestGreen"
+                    Style="{StaticResource AnimatedRedButton}"
                     Click="SearchButton_Click"/>
-
             <Button x:Name="ClearButton" Content="Clear"
                     FontSize="14"
-                    Background="ForestGreen" 
-                    Style="{StaticResource AnimatedRedButton}" 
+                    Background="ForestGreen"
+                    Style="{StaticResource AnimatedRedButton}"
                     Click="ClearButton_Click"/>
-
         </StackPanel>
-
     </Grid>
 </Window>
-

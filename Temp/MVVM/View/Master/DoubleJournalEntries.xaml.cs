@@ -28,5 +28,20 @@ namespace FlexMold.MVVM.View.Master
         {
 
         }
+
+        private void ClearButton_Click(object sender, RoutedEventArgs e)
+        {
+            UpDownBox.Value = null;
+            DatePickBox.SelectedDate = null;
+            FromAccCreditBox.SelectedIndex = -1;
+            ToAccDebitBox.SelectedIndex = -1;
+            AmountBox.Clear();
+            NarrationBox.Clear();
+            SupplierOnlyCheckBox.IsChecked = false;
+            CustomerOnlyCheckBox.IsChecked = false;
+            OthersCheckBox.IsChecked = false;
+            AllSelectCheckBox.IsChecked = false;
+
+        }
     }
 }

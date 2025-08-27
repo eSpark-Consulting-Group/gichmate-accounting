@@ -16,13 +16,16 @@ namespace FlexMold.MVVM.View.Master
             InitializeComponent();
             LoadAccountGroups();
             DatePickBox.SelectedDate = DateTime.Now;
+
+            // Hide everything below the Accounting Group until BANK is selected
+            ToggleBelowDetails(false);
         }
 
         private void LoadAccountGroups()
         {
             try
             {
-                // Clear existing items first to avoid ItemsSource error
+                AccountGroupComboBox.ItemsSource = null;
                 AccountGroupComboBox.Items.Clear();
 
                 using (SqlConnection conn = new SqlConnection(connectionString))
@@ -97,7 +100,6 @@ namespace FlexMold.MVVM.View.Master
                         cmd.Parameters.AddWithValue("@AccountId", currentAccountId);
                     }
 
-                    // Add parameters
                     cmd.Parameters.AddWithValue("@AccountName", AccountName.Text);
                     cmd.Parameters.AddWithValue("@AGroupId", AccountGroupComboBox.SelectedValue ?? DBNull.Value);
                     cmd.Parameters.AddWithValue("@OpeningBalance", decimal.Parse(OpeningBalanceTextBox.Text));
@@ -167,6 +169,9 @@ namespace FlexMold.MVVM.View.Master
             BankNameTextBox.Text = "";
             BankDetailsAddress.Text = "";
             AccountNoTextBox.Text = "";
+
+
+            ToggleBelowDetails(false);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -215,6 +220,9 @@ namespace FlexMold.MVVM.View.Master
                             BankNameTextBox.Text = reader["BankName"].ToString();
                             BankDetailsAddress.Text = reader["BankAddress"].ToString();
                             AccountNoTextBox.Text = reader["AccountNo"].ToString();
+
+
+                            ToggleBelowDetails(IsCurrentSelectionBank());
                         }
                     }
                 }
@@ -224,5 +232,55 @@ namespace FlexMold.MVVM.View.Master
                 MessageBox.Show($"Error loading account: {ex.Message}");
             }
         }
+
+        // BANK VISIBILITY LOGIC
+        private void AccountGroupComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ToggleBelowDetails(IsCurrentSelectionBank());
+        }
+
+        private bool IsCurrentSelectionBank()
+        {
+            try
+            {
+                // If ItemsSource is DataView -> SelectedItem is DataRowView
+                if (AccountGroupComboBox.SelectedItem is DataRowView drv)
+                {
+                    var name = drv["GroupName"]?.ToString();
+                    return string.Equals(name?.Trim(), "CASH AT BANK", StringComparison.OrdinalIgnoreCase);
+                }
+
+                // If items were plain ComboBoxItem or text
+                var text = AccountGroupComboBox.Text?.Trim();
+                return string.Equals(text, "CASH AT BANK", StringComparison.OrdinalIgnoreCase);
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        private void ToggleBelowDetails(bool show)
+        {
+            if (this.Content is Grid grid)
+            {
+                // Loop through all children in grid
+                foreach (UIElement el in grid.Children)
+                {
+                    int r = Grid.GetRow(el);
+
+                    // Last row is not included because it includes buttons that I visible at all times
+                    int lastRow = grid.RowDefinitions.Count - 1;
+
+                    // Hide/show all rows >= 2, but skip the last row
+                    if (r >= 2 && r < lastRow)
+                    {
+                        el.Visibility = show ? Visibility.Visible : Visibility.Collapsed;
+                    }
+                }
+            }
+        }
     }
 }
+
+    

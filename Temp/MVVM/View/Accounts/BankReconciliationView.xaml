@@ -9,77 +9,7 @@
              BorderThickness="3" 
              BorderBrush="White"
              mc:Ignorable="d" 
-             Height="850" Width="1300">
-
-
-
-    <Control.Resources>
-        <Style TargetType="Button" x:Key="AnimatedRedButton">
-            <Setter Property="Width" Value="70"/>
-            <Setter Property="Height" Value="35"/>
-            <Setter Property="Margin" Value="5"/>
-            <Setter Property="Foreground" Value="White"/>
-            <Setter Property="Background" Value="#FF6F0404"/>
-            <Setter Property="Cursor" Value="Hand"/>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="Button">
-                        <Border Background="{TemplateBinding Background}"
-          CornerRadius="5"
-          SnapsToDevicePixels="True">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                        </Border>
-                        <ControlTemplate.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Trigger.EnterActions>
-                                    <BeginStoryboard>
-                                        <Storyboard>
-                                            <ColorAnimation To="#FFAA0000"
-                                      Duration="0:0:0.3"
-                                      Storyboard.TargetProperty="(Background).(SolidColorBrush.Color)"/>
-                                            <DoubleAnimation To="1.2"
-                                       Duration="0:0:0.3"
-                                       Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleX)"/>
-                                            <DoubleAnimation To="1.2"
-                                       Duration="0:0:0.3"
-                                       Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleY)"/>
-                                        </Storyboard>
-                                    </BeginStoryboard>
-                                </Trigger.EnterActions>
-                                <Trigger.ExitActions>
-                                    <BeginStoryboard>
-                                        <Storyboard>
-                                            <ColorAnimation To="#FF6F0404"
-                                      Duration="0:0:0.3"
-                                      Storyboard.TargetProperty="(Background).(SolidColorBrush.Color)"/>
-                                            <DoubleAnimation To="1.0"
-                                       Duration="0:0:0.3"
-                                       Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleX)"/>
-                                            <DoubleAnimation To="1.0"
-                                       Duration="0:0:0.3"
-                                       Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleY)"/>
-                                        </Storyboard>
-                                    </BeginStoryboard>
-                                </Trigger.ExitActions>
-                            </Trigger>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-            <Setter Property="RenderTransformOrigin" Value="0.5,0.5"/>
-            <Setter Property="RenderTransform">
-                <Setter.Value>
-                    <ScaleTransform ScaleX="1" ScaleY="1"/>
-                </Setter.Value>
-            </Setter>
-            <Setter Property="Effect">
-                <Setter.Value>
-                    <DropShadowEffect BlurRadius="5" ShadowDepth="9" Color="White" Opacity="0.7"/>
-                </Setter.Value>
-            </Setter>
-        </Style>
-
-    </Control.Resources>
+             Height="700" Width="1200">
 
 
     <Control.Background>
@@ -93,16 +23,15 @@
         </LinearGradientBrush>
     </Control.Background>
 
-    <Grid Margin="10,20,0,10">
+    <Grid Margin="10,20,4,10">
 
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
             <RowDefinition Height="100"/>
-            <RowDefinition Height="650"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="450"/>
+            <RowDefinition Height="50"/>            
         </Grid.RowDefinitions>
 
-        <!-- Title -->
         <TextBlock Grid.Row="0"
                    HorizontalAlignment="Left" 
                    Height="40" 
@@ -110,11 +39,16 @@
                    Text="Bank Reconciliation" Foreground="White" FontWeight="Bold" 
                    VerticalAlignment="Center" Width="336"/>
 
-        <!-- Filter Row -->
+
         <StackPanel Grid.Row="1" Orientation="Horizontal" Grid.ColumnSpan="3">
             <Label Content="Bank Account : " VerticalAlignment="Center"/>
             <ComboBox x:Name="cmbBankAccount"
-                      VerticalAlignment="Center" Width="300" Height="40" VerticalContentAlignment="Center"/>
+                      VerticalAlignment="Center" Width="300" Height="40" VerticalContentAlignment="Center">
+
+                <ComboBoxItem Content="BANK ACCOUNT"/>
+
+            </ComboBox>
+
 
             <Label Content="Date: " 
                    VerticalAlignment="Center" 
@@ -129,7 +63,7 @@
                     VerticalAlignment="Center" Width="120" Height="40" Margin="50,0,0,0" 
                     Foreground="White"                  
                     Content="Load"
-                    Background="#FF6F0404"
+                    Background="ForestGreen"
                     FontSize="20"
                     Click="btnLoad_Click">
                 <Button.Effect>
@@ -146,7 +80,6 @@
           CanUserDeleteRows="False"
           FontSize="14"
           FontWeight="ExtraBold"
-          Margin="0,0,0,60"
           IsReadOnly="False">
             <DataGrid.Columns>
                 <!-- Hidden column for VchrId -->
@@ -168,17 +101,16 @@
 
         <!-- Update Button -->
         <Button x:Name="btnUpdate"
-                Style="{StaticResource AnimatedRedButton}" 
-                Width="NaN" Height="NaN"
-                Grid.Row="2" 
+                Grid.Row="3" 
                 Content="Update" 
-                FontSize="20"
-                Margin="1067,590,84,21"
-                Background="#FF6F0404" Foreground="White"
+                FontSize="20"                
+                Background="ForestGreen" 
+                HorizontalAlignment="Right"
+                Margin="0,0,130,0"
+                Width="120" Height="40"
+                Style="{StaticResource AnimatedRedButton}"
                 Click="btnUpdate_Click">
-            <Button.Effect>
-                <DropShadowEffect/>
-            </Button.Effect>
+            
         </Button>
 
     </Grid>

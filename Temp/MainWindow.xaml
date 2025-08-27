@@ -15,11 +15,10 @@
     Width="1900"
     Height="1050"
     WindowStyle="None"
-    Closing="MetroWindow_Closing"
-    Icon="flexmold.ico"
-    ResizeMode="CanResizeWithGrip"
+    Closing="MetroWindow_Closing"    
+    Icon="flexmold.ico"    
     WindowStartupLocation="CenterScreen"
-    mc:Ignorable="d" Background="#FF510A32">
+    mc:Ignorable="d">
     <Window.Resources>
         <ResourceDictionary>
             <ObjectDataProvider
@@ -76,6 +75,16 @@
             </Style>
         </ResourceDictionary>
     </Window.Resources>
+    <mah:MetroWindow.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FFEE4540"/>
+            <GradientStop Color="#FF2D142C" Offset="1"/>
+            <GradientStop Color="#FF510A32" Offset="0.565"/>
+            <GradientStop Color="#FFC72C41" Offset="0.157"/>
+            <GradientStop Color="#FF801336" Offset="0.365"/>
+            <GradientStop Color="#FF670E33" Offset="0.426"/>
+        </LinearGradientBrush>
+    </mah:MetroWindow.Background>
     <!--<mah:MetroWindow.DataContext>
         <viewmodel:MainViewModel />
     </mah:MetroWindow.DataContext>-->
@@ -98,70 +107,38 @@
     </mah:MetroWindow.RightWindowCommands>
     <materialDesignMahApps:DialogHost DialogTheme="Inherit" Identifier="RootDialog">
         <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="464*"/>
+                <ColumnDefinition Width="11*"/>
+            </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="*" />
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
 
-            <mah:MetroAnimatedSingleRowTabControl x:Name="MainTabControl" Grid.Row="1" Background="#FF510A32">
-                <TabItem Header="AccountingMain" Foreground="White">
+            <mah:MetroAnimatedSingleRowTabControl x:Name="MainTabControl" Grid.Row="1" Grid.ColumnSpan="2">
+                <mah:MetroAnimatedSingleRowTabControl.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </mah:MetroAnimatedSingleRowTabControl.Background>
+                <TabItem Foreground="White" Header="AccountingMain" BorderBrush="#CCFFFFFF">
+                    <TabItem.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FFEE4540"/>
+                        </LinearGradientBrush>
+                    </TabItem.Background>
                     <ScrollViewer
                         Margin="2"
                         HorizontalScrollBarVisibility="Auto"
                         VerticalScrollBarVisibility="Auto">
-                        <View:AccountingView />
+                        <View:MasterTransaction_Click Width="1900" />
                     </ScrollViewer>
                 </TabItem>
-                <TabItem Header="Home">
-                    <ScrollViewer
-                        Margin="2"
-                        HorizontalScrollBarVisibility="Auto"
-                        VerticalScrollBarVisibility="Auto">
-                        <View:HomeView />
-                    </ScrollViewer>
-                </TabItem>
-                <TabItem Header="Settings">
-                    <ScrollViewer
-                        Margin="2"
-                        HorizontalScrollBarVisibility="Auto"
-                        VerticalScrollBarVisibility="Auto">
-                        <View:SettingView />
-                    </ScrollViewer>
-                </TabItem>
-                <TabItem Header="Projects">
-                    <ScrollViewer
-                        Margin="2"
-                        HorizontalScrollBarVisibility="Auto"
-                        VerticalScrollBarVisibility="Auto">
-                        <View:ProjectView />
-                    </ScrollViewer>
-                </TabItem>
-                <TabItem Header="Accessories">
-                    <ScrollViewer
-                        Margin="2"
-                        HorizontalScrollBarVisibility="Auto"
-                        VerticalScrollBarVisibility="Auto">
-                        <View:AccessoryView />
-                    </ScrollViewer>
-                </TabItem>
-                <TabItem Header="Machine Test">
-                    <ScrollViewer
-                        Margin="2"
-                        HorizontalScrollBarVisibility="Auto"
-                        VerticalScrollBarVisibility="Auto">
-                        <View:MachineTestView />
-                    </ScrollViewer>
-                </TabItem>
-            </mah:MetroAnimatedSingleRowTabControl>
 
-            <nlogviewer:NlogViewer
-                x:Name="logCtrl"
-                Grid.Row="2"
-                LevelWidth="Auto"
-                LoggerNameWidth="Auto"
-                MessageWidth="480"
-                TimeWidth="AUTO" />
+            </mah:MetroAnimatedSingleRowTabControl>
         </Grid>
     </materialDesignMahApps:DialogHost>
 </mah:MetroWindow>

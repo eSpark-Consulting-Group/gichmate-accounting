@@ -7,7 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:viewmodel="clr-namespace:FlexMold.MVVM.ViewModel"
     xmlns:Project="clr-namespace:FlexMold.MVVM.View.Project"
-    x:Class="FlexMold.MVVM.View.AccountingView"
+    x:Class="FlexMold.MVVM.View.MasterTransaction_Click"
     Height="1000" Width="1850"
     mc:Ignorable="d">
 
@@ -32,6 +32,9 @@
                              Storyboard.TargetProperty="Width"
                              To="60" Duration="0:0:0.3"/>
         </Storyboard>
+
+        
+       
     </UserControl.Resources>
 
     <Grid>
@@ -80,16 +83,8 @@
                 FontSize="17"
                 FontFamily="Fonts/#myfont"
                 FontWeight="UltraLight"
-                RenderTransformOrigin="0.5,0.5" Height="38" Width="134">
-
-                <Button.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </Button.RenderTransform>
+                Style="{StaticResource Animation}"
+                RenderTransformOrigin="0.5,0.5" Height="38" Width="134">             
             </Button>
 
             <Button Content="  MENU  "
@@ -101,15 +96,8 @@
                  HorizontalAlignment="Center"
                  FontSize="17"
                  FontFamily="Fonts/#myfont"
-                 FontWeight="UltraLight" RenderTransformOrigin="0.5,0.5" Height="38" Width="82">
-                <Button.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </Button.RenderTransform>
+                 Style="{StaticResource Animation}"   
+                 FontWeight="UltraLight" Height="38" Width="82">               
             </Button>
 
             <Button x:Name="TopBarAccountsButton"
@@ -121,7 +109,8 @@
                     HorizontalAlignment="Center"
                     FontSize="17"
                     FontFamily="Fonts/#myfont"
-                    FontWeight="UltraLight"                   
+                    FontWeight="UltraLight"         
+                    Style="{StaticResource Animation}"
                     Click="TopBarAccountsButton_Click"
                     
                     Width="128" Margin="0,2,0,2">
@@ -180,6 +169,7 @@
                     FontFamily="Fonts/#myfont"
                     FontWeight="UltraLight"        
                     RenderTransformOrigin="0.5,0.5"
+                    Style="{StaticResource Animation}"
                     Margin="0,-1,0,-1" Width="110" Click="TopBarReportsButton_Click">
                 <Button.ContextMenu>
                     <ContextMenu x:Name="ReportsContextMenu" >
@@ -221,22 +211,24 @@
                     FontSize="17"                   
                     FontFamily="Fonts/#myfont"
                     FontWeight="UltraLight"        
-                    RenderTransformOrigin="0.5,0.5" Width="110" Click="TopBarMasterButton_Click" Height="38" VerticalAlignment="Center" Grid.ColumnSpan="3" Margin="0,0,95,0">
+                    Style="{StaticResource Animation}"
+                    Width="110" Click="TopBarMasterButton_Click" Height="38" VerticalAlignment="Center" Grid.ColumnSpan="3" Margin="0,0,95,0">
                 <Button.ContextMenu>
                     <ContextMenu x:Name="MasterContextMenu" >
                         <MenuItem Header="Ledger and Account Groups" IsEnabled="False"/>
                         <Separator/>
                         <MenuItem Header="Accounts Group"  Click="MasterGroupButton_click"/>
                         <MenuItem Header="Accounts Ledger" Click="MasterLedgerButton_click"/>
-                        <MenuItem Header="Single Journal Entry" Click="MasterJournalEntryButton_Click"/>
-                        <MenuItem Header="Double Journal Entries" Click="MasterDoubleJournalEntries_Click"/>
-                        <MenuItem Header="Expense Account" Click="MasterExpenseButton_click"/>
                         <MenuItem Header="Bank"            Click="MasterBankButton_click"/>
                         <MenuItem Header="Balance Sheet"   Click="MasterBalanceSheetButton_click"/>
+                        <MenuItem Header="Double Journal Entries" Click="MasterDoubleJournalEntries_Click"/>
+                        <MenuItem Header="Expense Account" Click="MasterExpenseButton_click"/>
+                        <MenuItem Header="Transaction Without Inventory" Click="MasterTransactionButton_Click"/>
+                        <MenuItem Header="Single Journal Entry" Click="MasterJournalEntryButton_Click"/>                                           
+
                     </ContextMenu>
                 </Button.ContextMenu>
             </Button>
-
 
 
 
@@ -249,17 +241,9 @@
                     HorizontalAlignment="Center"
                     FontSize="17"
                     FontFamily="Fonts/#myfont"
-                    FontWeight="UltraLight"                    
-                    RenderTransformOrigin="0.5,0.5" Height="32" Width="90">
-
-                <Button.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </Button.RenderTransform>
+                    FontWeight="UltraLight"   
+                    Style="{StaticResource Animation}"
+                    Height="32" Width="90">
             </Button>
 
             <Button Content="  ADMIN SETTINGS  "
@@ -271,15 +255,9 @@
                      FontSize="17"
                     FontFamily="Fonts/#myfont"
                     FontWeight="UltraLight"                    
-                    RenderTransformOrigin="0.5,0.5" Width="NaN" Height="34" Click="Button_Click" Margin="9,0,3,0" >
-                <Button.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform Angle="0.126"/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </Button.RenderTransform>
+                    Width="NaN" Height="34" Click="Button_Click" 
+                    Margin="9,0,3,0" 
+                    Style="{StaticResource Animation}">                
             </Button>
 
 
@@ -340,25 +318,6 @@
                     BorderThickness="0" 
                     FontSize="15" 
                     RenderTransformOrigin="0.5,0.5" Margin="5,0,5,0" Click="Button_Click_1">
-
-                <Button.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </Button.RenderTransform>
-            </Button>
-            <Button x:Name="btn_Login" Content="Main Menu" 
-                    Grid.Column="17"
-                    Foreground="White" 
-                    FontSize="14" FontWeight="Medium"
-                    Background="#FF801336"
-                    BorderThickness="0" 
-                    Width="92" 
-                  
-                    RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" Margin="0,0,0,-2">
 
                 <Button.RenderTransform>
                     <TransformGroup>

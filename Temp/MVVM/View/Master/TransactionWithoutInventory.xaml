@@ -1,0 +1,22 @@
+﻿<Window x:Class="FlexMold.MVVM.View.Master.TransactionWithoutInventory"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FlexMold.MVVM.View.Master"
+        mc:Ignorable="d"
+        Title="TransactionWithoutInventory" Height="800" Width="1250">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FFEE4540"/>
+                <GradientStop Color="#FF2D142C" Offset="1"/>
+                <GradientStop Color="#FF510A32" Offset="0.565"/>
+                <GradientStop Color="#FFC72C41" Offset="0.157"/>
+                <GradientStop Color="#FF801336" Offset="0.365"/>
+                <GradientStop Color="#FF670E33" Offset="0.426"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+
+    </Grid>
+</Window>

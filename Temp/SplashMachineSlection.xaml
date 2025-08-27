@@ -69,7 +69,7 @@
                 FontSize="30"
                 FontWeight="Light"
                 Foreground="{DynamicResource MahApps.Brushes.ThemeForeground}"
-                Text="Please Select Machine First" Grid.ColumnSpan="2" />
+                Text="Please Select Enter" Grid.ColumnSpan="2" />
             <ItemsControl
                 x:Name="MyItems"
                 Grid.Column="1"
@@ -101,39 +101,7 @@
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
             </ItemsControl>
-            <mah:MetroProgressBar
-                Grid.Row="3"
-                Grid.Column="1"
-                Height="25"
-                Value="{Binding ProgressPercentage}" Grid.ColumnSpan="2" Margin="2,21,2,21" />
-            <Button
-                Grid.Row="3"
-                Grid.Column="0"
-                Margin="10,10,10,10"
-                Command="{Binding CloseButtonCommand}">
-                <Button.Effect>
-                    <DropShadowEffect/>
-                </Button.Effect>
-                <StackPanel Orientation="Horizontal">
-                    <iconPacks:PackIconMaterial Margin="6" Kind="CloseBox" />
-                    <TextBlock VerticalAlignment="Center" Text="Close" />
-                </StackPanel>
-            </Button>
-            <Button
-                Grid.Row="3"
-                Grid.Column="3"
-                Margin="10,10,10,10"
-                AutomationProperties.AutomationId="SP_Close"
-                Command="{Binding RunButtonCommand}"
-                IsEnabled="{Binding RunButtonEnable}">
-                <Button.Effect>
-                    <DropShadowEffect/>
-                </Button.Effect>
-                <StackPanel Orientation="Horizontal" mah:ScrollViewerHelper.IsHorizontalScrollWheelEnabled="True">
-                    <iconPacks:PackIconMaterial Margin="6" Kind="Play" />
-                    <TextBlock VerticalAlignment="Center" Text="Run" />
-                </StackPanel>
-            </Button>
+            
         </Grid>
     </materialDesignMahApps:DialogHost>
 </mah:MetroWindow>
