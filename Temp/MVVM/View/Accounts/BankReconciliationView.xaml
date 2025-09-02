@@ -1,5 +1,4 @@
-﻿<!-- BankReconciliationView.xaml -->
-<UserControl x:Class="FlexMold.MVVM.View.Accounts.BankReconciliationView"
+﻿<UserControl x:Class="FlexMold.MVVM.View.Accounts.BankReconciliationView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -9,8 +8,8 @@
              BorderThickness="3" 
              BorderBrush="White"
              mc:Ignorable="d" 
-             Height="700" Width="1200">
-
+             Loaded="UserControl_Loaded"
+             Height="640" Width="1300">
 
     <Control.Background>
         <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
@@ -26,41 +25,49 @@
     <Grid Margin="10,20,4,10">
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="40"/>
-            <RowDefinition Height="100"/>
+            <RowDefinition Height="43"/>
+            <RowDefinition Height="50"/>
             <RowDefinition Height="450"/>
-            <RowDefinition Height="50"/>            
+            <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Grid.Row="0"
-                   HorizontalAlignment="Left" 
-                   Height="40" 
-                   TextWrapping="Wrap" FontSize="30"
-                   Text="Bank Reconciliation" Foreground="White" FontWeight="Bold" 
-                   VerticalAlignment="Center" Width="336"/>
+        <StackPanel Grid.Row="0" Orientation="Horizontal">
+            <TextBlock HorizontalAlignment="Left" 
+                       Height="40" 
+                       TextWrapping="Wrap" FontSize="30"
+                       Text="Bank Reconciliation" Foreground="White" FontWeight="Bold" 
+                       VerticalAlignment="Center" Width="336"/>
 
+            <Button Content="X" 
+                    FontSize="20"
+                    Width="40"
+                    Style="{StaticResource AnimatedRedButton}"
+                    Background="ForestGreen"
+                    Click="Close_Click"
+                    Margin="890,0,0,0" />
+            
+        </StackPanel>
 
         <StackPanel Grid.Row="1" Orientation="Horizontal" Grid.ColumnSpan="3">
             <Label Content="Bank Account : " VerticalAlignment="Center"/>
             <ComboBox x:Name="cmbBankAccount"
-                      VerticalAlignment="Center" Width="300" Height="40" VerticalContentAlignment="Center">
-
+                      VerticalAlignment="Center" 
+                      Width="300" 
+                      Height="30"
+                      VerticalContentAlignment="Center">
                 <ComboBoxItem Content="BANK ACCOUNT"/>
-
             </ComboBox>
 
-
-            <Label Content="Date: " 
-                   VerticalAlignment="Center" 
-                   Margin="50,0,0,0"/>
+            <Label Content="Date: " VerticalAlignment="Center" Margin="50,0,0,0"/>
             <DatePicker x:Name="dpDate"
                         VerticalAlignment="Center" 
-                        Width="300" Height="40" 
+                        Width="300" 
+                        Height="30" 
                         VerticalContentAlignment="Center"/>
 
             <Button x:Name="btnLoad"
                     Style="{StaticResource AnimatedRedButton}" 
-                    VerticalAlignment="Center" Width="120" Height="40" Margin="50,0,0,0" 
+                    VerticalAlignment="Center" Width="90" Height="35" Margin="50,0,0,0" 
                     Foreground="White"                  
                     Content="Load"
                     Background="ForestGreen"
@@ -78,40 +85,36 @@
           HeadersVisibility="All"
           CanUserAddRows="False"
           CanUserDeleteRows="False"
-          FontSize="14"
-          FontWeight="ExtraBold"
-          IsReadOnly="False">
+          FontSize="12"
+          IsReadOnly="False"  
+          AutoGeneratingColumn="BankReconciliationDataGrid_AutoGeneratingColumn">
             <DataGrid.Columns>
                 <!-- Hidden column for VchrId -->
-                <DataGridTextColumn Header="VchrId" Binding="{Binding VchrId}" Visibility="Collapsed"/>
-                <DataGridTextColumn Header="SL" Width="40" Binding="{Binding SL}" IsReadOnly="True"/>
-                <DataGridTextColumn Header="INV No" Width="80" Binding="{Binding InvoiceNo}" IsReadOnly="True"/>
-                <DataGridTextColumn Header="Invoice Type" Width="140" Binding="{Binding InvoiceType}" IsReadOnly="True"/>
-                <DataGridTextColumn Header="Particulars" Width="170" Binding="{Binding Particulars}" IsReadOnly="True"/>
-                <DataGridTextColumn Header="Invoice Date" Width="170" Binding="{Binding InvoiceDate, StringFormat=d}" IsReadOnly="True"/>
-                <DataGridTextColumn Header="Bank Date" Width="130" 
-                            Binding="{Binding BankDate, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                <DataGridTextColumn Header="Debit" Width="150" Binding="{Binding Debit}" IsReadOnly="True"/>
-                <DataGridTextColumn Header="Credit" Width="150" Binding="{Binding Credit}" IsReadOnly="True"/>
-                <DataGridTextColumn Header="Remarks" Width="*" Binding="{Binding Remarks}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="VchrId" Binding="{Binding [VchrId]}" Visibility="Collapsed"/>
+               
+                <DataGridTextColumn Header="SL" Width="40" Binding="{Binding [SL]}" IsReadOnly="True"/>
+                
+                <DataGridTextColumn Header="INV No" Width="80" Binding="{Binding [InvoiceNo]}" IsReadOnly="True"/>
+                
+                <DataGridTextColumn Header="Invoice Type" Width="140" Binding="{Binding [InvoiceType]}" IsReadOnly="True"/>
+                
+                <DataGridTextColumn Header="Particulars" Width="170" Binding="{Binding [Particulars]}" IsReadOnly="True"/>
+                
+                <DataGridTextColumn Header="Invoice Date" Width="170" Binding="{Binding [InvoiceDate], StringFormat=d}" IsReadOnly="True"/>
+                
+                <DataGridTextColumn Header="Bank Date" Width="130" Binding="{Binding [BankDate], Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                
+                <DataGridTextColumn Header="Debit" Width="150" Binding="{Binding [Debit]}" IsReadOnly="True"/>
+                
+                <DataGridTextColumn Header="Credit" Width="150" Binding="{Binding [Credit]}" IsReadOnly="True"/>
+                
+                <DataGridTextColumn Header="Remarks" Width="*" Binding="{Binding [Remarks]}" IsReadOnly="True"/>
+            
             </DataGrid.Columns>
         </DataGrid>
 
 
-
-        <!-- Update Button -->
-        <Button x:Name="btnUpdate"
-                Grid.Row="3" 
-                Content="Update" 
-                FontSize="20"                
-                Background="ForestGreen" 
-                HorizontalAlignment="Right"
-                Margin="0,0,130,0"
-                Width="120" Height="40"
-                Style="{StaticResource AnimatedRedButton}"
-                Click="btnUpdate_Click">
-            
-        </Button>
+        <StackPanel Grid.Row="3" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,10,0"/>
 
     </Grid>
 </UserControl>

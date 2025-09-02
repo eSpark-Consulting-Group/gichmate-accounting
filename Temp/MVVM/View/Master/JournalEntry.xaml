@@ -7,8 +7,7 @@
         mc:Ignorable="d"
         ResizeMode="NoResize"
         WindowStartupLocation="Manual"
-        Title="JournalEntry" Height="450" Width="1000">
-
+        Title="JournalEntry" Height="400" Width="900">
 
     <Window.Resources>
         <Style TargetType="StackPanel" x:Key="StackPanelJournalEntry">
@@ -21,11 +20,7 @@
             <Setter Property="VerticalAlignment" Value="Center"/>
             <Setter Property="Foreground" Value="White"/>
         </Style>
-
-
     </Window.Resources>
-
-
 
     <Grid>
         <Grid.Background>
@@ -39,7 +34,6 @@
             </LinearGradientBrush>
         </Grid.Background>
 
-
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
             <RowDefinition Height="70"/>
@@ -50,138 +44,108 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-
-
-
         <StackPanel Grid.Row="0"
                     Style="{StaticResource StackPanelJournalEntry}">
-
             <Label Content="Journal Entry"
                    Style="{StaticResource LabelJournalEntry}"
                    FontSize="25"
                    FontWeight="Bold"/>
         </StackPanel>
 
-
         <StackPanel Grid.Row="1"
                     HorizontalAlignment="Center"
-                    Style="{StaticResource StackPanelJournalEntry}" Height="50" Margin="0,0,0,10" VerticalAlignment="Bottom"
-                    >
-
-            <Label Content="Voucher No : "                   
-                   Style="{StaticResource LabelJournalEntry}"
-                    />
+                    Style="{StaticResource StackPanelJournalEntry}" Height="50" Margin="0,0,0,10" VerticalAlignment="Bottom">
+            <Label Content="Voucher No : " Style="{StaticResource LabelJournalEntry}"/>
+            
             <mah:NumericUpDown x:Name="VoucherNoBox" Width="200"
-                               Height="40"
+                               Height="30"
                                FontSize="14"
                                VerticalAlignment="Center"
                                VerticalContentAlignment="Center"/>
-
-            <Label Content="Date : "
-                   Margin="50,0,0,0"
-                   Style="{StaticResource LabelJournalEntry}"/>
-
-            <DatePicker x:Name="DatePickBox" Height="40"
+            <Label Content="Date : " Margin="50,0,0,0" Style="{StaticResource LabelJournalEntry}"/>
+          
+            <DatePicker x:Name="DatePickBox" Height="30"
                         Width="200"
                         VerticalAlignment="Center"
                         VerticalContentAlignment="Center"/>
-
         </StackPanel>
-
 
         <StackPanel Grid.Row="2"
                     Style="{StaticResource StackPanelJournalEntry}" VerticalAlignment="Top" Height="60" Grid.RowSpan="2">
-
-
-            <Label Content="Debit"
-                   Margin="580,0,0,0"
-                   Style="{StaticResource LabelJournalEntry}"/>
-
-            <Label Content="Credit"
-                   Margin="180,0,0,0"
-                   Style="{StaticResource LabelJournalEntry}"/>
+            <Label Content="Debit" Margin="580,0,0,0" Style="{StaticResource LabelJournalEntry}"/>
+            <Label Content="Credit" Margin="140,0,0,0" Style="{StaticResource LabelJournalEntry}"/>
         </StackPanel>
-
-
 
         <StackPanel Grid.Row="3"
                     HorizontalAlignment="Center"
                     Style="{StaticResource StackPanelJournalEntry}">
-
-            <Label Content="Party Account : "
+             
+            <Label Content="Party Account : " 
                    Style="{StaticResource LabelJournalEntry}"/>
-
+            
             <ComboBox x:Name="PartyAccountBox" Width="250"
                       Height="30"
                       VerticalAlignment="Center"
                       VerticalContentAlignment="Center"/>
-
-            <Label Content="Amount : "
-                   Margin="50,0,0,0"
-                   Style="{StaticResource LabelJournalEntry}"/>
-
-            <TextBox x:Name="DebitAmountBox" Text="0.00"
-                     Width="200"
+            
+            <Label Content="Amount : " Margin="50,0,0,0" Style="{StaticResource LabelJournalEntry}"/>
+            
+            <TextBox x:Name="DebitAmountBox" 
+                     PreviewTextInput="DebitAmountBox_TextPreviewInput"
+                     Text="0.00"
+                     Width="150"
                      Height="30"
                      VerticalAlignment="Center"
-                     VerticalContentAlignment="Center"/>
-
-            <TextBox x:Name="CreditAmountBox" Text="0.00"
-                     Width="200"
+                     VerticalContentAlignment="Center" 
+                     />
+            
+            <TextBox x:Name="CreditAmountBox" 
+                     PreviewTextInput="CreditAmountBox_TextPreviewInput"
+                     Text="0.00"
+                     Width="150"
                      Height="30"
                      Margin="20,0,0,0"
                      VerticalAlignment="Center"
-                     VerticalContentAlignment="Center"/>
-
+                     VerticalContentAlignment="Center" 
+                     />
         </StackPanel>
-
 
         <StackPanel Grid.Row="4"
                     HorizontalAlignment="Center"
                     Style="{StaticResource StackPanelJournalEntry}">
-
+            
             <Label Content=" Narration : "
                    Style="{StaticResource LabelJournalEntry}"/>
-
-            <TextBox x:Name="NarrationBox" Width="840"
+            
+            <TextBox x:Name="NarrationBox" Width="740"
                      Height="30"
                      VerticalAlignment="Center"
                      VerticalContentAlignment="Center"/>
-
         </StackPanel>
-
-
 
         <StackPanel Grid.Row="6"
                     Style="{StaticResource StackPanelJournalEntry}"
                     HorizontalAlignment="Right"
                     Margin="0,0,50,0">
-
-            <StackPanel Style="{StaticResource StackPanelJournalEntry}"
-                        >
+            <StackPanel Style="{StaticResource StackPanelJournalEntry}">
+                
                 <Button Content="Save"
+                        x:Name="SaveButton"
+                        Click="SaveButton_Click"
                         FontSize="15"
-                        Width="90"
-                        Height="45"
+                        Width="80"
+                        Height="35"
                         Background="ForestGreen"
                         Style="{StaticResource AnimatedRedButton}"/>
-
+                
                 <Button Content="Clear"
+                        x:Name="ClearButton"
                         FontSize="15"
-                        Width="90"
-                        Height="45"
+                        Width="80"
+                        Height="35"
                         Background="ForestGreen"
                         Style="{StaticResource AnimatedRedButton}" Click="ClearButton_Click"/>
             </StackPanel>
-
         </StackPanel>
-
-
-
-
-
-
-
-
     </Grid>
 </Window>

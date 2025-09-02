@@ -122,21 +122,28 @@
 
             
             <StackPanel Orientation="Horizontal" Height="30">
+                
                 <Label Margin="13,0,0,0"
                        VerticalAlignment="Center"
                        Content="Opening Balance :"
                        FontSize="14"/>
+                
                 <TextBox x:Name="OpeningBalanceTextBox" Margin="10,0,0,0"
                          VerticalAlignment="Center"
                          Height="25"
                          Text="0"
                          Width="200"
-                         VerticalContentAlignment="Center"/>
+                         VerticalContentAlignment="Center" 
+                         PreviewTextInput="BankOpeningBalance_TextPreviewInput"/>
+               
                 <ComboBox x:Name="DrCrComboBox" Margin="17,0,0,0" Width="100"
                           Height="25" VerticalAlignment="Center"
                           VerticalContentAlignment="Center">
+                    
                     <ComboBoxItem IsSelected="True" Content="DR" />
+                    
                     <ComboBoxItem Content="CR"/>
+                
                 </ComboBox>
                 <CheckBox x:Name="ActiveCheckbox"  Margin="17,0,0,0" Content="Active"
                           FontSize="14" Width="96"/>

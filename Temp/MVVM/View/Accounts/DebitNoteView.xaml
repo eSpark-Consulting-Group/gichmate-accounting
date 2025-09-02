@@ -9,6 +9,7 @@
     xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
     BorderThickness="3"
     BorderBrush="White"
+    Loaded="UserControl_Loaded"
     Height="900"
     Width="1123"
     mc:Ignorable="d">
@@ -35,11 +36,7 @@
                 <GradientStop Color="#FF670E33" Offset="0.426"/>
             </LinearGradientBrush>
         </Grid.Background>
-
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="613*"/>
-            <ColumnDefinition Width="501*"/>
-        </Grid.ColumnDefinitions>
+       
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" MinHeight="28"/>
             <RowDefinition Height="Auto" MinHeight="0"/>
@@ -92,22 +89,26 @@
             
             <Button x:Name="btnSave"   
                     Style="{StaticResource AnimatedRedButton}" 
-                    Content="Save"   
+                    Content="Save" 
+                    Background="ForestGreen"
                     Click="btnSave_Click"/>
             
             <Button x:Name="btnEdit"   
                     Style="{StaticResource AnimatedRedButton}" 
-                    Content="Edit"   
+                    Content="Edit"  
+                    Background="ForestGreen"
                     Click="btnEdit_Click"/>
             
             <Button x:Name="btnDelete" 
                     Style="{StaticResource AnimatedRedButton}" 
                     Content="Delete" 
+                    Background="ForestGreen"
                     Click="btnDelete_Click"/>
             
             <Button x:Name="btnClear"  
                     Style="{StaticResource AnimatedRedButton}" 
                     Content="Clear"  
+                    Background="ForestGreen"
                     Click="btnClear_Click"/>
             
         </StackPanel>
@@ -183,7 +184,7 @@
                      RenderTransformOrigin="0.594,0.542"/>
         </StackPanel>
 
-        
+        <StackPanel Orientation="Horizontal">
         <TextBlock HorizontalAlignment="Left"
                    Height="36" 
                    Margin="0,-12,0,0"
@@ -195,7 +196,16 @@
                    VerticalAlignment="Top" 
                    Width="194"/>
 
-        
+            <Button Content="X" 
+                    FontSize="20"
+                    Width="40"
+                    Style="{StaticResource AnimatedRedButton}"
+                    Background="ForestGreen"
+                    Click="Close_Click"
+                    Margin="850,0,0,0" />
+
+        </StackPanel>
+
         <StackPanel Orientation="Horizontal" Margin="609,141,91,225" Grid.Row="3" Grid.ColumnSpan="2">
         
             <TextBlock Text="Date :" 
@@ -265,9 +275,13 @@
         </StackPanel>
 
         
-        <StackPanel Grid.Column="1" Margin="61,254,22,10" Grid.Row="3" Grid.RowSpan="2">
+        <StackPanel Margin="660,254,22,10" Grid.Row="3">
             
-            <Button Content="..." Click="ToggleFields_Click" Margin="0,0,0,10" Width="54" HorizontalAlignment="Left" Background="White"/>
+            <Button Content="..." 
+                    Click="ToggleFields_Click"
+                    Width="54"
+                    HorizontalAlignment="Left" 
+                    Background="White"/>
             
             <StackPanel Name="FieldContainer" Visibility="Collapsed">
                 

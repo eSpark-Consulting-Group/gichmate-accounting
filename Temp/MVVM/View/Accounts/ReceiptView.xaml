@@ -7,6 +7,7 @@
              xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
              mc:Ignorable="d"            
              BorderThickness="3" 
+             Loaded="UserControl_Loaded"
              BorderBrush="White"
              Height="907" Width="1400">
 
@@ -37,8 +38,25 @@
 
             <Label Content="Receipt View" FontSize="35" FontWeight="Bold"/>
 
-            <Label Content="Date :" FontSize="20" VerticalAlignment="Center" Margin="100,0,0,0"/>
-            <DatePicker Width="350" Height="40" VerticalAlignment="Center" VerticalContentAlignment="Center" FontSize="20" Margin="10,0,0,0"/>
+            <Label Content="Date :" 
+                   FontSize="20" 
+                   VerticalAlignment="Center" 
+                   Margin="100,0,0,0"/>
+            
+            <DatePicker Width="350" 
+                        Height="40" 
+                        VerticalAlignment="Center" 
+                        VerticalContentAlignment="Center" 
+                        FontSize="20" 
+                        Margin="10,0,0,0"/>
+
+            <Button Content="X" 
+                    FontSize="20"
+                    Width="40"
+                    Style="{StaticResource AnimatedRedButton}"
+                    Background="ForestGreen"
+                    Click="Close_Click"
+                    Margin="580,0,0,0" />   
         </StackPanel>
 
         <StackPanel Grid.Row="1" Orientation="Horizontal" VerticalAlignment="Center">
@@ -86,16 +104,14 @@
                      Height="40" 
                      VerticalAlignment="Center"
                      VerticalContentAlignment="Center"/>
-           
- <Button  Content="Load" 
+
+            <Button  Content="Load" 
                      VerticalAlignment="Center" 
-                     FontSize="20" 
-                     Height="40"
-                     Width="100" 
-                     Margin="100,0,0,10"
+                     Background="ForestGreen"
+                     Margin="190,0,0,10"
                      Foreground="white" 
                      Style="{StaticResource AnimatedRedButton}"
-                     Background="#FF6F0404">
+                     >
                 <Button.Effect>
                     <DropShadowEffect/>
                 </Button.Effect>
@@ -142,22 +158,17 @@
             <TextBox Text="0.00" Width="200" Height="42" VerticalAlignment="Center" VerticalContentAlignment="Center"/>
 
             
-            <Button Height="40" 
-                    Width="100" 
-                    Content="Save"  
-                    FontSize="20"
+            <Button Content="Save"  
                     Margin="100,0,0,0"
                     VerticalAlignment="Center" 
-                    Background="#FF6F0404" 
+                    Background="ForestGreen" 
                     Foreground="White"
                     Style="{StaticResource AnimatedRedButton}">
                 
             </Button>
             
             
-            <Button Height="40" 
-                    Width="100" 
-                    Content="Clear" 
+            <Button Content="Clear" 
                     Margin="20,0,0,0"
                     FontSize="20"
                     Style="{StaticResource AnimatedRedButton}"

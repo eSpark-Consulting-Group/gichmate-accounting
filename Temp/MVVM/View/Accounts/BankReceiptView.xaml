@@ -7,6 +7,7 @@
              xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
              mc:Ignorable="d" 
              BorderBrush="White"
+             Loaded="UserControl_Loaded"
              BorderThickness="3"
              Height="770" Width="1200">
 
@@ -36,10 +37,20 @@
         </Grid.RowDefinitions>
 
      
-        <StackPanel Grid.Row="0" HorizontalAlignment="Left">
+        <StackPanel Grid.Row="0" HorizontalAlignment="Left" Orientation="Horizontal">
+           
             <Label Content="Bank Receipt" 
-                   FontSize="30" 
+                   FontSize="25" 
                    FontWeight="Bold"/>
+        
+            <Button Content="X" 
+                    FontSize="20"
+                    Width="40"
+                    Style="{StaticResource AnimatedRedButton}"
+                    Background="ForestGreen"
+                    Click="Close_Click"
+                    Margin="960,0,0,0" />
+            
         </StackPanel>
 
         
@@ -167,7 +178,8 @@
                      Text="0.00" 
                      Width="300" 
                      Height="30" 
-                     Margin="11,0,0,0"/>
+                     Margin="11,0,0,0"
+                     PreviewTextInput="AmountBox_TextPreviewInput"/>
             
             <CheckBox x:Name="DiscountChk" 
                       Content="    Discount : "
@@ -180,7 +192,8 @@
             <TextBox x:Name="DiscountBox" 
                      Text="0.00"
                      Width="300" 
-                     Height="30"/>
+                     Height="30" 
+                     PreviewTextInput="DiscountBox_TextPreviewInput"/>
         
         </StackPanel>
 

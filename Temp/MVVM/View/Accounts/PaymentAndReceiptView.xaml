@@ -151,69 +151,60 @@
 
 
         <StackPanel Grid.Row="7" Orientation="Horizontal" VerticalAlignment="Center">
-            <CheckBox Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5" Width="90">
-                <CheckBox.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform ScaleX="-1"/>
-                        <SkewTransform/>
-                        <RotateTransform/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </CheckBox.RenderTransform>
+            <CheckBox Content="Print While Saving"
+                      FontSize="20"
+                      Margin="180,0,0,0">
             </CheckBox>
-            <Label Content="Print while Saving" VerticalAlignment="Center" FontSize="20"/>
-            <CheckBox Width="112" Height="24" RenderTransformOrigin="0.5,0.5" >
-                <CheckBox.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform ScaleX="-1"/>
-                        <SkewTransform/>
-                        <RotateTransform/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </CheckBox.RenderTransform>
+            
+            
+            <CheckBox Width="200"
+                      Margin="50,0,0,0"
+                      Content="Mail While Saving"
+                      FontSize="20"
+                      Height="24" 
+                      >
             </CheckBox>
-            <Label Content="Mail while Saving" FontSize="20"/>
+           
 
-            <Button Content="Save" Foreground="White" FontSize="20"
-                    Width="100" Height="40" Background="#FF6F0404" VerticalAlignment="Center" Margin="40,0,0,0">
-                <Button.Effect>
-                    <DropShadowEffect/>
-                </Button.Effect>
+            <Button Content="Save" 
+                    Background="ForestGreen"
+                    Style="{StaticResource AnimatedRedButton}"
+                    Margin="70,0,0,0">
             </Button>
 
-            <Button Content="Edit" Foreground="White" FontSize="20"
-                    Width="100" Height="40" Background="#FF6F0404" VerticalAlignment="Center" Margin="10,0,0,0">
-                <Button.Effect>
-                    <DropShadowEffect/>
-                </Button.Effect>
+
+            <Button Content="Edit" 
+                    Background="ForestGreen"
+                    Style="{StaticResource AnimatedRedButton}"      
+                    Margin="10,0,0,0">
             </Button>
 
-            <Button Content="Delete" Foreground="White" FontSize="20"
-                    Width="100" Height="40" Background="#FF6F0404" VerticalAlignment="Center" Margin="10,0,0,0">
-                <Button.Effect>
-                    <DropShadowEffect/>
-                </Button.Effect>
+
+            <Button Content="Delete"                     
+                    Background="ForestGreen"
+                    Style="{StaticResource AnimatedRedButton}" 
+                    Margin="10,0,0,0">
             </Button>
 
-            <Button Content="Clear" Foreground="White" FontSize="20"
-                    Width="100" Height="40" Background="#FF6F0404" VerticalAlignment="Center" Margin="10,0,0,0">
-                <Button.Effect>
-                    <DropShadowEffect/>
-                </Button.Effect>
+
+            <Button Content="Clear"                    
+                    Background="ForestGreen"
+                    Style="{StaticResource AnimatedRedButton}"  
+                    Margin="10,0,0,0">
             </Button>
 
-            <Button Content="Print" Foreground="White" FontSize="20"
-                    Width="100" Height="40" Background="#FF6F0404" VerticalAlignment="Center" Margin="10,0,0,0">
-                <Button.Effect>
-                    <DropShadowEffect/>
-                </Button.Effect>
+
+            <Button Content="Print"                     
+                    Background="ForestGreen"
+                    Style="{StaticResource AnimatedRedButton}" 
+                    Margin="10,0,0,0">
             </Button>
 
-            <Button Content="Mail" Foreground="White" FontSize="20"
-                    Width="100" Height="40" Background="#FF6F0404" VerticalAlignment="Center" Margin="10,0,0,0">
-                <Button.Effect>
-                    <DropShadowEffect/>
-                </Button.Effect>
+
+            <Button Content="Mail"                     
+                    Background="ForestGreen"
+                    Style="{StaticResource AnimatedRedButton}"  
+                    Margin="10,0,0,0">
             </Button>
 
         </StackPanel>

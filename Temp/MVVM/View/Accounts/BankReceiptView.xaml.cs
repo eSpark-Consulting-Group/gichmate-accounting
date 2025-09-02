@@ -3,9 +3,11 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Globalization;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
+using System.Windows.Input;
 
 namespace FlexMold.MVVM.View.Accounts
 {
@@ -38,7 +40,7 @@ namespace FlexMold.MVVM.View.Accounts
                 VoucherDateBox.SelectedDate = DateTime.Today;
                 LoadAccounts();
                 LoadBankAccounts();
-                LoadEmployees();      // populates both PaidByCombo (filter) and PaidByCombo2 (entry)
+                LoadEmployees();     
                 ResetForm();
                 LoadGrid();
             }
@@ -614,9 +616,30 @@ namespace FlexMold.MVVM.View.Accounts
                 return;
             }
 
-            // switch the UI into update mode
             SaveBtn.Content = "Update";
         }
 
+        private void AmountBox_TextPreviewInput(object sender, TextCompositionEventArgs e)
+        {
+            e.Handled = !e.Text.All(char.IsDigit);
+            // this is here because it will now only allow numeric data to be enterered.
+        }
+
+
+        private void DiscountBox_TextPreviewInput(object sender, TextCompositionEventArgs e)
+        {
+            e.Handled = !e.Text.All(char.IsDigit);
+            // this is here because it will now only allow numeric data to be enterered.
+        }
+
+        private void Close_Click(object sender, RoutedEventArgs e)
+        {
+            this.Visibility = Visibility.Collapsed;
+        }
+
+        private void UserControl_Loaded(object sender, RoutedEventArgs e)
+        {
+            this.Visibility = Visibility.Visible;
+        }
     }
 }

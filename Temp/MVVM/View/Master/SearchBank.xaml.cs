@@ -144,5 +144,7 @@ namespace FlexMold.MVVM.View.Master
                 MessageBox.Show("Please select an account to delete.");
             }
         }
+
+        
     }
 }

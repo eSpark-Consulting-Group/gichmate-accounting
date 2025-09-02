@@ -1,8 +1,10 @@
-﻿using System;
+﻿using Microsoft.Data.SqlClient;
+using System;
 using System.Data;
-using Microsoft.Data.SqlClient;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 
 namespace FlexMold.MVVM.View.Master
 {
@@ -279,6 +281,11 @@ namespace FlexMold.MVVM.View.Master
                     }
                 }
             }
+        }
+
+        private void BankOpeningBalance_TextPreviewInput(object sender, TextCompositionEventArgs e)
+        {
+            e.Handled = !e.Text.All(char.IsDigit); // this is here because it will now only allow numeric data to be enterered.
         }
     }
 }

@@ -134,5 +134,18 @@ namespace FlexMold.MVVM.View
             var transactionWithoutInventory = new TransactionWithoutInventory();
             transactionWithoutInventory.Show(); 
         }
+
+        private void MasterUploadTenantsButton_Click(object sender, RoutedEventArgs e)
+        {
+            var uploadTenants = new UploadTenants();
+            uploadTenants.Show();
+        }
+
+        private void MasterUploadBank_Click(object sender, RoutedEventArgs e)
+        {
+            var uploadBankReceipts = new UploadBankReceipts();
+            uploadBankReceipts.Show();  
+
+        }
     }
 }

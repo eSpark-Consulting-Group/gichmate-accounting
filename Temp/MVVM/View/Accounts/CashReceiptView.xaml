@@ -81,37 +81,44 @@
         </DataGrid>
 
 
-        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Left" Margin="28,390,0,2" Width="546" Grid.Column="1" Grid.RowSpan="2">
-            <Button Content="Save" Width="80" Margin="5" Background="#FF6F0404" Foreground="White">
-                <Button.Effect>
-                    <DropShadowEffect/>
-                </Button.Effect>
+        <StackPanel Grid.Row="3" Orientation="Horizontal"
+                    HorizontalAlignment="Left" Margin="28,390,0,2" Width="546" Grid.Column="1" Grid.RowSpan="2">
+
+            <Button Content="Save" Background="ForestGreen"
+                    FontSize="14"
+                    Style="{StaticResource AnimatedRedButton}">
             </Button>
-            <Button Content="Edit" Width="80" Margin="5" Background="#FF6F0404" Foreground="White">
-                <Button.Effect>
-                    <DropShadowEffect/>
-                </Button.Effect>
+
+
+            <Button Content="Edit" Background="ForestGreen"
+                    FontSize="14"
+                    Style="{StaticResource AnimatedRedButton}">
             </Button>
-            <Button Content="Delete" Width="80" Margin="5" Background="#FF6F0404" Foreground="White">
-                <Button.Effect>
-                    <DropShadowEffect/>
-                </Button.Effect>
+
+
+            <Button Content="Delete" Background="ForestGreen"
+                    FontSize="14"
+                    Style="{StaticResource AnimatedRedButton}">
             </Button>
-            <Button Content="Clear" Width="80" Margin="5" Background="#FF6F0404" Foreground="White">
-                <Button.Effect>
-                    <DropShadowEffect/>
-                </Button.Effect>
+
+            <Button Content="Clear" Background="ForestGreen"
+                    FontSize="14"
+                    Style="{StaticResource AnimatedRedButton}">
             </Button>
-            <Button Content="Print" Width="80" Background="#FF6F0404" Foreground="White">
-                <Button.Effect>
-                    <DropShadowEffect/>
-                </Button.Effect>
+
+
+            <Button Content="Print" Background="ForestGreen"
+                    FontSize="14"
+                    Style="{StaticResource AnimatedRedButton}">
             </Button>
-            <Button Content="Mail" Width="80" Background="#FF6F0404" Foreground="White">
-                <Button.Effect>
-                    <DropShadowEffect/>
-                </Button.Effect>
+
+
+            <Button Content="Mail" Background="ForestGreen"
+                    FontSize="14"
+                    Style="{StaticResource AnimatedRedButton}">
             </Button>
+       
+        
         </StackPanel>
         <TextBlock HorizontalAlignment="Left" 
                    Height="22" Margin="312,107,0,0"

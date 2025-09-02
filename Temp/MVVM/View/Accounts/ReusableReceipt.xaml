@@ -10,7 +10,7 @@
         WindowStyle="ThreeDBorderWindow"
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize"
-        Height="700" 
+        Height="700"         
         BorderThickness="3" 
         BorderBrush="White"
         Width="1200" Background="#FF4A4A4A">
@@ -46,6 +46,15 @@
                        Foreground="White"
                        FontWeight="Bold"
                        />
+
+            <!--<Button Content="X" 
+                FontSize="20"
+                Width="40"
+                Style="{StaticResource AnimatedRedButton}"
+                Background="ForestGreen"
+                Click="Close_Click"
+                Margin="920,0,0,0" />-->
+            
         </StackPanel>
 
 

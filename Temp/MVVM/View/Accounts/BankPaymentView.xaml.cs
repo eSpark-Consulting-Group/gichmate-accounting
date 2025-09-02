@@ -5,8 +5,10 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Globalization;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 
 namespace FlexMold.MVVM.View.Accounts
 {
@@ -26,6 +28,7 @@ namespace FlexMold.MVVM.View.Accounts
 
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
+            this.Visibility = Visibility.Visible;
             VoucherDateBox.SelectedDate = DateTime.Today;
             LoadAccounts();
             LoadEmployees();
@@ -120,7 +123,6 @@ namespace FlexMold.MVVM.View.Accounts
                 da.Fill(dt);
             }
 
-            // Add row numbers
             var dtWithRow = dt.Clone();
             dtWithRow.Columns.Add("RowNumber", typeof(int));
             int r = 1;
@@ -134,7 +136,6 @@ namespace FlexMold.MVVM.View.Accounts
 
             dgBankPayments.ItemsSource = dtWithRow.DefaultView;
 
-            // total
             decimal total = 0m;
             foreach (DataRow row in dtWithRow.Rows)
             {
@@ -171,7 +172,6 @@ namespace FlexMold.MVVM.View.Accounts
             BankBalanceText.Text = balance.ToString("N2", CultureInfo.InvariantCulture);
         }
 
-        // Balance = SUM(DebitAmount) - SUM(CreditAmount) up to asOf date
         private decimal GetAccountBalance(int accountId, DateTime asOfDate)
         {
             using (var cn = new SqlConnection(_connStr))
@@ -226,8 +226,7 @@ namespace FlexMold.MVVM.View.Accounts
                     using (var tx = cn.BeginTransaction())
                     {
                         try
-                        {
-                            // Insert header
+                        {                           
                             int insertedVchrId;
                             using (var cmd = new SqlCommand(@"
                             INSERT INTO VchrTranLog (VchrNo, VchrDate, VchrAmount, VchrType, VchrName, SalesManId, FromAccountId, ToAccountId, TranDate, UserId, Narration, FK_BranchId, Terminal, SequenceNo)
@@ -257,7 +256,6 @@ namespace FlexMold.MVVM.View.Accounts
 
                             _currentVchrTranId = insertedVchrId;
 
-                            // Insert TransactionLog rows: Main (Credit on FromAccount), Sub (Debit on ToAccount)
                             using (var cmdMain = new SqlCommand(@"
                             INSERT INTO TransactionLog (VchrId, VchrNo, VchrType, VchrDate, AccountId, OppAccountId, DebitAmount, CreditAmount, Narration, UserID, TranDate, Status, RefNo, VchrName, FK_BranchId, SequenceNo, Terminal)
                             VALUES (@VchrId, @VchrNo, @VchrType, @VchrDate, @AccountId, @OppAccountId, @DebitAmount, @CreditAmount, @Narration, @UserID, GETDATE(), NULL, NULL, @VchrName, NULL, NULL, NULL);
@@ -325,13 +323,12 @@ namespace FlexMold.MVVM.View.Accounts
                     {
                         try
                         {
-                            // update header
                             using (var cmd = new SqlCommand(@"
-                                UPDATE VchrTranLog
-                                SET VchrNo = @VchrNo, VchrDate = @VchrDate, VchrAmount = @VchrAmount,
-                                    SalesManId = @SalesManId, FromAccountId = @FromAccountId, ToAccountId = @ToAccountId,
-                                    Narration = @Narration
-                                WHERE VchrTranId = @VchrTranId;
+                                    UPDATE VchrTranLog
+                                    SET VchrNo = @VchrNo, VchrDate = @VchrDate, VchrAmount = @VchrAmount,
+                                        SalesManId = @SalesManId, FromAccountId = @FromAccountId, ToAccountId = @ToAccountId,
+                                        Narration = @Narration
+                                    WHERE VchrTranId = @VchrTranId;
                                 ", cn, tx))
                             {
                                 cmd.Parameters.AddWithValue("@VchrTranId", _currentVchrTranId.Value);
@@ -345,17 +342,15 @@ namespace FlexMold.MVVM.View.Accounts
                                 cmd.ExecuteNonQuery();
                             }
 
-                            // delete existing transactionlog rows for this voucher
                             using (var cmdDel = new SqlCommand("DELETE FROM TransactionLog WHERE VchrId = @VchrId", cn, tx))
                             {
                                 cmdDel.Parameters.AddWithValue("@VchrId", _currentVchrTranId.Value);
                                 cmdDel.ExecuteNonQuery();
                             }
 
-                            // re-insert transaction log main and sub
-                            using (var cmdMain = new SqlCommand(@"
-                        INSERT INTO TransactionLog (VchrId, VchrNo, VchrType, VchrDate, AccountId, OppAccountId, DebitAmount, CreditAmount, Narration, UserID, TranDate, VchrName)
-                        VALUES (@VchrId, @VchrNo, @VchrType, @VchrDate, @AccountId, @OppAccountId, @DebitAmount, @CreditAmount, @Narration, @UserID, GETDATE(), @VchrName);
+                             using (var cmdMain = new SqlCommand(@"
+                            INSERT INTO TransactionLog (VchrId, VchrNo, VchrType, VchrDate, AccountId, OppAccountId, DebitAmount, CreditAmount, Narration, UserID, TranDate, VchrName)
+                            VALUES (@VchrId, @VchrNo, @VchrType, @VchrDate, @AccountId, @OppAccountId, @DebitAmount, @CreditAmount, @Narration, @UserID, GETDATE(), @VchrName);
                         ", cn, tx))
                             {
                                 cmdMain.Parameters.AddWithValue("@VchrId", _currentVchrTranId.Value);
@@ -499,8 +494,8 @@ namespace FlexMold.MVVM.View.Accounts
             {
                 using (var cn = new SqlConnection(_connStr))
                 using (var cmd = new SqlCommand(@"
-SELECT ISNULL(MAX(VchrNo),0) + 1 FROM VchrTranLog WHERE VchrType = @VchrType AND VchrName = @VchrName
-", cn))
+                    SELECT ISNULL(MAX(VchrNo),0) + 1 FROM VchrTranLog WHERE VchrType = @VchrType AND VchrName = @VchrName
+                    ", cn))
                 {
                     cmd.Parameters.AddWithValue("@VchrType", VCHR_TYPE);
                     cmd.Parameters.AddWithValue("@VchrName", VCHR_NAME);
@@ -540,10 +535,12 @@ SELECT ISNULL(MAX(VchrNo),0) + 1 FROM VchrTranLog WHERE VchrType = @VchrType AND
 
         #endregion
 
-        private void AmountBox_TextChanged(object sender, TextChangedEventArgs e)
+        private void BankPaymentAmount_TextPreviewInput(object sender, TextCompositionEventArgs e)
         {
-            // keep simple; no heavy UI logic
+            e.Handled = !e.Text.All(char.IsDigit);
+            // this is here because it will now only allow numeric data to be enterered.
         }
+
 
         private void DiscountChk_Checked(object sender, RoutedEventArgs e)
         {
@@ -559,5 +556,17 @@ SELECT ISNULL(MAX(VchrNo),0) + 1 FROM VchrTranLog WHERE VchrType = @VchrType AND
         {
 
         }
+
+        private void DiscountBox_TextPreviewInput(object sender, TextCompositionEventArgs e)
+        {
+            e.Handled = !e.Text.All(char.IsDigit);
+            // this is here because it will now only allow numeric data to be enterered.
+        }
+
+        private void Close_Click(object sender, RoutedEventArgs e)
+        {
+            this.Visibility = Visibility.Collapsed;
+        }
+               
     }
 }

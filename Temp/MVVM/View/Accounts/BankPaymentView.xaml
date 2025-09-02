@@ -9,8 +9,9 @@
              mc:Ignorable="d"
              BorderBrush="White"
              BorderThickness="3"
+             Loaded="UserControl_Loaded"
              Height="770" Width="1200"
-             Loaded="UserControl_Loaded">
+             >
 
     <Grid Margin="0,0,0,-6">
         <Grid.Background>
@@ -37,8 +38,16 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <StackPanel Grid.Row="0" HorizontalAlignment="Left">
+        <StackPanel Grid.Row="0" HorizontalAlignment="Left" Orientation="Horizontal">
             <Label Content="Bank Payment" FontSize="30" FontWeight="Bold"/>
+         
+            <Button Content="X" 
+                    FontSize="20"
+                    Width="40"
+                    Style="{StaticResource AnimatedRedButton}"
+                    Background="ForestGreen"
+                    Click="Close_Click"
+                    Margin="900,0,0,0" />
         </StackPanel>
 
         <StackPanel Grid.Row="1" VerticalAlignment="Center" Orientation="Horizontal">
@@ -184,7 +193,9 @@
                      Width="300" 
                      Height="30" 
                      Margin="11,0,0,0" 
-                     VerticalAlignment="Center" VerticalContentAlignment="Center" TextChanged="AmountBox_TextChanged"/>
+                     VerticalAlignment="Center" 
+                     VerticalContentAlignment="Center" 
+                     PreviewTextInput="BankPaymentAmount_TextPreviewInput"/>
 
 
             <CheckBox x:Name="DiscountChk" 
@@ -204,7 +215,8 @@
                      VerticalAlignment="Center"
                      VerticalContentAlignment="Center" 
                      Width="300"
-                     Height="30"/>
+                     Height="30"
+                     PreviewTextInput="DiscountBox_TextPreviewInput"/>
         </StackPanel>
 
         <StackPanel Grid.Row="7" Orientation="Horizontal" VerticalAlignment="Center">

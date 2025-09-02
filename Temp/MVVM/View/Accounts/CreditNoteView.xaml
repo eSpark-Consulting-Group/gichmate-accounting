@@ -50,26 +50,35 @@
         </DataGrid>
 
         <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Left" Margin="188,3,0,-2" Width="360">
-            <Button x:Name="btnSave" Content="Save" Width="80" Margin="5" Background="#FF6F0404" Foreground="White" Click="btnSave_Click">
-                <Button.Effect>
-                    <DropShadowEffect/>
-                </Button.Effect>
+            
+            <Button x:Name="btnSave" Content="Save" 
+                    Background="ForestGreen"
+                    FontSize="14"
+                    Style="{StaticResource AnimatedRedButton}"
+                    Click="btnSave_Click">
             </Button>
-            <Button x:Name="btnEdit" Content="Edit" Width="80" Margin="5" Background="#FF6F0404" Foreground="White" Click="btnEdit_Click">
-                <Button.Effect>
-                    <DropShadowEffect/>
-                </Button.Effect>
+            
+            <Button x:Name="btnEdit" Content="Edit" 
+                    Background="ForestGreen"
+                    FontSize="14"
+                    Style="{StaticResource AnimatedRedButton}"
+                    Click="btnEdit_Click">
             </Button>
-            <Button x:Name="btnDelete" Content="Delete" Width="80" Margin="5" Background="#FF6F0404" Foreground="White" Click="btnDelete_Click">
-                <Button.Effect>
-                    <DropShadowEffect/>
-                </Button.Effect>
+            
+            <Button x:Name="btnDelete" Content="Delete" 
+                    Background="ForestGreen"
+                    FontSize="14"
+                    Style="{StaticResource AnimatedRedButton}"
+                    Click="btnDelete_Click">
             </Button>
-            <Button x:Name="btnClear" Content="Clear" Width="80" Margin="5" Background="#FF6F0404" Foreground="White" Click="btnClear_Click">
-                <Button.Effect>
-                    <DropShadowEffect/>
-                </Button.Effect>
+        
+            <Button x:Name="btnClear" Content="Clear" 
+                    Background="ForestGreen"
+                    FontSize="14"
+                    Style="{StaticResource AnimatedRedButton}"
+                    Click="btnClear_Click">
             </Button>
+        
         </StackPanel>
 
         <Border BorderBrush="White" BorderThickness="4" Margin="-10,-20,0,4" Grid.ColumnSpan="2" />

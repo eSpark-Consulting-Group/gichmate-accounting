@@ -35,12 +35,15 @@
 
         <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center">
 
-            <Label x:Name="SearchLabel" Content="Search"
-                   FontSize="14" VerticalAlignment="Center"/>
+            <Label x:Name="SearchLabel" 
+                   Content="Search"
+                   FontSize="14"
+                   VerticalAlignment="Center"/>
 
-            <TextBox x:Name="SearchTextBox" Width="500"
+            <TextBox x:Name="SearchTextBox"
+                     Width="500"
                      Height="30"
-                     VerticalContentAlignment="Center"/>
+                     VerticalContentAlignment="Center" />
 
         </StackPanel>
 
@@ -48,13 +51,20 @@
         <StackPanel Grid.Row="3">
 
             <DataGrid x:Name="AccountsDataGrid" 
-                      Width="930" HorizontalAlignment="Center" Height="440"
+                      Width="930" 
+                      HorizontalAlignment="Center" 
+                      Height="440"
                       AutoGenerateColumns="True">
             </DataGrid>
 
         </StackPanel>
 
-        <StackPanel Grid.Row="6" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,30,0" VerticalAlignment="Center">
+        <StackPanel Grid.Row="6" 
+                    Orientation="Horizontal" 
+                    HorizontalAlignment="Right" 
+                    Margin="0,0,30,0" 
+                    VerticalAlignment="Center">
+         
             <Button Content="Select" 
                     FontSize="14"
                     Background="ForestGreen" 

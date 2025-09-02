@@ -12,6 +12,14 @@
 
 
     <Window.Resources>
+
+            <Style x:Key="CenterTextStyle" TargetType="TextBlock">
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="TextAlignment" Value="Center"/>
+            </Style>
+        
+        
         <Style TargetType="Label" x:Key="LabelJournalEntries">
             <Setter Property="FontSize" Value="15"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
@@ -67,17 +75,37 @@
 
 
         <StackPanel Grid.Row="2">
-            <DataGrid Width="1090" Height="300" FontSize="13">
+            <!-- x:Name added here only -->
+            <DataGrid x:Name="JournalDataGrid" 
+          FontSize="11"  
+          Width="1090" 
+          Height="300" 
+          AutoGenerateColumns="False"
+          SelectionMode="Single">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Width="50"  Header="SL"/>
-                    <DataGridTextColumn Width="120" Header="Voucher No"/>
-                    <DataGridTextColumn Width="120" Header="Date"/>
-                    <DataGridTextColumn Width="170" Header="From Account"/>
-                    <DataGridTextColumn Width="170" Header="To Account"/>
-                    <DataGridTextColumn Width="170" Header="Amount"/>
-                    <DataGridTextColumn Width="*" Header="Narration"/>
+                    <DataGridTextColumn Width="40" Header="SL" Binding="{Binding SL}" 
+                            ElementStyle="{StaticResource CenterTextStyle}" />
+
+                    <DataGridTextColumn Width="100" Header="Voucher No" Binding="{Binding VoucherNo}" 
+                            ElementStyle="{StaticResource CenterTextStyle}" />
+
+                    <DataGridTextColumn Width="140" Header="Date" Binding="{Binding Date}" 
+                            ElementStyle="{StaticResource CenterTextStyle}" />
+
+                    <DataGridTextColumn Width="150" Header="From Account" Binding="{Binding FromAccount}" 
+                            ElementStyle="{StaticResource CenterTextStyle}" />
+
+                    <DataGridTextColumn Width="160" Header="To Account" Binding="{Binding ToAccount}" 
+                            ElementStyle="{StaticResource CenterTextStyle}" />
+
+                    <DataGridTextColumn Width="120" Header="Amount" Binding="{Binding Amount, StringFormat={}{0:N0}}" 
+                            ElementStyle="{StaticResource CenterTextStyle}" />
+
+                    <DataGridTextColumn Width="*" Header="Narration" Binding="{Binding Narration}" 
+                            ElementStyle="{StaticResource LeftTextStyle}" />
                 </DataGrid.Columns>
             </DataGrid>
+
         </StackPanel>
 
         <StackPanel Grid.Row="3" Style="{StaticResource StackPanelJournalEntries}">
@@ -132,7 +160,8 @@
                      Height="30"
                      Text="0.00"
                      FontSize="15"
-                     VerticalContentAlignment="Center" TextChanged="TextBox_TextChanged"/>
+                     VerticalContentAlignment="Center"
+                      PreviewTextInput="Amount_TextPreviewInput"/>
         </StackPanel>
 
 
@@ -184,17 +213,17 @@
                 <Button Content="Save"
                         FontSize="15"
                         Background="ForestGreen"
-                        Style="{StaticResource AnimatedRedButton}"/>
+                        Style="{StaticResource AnimatedRedButton}" Click="SaveButton_Click"/>
 
                 <Button Content="Edit"
                         FontSize="15"
                         Background="ForestGreen"
-                        Style="{StaticResource AnimatedRedButton}"/>
+                        Style="{StaticResource AnimatedRedButton}" Click="EditButton_Click"/>
 
                 <Button Content="Delete"
                         FontSize="15"
                         Background="ForestGreen"
-                        Style="{StaticResource AnimatedRedButton}"/>
+                        Style="{StaticResource AnimatedRedButton}" Click="DeleteButton_Click"/>
 
                 <Button Content="Clear"
                         FontSize="15"
@@ -203,9 +232,6 @@
 
             </StackPanel>
         </StackPanel>
-
-
-
 
     </Grid>
 </Window>

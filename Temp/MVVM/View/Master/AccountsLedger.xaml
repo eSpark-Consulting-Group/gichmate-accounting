@@ -133,11 +133,13 @@
                        Content="Opening Balance :"
                        FontSize="14"/>
 
-                <TextBox x:Name="OpeningBalanceTextBox" Margin="10,0,0,0"
+                <TextBox x:Name="OpeningBalanceTextBox"
+                         Margin="10,0,0,0"
                          VerticalAlignment="Center"
                          Text="0" 
                          Width="200" 
-                         VerticalContentAlignment="Center"/>
+                         VerticalContentAlignment="Center"
+                         PreviewTextInput="OpeningBalance_TextPreviewInput"/>
 
                 <ComboBox x:Name="DrCrComboBox" Margin="17,0,0,0" Width="100" Height="30" VerticalAlignment="Center" VerticalContentAlignment="Center">
                     <ComboBoxItem IsSelected="True" Content="DR" />

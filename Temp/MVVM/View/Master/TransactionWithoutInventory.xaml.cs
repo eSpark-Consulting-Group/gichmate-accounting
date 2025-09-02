@@ -23,5 +23,14 @@ namespace FlexMold.MVVM.View.Master
         {
             InitializeComponent();
         }
+
+        private void TransactionAmount_TextPreviewInput(object sender, TextCompositionEventArgs e)
+        {
+            e.Handled = !e.Text.All(char.IsDigit);
+            // this is here because it will now only allow numeric data to be enterered.
+        }
+
+
+
     }
 }
