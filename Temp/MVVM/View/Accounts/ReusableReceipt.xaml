@@ -153,10 +153,8 @@
 
             <Button Margin="10,0,0,0" 
                     Style="{StaticResource AnimatedRedButton}" 
-                    Content="Update" Background="#FF3A0000" >
-                <Button.Effect>
-                    <DropShadowEffect/>
-                </Button.Effect>
+                    Content="Update" >
+               
             </Button>
         </StackPanel>
 
@@ -184,38 +182,26 @@
             
             <Button 
                 Style="{StaticResource AnimatedRedButton}" 
-                Content="Save" 
-                Background="#FF3A0000" >
-                <Button.Effect>
-                    <DropShadowEffect/>
-                </Button.Effect>
+                Content="Save"  >
+               
             </Button>
             
             <Button 
                 Style="{StaticResource AnimatedRedButton}" 
-                Content="Edit" 
-                Background="#FF3A0000" >
-                <Button.Effect>
-                    <DropShadowEffect/>
-                </Button.Effect>
+                Content="Edit"  >
+                
             </Button>
             
             <Button 
                 Style="{StaticResource AnimatedRedButton}" 
-                Content="Delete" 
-                Background="#FF3A0000" >
-                <Button.Effect>
-                    <DropShadowEffect/>
-                </Button.Effect>
+                Content="Delete" >
+               
             </Button>
             
             <Button 
                 Style="{StaticResource AnimatedRedButton}" 
-                Content="Clear" 
-                Background="#FF3A0000" >
-                <Button.Effect>
-                    <DropShadowEffect/>
-                </Button.Effect>
+                Content="Clear">
+            
             </Button>
             
         </StackPanel>

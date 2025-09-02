@@ -148,12 +148,6 @@ namespace FlexMold.MVVM.View.Master
                 GroupNameTextBox.Text = row["GroupName"].ToString();
                 UnderComboBox.Text = row["Under"].ToString();
             }
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            Close();
-        }
-
+        }          
            }
 }

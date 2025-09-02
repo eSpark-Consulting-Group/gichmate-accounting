@@ -135,7 +135,6 @@
                         FontSize="15"
                         Width="80"
                         Height="35"
-                        Background="ForestGreen"
                         Style="{StaticResource AnimatedRedButton}"/>
                 
                 <Button Content="Clear"
@@ -143,7 +142,6 @@
                         FontSize="15"
                         Width="80"
                         Height="35"
-                        Background="ForestGreen"
                         Style="{StaticResource AnimatedRedButton}" Click="ClearButton_Click"/>
             </StackPanel>
         </StackPanel>

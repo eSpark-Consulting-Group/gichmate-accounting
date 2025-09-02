@@ -42,7 +42,6 @@
                     FontSize="20"
                     Width="40"
                     Style="{StaticResource AnimatedRedButton}"
-                    Background="ForestGreen"
                     Click="Close_Click"
                     Margin="890,0,0,0" />
             
@@ -70,7 +69,6 @@
                     VerticalAlignment="Center" Width="90" Height="35" Margin="50,0,0,0" 
                     Foreground="White"                  
                     Content="Load"
-                    Background="ForestGreen"
                     FontSize="20"
                     Click="btnLoad_Click">
                 <Button.Effect>

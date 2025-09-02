@@ -388,6 +388,25 @@ namespace FlexMold.MVVM.View.Accounts
         {
             // Optional: Add selection handling if needed
         }
+
+        /// <summary>
+        /// 
+      
+
+        private void Close_Click(object sender, RoutedEventArgs e)
+        {
+            this.Visibility = Visibility.Collapsed;
+        }
+
+        private void UserControl_Loaded(object sender, RoutedEventArgs e)
+        {
+            this.Visibility = Visibility.Visible;
+        }
+
+
+
+
+        ///
     }
 
     public class Voucher

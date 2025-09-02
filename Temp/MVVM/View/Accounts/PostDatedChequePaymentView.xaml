@@ -6,6 +6,7 @@
              xmlns:local="clr-namespace:FlexMold.MVVM.View.Accounts"
              BorderThickness="3" 
              BorderBrush="White"
+             Loaded="UserControl_Loaded"
              xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"        
              mc:Ignorable="d"
              Height="900" Width="1473">
@@ -88,22 +89,22 @@
 
         <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Left" Margin="238,279,0,75" Width="360" Grid.Column="1">
 
-            <Button Content="Save" Background="ForestGreen"
+            <Button Content="Save" 
                     FontSize="14"
                     Style="{StaticResource AnimatedRedButton}">
             </Button>
 
-            <Button Content="Edit" Background="ForestGreen"
+            <Button Content="Edit" 
                     FontSize="14"
                     Style="{StaticResource AnimatedRedButton}">
             </Button>
 
-            <Button Content="Delete" Background="ForestGreen"
+            <Button Content="Delete" 
                     FontSize="14"
                     Style="{StaticResource AnimatedRedButton}">
             </Button>
 
-            <Button Content="Clear" Background="ForestGreen"
+            <Button Content="Clear"
                     FontSize="14"
                     Style="{StaticResource AnimatedRedButton}">
             </Button>
@@ -247,7 +248,6 @@
 
         <Button Grid.Column="3" 
                 Content="Export"
-                Background="ForestGreen"
                 FontSize="14"
                 Style="{StaticResource AnimatedRedButton}"
                 Margin="543,12,43,0"
@@ -259,6 +259,14 @@
             </Button.Effect>
         </Button>
         <Border BorderBrush="White" BorderThickness="2" HorizontalAlignment="Left" Height="4" Margin="-8,61,0,0" Grid.Row="3" VerticalAlignment="Top" Width="1465" Grid.ColumnSpan="4"/>
+        
+        <Button Grid.Column="3"
+                Content="X" 
+                FontSize="20"
+                Width="40"
+                Style="{StaticResource AnimatedRedButton}"
+                Click="Close_Click"
+                Height="30" Margin="596,-12,0,0" VerticalAlignment="Top" />
 
 
     </Grid>

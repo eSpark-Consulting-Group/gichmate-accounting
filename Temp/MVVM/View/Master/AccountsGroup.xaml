@@ -111,18 +111,6 @@
                    FontWeight="Bold"
                    VerticalAlignment="Center"
                    FontSize="20"/>
-
-            <Button HorizontalAlignment="Right"
-                    VerticalAlignment="Center"
-                    VerticalContentAlignment="Center"
-                    Width="60"
-                    Height="35"
-                    Margin="740,0,0,0"
-                    Content="X"
-                    Background="ForestGreen" 
-                    Style="{StaticResource AnimatedRedButton}"
-                    Click="Button_Click">
-               </Button>
         </StackPanel>
 
         <StackPanel Grid.Row="2" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
@@ -205,21 +193,18 @@
         <StackPanel Grid.Row="7" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
 
             <Button x:Name="SaveButton" 
-                    Background="ForestGreen" 
                     Content="Save"
                     FontSize="15" 
                     Style="{StaticResource AnimatedRedButton}" 
                     Click="SaveButton_Click" />
 
             <Button x:Name="DeleteButton" 
-                    Background="ForestGreen"  
                     Content="Delete"
                     FontSize="15" 
                     Style="{StaticResource AnimatedRedButton}" 
                     Click="DeleteButton_Click"/>
 
             <Button x:Name="NewButton" 
-                    Background="ForestGreen"  
                     Content="New" 
                     FontSize="15" 
                     Style="{StaticResource AnimatedRedButton}" 

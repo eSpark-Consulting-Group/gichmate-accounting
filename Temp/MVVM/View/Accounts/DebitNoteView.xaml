@@ -36,7 +36,7 @@
                 <GradientStop Color="#FF670E33" Offset="0.426"/>
             </LinearGradientBrush>
         </Grid.Background>
-       
+
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" MinHeight="28"/>
             <RowDefinition Height="Auto" MinHeight="0"/>
@@ -44,7 +44,7 @@
             <RowDefinition Height="201*"/>
             <RowDefinition Height="Auto" MinHeight="39.62"/>
         </Grid.RowDefinitions>
-        
+
         <!-- DataGrid -->
         <!-- DataGrid -->
         <!-- DataGrid -->
@@ -63,7 +63,7 @@
         <!-- DataGrid -->
         <!-- DataGrid -->
         <!-- DataGrid -->
-        
+
         <DataGrid x:Name="dgDebitNotes"
                   AutoGenerateColumns="False"
                   CanUserAddRows="False"
@@ -85,66 +85,62 @@
         </DataGrid>
 
         <!-- Action Buttons -->
-        <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Left" Margin="188,3,0,-2" Width="360">    
-            
+        <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Left" Margin="188,3,0,-2" Width="360">
+
             <Button x:Name="btnSave"   
                     Style="{StaticResource AnimatedRedButton}" 
                     Content="Save" 
-                    Background="ForestGreen"
                     Click="btnSave_Click"/>
-            
+
             <Button x:Name="btnEdit"   
                     Style="{StaticResource AnimatedRedButton}" 
                     Content="Edit"  
-                    Background="ForestGreen"
                     Click="btnEdit_Click"/>
-            
+
             <Button x:Name="btnDelete" 
                     Style="{StaticResource AnimatedRedButton}" 
                     Content="Delete" 
-                    Background="ForestGreen"
                     Click="btnDelete_Click"/>
-            
+
             <Button x:Name="btnClear"  
                     Style="{StaticResource AnimatedRedButton}" 
-                    Content="Clear"  
-                    Background="ForestGreen"
+                    Content="Clear"
                     Click="btnClear_Click"/>
-            
+
         </StackPanel>
 
-        
+
         <TextBlock HorizontalAlignment="Left" Foreground="White"
                    Height="26" Margin="802,107,0,0" FontSize="15"
                    Grid.Row="3" TextWrapping="Wrap" FontWeight="Bold"
                    Text="0.00" VerticalAlignment="Top" Width="68" Grid.Column="1"/>
 
-        
+
         <StackPanel Orientation="Horizontal" Margin="127,135,57,217" Grid.Row="3">
-            
+
             <TextBlock Text="Voucher No : " 
                        VerticalAlignment="Center"
                        FontSize="15" 
                        FontWeight="Bold"
                        Foreground="White"/>
-            
+
             <mah:NumericUpDown x:Name="numVoucherNo" 
-                               Height="33" 
+                               Height="27" 
                                Width="267" 
                                Maximum="9999" 
                                Minimum="0"/>
-       
+
         </StackPanel>
 
-        
+
         <StackPanel Orientation="Horizontal" Margin="108,192,40,170" Grid.Row="3">
-            
+
             <TextBlock Text="Party/Supplier :" 
                        FontWeight="Bold" 
                        VerticalAlignment="Center" 
                        FontSize="15" 
                        Foreground="White"/>
-            
+
             <ComboBox x:Name="cmbParty" 
                       Width="267" 
                       Margin="10,0,0,0" 
@@ -152,7 +148,7 @@
                       RenderTransformOrigin="0.594,0.542"/>
         </StackPanel>
 
-        
+
         <StackPanel Orientation="Horizontal" Margin="106,240,55,124" Grid.Row="3">
 
             <TextBlock Text="Account Name :" 
@@ -160,7 +156,7 @@
                        VerticalAlignment="Center" 
                        FontSize="15"
                        Foreground="White"/>
-            
+
             <ComboBox x:Name="cmbAccount" 
                       Width="268" 
                       Margin="10,0,0,0" 
@@ -168,15 +164,15 @@
                       RenderTransformOrigin="0.594,0.542"/>
         </StackPanel>
 
-       
+
         <StackPanel Orientation="Horizontal" Margin="142,282,65,81" Grid.Row="3">
- 
+
             <TextBlock Text="Narration :" 
                        FontWeight="Bold" 
                        VerticalAlignment="Center" 
                        FontSize="15" 
                        Foreground="White"/>
-            
+
             <TextBox x:Name="txtNarration" 
                      Width="268" 
                      Margin="10,0,0,0" 
@@ -185,7 +181,7 @@
         </StackPanel>
 
         <StackPanel Orientation="Horizontal">
-        <TextBlock HorizontalAlignment="Left"
+            <TextBlock HorizontalAlignment="Left"
                    Height="36" 
                    Margin="0,-12,0,0"
                    TextWrapping="Wrap" 
@@ -200,46 +196,45 @@
                     FontSize="20"
                     Width="40"
                     Style="{StaticResource AnimatedRedButton}"
-                    Background="ForestGreen"
                     Click="Close_Click"
                     Margin="850,0,0,0" />
 
         </StackPanel>
 
-        <StackPanel Orientation="Horizontal" Margin="609,141,91,225" Grid.Row="3" Grid.ColumnSpan="2">
-        
+        <StackPanel Orientation="Horizontal" Margin="609,141,91,222" Grid.Row="3">
+
             <TextBlock Text="Date :" 
                        FontWeight="Bold" 
                        VerticalAlignment="Center" 
                        FontSize="15" 
                        Foreground="White"/>
-            
+
             <DatePicker x:Name="dpDate" 
                         Width="300" 
                         Margin="10,0,0,0" 
                         Height="27" 
                         RenderTransformOrigin="0.594,0.542"/>
-        
+
         </StackPanel>
 
-        
+
         <StackPanel Orientation="Horizontal" Margin="506,183,181,219" Grid.Row="3" Grid.ColumnSpan="2">
-        
+
             <TextBlock Text="Cash Account :" 
                        FontWeight="Bold" 
                        VerticalAlignment="Center" 
                        FontSize="15" 
                        Foreground="White"/>
-            
+
             <ComboBox x:Name="cmbCashAccount" 
                       Width="300" 
                       Margin="10,0,0,0" 
                       Height="27" 
                       RenderTransformOrigin="0.594,0.542"/>
-        
+
         </StackPanel>
 
-        
+
         <Border BorderBrush="white" 
                 BorderThickness="4" 
                 Grid.ColumnSpan="2" 
@@ -256,51 +251,51 @@
                    Text="Search" Foreground="White" FontWeight="Light"
                    VerticalAlignment="Top" Width="194" Grid.Row="2"/>
 
-        
-        <StackPanel Orientation="Horizontal" Margin="586,188,105,178" Grid.Row="3" Grid.ColumnSpan="2">
-        
+
+        <StackPanel Orientation="Horizontal" Margin="586,188,105,170" Grid.Row="3">
+
             <TextBlock Text="Amount :"
                        FontWeight="Bold" 
                        VerticalAlignment="Center" 
                        FontSize="15" 
                        Foreground="White"/>
-            
+
             <TextBox x:Name="txtAmount" 
                      Width="300" 
                      Margin="10,0,0,0" 
                      Height="27" 
                      RenderTransformOrigin="0.594,0.542" 
                      Text="0.00"/>
-        
+
         </StackPanel>
 
-        
+
         <StackPanel Margin="660,254,22,10" Grid.Row="3">
-            
+
             <Button Content="..." 
                     Click="ToggleFields_Click"
                     Width="54"
                     HorizontalAlignment="Left" 
                     Background="White"/>
-            
+
             <StackPanel Name="FieldContainer" Visibility="Collapsed">
-                
+
                 <StackPanel Orientation="Horizontal" Margin="5">
                     <Label Content="Account Group:" Width="120" VerticalAlignment="Center"/>
                     <TextBox Name="AccountGroupTextBox" Width="150"/>
                 </StackPanel>
-                
+
                 <StackPanel Orientation="Horizontal" Margin="5">
                     <Label Content="Account:" Width="120" VerticalAlignment="Center"/>
                     <TextBox Name="AccountTextBox" Width="150"/>
                 </StackPanel>
-                
+
             </StackPanel>
-            
+
         </StackPanel>
-        
-        
-        
+
+
+
     </Grid>
-    
+
 </UserControl>

@@ -7,6 +7,7 @@
              xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"        
              mc:Ignorable="d"
              BorderThickness="3" 
+             Loaded="UserControl_Loaded"
              BorderBrush="White"
              Height="900" Width="1473">
 
@@ -86,22 +87,22 @@
 
         <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Left" Margin="426,275,0,79" Width="360">
 
-            <Button Content="Save" Background="ForestGreen"
+            <Button Content="Save"
                     FontSize="14"
                     Style="{StaticResource AnimatedRedButton}">
             </Button>
 
-            <Button Content="Edit" Background="ForestGreen"
+            <Button Content="Edit" 
                     FontSize="14"
                     Style="{StaticResource AnimatedRedButton}">
             </Button>
 
-            <Button Content="Delete" Background="ForestGreen"
+            <Button Content="Delete" 
                     FontSize="14"
                     Style="{StaticResource AnimatedRedButton}">
             </Button>
 
-            <Button Content="Clear" Background="ForestGreen"
+            <Button Content="Clear"
                     FontSize="14"
                     Style="{StaticResource AnimatedRedButton}">
             </Button>
@@ -247,7 +248,6 @@
 
         <Button Grid.Column="1" 
                 Content="Export"
-                Background="ForestGreen"
                 FontSize="14"
                 Style="{StaticResource AnimatedRedButton}"
                 Margin="500,14,0,0"                
@@ -257,6 +257,16 @@
             
         </Button>
         <Border BorderBrush="White" BorderThickness="2" HorizontalAlignment="Left" Height="4" Margin="-13,59,0,0" Grid.Row="3" VerticalAlignment="Top" Width="1465" Grid.ColumnSpan="2"/>
+        
+        <Button Grid.Column="1" 
+                Content="X" 
+                FontSize="20"
+                Width="40"
+                Style="{StaticResource AnimatedRedButton}"
+                Click="Close_Click"
+                Margin="604,-12,0,0" 
+                VerticalAlignment="Top" 
+                />
 
 
     </Grid>

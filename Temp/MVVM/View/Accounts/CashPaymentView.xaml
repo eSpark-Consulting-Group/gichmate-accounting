@@ -7,6 +7,7 @@
              xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
              BorderThickness="3" 
              BorderBrush="White"
+             Loaded="UserControl_Loaded"
              mc:Ignorable="d" 
              Height="900" Width="1300">
 
@@ -50,9 +51,9 @@
         </Grid.RowDefinitions>
 
 
-        <StackPanel Orientation="Horizontal" Margin="26,20,84,349" Grid.Row="2">
-            <TextBlock Text="Paid By :" VerticalAlignment="Center" FontWeight="Bold" Foreground="White" FontSize="20"/>
-            <ComboBox Width="500" Margin="10,0,0,0" Height="27" RenderTransformOrigin="0.594,0.542">
+        <StackPanel Orientation="Horizontal" Margin="26,10,84,349" Grid.Row="2">
+            <TextBlock Text="Paid By :" VerticalAlignment="Center" Foreground="White" FontSize="14"/>
+            <ComboBox Width="500" Margin="10,0,0,0" Height="30" RenderTransformOrigin="0.594,0.542">
                 <ComboBoxItem Content="Admin"/>
                 <ComboBoxItem Content="Office"/>
                 <ComboBoxItem Content="ALL"/>
@@ -61,11 +62,11 @@
 
 
         <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Margin="4,17,0,343" Width="163" Grid.Row="2" Grid.Column="1">
-            <CheckBox  Content="Auto Refresh" Foreground="White" Height="17" Width="218" FontSize="20"/>
+            <CheckBox  Content="Auto Refresh" Foreground="White" Height="17" Width="218" FontSize="14"/>
         </StackPanel>
 
 
-        <DataGrid Grid.Row="2" FontSize="20"
+        <DataGrid Grid.Row="2" FontSize="14"
                   AutoGenerateColumns="False"
                   HeadersVisibility="Column"
                   CanUserAddRows="False"
@@ -86,22 +87,21 @@
 
         <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Left" Margin="193,1,0,0" Width="366" Grid.Column="1">
 
-            <Button Content="Save" Background="ForestGreen"
-                    FontSize="14"
+            <Button Content="Save"                     FontSize="14"
                     Style="{StaticResource AnimatedRedButton}">
             </Button>
 
-            <Button Content="Edit" Background="ForestGreen"
+            <Button Content="Edit" 
                     FontSize="14"
                     Style="{StaticResource AnimatedRedButton}" >
             </Button>
 
-            <Button Content="Delete" Background="ForestGreen"
+            <Button Content="Delete"
                     FontSize="14"
                     Style="{StaticResource AnimatedRedButton}">
             </Button>
 
-            <Button Content="Clear" Background="ForestGreen"
+            <Button Content="Clear" 
                     FontSize="14"
                     Style="{StaticResource AnimatedRedButton}">
             </Button>
@@ -136,16 +136,16 @@
             Height="26" Margin="226,107,0,0" FontSize="15"
             Grid.Row="3" TextWrapping="Wrap" FontWeight="Bold"
             Text="0.00" VerticalAlignment="Top" Width="68" Grid.Column="2"/>
-        <StackPanel Orientation="Horizontal" Margin="23,149,254,202" Grid.Row="3">
+        <StackPanel Orientation="Horizontal" Margin="23,149,254,197" Grid.Row="3">
             <TextBlock Text="Voucher No : " VerticalAlignment="Center" FontSize="15" FontWeight="Bold" Foreground="White"/>
             <mah:NumericUpDown Height="33" Width="300"
                                Maximum="9999"
                                Minimum="0"/>
 
         </StackPanel>
-        <StackPanel Orientation="Horizontal" Margin="49,205,260,165" Grid.Row="3">
+        <StackPanel Orientation="Horizontal" Margin="49,205,260,153" Grid.Row="3">
             <TextBlock Text="Account :" FontWeight="Bold" VerticalAlignment="Center" FontSize="15" Foreground="White"/>
-            <ComboBox Width="298" Margin="10,0,0,0" Height="27" RenderTransformOrigin="0.594,0.542">
+            <ComboBox Width="298" Margin="10,0,0,0" Height="30" RenderTransformOrigin="0.594,0.542">
                 <ComboBoxItem Content="Admin"/>
                 <ComboBoxItem Content="Office"/>
                 <ComboBoxItem Content="ALL"/>
@@ -170,8 +170,8 @@
         </StackPanel>
 
         <StackPanel Orientation="Horizontal" Grid.ColumnSpan="2" Margin="0,0,576,0">
-            <TextBlock HorizontalAlignment="Left" 
-                       Height="33"                       
+            <TextBlock 
+                       Height="34"                       
                        TextWrapping="Wrap" 
                        FontSize="25"
                        Text="Cash Payment"
@@ -233,15 +233,17 @@
             Height="22" Margin="85,107,0,0"  FontSize="15"
             Grid.Row="3" TextWrapping="Wrap" 
             Text="0.00" FontWeight="Bold" VerticalAlignment="Top" Width="69" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
-            <TextBlock.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform AngleX="-0.367"/>
-                    <RotateTransform Angle="0.988"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </TextBlock.RenderTransform>
+
         </TextBlock>
+
+        <Button Content="X"
+                Grid.Column="1"
+        FontSize="20"
+        Width="40"
+        Style="{StaticResource AnimatedRedButton}"
+        Click="Close_Click"
+        Margin="513,0,23,0" Height="NaN"/>
+
 
 
     </Grid>

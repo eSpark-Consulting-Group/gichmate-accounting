@@ -37,7 +37,7 @@
         </Grid.RowDefinitions>
 
      
-        <StackPanel Grid.Row="0" HorizontalAlignment="Left" Orientation="Horizontal">
+        <StackPanel Grid.Row="0" HorizontalAlignment="Left" Orientation="Horizontal" Margin="0,0,0,55" Grid.RowSpan="2">
            
             <Label Content="Bank Receipt" 
                    FontSize="25" 
@@ -47,7 +47,7 @@
                     FontSize="20"
                     Width="40"
                     Style="{StaticResource AnimatedRedButton}"
-                    Background="ForestGreen"
+                   
                     Click="Close_Click"
                     Margin="960,0,0,0" />
             
@@ -234,7 +234,6 @@
                 <Button x:Name="SaveBtn" 
                         Style="{StaticResource AnimatedRedButton}" 
                         Content="Save"
-                        Background="ForestGreen" 
                         Click="Save_Click">
                 </Button>
         
@@ -242,21 +241,18 @@
                         Style="{StaticResource AnimatedRedButton}" 
                         Content="Edit" 
                         Foreground="White" 
-                        Background="ForestGreen"
                         Click="EditBtn_Click">
                 </Button>
                 
                 <Button x:Name="DeleteBtn" 
                         Style="{StaticResource AnimatedRedButton}" 
                         Content="Delete" 
-                        Background="ForestGreen" 
                         Click="DeleteBtn_Click">
                 </Button>
                 
                 <Button x:Name="ClearBtn" 
                         Style="{StaticResource AnimatedRedButton}"
-                        Content="Clear" 
-                        Background="ForestGreen" 
+                        Content="Clear"  
                         Click="ClearBtn_Click">
                 </Button>
             

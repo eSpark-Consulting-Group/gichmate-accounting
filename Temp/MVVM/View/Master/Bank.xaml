@@ -111,7 +111,6 @@
                           SelectionChanged="AccountGroupComboBox_SelectionChanged"/>
                 <Button Content="+"
                         FontSize="15"
-                        Background="ForestGreen"
                         Foreground="White"
                         Height="27"
                         Width="28"
@@ -294,22 +293,18 @@
         <StackPanel Grid.Row="16" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center" >
             <Button Content="Save"
                     FontSize="14"
-                    Background="ForestGreen"
                     Style="{StaticResource AnimatedRedButton}"
                     Click="SaveButton_Click"/>
             <Button Content="New"
                     FontSize="14"
-                    Background="ForestGreen"
                     Style="{StaticResource AnimatedRedButton}"
                     Click="NewButton_Click"/>
             <Button Content="Search"
                     FontSize="14"
-                    Background="ForestGreen"
                     Style="{StaticResource AnimatedRedButton}"
                     Click="SearchButton_Click"/>
             <Button x:Name="ClearButton" Content="Clear"
                     FontSize="14"
-                    Background="ForestGreen"
                     Style="{StaticResource AnimatedRedButton}"
                     Click="ClearButton_Click"/>
         </StackPanel>

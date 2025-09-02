@@ -212,22 +212,18 @@
 
                 <Button Content="Save"
                         FontSize="15"
-                        Background="ForestGreen"
                         Style="{StaticResource AnimatedRedButton}" Click="SaveButton_Click"/>
 
                 <Button Content="Edit"
                         FontSize="15"
-                        Background="ForestGreen"
                         Style="{StaticResource AnimatedRedButton}" Click="EditButton_Click"/>
 
                 <Button Content="Delete"
                         FontSize="15"
-                        Background="ForestGreen"
                         Style="{StaticResource AnimatedRedButton}" Click="DeleteButton_Click"/>
 
                 <Button Content="Clear"
                         FontSize="15"
-                        Background="ForestGreen"
                         Style="{StaticResource AnimatedRedButton}" Click="ClearButton_Click"/>
 
             </StackPanel>

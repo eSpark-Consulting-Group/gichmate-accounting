@@ -51,7 +51,6 @@
                     <Button x:Name="SearchBtn" 
                             Content="Load" 
                             Style="{StaticResource AnimatedRedButton}"
-                            Background="ForestGreen"
                             Margin="20,0,0,0" Click="SearchBtn_Click"/>
 
                 </StackPanel>
@@ -74,7 +73,6 @@
                     FontSize="20"
                     Style="{StaticResource AnimatedRedButton}"
                     HorizontalAlignment="Center"
-                    Background="ForestGreen"
                     Width="150"
                     
                     Click="LoadFileBtn_Click"/>

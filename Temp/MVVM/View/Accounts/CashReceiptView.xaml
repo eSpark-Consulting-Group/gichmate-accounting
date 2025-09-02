@@ -7,6 +7,7 @@
              xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
              BorderThickness="3" 
              BorderBrush="White"
+             Loaded="UserControl_Loaded"
              mc:Ignorable="d" 
              Height="900" Width="1300">
 
@@ -48,8 +49,8 @@
 
 
         <StackPanel Orientation="Horizontal" Margin="26,20,84,349" Grid.Row="2">
-            <TextBlock Text="Collected By :" VerticalAlignment="Center" FontWeight="Bold" Foreground="White" FontSize="20"/>
-            <ComboBox Width="500" Margin="10,0,0,0" Height="27" RenderTransformOrigin="0.594,0.542">
+            <TextBlock Text="Collected By :" VerticalAlignment="Center" Foreground="White" FontSize="14"/>
+            <ComboBox Width="500" Margin="10,0,0,0" Height="30" RenderTransformOrigin="0.594,0.542">
                 <ComboBoxItem Content="Admin"/>
                 <ComboBoxItem Content="Office"/>
                 <ComboBoxItem Content="ALL"/>
@@ -62,7 +63,7 @@
         </StackPanel>
 
 
-        <DataGrid Grid.Row="2" FontSize="20"
+        <DataGrid Grid.Row="2" FontSize="14"
                   AutoGenerateColumns="False"
                   HeadersVisibility="Column"
                   CanUserAddRows="False"
@@ -84,36 +85,36 @@
         <StackPanel Grid.Row="3" Orientation="Horizontal"
                     HorizontalAlignment="Left" Margin="28,390,0,2" Width="546" Grid.Column="1" Grid.RowSpan="2">
 
-            <Button Content="Save" Background="ForestGreen"
+            <Button Content="Save" 
                     FontSize="14"
                     Style="{StaticResource AnimatedRedButton}">
             </Button>
 
 
-            <Button Content="Edit" Background="ForestGreen"
+            <Button Content="Edit" 
                     FontSize="14"
                     Style="{StaticResource AnimatedRedButton}">
             </Button>
 
 
-            <Button Content="Delete" Background="ForestGreen"
+            <Button Content="Delete"
                     FontSize="14"
                     Style="{StaticResource AnimatedRedButton}">
             </Button>
 
-            <Button Content="Clear" Background="ForestGreen"
-                    FontSize="14"
-                    Style="{StaticResource AnimatedRedButton}">
-            </Button>
-
-
-            <Button Content="Print" Background="ForestGreen"
+            <Button Content="Clear" 
                     FontSize="14"
                     Style="{StaticResource AnimatedRedButton}">
             </Button>
 
 
-            <Button Content="Mail" Background="ForestGreen"
+            <Button Content="Print" 
+                    FontSize="14"
+                    Style="{StaticResource AnimatedRedButton}">
+            </Button>
+
+
+            <Button Content="Mail"
                     FontSize="14"
                     Style="{StaticResource AnimatedRedButton}">
             </Button>
@@ -151,7 +152,7 @@
             Text="0.00" VerticalAlignment="Top" Width="68" Grid.Column="1"/>
         <StackPanel Orientation="Horizontal" Margin="23,149,182,197" Grid.Row="3">
             <TextBlock Text="Voucher No : " VerticalAlignment="Center" FontSize="15" FontWeight="Bold" Foreground="White"/>
-            <mah:NumericUpDown Height="33" Width="300"
+            <mah:NumericUpDown Height="30" Width="300"
                                Maximum="9999"
                                Minimum="0"/>
 
@@ -177,15 +178,20 @@
                 <ComboBoxItem Content="ALL"/>
             </ComboBox>
         </StackPanel>
+        
         <StackPanel Orientation="Horizontal" Margin="42,342,182,21" Grid.Row="3">
             <TextBlock Text="Narration :" FontWeight="Bold" VerticalAlignment="Center" FontSize="15" Foreground="White"/>
             <TextBox Width="300" Margin="10,0,0,0" Height="27" RenderTransformOrigin="0.594,0.542"/>
         </StackPanel>
+        
         <TextBlock HorizontalAlignment="Left" 
                    Height="66" Margin="0,-12,0,0" 
-                   TextWrapping="Wrap" FontSize="35"
+                   TextWrapping="Wrap" FontSize="25"
                    Text="Cash Receipt" Foreground="White" FontWeight="Bold"                  
                    VerticalAlignment="Top" Width="241" Grid.RowSpan="3"/>
+       
+        
+        
         <StackPanel Orientation="Horizontal" Margin="523,156,404,203" Grid.Row="3" Grid.ColumnSpan="2">
             <TextBlock Text="Date :  " FontWeight="Bold" VerticalAlignment="Center" FontSize="15" Foreground="White"/>
             <DatePicker Width="299" Height="27" RenderTransformOrigin="0.594,0.542"/>
@@ -199,9 +205,9 @@
             </ComboBox>
         </StackPanel>
         <Border BorderBrush="white" BorderThickness="4" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="8" Margin="0,133,0,0" Grid.Row="3" VerticalAlignment="Top" Width="1280"/>
-        <StackPanel Orientation="Horizontal" Margin="459,205,391,165" Grid.Row="3" Grid.ColumnSpan="2">
+        <StackPanel Orientation="Horizontal" Margin="459,205,391,162" Grid.Row="3" Grid.ColumnSpan="2">
             <TextBlock Text="Cash Account :" FontWeight="Bold" VerticalAlignment="Center" FontSize="15" Foreground="White" Width="105"/>
-            <ComboBox Width="298" Margin="10,0,0,0" Height="19" RenderTransformOrigin="0.594,0.542">
+            <ComboBox Width="298" Margin="10,0,0,0" Height="27" RenderTransformOrigin="0.594,0.542">
                 <ComboBoxItem Content="Cash Account"/>
                 <ComboBoxItem Content="Other Account"/>
                 <ComboBoxItem Content="Other Payment Method"/>
@@ -251,8 +257,18 @@
                 </TransformGroup>
             </TextBlock.RenderTransform>
         </TextBlock>
+        
         <CheckBox  Content="Print while Saving" Foreground="White" Height="17" FontWeight="Bold" FontSize="15" Margin="74,4,469,4" Grid.Row="4"/>
+        
         <CheckBox  Content="Mail while Saving" Foreground="White" Height="17" FontWeight="Bold" FontSize="15" Margin="320,4,218,4" Grid.Row="4"/>
+        
+        <Button Grid.Column="1" 
+                Content="X" 
+                    FontSize="20"
+                    Width="40"
+                    Style="{StaticResource AnimatedRedButton}"
+                    Click="Close_Click"
+                    Margin="490,-20,10,0"/>
 
 
     </Grid>

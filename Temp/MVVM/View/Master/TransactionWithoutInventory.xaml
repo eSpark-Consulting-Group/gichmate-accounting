@@ -131,16 +131,13 @@
 
             <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
                 <Button Content="Save"
-                        Style="{StaticResource AnimatedRedButton}"
-                        Background="ForestGreen"/>
+                        Style="{StaticResource AnimatedRedButton}"/>
                 
                 <Button Content="Delete"
-                        Style="{StaticResource AnimatedRedButton}"
-                        Background="ForestGreen"/>
+                        Style="{StaticResource AnimatedRedButton}"/>
                 
                 <Button Content="Clear"
-                        Style="{StaticResource AnimatedRedButton}"
-                        Background="ForestGreen"/>
+                        Style="{StaticResource AnimatedRedButton}"/>
             </StackPanel>
 
             <Label Content="Reports : "
@@ -155,8 +152,7 @@
 
             <Button Content="Show"
                     Margin="20,0,0,0"
-                    Style="{StaticResource AnimatedRedButton}"
-                    Background="ForestGreen"/>
+                    Style="{StaticResource AnimatedRedButton}"/>
             
         </StackPanel>
 

@@ -9,7 +9,7 @@
              BorderThickness="3" 
              Loaded="UserControl_Loaded"
              BorderBrush="White"
-             Height="907" Width="1400">
+             Height="800" Width="1400">
 
     <UserControl.Background>
         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -24,98 +24,94 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="100"/>
-            <RowDefinition Height="60"/>
-            <RowDefinition Height="60"/>
-            <RowDefinition Height="60"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
             <RowDefinition Height="500"/>
+            <RowDefinition Height="40"/>
             <RowDefinition Height="60"/>
-            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
 
         <StackPanel Grid.Row="0" Orientation="Horizontal" VerticalAlignment="top">
 
-            <Label Content="Receipt View" FontSize="35" FontWeight="Bold"/>
+            <Label Content="Receipt View" FontSize="25" FontWeight="Bold"/>
 
             <Label Content="Date :" 
-                   FontSize="20" 
+                   FontSize="14" 
                    VerticalAlignment="Center" 
-                   Margin="100,0,0,0"/>
+                   Margin="360,0,0,0"/>
             
             <DatePicker Width="350" 
-                        Height="40" 
+                        Height="30" 
                         VerticalAlignment="Center" 
                         VerticalContentAlignment="Center" 
-                        FontSize="20" 
-                        Margin="10,0,0,0"/>
+                        FontSize="14" 
+                        Margin="0,0,0,0"/>
 
             <Button Content="X" 
                     FontSize="20"
                     Width="40"
                     Style="{StaticResource AnimatedRedButton}"
-                    Background="ForestGreen"
                     Click="Close_Click"
-                    Margin="580,0,0,0" />   
+                    Margin="399,0,0,0" />   
         </StackPanel>
 
         <StackPanel Grid.Row="1" Orientation="Horizontal" VerticalAlignment="Center">
-            <Label Content="Route :" VerticalAlignment="Center" Margin="48,0,0,0"/>
-            <ComboBox Width="350" Height="40" VerticalAlignment="Center" Margin="10,0,0,0" VerticalContentAlignment="Center">
+            
+            <Label Content="Route :" VerticalAlignment="Center" Margin="35,0,0,0" FontSize="14"/>
+
+            <ComboBox Width="250" Height="30" 
+                      FontSize="14" 
+                      VerticalAlignment="Center"
+                      Margin="10,0,0,0"
+                      VerticalContentAlignment="Center">
                 <ComboBoxItem Content="All"/>
                 <ComboBoxItem Content="West"/>
             </ComboBox>
 
-            <DatePicker Width="350" Height="40" VerticalAlignment="Center" FontSize="20" VerticalContentAlignment="Center" Margin="20,0,0,0"/>
+            <DatePicker Width="250" Height="30" 
+                        VerticalAlignment="Center" 
+                        FontSize="14" 
+                        VerticalContentAlignment="Center" 
+                        Margin="20,0,0,0"/>
 
             
         </StackPanel>
 
         <StackPanel Grid.Row="2" Orientation="Horizontal" VerticalAlignment="Center">
-            <Label Content="Vehicle No :" VerticalAlignment="Center"/>
-            <ComboBox Width="350" Height="40" VerticalAlignment="Center" VerticalContentAlignment="Center">
+            <Label Content="Vehicle No :" FontSize="14" VerticalAlignment="Center"/>
+            <ComboBox Width="250" Height="30" FontSize="14" VerticalAlignment="Center" VerticalContentAlignment="Center">
                 <ComboBoxItem Content="KHX 1034"/>
                 <ComboBoxItem Content="CR 007"/>
             </ComboBox>
-            <DatePicker Width="350" Height="40" VerticalAlignment="Center" VerticalContentAlignment="Center" FontSize="20" Margin="15,0,0,0"/>
-
-            <Label Content="Narration"
-                   Margin="20,0,0,0"
-                   VerticalAlignment="Center"/>
-
-            <TextBox Text="..."
-                     Width="350"
-                     Height="40"
-                     VerticalAlignment="Center"
-                     VerticalContentAlignment="Center"/>
+            <DatePicker Width="250" Height="30" 
+                        VerticalAlignment="Center"
+                        VerticalContentAlignment="Center"
+                        FontSize="14" 
+                        Margin="15,0,0,0"/>
         </StackPanel>
 
-        <StackPanel Grid.Row="3" Orientation="Horizontal" VerticalAlignment="Center">
-            <Label Content="    Sales Exi :"/>
-            <TextBox Width="350" 
+        <StackPanel Grid.Row="3" Orientation="Horizontal">
+            <Label Content="    Sales Exi :" FontSize="14"/>
+            <TextBox Width="250" 
                      VerticalAlignment="Center" 
-                     Height="40" 
-                     VerticalContentAlignment="Center" FontSize="20"/>
+                     Height="20"
+                     FontSize="14"
+                     VerticalContentAlignment="Center" />
 
-            <Label Content=" Remarks :" 
+            <Label Content=" Remarks :" FontSize="14" 
                    VerticalAlignment="Center"/>
             <TextBox Text=".." 
+                     FontSize="14"
                      Width="450" 
-                     Height="40" 
+                     Height="30" 
                      VerticalAlignment="Center"
                      VerticalContentAlignment="Center"/>
 
-            <Button  Content="Load" 
-                     VerticalAlignment="Center" 
-                     Background="ForestGreen"
-                     Margin="190,0,0,10"
-                     Foreground="white" 
-                     Style="{StaticResource AnimatedRedButton}"
-                     >
-                <Button.Effect>
-                    <DropShadowEffect/>
-                </Button.Effect>
-            </Button>
+            <Button Content="Load"
+                    Style="{StaticResource AnimatedRedButton}" Height="30"/>
         </StackPanel>
 
 
@@ -140,28 +136,27 @@
         
 
         <StackPanel Grid.Row="5" Orientation="Horizontal" VerticalAlignment="Center">
-            <Label Content="Total Cash :" VerticalAlignment="Center"/>
-            <TextBox Text="0.00" Width="200" Height="40" VerticalAlignment="Center" VerticalContentAlignment="Center"/>
+            <Label Content="Total Cash :" FontSize="14" VerticalAlignment="Center"/>
+            <TextBox Text="0.00" Width="200" Height="30" VerticalAlignment="Center" VerticalContentAlignment="Center"/>
 
-            <Label Content="Online total :" VerticalAlignment="Center" Margin="20,0,0,0"/>
-            <TextBox Text="0.00" Width="200" Height="40" VerticalAlignment="Center" VerticalContentAlignment="Center"/>
+            <Label Content="Online total :" FontSize="14" VerticalAlignment="Center" Margin="20,0,0,0"/>
+            <TextBox Text="0.00" Width="200" Height="30" VerticalAlignment="Center" VerticalContentAlignment="Center"/>
         </StackPanel>
 
         <StackPanel Grid.Row="6" Orientation="Horizontal" VerticalAlignment="Center" Height="56">
-            <Label Content="Total Card :" VerticalAlignment="Center"/>
-            <TextBox Text="0.00" Width="200" Height="40" VerticalAlignment="Center" VerticalContentAlignment="Center"/>
+            <Label Content="Total Card :" FontSize="14" VerticalAlignment="Center"/>
+            <TextBox Text="0.00" Width="200" Height="30" VerticalAlignment="Center" VerticalContentAlignment="Center"/>
 
-            <Label Content="Credit Total :" VerticalAlignment="Center" Margin="24,0,0,0"/>
-            <TextBox Text="0.00" Width="200" Height="40" VerticalAlignment="Center" VerticalContentAlignment="Center"/>
+            <Label Content="Credit Total :" FontSize="14" VerticalAlignment="Center" Margin="24,0,0,0"/>
+            <TextBox Text="0.00" Width="200" Height="30" VerticalAlignment="Center" VerticalContentAlignment="Center"/>
 
-            <Label Content="Total Amount :" VerticalAlignment="Center" Margin="20,0,0,0"/>
-            <TextBox Text="0.00" Width="200" Height="42" VerticalAlignment="Center" VerticalContentAlignment="Center"/>
+            <Label Content="Total Amount :" FontSize="14" VerticalAlignment="Center" Margin="20,0,0,0"/>
+            <TextBox Text="0.00" Width="200" Height="30" VerticalAlignment="Center" VerticalContentAlignment="Center"/>
 
             
             <Button Content="Save"  
                     Margin="100,0,0,0"
                     VerticalAlignment="Center" 
-                    Background="ForestGreen" 
                     Foreground="White"
                     Style="{StaticResource AnimatedRedButton}">
                 
@@ -172,8 +167,7 @@
                     Margin="20,0,0,0"
                     FontSize="20"
                     Style="{StaticResource AnimatedRedButton}"
-                    VerticalAlignment="Center" 
-                    Background="#FF6F0404" 
+                    VerticalAlignment="Center"
                     Foreground="White">
                
             </Button>

@@ -113,7 +113,6 @@
 
                 <Button Content="+" 
                         FontSize="15" 
-                        Background="ForestGreen" 
                         Foreground="White" 
                         Height="27" 
                         Width="28"
@@ -191,35 +190,30 @@
             <Button x:Name="SaveButton" 
                     Content="Save" 
                     FontSize="14"
-                    Background="ForestGreen" 
                     Style="{StaticResource AnimatedRedButton}" 
                     Click="SaveButton_Click"/>
 
             <Button x:Name="DeleteButton" 
                     Content="Delete"
                     FontSize="14" 
-                    Background="ForestGreen" 
                     Style="{StaticResource AnimatedRedButton}" 
                     Click="DeleteButton_Click"/>
 
             <Button x:Name="NewButton" 
                     Content="New"
                     FontSize="14"
-                    Background="ForestGreen" 
                     Style="{StaticResource AnimatedRedButton}" 
                     Click="NewButton_Click">
             </Button>
 
             <Button Content="Search"
-                    FontSize="14"
-                    Background="ForestGreen" 
+                    FontSize="14" 
                     Style="{StaticResource AnimatedRedButton}" 
                     Click="Button_Click_1"  />
 
             <Button x:Name="ClearButton" 
                     Content="Clear"
                     FontSize="14"
-                    Background="ForestGreen" 
                     Style="{StaticResource AnimatedRedButton}" 
                     Click="ClearButton_Click"/>
 

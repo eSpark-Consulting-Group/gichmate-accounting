@@ -7,6 +7,7 @@
              xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
              mc:Ignorable="d" 
              BorderThickness="3" 
+             Loaded="UserControl_Loaded"
              BorderBrush="White"
              Height="902" Width="1123">
 
@@ -52,28 +53,24 @@
         <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Left" Margin="188,3,0,-2" Width="360">
             
             <Button x:Name="btnSave" Content="Save" 
-                    Background="ForestGreen"
                     FontSize="14"
                     Style="{StaticResource AnimatedRedButton}"
                     Click="btnSave_Click">
             </Button>
             
             <Button x:Name="btnEdit" Content="Edit" 
-                    Background="ForestGreen"
                     FontSize="14"
                     Style="{StaticResource AnimatedRedButton}"
                     Click="btnEdit_Click">
             </Button>
             
             <Button x:Name="btnDelete" Content="Delete" 
-                    Background="ForestGreen"
                     FontSize="14"
                     Style="{StaticResource AnimatedRedButton}"
                     Click="btnDelete_Click">
             </Button>
         
-            <Button x:Name="btnClear" Content="Clear" 
-                    Background="ForestGreen"
+            <Button x:Name="btnClear" Content="Clear"
                     FontSize="14"
                     Style="{StaticResource AnimatedRedButton}"
                     Click="btnClear_Click">
@@ -81,14 +78,24 @@
         
         </StackPanel>
 
-        <Border BorderBrush="White" BorderThickness="4" Margin="-10,-20,0,4" Grid.ColumnSpan="2" />
+        <Border BorderBrush="White" BorderThickness="4" Margin="-10,-20,0,4" Grid.ColumnSpan="2" >
+
+            <Button Content="X" 
+                    FontSize="20"
+                    Width="40"
+                    Style="{StaticResource AnimatedRedButton}"
+                    Click="Close_Click"
+                    Margin="1052,0,0,0" 
+                    />
+       
+        </Border>
 
         <StackPanel Orientation="Horizontal" Margin="127,135,54,217" Grid.Row="3">
             <TextBlock Text="Voucher No : " VerticalAlignment="Center" FontSize="15" FontWeight="Bold" Foreground="White"/>
-            <TextBox x:Name="txtVoucherNo" Height="33" Width="302" IsReadOnly="True"/>
+            <TextBox x:Name="txtVoucherNo" Height="27" Width="302" IsReadOnly="True"/>
         </StackPanel>
 
-        <StackPanel Orientation="Horizontal" Margin="108,192,70,178" Grid.Row="3">
+        <StackPanel Orientation="Horizontal" Margin="108,192,70,170" Grid.Row="3">
             <TextBlock Text="Party/Supplier :" FontWeight="Bold" VerticalAlignment="Center" FontSize="15" Foreground="White"/>
             <ComboBox x:Name="cmbPartyAccount" Width="300" Margin="10,0,0,0" Height="27" DisplayMemberPath="AccountName" SelectedValuePath="AccountId"/>
         </StackPanel>
@@ -100,7 +107,7 @@
 
         <StackPanel Orientation="Horizontal" Margin="140,277,57,75" Grid.Row="3">
             <TextBlock Text="Narration :" FontWeight="Bold" VerticalAlignment="Center" FontSize="15" Foreground="White"/>
-            <TextBox x:Name="txtNarration" Width="302" Margin="10,0,0,0" Height="30"/>
+            <TextBox x:Name="txtNarration" Width="302" Margin="10,0,0,0" Height="27"/>
         </StackPanel>
 
         <TextBlock HorizontalAlignment="Left" Height="36" Margin="0,-12,0,0" 
@@ -109,12 +116,12 @@
 
         <StackPanel Orientation="Horizontal" Margin="6,141,112,225" Grid.Row="3" Grid.Column="1">
             <TextBlock Text="Date :" FontWeight="Bold" VerticalAlignment="Center" FontSize="15" Foreground="White"/>
-            <DatePicker x:Name="dtpDate" Width="300" Margin="10,0,0,0" Height="27"/>
+            <DatePicker x:Name="dtpDate" Width="300" Margin="7,0,0,0" Height="27"/>
         </StackPanel>
 
         <StackPanel Orientation="Horizontal" Margin="586,188,93,170" Grid.Row="3" Grid.ColumnSpan="2">
-            <TextBlock Text="Amount :" FontWeight="Bold" VerticalAlignment="Center" FontSize="15" Foreground="White"/>
-            <TextBox x:Name="txtAmount" Width="300" Margin="10,0,0,0" Height="30" Text="0.00"/>
+            <TextBlock Text=" Amount :" FontWeight="Bold" VerticalAlignment="Center" FontSize="15" Foreground="White"/>
+            <TextBox x:Name="txtAmount" Width="300" Margin="10,0,0,0" Height="27" Text="0.00"/>
         </StackPanel>
 
         <Border BorderBrush="white" BorderThickness="4" Grid.ColumnSpan="2" HorizontalAlignment="Left" 

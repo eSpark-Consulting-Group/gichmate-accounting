@@ -93,7 +93,6 @@
                     <Button x:Name="ClearSearchBtn" 
                             Content="Clear" 
                             Style="{StaticResource AnimatedRedButton}"
-                            Background="ForestGreen"
                             Margin="20,0,0,0" Click="ClearSearchBtn_Click"/>
 
                 </StackPanel>
@@ -138,7 +137,6 @@
             <Button x:Name="UploadFile" Content="Upload File"
                     Style="{StaticResource AnimatedRedButton}"
                     Margin="450,5,0,0"
-                    Background="ForestGreen"
                     Width="110"
                     Click="UploadFileBtn_Click"/>
         </StackPanel>

@@ -72,12 +72,12 @@
 
 
 
-        <StackPanel Grid.Row="1" 
-                    Style="{StaticResource StackPanelBalanceSheet}"
+        <StackPanel Grid.Row="1"  Orientation="Horizontal"
+                    
                     >
 
             <Label Content="As on : "
-                   Margin="18,0,0,0"
+                   Margin="250,0,0,0"
                    Style="{StaticResource LabelBalanceSheet}"/>
 
             <DatePicker Height="30"
@@ -86,18 +86,28 @@
 
             <Label Content="Closing Stock Validation Using : " 
                    Style="{StaticResource LabelBalanceSheet}"
-                   Margin="70,0,0,0"/>
+                   Margin="30,0,0,0"/>
 
-            <ComboBox Style="{StaticResource ComboBoxBalanceSheet}"/>
+            <ComboBox Style="{StaticResource ComboBoxBalanceSheet}"
+                      />
 
         </StackPanel>
 
         <StackPanel Grid.Row="2"
-                   Style="{StaticResource StackPanelBalanceSheet}">
+                    Orientation="Horizontal">
 
+            <Label Style="{StaticResource LabelBalanceSheet}"
+                   Content="Branch : "
+                   Margin="245,0,0,0"/>
+
+            <ComboBox Width="200"
+                Style="{StaticResource ComboBoxBalanceSheet}" >                
+            </ComboBox>
+
+            
             <Label Content="Opening Stock Validation Using : "
                    Style="{StaticResource LabelBalanceSheet}"
-                   Margin="340,0,0,0"/>
+                   Margin="20,0,0,0"/>
 
             <ComboBox Style="{StaticResource ComboBoxBalanceSheet}"
                       />
@@ -110,7 +120,7 @@
 
             <ListView Height="590"
                       Width="1190"
-                      FontSize="15"
+                      FontSize="14"
                       >
                 <ListView.View>
                     <GridView>
@@ -145,23 +155,19 @@
                 
                 <Button Style="{StaticResource AnimatedRedButton}"
                         Content="Show"
-                        FontSize="15"                        
-                        Background="ForestGreen" />
+                        FontSize="15"          />
                 
                 <Button Style="{StaticResource AnimatedRedButton}"
                         Content="Print"
-                        FontSize="15"
-                        Background="ForestGreen" />
+                        FontSize="15"/>
                 
                 <Button Style="{StaticResource AnimatedRedButton}"
                         Content="Clear"
-                        FontSize="15"
-                        Background="ForestGreen" />
+                        FontSize="15"/>
                 
                 <Button Style="{StaticResource AnimatedRedButton}"
                         Content="Close"
-                        FontSize="15"
-                        Background="ForestGreen" />
+                        FontSize="15" />
                 
             </StackPanel>
         </StackPanel>
