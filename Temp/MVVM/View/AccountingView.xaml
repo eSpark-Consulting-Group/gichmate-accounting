@@ -10,10 +10,10 @@
     x:Class="FlexMold.MVVM.View.MasterTransaction_Click"
     Height="1000" Width="1850"
     mc:Ignorable="d">
-    
-    
+
+
     <UserControl.Resources>
-        
+
         <LinearGradientBrush x:Key="SidebarBrush" StartPoint="0.5,0" EndPoint="0.5,1">
             <GradientStop Color="#FFEE4540"/>
             <GradientStop Color="#FF2D142C" Offset="1"/>
@@ -23,7 +23,7 @@
             <GradientStop Color="#FF670E33" Offset="0.426"/>
         </LinearGradientBrush>
 
-        
+
         <Storyboard x:Key="ExpandSidebar">
             <DoubleAnimation Storyboard.TargetName="SidebarPanel"
                              Storyboard.TargetProperty="Width"
@@ -207,7 +207,7 @@
                     FontSize="17"   
                     Style="{StaticResource Animation}"
                     Width="110" Click="TopBarMasterButton_Click" Height="38" VerticalAlignment="Center">
-                
+
                 <Button.ContextMenu>
                     <ContextMenu x:Name="MasterContextMenu" >
                         <MenuItem Header="Ledger and Account Groups" IsEnabled="False"/>
@@ -405,13 +405,6 @@
 
 
         <Grid Margin="99,44,5,0">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="273*"/>
-                <ColumnDefinition Width="84*"/>
-                <ColumnDefinition Width="38*"/>
-                <ColumnDefinition Width="498*"/>
-                <ColumnDefinition Width="848*"/>
-            </Grid.ColumnDefinitions>
             <Grid.Background>
                 <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
                     <GradientStop Color="#FFEE4540" Offset="0"/>
@@ -424,11 +417,10 @@
             </Grid.Background>
 
             <!-- USER CONTROLS VISIBILITY -->
-            <Grid HorizontalAlignment="Left" Height="950"
-                  VerticalAlignment="Center" 
-                  Width="1600" 
-                  Margin="121,0,0,0" 
-                  Grid.ColumnSpan="5">
+            <Grid HorizontalAlignment="Left" Height="770"
+                  VerticalAlignment="Top" 
+                  Width="1200" 
+                  Margin="400,28,0,0" >
 
                 <ContentControl Content="{Binding CurrentView}" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,0,0,10" />
 

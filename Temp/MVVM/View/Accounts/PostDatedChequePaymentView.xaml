@@ -6,10 +6,10 @@
              xmlns:local="clr-namespace:FlexMold.MVVM.View.Accounts"
              BorderThickness="3" 
              BorderBrush="White"
-             Loaded="UserControl_Loaded"
              xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"        
              mc:Ignorable="d"
-             Height="900" Width="1473">
+             Height="770" 
+             Width="1200">
 
     <Control.Background>
         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -21,253 +21,293 @@
             <GradientStop Color="#FF670E33" Offset="0.426"/>
         </LinearGradientBrush>
     </Control.Background>
+    <Grid>
 
 
-    <Grid Margin="10,20,0,10">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="97*"/>
-            <ColumnDefinition Width="303*"/>
-            <ColumnDefinition/>
-            <ColumnDefinition Width="328*"/>
-        </Grid.ColumnDefinitions>
-        <Grid.Background>
-            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                <GradientStop Color="#FFEE4540"/>
-                <GradientStop Color="#FF2D142C" Offset="1"/>
-                <GradientStop Color="#FF510A32" Offset="0.565"/>
-                <GradientStop Color="#FFC72C41" Offset="0.157"/>
-                <GradientStop Color="#FF801336" Offset="0.365"/>
-                <GradientStop Color="#FF670E33" Offset="0.426"/>
-            </LinearGradientBrush>
-        </Grid.Background>
+
         <Grid.RowDefinitions>
-
-            <RowDefinition Height="Auto" MinHeight="24"/>
-            <RowDefinition Height="Auto" MinHeight="4"/>
-            <RowDefinition Height="200*"/>
-            <RowDefinition Height="201*"/>
-            <RowDefinition Height="Auto" MinHeight="39.62"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="350"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
 
 
-        <StackPanel Orientation="Horizontal" Grid.ColumnSpan="3" Margin="511,15,423,353" Grid.Row="2" Grid.Column="1">
-            <TextBlock Text="Pary A/C :" FontSize="15" VerticalAlignment="Center" Foreground="White"/>
-            <ComboBox Width="250
-                      " Margin="10,0,0,0" Height="27" RenderTransformOrigin="0.594,0.542">
-                <ComboBoxItem Content="Sample Suppliers"/>
-                <ComboBoxItem Content="Supplier One"/>
-                <ComboBoxItem Content="Office 2"/>
-            </ComboBox>
+        <StackPanel Grid.Row="0" Orientation="Horizontal">
+
+            <Label Content="Post Dated Cheque Payment" 
+                   FontSize="20" 
+                   FontWeight="Bold"/>
+
+            <Button Content="X" 
+                    FontSize="20"
+                    Width="40"
+                    Style="{StaticResource AnimatedRedButton}"
+                    Command="{Binding DefaultAccountScreenCommand}"
+                    Margin="850,0,0,0" />
+
+
         </StackPanel>
 
 
-        <DataGrid Grid.Row="2"
-                  AutoGenerateColumns="False"
-                  HeadersVisibility="All"
-                  CanUserAddRows="False"
-                  CanUserDeleteRows="False"
-                  FontSize="13"
-                  FontWeight="ExtraBold"
-                  Margin="-10,59,0,388" RenderTransformOrigin="0.499,0.42" Grid.ColumnSpan="4" Grid.RowSpan="2" >
-            <DataGrid.Columns>
-                <DataGridCheckBoxColumn Header="SL" Width="40" Binding="{Binding }"/>
-                <DataGridTextColumn Header="Date" Width="100" Binding="{Binding }"/>
-                <DataGridTextColumn Header="Voucher No" Width="105" Binding="{Binding }"/>
-                <DataGridTextColumn Header="Bank Account" Width="150" Binding="{Binding }"/>
-                <DataGridTextColumn Header="Party" Width="125" Binding="{Binding }"/>
-                <DataGridTextColumn Header="Amount" Width="100" Binding="{Binding }"/>
-                <DataGridTextColumn Header="Bank" Width="140" Binding="{Binding}" />
-                <DataGridTextColumn Header="Branch" Width="120" Binding="{Binding}" />
-                <DataGridTextColumn Header="CHQ No" Width="80" Binding="{Binding}" />
-                <DataGridTextColumn Header="Cheque Date" Width="120" Binding="{Binding}" />
-                <DataGridTextColumn Header="Status" Width="100" Binding="{Binding}" />
-                <DataGridTextColumn Header="Narration" Width="140" Binding="{Binding}" />
-                <DataGridTextColumn Header="Collection Date" Width="*" Binding="{Binding}" />
-            </DataGrid.Columns>
-        </DataGrid>
+        <StackPanel Grid.Row="1" Orientation="Horizontal">
+
+            <Label Content="From : "
+               Margin="225,0,0,0"
+               Style="{StaticResource AccountsLabel}"/>
+
+            <DatePicker  Width="250"
+                     Height="30"
+                     VerticalContentAlignment="Center"/>
 
 
-        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Left" Margin="238,279,0,75" Width="360" Grid.Column="1">
 
-            <Button Content="Save" 
-                    FontSize="14"
-                    Style="{StaticResource AnimatedRedButton}">
-            </Button>
+            <Label Content="To : "
+                   Margin="85,0,0,0"
+               Style="{StaticResource AccountsLabel}"/>
 
-            <Button Content="Edit" 
-                    FontSize="14"
-                    Style="{StaticResource AnimatedRedButton}">
-            </Button>
-
-            <Button Content="Delete" 
-                    FontSize="14"
-                    Style="{StaticResource AnimatedRedButton}">
-            </Button>
-
-            <Button Content="Clear"
-                    FontSize="14"
-                    Style="{StaticResource AnimatedRedButton}">
-            </Button>
-            
-        </StackPanel>
-       
-        <StackPanel Orientation="Horizontal" Margin="22,75,366,274" Grid.Row="3" Grid.ColumnSpan="2" >
-            <TextBlock Text="Voucher No : " VerticalAlignment="Center" FontSize="15" Foreground="White"/>
-            <mah:NumericUpDown Height="30" Width="300" VerticalContentAlignment="Center"
-                               Maximum="9999"
-                               Minimum="0"/>
+            <DatePicker  Width="250"
+                     Height="30"
+                     VerticalContentAlignment="Center"/>
 
         </StackPanel>
-        <StackPanel Orientation="Horizontal" Margin="36,126,372,238" Grid.Row="3" Grid.ColumnSpan="2">
-            <TextBlock Text="Party A/C :" VerticalAlignment="Center" FontSize="15" Foreground="White"/>
-            <ComboBox Width="300" Margin="10,0,0,0" Height="30" RenderTransformOrigin="0.594,0.542">
-                <ComboBoxItem Content="Admin"/>
-                <ComboBoxItem Content="Office"/>
-                <ComboBoxItem Content="ALL"/>
-            </ComboBox>
-        </StackPanel>
-        <StackPanel Orientation="Horizontal" Margin="36,172,377,192" Grid.Row="3" Grid.ColumnSpan="2">
-            <TextBlock Text="Bank A/C :" VerticalAlignment="Center" FontSize="15" Foreground="White"/>
-            <ComboBox Width="302" Margin="10,0,0,0" Height="30" RenderTransformOrigin="0.594,0.542">
-                <ComboBoxItem Content="Bank Account"/>
-                <ComboBoxItem Content="Debit"/>
-                <ComboBoxItem Content="Cash"/>
-            </ComboBox>
-        </StackPanel>
-        <StackPanel Orientation="Horizontal" Margin="42,213,85,160" Grid.Row="3">
-            <TextBlock Text="Remarks :" VerticalAlignment="Center" FontSize="15" Foreground="White"/>
-        </StackPanel>
-        <TextBlock HorizontalAlignment="Left" 
-                   Height="36" Margin="0,-12,0,0" 
-                   TextWrapping="Wrap" FontSize="25"
-                   Text="Post Dated Cheque Payment" Foreground="White" FontWeight="Bold"
-                   VerticalAlignment="Top" Width="336" Grid.ColumnSpan="2"/>
-        <StackPanel Orientation="Horizontal" Margin="284,83,0,279" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2">
-            <TextBlock Text="Date :"  VerticalAlignment="Center" FontSize="15" Foreground="White"/>
-            <DatePicker Width="256" Margin="10,0,0,0" Height="30" RenderTransformOrigin="0.594,0.542"/>
-        </StackPanel>
-        <StackPanel Orientation="Horizontal" Margin="267,11,1,356" Grid.Column="3" Grid.Row="2">
-            <TextBlock
-                VerticalAlignment="Center" Text="Cheque No :" FontSize="15" Foreground="White"/>
-            <TextBox
-                Width="250" RenderTransformOrigin="0.594,0.542" Margin="10,0,0,0" Height="27"/>
-        </StackPanel>
-        <StackPanel Orientation="Horizontal" Margin="42,20,416,345" Grid.Row="2" Grid.ColumnSpan="2">
-            <TextBlock Text="From :" VerticalAlignment="Center" FontSize="15" Foreground="White"/>
-            <DatePicker Width="250" Margin="10,0,0,0" Height="27" RenderTransformOrigin="0.594,0.542"/>
-        </StackPanel>
-        <StackPanel Orientation="Horizontal" Margin="186,16,104,349" Grid.Row="2" Grid.Column="1">
-            <TextBlock Text="  To :" VerticalAlignment="Center" FontSize="15" Foreground="White"/>
-            <DatePicker Width="250" Height="27" RenderTransformOrigin="0.594,0.542"/>
-        </StackPanel>
-        <TextBox 
-            HorizontalAlignment="Left" 
-            Height="26" 
-            Margin="113,216,0,0" 
-            Grid.Row="3" 
-            TextWrapping="Wrap" 
-            VerticalAlignment="Top" Width="669" Grid.ColumnSpan="2"/>
-        <StackPanel Orientation="Horizontal" Margin="258,128,17,245" Grid.Row="3" Grid.Column="1">
-            <TextBlock Text="Amount : " VerticalAlignment="Center" FontSize="15" Foreground="White"/>
-        </StackPanel>
-        <TextBox 
-            HorizontalAlignment="Left" 
-            Height="26" 
-            Margin="332,131,0,0" 
-            Grid.Row="3" 
-            TextWrapping="Wrap" 
-            Text="0.00" 
-            VerticalAlignment="Top" Width="256" Grid.Column="1"/>
-        <StackPanel Orientation="Horizontal" Margin="293,169,1,191" Grid.Row="3" Grid.Column="1">
-            <TextBlock Text="Exi : " FontSize="15" VerticalAlignment="Center" Foreground="White"/>
-            <ComboBox Width="256" Margin="10,0,0,0" Height="27" RenderTransformOrigin="0.594,0.542">
-                <ComboBoxItem Content="Sample Suppliers"/>
-                <ComboBoxItem Content="Supplier One"/>
-                <ComboBoxItem Content="Office 2"/>
-            </ComboBox>
+
+
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal">
+
+
+
+            <Label Content="Party A/C : "
+                   Margin="200,0,0,0"
+               Style="{StaticResource AccountsLabel}"/>
+
+            <ComboBox Width="250"
+                      Style="{StaticResource AccountsComboBox}"
+                      Height="30"
+                      VerticalContentAlignment="Center"/>
+
+            <Label Content="Cheque No : "
+                   Margin="30,0,0,0"
+               Style="{StaticResource AccountsLabel}"/>
+
+            <TextBox Width="250"
+                      Style="{StaticResource AccountsTextBox}"
+                      Height="30"
+                      VerticalContentAlignment="Center"/>
         </StackPanel>
 
-        <StackPanel Orientation="Horizontal" Margin="112,83,473,289" Grid.Row="3" Grid.Column="3">
-            <TextBlock Text="     Bank : " VerticalAlignment="Center" FontSize="15" Foreground="White"/>
-        </StackPanel>
-        <TextBox 
-            HorizontalAlignment="Left" 
-            Height="26" 
-            Margin="213,86,0,0" 
-            Grid.Row="3" 
-            TextWrapping="Wrap" 
-            VerticalAlignment="Top" Width="300" Grid.Column="3"/>
-        <StackPanel Orientation="Horizontal" Margin="112,123,473,248" Grid.Row="3" Grid.Column="3">
-            <TextBlock Text=" Branch : " VerticalAlignment="Center" FontSize="15" Foreground="White"/>
-        </StackPanel>
-        <TextBox 
-            HorizontalAlignment="Left" 
-            Height="26" 
-            Margin="213,126,0,0" 
-            Grid.Row="3" 
-            TextWrapping="Wrap" 
-            VerticalAlignment="Top" Width="300" Grid.Column="3"/>
-        <StackPanel Orientation="Horizontal" Margin="112,164,473,207" Grid.Row="3" Grid.Column="3">
-            <TextBlock Text="Chq No : " VerticalAlignment="Center" FontSize="15" Foreground="White"/>
-        </StackPanel>
-        <TextBox 
-            HorizontalAlignment="Left" 
-            Height="26" 
-            Margin="213,167,0,0" 
-            Grid.Row="3" 
-            TextWrapping="Wrap"             
-            VerticalAlignment="Top" Width="300" Grid.Column="3"/>
-        <StackPanel Orientation="Horizontal" Margin="112,205,473,165" Grid.Row="3" Grid.Column="3">
-            <TextBlock Text=" Ref No : " VerticalAlignment="Center" FontSize="15" Foreground="White"/>
-        </StackPanel>
-        <TextBox 
-            HorizontalAlignment="Left" 
-            Height="26" 
-            Margin="213,208,0,0" 
-            Grid.Row="3" 
-            TextWrapping="Wrap"            
-            VerticalAlignment="Top" Width="300" Grid.Column="3"/>
-        <StackPanel Orientation="Horizontal" Margin="99,243,473,128" Grid.Row="3" Grid.Column="3">
-            <TextBlock Text=" Chq Date : " VerticalAlignment="Center" FontSize="15" Foreground="White" Width="88"/>
-        </StackPanel>
-        <DatePicker 
-            HorizontalAlignment="Left" 
-            Height="26" 
-            Margin="213,248,0,0" 
-            Grid.Row="3"                      
-            VerticalAlignment="Top" Width="300" Grid.Column="3"/>
-        <StackPanel Orientation="Horizontal" Margin="47,284,473,78" Grid.Row="3" Grid.Column="3">
-            <TextBlock Text="  Collection Status : " VerticalAlignment="Center" FontSize="15" Foreground="White"/>
-        </StackPanel>
-        <ComboBox 
-            HorizontalAlignment="Left" 
-            Height="26" 
-            Margin="213,287,0,0" 
-            Grid.Row="3"            
-            VerticalAlignment="Top" Width="300" Grid.Column="3"/>
 
-        <Button Grid.Column="3" 
-                Content="Export"
-                FontSize="14"
-                Style="{StaticResource AnimatedRedButton}"
-                Margin="543,12,43,0"
-                Grid.Row="3" 
-                VerticalAlignment="Top"
-                >
-            <Button.Effect>
-                <DropShadowEffect/>
-            </Button.Effect>
-        </Button>
-        <Border BorderBrush="White" BorderThickness="2" HorizontalAlignment="Left" Height="4" Margin="-8,61,0,0" Grid.Row="3" VerticalAlignment="Top" Width="1465" Grid.ColumnSpan="4"/>
-        
-        <Button Grid.Column="3"
-                Content="X" 
-                FontSize="20"
-                Width="40"
-                Style="{StaticResource AnimatedRedButton}"
-                Click="Close_Click"
-                Height="30" Margin="596,-12,0,0" VerticalAlignment="Top" />
+        <StackPanel Grid.Row="3">
+            <DataGrid Height="350">
+
+            </DataGrid>
+        </StackPanel>
+
+
+
+        <StackPanel Grid.Row="4" HorizontalAlignment="right">
+            <Button Style="{StaticResource AnimatedRedButton}"
+                    Margin="0,0,20,0"
+                    Content="Export"/>
+        </StackPanel>
+
+
+
+        <StackPanel Grid.Row="5" Orientation="Horizontal">
+
+            <Label Content="Voucher No : "
+                   Margin="30,0,0,0"
+                   Style="{StaticResource AccountsLabel}"/>
+
+            <mah:NumericUpDown Height="30"
+                               Width="250" 
+                               FontSize="14"
+                               VerticalContentAlignment="Center"
+                   Maximum="9999"
+                   Minimum="0"/>
+
+            <Label Content="Date : "
+                   Margin="50,0,0,0"
+                   Style="{StaticResource AccountsLabel}"/>
+
+            <DatePicker  Width="250"
+                         Height="30"
+                         VerticalContentAlignment="Center"/>
+
+
+            <Label Content="Bank : "
+                   Margin="55,0,0,0"
+                   Style="{StaticResource AccountsLabel}"/>
+
+            <TextBox Width="250"
+                     Style="{StaticResource AccountsTextBox}"
+                     Height="30"
+                     VerticalContentAlignment="Center"/>
+        </StackPanel>
+
+
+
+        <StackPanel Grid.Row="6" Orientation="Horizontal">
+            <Label Content="Party A/C : "
+                   Margin="50,0,0,0"
+                   Style="{StaticResource AccountsLabel}"/>
+
+            <ComboBox Width="250"
+                      Style="{StaticResource AccountsComboBox}"
+                      Height="30"
+                      VerticalContentAlignment="Center"/>
+
+            <Label Content="Amount : "
+                   Margin="35,0,0,0"
+                   Style="{StaticResource AccountsLabel}"/>
+
+            <TextBox Width="250"
+                     Style="{StaticResource AccountsTextBox}"
+                     Height="30"
+                     VerticalContentAlignment="Center"/>
+
+            <Label Content="Branch : "
+                   Margin="44,0,0,0"
+                   Style="{StaticResource AccountsLabel}"/>
+
+            <TextBox Width="250"
+                     Style="{StaticResource AccountsTextBox}"
+                     Height="30"
+                     VerticalContentAlignment="Center"/>
+
+
+        </StackPanel>
+
+
+
+
+
+        <StackPanel Grid.Row="7" Orientation="Horizontal">
+            <Label Content="Bank A/C : "
+                   Margin="50,0,0,0"
+                   Style="{StaticResource AccountsLabel}"/>
+
+            <ComboBox Width="250"
+                      Style="{StaticResource AccountsComboBox}"
+                      Height="30"
+                      VerticalContentAlignment="Center"/>
+
+            <Label Content="Exi :"
+                   Margin="68,0,0,0"
+                   Style="{StaticResource AccountsLabel}"/>
+
+            <ComboBox Width="250"
+                     FontSize="14"
+                     Height="30"
+                     VerticalContentAlignment="Center"/>
+
+
+            <Label Content="Chq No: "
+                   Margin="38,0,0,0"
+                   Style="{StaticResource AccountsLabel}"/>
+
+            <TextBox Width="250"
+                     Style="{StaticResource AccountsTextBox}"
+                     Height="30"
+                     VerticalContentAlignment="Center"/>
+
+
+
+
+        </StackPanel>
+
+
+
+        <StackPanel Grid.Row="8" Orientation="Horizontal">
+            <Label Content=" Remarks : "
+                   Margin="50,0,0,0"
+                   Style="{StaticResource AccountsLabel}"/>
+
+            <TextBox Width="250"
+                      Style="{StaticResource AccountsTextBox}"
+                      Height="30"
+                      VerticalContentAlignment="Center"/>
+
+            <Label Content="Ref No :  "
+                   Margin="43,0,0,0"
+                   Style="{StaticResource AccountsLabel}"/>
+
+            <TextBox Width="250"
+                     Style="{StaticResource AccountsTextBox}"
+                     Height="30"
+                     VerticalContentAlignment="Center"/>
+
+
+
+            <Label Content="Chq Date : "
+                   Margin="28,0,0,0"
+                   Style="{StaticResource AccountsLabel}"/>
+
+            <DatePicker  Width="250"
+                         Height="30"
+                         VerticalContentAlignment="Center"/>
+
+
+        </StackPanel>
+
+
+        <StackPanel Grid.Row="9" Orientation="Horizontal" Margin="0,0,0,-17" RenderTransformOrigin="0.5,0.5">
+            <StackPanel.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="0.754"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="0.487"/>
+                </TransformGroup>
+            </StackPanel.RenderTransform>
+
+            <StackPanel Orientation="Horizontal" 
+                        Margin="100,0,0,0"
+                        VerticalAlignment="Center">
+
+                <Button Content="Save" 
+                        FontSize="14"
+                        Style="{StaticResource AnimatedRedButton}">
+                </Button>
+
+                <Button Content="Edit" 
+                        FontSize="14"
+                        Style="{StaticResource AnimatedRedButton}">
+                </Button>
+
+                <Button Content="Delete" 
+                        FontSize="14"
+                        Style="{StaticResource AnimatedRedButton}">
+                </Button>
+
+                <Button Content="Clear"
+                        FontSize="14"
+                        Style="{StaticResource AnimatedRedButton}">
+                </Button>
+
+            </StackPanel>
+
+            <Label Content="Collection Status : "
+                   Margin="300,0,0,0"
+                   VerticalAlignment="Top"
+                   Style="{StaticResource AccountsLabel}"/>
+
+            <ComboBox Width="250"
+                      VerticalAlignment="top"
+                      Style="{StaticResource AccountsComboBox}"
+                      Height="30"
+                      VerticalContentAlignment="Center"/>
+
+        </StackPanel>
 
 
     </Grid>
 </UserControl>
+    

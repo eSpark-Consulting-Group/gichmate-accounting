@@ -8,7 +8,7 @@
         ResizeMode="NoResize"        
         BorderBrush="Black"
         BorderThickness="3"
-        Title="SearchBank" Height="600" Width="950">
+        Title="SearchBank" Height="770" Width="1200">
 
     <Grid>
         <Grid.Background>
@@ -28,7 +28,7 @@
             <RowDefinition Height="0"/>
             <!--This Row (Row 1) is only added for marginal aesthetics only-->
             <RowDefinition Height="50"/>
-            <RowDefinition Height="440"/>
+            <RowDefinition Height="590"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
@@ -41,7 +41,7 @@
                    VerticalAlignment="Center"/>
 
             <TextBox x:Name="SearchTextBox"
-                     Width="500"
+                     Width="250"
                      Height="30"
                      VerticalContentAlignment="Center" />
 
@@ -51,9 +51,9 @@
         <StackPanel Grid.Row="3">
 
             <DataGrid x:Name="AccountsDataGrid" 
-                      Width="930" 
+                      Width="1199" 
                       HorizontalAlignment="Center" 
-                      Height="440"
+                      Height="590"
                       AutoGenerateColumns="True">
             </DataGrid>
 

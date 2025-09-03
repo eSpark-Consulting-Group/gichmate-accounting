@@ -9,7 +9,7 @@
         WindowStartupLocation="CenterScreen"
         mc:Ignorable="d"
         ResizeMode="NoResize"
-        Height="840" Width="1250">
+        Height="770" Width="1200">
 
     <Grid>
 
@@ -25,8 +25,8 @@
         </Grid.Background>
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="50"/>           
-            <RowDefinition Height="650"/>
+            <RowDefinition Height="40"/>           
+            <RowDefinition Height="630"/>
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
 
@@ -59,7 +59,7 @@
                           AutoGenerateColumns="True"
                           CanUserAddRows="False"
                           IsReadOnly="True"
-                          Height="580"
+                          Height="560"
                           Margin="0,0,0,0"
                           SelectionMode="Extended" />
             </DockPanel>
@@ -73,6 +73,7 @@
                     FontSize="20"
                     Style="{StaticResource AnimatedRedButton}"
                     HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
                     Width="150"
                     
                     Click="LoadFileBtn_Click"/>

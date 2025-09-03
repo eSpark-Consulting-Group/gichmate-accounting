@@ -8,8 +8,7 @@
              BorderThickness="3" 
              BorderBrush="White"
              mc:Ignorable="d" 
-             Loaded="UserControl_Loaded"
-             Height="640" Width="1300">
+             Height="770" Width="1200">
 
     <Control.Background>
         <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
@@ -41,27 +40,31 @@
             <Button Content="X" 
                     FontSize="20"
                     Width="40"
-                    Style="{StaticResource AnimatedRedButton}"
-                    Click="Close_Click"
-                    Margin="890,0,0,0" />
+                    Style="{StaticResource AnimatedRedButton}"   
+                    Command="{Binding DefaultAccountScreenCommand}"
+                    Margin="790,0,0,0" />
             
         </StackPanel>
 
         <StackPanel Grid.Row="1" Orientation="Horizontal" Grid.ColumnSpan="3">
-            <Label Content="Bank Account : " VerticalAlignment="Center"/>
+            <Label Content="Bank Account : " FontSize="14" VerticalAlignment="Center"/>
             <ComboBox x:Name="cmbBankAccount"
                       VerticalAlignment="Center" 
-                      Width="300" 
+                      FontSize="14"
+                      Width="250" 
                       Height="30"
                       VerticalContentAlignment="Center">
                 <ComboBoxItem Content="BANK ACCOUNT"/>
             </ComboBox>
 
-            <Label Content="Date: " VerticalAlignment="Center" Margin="50,0,0,0"/>
+            <Label Content="Date: " 
+                   FontSize="14"
+                   VerticalAlignment="Center" Margin="50,0,0,0"/>
             <DatePicker x:Name="dpDate"
                         VerticalAlignment="Center" 
-                        Width="300" 
+                        Width="250" 
                         Height="30" 
+                        FontSize="14"
                         VerticalContentAlignment="Center"/>
 
             <Button x:Name="btnLoad"
@@ -78,20 +81,20 @@
         </StackPanel>
 
         <DataGrid x:Name="dgBankReconciliation"
-          Grid.Row="2"
-          AutoGenerateColumns="False"
-          HeadersVisibility="All"
-          CanUserAddRows="False"
-          CanUserDeleteRows="False"
-          FontSize="12"
-          IsReadOnly="False"  
-          AutoGeneratingColumn="BankReconciliationDataGrid_AutoGeneratingColumn">
+                  Grid.Row="2"
+                  AutoGenerateColumns="False"
+                  HeadersVisibility="All"
+                  CanUserAddRows="False"
+                  CanUserDeleteRows="False"
+                  ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                  ScrollViewer.VerticalScrollBarVisibility="Auto"
+                  FontSize="12"
+                  IsReadOnly="False"  
+                  AutoGeneratingColumn="BankReconciliationDataGrid_AutoGeneratingColumn" Margin="0,0,0,-131" Grid.RowSpan="2">
             <DataGrid.Columns>
                 <!-- Hidden column for VchrId -->
                 <DataGridTextColumn Header="VchrId" Binding="{Binding [VchrId]}" Visibility="Collapsed"/>
-               
-                <DataGridTextColumn Header="SL" Width="40" Binding="{Binding [SL]}" IsReadOnly="True"/>
-                
+                               
                 <DataGridTextColumn Header="INV No" Width="80" Binding="{Binding [InvoiceNo]}" IsReadOnly="True"/>
                 
                 <DataGridTextColumn Header="Invoice Type" Width="140" Binding="{Binding [InvoiceType]}" IsReadOnly="True"/>

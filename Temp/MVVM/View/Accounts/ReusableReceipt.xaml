@@ -9,11 +9,10 @@
         xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
         WindowStyle="ThreeDBorderWindow"
         WindowStartupLocation="CenterScreen"
-        ResizeMode="NoResize"
-        Height="700"         
+        ResizeMode="NoResize"             
         BorderThickness="3" 
         BorderBrush="White"
-        Width="1200" Background="#FF4A4A4A">
+        Height="770" Width="1200">
 
   
     <Grid>
@@ -34,7 +33,7 @@
             <RowDefinition Height="60"/>
             <RowDefinition Height="60"/>
             <RowDefinition Height="60"/>
-            <RowDefinition Height="300"/>
+            <RowDefinition Height="400"/>
             <RowDefinition Height="100"/>
         </Grid.RowDefinitions>
 
@@ -66,7 +65,7 @@
                    FontSize="14"/>
             <TextBox Text="0.00"
                      FontSize="14"
-                     Width="300" Height="30" 
+                     Width="250" Height="30" 
                      VerticalAlignment="Center" VerticalContentAlignment="Center"/>
 
             <Label Content="Voucher No :"
@@ -79,7 +78,7 @@
                                FontSize="14"
                                VerticalAlignment="Center"
                                VerticalContentAlignment="Center"
-                               Width="200"
+                               Width="250"
                                Height="30"/>
 
             <Label Margin="10,0,0,0"
@@ -87,7 +86,7 @@
                    FontSize="14"
                    VerticalAlignment="Center"/>
             
-            <DatePicker Width="200"
+            <DatePicker Width="250"
                         Height="30"
                         FontSize="14"
                         VerticalContentAlignment="Center"
@@ -101,7 +100,7 @@
                    Margin="80,0,0,0" 
                    VerticalAlignment="Center"/>
 
-            <ComboBox Width="300"
+            <ComboBox Width="250"
                       Height="30" 
                       FontSize="14"
                       VerticalAlignment="Center"
@@ -117,7 +116,7 @@
                    Margin="16,0,0,0"
                    VerticalAlignment="Center"
                    VerticalContentAlignment="Center"/>
-            <ComboBox Width="200"
+            <ComboBox Width="250"
                       Height="30"
                       VerticalAlignment="Center"
                       VerticalContentAlignment="Center">
@@ -132,7 +131,7 @@
                    FontSize="14"
                    VerticalAlignment="Center"
                    Margin="50,0,0,0"/>
-            <ComboBox Width="300"
+            <ComboBox Width="250"
                       Height="30"
                       FontSize="14"
                       Margin="7,0,0,0"
@@ -149,7 +148,7 @@
                    VerticalAlignment="Center"
                    Margin="36,0,0,0" Width="68"
                    />
-            <TextBox Width="463"/>
+            <TextBox Width="250"/>
 
             <Button Margin="10,0,0,0" 
                     Style="{StaticResource AnimatedRedButton}" 
@@ -160,11 +159,10 @@
 
         
         <StackPanel Grid.Row="4" >
-            <DataGrid Width="1132" FontSize="14" Height="300" Margin="0,10,0,0">
+            <DataGrid Width="1132" FontSize="14" Height="400" Margin="0,10,0,0">
                 
                 <DataGrid.Columns>
-                    
-                    <DataGridTextColumn     Width="90"  Header="SL"/>
+                                       
                     <DataGridTextColumn     Width="120" Header="Voucher No"/>
                     <DataGridTextColumn     Width="150" Header="Date"/>
                     <DataGridTextColumn     Width="150" Header="AMOUNT"/>

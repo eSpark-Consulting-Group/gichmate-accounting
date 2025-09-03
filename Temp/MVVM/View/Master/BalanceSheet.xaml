@@ -9,7 +9,9 @@
         BorderThickness="3"
         BorderBrush="White"
         WindowStartupLocation="CenterScreen"
-        Title="BalanceSheet" Height="820" Width="1200">
+        Title="BalanceSheet" 
+        Height="770" Width="1200"
+        >
 
     <Window.Resources>
         <Style TargetType="{x:Type Label}" x:Key="LabelBalanceSheet">
@@ -26,7 +28,7 @@
 
         <Style TargetType="TextBox" x:Key="TextboxBalanceSheet">
             <Setter Property="Height" Value="30"/>
-            <Setter Property="Width" Value="200"/>
+            <Setter Property="Width" Value="250"/>
             <Setter Property="FontSize" Value="14"/>
             <Setter Property="VerticalContentAlignment" Value="Center"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
@@ -59,8 +61,8 @@
             <RowDefinition Height="40"/>
             <RowDefinition Height="30"/>
             <RowDefinition Height="50"/>           
-            <RowDefinition Height="600"/>
-            <RowDefinition Height="*"/> <!--FYI, Buttons will come here, Row size is 70-->
+            <RowDefinition Height="530"/>
+            <RowDefinition Height="*"/> 
         </Grid.RowDefinitions>
 
 
@@ -81,7 +83,7 @@
                    Style="{StaticResource LabelBalanceSheet}"/>
 
             <DatePicker Height="30"
-                        Width="200"
+                        Width="250"
                         VerticalContentAlignment="Center"/>
 
             <Label Content="Closing Stock Validation Using : " 
@@ -100,7 +102,7 @@
                    Content="Branch : "
                    Margin="245,0,0,0"/>
 
-            <ComboBox Width="200"
+            <ComboBox Width="250"
                 Style="{StaticResource ComboBoxBalanceSheet}" >                
             </ComboBox>
 
@@ -118,7 +120,7 @@
         <StackPanel Grid.Row="3" 
                     Style="{StaticResource StackPanelBalanceSheet}">
 
-            <ListView Height="590"
+            <ListView Height="530"
                       Width="1190"
                       FontSize="14"
                       >

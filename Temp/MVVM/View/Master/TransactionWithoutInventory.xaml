@@ -9,7 +9,7 @@
         BorderThickness="1.7"
         WindowStartupLocation="CenterScreen"
         mc:Ignorable="d"
-        Title="TransactionWithoutInventory" Height="800" Width="1250">
+        Height="770" Width="1200">
 
 
     <Grid>
@@ -26,22 +26,24 @@
 
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="50"/>
+            <RowDefinition Height="30"/>
             <RowDefinition Height="40"/>
             <RowDefinition Height="40"/>
             <RowDefinition Height="40"/>
-            <RowDefinition Height="40"/>
+            <RowDefinition Height="0"/>
             <RowDefinition Height="50"/>
             <RowDefinition Height="30"/>
+            <RowDefinition Height="0"/>
             <RowDefinition Height="40"/>
             <RowDefinition Height="40"/>
             <RowDefinition Height="300"/>
             <RowDefinition Height="40"/>
-            <RowDefinition Height="40"/>            
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
         </Grid.RowDefinitions>
 
 
-        <StackPanel Grid.Row="0" VerticalAlignment="Center" Orientation="Vertical">
+        <StackPanel VerticalAlignment="Center" Orientation="Vertical" >
             <Label Content="Transaction Without Inventory"
                    FontSize="20" FontWeight="Bold"/>
 
@@ -50,7 +52,7 @@
                     Width="1250"/>
         </StackPanel>
 
-        <StackPanel Grid.Row="1" Orientation="Horizontal" VerticalAlignment="Center">
+        <StackPanel Grid.Row="1" Orientation="Horizontal" VerticalAlignment="Center" >
             <Label Style="{StaticResource AccountsLabel}"
                    Content="Date : "
                    Margin="50,0,0,0"/>
@@ -60,7 +62,7 @@
                         FontSize="14"/>
 
             <Label Content="Voucher Type : "
-                   Margin="100,0,0,0"
+                   Margin="70,0,0,0"
                    Style="{StaticResource AccountsLabel}"/>
 
             <ComboBox Width="250"
@@ -69,17 +71,18 @@
 
 
 
-        <StackPanel Grid.Row="2" Orientation="Horizontal" VerticalAlignment="Center">
+        <StackPanel Grid.Row="2" Orientation="Horizontal" VerticalAlignment="Center" >
             <Label Style="{StaticResource AccountsLabel}"
                    Content="Account :"
                    Margin="25,0,0,0"/>
+
             <ComboBox VerticalContentAlignment="Center"
                         Width="250"
                         Height="30"
                         FontSize="14"/>
 
             <Label Content="Party A/c : "
-                   Margin="125,0,0,0"
+                   Margin="94,0,0,0"
                    Style="{StaticResource AccountsLabel}"/>
 
             <ComboBox Width="250"
@@ -88,7 +91,7 @@
 
 
 
-        <StackPanel Grid.Row="3" Orientation="Horizontal" VerticalAlignment="Center">
+        <StackPanel Grid.Row="3" Orientation="Horizontal" VerticalAlignment="Center" >
             <Label Style="{StaticResource AccountsLabel}"
                    Content="Ref No :"
                    Margin="35,0,0,0"/>
@@ -99,7 +102,7 @@
                         FontSize="14"/>
 
             <Label Content="Amount : "
-                   Margin="130,0,0,0"
+                   Margin="100,0,0,0"
                    Style="{StaticResource AccountsLabel}"/>
 
             <TextBox Width="250"
@@ -107,19 +110,22 @@
                      Height="30"
                      FontSize="14"                     
                      PreviewTextInput="TransactionAmount_TextPreviewInput"/>
-        </StackPanel>
 
 
-        <StackPanel Grid.Row="4" Orientation="Horizontal">
             <Label Content="Remarks :"
                    Margin="25,0,0,0"
                    Style="{StaticResource AccountsLabel}"
-                   />
+                    />
 
-            <TextBox Width="715"
+            <TextBox Width="250"
                      Height="30"
                      FontSize="14"
-                     />
+                      />
+        </StackPanel>
+
+
+        <StackPanel Grid.Row="4" Orientation="Horizontal" Grid.ColumnSpan="2" Margin="0,0,0,50" >
+
 
         </StackPanel>
 
@@ -127,21 +133,21 @@
         <StackPanel Grid.Row="5" 
                     Orientation="Horizontal" 
                     VerticalAlignment="Center"
-                    Margin="100,0,0,0">
+                    Margin="100,0,0,0" Grid.ColumnSpan="2">
 
             <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
                 <Button Content="Save"
                         Style="{StaticResource AnimatedRedButton}"/>
-                
+
                 <Button Content="Delete"
                         Style="{StaticResource AnimatedRedButton}"/>
-                
+
                 <Button Content="Clear"
                         Style="{StaticResource AnimatedRedButton}"/>
             </StackPanel>
 
             <Label Content="Reports : "
-                   Margin="150,0,0,0"
+                   Margin="118,0,0,0"
                    Style="{StaticResource AccountsLabel}"/>
 
             <ComboBox Width="250"
@@ -153,10 +159,10 @@
             <Button Content="Show"
                     Margin="20,0,0,0"
                     Style="{StaticResource AnimatedRedButton}"/>
-            
+
         </StackPanel>
 
-        <StackPanel Grid.Row="6" Orientation="Horizontal" VerticalAlignment="Center">
+        <StackPanel Grid.Row="6" Orientation="Horizontal" VerticalAlignment="Center" >
             <Border Width="100"
                     Height="3"
                     Background="White"/>
@@ -170,7 +176,7 @@
 
 
 
-        <StackPanel Grid.Row="7" Orientation="Horizontal" VerticalAlignment="Center">
+        <StackPanel Grid.Row="7" Orientation="Horizontal" VerticalAlignment="Top" Grid.RowSpan="2">
             <Label Style="{StaticResource AccountsLabel}"
                    Margin="55,0,0,0"
                    Content="From :  "/>
@@ -181,7 +187,7 @@
                         FontSize="14"/>
 
             <Label Content="To : "
-                   Margin="161,0,0,0"
+                   Margin="131,0,0,0"
                    Style="{StaticResource AccountsLabel}"/>
 
             <DatePicker Width="250"
@@ -191,7 +197,7 @@
         </StackPanel>
 
 
-        <StackPanel Grid.Row="8" Orientation="Horizontal" VerticalAlignment="Center">
+        <StackPanel Grid.Row="9" Orientation="Horizontal" VerticalAlignment="Center" >
             <Label Style="{StaticResource AccountsLabel}"
            Content="Voucher Type : "/>
             <ComboBox VerticalContentAlignment="Center"
@@ -200,7 +206,7 @@
                 FontSize="14"/>
 
             <Label Content="Party A/c :"
-                   Margin="110,0,0,0"
+                   Margin="86,0,0,0"
                    Style="{StaticResource AccountsLabel}"/>
 
             <ComboBox Width="250"
@@ -209,7 +215,7 @@
                       FontSize="14"/>
 
             <Label Content="Ref No : "
-                   Margin="70,0,0,0"
+                   Margin="35,0,0,0"
                    Style="{StaticResource AccountsLabel}"/>
 
             <TextBox Width="250"
@@ -220,10 +226,9 @@
         </StackPanel>
 
 
-        <StackPanel Grid.Row="9">
+        <StackPanel Grid.Row="10" Grid.ColumnSpan="2">
             <DataGrid Height="300" >
                 <DataGrid.Columns >
-                    <DataGridTextColumn Width="50" Header="  SL"/>
                     <DataGridTextColumn Width="140" Header="             Date"/>
                     <DataGridTextColumn Width="140" Header="     Voucher Type"/>
                     <DataGridTextColumn Width="110" Header=" Voucher No"/>
@@ -237,13 +242,14 @@
         </StackPanel>
 
 
-        <StackPanel Grid.Row="10" Orientation="Horizontal" VerticalAlignment="Center">
+        <StackPanel Grid.Row="11" Orientation="Horizontal" VerticalAlignment="Center">
 
             <Label Style="{StaticResource AccountsLabel}"
-                   Content="Cash : "/>
+                   Content="Cash : "
+                   Margin="40,0,0,0"/>
 
             <TextBox Text="0.00 "
-                     Width="200"
+                     Width="250"
                      Height="14"
                      FontSize="14"
                      VerticalContentAlignment="Center"/>
@@ -253,7 +259,7 @@
                    Content="Bank : "/>
 
             <TextBox Text="0.00 "
-                     Width="200"
+                     Width="250"
                      Height="14"
                      FontSize="14"
                      VerticalContentAlignment="Center"/>
@@ -263,62 +269,67 @@
                    Content="Payable : "/>
 
             <TextBox Text="0.00 "
-                     Width="200"
+                     Width="250"
                      Height="14"
                      FontSize="14"
                      VerticalContentAlignment="Center"/>
-
-
-
-            <Label Style="{StaticResource AccountsLabel}"
-                   Margin="40,0,0,0"
-                   Content="Receivable : "/>
-
-            <TextBox Text="0.00 "
-                     Width="200"
-                     Height="14"
-                     FontSize="14"
-                     VerticalContentAlignment="Center"/>
-
-
         </StackPanel>
 
-        <StackPanel Grid.Row="11" Orientation="Horizontal" VerticalAlignment="Center">
+        <StackPanel Grid.Row="12" Orientation="Horizontal" VerticalAlignment="Center">
 
 
             <Label Style="{StaticResource AccountsLabel}"
            
-                    Content=" Sale : "/>
+                    Content=" Sale : "
+                   Margin="40,0,0,0"/>
 
-                     <TextBox Text="0.00 "
-                      Width="200"
+            <TextBox Text="0.00 "
+                      Width="250"
                       Height="14"
                       FontSize="14"
-                      VerticalContentAlignment="Center"/>
+                      VerticalContentAlignment="Center">
+                <TextBox.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-0.112"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </TextBox.RenderTransform>
+            </TextBox>
 
             <Label Style="{StaticResource AccountsLabel}"
                    Margin="15,0,0,0"
                    Content="Purchase : "/>
 
             <TextBox Text="0.00 "
-                     Width="200"
+                     Width="250"
                      Height="14"
                      FontSize="14"
                      VerticalContentAlignment="Center"/>
 
             <Label Style="{StaticResource AccountsLabel}"
-                   Margin="35,0,0,0"
+                   Margin="38,0,0,0"
                    Content="Expense : "/>
 
             <TextBox Text="0.00 "
-                     Width="200"
+                     Width="250"
                      Height="14"
                      FontSize="14"
                      VerticalContentAlignment="Center"/>
+        </StackPanel>
 
+        <StackPanel Grid.Row="13" Orientation="Horizontal">
 
+            <Label Style="{StaticResource AccountsLabel}"
+                   Margin="5,0,0,0"
+                   Content="Receivable : "/>
 
-
+            <TextBox Text="0.00 "
+                     Width="250"
+                     Height="14"
+                     FontSize="14"
+                     VerticalContentAlignment="Center"/>
         </StackPanel>
 
 

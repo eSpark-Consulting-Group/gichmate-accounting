@@ -52,6 +52,7 @@ namespace FlexMold.MVVM.ViewModel
             CurrentView = defaultAccountScreenView;
 
 
+            DefaultAccountScreenCommand = new RelayCommand(o => { CurrentView = defaultAccountScreenView; });
 
             BankPaymentCommand = new RelayCommand(o => { CurrentView = bankPaymentView; });
 

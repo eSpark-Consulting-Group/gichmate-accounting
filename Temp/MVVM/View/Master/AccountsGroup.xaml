@@ -9,7 +9,8 @@
         BorderBrush="Black"
         BorderThickness="3"
         mc:Ignorable="d"
-        Title="AccountsGroup" Height="670" Width="1000">
+        Title="AccountsGroup" 
+        Height="770" Width="1200">
 
     <Window.Resources>
         <Style TargetType="Button" x:Key="AnimatedRedButton">
@@ -99,7 +100,7 @@
             <RowDefinition Height="50"/>
             <RowDefinition Height="50"/>
             <RowDefinition Height="50"/>
-            <RowDefinition Height="350"/>
+            <RowDefinition Height="400"/>
             <RowDefinition Height="10"/>
             <RowDefinition Height="60"/>
         </Grid.RowDefinitions>
@@ -120,7 +121,7 @@
                    VerticalAlignment="Center"
                    FontSize="14"/>
             <TextBox x:Name="GroupNameTextBox" VerticalAlignment="Center" VerticalContentAlignment="Center"
-                     Width="300"
+                     Width="250"
                      Height="30"
                      />
         </StackPanel>
@@ -133,7 +134,7 @@
                    VerticalAlignment="Center"/>
             <ComboBox x:Name="UnderComboBox" Margin="10.5,0,0,0" 
                      VerticalAlignment="Center" VerticalContentAlignment="Center"
-                     Width="300"
+                     Width="250"
                      Height="30" >
 
                 <ComboBoxItem/>
@@ -171,13 +172,13 @@
         <StackPanel Grid.Row="4" Orientation="Horizontal" Margin="0,0,2,0">
             <Border BorderBrush="White" BorderThickness="2" VerticalAlignment="Center" Height="3" Width="100"/>
             <Label  Content="Existing Group" VerticalAlignment="Center"/>
-            <Border BorderBrush="White" BorderThickness="2" VerticalAlignment="Center" Width="800" Height="3"/>
+            <Border BorderBrush="White" BorderThickness="2" VerticalAlignment="Center" Width="950" Height="3"/>
         </StackPanel>
 
 
         <StackPanel Grid.Row="5">
 
-            <DataGrid x:Name="ExistingGroupDataGrid" Height="350" Width="900" SelectionChanged="ExistingGroupDataGrid_SelectionChanged">
+            <DataGrid x:Name="ExistingGroupDataGrid" Height="400" Width="1150" SelectionChanged="ExistingGroupDataGrid_SelectionChanged">
                 <DataGrid.Columns>
                     
                 </DataGrid.Columns>

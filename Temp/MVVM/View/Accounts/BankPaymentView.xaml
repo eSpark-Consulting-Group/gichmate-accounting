@@ -1,5 +1,4 @@
-﻿<!-- BankPaymentView.xaml -->
-<UserControl x:Class="FlexMold.MVVM.View.Accounts.BankPaymentView"
+﻿<UserControl x:Class="FlexMold.MVVM.View.Accounts.BankPaymentView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
@@ -45,7 +44,7 @@
                     FontSize="20"
                     Width="40"
                     Style="{StaticResource AnimatedRedButton}"                    
-                    Click="Close_Click"
+                    Command="{Binding DefaultAccountScreenCommand}"
                     Margin="950,0,0,0" />
         </StackPanel>
 
@@ -82,23 +81,11 @@
             <DataGrid x:Name="dgBankPayments" 
                       Width="1190" 
                       Height="300" 
-                      FontSize="15" 
-                      AutoGenerateColumns="False"
-                      SelectionMode="Single" 
-                      SelectionUnit="FullRow" 
-                      SelectionChanged="dgBankPayments_SelectionChanged">
+                      FontSize="14"
+                      SelectionChanged="dgBankPayments_SelectionChanged"
+                      SelectionMode="Single" SelectionUnit="FullRow" >
 
-                <DataGrid.Columns>
-                    <DataGridTextColumn Width="50" Header="SL" Binding="{Binding RowNumber}" IsReadOnly="True"/>
-                    <DataGridTextColumn Width="150" Header="Voucher No" Binding="{Binding VchrNo}" IsReadOnly="True"/>
-                    <DataGridTextColumn Width="150" Header="Date" Binding="{Binding VchrDate, StringFormat=d}" IsReadOnly="True"/>
-                    <DataGridTextColumn Width="180" Header="Cash Account" Binding="{Binding FromAccountName}" IsReadOnly="True"/>
-                    <DataGridTextColumn Width="180" Header="Party Account" Binding="{Binding ToAccountName}" IsReadOnly="True"/>
-                    <DataGridTextColumn Width="150" Header="Amount" Binding="{Binding VchrAmount, StringFormat=N2}" IsReadOnly="True"/>
-                    <DataGridTextColumn Width="200" Header="Narration" Binding="{Binding Narration}" IsReadOnly="True"/>
-                    <DataGridTextColumn Width="*" Header="Paid By" Binding="{Binding EmpName}" IsReadOnly="True"/>
 
-                </DataGrid.Columns>
             </DataGrid>
         </StackPanel>
 

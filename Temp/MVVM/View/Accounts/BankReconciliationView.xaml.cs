@@ -179,15 +179,5 @@ namespace FlexMold.MVVM.View.Accounts
                 textColumn.ElementStyle = this.FindResource("CenterTextStyle") as Style;
             }
         }
-
-          private void Close_Click(object sender, RoutedEventArgs e)
-        {
-            this.Visibility = Visibility.Collapsed;
-        }
-
-        private void UserControl_Loaded(object sender, RoutedEventArgs e)
-        {
-            this.Visibility = Visibility.Visible;  
-        }
     }
 }

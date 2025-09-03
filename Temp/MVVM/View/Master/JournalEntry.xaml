@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         ResizeMode="NoResize"
         WindowStartupLocation="Manual"
-        Title="JournalEntry" Height="400" Width="900">
+        Title="JournalEntry" Height="300" Width="900">
 
     <Window.Resources>
         <Style TargetType="StackPanel" x:Key="StackPanelJournalEntry">
@@ -35,12 +35,12 @@
         </Grid.Background>
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="50"/>
-            <RowDefinition Height="70"/>
-            <RowDefinition Height="30"/>
-            <RowDefinition Height="60"/>
-            <RowDefinition Height="60"/>
             <RowDefinition Height="40"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="3"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="4"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 

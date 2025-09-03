@@ -7,9 +7,8 @@
              xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
              mc:Ignorable="d"            
              BorderThickness="3" 
-             Loaded="UserControl_Loaded"
              BorderBrush="White"
-             Height="800" Width="1400">
+             Height="770" Width="1200">
 
     <UserControl.Background>
         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -28,7 +27,7 @@
             <RowDefinition Height="40"/>
             <RowDefinition Height="40"/>
             <RowDefinition Height="40"/>
-            <RowDefinition Height="500"/>
+            <RowDefinition Height="450"/>
             <RowDefinition Height="40"/>
             <RowDefinition Height="60"/>
         </Grid.RowDefinitions>
@@ -38,12 +37,12 @@
 
             <Label Content="Receipt View" FontSize="25" FontWeight="Bold"/>
 
-            <Label Content="Date :" 
+            <Label Content=" Receipt Date :" 
                    FontSize="14" 
                    VerticalAlignment="Center" 
-                   Margin="360,0,0,0"/>
+                   Margin="300,0,0,0"/>
             
-            <DatePicker Width="350" 
+            <DatePicker Width="250" 
                         Height="30" 
                         VerticalAlignment="Center" 
                         VerticalContentAlignment="Center" 
@@ -54,8 +53,8 @@
                     FontSize="20"
                     Width="40"
                     Style="{StaticResource AnimatedRedButton}"
-                    Click="Close_Click"
-                    Margin="399,0,0,0" />   
+                    Command="{Binding DefaultAccountScreenCommand}"
+                    Margin="315,0,0,0" />   
         </StackPanel>
 
         <StackPanel Grid.Row="1" Orientation="Horizontal" VerticalAlignment="Center">
@@ -105,7 +104,7 @@
                    VerticalAlignment="Center"/>
             <TextBox Text=".." 
                      FontSize="14"
-                     Width="450" 
+                     Width="250" 
                      Height="30" 
                      VerticalAlignment="Center"
                      VerticalContentAlignment="Center"/>
@@ -116,7 +115,7 @@
 
 
         <StackPanel Grid.Row="4" Orientation="Horizontal">
-            <DataGrid Width="1400" FontSize="14">
+            <DataGrid Width="1400" FontSize="14" Height="450">
                 <DataGrid.Columns>
                     <DataGridTextColumn Binding="{Binding}" Width="40 " Header="SL"/>
                     <DataGridTextColumn Binding="{Binding}" Width="100" Header="Date"/>
@@ -155,7 +154,7 @@
 
             
             <Button Content="Save"  
-                    Margin="100,0,0,0"
+                    Margin="50,0,0,0"
                     VerticalAlignment="Center" 
                     Foreground="White"
                     Style="{StaticResource AnimatedRedButton}">
@@ -165,7 +164,6 @@
             
             <Button Content="Clear" 
                     Margin="20,0,0,0"
-                    FontSize="20"
                     Style="{StaticResource AnimatedRedButton}"
                     VerticalAlignment="Center"
                     Foreground="White">

@@ -27,8 +27,7 @@ namespace FlexMold.MVVM.View.Accounts
         }
 
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
-        {
-            this.Visibility = Visibility.Visible;
+        {            
             VoucherDateBox.SelectedDate = DateTime.Today;
             LoadAccounts();
             LoadEmployees();
@@ -563,10 +562,7 @@ namespace FlexMold.MVVM.View.Accounts
             // this is here because it will now only allow numeric data to be enterered.
         }
 
-        private void Close_Click(object sender, RoutedEventArgs e)
-        {
-            this.Visibility = Visibility.Collapsed;
-        }
+
                
     }
 }

@@ -7,9 +7,8 @@
              xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls" x:Class="FlexMold.MVVM.View.Accounts.PaymentAndReceiptView"
              mc:Ignorable="d" 
              BorderThickness="3" 
-             Loaded="UserControl_Loaded"
              BorderBrush="White"
-             Height="790" Width="1200">
+             Height="770" Width="1200">
 
     <UserControl.Background>
         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -32,8 +31,8 @@
             <RowDefinition Height="40"/>
             <RowDefinition Height="40"/>
             <RowDefinition Height="400"/>
-            <RowDefinition Height="50"/>
-            <RowDefinition Height="50"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
             <RowDefinition Height="60"/>
         </Grid.RowDefinitions>
 
@@ -52,7 +51,7 @@
                     FontSize="20"
                     Width="40"
                     Style="{StaticResource AnimatedRedButton}"
-                    Click="Close_Click"
+                    Command="{Binding DefaultAccountScreenCommand}"
                     Margin="850,0,0,0"/>
             
         </StackPanel>

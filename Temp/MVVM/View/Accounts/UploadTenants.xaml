@@ -9,7 +9,9 @@
         WindowStartupLocation="CenterScreen"
         mc:Ignorable="d"
         ResizeMode="NoResize"
-        Title="UploadTenants" Height="840" Width="1600">
+        Title="UploadTenants" 
+        Height="770" Width="1200"
+        >
 
     <Grid>
         
@@ -27,7 +29,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
             <RowDefinition Height="50"/>
-            <RowDefinition Height="650"/>
+            <RowDefinition Height="550"/>
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
 
@@ -41,7 +43,7 @@
             <Label Content="Unit No : "
                    Margin="25,0,0,0"
                    Style="{StaticResource AccountsLabel}"/>
-            <ComboBox x:Name="UnitNoComboBox" Width="170" 
+            <ComboBox x:Name="UnitNoComboBox" Width="250" 
                       Height="30" 
                       FontSize="14"
                       VerticalContentAlignment="Center" 
@@ -50,7 +52,7 @@
             <Label Content="Tenant Name : "
                    Margin="30,0,0,0"
                    Style="{StaticResource AccountsLabel}"/>
-            <ComboBox x:Name="TenantNameComboBox" Width="170" 
+            <ComboBox x:Name="TenantNameComboBox" Width="250" 
                       Height="30" 
                       FontSize="14"
                       VerticalContentAlignment="Center" 
@@ -60,22 +62,14 @@
                    Margin="30,0,0,0"
                    Style="{StaticResource AccountsLabel}"/>
 
-            <TextBox x:Name="ArreasTxtBox" Width="170" 
+            <TextBox x:Name="ArreasTxtBox" Width="250" 
                       Height="30" 
                       FontSize="14"
                       VerticalContentAlignment="Center" 
                       TextChanged="ArreasTxtBox_TextChanged"
                       />
 
-            <Label Content="Date : "
-                   Margin="30,0,0,0"
-                   FontSize="14"
-                   Style="{StaticResource AccountsLabel}"/>
-
-            <DatePicker x:Name="DatePickTxtBox" Width="170" 
-                       Height="30" 
-                       FontSize="14"
-                       VerticalContentAlignment="Center"/>
+            
         </StackPanel>
 
 
@@ -94,6 +88,8 @@
                             Content="Clear" 
                             Style="{StaticResource AnimatedRedButton}"
                             Margin="20,0,0,0" Click="ClearSearchBtn_Click"/>
+                    
+                    
 
                 </StackPanel>
 
@@ -101,7 +97,7 @@
                           AutoGenerateColumns="True"
                           CanUserAddRows="False"
                           IsReadOnly="True"
-                          Height="580"
+                          Height="480"
                           Margin="0,0,0,0"
                           SelectionMode="Extended"
                           AutoGeneratingColumn="TenantsDataGrid_AutoGeneratingColumn"
@@ -140,6 +136,8 @@
                     Width="110"
                     Click="UploadFileBtn_Click"/>
         </StackPanel>
+        
+        
 
     </Grid>
 </Window>

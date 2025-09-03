@@ -37,9 +37,9 @@ namespace FlexMold.MVVM.View.Accounts
                     cmbAccount.DisplayMemberPath = "AccountName";
                     cmbAccount.SelectedValuePath = "AccountId";
 
-                    cmbCashAccount.ItemsSource = dtAccounts.DefaultView;
-                    cmbCashAccount.DisplayMemberPath = "AccountName";
-                    cmbCashAccount.SelectedValuePath = "AccountId";
+                  //  cmbCashAccount.ItemsSource = dtAccounts.DefaultView;
+                   // cmbCashAccount.DisplayMemberPath = "AccountName";
+                   // cmbCashAccount.SelectedValuePath = "AccountId";
                 }
             }
             catch (Exception ex)
@@ -259,29 +259,19 @@ namespace FlexMold.MVVM.View.Accounts
             dpDate.SelectedDate = DateTime.Now;
             cmbParty.SelectedIndex = -1;
             cmbAccount.SelectedIndex = -1;
-            cmbCashAccount.SelectedIndex = -1;
+           // cmbCashAccount.SelectedIndex = -1;
             txtAmount.Text = "0.00";
             txtNarration.Clear();
             _selectedVchrTranId = null;
         }
 
-        private void ToggleFields_Click(object sender, RoutedEventArgs e)
-        {
-            if (FieldContainer.Visibility == Visibility.Visible)
-                FieldContainer.Visibility = Visibility.Collapsed;
-            else
-                FieldContainer.Visibility = Visibility.Visible;
-        }
-
-        private void Close_Click(object sender, RoutedEventArgs e)
-        {
-            this.Visibility = Visibility.Collapsed;
-        }
-
-        private void UserControl_Loaded(object sender, RoutedEventArgs e)
-        {
-            this.Visibility = Visibility.Visible;
-        }
-
+        //private void ToggleFields_Click(object sender, RoutedEventArgs e)
+        //{
+        //    if (FieldContainer.Visibility == Visibility.Visible)
+        //        FieldContainer.Visibility = Visibility.Collapsed;
+        //    else
+        //        FieldContainer.Visibility = Visibility.Visible;
+        //}
+         
     }
 }

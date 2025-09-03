@@ -41,7 +41,7 @@ namespace FlexMold.MVVM.View
         private void TopBarAccountsButton_Click(object sender, RoutedEventArgs e)
         {
            
-            TopBarAccountsButton.ContextMenu.PlacementTarget = TopBarAccountsButton; // ✅ anchor to itself
+            TopBarAccountsButton.ContextMenu.PlacementTarget = TopBarAccountsButton; 
             TopBarAccountsButton.ContextMenu.Placement = System.Windows.Controls.Primitives.PlacementMode.Bottom;
             TopBarAccountsButton.ContextMenu.HorizontalOffset = 0;
             TopBarAccountsButton.ContextMenu.VerticalOffset = 0;
@@ -68,7 +68,7 @@ namespace FlexMold.MVVM.View
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            var userSettings = new UserSettingsView(); // double-check spelling if it was intentional
+            var userSettings = new UserSettingsView(); 
             userSettings.Show();
         }
 
