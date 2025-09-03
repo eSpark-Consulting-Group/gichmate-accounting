@@ -57,8 +57,8 @@
 
         <StackPanel Grid.Row="3">
 
-            <DataGrid x:Name="SearchExpenseDataGrid" Width="1199" HorizontalAlignment="Center" Height="550" 
-                      SelectionChanged="DataGrid_SelectionChanged" AutoGenerateColumns="False">
+            <DataGrid x:Name="SearchExpenseDataGrid" Width="1180" HorizontalAlignment="Center" Height="550" 
+                      SelectionChanged="DataGrid_SelectionChanged" AutoGenerateColumns="False" >
                 
                 <DataGrid.Columns>
                     <DataGridTextColumn Width="50" Header="ID" Binding="{Binding ID}"/>

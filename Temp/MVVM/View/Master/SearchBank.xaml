@@ -51,7 +51,7 @@
         <StackPanel Grid.Row="3">
 
             <DataGrid x:Name="AccountsDataGrid" 
-                      Width="1199" 
+                      Width="1180" 
                       HorizontalAlignment="Center" 
                       Height="590"
                       AutoGenerateColumns="True">

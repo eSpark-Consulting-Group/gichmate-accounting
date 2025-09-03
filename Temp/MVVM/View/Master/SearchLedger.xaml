@@ -47,7 +47,7 @@
 
         <StackPanel Grid.Row="3">
             <DataGrid x:Name="SearchLedgerDataGrid"
-                      Width="1199"
+                      Width="1180"
                       HorizontalAlignment="Center"
                       Height="550"
                       SelectionChanged="DataGrid_SelectionChanged"
