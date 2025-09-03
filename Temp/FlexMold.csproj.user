@@ -4,6 +4,12 @@
     <ShowAllFiles>true</ShowAllFiles>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Update="Ashpro\InputBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Ashpro\TranslatorInputForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="MVVM\View\Accounts\AccountScreens.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -46,6 +52,9 @@
     <Compile Update="MVVM\View\Accounts\ReusableReceipt.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="MVVM\View\Accounts\UploadTenants.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="MVVM\View\Firm\AdminSettingsView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -85,8 +94,86 @@
     <Compile Update="MVVM\View\Master\SearchLedger.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="MVVM\View\Master\TransactionWithoutInventory.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MVVM\View\Master\UploadBankReceipts.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="MVVM\View\UserSettingsView.xaml.cs">
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="SubProjects\AshFramework\AshFramework\BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SubProjects\AshFramework\AshFramework\BaseFormThree.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SubProjects\AshFramework\AshFramework\BaseFormTwo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SubProjects\AshFramework\AshFramework\MasterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SubProjects\AshFramework\AshFramework\MasterGradientPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="SubProjects\AshUserControl\AshUsercontrol\AshButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="SubProjects\AshUserControl\AshUsercontrol\AshComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="SubProjects\AshUserControl\AshUsercontrol\AshDataGridview.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="SubProjects\AshUserControl\AshUsercontrol\AshDateTimePicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="SubProjects\AshUserControl\AshUsercontrol\AshGradientPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="SubProjects\AshUserControl\AshUsercontrol\AshNumericLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="SubProjects\AshUserControl\AshUsercontrol\AshPagedPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="SubProjects\AshUserControl\AshUsercontrol\AshTBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="SubProjects\AshUserControl\AshUsercontrol\AshTextBoxNormal.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="SubProjects\AshUserControl\AshUsercontrol\AshUpDown.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="SubProjects\AshUserControl\AshUsercontrol\CalendarEditingControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="SubProjects\AshUserControl\AshUsercontrol\DashboardPOSKeyboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="SubProjects\AshUserControl\AshUsercontrol\ExButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="SubProjects\AshUserControl\AshUsercontrol\NumKeyBoardLogin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="SubProjects\AshUserControl\AshUsercontrol\NumKeyBoardPOS.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="SubProjects\AshUserControl\AshUsercontrol\POSButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="SubProjects\AshUserControl\AshUsercontrol\ProgressBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="SubProjects\AshUserControl\AshUsercontrol\RestaurantKeyboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="SubProjects\AshUserControl\AshUsercontrol\TexboxEx.cs">
+      <SubType>Component</SubType>
     </Compile>
   </ItemGroup>
 </Project>

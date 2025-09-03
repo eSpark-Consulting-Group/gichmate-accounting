@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "FlexMold": {
+      "commandName": "Project",
+      "workingDirectory": "C:\\Users\\Dotnet_User1\\Desktop\\FlexMold[12-Feb]-AccountingUpdate\\bin\\Debug\\net8.0-windows"
+    }
+  }
+}

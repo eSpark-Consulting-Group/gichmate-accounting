@@ -563,6 +563,7 @@ namespace FlexMold.MVVM.Model
     [XmlRoot(ElementName = "Settings")]
     public class Settings
     {
+        public static object Default { get; internal set; }
         [XmlElement(ElementName = "StateMachine")]
         public StateMachine StateMachine { get; set; }
 

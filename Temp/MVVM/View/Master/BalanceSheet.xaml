@@ -9,9 +9,7 @@
         BorderThickness="3"
         BorderBrush="White"
         WindowStartupLocation="CenterScreen"
-        Title="BalanceSheet" 
-        Height="770" Width="1200"
-        >
+        Title="BalanceSheet" Height="770" Width="1200">
 
     <Window.Resources>
         <Style TargetType="{x:Type Label}" x:Key="LabelBalanceSheet">
@@ -28,7 +26,7 @@
 
         <Style TargetType="TextBox" x:Key="TextboxBalanceSheet">
             <Setter Property="Height" Value="30"/>
-            <Setter Property="Width" Value="250"/>
+            <Setter Property="Width" Value="200"/>
             <Setter Property="FontSize" Value="14"/>
             <Setter Property="VerticalContentAlignment" Value="Center"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
@@ -42,9 +40,10 @@
             <Setter Property="FontSize" Value="14"/>
         </Style>
     </Window.Resources>
-    
-    
+
+
     <Grid>
+       
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                 <GradientStop Color="#FFEE4540"/>
@@ -56,17 +55,17 @@
             </LinearGradientBrush>
         </Grid.Background>
 
-        
-       <Grid.RowDefinitions>
+
+        <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
-            <RowDefinition Height="30"/>
-            <RowDefinition Height="50"/>           
-            <RowDefinition Height="530"/>
-            <RowDefinition Height="*"/> 
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="550"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
 
-        <StackPanel Grid.Row="0">
+        <StackPanel Grid.Row="0" >
             <Label Content="Balance Sheet"
                    FontSize="20"
                    FontWeight="Bold"/>
@@ -74,111 +73,84 @@
 
 
 
-        <StackPanel Grid.Row="1"  Orientation="Horizontal"
-                    
+        <StackPanel Grid.Row="1" 
+                    Style="{StaticResource StackPanelBalanceSheet}" HorizontalAlignment="Left" Margin="188,0,0,0"
                     >
 
             <Label Content="As on : "
-                   Margin="250,0,0,0"
+                   Margin="72,0,0,0"
                    Style="{StaticResource LabelBalanceSheet}"/>
 
-            <DatePicker Height="30"
+            <DatePicker x:Name="dtmDate" Height="30"
                         Width="250"
                         VerticalContentAlignment="Center"/>
 
-            <Label Content="Closing Stock Validation Using : " 
-                   Style="{StaticResource LabelBalanceSheet}"
-                   Margin="30,0,0,0"/>
-
-            <ComboBox Style="{StaticResource ComboBoxBalanceSheet}"
-                      />
+            <Button Style="{StaticResource AnimatedRedButton}"
+                    Content="Load"
+                    FontSize="15"        
+                    Margin="40,0,0,0"
+                    Click="Button_Click" />
 
         </StackPanel>
 
         <StackPanel Grid.Row="2"
-                    Orientation="Horizontal">
+                   Style="{StaticResource StackPanelBalanceSheet}" Orientation="Horizontal">
 
-            <Label Style="{StaticResource LabelBalanceSheet}"
-                   Content="Branch : "
-                   Margin="245,0,0,0"/>
 
-            <ComboBox Width="250"
-                Style="{StaticResource ComboBoxBalanceSheet}" >                
-            </ComboBox>
+            <Label Content="Closing Stock Validation Using : " 
+                   Style="{StaticResource LabelBalanceSheet}"
+                   Margin="0,0,0,0"/>
+
+            <ComboBox x:Name="ClosingValidationComboBox" Style="{StaticResource ComboBoxBalanceSheet}"/>
 
             
             <Label Content="Opening Stock Validation Using : "
                    Style="{StaticResource LabelBalanceSheet}"
-                   Margin="20,0,0,0"/>
+                   Margin="30,0,0,0"/>
 
-            <ComboBox Style="{StaticResource ComboBoxBalanceSheet}"
+            <ComboBox x:Name="cmbOppStock" Style="{StaticResource ComboBoxBalanceSheet}"
                       />
         </StackPanel>
-        
 
-        <!--Stored prcedures need to be applied on the DataGrid(Out of my scope)-->
-        <StackPanel Grid.Row="3" 
-                    Style="{StaticResource StackPanelBalanceSheet}">
 
-            <ListView Height="530"
-                      Width="1190"
-                      FontSize="14"
-                      >
-                <ListView.View>
-                    <GridView>
-                        <GridViewColumn Header="Liability"
-                                        DisplayMemberBinding="{Binding Liability}" 
-                                        Width="250"/>
-                        
-                        <GridViewColumn Header="Liability Amount" 
-                                        DisplayMemberBinding="{Binding LiabilityAmount}"
-                                        Width="250"/>
 
-                        <GridViewColumn Header="Asset"
-                                        DisplayMemberBinding="{Binding Asset}"
-                                        Width="250"/>
-
-                        <GridViewColumn Header="Asset Amount"
-                                        DisplayMemberBinding="{Binding AssetAmount}"
-                                        Width="250"/>
-
-                        <GridViewColumn Header="Equity"
-                                        DisplayMemberBinding="{Binding Equity}"
-                                        Width="200"
-                                        />
-                    </GridView>
-                </ListView.View>
-            </ListView>
-                        
+        <StackPanel Grid.Row="3" Style="{StaticResource StackPanelBalanceSheet}" HorizontalAlignment="Left" Margin="2,0,0,0">
+            <RichTextBox Name="rchTransdtls" 
+                         Height="550" 
+                         Width="1190"
+                         AcceptsReturn="True"
+                         HorizontalScrollBarVisibility="Disabled" 
+                         VerticalScrollBarVisibility="Auto"
+                         FontSize="15" 
+                         FontStyle="Normal">
+                
+            </RichTextBox>
         </StackPanel>
 
-        <StackPanel Grid.Row="4" Style="{StaticResource StackPanelBalanceSheet}">
+
+        <StackPanel Grid.Row="4" Style="{StaticResource StackPanelBalanceSheet}" HorizontalAlignment="Left" Margin="437,0,0,0">
             <StackPanel Style="{StaticResource StackPanelBalanceSheet}">
-                
+
                 <Button Style="{StaticResource AnimatedRedButton}"
                         Content="Show"
-                        FontSize="15"          />
-                
+                        FontSize="15"             
+                        Click="Button_Click" />
+
                 <Button Style="{StaticResource AnimatedRedButton}"
                         Content="Print"
                         FontSize="15"/>
-                
+
                 <Button Style="{StaticResource AnimatedRedButton}"
                         Content="Clear"
-                        FontSize="15"/>
-                
+                        FontSize="15"
+                        Click="ClearWindow_Click"/>
+
                 <Button Style="{StaticResource AnimatedRedButton}"
                         Content="Close"
-                        FontSize="15" />
-                
-            </StackPanel>
+                        FontSize="15"
+                        Click="CloseWindow_Click" />
+
+            </StackPanel>            
         </StackPanel>
-        
-        
-        
-        
-
-
-
     </Grid>
 </Window>

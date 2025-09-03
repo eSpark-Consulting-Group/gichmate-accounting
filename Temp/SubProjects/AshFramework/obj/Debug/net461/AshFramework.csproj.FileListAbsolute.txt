@@ -1,0 +1,133 @@
+F:\Code Canyon\AshFramework\bin\Debug\net461\AshFramework.dll.config
+F:\Code Canyon\AshFramework\bin\Debug\net461\AshFramework.dll
+F:\Code Canyon\AshFramework\bin\Debug\net461\AshFramework.pdb
+F:\Code Canyon\AshFramework\obj\Debug\net461\AshFramework.csproj.AssemblyReference.cache
+F:\Code Canyon\AshFramework\obj\Debug\net461\AshFramework.BaseForm.resources
+F:\Code Canyon\AshFramework\obj\Debug\net461\AshFramework.BaseFormTwo.resources
+F:\Code Canyon\AshFramework\obj\Debug\net461\AshFramework.MasterForm.resources
+F:\Code Canyon\AshFramework\obj\Debug\net461\AshFramework.csproj.GenerateResource.cache
+F:\Code Canyon\AshFramework\obj\Debug\net461\AshFramework.GeneratedMSBuildEditorConfig.editorconfig
+F:\Code Canyon\AshFramework\obj\Debug\net461\AshFramework.csproj.CoreCompileInputs.cache
+F:\Code Canyon\AshFramework\obj\Debug\net461\AshFramework.dll
+F:\Code Canyon\AshFramework\obj\Debug\net461\AshFramework.pdb
+F:\Code Canyon\Ash Pro Dlls Etc\AshFramework\bin\Debug\net461\AshFramework.dll.config
+F:\Code Canyon\Ash Pro Dlls Etc\AshFramework\bin\Debug\net461\AshFramework.dll
+F:\Code Canyon\Ash Pro Dlls Etc\AshFramework\bin\Debug\net461\AshFramework.pdb
+F:\Code Canyon\Ash Pro Dlls Etc\AshFramework\obj\Debug\net461\AshFramework.BaseForm.resources
+F:\Code Canyon\Ash Pro Dlls Etc\AshFramework\obj\Debug\net461\AshFramework.BaseFormTwo.resources
+F:\Code Canyon\Ash Pro Dlls Etc\AshFramework\obj\Debug\net461\AshFramework.MasterForm.resources
+F:\Code Canyon\Ash Pro Dlls Etc\AshFramework\obj\Debug\net461\AshFramework.csproj.GenerateResource.cache
+F:\Code Canyon\Ash Pro Dlls Etc\AshFramework\obj\Debug\net461\AshFramework.GeneratedMSBuildEditorConfig.editorconfig
+F:\Code Canyon\Ash Pro Dlls Etc\AshFramework\obj\Debug\net461\AshFramework.csproj.CoreCompileInputs.cache
+F:\Code Canyon\Ash Pro Dlls Etc\AshFramework\obj\Debug\net461\AshFramework.dll
+F:\Code Canyon\Ash Pro Dlls Etc\AshFramework\obj\Debug\net461\AshFramework.pdb
+F:\Code Canyon\Ash Pro Dlls Etc\AshFramework\obj\Debug\net461\AshFramework.csproj.AssemblyReference.cache
+F:\Offline Apps\C#\Clients Folder\New Noble\Frameworks\AshFramework\bin\Debug\net461\AshFramework.dll.config
+F:\Offline Apps\C#\Clients Folder\New Noble\Frameworks\AshFramework\bin\Debug\net461\AshFramework.dll
+F:\Offline Apps\C#\Clients Folder\New Noble\Frameworks\AshFramework\bin\Debug\net461\AshFramework.pdb
+F:\Offline Apps\C#\Clients Folder\New Noble\Frameworks\AshFramework\obj\Debug\net461\AshFramework.csproj.AssemblyReference.cache
+F:\Offline Apps\C#\Clients Folder\New Noble\Frameworks\AshFramework\obj\Debug\net461\AshFramework.BaseForm.resources
+F:\Offline Apps\C#\Clients Folder\New Noble\Frameworks\AshFramework\obj\Debug\net461\AshFramework.BaseFormTwo.resources
+F:\Offline Apps\C#\Clients Folder\New Noble\Frameworks\AshFramework\obj\Debug\net461\AshFramework.MasterForm.resources
+F:\Offline Apps\C#\Clients Folder\New Noble\Frameworks\AshFramework\obj\Debug\net461\AshFramework.csproj.GenerateResource.cache
+F:\Offline Apps\C#\Clients Folder\New Noble\Frameworks\AshFramework\obj\Debug\net461\AshFramework.GeneratedMSBuildEditorConfig.editorconfig
+F:\Offline Apps\C#\Clients Folder\New Noble\Frameworks\AshFramework\obj\Debug\net461\AshFramework.csproj.CoreCompileInputs.cache
+F:\Offline Apps\C#\Clients Folder\New Noble\Frameworks\AshFramework\obj\Debug\net461\AshFramework.dll
+F:\Offline Apps\C#\Clients Folder\New Noble\Frameworks\AshFramework\obj\Debug\net461\AshFramework.pdb
+F:\Offline Apps\C#\Clients Folder\Nagdan Update\Frameworks\AshFramework\bin\Debug\net461\AshFramework.dll.config
+F:\Offline Apps\C#\Clients Folder\Nagdan Update\Frameworks\AshFramework\bin\Debug\net461\AshFramework.dll
+F:\Offline Apps\C#\Clients Folder\Nagdan Update\Frameworks\AshFramework\bin\Debug\net461\AshFramework.pdb
+F:\Offline Apps\C#\Clients Folder\Nagdan Update\Frameworks\AshFramework\obj\Debug\net461\AshFramework.csproj.AssemblyReference.cache
+F:\Offline Apps\C#\Clients Folder\Nagdan Update\Frameworks\AshFramework\obj\Debug\net461\AshFramework.BaseForm.resources
+F:\Offline Apps\C#\Clients Folder\Nagdan Update\Frameworks\AshFramework\obj\Debug\net461\AshFramework.BaseFormTwo.resources
+F:\Offline Apps\C#\Clients Folder\Nagdan Update\Frameworks\AshFramework\obj\Debug\net461\AshFramework.MasterForm.resources
+F:\Offline Apps\C#\Clients Folder\Nagdan Update\Frameworks\AshFramework\obj\Debug\net461\AshFramework.csproj.GenerateResource.cache
+F:\Offline Apps\C#\Clients Folder\Nagdan Update\Frameworks\AshFramework\obj\Debug\net461\AshFramework.GeneratedMSBuildEditorConfig.editorconfig
+F:\Offline Apps\C#\Clients Folder\Nagdan Update\Frameworks\AshFramework\obj\Debug\net461\AshFramework.csproj.CoreCompileInputs.cache
+F:\Offline Apps\C#\Clients Folder\Nagdan Update\Frameworks\AshFramework\obj\Debug\net461\AshFramework.dll
+F:\Offline Apps\C#\Clients Folder\Nagdan Update\Frameworks\AshFramework\obj\Debug\net461\AshFramework.pdb
+F:\Offline Apps\C#\Nagadan Pro\Project\Frameworks\AshFramework\bin\Debug\net461\AshFramework.dll.config
+F:\Offline Apps\C#\Nagadan Pro\Project\Frameworks\AshFramework\bin\Debug\net461\AshFramework.dll
+F:\Offline Apps\C#\Nagadan Pro\Project\Frameworks\AshFramework\bin\Debug\net461\AshFramework.pdb
+F:\Offline Apps\C#\Nagadan Pro\Project\Frameworks\AshFramework\obj\Debug\net461\AshFramework.BaseForm.resources
+F:\Offline Apps\C#\Nagadan Pro\Project\Frameworks\AshFramework\obj\Debug\net461\AshFramework.BaseFormTwo.resources
+F:\Offline Apps\C#\Nagadan Pro\Project\Frameworks\AshFramework\obj\Debug\net461\AshFramework.MasterForm.resources
+F:\Offline Apps\C#\Nagadan Pro\Project\Frameworks\AshFramework\obj\Debug\net461\AshFramework.csproj.GenerateResource.cache
+F:\Offline Apps\C#\Nagadan Pro\Project\Frameworks\AshFramework\obj\Debug\net461\AshFramework.GeneratedMSBuildEditorConfig.editorconfig
+F:\Offline Apps\C#\Nagadan Pro\Project\Frameworks\AshFramework\obj\Debug\net461\AshFramework.csproj.CoreCompileInputs.cache
+F:\Offline Apps\C#\Nagadan Pro\Project\Frameworks\AshFramework\obj\Debug\net461\AshFramework.dll
+F:\Offline Apps\C#\Nagadan Pro\Project\Frameworks\AshFramework\obj\Debug\net461\AshFramework.pdb
+F:\Offline Apps\C#\Nagadan Pro\Project\Frameworks\AshFramework\obj\Debug\net461\AshFramework.csproj.AssemblyReference.cache
+F:\Offline Apps\C#\Nagadan Pro\Nagadan-The360 project and DB\Project\Frameworks\AshFramework\bin\Debug\net461\AshFramework.dll.config
+F:\Offline Apps\C#\Nagadan Pro\Nagadan-The360 project and DB\Project\Frameworks\AshFramework\bin\Debug\net461\AshFramework.dll
+F:\Offline Apps\C#\Nagadan Pro\Nagadan-The360 project and DB\Project\Frameworks\AshFramework\bin\Debug\net461\AshFramework.pdb
+F:\Offline Apps\C#\Nagadan Pro\Nagadan-The360 project and DB\Project\Frameworks\AshFramework\obj\Debug\net461\AshFramework.csproj.AssemblyReference.cache
+F:\Offline Apps\C#\Nagadan Pro\Nagadan-The360 project and DB\Project\Frameworks\AshFramework\obj\Debug\net461\AshFramework.BaseForm.resources
+F:\Offline Apps\C#\Nagadan Pro\Nagadan-The360 project and DB\Project\Frameworks\AshFramework\obj\Debug\net461\AshFramework.BaseFormTwo.resources
+F:\Offline Apps\C#\Nagadan Pro\Nagadan-The360 project and DB\Project\Frameworks\AshFramework\obj\Debug\net461\AshFramework.MasterForm.resources
+F:\Offline Apps\C#\Nagadan Pro\Nagadan-The360 project and DB\Project\Frameworks\AshFramework\obj\Debug\net461\AshFramework.csproj.GenerateResource.cache
+F:\Offline Apps\C#\Nagadan Pro\Nagadan-The360 project and DB\Project\Frameworks\AshFramework\obj\Debug\net461\AshFramework.GeneratedMSBuildEditorConfig.editorconfig
+F:\Offline Apps\C#\Nagadan Pro\Nagadan-The360 project and DB\Project\Frameworks\AshFramework\obj\Debug\net461\AshFramework.csproj.CoreCompileInputs.cache
+F:\Offline Apps\C#\Nagadan Pro\Nagadan-The360 project and DB\Project\Frameworks\AshFramework\obj\Debug\net461\AshFramework.dll
+F:\Offline Apps\C#\Nagadan Pro\Nagadan-The360 project and DB\Project\Frameworks\AshFramework\obj\Debug\net461\AshFramework.pdb
+F:\Offline Apps\C#\Nagadan Pro\DeskCloud-The360 project and DB\DeskCloud ERP Source Code V20.21\Project\Frameworks\AshFramework\bin\Debug\net461\AshFramework.dll.config
+F:\Offline Apps\C#\Nagadan Pro\DeskCloud-The360 project and DB\DeskCloud ERP Source Code V20.21\Project\Frameworks\AshFramework\bin\Debug\net461\AshFramework.dll
+F:\Offline Apps\C#\Nagadan Pro\DeskCloud-The360 project and DB\DeskCloud ERP Source Code V20.21\Project\Frameworks\AshFramework\bin\Debug\net461\AshFramework.pdb
+F:\Offline Apps\C#\Nagadan Pro\DeskCloud-The360 project and DB\DeskCloud ERP Source Code V20.21\Project\Frameworks\AshFramework\obj\Debug\net461\AshFramework.csproj.AssemblyReference.cache
+F:\Offline Apps\C#\Nagadan Pro\DeskCloud-The360 project and DB\DeskCloud ERP Source Code V20.21\Project\Frameworks\AshFramework\obj\Debug\net461\AshFramework.BaseForm.resources
+F:\Offline Apps\C#\Nagadan Pro\DeskCloud-The360 project and DB\DeskCloud ERP Source Code V20.21\Project\Frameworks\AshFramework\obj\Debug\net461\AshFramework.BaseFormTwo.resources
+F:\Offline Apps\C#\Nagadan Pro\DeskCloud-The360 project and DB\DeskCloud ERP Source Code V20.21\Project\Frameworks\AshFramework\obj\Debug\net461\AshFramework.MasterForm.resources
+F:\Offline Apps\C#\Nagadan Pro\DeskCloud-The360 project and DB\DeskCloud ERP Source Code V20.21\Project\Frameworks\AshFramework\obj\Debug\net461\AshFramework.csproj.GenerateResource.cache
+F:\Offline Apps\C#\Nagadan Pro\DeskCloud-The360 project and DB\DeskCloud ERP Source Code V20.21\Project\Frameworks\AshFramework\obj\Debug\net461\AshFramework.GeneratedMSBuildEditorConfig.editorconfig
+F:\Offline Apps\C#\Nagadan Pro\DeskCloud-The360 project and DB\DeskCloud ERP Source Code V20.21\Project\Frameworks\AshFramework\obj\Debug\net461\AshFramework.csproj.CoreCompileInputs.cache
+F:\Offline Apps\C#\Nagadan Pro\DeskCloud-The360 project and DB\DeskCloud ERP Source Code V20.21\Project\Frameworks\AshFramework\obj\Debug\net461\AshFramework.dll
+F:\Offline Apps\C#\Nagadan Pro\DeskCloud-The360 project and DB\DeskCloud ERP Source Code V20.21\Project\Frameworks\AshFramework\obj\Debug\net461\AshFramework.pdb
+F:\Offline Apps\DeskCloud ERP\Project\Frameworks\AshFramework\bin\Debug\net461\AshFramework.dll.config
+F:\Offline Apps\DeskCloud ERP\Project\Frameworks\AshFramework\bin\Debug\net461\AshFramework.dll
+F:\Offline Apps\DeskCloud ERP\Project\Frameworks\AshFramework\bin\Debug\net461\AshFramework.pdb
+F:\Offline Apps\DeskCloud ERP\Project\Frameworks\AshFramework\obj\Debug\net461\AshFramework.csproj.AssemblyReference.cache
+F:\Offline Apps\DeskCloud ERP\Project\Frameworks\AshFramework\obj\Debug\net461\AshFramework.BaseForm.resources
+F:\Offline Apps\DeskCloud ERP\Project\Frameworks\AshFramework\obj\Debug\net461\AshFramework.BaseFormTwo.resources
+F:\Offline Apps\DeskCloud ERP\Project\Frameworks\AshFramework\obj\Debug\net461\AshFramework.MasterForm.resources
+F:\Offline Apps\DeskCloud ERP\Project\Frameworks\AshFramework\obj\Debug\net461\AshFramework.csproj.GenerateResource.cache
+F:\Offline Apps\DeskCloud ERP\Project\Frameworks\AshFramework\obj\Debug\net461\AshFramework.GeneratedMSBuildEditorConfig.editorconfig
+F:\Offline Apps\DeskCloud ERP\Project\Frameworks\AshFramework\obj\Debug\net461\AshFramework.csproj.CoreCompileInputs.cache
+F:\Offline Apps\DeskCloud ERP\Project\Frameworks\AshFramework\obj\Debug\net461\AshFramework.dll
+F:\Offline Apps\DeskCloud ERP\Project\Frameworks\AshFramework\obj\Debug\net461\AshFramework.pdb
+D:\Projects\GitHub\eSpark-Consultants\src\Gichmate_Accounting\Nagadan ERPv7.0.1 SourceCode\Project\Frameworks\AshFramework\bin\Debug\net461\AshFramework.dll.config
+D:\Projects\GitHub\eSpark-Consultants\src\Gichmate_Accounting\Nagadan ERPv7.0.1 SourceCode\Project\Frameworks\AshFramework\bin\Debug\net461\AshFramework.dll
+D:\Projects\GitHub\eSpark-Consultants\src\Gichmate_Accounting\Nagadan ERPv7.0.1 SourceCode\Project\Frameworks\AshFramework\bin\Debug\net461\AshFramework.pdb
+D:\Projects\GitHub\eSpark-Consultants\src\Gichmate_Accounting\Nagadan ERPv7.0.1 SourceCode\Project\Frameworks\AshFramework\obj\Debug\net461\AshFramework.csproj.AssemblyReference.cache
+D:\Projects\GitHub\eSpark-Consultants\src\Gichmate_Accounting\Nagadan ERPv7.0.1 SourceCode\Project\Frameworks\AshFramework\obj\Debug\net461\AshFramework.BaseForm.resources
+D:\Projects\GitHub\eSpark-Consultants\src\Gichmate_Accounting\Nagadan ERPv7.0.1 SourceCode\Project\Frameworks\AshFramework\obj\Debug\net461\AshFramework.BaseFormTwo.resources
+D:\Projects\GitHub\eSpark-Consultants\src\Gichmate_Accounting\Nagadan ERPv7.0.1 SourceCode\Project\Frameworks\AshFramework\obj\Debug\net461\AshFramework.MasterForm.resources
+D:\Projects\GitHub\eSpark-Consultants\src\Gichmate_Accounting\Nagadan ERPv7.0.1 SourceCode\Project\Frameworks\AshFramework\obj\Debug\net461\AshFramework.csproj.GenerateResource.cache
+D:\Projects\GitHub\eSpark-Consultants\src\Gichmate_Accounting\Nagadan ERPv7.0.1 SourceCode\Project\Frameworks\AshFramework\obj\Debug\net461\AshFramework.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\GitHub\eSpark-Consultants\src\Gichmate_Accounting\Nagadan ERPv7.0.1 SourceCode\Project\Frameworks\AshFramework\obj\Debug\net461\AshFramework.csproj.CoreCompileInputs.cache
+D:\Projects\GitHub\eSpark-Consultants\src\Gichmate_Accounting\Nagadan ERPv7.0.1 SourceCode\Project\Frameworks\AshFramework\obj\Debug\net461\AshFramework.sourcelink.json
+D:\Projects\GitHub\eSpark-Consultants\src\Gichmate_Accounting\Nagadan ERPv7.0.1 SourceCode\Project\Frameworks\AshFramework\obj\Debug\net461\AshFramework.dll
+D:\Projects\GitHub\eSpark-Consultants\src\Gichmate_Accounting\Nagadan ERPv7.0.1 SourceCode\Project\Frameworks\AshFramework\obj\Debug\net461\AshFramework.pdb
+C:\Users\Dotnet_User1\Desktop\Nagadan360\Frameworks\AshFramework\bin\Debug\net461\AshFramework.dll.config
+C:\Users\Dotnet_User1\Desktop\Nagadan360\Frameworks\AshFramework\bin\Debug\net461\AshFramework.dll
+C:\Users\Dotnet_User1\Desktop\Nagadan360\Frameworks\AshFramework\bin\Debug\net461\AshFramework.pdb
+C:\Users\Dotnet_User1\Desktop\Nagadan360\Frameworks\AshFramework\obj\Debug\net461\AshFramework.csproj.AssemblyReference.cache
+C:\Users\Dotnet_User1\Desktop\Nagadan360\Frameworks\AshFramework\obj\Debug\net461\AshFramework.BaseForm.resources
+C:\Users\Dotnet_User1\Desktop\Nagadan360\Frameworks\AshFramework\obj\Debug\net461\AshFramework.BaseFormTwo.resources
+C:\Users\Dotnet_User1\Desktop\Nagadan360\Frameworks\AshFramework\obj\Debug\net461\AshFramework.MasterForm.resources
+C:\Users\Dotnet_User1\Desktop\Nagadan360\Frameworks\AshFramework\obj\Debug\net461\AshFramework.csproj.GenerateResource.cache
+C:\Users\Dotnet_User1\Desktop\Nagadan360\Frameworks\AshFramework\obj\Debug\net461\AshFramework.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dotnet_User1\Desktop\Nagadan360\Frameworks\AshFramework\obj\Debug\net461\AshFramework.csproj.CoreCompileInputs.cache
+C:\Users\Dotnet_User1\Desktop\Nagadan360\Frameworks\AshFramework\obj\Debug\net461\AshFramework.dll
+C:\Users\Dotnet_User1\Desktop\Nagadan360\Frameworks\AshFramework\obj\Debug\net461\AshFramework.pdb
+C:\Users\Dotnet_User1\Desktop\FlexMold[12-Feb]-AccountingUpdate\SubProjects\AshFramework\bin\Debug\net461\AshFramework.dll.config
+C:\Users\Dotnet_User1\Desktop\FlexMold[12-Feb]-AccountingUpdate\SubProjects\AshFramework\bin\Debug\net461\AshFramework.dll
+C:\Users\Dotnet_User1\Desktop\FlexMold[12-Feb]-AccountingUpdate\SubProjects\AshFramework\bin\Debug\net461\AshFramework.pdb
+C:\Users\Dotnet_User1\Desktop\FlexMold[12-Feb]-AccountingUpdate\SubProjects\AshFramework\obj\Debug\net461\AshFramework.csproj.AssemblyReference.cache
+C:\Users\Dotnet_User1\Desktop\FlexMold[12-Feb]-AccountingUpdate\SubProjects\AshFramework\obj\Debug\net461\AshFramework.BaseForm.resources
+C:\Users\Dotnet_User1\Desktop\FlexMold[12-Feb]-AccountingUpdate\SubProjects\AshFramework\obj\Debug\net461\AshFramework.BaseFormTwo.resources
+C:\Users\Dotnet_User1\Desktop\FlexMold[12-Feb]-AccountingUpdate\SubProjects\AshFramework\obj\Debug\net461\AshFramework.MasterForm.resources
+C:\Users\Dotnet_User1\Desktop\FlexMold[12-Feb]-AccountingUpdate\SubProjects\AshFramework\obj\Debug\net461\AshFramework.csproj.GenerateResource.cache
+C:\Users\Dotnet_User1\Desktop\FlexMold[12-Feb]-AccountingUpdate\SubProjects\AshFramework\obj\Debug\net461\AshFramework.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dotnet_User1\Desktop\FlexMold[12-Feb]-AccountingUpdate\SubProjects\AshFramework\obj\Debug\net461\AshFramework.csproj.CoreCompileInputs.cache
+C:\Users\Dotnet_User1\Desktop\FlexMold[12-Feb]-AccountingUpdate\SubProjects\AshFramework\obj\Debug\net461\AshFramework.dll
+C:\Users\Dotnet_User1\Desktop\FlexMold[12-Feb]-AccountingUpdate\SubProjects\AshFramework\obj\Debug\net461\AshFramework.pdb
