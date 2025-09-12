@@ -178,10 +178,11 @@
 
         <StackPanel Grid.Row="5">
 
-            <DataGrid x:Name="ExistingGroupDataGrid" Height="400" Width="1150" SelectionChanged="ExistingGroupDataGrid_SelectionChanged">
-                <DataGrid.Columns>
-                    
-                </DataGrid.Columns>
+            <DataGrid x:Name="ExistingGroupDataGrid"
+                      Height="400"
+                      Width="1150"
+                      SelectionChanged="ExistingGroupDataGrid_SelectionChanged">
+               
             </DataGrid>
            
         </StackPanel>

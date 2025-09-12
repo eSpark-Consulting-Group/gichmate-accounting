@@ -98,6 +98,8 @@
                           CanUserAddRows="False"
                           IsReadOnly="True"
                           Height="480"
+                          HorizontalContentAlignment="Center"
+                          TextBlock.TextAlignment="Center"
                           Margin="0,0,0,0"
                           SelectionMode="Extended"
                           AutoGeneratingColumn="TenantsDataGrid_AutoGeneratingColumn"

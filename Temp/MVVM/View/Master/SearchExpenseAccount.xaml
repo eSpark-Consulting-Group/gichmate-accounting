@@ -8,6 +8,7 @@
         ResizeMode="NoResize"       
         BorderBrush="Black"
         BorderThickness="3"
+        WindowStartupLocation="CenterScreen"
         Title="Search" Height="770" Width="1200">
     <Grid>
         <Grid.Background>
@@ -57,8 +58,12 @@
 
         <StackPanel Grid.Row="3">
 
-            <DataGrid x:Name="SearchExpenseDataGrid" Width="1180" HorizontalAlignment="Center" Height="550" 
-                      SelectionChanged="DataGrid_SelectionChanged" AutoGenerateColumns="False" >
+            <DataGrid x:Name="SearchExpenseDataGrid" 
+                      Width="1180" 
+                      HorizontalAlignment="Center"
+                      Height="550" 
+                      SelectionChanged="DataGrid_SelectionChanged" 
+                      AutoGenerateColumns="False" >
                 
                 <DataGrid.Columns>
                     <DataGridTextColumn Width="50" Header="ID" Binding="{Binding ID}"/>

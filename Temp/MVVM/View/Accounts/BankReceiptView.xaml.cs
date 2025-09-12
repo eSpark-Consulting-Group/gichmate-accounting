@@ -632,6 +632,5 @@ namespace FlexMold.MVVM.View.Accounts
             // this is here because it will now only allow numeric data to be enterered.
         }
 
-
     }
 }

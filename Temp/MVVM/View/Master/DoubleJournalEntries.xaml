@@ -7,6 +7,7 @@
         BorderBrush="White"
         BorderThickness="3"
         ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
         mc:Ignorable="d"
         Title="DoubleJournalEntries"
         Height="770" Width="1200">
@@ -77,11 +78,13 @@
 
         <StackPanel Grid.Row="2">
             <DataGrid x:Name="JournalDataGrid" 
-          FontSize="11"  
-          Width="1190" 
-          Height="400" 
-          AutoGenerateColumns="False"
-          SelectionMode="Single">
+                      FontSize="11"  
+                      Width="1190" 
+                      Height="400" 
+                      AutoGenerateColumns="False"
+                      HorizontalContentAlignment="Center"
+                      TextBlock.TextAlignment="Center"
+                      SelectionMode="Single">
                 <DataGrid.Columns>
                     <DataGridTextColumn Width="40" Header="SL" Binding="{Binding SL}" 
                             ElementStyle="{StaticResource CenterTextStyle}" />

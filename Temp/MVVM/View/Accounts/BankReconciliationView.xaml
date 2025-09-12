@@ -85,6 +85,8 @@
                   AutoGenerateColumns="False"
                   HeadersVisibility="All"
                   CanUserAddRows="False"
+                  HorizontalContentAlignment="Center"
+                  TextBlock.TextAlignment="Center"
                   CanUserDeleteRows="False"
                   ScrollViewer.HorizontalScrollBarVisibility="Auto"
                   ScrollViewer.VerticalScrollBarVisibility="Auto"

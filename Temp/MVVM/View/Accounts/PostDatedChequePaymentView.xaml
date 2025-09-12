@@ -105,7 +105,9 @@
 
 
         <StackPanel Grid.Row="3">
-            <DataGrid Height="350">
+            <DataGrid Height="350"
+                      HorizontalContentAlignment="Center"
+                      TextBlock.TextAlignment="Center">
 
             </DataGrid>
         </StackPanel>

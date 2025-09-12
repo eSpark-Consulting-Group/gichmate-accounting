@@ -132,7 +132,12 @@
 
 
         <StackPanel Grid.Row="4">
-            <DataGrid Width="1180" FontSize="14" Height="450">
+            <DataGrid Width="1180" 
+                      FontSize="14" 
+                      Height="450"
+                      HorizontalContentAlignment="Center"
+                      TextBlock.TextAlignment="Center">
+                
                 <DataGrid.Columns>
                     <DataGridTextColumn Binding="{Binding}" Width="40 " Header="SL"/>
                     <DataGridTextColumn Binding="{Binding}" Width="100" Header="Date"/>
@@ -148,26 +153,69 @@
                     <DataGridTextColumn Binding="{Binding}" Width="*  " Header="CREDIT"/>
                 </DataGrid.Columns>
             </DataGrid>
+            
         </StackPanel>
         
 
         <StackPanel Grid.Row="5" Orientation="Horizontal" VerticalAlignment="Center">
-            <Label Content="Total Cash :" FontSize="14" VerticalAlignment="Center"/>
-            <TextBox Text="0.00" Width="200" Height="30" VerticalAlignment="Center" VerticalContentAlignment="Center"/>
+           
+            <Label Content="Total Cash :" 
+                   FontSize="14" 
+                   VerticalAlignment="Center"/>
+            
+            <TextBox Text="0.00"
+                     Width="200" 
+                     Height="30" 
+                     VerticalAlignment="Center"
+                     VerticalContentAlignment="Center"/>
 
-            <Label Content="Online total :" FontSize="14" VerticalAlignment="Center" Margin="20,0,0,0"/>
-            <TextBox Text="0.00" Width="200" Height="30" VerticalAlignment="Center" VerticalContentAlignment="Center"/>
+            <Label Content="Online total :"
+                   FontSize="14" 
+                   VerticalAlignment="Center" 
+                   Margin="20,0,0,0"/>
+            
+            <TextBox Text="0.00" 
+                     Width="200" 
+                     Height="30"
+                     VerticalAlignment="Center"
+                     VerticalContentAlignment="Center"/>
+        
         </StackPanel>
 
+        
         <StackPanel Grid.Row="6" Orientation="Horizontal" VerticalAlignment="Center" Height="56">
-            <Label Content="Total Card :" FontSize="14" VerticalAlignment="Center"/>
-            <TextBox Text="0.00" Width="200" Height="30" VerticalAlignment="Center" VerticalContentAlignment="Center"/>
+          
+            <Label Content="Total Card :"
+                   FontSize="14" 
+                   VerticalAlignment="Center"/>
+            
+            <TextBox Text="0.00" 
+                     Width="200" 
+                     Height="30" 
+                     VerticalAlignment="Center" 
+                     VerticalContentAlignment="Center"/>
 
-            <Label Content="Credit Total :" FontSize="14" VerticalAlignment="Center" Margin="24,0,0,0"/>
-            <TextBox Text="0.00" Width="200" Height="30" VerticalAlignment="Center" VerticalContentAlignment="Center"/>
+            <Label Content="Credit Total :"
+                   FontSize="14" 
+                   VerticalAlignment="Center" 
+                   Margin="24,0,0,0"/>
+           
+            <TextBox Text="0.00" 
+                     Width="200" 
+                     Height="30"
+                     VerticalAlignment="Center" 
+                     VerticalContentAlignment="Center"/>
 
-            <Label Content="Total Amount :" FontSize="14" VerticalAlignment="Center" Margin="20,0,0,0"/>
-            <TextBox Text="0.00" Width="200" Height="30" VerticalAlignment="Center" VerticalContentAlignment="Center"/>
+            <Label Content="Total Amount :"
+                   FontSize="14"
+                   VerticalAlignment="Center" 
+                   Margin="20,0,0,0"/>
+            
+            <TextBox Text="0.00" 
+                     Width="200" 
+                     Height="30" 
+                     VerticalAlignment="Center"
+                     VerticalContentAlignment="Center"/>
 
             
             <Button Content="Save"  

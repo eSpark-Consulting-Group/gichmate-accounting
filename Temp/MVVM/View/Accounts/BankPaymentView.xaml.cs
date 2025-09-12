@@ -34,9 +34,12 @@ namespace FlexMold.MVVM.View.Accounts
             LoadFilterEmployees();
             ResetForm();
             LoadGrid();
+           // LoadEmployees2();
         }
 
         #region Loading lookups & grid
+
+
 
         private void LoadAccounts()
         {
@@ -52,6 +55,8 @@ namespace FlexMold.MVVM.View.Accounts
 
         }
 
+        
+
         private void LoadEmployees()
         {
             using var cn = new SqlConnection(_connStr);
@@ -65,6 +70,21 @@ namespace FlexMold.MVVM.View.Accounts
             PaidByCombo.SelectedValuePath = "EmpID";
             PaidByCombo.SelectedIndex = 0;
         }
+
+
+        //private void LoadEmployees2()
+        //{
+        //    using var cn = new SqlConnection(_connStr);
+        //    using var cmd = new SqlCommand("SELECT EmpID, EmpName FROM EmployeeDetails ORDER BY EmpName", cn);
+        //    var dt = new DataTable();
+        //    var da = new SqlDataAdapter(cmd);
+        //    da.Fill(dt);
+
+        //    PaidByFilterCombo.DisplayMemberPath = "EmpName";
+        //    PaidByFilterCombo.SelectedValuePath = "EmpID";
+        //    PaidByFilterCombo.SelectedIndex = 0;
+        //}
+
 
 
 
@@ -211,6 +231,7 @@ namespace FlexMold.MVVM.View.Accounts
             int fromAccountId = AccountCombo.SelectedValue != null ? Convert.ToInt32(AccountCombo.SelectedValue) : 0;
             int toAccountId = BankAccountCombo.SelectedValue != null ? Convert.ToInt32(BankAccountCombo.SelectedValue) : 0;
             int? salesManId = PaidByCombo.SelectedValue != null ? (int?)Convert.ToInt32(PaidByCombo.SelectedValue) : null;
+          //int? salesManId = PaidByFilterCombo.SelectedValue != null ? (int?)Convert.ToInt32(PaidByFilterCombo.SelectedValue) : null;
             DateTime vDate = VoucherDateBox.SelectedDate ?? DateTime.Today;
             string narration = NarrationBox.Text ?? string.Empty;
 
@@ -476,6 +497,7 @@ namespace FlexMold.MVVM.View.Accounts
             DiscountBox.Text = "0.00";
             NarrationBox.Text = string.Empty;
             PaidByCombo.SelectedIndex = -1;
+          //PaidByFilterCombo.SelectedIndex = -1;
             AccountCombo.SelectedIndex = -1;
             BankAccountCombo.SelectedIndex = -1;
             SaveBtn.Content = "Save";
@@ -528,6 +550,10 @@ namespace FlexMold.MVVM.View.Accounts
             if (drv["SalesManId"] != DBNull.Value) PaidByCombo.SelectedValue = Convert.ToInt32(drv["SalesManId"]);
             else PaidByCombo.SelectedIndex = -1;
 
+            //remove below 2 lines in case of error in grid
+           // if (drv["SalesManId"] != DBNull.Value) PaidByFilterCombo.SelectedValue = Convert.ToInt32(drv["SalesManId"]);
+            //else PaidByFilterCombo.SelectedIndex = -1;
+
             SaveBtn.Content = "Update";
             UpdateBankBalanceDisplay();
         }
@@ -562,7 +588,5 @@ namespace FlexMold.MVVM.View.Accounts
             // this is here because it will now only allow numeric data to be enterered.
         }
 
-
-               
     }
 }

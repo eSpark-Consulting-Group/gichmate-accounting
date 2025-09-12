@@ -227,7 +227,11 @@
 
 
         <StackPanel Grid.Row="10" Grid.ColumnSpan="2">
-            <DataGrid Height="300" >
+            
+            <DataGrid Height="300" 
+                      HorizontalContentAlignment="Center"
+                      TextBlock.TextAlignment="Center">
+                
                 <DataGrid.Columns >
                     <DataGridTextColumn Width="140" Header="             Date"/>
                     <DataGridTextColumn Width="140" Header="     Voucher Type"/>
@@ -238,6 +242,7 @@
                     <DataGridTextColumn Width="140" Header="          Amount"/>
                     <DataGridTextColumn Width="*" Header=" Narration"/>
                 </DataGrid.Columns>
+            
             </DataGrid>
         </StackPanel>
 

@@ -45,27 +45,19 @@
                     HorizontalAlignment="Right"
                     Margin="1020,0,10,0"/>
         </StackPanel>
-       
 
-        <DataGrid x:Name="dgVouchers"
+
+        <DataGrid x:Name="dgCreditNotes"
                   Grid.Row="1"
-                  AutoGenerateColumns="False"
+                  AutoGenerateColumns="True"
                   HeadersVisibility="Column"
                   CanUserAddRows="False"
                   CanUserDeleteRows="False"
-                  SelectionChanged="dgVouchers_SelectionChanged" 
-                  Height="450">
+                  HorizontalContentAlignment="Center"
+                  TextBlock.TextAlignment="Center"
+                  Height="450"
+                  SelectionChanged="dgCreditNotes_SelectionChanged"/>
 
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="SL" Width="50" Binding="{Binding SL}"/>
-                <DataGridTextColumn Header="Voucher No" Width="120" Binding="{Binding VchrNo}"/>
-                <DataGridTextColumn Header="Date" Width="110" Binding="{Binding VchrDate, StringFormat=dd-MM-yyyy}"/>
-                <DataGridTextColumn Header="Party Account" Width="160" Binding="{Binding PartyAccountName}"/>
-                <DataGridTextColumn Header="Credit Account" Width="150" Binding="{Binding CreditAccountName}"/>
-                <DataGridTextColumn Header="Amount" Width="110" Binding="{Binding VchrAmount, StringFormat=N2}"/>
-                <DataGridTextColumn Header="Narration" Width="*" Binding="{Binding Narration}"/>
-            </DataGrid.Columns>
-        </DataGrid>
 
         <StackPanel Grid.Row="2" Orientation="Horizontal" VerticalAlignment="Center" Margin="20,0,0,0">
 
@@ -73,15 +65,20 @@
                      Margin="200,0,0,0"
                      Style="{StaticResource AccountsLabel}"/>
 
-            <TextBox x:Name="txtVoucherNo"
-                     Style="{StaticResource AccountsTextBox}"/>
+            <mah:NumericUpDown x:Name="numVoucherNo" 
+                    Height="30" 
+                    Width="250" 
+                    Maximum="9999" 
+                    VerticalContentAlignment="Center"
+                    FontSize="14"
+                    Minimum="0"/>
 
 
             <Label Content ="Date :  "
                    Margin="110,0,0,0"
                    Style="{StaticResource AccountsLabel}"/>
 
-            <DatePicker x:Name="dtpDate"
+            <DatePicker x:Name="dpDate"
                         Width="250"
                         Height="30"
                         VerticalContentAlignment="Center"
@@ -96,13 +93,13 @@
                    Margin="190,0,0,0"
                    Style="{StaticResource AccountsLabel}"/>
 
-            <ComboBox x:Name="cmbPartyAccount"
+            <ComboBox x:Name="cmbParty"
                       Style="{StaticResource AccountsComboBox}"
                       DisplayMemberPath="AccountName"
                       SelectedValuePath="AccountId"/>
 
             <Label Content ="Amount : "
-                   Margin="90,0,0,0"
+                   Margin="105,0,0,0"
                    Style="{StaticResource AccountsLabel}"/>
 
             <TextBox x:Name="txtAmount"
@@ -116,7 +113,7 @@
                    Margin="185,0,0,0"
                    Style="{StaticResource AccountsLabel}"/>
 
-            <ComboBox x:Name="cmbCreditAccount"
+            <ComboBox x:Name="cmbAccount"
                       Style="{StaticResource AccountsComboBox}"
                       DisplayMemberPath="AccountName"
                       SelectedValuePath="AccountId"/>
@@ -163,7 +160,7 @@
                     Margin="5,0"
                     Click="btnClear_Click"/>
         </StackPanel>
-        
-        
+
+
     </Grid>
 </UserControl>

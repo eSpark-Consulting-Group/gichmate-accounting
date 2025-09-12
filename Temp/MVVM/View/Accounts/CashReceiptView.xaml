@@ -55,13 +55,10 @@
                    VerticalAlignment="Center" 
                    Margin="50,0,0,0"/>
 
-            <ComboBox x:Name="PaidByFilterCombo" 
+            <ComboBox x:Name="PaidByCombo2" 
                       Width="300" 
                       Height="30" 
                       VerticalAlignment="Center">
-                <ComboBoxItem Content="Admin"/>
-                <ComboBoxItem Content="Office"/>
-                <ComboBoxItem Content="User"/>
             </ComboBox>
 
             <CheckBox x:Name="AutoRefreshChk" 
@@ -83,6 +80,8 @@
                       Height="300" 
                       FontSize="14" 
                       AutoGenerateColumns="False"
+                      HorizontalContentAlignment="Center"
+                      TextBlock.TextAlignment="Center"
                       SelectionMode="Single" 
                       SelectionUnit="FullRow" >
 
@@ -233,22 +232,29 @@
         <StackPanel Grid.Row="9" Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,398,0">
 
             <StackPanel VerticalAlignment="Center" Orientation="Horizontal" Margin="460,0,0,0">
+               
                 <Button x:Name="SaveBtn" Style="{StaticResource AnimatedRedButton}" 
                         Content="Save" 
                         Foreground="White" 
+                        Click="Save_Click"
                         />
 
 
                 <Button x:Name="EditBtn"
                         Style="{StaticResource AnimatedRedButton}"
                         Content="Edit" 
-                        Foreground="White" />
+                        Foreground="White"
+                        Click="EditBtn_Click"
+                        />
 
                 <Button x:Name="DeleteBtn"
                         Style="{StaticResource AnimatedRedButton}"
-                        Content="Delete" />
+                        Content="Delete" 
+                        Click="DeleteBtn_Click"/>
 
-                <Button x:Name="ClearBtn" Style="{StaticResource AnimatedRedButton}" Content="Clear" />
+                <Button x:Name="ClearBtn" 
+                        Style="{StaticResource AnimatedRedButton}" Content="Clear" 
+                        Click="ClearBtn_Click"/>
 
             </StackPanel>
         </StackPanel>

@@ -346,11 +346,20 @@
                 <RowDefinition Height="286*"/>
             </Grid.RowDefinitions>
             <StackPanel Margin="10,10,10,0" VerticalAlignment="Top" Grid.RowSpan="2" Grid.ColumnSpan="2">
-                <Button Content="☰" Click="ToggleSidebar_Click"
-                        Foreground="White" Background="Transparent"
-                        FontSize="18" Margin="10" BorderThickness="0"/>
+              
+                <Button Content="☰" 
+                        Foreground="White"
+                        Background="Transparent"
+                        FontSize="18"
+                        Margin="10"
+                        BorderThickness="0"
+                        Style="{StaticResource Animation}"/>
 
-                <Button Background="Transparent" BorderThickness="0" Height="50" Foreground="White">
+                <Button Background="Transparent"
+                        BorderThickness="0" 
+                        Height="50" 
+                        Foreground="White"
+                        Style="{StaticResource Animation}">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="🏠" FontSize="18" Margin="10,0"/>
                         <TextBlock x:Name="lblButton1" Text="Home"
@@ -358,7 +367,12 @@
                                    Margin="10,0" Visibility="Collapsed"/>
                     </StackPanel>
                 </Button>
-                <Button Background="Transparent" BorderThickness="0" Height="50">
+                
+                <Button Background="Transparent"
+                        BorderThickness="0" 
+                        Height="50"
+                        Style="{StaticResource Animation}">
+                   
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="📁" FontSize="18" Margin="10,0" Foreground="White"/>
                         <TextBlock x:Name="lblButton2" Text="Files"
@@ -366,7 +380,12 @@
                                    Margin="10,0" Visibility="Collapsed"/>
                     </StackPanel>
                 </Button>
-                <Button Background="Transparent" BorderThickness="0" Height="50">
+                
+                <Button Background="Transparent" 
+                        BorderThickness="0"
+                        Height="50"
+                        Style="{StaticResource Animation}">
+                    
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="📊" FontSize="18" Margin="10,0" Foreground="White"/>
                         <TextBlock x:Name="lblButton3" Text="Reports"
@@ -374,15 +393,25 @@
                                    Margin="10,0" Visibility="Collapsed"/>
                     </StackPanel>
                 </Button>
-                <Button Background="Transparent" BorderThickness="0" Height="50">
+                
+                <Button Background="Transparent" 
+                        BorderThickness="0" 
+                        Height="50"
+                        Style="{StaticResource Animation}">
+                    
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="🔍" FontSize="18" Margin="10,0" Foreground="White"/>
                         <TextBlock x:Name="lblButton4" Text="Search"
                                    FontSize="16" Foreground="White"
                                    Margin="10,0" Visibility="Collapsed"/>
                     </StackPanel>
-                </Button>
-                <Button Background="Transparent" BorderThickness="0" Height="50">
+                </Button
+                        >
+                <Button Background="Transparent" 
+                        BorderThickness="0"
+                        Height="50"
+                        Style="{StaticResource Animation}">
+                  
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="⚙" FontSize="18" Margin="10,0" Foreground="White"/>
                         <TextBlock x:Name="lblButton5" Text="Settings"
@@ -390,7 +419,12 @@
                                    Margin="10,0" Visibility="Collapsed"/>
                     </StackPanel>
                 </Button>
-                <Button Background="Transparent" BorderThickness="0" Height="50">
+               
+                    <Button Background="Transparent"
+                            BorderThickness="0" 
+                            Height="50"
+                            Style="{StaticResource Animation}">
+                  
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="👤" FontSize="18" Margin="10,0" Foreground="White"/>
                         <TextBlock x:Name="lblButton6" Text="Profile"

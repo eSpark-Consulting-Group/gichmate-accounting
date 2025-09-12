@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         ResizeMode="NoResize"        
         BorderBrush="Black"
+        WindowStartupLocation="CenterScreen"
         BorderThickness="3"
         Title="SearchBank" Height="770" Width="1200">
 
@@ -53,6 +54,8 @@
             <DataGrid x:Name="AccountsDataGrid" 
                       Width="1180" 
                       HorizontalAlignment="Center" 
+                      HorizontalContentAlignment="Center"
+                      TextBlock.TextAlignment="Center"
                       Height="590"
                       AutoGenerateColumns="True">
             </DataGrid>

@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:FlexMold.MVVM.View.Master"
         mc:Ignorable="d"
         ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
         BorderBrush="Black"
         BorderThickness="3"
         Title="SearchLedger" Height="770" Width="1200">

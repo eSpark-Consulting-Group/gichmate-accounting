@@ -125,6 +125,8 @@ namespace FlexMold.MVVM.View.Master
 
         private string strAccountBalance;
 
+        //balance sheet design
+
         private string strProId;
 
         private string strProName;
@@ -213,6 +215,8 @@ namespace FlexMold.MVVM.View.Master
             InitializeComponent();
         }
 
+
+
         private void ClearWindow_Click(object sender, RoutedEventArgs e)
         {
             dtmDate.SelectedDate = null;
@@ -224,6 +228,8 @@ namespace FlexMold.MVVM.View.Master
         {
             Close();
         }
+
+
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {

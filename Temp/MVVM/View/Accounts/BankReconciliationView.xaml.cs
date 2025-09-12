@@ -93,7 +93,7 @@ namespace FlexMold.MVVM.View.Accounts
 
                         if (dt.Rows.Count == 0)
                         {
-                            MessageBox.Show("No data found for given date. Try removing the filter.");
+                            //MessageBox.Show("No data found for given date. Try removing the filter.");
                         }
                     }
                 }

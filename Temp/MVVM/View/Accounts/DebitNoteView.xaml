@@ -52,6 +52,8 @@
         <StackPanel Grid.Row="1" >
             <DataGrid x:Name="dgDebitNotes"                    
                       Height="400"
+                      HorizontalContentAlignment="Center"
+                      TextBlock.TextAlignment="Center"
                       SelectionChanged="dgDebitNotes_SelectionChanged">
 
             </DataGrid>

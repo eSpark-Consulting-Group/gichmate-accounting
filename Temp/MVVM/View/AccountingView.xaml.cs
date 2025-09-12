@@ -28,15 +28,15 @@ namespace FlexMold.MVVM.View
             DataContext = _AccountingViewModel;
         }
 
-        private void ToggleSidebar_Click(object sender, RoutedEventArgs e)
-        {
-            var storyboard = isSidebarExpanded
-                ? (Storyboard)FindResource("CollapseSidebar")
-                : (Storyboard)FindResource("ExpandSidebar");
+        //private void ToggleSidebar_Click(object sender, RoutedEventArgs e)
+        //{
+        //    var storyboard = isSidebarExpanded
+        //        ? (Storyboard)FindResource("CollapseSidebar")
+        //        : (Storyboard)FindResource("ExpandSidebar");
 
-            storyboard.Begin();
-            isSidebarExpanded = !isSidebarExpanded;
-        }
+        //    storyboard.Begin();
+        //    isSidebarExpanded = !isSidebarExpanded;
+        //}
 
         private void TopBarAccountsButton_Click(object sender, RoutedEventArgs e)
         {

@@ -57,9 +57,6 @@
                       Width="300" 
                       Height="30" 
                       VerticalAlignment="Center">
-                <ComboBoxItem Content="Admin"/>
-                <ComboBoxItem Content="Office"/>
-                <ComboBoxItem Content="User"/>
             </ComboBox>
 
             <CheckBox x:Name="AutoRefreshChk" 
@@ -76,15 +73,29 @@
 
         <StackPanel Grid.Row="2" >
 
-            <DataGrid x:Name="dgBankPayments" 
-                      Width="1190" 
-                      Height="300" 
-                      FontSize="14" 
+            <DataGrid x:Name="dgCashPayments"
+                      Width="1190"
+                      Height="300"
+                      FontSize="14"
                       AutoGenerateColumns="False"
-                      SelectionMode="Single" 
-                      SelectionUnit="FullRow" >
-
+                      HorizontalContentAlignment="Center"
+                      TextBlock.TextAlignment="Center"
+                      SelectionMode="Single"
+                      SelectionUnit="FullRow" SelectionChanged="dgCashPayments_SelectionChanged"
+                      >
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="#" Binding="{Binding RowNumber}" Width="40"/>
+                    <DataGridTextColumn Header="Voucher No" Binding="{Binding VchrNo}" Width="100"/>
+                    <DataGridTextColumn Header="Date" Binding="{Binding VchrDate, StringFormat=d}" Width="100"/>
+                    <DataGridTextColumn Header="Amount" Binding="{Binding VchrAmount, StringFormat=N2}" Width="100"/>
+                    <DataGridTextColumn Header="From Account" Binding="{Binding FromAccountName}" Width="150"/>
+                    <DataGridTextColumn Header="To Account" Binding="{Binding ToAccountName}" Width="150"/>
+                    <DataGridTextColumn Header="Paid By" Binding="{Binding EmpName}" Width="120"/>
+                    <DataGridTextColumn Header="Narration" Binding="{Binding Narration}" Width="*"/>
+                </DataGrid.Columns>
+                
             </DataGrid>
+
         </StackPanel>
 
         <StackPanel Grid.Row="3" Orientation="Horizontal">
@@ -231,42 +242,64 @@
         <StackPanel Grid.Row="9" Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,398,0">
            
             <StackPanel VerticalAlignment="Center" Orientation="Horizontal" Margin="460,0,0,0">
+                
                 <Button x:Name="SaveBtn" 
                         Style="{StaticResource AnimatedRedButton}" 
                         Content="Save" 
-                        Foreground="White"/>
+                        Foreground="White"
+                        Click="Save_Click"/>
 
                 <Button x:Name="EditBtn"
                         Style="{StaticResource AnimatedRedButton}"
                         Content="Edit" 
-                        Foreground="White" />
+                        Foreground="White" 
+                        Click="EditBtn_Click"/>
 
                 <Button x:Name="DeleteBtn"
                         Style="{StaticResource AnimatedRedButton}"
-                        Content="Delete" />
+                        Content="Delete" 
+                        Click="DeleteBtn_Click"/>
 
                 <Button x:Name="ClearBtn" 
                         Style="{StaticResource AnimatedRedButton}"
-                        Content="Clear"  />
+                        Content="Clear"  
+                        Click="ClearBtn_Click"/>
 
             </StackPanel>
         </StackPanel>
 
         <StackPanel Margin="907,10,10,10" Grid.Row="7" Grid.RowSpan="3">
-            <Button Content="..." Click="ToggleFields_Click" Margin="0,0,0,10" Width="54" HorizontalAlignment="Left" Background="White">
-                <Button.Effect>
-                    <DropShadowEffect/>
-                </Button.Effect>
-            </Button>
+           
+            <Button Content="..."  
+                    Margin="0,0,0,10" 
+                    Width="54" 
+                    HorizontalAlignment="Left" 
+                    Background="White">
+             </Button>
 
             <StackPanel Name="FieldContainer" Visibility="Collapsed">
-                <StackPanel Orientation="Horizontal" Margin="5">
-                    <Label Content="Account Group:" Width="120" VerticalAlignment="Center"/>
-                    <TextBox Name="AccountGroupTextBox" Width="150"/>
+               
+                <StackPanel Orientation="Horizontal" 
+                            Margin="5">
+                    
+                    <Label Content="Account Group:" 
+                           Width="120" 
+                           VerticalAlignment="Center"/>
+                   
+                    <TextBox Name="AccountGroupTextBox" 
+                             Width="150"/>
+                
                 </StackPanel>
+                
                 <StackPanel Orientation="Horizontal" Margin="5">
-                    <Label Content="Account:" Width="120" VerticalAlignment="Center"/>
-                    <TextBox Name="AccountTextBox" Width="150"/>
+                    
+                    <Label Content="Account:"
+                           Width="120" 
+                           VerticalAlignment="Center"/>
+                    
+                    <TextBox Name="AccountTextBox" 
+                             Width="150"/>
+                
                 </StackPanel>
             </StackPanel>
         </StackPanel>
