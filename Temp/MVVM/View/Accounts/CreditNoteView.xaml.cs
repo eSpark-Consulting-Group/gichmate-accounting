@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AccountsLibrary.Properties;
+using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows;
@@ -8,7 +9,6 @@ namespace FlexMold.MVVM.View.Accounts
 {
     public partial class CreditNoteView : UserControl
     {
-        private string connectionString = "Server=DESKTOP-E09TG4T;Database=PSVAT5;Trusted_Connection=True;TrustServerCertificate=True;";
         private int? _selectedVchrTranId = null;
 
         public CreditNoteView()
@@ -22,7 +22,7 @@ namespace FlexMold.MVVM.View.Accounts
         {
             try
             {
-                using (SqlConnection con = new SqlConnection(connectionString))
+                using (SqlConnection con = new SqlConnection(Settings.Default.strConnetionString))
                 {
                     con.Open();
                     DataTable dtAccounts = new DataTable();
@@ -47,7 +47,7 @@ namespace FlexMold.MVVM.View.Accounts
         {
             try
             {
-                using (SqlConnection con = new SqlConnection(connectionString))
+                using (SqlConnection con = new SqlConnection(Settings.Default.strConnetionString))
                 {
                     con.Open();
                     DataTable dt = new DataTable();
@@ -93,7 +93,7 @@ namespace FlexMold.MVVM.View.Accounts
 
             try
             {
-                using (SqlConnection con = new SqlConnection(connectionString))
+                using (SqlConnection con = new SqlConnection(Settings.Default.strConnetionString))
                 {
                     con.Open();
                     string query = @"
@@ -145,7 +145,7 @@ namespace FlexMold.MVVM.View.Accounts
 
             try
             {
-                using (SqlConnection con = new SqlConnection(connectionString))
+                using (SqlConnection con = new SqlConnection(Settings.Default.strConnetionString))
                 {
                     con.Open();
                     string query = @"
@@ -196,7 +196,7 @@ namespace FlexMold.MVVM.View.Accounts
 
             try
             {
-                using (SqlConnection con = new SqlConnection(connectionString))
+                using (SqlConnection con = new SqlConnection(Settings.Default.strConnetionString))
                 {
                     con.Open();
                     string query = "DELETE FROM VchrTranLog WHERE VchrTranId = @VchrTranId AND VchrType = 'Credit Note'";

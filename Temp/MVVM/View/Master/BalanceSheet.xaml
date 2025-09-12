@@ -115,16 +115,22 @@
 
 
         <StackPanel Grid.Row="3" Style="{StaticResource StackPanelBalanceSheet}" HorizontalAlignment="Left" Margin="2,0,0,0">
+          
+            
             <RichTextBox Name="rchTransdtls" 
                          Height="550" 
                          Width="1190"
                          AcceptsReturn="True"
                          HorizontalScrollBarVisibility="Disabled" 
                          VerticalScrollBarVisibility="Auto"
+                         BorderBrush="White"
+                         BorderThickness="3"
                          FontSize="15" 
-                         FontStyle="Normal">
+                         FontStyle="Normal" >
                 
             </RichTextBox>
+            
+            
         </StackPanel>
 
 
@@ -153,4 +159,5 @@
             </StackPanel>            
         </StackPanel>
     </Grid>
+    
 </Window>

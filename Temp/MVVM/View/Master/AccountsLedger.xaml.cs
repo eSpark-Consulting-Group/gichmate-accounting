@@ -1,4 +1,5 @@
-﻿using Microsoft.Data.SqlClient;
+﻿using AccountsLibrary.Properties;
+using Microsoft.Data.SqlClient;
 using System;
 using System.Linq;
 using System.Windows;
@@ -8,12 +9,7 @@ using System.Windows.Input;
 namespace FlexMold.MVVM.View.Master
 {
     public partial class AccountsLedger : Window
-    {
-        private readonly string connectionString =
-            System.Configuration.ConfigurationManager
-                .ConnectionStrings["PSVAT5"]
-                .ConnectionString;
-
+    {        
         private int? selectedLedgerAccountId = null;
         private string selectedLedgerAccountName = "";
 
@@ -30,7 +26,7 @@ namespace FlexMold.MVVM.View.Master
 
         private void LoadAccountGroupComboBox()
         {
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            using (SqlConnection conn = new SqlConnection(Settings.Default.strConnetionString))
             {
                 string query = "SELECT DISTINCT GroupName FROM AccountGroup ORDER BY GroupName";
                 SqlCommand cmd = new SqlCommand(query, conn);
@@ -103,7 +99,7 @@ namespace FlexMold.MVVM.View.Master
 
             try
             {
-                using (SqlConnection conn = new SqlConnection(connectionString))
+                using (SqlConnection conn = new SqlConnection(Settings.Default.strConnetionString))
                 using (SqlCommand cmd = new SqlCommand("SELECT AGroupId FROM AccountGroup WHERE GroupName = @groupName", conn))
                 {
                     cmd.Parameters.AddWithValue("@groupName", groupName);
@@ -117,7 +113,7 @@ namespace FlexMold.MVVM.View.Master
                     groupId = Convert.ToInt32(result);
                 }
 
-                using (SqlConnection conn = new SqlConnection(connectionString))
+                using (SqlConnection conn = new SqlConnection(Settings.Default.strConnetionString))
                 using (SqlCommand cmd = new SqlCommand(
                     @"INSERT INTO Account 
                       (AccountName, AGroupId, OpeningBalance, DebitOrCridt, isActive, Remarks)
@@ -165,7 +161,7 @@ namespace FlexMold.MVVM.View.Master
 
             try
             {
-                using (SqlConnection conn = new SqlConnection(connectionString))
+                using (SqlConnection conn = new SqlConnection(Settings.Default.strConnetionString))
                 using (SqlCommand cmd = new SqlCommand("DELETE FROM Account WHERE AccountId = @id", conn))
                 {
                     cmd.Parameters.AddWithValue("@id", selectedLedgerAccountId.Value);

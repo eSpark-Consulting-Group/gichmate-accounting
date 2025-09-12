@@ -1,4 +1,5 @@
-﻿using FlexMold.MVVM.View.Accounts;
+﻿using AccountsLibrary.Properties;
+using FlexMold.MVVM.View.Accounts;
 using Microsoft.Data.SqlClient;
 using System;
 using System.Collections.Generic;
@@ -28,7 +29,7 @@ namespace FlexMold.MVVM.View.Firm
         }
        private void Btn_Update(object sender, RoutedEventArgs e)
 {
-    string connectionString = "Data Source=DESKTOP-E09TG4T\\SQLEXPRESS;Initial Catalog=PSVAT5;Integrated Security=True;TrustServerCertificate=True;";
+    //string connectionString = "Data Source=DESKTOP-E09TG4T\\SQLEXPRESS;Initial Catalog=PSVAT5;Integrated Security=True;TrustServerCertificate=True;";
 
     string userNameValue = userName.Text.Trim();
     string oldPasswordValue = oldPassword.Text.Trim();
@@ -49,7 +50,7 @@ namespace FlexMold.MVVM.View.Firm
 
     try
     {
-        using (Microsoft.Data.SqlClient.SqlConnection con = new Microsoft.Data.SqlClient.SqlConnection(connectionString))
+        using (Microsoft.Data.SqlClient.SqlConnection con = new Microsoft.Data.SqlClient.SqlConnection(Settings.Default.strConnetionString))
         {
             con.Open();
 

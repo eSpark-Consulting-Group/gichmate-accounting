@@ -1,4 +1,4 @@
-﻿using FlexMold.MVVM.Model;
+﻿using AccountsLibrary.Properties;
 using Microsoft.Data.SqlClient;
 using Microsoft.Win32;
 using Spire.Pdf.Texts;
@@ -15,8 +15,6 @@ namespace FlexMold.MVVM.View.Master
     /// </summary>
     public partial class UploadBankReceipts : Window
     {
-        private string connectionString = "Server=DESKTOP-E09TG4T;Database=PSVAT5;Trusted_Connection=True; TrustServerCertificate=True;";
-
         public UploadBankReceipts()
         {
             InitializeComponent();
@@ -27,7 +25,7 @@ namespace FlexMold.MVVM.View.Master
         {
             try
             {
-                using (SqlConnection con = new SqlConnection(connectionString))
+                using (SqlConnection con = new SqlConnection(Settings.Default.strConnetionString))
                 {
                     con.Open();
                     string query = "SELECT [Transaction Details], [Payment Reference], [Value Date], [Credit (Money In)], [Debit (Money Out)], Balance FROM UploadBankReceipts";
@@ -141,7 +139,7 @@ namespace FlexMold.MVVM.View.Master
                     catch { }
                     m = m.NextMatch();
                 }
-                using (SqlConnection connection = new SqlConnection(connectionString))
+                using (SqlConnection connection = new SqlConnection(Settings.Default.strConnetionString))
                 {
                     connection.Open();
                     using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connection))

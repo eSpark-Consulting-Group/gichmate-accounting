@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AccountsLibrary.Properties;
+using System;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
@@ -13,7 +14,6 @@ namespace FlexMold.MVVM.View.Accounts
 {
     public partial class BankReceiptView : UserControl
     {
-        private readonly string _connStr;
         private int? _currentVchrTranId = null;
         private const string VCHR_TYPE = "Receipt Voucher";
         private const string VCHR_NAME = "Bank Receipt";
@@ -22,10 +22,6 @@ namespace FlexMold.MVVM.View.Accounts
         {
             InitializeComponent();
 
-            _connStr = ConfigurationManager.ConnectionStrings["PSVAT5"]?.ConnectionString
-                       ?? throw new InvalidOperationException("Connection string 'PSVAT5' not found in app.config.");
-
-            // wire events
             Loaded += BankReceiptView_Loaded;
             dgBankPayments.SelectionChanged += dgBankPayments_SelectionChanged;
             BankAccountCombo.SelectionChanged += BankAccountCombo_SelectionChanged;
@@ -54,7 +50,7 @@ namespace FlexMold.MVVM.View.Accounts
 
         private void LoadAccounts()
         {
-            using (var cn = new SqlConnection(_connStr))
+            using (var cn = new SqlConnection(Settings.Default.strConnetionString))
             using (var cmd = new SqlCommand("SELECT AccountId, AccountName FROM Account ORDER BY AccountName", cn))
             {
                 var dt = new DataTable();
@@ -69,7 +65,7 @@ namespace FlexMold.MVVM.View.Accounts
 
         private void LoadBankAccounts()
         {
-            using (var cn = new SqlConnection(_connStr))
+            using (var cn = new SqlConnection(Settings.Default.strConnetionString))
             using (var cmd = new SqlCommand("SELECT AccountId, AccountName FROM Account ORDER BY AccountName", cn))
             {
                 var dt = new DataTable();
@@ -87,7 +83,7 @@ namespace FlexMold.MVVM.View.Accounts
         /// </summary>
         private void LoadEmployees()
         {
-            using (var cn = new SqlConnection(_connStr))
+            using (var cn = new SqlConnection(Settings.Default.strConnetionString))
             using (var cmd = new SqlCommand("SELECT EmpID, EmpName FROM EmployeeDetails ORDER BY EmpName", cn))
             {
                 var dt = new DataTable();
@@ -123,7 +119,7 @@ namespace FlexMold.MVVM.View.Accounts
             try
             {
                 var dt = new DataTable();
-                using (var cn = new SqlConnection(_connStr))
+                using (var cn = new SqlConnection(Settings.Default.strConnetionString))
                 using (var cmd = new SqlCommand(@"
                     SELECT v.VchrTranId, v.VchrNo, v.VchrDate, v.VchrAmount,
                            v.FromAccountId, fa.AccountName AS FromAccountName,
@@ -298,7 +294,7 @@ namespace FlexMold.MVVM.View.Accounts
         /// </summary>
         private decimal GetAccountBalance(int accountId, DateTime asOfDate)
         {
-            using (var cn = new SqlConnection(_connStr))
+            using (var cn = new SqlConnection(Settings.Default.strConnetionString))
             using (var cmd = new SqlCommand(@"
                 SELECT ISNULL(SUM(DebitAmount),0) AS DebitSum, ISNULL(SUM(CreditAmount),0) AS CreditSum
                 FROM TransactionLog
@@ -344,7 +340,7 @@ namespace FlexMold.MVVM.View.Accounts
                 string narration = NarrationBox.Text ?? string.Empty;
                 int voucherNo = GetNextVoucherNo();
 
-                using (var cn = new SqlConnection(_connStr))
+                using (var cn = new SqlConnection(Settings.Default.strConnetionString))
                 {
                     cn.Open();
                     using (var tx = cn.BeginTransaction())
@@ -459,7 +455,7 @@ namespace FlexMold.MVVM.View.Accounts
 
             try
             {
-                using (var cn = new SqlConnection(_connStr))
+                using (var cn = new SqlConnection(Settings.Default.strConnetionString))
                 {
                     cn.Open();
                     using (var tx = cn.BeginTransaction())
@@ -526,7 +522,7 @@ namespace FlexMold.MVVM.View.Accounts
         {
             try
             {
-                using (var cn = new SqlConnection(_connStr))
+                using (var cn = new SqlConnection(Settings.Default.strConnetionString))
                 using (var cmd = new SqlCommand(@"
                     SELECT ISNULL(MAX(VchrNo), 0) + 1 FROM VchrTranLog WHERE VchrType = @VchrType AND VchrName = @VchrName
                 ", cn))

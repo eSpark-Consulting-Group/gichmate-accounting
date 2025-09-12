@@ -1,6 +1,6 @@
 ﻿using FlexMold.Core;
 using FlexMold.MVVM.View.Accounts;
-using FlexMold.MVVM.View.Home;
+//using FlexMold.MVVM.View.Home;
 
 namespace FlexMold.MVVM.ViewModel
 {
@@ -21,6 +21,7 @@ namespace FlexMold.MVVM.ViewModel
         public RelayCommand PostDatedChequePaymentCommand { get; set; }
         public RelayCommand PostDatedChequeReceiptCommand { get; set; }
         public RelayCommand ReceiptCommand { get; set; }
+        public RelayCommand UploadTenantsCommand { get; set; }
 
         private object _currentView;
         public object CurrentView
@@ -45,11 +46,12 @@ namespace FlexMold.MVVM.ViewModel
             PaymentAndReceiptView paymentAndReceiptView,
             PostDatedChequePaymentView postDatedChequePayment,
             PostDatedChequeReceiptView postDatedChequeReceipt,
-            ReceiptView receiptView
+            ReceiptView receiptView,
+            UploadTenantsUserControl uploadTenantsUserControl
             )
         {
             //set currentview from here!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-            CurrentView = defaultAccountScreenView;
+            CurrentView = uploadTenantsUserControl;
 
 
             DefaultAccountScreenCommand = new RelayCommand(o => { CurrentView = defaultAccountScreenView; });
@@ -76,7 +78,7 @@ namespace FlexMold.MVVM.ViewModel
 
             ReceiptCommand = new RelayCommand(o => { CurrentView = receiptView; });
 
-
+            UploadTenantsCommand = new RelayCommand(o => { CurrentView = uploadTenantsUserControl; });
             //MachineDetailCommand = new RelayCommand(o => { CurrentView = machineDetailView; });
             //MotorStatusCommand = new RelayCommand(o => { CurrentView = motorStatusView; });
         }

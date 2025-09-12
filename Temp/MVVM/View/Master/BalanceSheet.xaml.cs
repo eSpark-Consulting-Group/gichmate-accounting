@@ -1,6 +1,5 @@
-﻿//using Ashpro;
-using AshFramework;
-using Ashpro;
+﻿//using AccountsLibrary;
+using AccountsLibrary;
 using Microsoft.VisualBasic;
 using System;
 using System.Collections.Generic;
@@ -19,8 +18,10 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Brushes = System.Drawing.Brushes;
 using ListView = System.Windows.Controls.ListView;
 using MessageBox = System.Windows.MessageBox;
+using AccountsPro.SubProjects.AccountsLibraryFramework;
 
 namespace FlexMold.MVVM.View.Master
 {
@@ -125,8 +126,6 @@ namespace FlexMold.MVVM.View.Master
 
         private string strAccountBalance;
 
-        //balance sheet design
-
         private string strProId;
 
         private string strProName;
@@ -166,49 +165,11 @@ namespace FlexMold.MVVM.View.Master
 
         private System.Windows.Forms.ListView livDetails;
 
-        //private CheckBox cbDetailed;
 
-        //private Label label6;
 
         private Panel panel1;
 
-        //private CheckBox cbShowCloStck;
 
-        //private Label label1;
-
-        //private Label label2;
-
-        //private Button btnClose;
-
-        //private Button btnExcel;
-
-        //private Button btnClear;
-
-        //private Button btnMail;
-
-        //private Button btnShow;
-
-        //private Button btnPrint;
-
-                    //private AccountGroupReport ACCgRPrPT;
-
-                    //private StockReportView SReprt;
-
-                    //private Profit_and_Lose_Account pfAcct;
-
-                    //private LedgerReport ledgerReport;
-
-                    //private Product_Flow_Report_Settings ProFLReport;
-        
-        //private AshDateTimePicker dtmDate;
-
-        //private AshComboBox cmbClosingStock;
-
-        //private AshComboBox cmbOppStock;
-
-        //private Label lblBranch;
-
-        //private AshComboBox cmbBranch;
 
         public BalanceSheet()
         {
@@ -235,9 +196,10 @@ namespace FlexMold.MVVM.View.Master
         {
 
             rchTransdtls.Document.Blocks.Clear();
+     
 
             rchTransdtls.AppendText("");
-            
+
             try
             {
                 listOne = new List<string>();
@@ -261,12 +223,6 @@ namespace FlexMold.MVVM.View.Master
                 listTwo.Add("");
                 listThree.Add("");
                 listFour.Add("");
-                //DisplayListInColumns(livDetails, listThree, 0);
-                //DisplayListInColumns(livDetails, listFour, 1);
-                //DisplayListInColumns(livDetails, listOne, 2);
-                //DisplayListInColumns(livDetails, listTwo, 3);
-
-
                 addtoRTFList();
 
                 if (dmlProAndLossAct >= 0m)
@@ -288,9 +244,7 @@ namespace FlexMold.MVVM.View.Master
                     dmlLibTotal = dmlCurLib + dmlLongLib;
                     dmlAsstTotal = dmlCurAss + dmlFixAss + dmlProAndLossAct;
                 }
-                //ListViewAddMethod(strFirst, strSecond, strThird, strFour);
                 addtoRTFStrings(strFirst, strSecond, strThird, strFour);
-                //ListViewAddMethod(" ", " ", " ", " ");
                 addtoRTFStrings(" ", " ", " ", " ");
 
                 if (dmlLibTotal > dmlAsstTotal)
@@ -318,115 +272,15 @@ namespace FlexMold.MVVM.View.Master
                     strThird = " ";
                     strFour = " ";
                 }
-                //ListViewAddMethod(strFirst, strSecond, strThird, strFour);
                 addtoRTFStrings(strFirst, strSecond, strThird, strFour);
                 
-                //ListViewAddMethod(" ", " ", " ", " ");
                 addtoRTFStrings(" ", " ", " ", " ");
 
-                //ListViewAddMethod("TOTAL", dmlLibTotal.ToString("F"), "TOTAL", dmlAsstTotal.ToString("F"));
-                addtoRTFStrings("TOTAL", dmlLibTotal.ToString("F"), "TOTAL", dmlAsstTotal.ToString("F"));
+                //addtoRTFStrings("TOTAL", dmlLibTotal.ToString("F"), "TOTAL", dmlAsstTotal.ToString("F"));
+                addtoRTFStrings("TOTAL", dmlAsstTotal.ToString("F"), "TOTAL", dmlLibTotal.ToString("F"));
 
                 System.Drawing.FontFamily family = new System.Drawing.FontFamily(System.Drawing.Text.GenericFontFamilies.SansSerif);
                 int num = 0;
-                //string textBoxText = new TextRange(rchTransdtls.Document.ContentStart, rchTransdtls.Document.ContentEnd).Text;
-                //String[] stArr = textBoxText.Split('\n');
-                //for (int i = 0; i < stArr.Count(); i++)
-                //{
-                //    //for (int j = 0; j < livDetails.Items[i].SubItems.Count - 1; j++)
-                //    //{
-                //    //if (livDetails.Items[i].SubItems[j].Text == "CURRENT LIABILITY" || livDetails.Items[i].SubItems[j].Text == "LONG TERM LIABILITY")
-                //        if(stArr[i].Contains("CURRENT LIABILITY") || stArr[i].Contains("LONG TERM LIABILITY"))
-                //        {
-                //            livDetails.Items[i].UseItemStyleForSubItems = false;
-                //            livDetails.Items[i].SubItems[j].ForeColor = System.Drawing.Color.DodgerBlue;
-                //            livDetails.Items[i].SubItems[j].Font = new Font(family, 10f, System.Drawing.FontStyle.Bold);
-                //            livDetails.Items[i].SubItems[j + 1].ForeColor = System.Drawing.Color.DodgerBlue;
-                //            livDetails.Items[i].SubItems[j + 1].Font = new Font(family, 10f, System.Drawing.FontStyle.Bold);
-                //        }
-                //    //if (livDetails.Items[i].SubItems[j].Text == "CURRENT ASSET" || livDetails.Items[i].SubItems[j].Text == "FIXED ASSET")
-                //    if (stArr[i].Contains("CURRENT ASSET") || stArr[i].Contains("FIXED ASSET"))
-                //    {
-                //            livDetails.Items[i].UseItemStyleForSubItems = false;
-                //            livDetails.Items[i].SubItems[j].ForeColor = System.Drawing.Color.DodgerBlue;
-                //            livDetails.Items[i].SubItems[j].Font = new Font(family, 10f, System.Drawing.FontStyle.Bold);
-                //            livDetails.Items[i].SubItems[j + 1].ForeColor = System.Drawing.Color.DodgerBlue;
-                //            livDetails.Items[i].SubItems[j + 1].Font = new Font(family, 10f, System.Drawing.FontStyle.Bold);
-                //        }
-                //    //if (livDetails.Items[i].SubItems[j].Text == "PROFIT & LOSS A/C" || livDetails.Items[i].SubItems[j].Text == "DIFFERANCE IN OPPENING BALANCE")
-                //    if (stArr[i].Contains("PROFIT & LOSS A/C") || stArr[i].Contains("DIFFERANCE IN OPPENING BALANCE"))
-                //    {
-                //            livDetails.Items[i].UseItemStyleForSubItems = false;
-                //            livDetails.Items[i].SubItems[j].ForeColor = System.Drawing.Color.Red;
-                //            livDetails.Items[i].SubItems[j].Font = new Font(family, 10f, System.Drawing.FontStyle.Bold);
-                //            livDetails.Items[i].SubItems[j + 1].ForeColor = System.Drawing.Color.Red;
-                //            livDetails.Items[i].SubItems[j + 1].Font = new Font(family, 10f, System.Drawing.FontStyle.Bold);
-                //        }
-                //    //if (livDetails.Items[i].SubItems[j].Text == "PROFIT & LOSS A/C" || livDetails.Items[i].SubItems[j].Text == "DIFFERANCE IN OPPENING BALANCE")
-                //    if (stArr[i].Contains("PROFIT & LOSS A/C") || stArr[i].Contains("DIFFERANCE IN OPPENING BALANCE"))
-                //    {
-                //            livDetails.Items[i].UseItemStyleForSubItems = false;
-                //            livDetails.Items[i].SubItems[j].ForeColor = System.Drawing.Color.Red;
-                //            livDetails.Items[i].SubItems[j].Font = new Font(family, 10f, System.Drawing.FontStyle.Bold);
-                //            livDetails.Items[i].SubItems[j + 1].ForeColor = System.Drawing.Color.Red;
-                //            livDetails.Items[i].SubItems[j + 1].Font = new Font(family, 10f, System.Drawing.FontStyle.Bold);
-                //        }
-                //    //if (livDetails.Items[i].SubItems[j].Text == "TOTAL")
-                //    if (stArr[i].Contains("TOTAL"))
-                //    {
-                //            livDetails.Items[i].SubItems[j].BackColor = System.Drawing.Color.Black;
-                //            livDetails.Items[i].SubItems[j].ForeColor = System.Drawing.Color.White;
-                //            livDetails.Items[i].SubItems[j].Font = new Font(family, 10f, System.Drawing.FontStyle.Bold);
-                //        }
-                //    //if (livDetails.Items[i].SubItems[0].Text != "" && livDetails.Items[i].SubItems[1].Text == " ")
-                //    if (!stArr[i].Contains("") || stArr[i].Contains(" "))
-                //    {
-                //            livDetails.Items[i].UseItemStyleForSubItems = false;
-                //            livDetails.Items[i].SubItems[0].ForeColor = System.Drawing.Color.Blue;
-                //            livDetails.Items[i].SubItems[0].Font = new Font(family, 9f, System.Drawing.FontStyle.Bold);
-                //        }
-                //    //if (livDetails.Items[i].SubItems[2].Text != "" && livDetails.Items[i].SubItems[3].Text == " ")
-                //    //{
-                //    //    livDetails.Items[i].UseItemStyleForSubItems = false;
-                //    //    livDetails.Items[i].SubItems[2].ForeColor = Color.Blue;
-                //    //    livDetails.Items[i].SubItems[2].Font = new Font(family, 9f, FontStyle.Bold);
-                //    //}
-                //    //if (livDetails.Items[i].SubItems[j].Text == "   CLOSING STOCK")
-                //    if (stArr[i].Contains("   CLOSING STOCK"))
-                //    {
-                //            livDetails.Items[i].UseItemStyleForSubItems = false;
-                //            livDetails.Items[i].SubItems[j].ForeColor = System.Drawing.Color.Blue;
-                //            livDetails.Items[i].SubItems[j].Font = new Font(family, 10f, System.Drawing.FontStyle.Bold);
-                //            livDetails.Items[i].SubItems[j + 1].ForeColor = System.Drawing.Color.Blue;
-                //            livDetails.Items[i].SubItems[j + 1].Font = new Font(family, 10f, System.Drawing.FontStyle.Bold);
-                //        }
-                //    //}
-                //}
-
-
-                //if (!cbDetailed.Checked)
-                //{
-                //    num = livDetails.Items.Count * 24;
-                //    panel1.Size = new Size(780, num + 25);
-                //    livDetails.Parent = panel1;
-                //    livDetails.Location = new Point(9, 12);
-                //    livDetails.Size = new Size(766, num);
-                //}
-                //else
-                //{
-                //panel1 = new System.Drawing.Size(780, 444);
-                //livDetails.Parent = panel1;
-                //livDetails.Location = new System.Drawing.Point(9, 12);
-                //livDetails.Size = new System.Drawing.Size(766, 427);
-                //}
-
-                //ListView.ColumnHeaderCollection  cols = (ListView.ColumnHeaderCollection)this.livDetails.Columns;
-                ////(ListView.ColumnHeaderCollection)this.livDetails.Columns.Add(new DataGridViewColumn())
-                //this.livDetails.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] { (ColumnHeader)this.columnHeader1.Clone(), (ColumnHeader)this.columnHeader2.Clone()});
-
-                //DisplayListInColumns(livDetails, listOne, 4);
-                //DisplayListInColumns(livDetails, listTwo, 5);
-
             }
             catch (Exception)
             {
@@ -434,125 +288,206 @@ namespace FlexMold.MVVM.View.Master
             }
         }
 
-        void addtoRTFList() 
+
+        void addtoRTFList()
         {
-            // Create a FlowDocument  
-            //FlowDocument mcFlowDoc = new FlowDocument();
-            // Create a paragraph with text  
-            //Paragraph para = new Paragraph();
-            //para.Inlines.Add(new Run("I am a flow document. Would you like to edit me? "));
-            //para.Inlines.Add(new Bold(new Run("Go ahead.")));
-            // Add the paragraph to blocks of paragraph  
+            var doc = new FlowDocument();
+            var table = new Table { CellSpacing = 0, FontFamily = new System.Windows.Media.FontFamily("Segoe UI"), FontSize = 13 };
 
-            rchTransdtls.AppendText("" + Environment.NewLine);
 
-            int i = 0;
-            foreach (string st in listThree)
+            //you can change length of headers here if needed or according toy your needs
+            table.Columns.Add(new TableColumn { Width = new GridLength(420) }); // Asset name
+            table.Columns.Add(new TableColumn { Width = new GridLength(140) }); // Asset amount
+            table.Columns.Add(new TableColumn { Width = new GridLength(420) }); // Liability name
+            table.Columns.Add(new TableColumn { Width = new GridLength(140) }); // Liability amount
+
+         
+            var headerGroup = new TableRowGroup();
+            var headerRow = new TableRow();
+
+            //below are the tablecells, headerrows, you can name headers according to requirements, current are set as 
+            headerRow.Cells.Add(new TableCell(new Paragraph(new Run("ASSET")) { FontWeight = FontWeights.Bold, Padding = new Thickness(4, 2, 4, 2) }));
+            headerRow.Cells.Add(new TableCell(new Paragraph(new Run("ASSET AMOUNT")) { FontWeight = FontWeights.Bold, TextAlignment = TextAlignment.Right, Padding = new Thickness(4, 2, 4, 2) }));
+            headerRow.Cells.Add(new TableCell(new Paragraph(new Run("LIABILITY")) { FontWeight = FontWeights.Bold, Padding = new Thickness(4, 2, 4, 2) }));
+            headerRow.Cells.Add(new TableCell(new Paragraph(new Run("LIABILITY AMOUNT")) { FontWeight = FontWeights.Bold, TextAlignment = TextAlignment.Right, Padding = new Thickness(4, 2, 4, 2) }));
+            headerGroup.Rows.Add(headerRow);
+            table.RowGroups.Add(headerGroup);
+
+            var bodyGroup = new TableRowGroup();
+
+            int rows = Math.Max(listThree?.Count ?? 0, listOne?.Count ?? 0);
+            for (int i = 0; i < rows; i++)
             {
-                //rchTransdtls.AppendText(listThree[i] +"="+ listFour[i]+Environment.NewLine);
-                if (listThree[i] != null && listThree[i].Length > 3)
-                    rchTransdtls.AppendText(listThree[i] + "=" + listFour[i] + Environment.NewLine);
-                //rchTransdtlsText.AppendText(listThree[i] + "=" + listFour[i] + Environment.NewLine);
+                string leftName = (i < (listThree?.Count ?? 0)) ? (listThree[i] ?? "") : "";
+                string leftAmt = (i < (listFour?.Count ?? 0)) ? (listFour[i] ?? "") : "";
+                string rightName = (i < (listOne?.Count ?? 0)) ? (listOne[i] ?? "") : "";
+                string rightAmt = (i < (listTwo?.Count ?? 0)) ? (listTwo[i] ?? "") : "";
 
-                i++;
+                // normalize
+                leftName = leftName.Trim();
+                leftAmt = leftAmt.Trim();
+                rightName = rightName.Trim();
+                rightAmt = rightAmt.Trim();
+
+                var row = new TableRow();
+
+                // helper to style name cell
+                Paragraph NamePara(string name)
+                {
+                    var p = new Paragraph(new Run(name)) { Margin = new Thickness(0), Padding = new Thickness(0) };
+                    p.TextAlignment = TextAlignment.Left;
+                    // visual rules
+                    if (name == "CURRENT LIABILITY" || name == "LONG TERM LIABILITY" || name == "CURRENT ASSET" || name == "FIXED ASSET")
+                    {
+                        p.Inlines.Clear();
+                        p.Inlines.Add(new Run(name) { Foreground = System.Windows.Media.Brushes.DodgerBlue, FontWeight = FontWeights.Bold });
+                    }
+                    else if (name == "PROFIT & LOSS A/C" || name == "DIFFERANCE IN OPPENING BALANCE")
+                    {
+                        p.Inlines.Clear();
+                        p.Inlines.Add(new Run(name) { Foreground = System.Windows.Media.Brushes.Red, FontWeight = FontWeights.Bold });
+                    }
+                    else if (name == "   CLOSING STOCK" || name.Equals("CLOSING STOCK", StringComparison.OrdinalIgnoreCase))
+                    {
+                        p.Inlines.Clear();
+                        p.Inlines.Add(new Run(name) { Foreground = System.Windows.Media.Brushes.Turquoise, FontWeight = FontWeights.Bold });
+                    }
+                    else if (string.IsNullOrWhiteSpace(name))
+                    {
+                        p.Inlines.Clear();
+                        p.Inlines.Add(new Run("") { Foreground = System.Windows.Media.Brushes.Transparent });
+                    }
+                    else if (leftAmt == " " || leftAmt == "")
+                    {
+                        p.Inlines.Clear();
+                        p.Inlines.Add(new Run(name) { Foreground = System.Windows.Media.Brushes.Turquoise, FontWeight = FontWeights.SemiBold });
+                    }
+                    return p;
+                }
+
+                // helper to style amount cell (right-aligned)
+                Paragraph AmtPara(string name, string amt)
+                {
+                    var p = new Paragraph(new Run(amt)) { Margin = new Thickness(0), Padding = new Thickness(0) };
+                    p.TextAlignment = TextAlignment.Right;
+                    if (name == "TOTAL")
+                    {
+                        p.Inlines.Clear();
+                        p.Inlines.Add(new Run(amt) { Foreground = System.Windows.Media.Brushes.White, FontWeight = FontWeights.Bold });
+                    }
+                    else if (name == "CURRENT LIABILITY" || name == "LONG TERM LIABILITY" || name == "CURRENT ASSET" || name == "FIXED ASSET")
+                    {
+                        p.Inlines.Clear();
+                        p.Inlines.Add(new Run(amt) { Foreground = System.Windows.Media.Brushes.DodgerBlue, FontWeight = FontWeights.Bold });
+                    }
+                    else if (name == "PROFIT & LOSS A/C" || name == "DIFFERANCE IN OPPENING BALANCE")
+                    {
+                        p.Inlines.Clear();
+                        p.Inlines.Add(new Run(amt) { Foreground = System.Windows.Media.Brushes.Red, FontWeight = FontWeights.Bold });
+                    }
+                    else if (name == "   CLOSING STOCK" || name.Equals("CLOSING STOCK", StringComparison.OrdinalIgnoreCase))
+                    {
+                        p.Inlines.Clear();
+                        p.Inlines.Add(new Run(amt) { Foreground = System.Windows.Media.Brushes.Turquoise, FontWeight = FontWeights.Bold });
+                    }
+                    else
+                    {
+                        p.Inlines.Clear();
+                        p.Inlines.Add(new Run(amt) { Foreground = System.Windows.Media.Brushes.LightGreen, FontWeight = FontWeights.SemiBold });
+                    }
+                    return p;
+                }
+
+                // create cells
+                var leftNameCell = new TableCell(NamePara(leftName)) { Padding = new Thickness(6, 6, 6, 6), BorderBrush = System.Windows.Media.Brushes.LightGray, BorderThickness = new Thickness(0, 0, 0, 1) };
+                var leftAmtCell = new TableCell(AmtPara(leftName, leftAmt)) { Padding = new Thickness(6, 6, 6, 6), BorderBrush = System.Windows.Media.Brushes.LightGray, BorderThickness = new Thickness(0, 0, 0, 1) };
+                var rightNameCell = new TableCell(NamePara(rightName)) { Padding = new Thickness(6, 6, 6, 6), BorderBrush = System.Windows.Media.Brushes.LightGray, BorderThickness = new Thickness(0, 0, 0, 1) };
+                var rightAmtCell = new TableCell(AmtPara(rightName, rightAmt)) { Padding = new Thickness(6, 6, 6, 6), BorderBrush = System.Windows.Media.Brushes.LightGray, BorderThickness = new Thickness(0, 0, 0, 1) };
+
+                // TOTAL row black background across both cells if either side is TOTAL
+                if (leftName == "TOTAL" || rightName == "TOTAL")
+                {
+                    leftNameCell.Background = System.Windows.Media.Brushes.Black;
+                    leftAmtCell.Background = System.Windows.Media.Brushes.Black;
+                    rightNameCell.Background = System.Windows.Media.Brushes.Black;
+                    rightAmtCell.Background = System.Windows.Media.Brushes.Black;
+                }
+
+                row.Cells.Add(leftNameCell);
+                row.Cells.Add(leftAmtCell);
+                row.Cells.Add(rightNameCell);
+                row.Cells.Add(rightAmtCell);
+
+                bodyGroup.Rows.Add(row);
             }
 
-            i = 0;            
-            foreach (string st in listOne)
-            {
-                if (listOne[i] != null && listOne[i].Length > 3)
-                    rchTransdtls.AppendText(listOne[i] + "=" + listTwo[i] + Environment.NewLine);
-                //rchTransdtlsText.AppendText(listOne[i] + "=" + listTwo[i] + Environment.NewLine);
-
-                i++;
-            }
-
-            //mcFlowDoc.Blocks.Add(para);
-            // Set contents  
-            //rchTransdtls.Document = mcFlowDoc;
-
+            table.RowGroups.Add(bodyGroup);
+            doc.Blocks.Add(table);
+            rchTransdtls.Document = doc;
         }
 
         void addtoRTFStrings(string strFirst, string strSecond, string strThird, string strFour)
         {
-            //Read Text "Hello World" from rich text box
-            //string textBoxText = new TextRange(rchTransdtls.Document.ContentStart, rchTransdtls.Document.ContentEnd).Text;
-
-            //Write Text "Hello World" to the rich text box
-            //rchTransdtls.Document.Blocks.Clear();
-            //rchTransdtls.Document.Blocks.Add(new Paragraph(new Run("Hello World")));
-
-            //string textBoxText = new TextRange(rchTransdtls.Document.ContentStart, rchTransdtls.Document.ContentEnd).Text;
-
-            //if (strFirst == "CURRENT LIABILITY" || strThird == "CURRENT LIABILITY" ||strSecond== "CURRENT LIABILITY" || strFour== "CURRENT LIABILITY")
-            //{
-            //    Console.WriteLine("");
-            //}
-
-            if (strFirst != null && strFirst.Length > 3)
+           
+            FlowDocument doc = rchTransdtls.Document ?? new FlowDocument();
+            Table table = doc.Blocks.OfType<Table>().FirstOrDefault();
+            if (table == null)
             {
-                //rchTransdtlsText.AppendText("" + Environment.NewLine);
-                //rchTransdtlsText.AppendText(strFirst + "=" + strSecond);
-                rchTransdtls.AppendText("" + Environment.NewLine);
-                rchTransdtls.AppendText(strFirst + "=" + strSecond);
-
+                // create table same as in addtoRTFList
+                table = new Table { CellSpacing = 0, FontFamily = new System.Windows.Media.FontFamily("Segoe UI"), FontSize = 12 };
+                table.Columns.Add(new TableColumn { Width = new GridLength(420) });
+                table.Columns.Add(new TableColumn { Width = new GridLength(140) });
+                table.Columns.Add(new TableColumn { Width = new GridLength(420) });
+                table.Columns.Add(new TableColumn { Width = new GridLength(140) });
+                doc.Blocks.Add(table);
             }
 
-            if (strThird != null && strThird.Length > 3)
+            var group = table.RowGroups.FirstOrDefault() ?? new TableRowGroup();
+            if (!table.RowGroups.Contains(group)) table.RowGroups.Add(group);
+
+            // helpers (same styling rules as above)
+            Paragraph NamePara(string name)
             {
-                //rchTransdtlsText.AppendText("" + Environment.NewLine);
-                //rchTransdtlsText.AppendText(strThird + "=" + strFour);
-                rchTransdtls.AppendText("" + Environment.NewLine);
-                rchTransdtls.AppendText(strThird + "=" + strFour);
-
+                var p = new Paragraph(new Run(name ?? "")) { Margin = new Thickness(0) };
+                p.TextAlignment = TextAlignment.Left;
+                if (name == "CURRENT LIABILITY" || name == "LONG TERM LIABILITY" || name == "CURRENT ASSET" || name == "FIXED ASSET")
+                    p.Inlines.Clear(); 
+     
+                return p;
             }
-            // Create a FlowDocument  
-            //FlowDocument mcFlowDoc = new FlowDocument();
-            // Create a paragraph with text  
-            //Paragraph para = new Paragraph();
-            //para.Inlines.Add(new Run("I am a flow document. Would you like to edit me? "));
-            //para.Inlines.Add(new Bold(new Run("Go ahead.")));
-            // Add the paragraph to blocks of paragraph  
 
+            Paragraph AmtPara(string name, string amt)
+            {
+                var p = new Paragraph(new Run(amt ?? "")) { Margin = new Thickness(0) };
+                p.TextAlignment = TextAlignment.Right;
+                return p;
+            }
 
-            //para.Inlines.Add(new Run("" + Environment.NewLine));
-            //para.Inlines.Add(new Run(strFirst + "=" + strSecond));
-            //para.Inlines.Add(new Run("" + Environment.NewLine));
-            //para.Inlines.Add(new Run(strThird + "=" + strFour));
-            //mcFlowDoc.Blocks.Add(para);
-            //rchTransdtls.AppendText(para.ToString());
-            // Set contents  
-            //rchTransdtls.Document = mcFlowDoc;
+            var row = new TableRow();
+            var leftNameCell = new TableCell(NamePara(strFirst)) { Padding = new Thickness(6, 6, 6, 6), BorderBrush = System.Windows.Media.Brushes.LightGray, BorderThickness = new Thickness(0, 0, 0, 1) };
+            var leftAmtCell = new TableCell(AmtPara(strFirst, strSecond)) { Padding = new Thickness(6, 6, 6, 6), BorderBrush = System.Windows.Media.Brushes.LightGray, BorderThickness = new Thickness(0, 0, 0, 1) };
+            var rightNameCell = new TableCell(NamePara(strThird)) { Padding = new Thickness(6, 6, 6, 6), BorderBrush = System.Windows.Media.Brushes.LightGray, BorderThickness = new Thickness(0, 0, 0, 1) };
+            var rightAmtCell = new TableCell(AmtPara(strThird, strFour)) { Padding = new Thickness(6, 6, 6, 6), BorderBrush = System.Windows.Media.Brushes.LightGray, BorderThickness = new Thickness(0, 0, 0, 1) };
 
-            //textBoxText = new TextRange(rchTransdtls.Document.ContentStart, rchTransdtls.Document.ContentEnd).Text;
+            // keep TOTAL background
+            if ((strFirst ?? "").Trim() == "TOTAL" || (strThird ?? "").Trim() == "TOTAL")
+            {
+                leftNameCell.Background = System.Windows.Media.Brushes.Black;
+                leftAmtCell.Background = System.Windows.Media.Brushes.Black;
+                rightNameCell.Background = System.Windows.Media.Brushes.Black;
+                rightAmtCell.Background = System.Windows.Media.Brushes.Black;
+            }
 
+            row.Cells.Add(leftNameCell);
+            row.Cells.Add(leftAmtCell);
+            row.Cells.Add(rightNameCell);
+            row.Cells.Add(rightAmtCell);
+
+            group.Rows.Add(row);
+            rchTransdtls.Document = doc;
         }
 
-        //private static void DisplayListInColumns(System.Windows.Forms.ListView listView, List<string> values, int columnIndex)
-        //{
-        //    for (int i = 0; i < values.Count; i++)
-        //    {
-        //        while (i >= listView.Items.Count)
-        //        {
-        //            listView.Items.Add(new System.Windows.Forms.ListViewItem());
-        //        }
-        //        System.Windows.Forms.ListViewItem listViewItem = (System.Windows.Forms.ListViewItem)listView.Items[i];
-        //        while (listViewItem.SubItems.Count <= columnIndex)
-        //        {
-        //            listViewItem.SubItems.Add(new System.Windows.Forms.ListViewItem.ListViewSubItem());
-        //        }
-        //        listViewItem.SubItems[columnIndex].Text = values[i];
-        //    }
-        //}
 
-        //private void ListViewAddMethod(string First, string Second, string Third, string Four)
-        //{
-        //    System.Windows.Forms.ListViewItem listViewItem = new System.Windows.Forms.ListViewItem(Third);
-        //    listViewItem.SubItems.Add(Four);
-        //    listViewItem.SubItems.Add(First);
-        //    listViewItem.SubItems.Add(Second);
-        //    livDetails.Items.Add(listViewItem);
-        //}
 
         private decimal ProfitAndLoseAccountMethod()
         {
@@ -638,14 +573,6 @@ namespace FlexMold.MVVM.View.Master
                             listThree.Add(strHead);
                             listFour.Add(strHeadAmount);
                         }
-                    //}
-                    //else if (dmlHeadAmnt != 0m)
-                    //{
-                    //    listThree.Add(" ");
-                    //    listFour.Add(" ");
-                    //    listThree.Add(strHead);
-                    //    listFour.Add(" ");
-                    //}
                 }
                 else
                 {
@@ -666,14 +593,6 @@ namespace FlexMold.MVVM.View.Master
                             listOne.Add(strHead);
                             listTwo.Add(strHeadAmount);
                         }
-                    //}
-                    //else if (dmlHeadAmnt != 0m)
-                    //{
-                    //    listOne.Add(" ");
-                    //    listTwo.Add(" ");
-                    //    listOne.Add(strHead);
-                    //    listTwo.Add(" ");
-                    //}
                 }
                 //if (cbDetailed.Checked)
                 {
@@ -693,22 +612,13 @@ namespace FlexMold.MVVM.View.Master
             }
             if (strTitle == "CURRENT ASSET")
             {
-                //if (!cbShowCloStck.Checked)
-                //{
-                //    dmlCloStckValue = ClosingStckFindMethodTwo(isAddValue: false);
-                //    listThree.Add(" ");
-                //    listFour.Add(" ");
-                //    listThree.Add("   CLOSING STOCK");
-                //    listFour.Add(dmlCloStckValue.ToString("F"));
-                //}
-                //else
-                //{
+                
                     dmlCloStckValue = ClosingStckFindMethodTwo(isAddValue: true);
                     listThree.Add(" ");
                     listFour.Add(" ");
                     listThree.Add("   CLOSING STOCK");
                     listFour.Add(dmlCloStckValue.ToString("F"));
-                //}
+                
             }
             return dmlUTotal;
         }

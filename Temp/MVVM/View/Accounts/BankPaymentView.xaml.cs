@@ -1,4 +1,5 @@
-﻿using MahApps.Metro.Controls;
+﻿using AccountsLibrary.Properties;
+using MahApps.Metro.Controls;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -14,16 +15,13 @@ namespace FlexMold.MVVM.View.Accounts
 {
     public partial class BankPaymentView : UserControl
     {
-        private readonly string _connStr;
         private int? _currentVchrTranId = null;
         private const string VCHR_TYPE = "Payment Voucher";
         private const string VCHR_NAME = "Bank Payment";
 
         public BankPaymentView()
         {
-            InitializeComponent();
-            _connStr = ConfigurationManager.ConnectionStrings["PSVAT5"]?.ConnectionString
-                ?? throw new InvalidOperationException("Connection string 'PSVAT5' not found in app.config.");
+            InitializeComponent();           
         }
 
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
@@ -43,7 +41,7 @@ namespace FlexMold.MVVM.View.Accounts
 
         private void LoadAccounts()
         {
-            using (var cn = new SqlConnection(_connStr))
+            using (var cn = new SqlConnection(Settings.Default.strConnetionString))
             using (var cmd = new SqlCommand("SELECT AccountId, AccountName FROM Account ORDER BY AccountName", cn))
             {
                 var dt = new DataTable();
@@ -59,7 +57,7 @@ namespace FlexMold.MVVM.View.Accounts
 
         private void LoadEmployees()
         {
-            using var cn = new SqlConnection(_connStr);
+            using var cn = new SqlConnection(Settings.Default.strConnetionString);
             using var cmd = new SqlCommand("SELECT EmpID, EmpName FROM EmployeeDetails ORDER BY EmpName", cn);
             var dt = new DataTable();
             var da = new SqlDataAdapter(cmd);
@@ -71,26 +69,9 @@ namespace FlexMold.MVVM.View.Accounts
             PaidByCombo.SelectedIndex = 0;
         }
 
-
-        //private void LoadEmployees2()
-        //{
-        //    using var cn = new SqlConnection(_connStr);
-        //    using var cmd = new SqlCommand("SELECT EmpID, EmpName FROM EmployeeDetails ORDER BY EmpName", cn);
-        //    var dt = new DataTable();
-        //    var da = new SqlDataAdapter(cmd);
-        //    da.Fill(dt);
-
-        //    PaidByFilterCombo.DisplayMemberPath = "EmpName";
-        //    PaidByFilterCombo.SelectedValuePath = "EmpID";
-        //    PaidByFilterCombo.SelectedIndex = 0;
-        //}
-
-
-
-
         private void LoadFilterEmployees()
         {
-            using (var cn = new SqlConnection(_connStr))
+            using (var cn = new SqlConnection(Settings.Default.strConnetionString))
             using (var cmd = new SqlCommand("SELECT EmpID, EmpName FROM EmployeeDetails ORDER BY EmpName", cn))
             {
                 var dt = new DataTable();
@@ -111,7 +92,7 @@ namespace FlexMold.MVVM.View.Accounts
         private void LoadGrid()
         {
             var dt = new DataTable();
-            using (var cn = new SqlConnection(_connStr))
+            using (var cn = new SqlConnection(Settings.Default.strConnetionString))
             using (var cmd = new SqlCommand(@"
                                     SELECT v.VchrTranId, v.VchrNo, v.VchrDate, v.VchrAmount, 
                                            v.FromAccountId, fa.AccountName AS FromAccountName,
@@ -193,7 +174,7 @@ namespace FlexMold.MVVM.View.Accounts
 
         private decimal GetAccountBalance(int accountId, DateTime asOfDate)
         {
-            using (var cn = new SqlConnection(_connStr))
+            using (var cn = new SqlConnection(Settings.Default.strConnetionString))
             using (var cmd = new SqlCommand(@"
                 SELECT ISNULL(SUM(DebitAmount),0) AS DebitSum, ISNULL(SUM(CreditAmount),0) AS CreditSum
                 FROM TransactionLog
@@ -240,7 +221,7 @@ namespace FlexMold.MVVM.View.Accounts
                 int next = GetNextVoucherNo();
                 if (next <= 0) next = 1;
 
-                using (var cn = new SqlConnection(_connStr))
+                using (var cn = new SqlConnection(Settings.Default.strConnetionString))
                 {
                     cn.Open();
                     using (var tx = cn.BeginTransaction())
@@ -336,7 +317,7 @@ namespace FlexMold.MVVM.View.Accounts
 
                 int vchrNo = Convert.ToInt32(VoucherNoBox.Value);
 
-                using (var cn = new SqlConnection(_connStr))
+                using (var cn = new SqlConnection(Settings.Default.strConnetionString))
                 {
                     cn.Open();
                     using (var tx = cn.BeginTransaction())
@@ -445,7 +426,7 @@ namespace FlexMold.MVVM.View.Accounts
             var res = MessageBox.Show("Confirm delete?", "Delete", MessageBoxButton.YesNo, MessageBoxImage.Warning);
             if (res != MessageBoxResult.Yes) return;
 
-            using (var cn = new SqlConnection(_connStr))
+            using (var cn = new SqlConnection(Settings.Default.strConnetionString))
             {
                 cn.Open();
                 using (var tx = cn.BeginTransaction())
@@ -513,7 +494,7 @@ namespace FlexMold.MVVM.View.Accounts
         {
             try
             {
-                using (var cn = new SqlConnection(_connStr))
+                using (var cn = new SqlConnection(Settings.Default.strConnetionString))
                 using (var cmd = new SqlCommand(@"
                     SELECT ISNULL(MAX(VchrNo),0) + 1 FROM VchrTranLog WHERE VchrType = @VchrType AND VchrName = @VchrName
                     ", cn))

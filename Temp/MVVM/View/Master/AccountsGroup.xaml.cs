@@ -3,15 +3,13 @@ using System.Data;
 using Microsoft.Data.SqlClient;
 using System.Windows;
 using System.Windows.Controls;
+using AccountsLibrary.Properties;
 
 namespace FlexMold.MVVM.View.Master
 {
     public partial class AccountsGroup : Window
     {
-        private readonly string connectionString = ((System.Configuration.ConnectionStringSettings)
-            System.Configuration.ConfigurationManager.ConnectionStrings["PSVAT5"]).ConnectionString;
-
-        public AccountsGroup()
+       public AccountsGroup()
         {
             InitializeComponent();
             Loaded += AccountsGroup_Loaded;
@@ -25,7 +23,7 @@ namespace FlexMold.MVVM.View.Master
 
         private void LoadUnderComboBox()
         {
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            using (SqlConnection conn = new SqlConnection(Settings.Default.strConnetionString))
             {
                 string query = "SELECT DISTINCT GroupName FROM AccountGroup ORDER BY GroupName";
                 SqlCommand cmd = new SqlCommand(query, conn);
@@ -42,7 +40,7 @@ namespace FlexMold.MVVM.View.Master
 
         private void LoadAccountGroups()
         {
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            using (SqlConnection conn = new SqlConnection(Settings.Default.strConnetionString))
             {
                 string query = "SELECT AGroupId, GroupName, Under FROM AccountGroup";
                 SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
@@ -59,7 +57,7 @@ namespace FlexMold.MVVM.View.Master
 
             if (string.IsNullOrWhiteSpace(groupName)) return;
 
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            using (SqlConnection conn = new SqlConnection(Settings.Default.strConnetionString))
             {
                 conn.Open();
 
@@ -98,7 +96,7 @@ namespace FlexMold.MVVM.View.Master
             string groupName = GroupNameTextBox.Text.Trim();
             if (string.IsNullOrWhiteSpace(groupName)) return;
 
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            using (SqlConnection conn = new SqlConnection(Settings.Default.strConnetionString))
             {
                 conn.Open();
 

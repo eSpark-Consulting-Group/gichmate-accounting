@@ -1,4 +1,5 @@
-﻿using Microsoft.Data.SqlClient;
+﻿using AccountsLibrary.Properties;
+using Microsoft.Data.SqlClient;
 using System;
 using System.Linq;
 using System.Windows;
@@ -9,11 +10,7 @@ namespace FlexMold.MVVM.View.Master
 {
     public partial class ExpenseAccount : Window
     {
-        private readonly string connectionString =
-            System.Configuration.ConfigurationManager
-                .ConnectionStrings["PSVAT5"]
-                .ConnectionString;
-
+        
         public ExpenseAccount()
         {
             InitializeComponent();
@@ -27,7 +24,7 @@ namespace FlexMold.MVVM.View.Master
 
         private void LoadAccountGroupComboBox()
         {
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            using (SqlConnection conn = new SqlConnection(Settings.Default.strConnetionString))
             {
                 string query = "SELECT DISTINCT GroupName FROM AccountGroup ORDER BY GroupName";
                 SqlCommand cmd = new SqlCommand(query, conn);
@@ -86,7 +83,7 @@ namespace FlexMold.MVVM.View.Master
             int groupId = 0;
 
             // Resolve AGroupId from GroupName
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            using (SqlConnection conn = new SqlConnection(Settings.Default.strConnetionString))
             using (SqlCommand cmd = new SqlCommand("SELECT AGroupId FROM AccountGroup WHERE GroupName = @groupName", conn))
             {
                 cmd.Parameters.AddWithValue("@groupName", groupName);
@@ -101,7 +98,7 @@ namespace FlexMold.MVVM.View.Master
             }
 
             // Insert into ExpenseAccount
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            using (SqlConnection conn = new SqlConnection(Settings.Default.strConnetionString))
             using (SqlCommand cmd = new SqlCommand(
                 @"INSERT INTO Account 
                   (AccountName, AGroupId, OpeningBalance, DebitOrCridt, isActive, Remarks)

@@ -1110,23 +1110,6 @@
           }
         }
       },
-      "Microsoft.AspNet.SignalR.Core/2.4.3": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Owin.Security": "2.1.0",
-          "Newtonsoft.Json": "6.0.4"
-        },
-        "compile": {
-          "lib/net45/Microsoft.AspNet.SignalR.Core.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/net45/Microsoft.AspNet.SignalR.Core.dll": {
-            "related": ".pdb;.xml"
-          }
-        }
-      },
       "Microsoft.Bcl.AsyncInterfaces/6.0.0": {
         "type": "package",
         "compile": {
@@ -2009,39 +1992,6 @@
           "lib/netstandard2.0/Microsoft.Office.Interop.Excel.dll": {}
         }
       },
-      "Microsoft.Owin/2.1.0": {
-        "type": "package",
-        "dependencies": {
-          "Owin": "1.0.0"
-        },
-        "compile": {
-          "lib/net45/Microsoft.Owin.dll": {
-            "related": ".XML"
-          }
-        },
-        "runtime": {
-          "lib/net45/Microsoft.Owin.dll": {
-            "related": ".XML"
-          }
-        }
-      },
-      "Microsoft.Owin.Security/2.1.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Owin": "2.1.0",
-          "Owin": "1.0.0"
-        },
-        "compile": {
-          "lib/net45/Microsoft.Owin.Security.dll": {
-            "related": ".XML"
-          }
-        },
-        "runtime": {
-          "lib/net45/Microsoft.Owin.Security.dll": {
-            "related": ".XML"
-          }
-        }
-      },
       "Microsoft.SqlServer.Server/1.0.0": {
         "type": "package",
         "compile": {
@@ -2195,15 +2145,6 @@
           "lib/netstandard1.6/OfficeOpenXml.Core.ExcelPackage.dll": {
             "related": ".pdb"
           }
-        }
-      },
-      "Owin/1.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net40/Owin.dll": {}
-        },
-        "runtime": {
-          "lib/net40/Owin.dll": {}
         }
       },
       "PDFsharp/6.2.1": {
@@ -5155,29 +5096,6 @@
         "runtime": {
           "lib/net40/ToastNotifications.Messages.dll": {}
         }
-      },
-      "AshFramework/1.0.0": {
-        "type": "project",
-        "framework": ".NETFramework,Version=v4.6.1",
-        "compile": {
-          "bin/placeholder/AshFramework.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/AshFramework.dll": {}
-        }
-      },
-      "AshUsercontrol/1.0.0": {
-        "type": "project",
-        "framework": ".NETFramework,Version=v4.6.1",
-        "dependencies": {
-          "AshFramework": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/AshUsercontrol.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/AshUsercontrol.dll": {}
-        }
       }
     }
   },
@@ -7170,21 +7088,6 @@
         "materialdesignthemes.mahapps.nuspec"
       ]
     },
-    "Microsoft.AspNet.SignalR.Core/2.4.3": {
-      "sha512": "zxvv9HhsUa3nfyC7rIwFxHVcGffyQrjqNUO6pBKLyv3eFigkEy3N+6KbbSedzIyCfthglTbvU+m4sg8tawRlvA==",
-      "type": "package",
-      "path": "microsoft.aspnet.signalr.core/2.4.3",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net45/Microsoft.AspNet.SignalR.Core.dll",
-        "lib/net45/Microsoft.AspNet.SignalR.Core.pdb",
-        "lib/net45/Microsoft.AspNet.SignalR.Core.xml",
-        "microsoft.aspnet.signalr.core.2.4.3.nupkg.sha512",
-        "microsoft.aspnet.signalr.core.nuspec",
-        "packageIcon.png"
-      ]
-    },
     "Microsoft.Bcl.AsyncInterfaces/6.0.0": {
       "sha512": "UcSjPsst+DfAdJGVDsu346FX0ci0ah+lw3WRtn18NUwEqRt70HaOQ7lI72vy3+1LxtqI3T5GWwV39rQSrCzAeg==",
       "type": "package",
@@ -8501,34 +8404,6 @@
         "microsoft.office.interop.excel.nuspec"
       ]
     },
-    "Microsoft.Owin/2.1.0": {
-      "sha512": "lk0kK64mlmcmtWX8YOYkZsnZKDoGEzMZhe8e1bcP+FFcgD4f2QfKwvu5Z8Bh8WS0VO7Rgk+DJ0hwW0k+S/UGMg==",
-      "type": "package",
-      "path": "microsoft.owin/2.1.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net40/Microsoft.Owin.XML",
-        "lib/net40/Microsoft.Owin.dll",
-        "lib/net45/Microsoft.Owin.XML",
-        "lib/net45/Microsoft.Owin.dll",
-        "microsoft.owin.2.1.0.nupkg.sha512",
-        "microsoft.owin.nuspec"
-      ]
-    },
-    "Microsoft.Owin.Security/2.1.0": {
-      "sha512": "4n1V0p+O6W1L0xHUM8Cjp2Y+MmmUkiCZv6PvRNIDCJD9zlerBJa2HECo9lUiWC+KuasQJ3QxB1FmipNBxdXXIQ==",
-      "type": "package",
-      "path": "microsoft.owin.security/2.1.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net45/Microsoft.Owin.Security.XML",
-        "lib/net45/Microsoft.Owin.Security.dll",
-        "microsoft.owin.security.2.1.0.nupkg.sha512",
-        "microsoft.owin.security.nuspec"
-      ]
-    },
     "Microsoft.SqlServer.Server/1.0.0": {
       "sha512": "N4KeF3cpcm1PUHym1RmakkzfkEv3GRMyofVv40uXsQhCQeglr2OHNcUk2WOG51AKpGO8ynGpo9M/kFXSzghwug==",
       "type": "package",
@@ -8725,17 +8600,6 @@
         "src/OfficeOpenXml.Core.ExcelPackage/ExtensonMethods.cs",
         "src/OfficeOpenXml.Core.ExcelPackage/OfficeProperties.cs",
         "src/OfficeOpenXml.Core.ExcelPackage/Properties/AssemblyInfo.cs"
-      ]
-    },
-    "Owin/1.0.0": {
-      "sha512": "OseTFniKmyp76mEzOBwIKGBRS5eMoYNkMKaMXOpxx9jv88+b6mh1rSaw43vjBOItNhaLFG3d0a20PfHyibH5sw==",
-      "type": "package",
-      "path": "owin/1.0.0",
-      "files": [
-        ".nupkg.metadata",
-        "lib/net40/Owin.dll",
-        "owin.1.0.0.nupkg.sha512",
-        "owin.nuspec"
       ]
     },
     "PDFsharp/6.2.1": {
@@ -13463,21 +13327,10 @@
         "toastnotifications.messages.2.5.1.nupkg.sha512",
         "toastnotifications.messages.nuspec"
       ]
-    },
-    "AshFramework/1.0.0": {
-      "type": "project",
-      "path": "SubProjects/AshFramework/AshFramework.csproj",
-      "msbuildProject": "SubProjects/AshFramework/AshFramework.csproj"
-    },
-    "AshUsercontrol/1.0.0": {
-      "type": "project",
-      "path": "SubProjects/AshUserControl/AshUsercontrol.csproj",
-      "msbuildProject": "SubProjects/AshUserControl/AshUsercontrol.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0-windows7.0": [
-      "AshUsercontrol >= 1.0.0",
       "Beckhoff.TwinCAT.Ads >= 6.1.154",
       "DataGridExtensions >= 2.5.15",
       "EPPlus >= 8.1.0",
@@ -13486,7 +13339,6 @@
       "MahApps.Metro >= 2.4.10",
       "MahApps.Metro.IconPacks >= 4.11.0",
       "MaterialDesignThemes.MahApps >= 0.3.0",
-      "Microsoft.AspNet.SignalR.Core >= 2.4.3",
       "Microsoft.CSharp >= 4.7.0",
       "Microsoft.Data.SqlClient >= 6.1.0",
       "Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers >= 0.4.421302",
@@ -13516,11 +13368,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Dotnet_User1\\Desktop\\FlexMold[12-Feb]-AccountingUpdate\\FlexMold.csproj",
-      "projectName": "FlexMold",
-      "projectPath": "C:\\Users\\Dotnet_User1\\Desktop\\FlexMold[12-Feb]-AccountingUpdate\\FlexMold.csproj",
+      "projectUniqueName": "C:\\Users\\Dotnet_User1\\Desktop\\12SeptemberUpdate\\FlexMold[12-Feb]-AccountingUpdate\\AccountsPro.csproj",
+      "projectName": "AccountsPro",
+      "projectPath": "C:\\Users\\Dotnet_User1\\Desktop\\12SeptemberUpdate\\FlexMold[12-Feb]-AccountingUpdate\\AccountsPro.csproj",
       "packagesPath": "C:\\Users\\Dotnet_User1\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Dotnet_User1\\Desktop\\FlexMold[12-Feb]-AccountingUpdate\\obj\\",
+      "outputPath": "C:\\Users\\Dotnet_User1\\Desktop\\12SeptemberUpdate\\FlexMold[12-Feb]-AccountingUpdate\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -13542,11 +13394,7 @@
       "frameworks": {
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
-          "projectReferences": {
-            "C:\\Users\\Dotnet_User1\\Desktop\\FlexMold[12-Feb]-AccountingUpdate\\SubProjects\\AshUserControl\\AshUsercontrol.csproj": {
-              "projectPath": "C:\\Users\\Dotnet_User1\\Desktop\\FlexMold[12-Feb]-AccountingUpdate\\SubProjects\\AshUserControl\\AshUsercontrol.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {
@@ -13596,10 +13444,6 @@
           "MaterialDesignThemes.MahApps": {
             "target": "Package",
             "version": "[0.3.0, )"
-          },
-          "Microsoft.AspNet.SignalR.Core": {
-            "target": "Package",
-            "version": "[2.4.3, )"
           },
           "Microsoft.CSharp": {
             "target": "Package",
@@ -13709,46 +13553,6 @@
       "warningLevel": 1,
       "message": "Package 'ExcelPackage 1.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0-windows7.0'. This package may not be fully compatible with your project.",
       "libraryId": "ExcelPackage",
-      "targetGraphs": [
-        "net8.0-windows7.0"
-      ]
-    },
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'Microsoft.AspNet.SignalR.Core 2.4.3' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0-windows7.0'. This package may not be fully compatible with your project.",
-      "libraryId": "Microsoft.AspNet.SignalR.Core",
-      "targetGraphs": [
-        "net8.0-windows7.0"
-      ]
-    },
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'Microsoft.Owin 2.1.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0-windows7.0'. This package may not be fully compatible with your project.",
-      "libraryId": "Microsoft.Owin",
-      "targetGraphs": [
-        "net8.0-windows7.0"
-      ]
-    },
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'Microsoft.Owin.Security 2.1.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0-windows7.0'. This package may not be fully compatible with your project.",
-      "libraryId": "Microsoft.Owin.Security",
-      "targetGraphs": [
-        "net8.0-windows7.0"
-      ]
-    },
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'Owin 1.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0-windows7.0'. This package may not be fully compatible with your project.",
-      "libraryId": "Owin",
       "targetGraphs": [
         "net8.0-windows7.0"
       ]

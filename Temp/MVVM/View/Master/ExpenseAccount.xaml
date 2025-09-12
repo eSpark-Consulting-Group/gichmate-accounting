@@ -140,17 +140,13 @@
                          VerticalContentAlignment="Center"
                          PreviewTextInput="ExpenseOpeningBalance_TextPreviewInput"/>
 
+                <Button Content="Update"
+                        Style="{StaticResource AnimatedRedButton}"
+                        Margin="17,0,0,0"
+                        Height="30"
+                        Width="100"/>
                 
-                <ComboBox x:Name="DrCrComboBox" Margin="10,0,0,0" Width="120" Height="30" VerticalAlignment="Center" VerticalContentAlignment="Center">
-                    
-                    <ComboBoxItem IsSelected="True" Content="DR" />
-                    <ComboBoxItem Content="CR"/>
-                
-                </ComboBox>
-
-                <CheckBox x:Name="ActiveCheckbox"  Margin="10,0,0,0" Content="Active"
-                          FontSize="14" Width="96"/>
-
+               
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Height="40">
@@ -165,6 +161,18 @@
                             VerticalContentAlignment="Center" 
                             Height="30"
                             Width="200"/>
+
+                <ComboBox x:Name="DrCrComboBox" Margin="20,0,0,0" Width="100" Height="30" VerticalAlignment="Center" VerticalContentAlignment="Center">
+
+                    <ComboBoxItem IsSelected="True" Content="DR" />
+                    <ComboBoxItem Content="CR"/>
+
+                </ComboBox>
+
+                <CheckBox x:Name="ActiveCheckbox"  Margin="10,0,0,0" Content="Active"
+                          FontSize="14" Width="96"/>
+
+                
 
             </StackPanel>
 

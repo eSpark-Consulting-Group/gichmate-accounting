@@ -1,4 +1,4 @@
-﻿using FlexMold.MVVM.Model;
+﻿//using FlexMold.MVVM.Model;
 using FlexMold.MVVM.ViewModel;
 using FlexMold.Utility;
 using MahApps.Metro.Controls;
@@ -10,6 +10,7 @@ using System.ComponentModel;
 using System.Globalization;
 using System.Media;
 using System.Reflection;
+using System.Windows;
 using System.Windows.Media;
 using TwinCAT;
 using TwinCAT.Ads;
@@ -24,43 +25,16 @@ namespace FlexMold
         private Logger log = LogManager.GetLogger("Main");
         //MainViewModel _vm;
         //private readonly ITwinCathelper _TwinCathelper;/*{ get { return App.AppHost.Services.GetRequiredService<ITwinCathelper>(); } }*/
-        private ISplashScreenViewModel _SplashScreenViewModel { get { return App.AppHost.Services.GetRequiredService<ISplashScreenViewModel>(); } }
+        //private ISplashScreenViewModel _SplashScreenViewModel { get { return App.AppHost.Services.GetRequiredService<ISplashScreenViewModel>(); } }
 
         public MainWindow()
         {
-            //try { 
-            //_TwinCathelper = twinCathelper;
-            InitializeComponent();
-            //Version v = GetRunningVersion();
-            //string About = string.Format(CultureInfo.InvariantCulture, @"YourApp Version {0}.{1}.{2} (r{3})", v.Major, v.Minor, v.Build, v.Revision);
-            //this.Title = "FlexMold V:" + GetRunningVersion().ToString();
-
-            //switch (_SplashScreenViewModel.SelectedMachine.MachineType)
-            //{
-            //    case EMachineType.Motor:
-            //        _TwinCathelper.InitializeNotifications();
-            //        _TwinCathelper.TSession_ConnectionStateChanged += Session_ConnectionStateChanged;
-            //        _TwinCathelper.TConnection_ConnectionStatusChanged += Connection_ConnectionStatusChanged;
-            //        _TwinCathelper.TConnection_RouterStateChanged += Connection_RouterStateChanged;
-            //        _TwinCathelper.TConnection_AdsStateChanged += Connection_AdsStateChanged;
-            //        break;
-
-            //    case EMachineType.Projector:
-            //        break;
-
-            //    default:
-            //        break;
-            //}
-            //logCtrl.ItemAdded += OnLogMessageItemAdded;
-            //log.Log(LogLevel.Info, $"Application Loaded Sucessfully.....");
-            //log.Log(LogLevel.Info, $"Selected Machine Type : {_SplashScreenViewModel.SelectedMachine.MachineType} " +
-            //    $"Name : {_SplashScreenViewModel.SelectedMachine.Name} ID : {_SplashScreenViewModel.SelectedMachine.ID}");
-            //}
-            //catch (Exception ex)
-            //{
-            //    var log = LogManager.GetLogger("Main");
-            //    log.Log(LogLevel.Error, ex.Message);
-            //}
+            try
+            {
+                //_TwinCathelper = twinCathelper;
+                InitializeComponent();
+            }
+            catch(Exception ee) { MessageBox.Show("MainApp error: >>> "+ee.Message); }
 
         }
         private static Version GetRunningVersion()

@@ -1,5 +1,4 @@
-﻿using FlexMold.MVVM.Model;
-using Microsoft.Data.SqlClient;
+﻿using Microsoft.Data.SqlClient;
 using System.Linq;
 using OfficeOpenXml;
 using System;
@@ -9,14 +8,13 @@ using System.IO;
 using System.Windows;
 using System.Windows.Controls;
 using Microsoft.Win32;
+using AccountsLibrary.Properties;
 
 namespace FlexMold.MVVM.View.Accounts
 {
     public partial class UploadTenants : Window
     {
         private DataTable currentDataTable = null;
-        private string connectionString = "Server=DESKTOP-E09TG4T;Database=PSVAT5;Trusted_Connection=True; TrustServerCertificate=True;";
-
         public UploadTenants()
         {
             InitializeComponent();
@@ -75,7 +73,7 @@ namespace FlexMold.MVVM.View.Accounts
         {
             try
             {
-                using (SqlConnection conn = new SqlConnection(connectionString))
+                using (SqlConnection conn = new SqlConnection(Settings.Default.strConnetionString))
                 {
                     conn.Open();
 
@@ -289,7 +287,7 @@ namespace FlexMold.MVVM.View.Accounts
         {
             try
             {
-                using (SqlConnection conn = new SqlConnection(connectionString))
+                using (SqlConnection conn = new SqlConnection(Settings.Default.strConnetionString))
                 {
                     conn.Open();
                     string query = "";
@@ -352,7 +350,7 @@ namespace FlexMold.MVVM.View.Accounts
         {
             try
             {
-                using (SqlConnection conn = new SqlConnection(connectionString))
+                using (SqlConnection conn = new SqlConnection(Settings.Default.strConnetionString))
                 {
                     conn.Open();
                     string query = $@"SELECT DISTINCT [{columnName}] 

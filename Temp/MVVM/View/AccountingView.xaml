@@ -5,10 +5,10 @@
     xmlns:local="clr-namespace:FlexMold.MVVM.View"
     xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:viewmodel="clr-namespace:FlexMold.MVVM.ViewModel"
-    xmlns:Project="clr-namespace:FlexMold.MVVM.View.Project"
+    xmlns:viewmodel="clr-namespace:FlexMold.MVVM.ViewModel"    
     x:Class="FlexMold.MVVM.View.MasterTransaction_Click"
     Height="1000" Width="1850"
+    
     mc:Ignorable="d">
 
 
@@ -61,7 +61,7 @@
                 <ColumnDefinition Width="81"/>
                 <ColumnDefinition Width="128"/>
                 <ColumnDefinition Width="100"/>
-                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="160"/>
                 <ColumnDefinition Width="100"/>
                 <ColumnDefinition Width="173"/>
                 <ColumnDefinition Width="41*" />
@@ -86,20 +86,21 @@
                 FontSize="17"         
                 Style="{StaticResource Animation}"
                 Height="38" 
-                    Width="134">
+                Width="134"
+                Command="{Binding UploadTenantsCommand}">
             </Button>
 
-            <Button Content="  MENU  "
+            <!--<Button Content="  MENU  "
                  Foreground="White"
                  Background="Transparent"
                  BorderThickness="0"
-                 Grid.Column="2"                 
+                 Grid.Column="5"                 
                  VerticalAlignment="Center"
                  HorizontalAlignment="Center"
                  FontSize="17"
                  Style="{StaticResource Animation}"
                  Height="38" Width="82">
-            </Button>
+            </Button>-->
 
 
 
@@ -107,7 +108,7 @@
                     Content="  REPORTS  "
                     Foreground="White"
                     Background="Transparent"                    
-                    Grid.Column="3"
+                    Grid.Column="4"
                     HorizontalAlignment="Center"
                     FontSize="17"         
                     Style="{StaticResource Animation}"
@@ -146,7 +147,7 @@
                     Content="  ACCOUNTS  "
                     Foreground="White"
                     Background="Transparent"                    
-                    Grid.Column="4"                    
+                    Grid.Column="3"                    
                     HorizontalAlignment="Center"
                     FontSize="17"           
                     Style="{StaticResource Animation}"
@@ -202,7 +203,7 @@
                     Content="  MASTER  "
                     Foreground="White"
                     Background="Transparent"                    
-                    Grid.Column="5"
+                    Grid.Column="2"
                     HorizontalAlignment="Center"
                     FontSize="17"   
                     Style="{StaticResource Animation}"
@@ -229,7 +230,7 @@
 
 
 
-            <Button Content="  SEARCH  "
+            <!--<Button Content="  SEARCH  "
                     Foreground="White"
                     Background="Transparent"
                     BorderThickness="0"
@@ -239,12 +240,12 @@
                     FontSize="17"  
                     Style="{StaticResource Animation}"
                     Height="32" Width="90">
-            </Button>
+            </Button>-->
 
             <Button Content="  ADMIN SETTINGS  "
                     Foreground="White"
                     Background="Transparent"                    
-                    Grid.Column="7"
+                    Grid.Column="5"
                     VerticalAlignment="Center"
                     FontSize="17"                   
                     Width="NaN" Height="34" Click="Button_Click" 
@@ -434,9 +435,6 @@
                 </Button>
             </StackPanel>
         </Grid>
-
-
-
 
         <Grid Margin="99,44,5,0">
             <Grid.Background>

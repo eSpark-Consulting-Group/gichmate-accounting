@@ -53,7 +53,7 @@ namespace FlexMold.MVVM.View {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/FlexMold;component/mvvm/view/usersettingsview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/AccountsPro;component/mvvm/view/usersettingsview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\MVVM\View\UserSettingsView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

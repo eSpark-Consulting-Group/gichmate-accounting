@@ -102,7 +102,7 @@ namespace FlexMold.MVVM.View.Firm {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/FlexMold;component/mvvm/view/firm/adminsettingsview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/AccountsPro;component/mvvm/view/firm/adminsettingsview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\..\MVVM\View\Firm\AdminSettingsView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

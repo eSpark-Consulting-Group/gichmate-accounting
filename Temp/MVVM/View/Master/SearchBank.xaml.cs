@@ -3,6 +3,7 @@ using System.Data;
 using Microsoft.Data.SqlClient;
 using System.Windows;
 using System.Windows.Controls;
+using AccountsLibrary.Properties;
 
 namespace FlexMold.MVVM.View.Master
 {
@@ -10,8 +11,6 @@ namespace FlexMold.MVVM.View.Master
     {
         public int SelectedAccountId { get; private set; }
         public event Action<int> AccountSelected;
-
-        private string connectionString = "Server=DESKTOP-E09TG4T;Database=PSVAT5;Trusted_Connection=True;TrustServerCertificate=True;";
 
         public SearchBank()
         {
@@ -24,7 +23,7 @@ namespace FlexMold.MVVM.View.Master
         {
             try
             {
-                using (SqlConnection conn = new SqlConnection(connectionString))
+                using (SqlConnection conn = new SqlConnection(Settings.Default.strConnetionString))
                 {
                     conn.Open();
                     string query = @"SELECT AccountId, AccountName, AGroupId, OpeningBalance, DebitOrCridt, 
@@ -54,7 +53,7 @@ namespace FlexMold.MVVM.View.Master
         {
             try
             {
-                using (SqlConnection conn = new SqlConnection(connectionString))
+                using (SqlConnection conn = new SqlConnection(Settings.Default.strConnetionString))
                 {
                     conn.Open();
                     string query = @"SELECT AccountId, AccountName, AGroupId, OpeningBalance, DebitOrCridt, 
@@ -122,7 +121,7 @@ namespace FlexMold.MVVM.View.Master
                 {
                     try
                     {
-                        using (SqlConnection conn = new SqlConnection(connectionString))
+                        using (SqlConnection conn = new SqlConnection(Settings.Default.strConnetionString))
                         {
                             conn.Open();
                             SqlCommand cmd = new SqlCommand("DELETE FROM Account WHERE AccountId = @AccountId", conn);

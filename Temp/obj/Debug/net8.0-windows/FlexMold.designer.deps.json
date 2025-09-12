@@ -654,18 +654,6 @@
           }
         }
       },
-      "Microsoft.AspNet.SignalR.Core/2.4.3": {
-        "dependencies": {
-          "Microsoft.Owin.Security": "2.1.0",
-          "Newtonsoft.Json": "13.0.3"
-        },
-        "runtime": {
-          "lib/net45/Microsoft.AspNet.SignalR.Core.dll": {
-            "assemblyVersion": "2.4.3.0",
-            "fileVersion": "2.4.3.22014"
-          }
-        }
-      },
       "Microsoft.Bcl.AsyncInterfaces/6.0.0": {
         "runtime": {
           "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {
@@ -1203,29 +1191,6 @@
           }
         }
       },
-      "Microsoft.Owin/2.1.0": {
-        "dependencies": {
-          "Owin": "1.0.0"
-        },
-        "runtime": {
-          "lib/net45/Microsoft.Owin.dll": {
-            "assemblyVersion": "2.1.0.0",
-            "fileVersion": "2.1.30113.529"
-          }
-        }
-      },
-      "Microsoft.Owin.Security/2.1.0": {
-        "dependencies": {
-          "Microsoft.Owin": "2.1.0",
-          "Owin": "1.0.0"
-        },
-        "runtime": {
-          "lib/net45/Microsoft.Owin.Security.dll": {
-            "assemblyVersion": "2.1.0.0",
-            "fileVersion": "2.1.30113.529"
-          }
-        }
-      },
       "Microsoft.SqlServer.Server/1.0.0": {
         "runtime": {
           "lib/netstandard2.0/Microsoft.SqlServer.Server.dll": {
@@ -1331,14 +1296,6 @@
         },
         "runtime": {
           "lib/netstandard1.6/OfficeOpenXml.Core.ExcelPackage.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
-      },
-      "Owin/1.0.0": {
-        "runtime": {
-          "lib/net40/Owin.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -3350,13 +3307,6 @@
       "path": "materialdesignthemes.mahapps/0.3.0",
       "hashPath": "materialdesignthemes.mahapps.0.3.0.nupkg.sha512"
     },
-    "Microsoft.AspNet.SignalR.Core/2.4.3": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-zxvv9HhsUa3nfyC7rIwFxHVcGffyQrjqNUO6pBKLyv3eFigkEy3N+6KbbSedzIyCfthglTbvU+m4sg8tawRlvA==",
-      "path": "microsoft.aspnet.signalr.core/2.4.3",
-      "hashPath": "microsoft.aspnet.signalr.core.2.4.3.nupkg.sha512"
-    },
     "Microsoft.Bcl.AsyncInterfaces/6.0.0": {
       "type": "package",
       "serviceable": true,
@@ -3672,20 +3622,6 @@
       "path": "microsoft.office.interop.excel/15.0.4795.1001",
       "hashPath": "microsoft.office.interop.excel.15.0.4795.1001.nupkg.sha512"
     },
-    "Microsoft.Owin/2.1.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-lk0kK64mlmcmtWX8YOYkZsnZKDoGEzMZhe8e1bcP+FFcgD4f2QfKwvu5Z8Bh8WS0VO7Rgk+DJ0hwW0k+S/UGMg==",
-      "path": "microsoft.owin/2.1.0",
-      "hashPath": "microsoft.owin.2.1.0.nupkg.sha512"
-    },
-    "Microsoft.Owin.Security/2.1.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-4n1V0p+O6W1L0xHUM8Cjp2Y+MmmUkiCZv6PvRNIDCJD9zlerBJa2HECo9lUiWC+KuasQJ3QxB1FmipNBxdXXIQ==",
-      "path": "microsoft.owin.security/2.1.0",
-      "hashPath": "microsoft.owin.security.2.1.0.nupkg.sha512"
-    },
     "Microsoft.SqlServer.Server/1.0.0": {
       "type": "package",
       "serviceable": true,
@@ -3741,13 +3677,6 @@
       "sha512": "sha512-LDhZ7K/zd7Zg3qndOacpdoYvyMbrnOm590g6fhS7NhR3zWkg90sz4NyOo1LGwq/9zianqjwV4gyJjtzLZ5JKww==",
       "path": "officeopenxml.core.excelpackage/1.0.0",
       "hashPath": "officeopenxml.core.excelpackage.1.0.0.nupkg.sha512"
-    },
-    "Owin/1.0.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-OseTFniKmyp76mEzOBwIKGBRS5eMoYNkMKaMXOpxx9jv88+b6mh1rSaw43vjBOItNhaLFG3d0a20PfHyibH5sw==",
-      "path": "owin/1.0.0",
-      "hashPath": "owin.1.0.0.nupkg.sha512"
     },
     "PDFsharp/6.2.1": {
       "type": "package",

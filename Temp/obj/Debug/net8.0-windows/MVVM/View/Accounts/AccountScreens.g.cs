@@ -65,7 +65,7 @@ namespace FlexMold.MVVM.View.Accounts {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/FlexMold;component/mvvm/view/accounts/accountscreens.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/AccountsPro;component/mvvm/view/accounts/accountscreens.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\..\MVVM\View\Accounts\AccountScreens.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

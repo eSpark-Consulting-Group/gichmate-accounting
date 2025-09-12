@@ -1,0 +1,286 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+		<TargetFramework>net8.0-windows</TargetFramework>
+		<TargetFrameworkIdentifier Condition="'$(_ShortFrameworkIdentifier)'=='net'">.NETFramework</TargetFrameworkIdentifier>
+		       		<TargetFrameworkIdentifier Condition="'$(_ShortFrameworkIdentifier)'=='netstandard'">.NETStandard</TargetFrameworkIdentifier>
+
+		<OutputType>WinExe</OutputType>
+		<Nullable>enable</Nullable>
+		<UseWPF>true</UseWPF>
+		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+		<UseWindowsForms>true</UseWindowsForms>
+		<ApplicationIcon>Accountspro.ico</ApplicationIcon>
+		<NeutralLanguage>en</NeutralLanguage>
+		<StartupObject>FlexMold.App</StartupObject>
+	</PropertyGroup>
+	<ItemGroup>
+	  <Compile Remove="AshFramework\**" />
+	  <Compile Remove="AccountsUserControls\**" />
+	  <Compile Remove="Convertor\**" />
+	  <Compile Remove="Extenstions\**" />
+	  <Compile Remove="MVVM\ViewModel\Accessory\**" />
+	  <Compile Remove="MVVM\ViewModel\AccountingMain\**" />
+	  <Compile Remove="MVVM\ViewModel\Home\**" />
+	  <Compile Remove="MVVM\ViewModel\MachineTest\**" />
+	  <Compile Remove="MVVM\ViewModel\Project\**" />
+	  <Compile Remove="MVVM\ViewModel\Setting\**" />
+	  <Compile Remove="MVVM\View\Accessory\**" />
+	  <Compile Remove="MVVM\View\AccountingMain\**" />
+	  <Compile Remove="MVVM\View\Diaglog\**" />
+	  <Compile Remove="MVVM\View\MachineTest\**" />
+	  <Compile Remove="MVVM\View\Project\**" />
+	  <Compile Remove="MVVM\View\Setting\**" />
+	  <Compile Remove="MVVM\View\SplashScreen\**" />
+	  <Compile Remove="Services\**" />
+	  <Compile Remove="SubProjects\**" />
+	  <EmbeddedResource Remove="AshFramework\**" />
+	  <EmbeddedResource Remove="AccountsUserControls\**" />
+	  <EmbeddedResource Remove="Convertor\**" />
+	  <EmbeddedResource Remove="Extenstions\**" />
+	  <EmbeddedResource Remove="MVVM\ViewModel\Accessory\**" />
+	  <EmbeddedResource Remove="MVVM\ViewModel\AccountingMain\**" />
+	  <EmbeddedResource Remove="MVVM\ViewModel\Home\**" />
+	  <EmbeddedResource Remove="MVVM\ViewModel\MachineTest\**" />
+	  <EmbeddedResource Remove="MVVM\ViewModel\Project\**" />
+	  <EmbeddedResource Remove="MVVM\ViewModel\Setting\**" />
+	  <EmbeddedResource Remove="MVVM\View\Accessory\**" />
+	  <EmbeddedResource Remove="MVVM\View\AccountingMain\**" />
+	  <EmbeddedResource Remove="MVVM\View\Diaglog\**" />
+	  <EmbeddedResource Remove="MVVM\View\MachineTest\**" />
+	  <EmbeddedResource Remove="MVVM\View\Project\**" />
+	  <EmbeddedResource Remove="MVVM\View\Setting\**" />
+	  <EmbeddedResource Remove="MVVM\View\SplashScreen\**" />
+	  <EmbeddedResource Remove="Services\**" />
+	  <EmbeddedResource Remove="SubProjects\**" />
+	  <None Remove="AshFramework\**" />
+	  <None Remove="AccountsUserControls\**" />
+	  <None Remove="Convertor\**" />
+	  <None Remove="Extenstions\**" />
+	  <None Remove="MVVM\ViewModel\Accessory\**" />
+	  <None Remove="MVVM\ViewModel\AccountingMain\**" />
+	  <None Remove="MVVM\ViewModel\Home\**" />
+	  <None Remove="MVVM\ViewModel\MachineTest\**" />
+	  <None Remove="MVVM\ViewModel\Project\**" />
+	  <None Remove="MVVM\ViewModel\Setting\**" />
+	  <None Remove="MVVM\View\Accessory\**" />
+	  <None Remove="MVVM\View\AccountingMain\**" />
+	  <None Remove="MVVM\View\Diaglog\**" />
+	  <None Remove="MVVM\View\MachineTest\**" />
+	  <None Remove="MVVM\View\Project\**" />
+	  <None Remove="MVVM\View\Setting\**" />
+	  <None Remove="MVVM\View\SplashScreen\**" />
+	  <None Remove="Services\**" />
+	  <None Remove="SubProjects\**" />
+	  <Page Remove="AshFramework\**" />
+	  <Page Remove="AccountsUserControls\**" />
+	  <Page Remove="Convertor\**" />
+	  <Page Remove="Extenstions\**" />
+	  <Page Remove="MVVM\ViewModel\Accessory\**" />
+	  <Page Remove="MVVM\ViewModel\AccountingMain\**" />
+	  <Page Remove="MVVM\ViewModel\Home\**" />
+	  <Page Remove="MVVM\ViewModel\MachineTest\**" />
+	  <Page Remove="MVVM\ViewModel\Project\**" />
+	  <Page Remove="MVVM\ViewModel\Setting\**" />
+	  <Page Remove="MVVM\View\Accessory\**" />
+	  <Page Remove="MVVM\View\AccountingMain\**" />
+	  <Page Remove="MVVM\View\Diaglog\**" />
+	  <Page Remove="MVVM\View\MachineTest\**" />
+	  <Page Remove="MVVM\View\Project\**" />
+	  <Page Remove="MVVM\View\Setting\**" />
+	  <Page Remove="MVVM\View\SplashScreen\**" />
+	  <Page Remove="Services\**" />
+	  <Page Remove="SubProjects\**" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Compile Remove="AccountsLibrary\DirectReportPrint.cs" />
+	  <Compile Remove="AccountsLibrary\MasterSerchForm.cs" />
+	  <Compile Remove="AccountsLibrary\Messages.cs" />
+	  <Compile Remove="AccountsLibrary\PrintRdlc.cs" />
+	  <Compile Remove="AccountsLibrary\ProductBarcode.cs" />
+	  <Compile Remove="AccountsLibrary\ProductBarcodeEntity.cs" />
+	  <Compile Remove="AccountsLibrary\ProductBarcodeScale.cs" />
+	  <Compile Remove="MVVM\Model\AppSettings.cs" />
+	  <Compile Remove="MVVM\Model\Box.cs" />
+	  <Compile Remove="MVVM\Model\FCAModel.cs" />
+	  <Compile Remove="MVVM\Model\LaserProjector.cs" />
+	  <Compile Remove="MVVM\Model\Machine.cs" />
+	  <Compile Remove="MVVM\Model\PLCMotor.cs" />
+	  <Compile Remove="MVVM\Model\Project.cs" />
+	  <Compile Remove="MVVM\ViewModel\AccessoryViewModel.cs" />
+	  <Compile Remove="MVVM\ViewModel\FlexMoldMachine1.cs" />
+	  <Compile Remove="MVVM\ViewModel\HomeViewModel.cs" />
+	  <Compile Remove="MVVM\ViewModel\IMachineTestViewModel.cs" />
+	  <Compile Remove="MVVM\ViewModel\IProjectViewModel.cs" />
+	  <Compile Remove="MVVM\ViewModel\ISplashScreenViewModel.cs" />
+	  <Compile Remove="MVVM\ViewModel\MachineTestViewModel.cs" />
+	  <Compile Remove="MVVM\ViewModel\MainViewModel.cs" />
+	  <Compile Remove="MVVM\ViewModel\ProjectViewModel.cs" />
+	  <Compile Remove="MVVM\ViewModel\SettingViewModel.cs" />
+	  <Compile Remove="MVVM\ViewModel\SplashScreenViewModel.cs" />
+	  <Compile Remove="MVVM\ViewModel\SplashScreen\FoeViewModel.cs" />
+	  <Compile Remove="MVVM\ViewModel\SplashScreen\IFoe.cs" />
+	  <Compile Remove="MVVM\ViewModel\SplashScreen\IFoeViewModel.cs" />
+	  <Compile Remove="MVVM\ViewModel\SplashScreen\ITwinCatConfigViewModel.cs" />
+	  <Compile Remove="MVVM\ViewModel\SplashScreen\TwinCatConfigViewModel.cs" />
+	  <Compile Remove="MVVM\ViewModel\ToastViewModel.cs" />
+	  <Compile Remove="MVVM\View\AccessoryView.xaml.cs" />
+	  <Compile Remove="MVVM\View\ConnectionLostDialog.xaml.cs" />
+	  <Compile Remove="MVVM\View\MachineTestView.xaml.cs" />
+	  <Compile Remove="MVVM\View\ProjectView.xaml.cs" />
+	  <Compile Remove="MVVM\View\SettingView.xaml.cs" />
+	  <Compile Remove="Properties\AssemblyInfo.cs" />
+	  <Compile Remove="Properties\Resources.Designer.cs" />
+	  <Compile Remove="SplashMachineSlection.xaml.cs" />
+	  <Compile Remove="Utility\ITwinCathelper.cs" />
+	  <Compile Remove="Utility\MixUtil.cs" />
+	  <Compile Remove="Utility\NetworkShareAccesser.cs" />
+	  <Compile Remove="Utility\TelnetClient.cs" />
+	  <Compile Remove="Utility\TelnetHelper.cs" />
+	  <Compile Remove="Utility\TwinCathelper.cs" />
+	  <Compile Remove="Utility\TwinCathelper.Properties.cs" />
+	</ItemGroup>
+	<ItemGroup>
+	  <EmbeddedResource Remove="AccountsLibrary\MasterSerchForm.ar.resx" />
+	  <EmbeddedResource Remove="AccountsLibrary\MasterSerchForm.resx" />
+	</ItemGroup>
+	<ItemGroup>
+	  <None Remove="MVVM\Model\main.cd" />
+	  <None Remove="Properties\app.manifest" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Page Remove="MVVM\View\AccessoryView.xaml" />
+	  <Page Remove="MVVM\View\ConnectionLostDialog.xaml" />
+	  <Page Remove="MVVM\View\MachineTestView.xaml" />
+	  <Page Remove="MVVM\View\ProjectView.xaml" />
+	  <Page Remove="MVVM\View\SettingView.xaml" />
+	  <Page Remove="SplashMachineSlection.xaml" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Compile Include="SubProjects\AccountsLibraryFramework\BaseForm.cs" />
+	  <Compile Include="SubProjects\AccountsLibraryFramework\BaseFormThree.cs" />
+	  <Compile Include="SubProjects\AccountsLibraryFramework\BaseFormTwo.cs" />
+	  <Compile Include="SubProjects\AccountsLibraryFramework\GlobalFunctions.cs" />
+	  <Compile Include="SubProjects\AccountsLibraryFramework\GoogleTrans.cs" />
+	  <Compile Include="SubProjects\AccountsLibraryFramework\MasterForm.cs" />
+	  <Compile Include="SubProjects\AccountsLibraryFramework\MasterGradientPanel.cs" />
+	  <Compile Include="SubProjects\AccountsLibraryFramework\Program.cs" />
+	  <Compile Include="SubProjects\AccountsLibraryFramework\StringExtension.cs" />
+	  <Compile Include="SubProjects\AccountsUserControls\AddClickEventHandler.cs" />
+	  <Compile Include="SubProjects\AccountsUserControls\AshButton.cs" />
+	  <Compile Include="SubProjects\AccountsUserControls\AshComboBox.cs" />
+	  <Compile Include="SubProjects\AccountsUserControls\AshDataGridview.cs" />
+	  <Compile Include="SubProjects\AccountsUserControls\AshDateTimePicker.cs" />
+	  <Compile Include="SubProjects\AccountsUserControls\AshGradientPanel.cs" />
+	  <Compile Include="SubProjects\AccountsUserControls\AshNumericLabel.cs" />
+	  <Compile Include="SubProjects\AccountsUserControls\AshPagedPanel.cs" />
+	  <Compile Include="SubProjects\AccountsUserControls\AshTBox.cs" />
+	  <Compile Include="SubProjects\AccountsUserControls\AshTextBoxNormal.cs" />
+	  <Compile Include="SubProjects\AccountsUserControls\AshUpDown.cs" />
+	  <Compile Include="SubProjects\AccountsUserControls\CalendarCell.cs" />
+	  <Compile Include="SubProjects\AccountsUserControls\CalendarColumn.cs" />
+	  <Compile Include="SubProjects\AccountsUserControls\CalendarEditingControl.cs" />
+	  <Compile Include="SubProjects\AccountsUserControls\DashboardPOSKeyboard.cs" />
+	  <Compile Include="SubProjects\AccountsUserControls\DataGridViewDateTimeCell.cs" />
+	  <Compile Include="SubProjects\AccountsUserControls\DataGridViewDateTimeColumn.cs" />
+	  <Compile Include="SubProjects\AccountsUserControls\ExButton.cs" />
+	  <Compile Include="SubProjects\AccountsUserControls\NumberClickEventHandler.cs" />
+	  <Compile Include="SubProjects\AccountsUserControls\NumKeyBoardLogin.cs" />
+	  <Compile Include="SubProjects\AccountsUserControls\NumKeyBoardPOS.cs" />
+	  <Compile Include="SubProjects\AccountsUserControls\POSButton.cs" />
+	  <Compile Include="SubProjects\AccountsUserControls\ProgressBar.cs" />
+	  <Compile Include="SubProjects\AccountsUserControls\QtyClickEventHandler.cs" />
+	  <Compile Include="SubProjects\AccountsUserControls\RateClickEventHandler.cs" />
+	  <Compile Include="SubProjects\AccountsUserControls\RestaurantKeyboard.cs" />
+	  <Compile Include="SubProjects\AccountsUserControls\StarClickEventHandler.cs" />
+	  <Compile Include="SubProjects\AccountsUserControls\SubClickEventHandler.cs" />
+	  <Compile Include="SubProjects\AccountsUserControls\TexboxEx.cs" />
+	</ItemGroup>
+	<ItemGroup>
+		<Resource Include="Nlog.config">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Resource>
+	</ItemGroup>
+	<ItemGroup>
+		<None Update="Appdata\AppSettings_Default.xml">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Nlog.config">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="NLog.xsd">
+			<SubType>Designer</SubType>
+		</None>
+		<None Update="Properties\Settings.settings">
+		  <Generator>SettingsSingleFileGenerator</Generator>
+		  <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+		</None>
+	</ItemGroup>
+	<ItemGroup>
+		<COMReference Include="TCatSysManagerLib">
+			<WrapperTool>tlbimp</WrapperTool>
+			<VersionMinor>3</VersionMinor>
+			<VersionMajor>3</VersionMajor>
+			<Guid>3c49d6c3-93dc-11d0-b162-00a0248c244b</Guid>
+			<Lcid>0</Lcid>
+			<Isolated>false</Isolated>
+			<EmbedInteropTypes>true</EmbedInteropTypes>
+		</COMReference>
+	</ItemGroup>
+	<ItemGroup>
+	  <Content Include="Accountspro.ico" />
+	</ItemGroup>
+	<ItemGroup>
+	  <EmbeddedResource Include="SubProjects\AccountsLibraryFramework\BaseForm.resx" />
+	  <EmbeddedResource Include="SubProjects\AccountsLibraryFramework\MasterForm.resx" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Beckhoff.TwinCAT.Ads" Version="6.1.154" />
+		<PackageReference Include="DataGridExtensions" Version="2.5.15" />
+		<PackageReference Include="EPPlus" Version="8.1.0" />
+		<PackageReference Include="ExcelPackage" Version="1.0.0" />
+		<PackageReference Include="Humanizer" Version="2.14.1" />
+		<PackageReference Include="MahApps.Metro" Version="2.4.10" />
+		<PackageReference Include="MahApps.Metro.IconPacks" Version="4.11.0" />
+		<PackageReference Include="MaterialDesignThemes.MahApps" Version="0.3.0" />
+		<PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+		<PackageReference Include="Microsoft.Data.SqlClient" Version="6.1.0" />
+		<PackageReference Include="Microsoft.Extensions.Hosting" Version="7.0.1" />
+		<PackageReference Include="Microsoft.Office.Interop.Excel" Version="15.0.4795.1001" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+		<PackageReference Include="NLog.Schema" Version="5.2.2" />
+		<PackageReference Include="OfficeOpenXml.Core.ExcelPackage" Version="1.0.0" />
+		<PackageReference Include="PdfSharp" Version="6.2.1" />
+		<PackageReference Include="ServiceStack.Text" Version="8.8.0" />
+		<PackageReference Include="Spire.PDF" Version="11.8.7" />
+		<PackageReference Include="StructPacker" Version="1.0.8" />
+		<PackageReference Include="Sylvan.Data.Csv" Version="1.3.2" />
+		<PackageReference Include="Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers" Version="0.4.421302">
+			<PrivateAssets>all</PrivateAssets>
+		</PackageReference>
+		<PackageReference Include="System.Data.SqlClient" Version="4.9.0" />
+		<PackageReference Include="System.Drawing.Common" Version="9.0.8" />
+		<PackageReference Include="System.IO.Ports" Version="9.0.7" />
+		<PackageReference Include="System.Management" Version="9.0.8" />
+		<PackageReference Include="System.Net.Http.Json" Version="9.0.8" />
+		<PackageReference Include="ToastNotifications.Messages" Version="2.5.1" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Reference Include="Microsoft.ReportViewer.WinForms">
+	    <HintPath>bin\Debug\refs\Microsoft.ReportViewer.WinForms.dll</HintPath>
+	  </Reference>
+	  <Reference Include="NLog">
+	    <HintPath>bin\Debug\refs\NLog.dll</HintPath>
+	  </Reference>
+	  <Reference Include="NlogViewer">
+	    <HintPath>bin\Debug\refs\NlogViewer.dll</HintPath>
+	  </Reference>
+	</ItemGroup>
+	<ItemGroup>
+	  <Compile Update="Properties\Settings.Designer.cs">
+	    <DesignTimeSharedInput>True</DesignTimeSharedInput>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>Settings.settings</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+</Project>

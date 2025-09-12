@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AccountsLibrary.Properties;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -11,7 +12,6 @@ namespace FlexMold.MVVM.View.Master
 {
     public partial class DoubleJournalEntries : Window
     {
-        private string connectionString = "Server=DESKTOP-E09TG4T;Database=PSVAT5;Trusted_Connection=True;TrustServerCertificate=True;";
         private int? editingVchrId = null; 
 
         public DoubleJournalEntries()
@@ -45,7 +45,7 @@ namespace FlexMold.MVVM.View.Master
         private void LoadAccounts()
         {
             var accounts = new List<Account>();
-            using (var con = new SqlConnection(connectionString))
+            using (var con = new SqlConnection(Settings.Default.strConnetionString))
             {
                 con.Open();
                 var cmd = new SqlCommand("SELECT AccountId, AccountName FROM Account", con);
@@ -73,7 +73,7 @@ namespace FlexMold.MVVM.View.Master
         private void LoadVouchers()
         {
             var entries = new List<JournalEntry>();
-            using (var con = new SqlConnection(connectionString))
+            using (var con = new SqlConnection(Settings.Default.strConnetionString))
             {
                 con.Open();
                 var cmd = new SqlCommand(@"SELECT VchrTranId, VchrNo, VchrDate, 
@@ -104,7 +104,7 @@ namespace FlexMold.MVVM.View.Master
 
         private string GetAccountName(int accountId)
         {
-            using (var con = new SqlConnection(connectionString))
+            using (var con = new SqlConnection(Settings.Default.strConnetionString))
             {
                 con.Open();
                 var cmd = new SqlCommand("SELECT AccountName FROM Account WHERE AccountId=@id", con);
@@ -131,7 +131,7 @@ namespace FlexMold.MVVM.View.Master
             double amount = double.TryParse(AmountBox.Text, out double a) ? a : 0;
             string narration = NarrationBox.Text;
 
-            using (var con = new SqlConnection(connectionString))
+            using (var con = new SqlConnection(Settings.Default.strConnetionString))
             {
                 con.Open();
                 SqlCommand cmd;
@@ -193,7 +193,7 @@ namespace FlexMold.MVVM.View.Master
             {
                 if (MessageBox.Show("Are you sure to delete?", "Confirm", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
                 {
-                    using (var con = new SqlConnection(connectionString))
+                    using (var con = new SqlConnection(Settings.Default.strConnetionString))
                     {
                         con.Open();
                         var cmd = new SqlCommand("DELETE FROM VchrTranLog WHERE VchrTranId=@id", con);
@@ -230,7 +230,7 @@ namespace FlexMold.MVVM.View.Master
         #region Helpers
         private int GetAccountIdByName(string name)
         {
-            using (var con = new SqlConnection(connectionString))
+            using (var con = new SqlConnection(Settings.Default.strConnetionString))
             {
                 con.Open();
                 var cmd = new SqlCommand("SELECT AccountId FROM Account WHERE AccountName=@name", con);

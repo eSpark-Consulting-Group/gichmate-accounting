@@ -18,5 +18,6 @@ namespace FlexMold.MVVM.ViewModel
         public RelayCommand PostDatedChequePaymentCommand { get; set; }
         public RelayCommand PostDatedChequeReceiptCommand { get; set; }
         public RelayCommand ReceiptCommand { get; set; }
+        public RelayCommand UploadTenantsCommand { get; set; }  
     }
 }

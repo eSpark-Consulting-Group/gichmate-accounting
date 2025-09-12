@@ -3,16 +3,12 @@ using System.Data;
 using Microsoft.Data.SqlClient;
 using System.Windows;
 using System.Windows.Controls;
+using AccountsLibrary.Properties;
 
 namespace FlexMold.MVVM.View.Master
 {
     public partial class SearchExpenseAccount : Window
-    {
-        private readonly string connectionString =
-            System.Configuration.ConfigurationManager
-                .ConnectionStrings["PSVAT5"]
-                .ConnectionString;
-
+    {        
         public SearchExpenseAccount()
         {
             InitializeComponent();
@@ -27,7 +23,7 @@ namespace FlexMold.MVVM.View.Master
 
         private void LoadExpenseAccounts()
         {
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            using (SqlConnection conn = new SqlConnection(Settings.Default.strConnetionString))
             using (SqlCommand cmd = new SqlCommand(
                 @"SELECT Account.AccountId AS ID,
                  Account.AccountName AS AccountName,
@@ -49,7 +45,7 @@ namespace FlexMold.MVVM.View.Master
         {
             string searchTerm = SearchTextBox.Text.Trim();
 
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            using (SqlConnection conn = new SqlConnection(Settings.Default.strConnetionString))
             using (SqlCommand cmd = new SqlCommand(
                  @"SELECT Account.AccountId AS ID,
                   Account.AccountName AS AccountName,
@@ -80,7 +76,7 @@ namespace FlexMold.MVVM.View.Master
                 var result = MessageBox.Show("Are you sure you want to delete this record?", "Confirm Delete", MessageBoxButton.YesNo, MessageBoxImage.Warning);
                 if (result == MessageBoxResult.Yes)
                 {
-                    using (SqlConnection conn = new SqlConnection(connectionString))
+                    using (SqlConnection conn = new SqlConnection(Settings.Default.strConnetionString))
                     using (SqlCommand cmd = new SqlCommand("DELETE FROM Account WHERE AccountId = @id", conn))
                     {
                         cmd.Parameters.AddWithValue("@id", selectedId);

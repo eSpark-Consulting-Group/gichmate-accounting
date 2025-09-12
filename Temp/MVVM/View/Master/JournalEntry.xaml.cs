@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AccountsLibrary.Properties;
+using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Globalization;
@@ -11,8 +12,6 @@ namespace FlexMold.MVVM.View.Master
 {
     public partial class JournalEntry : Window
     {
-        // Direct connection string
-        private string connectionString = @"Data Source=DESKTOP-E09TG4T;Initial Catalog=PSVAT5;Integrated Security=True; TrustServerCertificate=True;";
 
         public JournalEntry()
         {
@@ -26,7 +25,7 @@ namespace FlexMold.MVVM.View.Master
         {
             try
             {
-                using (SqlConnection con = new SqlConnection(connectionString))
+                using (SqlConnection con = new SqlConnection(Settings.Default.strConnetionString))
                 {
                     con.Open();
                     string query = "SELECT AccountId, AccountName FROM Account ORDER BY AccountName";
@@ -49,7 +48,7 @@ namespace FlexMold.MVVM.View.Master
         {
             try
             {
-                using (SqlConnection con = new SqlConnection(connectionString))
+                using (SqlConnection con = new SqlConnection(Settings.Default.strConnetionString))
                 {
                     con.Open();
                     string query = "SELECT ISNULL(MAX(VchrNo), 0) + 1 FROM VchrTranLog WHERE VchrType='Journal Voucher'";
@@ -99,7 +98,7 @@ namespace FlexMold.MVVM.View.Master
 
             try
             {
-                using (SqlConnection con = new SqlConnection(connectionString))
+                using (SqlConnection con = new SqlConnection(Settings.Default.strConnetionString))
                 {
                     con.Open();
 

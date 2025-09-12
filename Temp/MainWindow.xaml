@@ -16,8 +16,9 @@
     Height="1050"
     WindowStyle="None"
     Closing="MetroWindow_Closing"    
-    Icon="flexmold.ico"    
+    Icon="Accountspro.ico"    
     WindowStartupLocation="CenterScreen"
+    WindowState="Maximized"
     mc:Ignorable="d">
     <Window.Resources>
         <ResourceDictionary>
@@ -124,7 +125,7 @@
                         <GradientStop Color="White" Offset="1"/>
                     </LinearGradientBrush>
                 </mah:MetroAnimatedSingleRowTabControl.Background>
-                <TabItem Foreground="White" Header="AccountingMain" BorderBrush="#CCFFFFFF">
+                <TabItem Foreground="White" BorderBrush="#CCFFFFFF">
                     <TabItem.Background>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                             <GradientStop Color="#FFEE4540"/>

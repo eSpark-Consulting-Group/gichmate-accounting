@@ -3,16 +3,12 @@ using System.Data;
 using Microsoft.Data.SqlClient;
 using System.Windows;
 using System.Windows.Controls;
+using AccountsLibrary.Properties;
 
 namespace FlexMold.MVVM.View.Master
 {
     public partial class SearchLedger : Window
     {
-        private readonly string connectionString =
-            System.Configuration.ConfigurationManager
-                .ConnectionStrings["PSVAT5"]
-                .ConnectionString;
-
         public DataRowView SelectedAccountRow { get; private set; }
 
         public SearchLedger()
@@ -29,7 +25,7 @@ namespace FlexMold.MVVM.View.Master
 
         private void LoadLedgerAccounts()
         {
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            using (SqlConnection conn = new SqlConnection(Settings.Default.strConnetionString))
             using (SqlCommand cmd = new SqlCommand(
                 @"SELECT Account.AccountId AS ID,
                          Account.AccountName AS AccountName,
@@ -50,7 +46,7 @@ namespace FlexMold.MVVM.View.Master
         {
             string searchTerm = SearchTextBox.Text.Trim();
 
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            using (SqlConnection conn = new SqlConnection(Settings.Default.strConnetionString))
             using (SqlCommand cmd = new SqlCommand(
                 @"SELECT Account.AccountId AS ID,
                          Account.AccountName AS AccountName,
@@ -109,7 +105,7 @@ namespace FlexMold.MVVM.View.Master
                 {
                     try
                     {
-                        using (SqlConnection conn = new SqlConnection(connectionString))
+                        using (SqlConnection conn = new SqlConnection(Settings.Default.strConnetionString))
                         {
                             conn.Open();
                             using (SqlCommand cmd = new SqlCommand("DELETE FROM Account WHERE AccountId = @AccountId", conn))

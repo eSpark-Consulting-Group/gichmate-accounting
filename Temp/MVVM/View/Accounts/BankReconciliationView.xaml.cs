@@ -1,4 +1,5 @@
-﻿using Microsoft.Data.SqlClient;
+﻿using AccountsLibrary.Properties;
+using Microsoft.Data.SqlClient;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -10,17 +11,14 @@ using System.Windows.Controls;
 namespace FlexMold.MVVM.View.Accounts
 {
     public partial class BankReconciliationView : UserControl
-    {
-        private readonly string connectionString;
+    {       
         private DataTable _gridTable;
 
         public BankReconciliationView()
         {
-            InitializeComponent();
+            InitializeComponent();          
 
-            connectionString = ConfigurationManager.ConnectionStrings["PSVAT5"]?.ConnectionString;
-
-            if (string.IsNullOrWhiteSpace(connectionString))
+            if (string.IsNullOrWhiteSpace(Settings.Default.strConnetionString))
             {
                 MessageBox.Show("Connection string 'PSVAT5' not found. Check App.config <connectionStrings>.");
                 return;
@@ -34,12 +32,12 @@ namespace FlexMold.MVVM.View.Accounts
 
         private void btnLoad_Click(object sender, RoutedEventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(connectionString))
+            if (string.IsNullOrWhiteSpace(Settings.Default.strConnetionString))
                 return;
 
             try
             {
-                using (var con = new SqlConnection(connectionString))
+                using (var con = new SqlConnection(Settings.Default.strConnetionString))
                 {
                     con.Open();
 
@@ -129,7 +127,7 @@ namespace FlexMold.MVVM.View.Accounts
             int totalUpdated = 0;
             var failedInvoices = new List<string>();
 
-            using (var con = new SqlConnection(connectionString))
+            using (var con = new SqlConnection(Settings.Default.strConnetionString))
             {
                 con.Open();
                 using (var tx = con.BeginTransaction())

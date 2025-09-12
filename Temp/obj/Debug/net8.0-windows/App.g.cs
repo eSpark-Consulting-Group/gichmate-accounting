@@ -64,7 +64,7 @@ namespace FlexMold {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/FlexMold;component/app.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/AccountsPro;component/app.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\App.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

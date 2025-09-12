@@ -3,12 +3,12 @@ using System.Data;
 using Microsoft.Data.SqlClient;
 using System.Windows;
 using System.Windows.Controls;
+using AccountsLibrary.Properties;
 
 namespace FlexMold.MVVM.View.Accounts
 {
     public partial class DebitNoteView : UserControl
     {
-        private string connectionString = "Server=DESKTOP-E09TG4T;Database=PSVAT5;Trusted_Connection=True;TrustServerCertificate=True;";
         private int? _selectedVchrTranId = null;
 
         public DebitNoteView()
@@ -22,7 +22,7 @@ namespace FlexMold.MVVM.View.Accounts
         {
             try
             {
-                using (SqlConnection con = new SqlConnection(connectionString))
+                using (SqlConnection con = new SqlConnection(Settings.Default.strConnetionString))
                 {
                     con.Open();
 
@@ -52,7 +52,7 @@ namespace FlexMold.MVVM.View.Accounts
         {
             try
             {
-                using (SqlConnection con = new SqlConnection(connectionString))
+                using (SqlConnection con = new SqlConnection(Settings.Default.strConnetionString))
                 {
                     con.Open();
                     DataTable dt = new DataTable();
@@ -101,7 +101,7 @@ namespace FlexMold.MVVM.View.Accounts
 
             try
             {
-                using (SqlConnection con = new SqlConnection(connectionString))
+                using (SqlConnection con = new SqlConnection(Settings.Default.strConnetionString))
                 {
                     con.Open();
 
@@ -155,7 +155,7 @@ namespace FlexMold.MVVM.View.Accounts
 
             try
             {
-                using (SqlConnection con = new SqlConnection(connectionString))
+                using (SqlConnection con = new SqlConnection(Settings.Default.strConnetionString))
                 {
                     con.Open();
 
@@ -208,7 +208,7 @@ namespace FlexMold.MVVM.View.Accounts
 
             try
             {
-                using (SqlConnection con = new SqlConnection(connectionString))
+                using (SqlConnection con = new SqlConnection(Settings.Default.strConnetionString))
                 {
                     con.Open();
 

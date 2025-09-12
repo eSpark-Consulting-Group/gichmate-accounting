@@ -1,4 +1,5 @@
-﻿using Microsoft.Data.SqlClient;
+﻿using AccountsLibrary.Properties;
+using Microsoft.Data.SqlClient;
 using System;
 using System.Data;
 using System.Linq;
@@ -11,8 +12,6 @@ namespace FlexMold.MVVM.View.Master
     public partial class Bank : Window
     {
         private int? currentAccountId = null;
-        private string connectionString = "Server=DESKTOP-E09TG4T;Database=PSVAT5;Trusted_Connection=True; TrustServerCertificate=True;";
-
         public Bank()
         {
             InitializeComponent();
@@ -30,7 +29,7 @@ namespace FlexMold.MVVM.View.Master
                 AccountGroupComboBox.ItemsSource = null;
                 AccountGroupComboBox.Items.Clear();
 
-                using (SqlConnection conn = new SqlConnection(connectionString))
+                using (SqlConnection conn = new SqlConnection(Settings.Default.strConnetionString))
                 {
                     conn.Open();
                     string query = "SELECT AGroupId, GroupName FROM AccountGroup";
@@ -60,7 +59,7 @@ namespace FlexMold.MVVM.View.Master
 
             try
             {
-                using (SqlConnection conn = new SqlConnection(connectionString))
+                using (SqlConnection conn = new SqlConnection(Settings.Default.strConnetionString))
                 {
                     conn.Open();
                     SqlCommand cmd;
@@ -192,7 +191,7 @@ namespace FlexMold.MVVM.View.Master
         {
             try
             {
-                using (SqlConnection conn = new SqlConnection(connectionString))
+                using (SqlConnection conn = new SqlConnection(Settings.Default.strConnetionString))
                 {
                     conn.Open();
                     string query = "SELECT * FROM Account WHERE AccountId = @AccountId";
