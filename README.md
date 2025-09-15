@@ -1,4 +1,4 @@
-Accounting Application Gichmate.
+AccountsPRO Release 3.1
 
 Start-Up Page Visuals
 
