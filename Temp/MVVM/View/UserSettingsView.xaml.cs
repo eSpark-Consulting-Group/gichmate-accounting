@@ -33,5 +33,6 @@ namespace FlexMold.MVVM.View
             public bool Edit { get; set; }
             public bool Delete { get; set; }
         }
+              
     }
 }

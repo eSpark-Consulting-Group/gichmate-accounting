@@ -146,6 +146,7 @@
 	</ItemGroup>
 	<ItemGroup>
 	  <None Remove="MVVM\Model\main.cd" />
+	  <None Remove="MVVM\View\dashboard.png" />
 	  <None Remove="Properties\app.manifest" />
 	</ItemGroup>
 	<ItemGroup>
@@ -197,6 +198,7 @@
 	  <Compile Include="SubProjects\AccountsUserControls\TexboxEx.cs" />
 	</ItemGroup>
 	<ItemGroup>
+		<Resource Include="MVVM\View\dashboard.png" />
 		<Resource Include="Nlog.config">
 		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</Resource>

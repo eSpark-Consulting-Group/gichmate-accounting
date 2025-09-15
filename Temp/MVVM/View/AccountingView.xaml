@@ -58,8 +58,8 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="7"/>
                 <ColumnDefinition Width="111"/>
-                <ColumnDefinition Width="81"/>
-                <ColumnDefinition Width="128"/>
+                <ColumnDefinition Width="190"/>
+                <ColumnDefinition Width="120"/>
                 <ColumnDefinition Width="100"/>
                 <ColumnDefinition Width="160"/>
                 <ColumnDefinition Width="100"/>
@@ -90,17 +90,96 @@
                 Command="{Binding UploadTenantsCommand}">
             </Button>
 
-            <!--<Button Content="  MENU  "
-                 Foreground="White"
-                 Background="Transparent"
-                 BorderThickness="0"
-                 Grid.Column="5"                 
-                 VerticalAlignment="Center"
-                 HorizontalAlignment="Center"
-                 FontSize="17"
-                 Style="{StaticResource Animation}"
-                 Height="38" Width="82">
-            </Button>-->
+
+
+            <Button x:Name="TopBarMasterButton"
+                    Content="  LEDGER | ACCOUNTS  "
+                    Foreground="White"
+                    Background="Transparent"                    
+                    Grid.Column="2"
+                    HorizontalAlignment="Center"
+                    FontSize="17"   
+                    Style="{StaticResource Animation}"
+                    Width="190" Click="TopBarMasterButton_Click" Height="38" VerticalAlignment="Center">
+
+                <Button.ContextMenu>
+                    <ContextMenu x:Name="MasterContextMenu" >
+                        <MenuItem Header="Ledger and Account Groups" IsEnabled="False"/>
+                        <Separator/>
+                        <MenuItem Header="Accounts Group"  Click="MasterGroupButton_click"/>
+                        <MenuItem Header="Accounts Ledger" Click="MasterLedgerButton_click"/>
+                        <MenuItem Header="Bank"            Click="MasterBankButton_click"/>
+                        <MenuItem Header="Balance Sheet"   Click="MasterBalanceSheetButton_click"/>
+                        <MenuItem Header="Double Journal Entries" Click="MasterDoubleJournalEntries_Click"/>
+                        <MenuItem Header="Expense Account" Click="MasterExpenseButton_click"/>
+                        <MenuItem Header="Transaction Without Inventory" Click="MasterTransactionButton_Click"/>
+                        <MenuItem Header="Upload Tenants" Click="MasterUploadTenantsButton_Click"/>
+                        <MenuItem Header="Upload Bank Receipts" Click="MasterUploadBank_Click"/>
+                        <MenuItem Header="Single Journal Entry" Click="MasterJournalEntryButton_Click"/>
+
+                    </ContextMenu>
+                </Button.ContextMenu>
+            </Button>
+
+
+            <Button x:Name="TopBarAccountsButton"
+        Content="  ACCOUNTS  "
+        Foreground="White"
+        Background="Transparent"                    
+        Grid.Column="3"                    
+        HorizontalAlignment="Center"
+        VerticalAlignment="Center"
+        FontSize="17"           
+        Style="{StaticResource Animation}"
+        Click="TopBarAccountsButton_Click"
+        
+        Width="128" Margin="0,0,0,1">
+                <Button.ContextMenu>
+                    <ContextMenu x:Name="AccountsContextMenu" Margin="0,10,20,20">
+                        <MenuItem Header="Account Screens" IsEnabled="False"/>
+                        <Separator/>
+
+                        <MenuItem Header="Default Account Screen"
+             Command="{Binding DefaultAccountScreenCommand}"/>
+
+                        <MenuItem Header="Bank Payment"
+             Command="{Binding BankPaymentCommand}"/>
+
+                        <MenuItem Header="Bank Receipt"
+             Command="{Binding BankReceiptCommand}"/>
+
+                        <MenuItem Header="Bank Reconciliation"
+             Command="{Binding BankReconciliationCommand}"/>
+
+                        <MenuItem Header="Cash Payment"
+             Command="{Binding CashPaymentCommand}"/>
+
+                        <MenuItem Header="Cash Receipt"
+             Command="{Binding CashReceiptCommand}"/>
+
+                        <MenuItem Header="Credit Note"
+             Command="{Binding CreditNoteCommand}"/>
+
+                        <MenuItem Header="Debit Note"
+             Command="{Binding DebitNoteCommand}"/>
+
+                        <MenuItem Header="Payment And Receipt"
+             Command="{Binding PaymentAndReceiptCommand}"/>
+
+                        <MenuItem Header="Post Dated Cheque Payment"
+             Command="{Binding PostDatedChequePaymentCommand}"/>
+
+                        <MenuItem Header="Post Dated Cheque Receipt"
+             Command="{Binding PostDatedChequeReceiptCommand}"/>
+
+                        <MenuItem Header="Receipt"
+            Command="{Binding ReceiptCommand}"/>
+                    </ContextMenu>
+                </Button.ContextMenu>
+            </Button>
+
+
+
 
 
 
@@ -110,10 +189,11 @@
                     Background="Transparent"                    
                     Grid.Column="4"
                     HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
                     FontSize="17"         
                     Style="{StaticResource Animation}"
                     Width="110" 
-                    Click="TopBarReportsButton_Click">
+                    Click="TopBarReportsButton_Click" Margin="0,0,0,1">
 
                 <Button.ContextMenu>
                     <ContextMenu x:Name="ReportsContextMenu" >
@@ -143,92 +223,21 @@
             </Button>
 
 
-            <Button x:Name="TopBarAccountsButton"
-                    Content="  ACCOUNTS  "
-                    Foreground="White"
-                    Background="Transparent"                    
-                    Grid.Column="3"                    
-                    HorizontalAlignment="Center"
-                    FontSize="17"           
-                    Style="{StaticResource Animation}"
-                    Click="TopBarAccountsButton_Click"
-                    
-                    Width="128" Margin="0,2,0,1">
-                <Button.ContextMenu>
-                    <ContextMenu x:Name="AccountsContextMenu" Margin="0,10,20,20">
-                        <MenuItem Header="Account Screens" IsEnabled="False"/>
-                        <Separator/>
 
-                        <MenuItem Header="Default Account Screen"
-                         Command="{Binding DefaultAccountScreenCommand}"/>
+            <!--<Button Content="  MENU  "
+                 Foreground="White"
+                 Background="Transparent"
+                 BorderThickness="0"
+                 Grid.Column="5"                 
+                 VerticalAlignment="Center"
+                 HorizontalAlignment="Center"
+                 FontSize="17"
+                 Style="{StaticResource Animation}"
+                 Height="38" Width="82">
+            </Button>-->
 
-                        <MenuItem Header="Bank Payment"
-                         Command="{Binding BankPaymentCommand}"/>
-
-                        <MenuItem Header="Bank Receipt"
-                         Command="{Binding BankReceiptCommand}"/>
-
-                        <MenuItem Header="Bank Reconciliation"
-                         Command="{Binding BankReconciliationCommand}"/>
-
-                        <MenuItem Header="Cash Payment"
-                         Command="{Binding CashPaymentCommand}"/>
-
-                        <MenuItem Header="Cash Receipt"
-                         Command="{Binding CashReceiptCommand}"/>
-
-                        <MenuItem Header="Credit Note"
-                         Command="{Binding CreditNoteCommand}"/>
-
-                        <MenuItem Header="Debit Note"
-                         Command="{Binding DebitNoteCommand}"/>
-
-                        <MenuItem Header="Payment And Receipt"
-                         Command="{Binding PaymentAndReceiptCommand}"/>
-
-                        <MenuItem Header="Post Dated Cheque Payment"
-                         Command="{Binding PostDatedChequePaymentCommand}"/>
-
-                        <MenuItem Header="Post Dated Cheque Receipt"
-                         Command="{Binding PostDatedChequeReceiptCommand}"/>
-
-                        <MenuItem Header="Receipt"
-                        Command="{Binding ReceiptCommand}"/>
-                    </ContextMenu>
-                </Button.ContextMenu>
-            </Button>
-
-
-            <Button x:Name="TopBarMasterButton"
-                    Content="  MASTER  "
-                    Foreground="White"
-                    Background="Transparent"                    
-                    Grid.Column="2"
-                    HorizontalAlignment="Center"
-                    FontSize="17"   
-                    Style="{StaticResource Animation}"
-                    Width="110" Click="TopBarMasterButton_Click" Height="38" VerticalAlignment="Center">
-
-                <Button.ContextMenu>
-                    <ContextMenu x:Name="MasterContextMenu" >
-                        <MenuItem Header="Ledger and Account Groups" IsEnabled="False"/>
-                        <Separator/>
-                        <MenuItem Header="Accounts Group"  Click="MasterGroupButton_click"/>
-                        <MenuItem Header="Accounts Ledger" Click="MasterLedgerButton_click"/>
-                        <MenuItem Header="Bank"            Click="MasterBankButton_click"/>
-                        <MenuItem Header="Balance Sheet"   Click="MasterBalanceSheetButton_click"/>
-                        <MenuItem Header="Double Journal Entries" Click="MasterDoubleJournalEntries_Click"/>
-                        <MenuItem Header="Expense Account" Click="MasterExpenseButton_click"/>
-                        <MenuItem Header="Transaction Without Inventory" Click="MasterTransactionButton_Click"/>
-                        <MenuItem Header="Upload Tenants" Click="MasterUploadTenantsButton_Click"/>
-                        <MenuItem Header="Upload Bank Receipts" Click="MasterUploadBank_Click"/>
-                        <MenuItem Header="Single Journal Entry" Click="MasterJournalEntryButton_Click"/>
-
-                    </ContextMenu>
-                </Button.ContextMenu>
-            </Button>
-
-
+            
+            
 
             <!--<Button Content="  SEARCH  "
                     Foreground="White"
@@ -248,7 +257,7 @@
                     Grid.Column="5"
                     VerticalAlignment="Center"
                     FontSize="17"                   
-                    Width="NaN" Height="34" Click="Button_Click" 
+                    Width="NaN" Height="38" Click="Button_Click" 
                     Margin="9,0,3,0" 
                     Style="{StaticResource Animation}">
             </Button>
@@ -264,15 +273,6 @@
                     FontSize="15" 
                     Click="Button_Click_2"
                     >
-
-                <Button.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </Button.RenderTransform>
             </Button>
 
             <Button Content="  🔔  " Grid.Column="14" 
@@ -283,15 +283,6 @@
                     BorderThickness="0" 
                     FontSize="15" 
                     >
-
-                <Button.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </Button.RenderTransform>
             </Button>
             <Button Content="  ☀  " 
                     Grid.Column="15" 
@@ -302,14 +293,6 @@
                     BorderThickness="0" 
                     FontSize="15" 
                     >
-                <Button.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </Button.RenderTransform>
             </Button>
             <Button Content="  👤  " 
                     Grid.Column="16" 
@@ -320,33 +303,21 @@
                     BorderThickness="0" 
                     FontSize="15" 
                     Click="Button_Click_1">
-
-                <Button.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </Button.RenderTransform>
             </Button>
 
         </Grid>
 
-        <!-- Sidebar -->
+        
         <Grid x:Name="SidebarPanel" Width="94"
               Background="{DynamicResource SidebarBrush}"
               Margin="0,30,0,0"
               HorizontalAlignment="Left" RenderTransformOrigin="1.367,0.57">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="41*"/>
-                <ColumnDefinition Width="6*"/>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="149*"/>
-                <RowDefinition Height="286*"/>
-            </Grid.RowDefinitions>
-            <StackPanel Margin="10,10,10,0" VerticalAlignment="Top" Grid.RowSpan="2" Grid.ColumnSpan="2">
+
+        
+            <StackPanel Margin="10,10,10,0"
+                        VerticalAlignment="Top"
+                        Grid.RowSpan="2" 
+                        Grid.ColumnSpan="2">
               
                 <Button Content="☰" 
                         Foreground="White"
@@ -361,13 +332,23 @@
                         Height="50" 
                         Foreground="White"
                         Style="{StaticResource Animation}">
+                    
+                    
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="🏠" FontSize="18" Margin="10,0"/>
-                        <TextBlock x:Name="lblButton1" Text="Home"
-                                   FontSize="16" Foreground="White"
-                                   Margin="10,0" Visibility="Collapsed"/>
+                        
+                        <TextBlock Text="🏠" 
+                                   FontSize="18"
+                                   Margin="10,0"/>
+                        
+                        <TextBlock x:Name="lblButton1" 
+                                   Text="Home"
+                                   FontSize="16" 
+                                   Foreground="White"
+                                   Margin="10,0" 
+                                   Visibility="Collapsed"/>
                     </StackPanel>
                 </Button>
+                
                 
                 <Button Background="Transparent"
                         BorderThickness="0" 
@@ -375,10 +356,18 @@
                         Style="{StaticResource Animation}">
                    
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="📁" FontSize="18" Margin="10,0" Foreground="White"/>
-                        <TextBlock x:Name="lblButton2" Text="Files"
-                                   FontSize="16" Foreground="White"
-                                   Margin="10,0" Visibility="Collapsed"/>
+                       
+                        <TextBlock Text="📁"
+                                   FontSize="18"
+                                   Margin="10,0" 
+                                   Foreground="White"/>
+                        
+                        <TextBlock x:Name="lblButton2" 
+                                   Text="Files"
+                                   FontSize="16"
+                                   Foreground="White"
+                                   Margin="10,0"
+                                   Visibility="Collapsed"/>
                     </StackPanel>
                 </Button>
                 
@@ -388,10 +377,18 @@
                         Style="{StaticResource Animation}">
                     
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="📊" FontSize="18" Margin="10,0" Foreground="White"/>
-                        <TextBlock x:Name="lblButton3" Text="Reports"
-                                   FontSize="16" Foreground="White"
-                                   Margin="10,0" Visibility="Collapsed"/>
+                       
+                        <TextBlock Text="📊" 
+                                   FontSize="18" 
+                                   Margin="10,0" 
+                                   Foreground="White"/>
+                        
+                        <TextBlock x:Name="lblButton3"
+                                   Text="Reports"
+                                   FontSize="16"
+                                   Foreground="White"
+                                   Margin="10,0"
+                                   Visibility="Collapsed"/>
                     </StackPanel>
                 </Button>
                 
@@ -401,10 +398,18 @@
                         Style="{StaticResource Animation}">
                     
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="🔍" FontSize="18" Margin="10,0" Foreground="White"/>
-                        <TextBlock x:Name="lblButton4" Text="Search"
-                                   FontSize="16" Foreground="White"
-                                   Margin="10,0" Visibility="Collapsed"/>
+                        
+                        <TextBlock Text="🔍" 
+                                   FontSize="18" 
+                                   Margin="10,0" 
+                                   Foreground="White"/>
+                        
+                        <TextBlock x:Name="lblButton4" 
+                                   Text="Search"
+                                   FontSize="16"
+                                   Foreground="White"
+                                   Margin="10,0"
+                                   Visibility="Collapsed"/>
                     </StackPanel>
                 </Button
                         >
@@ -414,10 +419,18 @@
                         Style="{StaticResource Animation}">
                   
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="⚙" FontSize="18" Margin="10,0" Foreground="White"/>
-                        <TextBlock x:Name="lblButton5" Text="Settings"
-                                   FontSize="16" Foreground="White"
-                                   Margin="10,0" Visibility="Collapsed"/>
+                        
+                        <TextBlock Text="⚙" 
+                                   FontSize="18" 
+                                   Margin="10,0"
+                                   Foreground="White"/>
+                        
+                        <TextBlock x:Name="lblButton5"
+                                   Text="Settings"
+                                   FontSize="16" 
+                                   Foreground="White"
+                                   Margin="10,0" 
+                                   Visibility="Collapsed"/>
                     </StackPanel>
                 </Button>
                
@@ -427,10 +440,17 @@
                             Style="{StaticResource Animation}">
                   
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="👤" FontSize="18" Margin="10,0" Foreground="White"/>
-                        <TextBlock x:Name="lblButton6" Text="Profile"
-                                   FontSize="16" Foreground="White"
-                                   Margin="10,0" Visibility="Collapsed"/>
+                        
+                        <TextBlock Text="👤" 
+                                   FontSize="18" 
+                                   Margin="10,0" 
+                                   Foreground="White"/>
+                        <TextBlock x:Name="lblButton6"
+                                   Text="Profile"
+                                   FontSize="16"
+                                   Foreground="White"
+                                   Margin="10,0" 
+                                   Visibility="Collapsed"/>
                     </StackPanel>
                 </Button>
             </StackPanel>
@@ -438,8 +458,8 @@
 
         <Grid Margin="99,44,5,0">
             <Grid.Background>
-                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                    <GradientStop Color="#FFEE4540" Offset="0"/>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFEE4540"/>
                     <GradientStop Color="#FFC72C41" Offset="0.2"/>
                     <GradientStop Color="#FF801336" Offset="0.4"/>
                     <GradientStop Color="#FF670E33" Offset="0.6"/>
@@ -448,13 +468,15 @@
                 </LinearGradientBrush>
             </Grid.Background>
 
-            <!-- USER CONTROLS VISIBILITY -->
             <Grid HorizontalAlignment="Left" Height="770"
                   VerticalAlignment="Top" 
                   Width="1200" 
                   Margin="450,28,0,0" >
 
-                <ContentControl Content="{Binding CurrentView}" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,0,0,10" />
+                <ContentControl Content="{Binding CurrentView}" 
+                                VerticalAlignment="Top"
+                                HorizontalAlignment="Center" 
+                                Margin="0,0,0,10" />
 
             </Grid>
 

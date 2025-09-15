@@ -629,7 +629,7 @@ namespace FlexMold.MVVM.View.Master
                 Validation = cmbOppStock.Text,
                 BranchId = iBranchId,
                 Date = dtmDate.SelectedDate.Value.Date.AddHours(24.0)
-            });
+            }); 
         }
 
         private decimal CapitalAccountMethod()

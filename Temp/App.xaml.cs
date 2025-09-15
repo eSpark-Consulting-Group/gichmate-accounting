@@ -1,6 +1,6 @@
-﻿using FlexMold.MVVM.View;
+﻿using AccountsPro.MVVM.View;
+using FlexMold.MVVM.View;
 using FlexMold.MVVM.View.Accounts;
-//using FlexMold.MVVM.View.Setting;
 using FlexMold.MVVM.ViewModel;
 using FlexMold.MVVM.ViewModel.SplashScreen;
 using FlexMold.Utility;
@@ -21,82 +21,37 @@ namespace FlexMold
     public partial class App : Application
     {
         public static IHost? AppHost { get; private set; }
-       public App()
+
+        public App()
         {
-            try { 
-            AppHost = Host.CreateDefaultBuilder()
-            .ConfigureServices((hostContext, services) =>
+            try
             {
-                //services.AddSingleton<ISplashScreenViewModel, SplashScreenViewModel>();
-                //services.AddSingleton<ITwinCathelper,TwinCathelper>();
-                //services.AddSingleton<ITwinCatConfigViewModel, TwinCatConfigViewModel>();
-                //services.AddSingleton<IFoeViewModel, FoeViewModel>();
+                AppHost = Host.CreateDefaultBuilder()
+                    .ConfigureServices((hostContext, services) =>
+                    {
+                        // Windows & Startup page
+                        services.AddSingleton<MainWindow>();
+                        services.AddSingleton<StartupPage>();
 
-                //services.AddSingleton<SplashMachineSlection>();
-                services.AddSingleton<MainWindow>();
-                //services.AddSingleton<FoeView>();
+                        // ViewModels
+                        services.AddSingleton<IAccountingViewModel, AccountingViewModel>();
 
-                //services.AddSingleton<FlexMoldMachine1>();
-                //services.AddSingleton<TcDeviceScanning>();
-
-                //services.AddSingleton<Machine>();
-
-                //services.AddSingleton<IHomeViewModel, HomeViewModel>();
-                //services.AddSingleton<IAccountingViewModel, AccountingViewModel>();
-                ////services.AddSingleton<aAccountingView>();
-
-                //services.AddSingleton<IMachineDetailViewModel, MachineDetailViewModel>();
-                //services.AddSingleton<IMotorStatusViewmodel, MotorStatusViewmodel>();
-                //services.AddSingleton<MachineDetailView>();
-                //services.AddSingleton<MotorStatusView>();
-                //services.AddSingleton<VisualDisplayView>();
-                //services.AddSingleton<VaccumStatusView>();
-                //services.AddSingleton<HeaterStatusView>();
-                //services.AddSingleton<PowerStatusView>();
-                //services.AddSingleton<EmergencyStatusView>();
-                //services.AddSingleton<LaserStatusView>();
-
-                //services.AddSingleton<IMachineTestViewModel, MachineTestViewModel>();
-                //services.AddSingleton<IMotorTestViewModel, MotorTestViewModel>();
-                //services.AddSingleton<MotorTest>();
-                //services.AddSingleton<ReadMotorView>();
-                //services.AddSingleton<PowerOnOffView>();
-                //services.AddSingleton<RenumberingView>();
-                //services.AddSingleton<PositionView>();
-                //services.AddSingleton<ResetView>();
-
-                services.AddSingleton<IAccountingViewModel, AccountingViewModel>();
-                services.AddSingleton<DefaultAccountScreenView>();
-                services.AddSingleton<BankPaymentView>();
-                services.AddSingleton<BankReceiptView >();
-                services.AddSingleton<BankReconciliationView>();
-                services.AddSingleton<CashPaymentView>();
-                services.AddSingleton<CashReceiptView>(); 
-                services.AddSingleton<CreditNoteView>();
-                services.AddSingleton<DebitNoteView>();
-                services.AddSingleton<PaymentAndReceiptView>();
-                services.AddSingleton<PostDatedChequePaymentView>();
-                services.AddSingleton<PostDatedChequeReceiptView>(); 
-                services.AddSingleton<ReceiptView>();
-                services.AddSingleton<UploadTenantsUserControl>();
-
-                //services.AddSingleton<ISettingViewModel, SettingViewModel>();
-                //services.AddSingleton<IMotorSettingViewModel, MotorSettingViewModel>(); 
-                //services.AddSingleton<MachineSettingView>();
-                //services.AddSingleton<PowerSettingView>();
-                //services.AddSingleton<MotorSettingView>();
-                //services.AddSingleton<VacuumSettingView>();
-                //services.AddSingleton<LaserProjectorSettingView>();
-
-                //services.AddSingleton<IProjectViewModel, ProjectViewModel>();
-                //services.AddSingleton<ICSVDiaglogViewModel, CSVDiaglogViewModel>();
-                //services.AddSingleton<ILaserProjectorViewModel, LaserProjectorViewModel>();
-
-                //services.AddSingleton<CSVDiaglogView>();
-                //services.AddSingleton<SambaConfigWindow>();
-                //services.AddSingleton<SerialPortConfigView>();
-            }
-            ).Build();
+                        // Views
+                        services.AddSingleton<DefaultAccountScreenView>();
+                        services.AddSingleton<BankPaymentView>();
+                        services.AddSingleton<BankReceiptView>();
+                        services.AddSingleton<BankReconciliationView>();
+                        services.AddSingleton<CashPaymentView>();
+                        services.AddSingleton<CashReceiptView>();
+                        services.AddSingleton<CreditNoteView>();
+                        services.AddSingleton<DebitNoteView>();
+                        services.AddSingleton<PaymentAndReceiptView>();
+                        services.AddSingleton<PostDatedChequePaymentView>();
+                        services.AddSingleton<PostDatedChequeReceiptView>();
+                        services.AddSingleton<ReceiptView>();
+                        services.AddSingleton<UploadTenantsUserControl>();
+                    })
+                    .Build();
             }
             catch (Exception ex)
             {
@@ -104,7 +59,12 @@ namespace FlexMold
                 log.Log(LogLevel.Error, ex.Message);
             }
         }
-        private MainWindow _mainWindow { get { return App.AppHost.Services.GetRequiredService<MainWindow>(); } }
+
+        // Corrected: This now resolves StartupPage (not MainWindow)
+        private StartupPage StartupPageInstance
+        {
+            get { return App.AppHost!.Services.GetRequiredService<StartupPage>(); }
+        }
 
         protected override async void OnStartup(StartupEventArgs e)
         {
@@ -112,7 +72,7 @@ namespace FlexMold
 
             var vCulture = new CultureInfo("en-US");
 
-            if (System.Globalization.CultureInfo.CurrentCulture.Name.Contains("DE"))
+            if (CultureInfo.CurrentCulture.Name.Contains("DE"))
             {
                 vCulture.NumberFormat.NumberDecimalSeparator = ",";
                 vCulture.NumberFormat.CurrencyDecimalSeparator = ",";
@@ -129,14 +89,21 @@ namespace FlexMold
             CultureInfo.DefaultThreadCurrentUICulture = vCulture;
 
             FrameworkElement.LanguageProperty.OverrideMetadata(
-            typeof(FrameworkElement),new FrameworkPropertyMetadata(XmlLanguage.GetLanguage(CultureInfo.CurrentCulture.IetfLanguageTag)));
+                typeof(FrameworkElement),
+                new FrameworkPropertyMetadata(
+                    XmlLanguage.GetLanguage(CultureInfo.CurrentCulture.IetfLanguageTag)));
 
-            //var startupScreen = AppHost.Services.GetRequiredService<SplashMachineSlection>();
-            //startupScreen.Show();
-            _mainWindow.Show();
+            // Resolve and show StartupPage
+            var startupScreen = AppHost.Services.GetRequiredService<StartupPage>();
+            startupScreen.Show();
+
+            // Optionally show main window instead:
+            // var mainWindow = AppHost.Services.GetRequiredService<MainWindow>();
+            // mainWindow.Show();
 
             base.OnStartup(e);
         }
+
         protected override async void OnExit(ExitEventArgs e)
         {
             try
