@@ -11,6 +11,7 @@
              Height="770" 
              Width="1200">
 
+    
     <Control.Background>
         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
             <GradientStop Color="#FFEE4540"/>
@@ -59,22 +60,24 @@
         <StackPanel Grid.Row="1" Orientation="Horizontal">
 
             <Label Content="From : "
-               Margin="225,0,0,0"
-               Style="{StaticResource AccountsLabel}"/>
+                   Margin="225,0,0,0"
+                   Style="{StaticResource AccountsLabel}"/>
 
             <DatePicker  Width="250"
-                     Height="30"
-                     VerticalContentAlignment="Center"/>
+                         Height="30"
+                         x:Name="FromDatePickerBox"
+                         VerticalContentAlignment="Center"/>
 
 
 
             <Label Content="To : "
                    Margin="85,0,0,0"
-               Style="{StaticResource AccountsLabel}"/>
+                   Style="{StaticResource AccountsLabel}"/>
 
             <DatePicker  Width="250"
-                     Height="30"
-                     VerticalContentAlignment="Center"/>
+                         Height="30"
+                         x:Name="ToDatePickerBox"
+                         VerticalContentAlignment="Center"/>
 
         </StackPanel>
 
@@ -86,11 +89,12 @@
 
             <Label Content="Party A/C : "
                    Margin="200,0,0,0"
-               Style="{StaticResource AccountsLabel}"/>
+                   Style="{StaticResource AccountsLabel}"/>
 
             <ComboBox Width="250"
                       Style="{StaticResource AccountsComboBox}"
                       Height="30"
+                      x:Name="txtPartyBox"
                       VerticalContentAlignment="Center"/>
 
             <Label Content="Cheque No : "
@@ -100,12 +104,14 @@
             <TextBox Width="250"
                       Style="{StaticResource AccountsTextBox}"
                       Height="30"
+                      x:Name="txtCheque"
                       VerticalContentAlignment="Center"/>
         </StackPanel>
 
 
         <StackPanel Grid.Row="3">
-            <DataGrid Height="350"
+            <DataGrid x:Name="postDatedGrid"
+                      Height="350"
                       HorizontalContentAlignment="Center"
                       TextBlock.TextAlignment="Center">
 
@@ -132,6 +138,7 @@
                                Width="250"
                                FontSize="14"
                                VerticalContentAlignment="Center"
+                               x:Name="voucherNoBox"
                                Maximum="9999"
                                Minimum="0"/>
 
@@ -141,6 +148,7 @@
 
             <DatePicker  Width="250"
                          Height="30"
+                         x:Name="DatePickerBox"
                          VerticalContentAlignment="Center"/>
 
 
@@ -151,6 +159,7 @@
             <TextBox Width="250"
                      Style="{StaticResource AccountsTextBox}"
                      Height="30"
+                     x:Name="txtBank"
                      VerticalContentAlignment="Center"/>
         </StackPanel>
 
@@ -164,6 +173,7 @@
             <ComboBox Width="250"
                       Style="{StaticResource AccountsComboBox}"
                       Height="30"
+                      x:Name="txtPartyBox2"
                       VerticalContentAlignment="Center"/>
 
             <Label Content="Amount : "
@@ -173,6 +183,7 @@
             <TextBox Width="250"
                      Style="{StaticResource AccountsTextBox}"
                      Height="30"
+                     x:Name="txtAmount"
                      VerticalContentAlignment="Center"/>
 
             <Label Content="Branch : "
@@ -182,12 +193,10 @@
             <TextBox Width="250"
                      Style="{StaticResource AccountsTextBox}"
                      Height="30"
+                     x:Name="txtBranch"
                      VerticalContentAlignment="Center"/>
 
-
         </StackPanel>
-
-
 
 
 
@@ -199,6 +208,7 @@
             <ComboBox Width="250"
                       Style="{StaticResource AccountsComboBox}"
                       Height="30"
+                      x:Name="txtBankAccountBox"
                       VerticalContentAlignment="Center"/>
 
             <Label Content="Exi :"
@@ -206,9 +216,10 @@
                    Style="{StaticResource AccountsLabel}"/>
 
             <ComboBox Width="250"
-                     FontSize="14"
-                     Height="30"
-                     VerticalContentAlignment="Center"/>
+                      FontSize="14"
+                      Height="30"
+                      x:Name="txtExi"
+                      VerticalContentAlignment="Center"/>
 
 
             <Label Content="Chq No: "
@@ -218,13 +229,12 @@
             <TextBox Width="250"
                      Style="{StaticResource AccountsTextBox}"
                      Height="30"
+                     x:Name="txtChqNo"
                      VerticalContentAlignment="Center"/>
-
-
-
 
         </StackPanel>
 
+        
 
 
         <StackPanel Grid.Row="8" Orientation="Horizontal">
@@ -235,6 +245,7 @@
             <TextBox Width="250"
                       Style="{StaticResource AccountsTextBox}"
                       Height="30"
+                      x:Name="txtRemarks"
                       VerticalContentAlignment="Center"/>
 
             <Label Content="Ref No :  "
@@ -244,6 +255,7 @@
             <TextBox Width="250"
                      Style="{StaticResource AccountsTextBox}"
                      Height="30"
+                     x:Name="txtReferenceNo"
                      VerticalContentAlignment="Center"/>
 
 
@@ -254,6 +266,7 @@
 
             <DatePicker  Width="250"
                          Height="30"
+                         x:Name="txtChqDate"
                          VerticalContentAlignment="Center"/>
 
 
@@ -261,41 +274,38 @@
 
 
         <StackPanel Grid.Row="9" Orientation="Horizontal" Margin="0,0,0,-17" RenderTransformOrigin="0.5,0.5">
-            <StackPanel.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform AngleX="0.754"/>
-                    <RotateTransform/>
-                    <TranslateTransform X="0.487"/>
-                </TransformGroup>
-            </StackPanel.RenderTransform>
-
+            
             <StackPanel Orientation="Horizontal" 
                         Margin="100,0,0,0"
                         VerticalAlignment="Center">
 
                 <Button Content="Save" 
                         FontSize="14"
+                        Click="Savebtn_Click"
                         Style="{StaticResource AnimatedRedButton}">
                 </Button>
 
                 <Button Content="Edit" 
                         FontSize="14"
+                        Click="Editbtn_Click"
                         Style="{StaticResource AnimatedRedButton}">
                 </Button>
 
                 <Button Content="Delete" 
                         FontSize="14"
+                        Click="Deletebtn_Click"
                         Style="{StaticResource AnimatedRedButton}">
                 </Button>
 
                 <Button Content="Clear"
                         FontSize="14"
+                        Click="Clearbtn_Click"
                         Style="{StaticResource AnimatedRedButton}">
                 </Button>
 
             </StackPanel>
 
+            
             <Label Content="Collection Status : "
                    Margin="300,0,0,0"
                    VerticalAlignment="Top"
@@ -305,6 +315,7 @@
                       VerticalAlignment="top"
                       Style="{StaticResource AccountsComboBox}"
                       Height="30"
+                      x:Name="collectionStatusComboBox"
                       VerticalContentAlignment="Center"/>
 
         </StackPanel>

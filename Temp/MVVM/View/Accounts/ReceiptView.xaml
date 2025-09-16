@@ -58,41 +58,56 @@
                         VerticalAlignment="Center" 
                         VerticalContentAlignment="Center" 
                         FontSize="14" 
+                        x:Name="ReceiptDateBox"
                         Margin="0,0,0,0"/>
 
         </StackPanel>
 
         <StackPanel Grid.Row="2" Orientation="Horizontal" VerticalAlignment="Center">
-            
+
             <Label Content="Route :" 
                    VerticalAlignment="Center"
                    Margin="15,0,0,0"
                    FontSize="14"/>
 
-            <ComboBox Width="250" Height="30" 
+            <ComboBox x:Name="routeComboBox"
+                      Width="250" 
+                      Height="30" 
                       FontSize="14" 
                       VerticalAlignment="Center"
                       VerticalContentAlignment="Center">
-                <ComboBoxItem Content="All"/>
-                <ComboBoxItem Content="West"/>
+                <ComboBoxItem Content="All" />
             </ComboBox>
 
-            <DatePicker Width="250" Height="30" 
+            <DatePicker x:Name="routeDateBox" 
+                        Width="250" 
+                        Height="30" 
                         VerticalAlignment="Center" 
                         FontSize="14" 
                         VerticalContentAlignment="Center" 
                         Margin="0,0,0,0"/>
 
 
-            <Label Content="Vehicle No :" FontSize="14" VerticalAlignment="Center"/>
-            <ComboBox Width="250" Height="30" FontSize="14" VerticalAlignment="Center" VerticalContentAlignment="Center">
-                <ComboBoxItem Content="KHX 1034"/>
-                <ComboBoxItem Content="CR 007"/>
+            <Label Content="Unit No :  " 
+                   Margin="22,0,0,0"
+                   FontSize="14"
+                   VerticalAlignment="Center"/>
+
+            <ComboBox x:Name="vehicleComboBox"
+                      Width="250" 
+                      Height="30" 
+                      FontSize="14"
+                      VerticalAlignment="Center" 
+                      VerticalContentAlignment="Center" >
+                <ComboBoxItem Content="All" />
             </ComboBox>
-            <DatePicker Width="250" Height="30" 
-            VerticalAlignment="Center"
-            VerticalContentAlignment="Center"
-            FontSize="14" 
+
+            <DatePicker x:Name="vehicleDateBox"
+                        Width="250"
+                        Height="30" 
+                        VerticalAlignment="Center"
+                        VerticalContentAlignment="Center"
+                        FontSize="14" 
             />
             
 
@@ -107,8 +122,9 @@
             <Label Content="Sales Exi :" 
                    FontSize="14"
                    Margin="0,0,0,0"/>
-            
-            <TextBox Width="250" 
+
+            <TextBox x:Name="txtSalesExi"
+                     Width="250" 
                      VerticalAlignment="Center" 
                      Height="20"
                      FontSize="14"
@@ -118,7 +134,9 @@
                    Margin="265,0,0,0"
                    FontSize="14" 
                    VerticalAlignment="Center"/>
-            <TextBox Text=".." 
+
+            <TextBox x:Name="txtRemarks"
+                     Text=".." 
                      Margin="10,0,0,0"
                      FontSize="14"
                      Width="250" 
@@ -126,34 +144,20 @@
                      VerticalAlignment="Center"
                      VerticalContentAlignment="Center"/>
 
-            <Button Content="Load"
+            <Button Click="LoadBtn_Click"
+                    Content="Load"
                     Style="{StaticResource AnimatedRedButton}" Height="30"/>
         </StackPanel>
 
 
         <StackPanel Grid.Row="4">
-            <DataGrid Width="1180" 
+            <DataGrid x:Name="receiptGrid"
+                      Width="1180" 
                       FontSize="14" 
                       Height="450"
                       HorizontalContentAlignment="Center"
-                      TextBlock.TextAlignment="Center">
-                
-                <DataGrid.Columns>
-                    <DataGridTextColumn Binding="{Binding}" Width="40 " Header="SL"/>
-                    <DataGridTextColumn Binding="{Binding}" Width="100" Header="Date"/>
-                    <DataGridTextColumn Binding="{Binding}" Width="80 " Header="Inv No"/>
-                    <DataGridTextColumn Binding="{Binding}" Width="170" Header="Customer Name"/>
-                    <DataGridTextColumn Binding="{Binding}" Width="130" Header="Inv Amount"/>
-                    <DataGridTextColumn Binding="{Binding}" Width="100 " Header="Cash"/>
-                    <DataGridTextColumn Binding="{Binding}" Width="150" Header="Cash Account"/>
-                    <DataGridTextColumn Binding="{Binding}" Width="90 " Header="Card"/>
-                    <DataGridTextColumn Binding="{Binding}" Width="140" Header="Card Amount"/>
-                    <DataGridTextColumn Binding="{Binding}" Width="90 " Header="Online"/>
-                    <DataGridTextColumn Binding="{Binding}" Width="150" Header="ONLINE ACCOUNT"/>
-                    <DataGridTextColumn Binding="{Binding}" Width="*  " Header="CREDIT"/>
-                </DataGrid.Columns>
-            </DataGrid>
-            
+                      TextBlock.TextAlignment="Center"/>
+
         </StackPanel>
         
 
@@ -162,8 +166,9 @@
             <Label Content="Total Cash :" 
                    FontSize="14" 
                    VerticalAlignment="Center"/>
-            
-            <TextBox Text="0.00"
+
+            <TextBox x:Name="txtTotalCash"
+                     Text="0.00"
                      Width="200" 
                      Height="30" 
                      VerticalAlignment="Center"
@@ -173,8 +178,9 @@
                    FontSize="14" 
                    VerticalAlignment="Center" 
                    Margin="20,0,0,0"/>
-            
-            <TextBox Text="0.00" 
+
+            <TextBox x:Name="txtOnlineTotal"
+                     Text="0.00" 
                      Width="200" 
                      Height="30"
                      VerticalAlignment="Center"
@@ -188,8 +194,9 @@
             <Label Content="Total Card :"
                    FontSize="14" 
                    VerticalAlignment="Center"/>
-            
-            <TextBox Text="0.00" 
+
+            <TextBox x:Name="txtTotalCard"
+                     Text="0.00" 
                      Width="200" 
                      Height="30" 
                      VerticalAlignment="Center" 
@@ -199,8 +206,9 @@
                    FontSize="14" 
                    VerticalAlignment="Center" 
                    Margin="24,0,0,0"/>
-           
-            <TextBox Text="0.00" 
+
+            <TextBox x:Name="txtCreditTotal"
+                     Text="0.00" 
                      Width="200" 
                      Height="30"
                      VerticalAlignment="Center" 
@@ -210,24 +218,27 @@
                    FontSize="14"
                    VerticalAlignment="Center" 
                    Margin="20,0,0,0"/>
-            
-            <TextBox Text="0.00" 
+
+            <TextBox x:Name="txtTotalAmount"
+                     Text="0.00" 
                      Width="200" 
                      Height="30" 
                      VerticalAlignment="Center"
                      VerticalContentAlignment="Center"/>
 
             
-            <Button Content="Save"  
+            <Button Click="SaveBtn_Click"
+                    Content="Save"  
                     Margin="50,0,0,0"
                     VerticalAlignment="Center" 
                     Foreground="White"
                     Style="{StaticResource AnimatedRedButton}">
                 
             </Button>
-            
-            
-            <Button Content="Clear" 
+
+
+            <Button Click="ClearBtn_Click"
+                    Content="Clear" 
                     Margin="20,0,0,0"
                     Style="{StaticResource AnimatedRedButton}"
                     VerticalAlignment="Center"

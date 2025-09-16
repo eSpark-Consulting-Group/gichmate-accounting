@@ -129,11 +129,11 @@ namespace FlexMold.MVVM.View
         }
 
 
-        private void MasterTransactionButton_Click(object sender, RoutedEventArgs e)
-        {
-            var transactionWithoutInventory = new TransactionWithoutInventory();
-            transactionWithoutInventory.Show(); 
-        }
+        //private void MasterTransactionButton_Click(object sender, RoutedEventArgs e)
+        //{
+        //    var transactionWithoutInventory = new TransactionWithoutInventory();
+        //    transactionWithoutInventory.Show(); 
+        //}
 
         private void MasterUploadTenantsButton_Click(object sender, RoutedEventArgs e)
         {
@@ -146,6 +146,42 @@ namespace FlexMold.MVVM.View
             var uploadBankReceipts = new UploadBankReceipts();
             uploadBankReceipts.Show();  
 
+        }
+
+        private void SideBarBtn_UserSettingsClick(object sender, RoutedEventArgs e)
+        {
+            var userSettings = new UserSettingsView();
+            userSettings.Show();
+        }
+
+        private void SideBarBtn_AdminSettingsClick(object sender, RoutedEventArgs e)
+        {
+            var adminSettings = new AdminSettingsView();
+            adminSettings.Show();
+        }
+
+        private void SideBarBtn_UploadTenantsClick(object sender, RoutedEventArgs e)
+        {
+            var uploadTenants = new UploadTenants();
+            uploadTenants.Show();
+        }
+
+        private void SideBarBtn_BalanceSheetClick(object sender, RoutedEventArgs e)
+        {
+            var balanceSheet = new BalanceSheet();
+            balanceSheet.Show();
+        }
+
+        private void SideBarBtn_BankReceiptsClick(object sender, RoutedEventArgs e)
+        {
+            var bankReceipts = new UploadBankReceipts();
+            bankReceipts.Show();
+        }
+
+        private void SideBarBtn_DoubleJournalEntriesClick(object sender, RoutedEventArgs e)
+        {
+            var doubleJournalEntries = new DoubleJournalEntries();
+            doubleJournalEntries.Show();
         }
     }
 }

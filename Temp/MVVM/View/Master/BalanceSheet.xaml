@@ -147,7 +147,8 @@
 
                 <Button Style="{StaticResource AnimatedRedButton}"
                         Content="Print"
-                        FontSize="15"/>
+                        FontSize="15"        
+                        Click="printDocument1_PrintPage_Click"/>
 
                 <Button Style="{StaticResource AnimatedRedButton}"
                         Content="Clear"

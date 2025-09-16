@@ -309,15 +309,15 @@ namespace FlexMold.MVVM.View.Accounts
 
                     if (string.IsNullOrEmpty(searchText))
                         query = $@"SELECT [UNIT NO], [TENANT NAME], [EXPECTED RENT], [WATER], SANITATION, 
-                                    [RENT RECEIVED], DEPOSIT, [ARREAS PAID (RENT)], [ARREAS PAID(UTILITIES)],
-                                    PREPAYMENT, [TOTAL MONEY PAID], [ARREAS B/F], ARREAS, [ARREAS C/F], 
+                                    [RENT RECEIVED], DEPOSIT, [ARREAS PAID (RENT)] AS [ARREARS PAID (RENT)], [ARREAS PAID(UTILITIES)] AS [ARREARS PAID(UTILITIES)],
+                                    PREPAYMENT, [TOTAL MONEY PAID], [ARREAS B/F] AS [ARREARS BF], ARREAS AS ARREARS, [ARREAS C/F] AS [ARREARS C/F], 
                                     [BANK PAID], [EXTRA COMMENTS], [FILE PATH], UPLOADTIME, DATAFORMONTH
                                     FROM UploadsTenantRent 
                                     WHERE {arrearsCondition}";
                     else
                         query = $@"SELECT [UNIT NO], [TENANT NAME], [EXPECTED RENT], [WATER], SANITATION, 
-                                    [RENT RECEIVED], DEPOSIT, [ARREAS PAID (RENT)], [ARREAS PAID(UTILITIES)],
-                                    PREPAYMENT, [TOTAL MONEY PAID], [ARREAS B/F], ARREAS, [ARREAS C/F], 
+                                    [RENT RECEIVED], DEPOSIT, [ARREAS PAID (RENT)] AS [ARREARS PAID (RENT)], [ARREAS PAID(UTILITIES)] AS [ARREARS PAID(UTILITIES)],
+                                    PREPAYMENT, [TOTAL MONEY PAID], [ARREAS B/F] AS [ARREARS BF], ARREAS AS ARREARS, [ARREAS C/F] AS [ARREARS C/F], 
                                     [BANK PAID], [EXTRA COMMENTS], [FILE PATH], UPLOADTIME, DATAFORMONTH
                                     FROM UploadsTenantRent 
                                     WHERE ([TENANT NAME] LIKE @SearchText 

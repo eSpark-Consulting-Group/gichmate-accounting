@@ -88,7 +88,7 @@
         </StackPanel>
 
 
-        <Grid Margin="82,-424,-476,369"
+        <Grid Margin="82,-424,-476,386"
 			  >
 
             <Grid.RenderTransform>

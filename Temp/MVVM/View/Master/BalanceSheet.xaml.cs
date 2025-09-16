@@ -1,5 +1,7 @@
 ﻿//using AccountsLibrary;
 using AccountsLibrary;
+using AccountsPro.SubProjects.AccountsLibraryFramework;
+using Microsoft.Reporting.WinForms;
 using Microsoft.VisualBasic;
 using System;
 using System.Collections.Generic;
@@ -21,7 +23,6 @@ using System.Windows.Shapes;
 using Brushes = System.Drawing.Brushes;
 using ListView = System.Windows.Controls.ListView;
 using MessageBox = System.Windows.MessageBox;
-using AccountsPro.SubProjects.AccountsLibraryFramework;
 
 namespace FlexMold.MVVM.View.Master
 {
@@ -153,6 +154,7 @@ namespace FlexMold.MVVM.View.Master
         //private IContainer components = null;
         private PrintDocument printDocument1;
 
+
         //private ToolTip toolTip1;
 
         private System.Windows.Forms.ColumnHeader columnHeader2;
@@ -174,6 +176,10 @@ namespace FlexMold.MVVM.View.Master
         public BalanceSheet()
         {
             InitializeComponent();
+            printDocument1 = new System.Drawing.Printing.PrintDocument();
+            PrintController printController = new StandardPrintController();
+            printDocument1.PrintController = printController;
+            printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);            
         }
 
 
@@ -196,7 +202,7 @@ namespace FlexMold.MVVM.View.Master
         {
 
             rchTransdtls.Document.Blocks.Clear();
-     
+
 
             rchTransdtls.AppendText("");
 
@@ -273,7 +279,7 @@ namespace FlexMold.MVVM.View.Master
                     strFour = " ";
                 }
                 addtoRTFStrings(strFirst, strSecond, strThird, strFour);
-                
+
                 addtoRTFStrings(" ", " ", " ", " ");
 
                 //addtoRTFStrings("TOTAL", dmlLibTotal.ToString("F"), "TOTAL", dmlAsstTotal.ToString("F"));
@@ -301,11 +307,11 @@ namespace FlexMold.MVVM.View.Master
             table.Columns.Add(new TableColumn { Width = new GridLength(420) }); // Liability name
             table.Columns.Add(new TableColumn { Width = new GridLength(140) }); // Liability amount
 
-         
+
             var headerGroup = new TableRowGroup();
             var headerRow = new TableRow();
 
-            //below are the tablecells, headerrows, you can name headers according to requirements, current are set as 
+            //below are the tablecells, headerrows
             headerRow.Cells.Add(new TableCell(new Paragraph(new Run("ASSET")) { FontWeight = FontWeights.Bold, Padding = new Thickness(4, 2, 4, 2) }));
             headerRow.Cells.Add(new TableCell(new Paragraph(new Run("ASSET AMOUNT")) { FontWeight = FontWeights.Bold, TextAlignment = TextAlignment.Right, Padding = new Thickness(4, 2, 4, 2) }));
             headerRow.Cells.Add(new TableCell(new Paragraph(new Run("LIABILITY")) { FontWeight = FontWeights.Bold, Padding = new Thickness(4, 2, 4, 2) }));
@@ -428,7 +434,7 @@ namespace FlexMold.MVVM.View.Master
 
         void addtoRTFStrings(string strFirst, string strSecond, string strThird, string strFour)
         {
-           
+
             FlowDocument doc = rchTransdtls.Document ?? new FlowDocument();
             Table table = doc.Blocks.OfType<Table>().FirstOrDefault();
             if (table == null)
@@ -451,8 +457,8 @@ namespace FlexMold.MVVM.View.Master
                 var p = new Paragraph(new Run(name ?? "")) { Margin = new Thickness(0) };
                 p.TextAlignment = TextAlignment.Left;
                 if (name == "CURRENT LIABILITY" || name == "LONG TERM LIABILITY" || name == "CURRENT ASSET" || name == "FIXED ASSET")
-                    p.Inlines.Clear(); 
-     
+                    p.Inlines.Clear();
+
                 return p;
             }
 
@@ -567,12 +573,12 @@ namespace FlexMold.MVVM.View.Master
                     strHeadAmount = dmlHeadAmnt.ToString(CommonSettings.strCurencyFormat);
                     //if (!cbDetailed.Checked)
                     //{
-                        if (dmlHeadAmnt != 0m)
-                        {
-                            dmlBHeadTotal += dmlHeadAmnt;
-                            listThree.Add(strHead);
-                            listFour.Add(strHeadAmount);
-                        }
+                    if (dmlHeadAmnt != 0m)
+                    {
+                        dmlBHeadTotal += dmlHeadAmnt;
+                        listThree.Add(strHead);
+                        listFour.Add(strHeadAmount);
+                    }
                 }
                 else
                 {
@@ -587,12 +593,12 @@ namespace FlexMold.MVVM.View.Master
                     strHeadAmount = dmlHeadAmnt.ToString(CommonSettings.strCurencyFormat);
                     //if (!cbDetailed.Checked)
                     //{
-                        if (dmlHeadAmnt != 0m)
-                        {
-                            dmlBHeadTotal += dmlHeadAmnt;
-                            listOne.Add(strHead);
-                            listTwo.Add(strHeadAmount);
-                        }
+                    if (dmlHeadAmnt != 0m)
+                    {
+                        dmlBHeadTotal += dmlHeadAmnt;
+                        listOne.Add(strHead);
+                        listTwo.Add(strHeadAmount);
+                    }
                 }
                 //if (cbDetailed.Checked)
                 {
@@ -612,13 +618,13 @@ namespace FlexMold.MVVM.View.Master
             }
             if (strTitle == "CURRENT ASSET")
             {
-                
-                    dmlCloStckValue = ClosingStckFindMethodTwo(isAddValue: true);
-                    listThree.Add(" ");
-                    listFour.Add(" ");
-                    listThree.Add("   CLOSING STOCK");
-                    listFour.Add(dmlCloStckValue.ToString("F"));
-                
+
+                dmlCloStckValue = ClosingStckFindMethodTwo(isAddValue: true);
+                listThree.Add(" ");
+                listFour.Add(" ");
+                listThree.Add("   CLOSING STOCK");
+                listFour.Add(dmlCloStckValue.ToString("F"));
+
             }
             return dmlUTotal;
         }
@@ -629,7 +635,7 @@ namespace FlexMold.MVVM.View.Master
                 Validation = cmbOppStock.Text,
                 BranchId = iBranchId,
                 Date = dtmDate.SelectedDate.Value.Date.AddHours(24.0)
-            }); 
+            });
         }
 
         private decimal CapitalAccountMethod()
@@ -704,6 +710,36 @@ namespace FlexMold.MVVM.View.Master
             });
         }
 
+
+        private void PrintMethod()
+        {
+            if (rchTransdtls.Document.Blocks.Count > 0)
+            {
+                FirmNameFindMethod();
+                isPrinted = false;
+                isNotFirst = false;
+                linesPrinted = 0;
+                printDocument1.Print();
+            }
+            else
+            {
+                MessageBox.Show("There is no data to print in the table");
+            }
+        }
+
+        private void FirmNameFindMethod()
+        {
+            DataTable dataTable = new DataTable();
+            dataTable = AshproCommon.GetDataTable("SELECT InstituteName,EmailId FROM Institute");
+            foreach (DataRow row in dataTable.Rows)
+            {
+                strFirm = row[0].ToString();
+                strEmailId = row[1].ToString();
+            }
+        }
+
+
+
         private decimal TotalFindMethod(string strUnder)
         {
             decimal addToOpeningBalance = 0;
@@ -723,6 +759,102 @@ namespace FlexMold.MVVM.View.Master
             return addToOpeningBalance;
         }
 
+        private void printDocument1_PrintPage_Click(object sender, RoutedEventArgs e) { 
+        PrintMethod();
+        }
+
+        private void printDocument1_PrintPage(object sender, PrintPageEventArgs e)
+        {
+            try
+            {
+                _ = e.MarginBounds.Left;
+                y = e.MarginBounds.Top;
+                int num = e.MarginBounds.Bottom;
+                StringFormat stringFormat = new StringFormat();
+                stringFormat.FormatFlags = StringFormatFlags.DirectionRightToLeft;
+                StringFormat stringFormat2 = new StringFormat();
+                stringFormat2.Alignment = StringAlignment.Center;
+
+                //if (!isPrinted)
+                //{
+                //    y = 60;
+                //    e.Graphics.DrawRectangle(Pens.Black, 8, y, e.MarginBounds.Right + 40, num - 20);
+                //    num += 40;
+                //    e.Graphics.DrawLine(Pens.Black, 244, y, 244, num);
+                //    e.Graphics.DrawLine(Pens.Black, 395, y, 395, num);
+                //    e.Graphics.DrawLine(Pens.Black, 630, y, 630, num);
+                //    e.Graphics.DrawString(strFirm, new Font("Courier New", 14f, FontStyle.Bold | FontStyle.Underline), Brushes.Black, new Point(400, 10), stringFormat2);
+                //    e.Graphics.DrawString("Balance Sheet Report as on " + dtmDate.Text, new Font("Courier New", 12f, FontStyle.Bold), Brushes.Black, new Point(10, 40));
+                //    e.Graphics.DrawLine(Pens.Black, 8, 100, e.MarginBounds.Right + 47, 100);
+                //    e.Graphics.DrawString("LIABILITY", new Font("Times New Roman", 12f, FontStyle.Bold), Brushes.Black, new Point(9, 70));
+                //    e.Graphics.DrawString("AMOUNT", new Font("Times New Roman", 12f, FontStyle.Bold), Brushes.Black, new Point(249, 70));
+                //    e.Graphics.DrawString("ASSET", new Font("Times New Roman", 12f, FontStyle.Bold), Brushes.Black, new Point(400, 70));
+                //    e.Graphics.DrawString("AMOUNT", new Font("Times New Roman", 12f, FontStyle.Bold), Brushes.Black, new Point(630, 70));
+                //    isPrinted = true;
+                //    y = 100;
+                //}
+                //if (isNotFirst)
+                //{
+                //    y = 15;
+                //    e.Graphics.DrawRectangle(Pens.Black, 8, y, e.MarginBounds.Right + 40, num + 25);
+                //    num += 40;
+                //    e.Graphics.DrawLine(Pens.Black, 244, y, 244, num);
+                //    e.Graphics.DrawLine(Pens.Black, 395, y, 395, num);
+                //    e.Graphics.DrawLine(Pens.Black, 630, y, 630, num);
+                //}
+                //while (true)
+                //{
+                //    if (linesPrinted < livDetails.Items.Count)
+                //    {
+                //        string s = livDetails.Items[linesPrinted].SubItems[0].Text;
+                //        string s2 = livDetails.Items[linesPrinted].SubItems[1].Text;
+                //        string s3 = livDetails.Items[linesPrinted].SubItems[2].Text;
+                //        string s4 = livDetails.Items[linesPrinted].SubItems[3].Text;
+                //        if (livDetails.Items[linesPrinted].SubItems[0].Font.Style == FontStyle.Bold)
+                //        {
+                //            e.Graphics.DrawString(s, new Font("Times New Roman", 10f, FontStyle.Bold), Brushes.Black, new RectangleF(8f, y, 230f, 15f));
+                //            e.Graphics.DrawString(s2, new Font("Times New Roman", 10f, FontStyle.Bold), Brushes.Black, new Point(395, y), stringFormat);
+                //        }
+                //        else
+                //        {
+                //            e.Graphics.DrawString(s, new Font("Times New Roman", 10f, FontStyle.Regular), Brushes.Black, new RectangleF(8f, y, 230f, 15f));
+                //            e.Graphics.DrawString(s2, new Font("Times New Roman", 10f, FontStyle.Regular), Brushes.Black, new Point(395, y), stringFormat);
+                //        }
+                //        if (livDetails.Items[linesPrinted].SubItems[2].Font.Style != FontStyle.Bold && !(livDetails.Items[linesPrinted].SubItems[2].Text == "TOTAL"))
+                //        {
+                //            e.Graphics.DrawString(s3, new Font("Times New Roman", 10f, FontStyle.Regular), Brushes.Black, new RectangleF(402f, y, 230f, 15f));
+                //            e.Graphics.DrawString(s4, new Font("Times New Roman", 10f, FontStyle.Regular), Brushes.Black, new Point(775, y), stringFormat);
+                //        }
+                //        else
+                //        {
+                //            e.Graphics.DrawString(s3, new Font("Times New Roman", 10f, FontStyle.Bold), Brushes.Black, new RectangleF(402f, y, 230f, 15f));
+                //            e.Graphics.DrawString(s4, new Font("Times New Roman", 10f, FontStyle.Bold), Brushes.Black, new Point(775, y), stringFormat);
+                //        }
+                //        linesPrinted++;
+                //        y += 20;
+                //        if (y >= e.MarginBounds.Bottom + 30)
+                //        {
+                //            break;
+                //        }
+                //        e.Graphics.DrawLine(Pens.Black, 8, y - 2, 776, y - 2);
+                //        continue;
+                //    }
+                //    linesPrinted = 0;
+                //    isNotFirst = false;
+                //    return;
+                //}
+                isNotFirst = true;
+                e.HasMorePages = true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+
+        }
 
     }
+
+
 }

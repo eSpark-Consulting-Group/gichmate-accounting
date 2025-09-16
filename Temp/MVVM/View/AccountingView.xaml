@@ -112,7 +112,7 @@
                         <MenuItem Header="Balance Sheet"   Click="MasterBalanceSheetButton_click"/>
                         <MenuItem Header="Double Journal Entries" Click="MasterDoubleJournalEntries_Click"/>
                         <MenuItem Header="Expense Account" Click="MasterExpenseButton_click"/>
-                        <MenuItem Header="Transaction Without Inventory" Click="MasterTransactionButton_Click"/>
+                        <!--<MenuItem Header="Transaction Without Inventory" Click="MasterTransactionButton_Click"/>-->
                         <MenuItem Header="Upload Tenants" Click="MasterUploadTenantsButton_Click"/>
                         <MenuItem Header="Upload Bank Receipts" Click="MasterUploadBank_Click"/>
                         <MenuItem Header="Single Journal Entry" Click="MasterJournalEntryButton_Click"/>
@@ -236,8 +236,8 @@
                  Height="38" Width="82">
             </Button>-->
 
-            
-            
+
+
 
             <!--<Button Content="  SEARCH  "
                     Foreground="White"
@@ -307,18 +307,18 @@
 
         </Grid>
 
-        
+
         <Grid x:Name="SidebarPanel" Width="94"
               Background="{DynamicResource SidebarBrush}"
               Margin="0,30,0,0"
               HorizontalAlignment="Left" RenderTransformOrigin="1.367,0.57">
 
-        
+
             <StackPanel Margin="10,10,10,0"
                         VerticalAlignment="Top"
                         Grid.RowSpan="2" 
                         Grid.ColumnSpan="2">
-              
+
                 <Button Content="☰" 
                         Foreground="White"
                         Background="Transparent"
@@ -331,15 +331,16 @@
                         BorderThickness="0" 
                         Height="50" 
                         Foreground="White"
-                        Style="{StaticResource Animation}">
-                    
-                    
+                        Style="{StaticResource Animation}"
+                        Click="SideBarBtn_DoubleJournalEntriesClick">
+
+
                     <StackPanel Orientation="Horizontal">
-                        
+
                         <TextBlock Text="🏠" 
                                    FontSize="18"
                                    Margin="10,0"/>
-                        
+
                         <TextBlock x:Name="lblButton1" 
                                    Text="Home"
                                    FontSize="16" 
@@ -348,20 +349,21 @@
                                    Visibility="Collapsed"/>
                     </StackPanel>
                 </Button>
-                
-                
+
+
                 <Button Background="Transparent"
                         BorderThickness="0" 
                         Height="50"
-                        Style="{StaticResource Animation}">
-                   
+                        Style="{StaticResource Animation}"
+                        Click="SideBarBtn_BankReceiptsClick">
+
                     <StackPanel Orientation="Horizontal">
-                       
+
                         <TextBlock Text="📁"
                                    FontSize="18"
                                    Margin="10,0" 
                                    Foreground="White"/>
-                        
+
                         <TextBlock x:Name="lblButton2" 
                                    Text="Files"
                                    FontSize="16"
@@ -370,19 +372,20 @@
                                    Visibility="Collapsed"/>
                     </StackPanel>
                 </Button>
-                
+
                 <Button Background="Transparent" 
                         BorderThickness="0"
                         Height="50"
-                        Style="{StaticResource Animation}">
-                    
+                        Style="{StaticResource Animation}"
+                        Click="SideBarBtn_BalanceSheetClick">
+
                     <StackPanel Orientation="Horizontal">
-                       
+
                         <TextBlock Text="📊" 
                                    FontSize="18" 
                                    Margin="10,0" 
                                    Foreground="White"/>
-                        
+
                         <TextBlock x:Name="lblButton3"
                                    Text="Reports"
                                    FontSize="16"
@@ -391,19 +394,20 @@
                                    Visibility="Collapsed"/>
                     </StackPanel>
                 </Button>
-                
+
                 <Button Background="Transparent" 
                         BorderThickness="0" 
                         Height="50"
-                        Style="{StaticResource Animation}">
-                    
+                        Style="{StaticResource Animation}"
+                        Click="SideBarBtn_UploadTenantsClick">
+
                     <StackPanel Orientation="Horizontal">
-                        
+
                         <TextBlock Text="🔍" 
                                    FontSize="18" 
                                    Margin="10,0" 
                                    Foreground="White"/>
-                        
+
                         <TextBlock x:Name="lblButton4" 
                                    Text="Search"
                                    FontSize="16"
@@ -416,15 +420,16 @@
                 <Button Background="Transparent" 
                         BorderThickness="0"
                         Height="50"
-                        Style="{StaticResource Animation}">
-                  
+                        Style="{StaticResource Animation}"
+                        Click="SideBarBtn_AdminSettingsClick">
+
                     <StackPanel Orientation="Horizontal">
-                        
+
                         <TextBlock Text="⚙" 
                                    FontSize="18" 
                                    Margin="10,0"
                                    Foreground="White"/>
-                        
+
                         <TextBlock x:Name="lblButton5"
                                    Text="Settings"
                                    FontSize="16" 
@@ -433,14 +438,15 @@
                                    Visibility="Collapsed"/>
                     </StackPanel>
                 </Button>
-               
-                    <Button Background="Transparent"
+
+                <Button Background="Transparent"
                             BorderThickness="0" 
                             Height="50"
-                            Style="{StaticResource Animation}">
-                  
+                            Style="{StaticResource Animation}"
+                            Click="SideBarBtn_UserSettingsClick">
+
                     <StackPanel Orientation="Horizontal">
-                        
+
                         <TextBlock Text="👤" 
                                    FontSize="18" 
                                    Margin="10,0" 
@@ -459,7 +465,7 @@
         <Grid Margin="99,44,5,0">
             <Grid.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FFEE4540"/>
+                    <GradientStop Color="#FFEE4540" Offset="0"/>
                     <GradientStop Color="#FFC72C41" Offset="0.2"/>
                     <GradientStop Color="#FF801336" Offset="0.4"/>
                     <GradientStop Color="#FF670E33" Offset="0.6"/>
