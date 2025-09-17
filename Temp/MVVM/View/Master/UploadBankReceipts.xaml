@@ -9,6 +9,7 @@
         WindowStartupLocation="CenterScreen"
         mc:Ignorable="d"
         ResizeMode="NoResize"
+        Title="Upload Bank Receipts"
         Height="770" Width="1200">
 
     <Grid>

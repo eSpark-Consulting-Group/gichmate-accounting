@@ -9,7 +9,7 @@
         ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen"
         mc:Ignorable="d"
-        Title="DoubleJournalEntries"
+        Title="Double Journal Entries"
         Height="770" Width="1200">
 
 
@@ -84,7 +84,7 @@
                       AutoGenerateColumns="False"
                       HorizontalContentAlignment="Center"
                       TextBlock.TextAlignment="Center"
-                      SelectionMode="Single">
+                      SelectionMode="Single" SelectionChanged="JournalDataGrid_SelectionChanged">
                 <DataGrid.Columns>
                     <DataGridTextColumn Width="40" Header="SL" Binding="{Binding SL}" 
                             ElementStyle="{StaticResource CenterTextStyle}" />

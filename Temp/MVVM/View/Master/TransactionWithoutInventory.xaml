@@ -9,6 +9,7 @@
         BorderThickness="1.7"
         WindowStartupLocation="CenterScreen"
         mc:Ignorable="d"
+        Title="Transaction Without inventory"
         Height="770" Width="1200">
 
 

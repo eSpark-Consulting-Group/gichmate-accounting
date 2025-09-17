@@ -9,7 +9,7 @@
         WindowStartupLocation="CenterScreen"
         mc:Ignorable="d"
         ResizeMode="NoResize"
-        Title="UploadTenants" 
+        Title="Upload Tenants" 
         Height="770" Width="1200"
         >
 

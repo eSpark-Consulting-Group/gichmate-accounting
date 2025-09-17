@@ -2,6 +2,7 @@
 using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.Globalization;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
@@ -32,6 +33,10 @@ namespace FlexMold.MVVM.View.Accounts
             collectionStatusComboBox.SelectionChanged += Filters_Changed;
 
             postDatedGrid.MouseDoubleClick += postDatedGrid_MouseDoubleClick;
+
+
+
+            txtChqDate.SelectedDate = DateTime.Today;
         }
 
         private void PostDatedChequeReceiptView_Loaded(object sender, RoutedEventArgs e)
@@ -49,6 +54,8 @@ namespace FlexMold.MVVM.View.Accounts
             FillStatusCombo();
 
             voucherNoBox.Value = GetNextVoucherNo();
+
+
 
             LoadGrid();
         }
@@ -218,11 +225,48 @@ namespace FlexMold.MVVM.View.Accounts
 
         private void SaveOrUpdate()
         {
-            if (!decimal.TryParse(txtAmount.Text, out decimal amount) || amount <= 0m)
+            if (voucherNoBox.Value == null || voucherNoBox.Value == 0)
             {
-                MessageBox.Show("Enter valid amount greater than zero.", "Validation", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("Voucher number is required.");
                 return;
             }
+
+            if (string.IsNullOrEmpty(txtPartyBox2.Text))
+            {
+                MessageBox.Show("Party Account name is required");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(txtBankAccountBox.Text))
+            {
+                MessageBox.Show("Bank Account name is required");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(collectionStatusComboBox.Text))
+            {
+                MessageBox.Show("Collection Status should be selected");
+                return;
+            }
+
+            if (txtChqDate.SelectedDate == null)
+            {
+                MessageBox.Show("Please select a date to proceed");
+                return;
+            }
+
+            if (!decimal.TryParse(txtAmount.Text, NumberStyles.Any, CultureInfo.InvariantCulture, out decimal amount) || amount <= 0m)
+            {
+                MessageBox.Show("Enter a valid Amount greater than zero.", "Validation", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+
+            else if (amount > 99999999.99m)
+            {
+                MessageBox.Show("Limit Exceeded. Please Enter Valid Amount.");
+                return;
+            }
+
 
             int? partyId = txtPartyBox2.SelectedValue != null ? (int?)Convert.ToInt32(txtPartyBox2.SelectedValue) : null;
             int? bankAcctId = txtBankAccountBox.SelectedValue != null ? (int?)Convert.ToInt32(txtBankAccountBox.SelectedValue) : null;
@@ -275,9 +319,9 @@ namespace FlexMold.MVVM.View.Accounts
                 {
                     using var cmd = new SqlCommand(@"
                                                     INSERT INTO VchrTranLog
-                                                        (VchrNo, VchrDate, VchrAmount, VchrType, VchrName, SalesManId, FromAccountId, ToAccountId, TranDate, UserId, Narration, FK_BranchId, SequenceNo, Terminal, TerminalName)
+                                                        (VchrNo, VchrDate, VchrAmount, VchrType, VchrName, SalesManId, FromAccountId, ToAccountId, TranDate, UserId, Narration, FK_BranchId, SequenceNo, Terminal)
                                                     VALUES
-                                                        (@VchrNo, @VchrDate, @VchrAmount, @VchrType, @VchrName, @SalesManId, @FromAccountId, @ToAccountId, GETDATE(), @UserId, @Narration, @FK_BranchId, @SequenceNo, @Terminal, @TerminalName);
+                                                        (@VchrNo, @VchrDate, @VchrAmount, @VchrType, @VchrName, @SalesManId, @FromAccountId, @ToAccountId, GETDATE(), @UserId, @Narration, @FK_BranchId, @SequenceNo, @Terminal);
                                                     SELECT CAST(SCOPE_IDENTITY() AS int);
                                                     ", cn, tx);
 
@@ -299,7 +343,6 @@ namespace FlexMold.MVVM.View.Accounts
                     cmd.Parameters.AddWithValue("@FK_BranchId", currentBranchId);
                     cmd.Parameters.AddWithValue("@SequenceNo", 1);
                     cmd.Parameters.AddWithValue("@Terminal", DBNull.Value);
-                    cmd.Parameters.AddWithValue("@TerminalName", DBNull.Value);
 
                     object o = cmd.ExecuteScalar();
                     currentVchrId = o != null ? Convert.ToInt32(o) : (int?)null;
@@ -610,6 +653,69 @@ namespace FlexMold.MVVM.View.Accounts
             catch
             {
                 return 0;
+            }
+        }
+
+
+        private void postDatedGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (postDatedGrid.SelectedItem is not DataRowView drv) return;
+
+            try
+            {
+                voucherNoBox.Value = int.TryParse(drv["VchrId"]?.ToString(), out int vchrId) ? vchrId : 0;
+                DatePickerBox.SelectedDate = drv["Date"] == DBNull.Value ? (DateTime?)null : Convert.ToDateTime(drv["Date"]);
+
+                txtBank.Text = drv["Bank"]?.ToString() ?? string.Empty;
+                txtBranch.Text = drv["Branch"]?.ToString() ?? string.Empty;
+                txtChqNo.Text = drv["CheqNo"]?.ToString() ?? string.Empty;
+                txtCheque.Text = drv["CheqNo"]?.ToString() ?? string.Empty; 
+                txtAmount.Text = drv["Amount"] == DBNull.Value
+                    ? "0.00"
+                    : Convert.ToDecimal(drv["Amount"]).ToString("N2", CultureInfo.InvariantCulture);
+                txtReferenceNo.Text = drv["RefNo"]?.ToString() ?? string.Empty;
+                txtRemarks.Text = drv["Remarks"]?.ToString() ?? string.Empty;
+                txtChqDate.SelectedDate = drv["CheqDate"] == DBNull.Value ? (DateTime?)null : Convert.ToDateTime(drv["CheqDate"]);
+
+                if (drv.Row.Table.Columns.Contains("PartyAccountName") && drv["PartyAccountName"] != DBNull.Value)
+                {
+                    SelectComboBoxItemByName(txtPartyBox, drv["PartyAccountName"].ToString());
+                    SelectComboBoxItemByName(txtPartyBox2, drv["PartyAccountName"].ToString());
+                }
+                else
+                {
+                    txtPartyBox.SelectedIndex = -1;
+                    txtPartyBox2.SelectedIndex = -1;
+                }
+
+                if (drv.Row.Table.Columns.Contains("BankAccountName") && drv["BankAccountName"] != DBNull.Value)
+                {
+                    SelectComboBoxItemByName(txtBankAccountBox, drv["BankAccountName"].ToString());
+                }
+                else
+                {
+                    txtBankAccountBox.SelectedIndex = -1;
+                }
+
+                collectionStatusComboBox.SelectedItem = drv["Status"]?.ToString() ?? "Pending";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error while loading selection: {ex.Message}",
+                    "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+        private void SelectComboBoxItemByName(ComboBox combo, string accountName)
+        {
+            foreach (var item in combo.Items)
+            {
+                if (item is DataRowView r && r.Row.Table.Columns.Contains("AccountName")
+                    && r["AccountName"].ToString() == accountName)
+                {
+                    combo.SelectedItem = item;
+                    break;
+                }
             }
         }
 

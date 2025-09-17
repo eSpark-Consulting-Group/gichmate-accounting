@@ -6,13 +6,11 @@
         xmlns:local="clr-namespace:FlexMold.MVVM.View.Firm"
         WindowStartupLocation="CenterScreen"
         mc:Ignorable="d"
-        WindowStyle="None"
-         Title="AdminSettings" Height="900" Width="1123">
-
-
+        BorderBrush="White"
+        BorderThickness="3"
+        Title="AdminSettings" Height="770" Width="1200">
     <Window.Resources>
         <!-- Angled TextBox Style -->
-
         <Style x:Key="AngledTextBoxStyle" TargetType="TextBox">
             <Setter Property="Background" Value="White"/>
             <Setter Property="BorderBrush" Value="#FF801336"/>
@@ -42,7 +40,6 @@
                 </Setter.Value>
             </Setter>
         </Style>
-
         <!-- Angled PasswordBox Style -->
         <Style x:Key="AngledPasswordBoxStyle" TargetType="PasswordBox">
             <Setter Property="Background" Value="White"/>
@@ -74,13 +71,8 @@
             </Setter>
         </Style>
     </Window.Resources>
-
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="472*"/>
-            <ColumnDefinition Width="30*"/>
-            <ColumnDefinition Width="621*"/>
-        </Grid.ColumnDefinitions>
+
         <!-- Gradient Background -->
         <Grid.Background>
             <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
@@ -92,28 +84,25 @@
                 <GradientStop Color="#FF670E33" Offset="0.426"/>
             </LinearGradientBrush>
         </Grid.Background>
-
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="2*"/>
             <RowDefinition Height="899*"/>
         </Grid.RowDefinitions>
-
-
-        <!-- Top Navigation Bar -->
-        <Grid Background="#EE4540" Margin="0,0,0,2" Grid.RowSpan="2" Grid.ColumnSpan="3"/>
-
+        <!--<Button Style="{StaticResource AnimatedRedButton}"
+                Height="30"
+                Width="50"
+                Content="X"
+                Margin="1100,0,0,0" Click="Button_Click"/>-->
         <!-- Register Form -->
         <ScrollViewer Grid.Row="2" VerticalScrollBarVisibility="Auto" Margin="0,124,0,80" Grid.ColumnSpan="3">
             <StackPanel HorizontalAlignment="Center" Width="600" Margin="0,20">
                 <!-- Logo + Title -->
                 <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
-
                     <TextBlock Text="Admin Settings" FontFamily="Fonts/#font2" FontSize="40"
                                Foreground="White" FontWeight="Bold" VerticalAlignment="Center"
-                               Margin="0,10,0,0"/>
+                               Margin="160,10,0,0"/>
                 </StackPanel>
-
                 <!-- Form Fields -->
                 <StackPanel Orientation="Horizontal" Margin="0,5">
                     <TextBlock Text="          User Name :" Width="170" FontSize="20" FontFamily="Fonts/#myfont"
@@ -121,7 +110,6 @@
                                Margin="10"/>
                     <TextBox x:Name="userName" Style="{StaticResource AngledTextBoxStyle}" Width="315" Height="28" Foreground="Black"/>
                 </StackPanel>
-
                 <StackPanel Orientation="Horizontal" Margin="0,15,0,10">
                     <TextBlock Margin="10"
                                Text="      Old Password :" Width="170" FontSize="20" FontFamily="Fonts/#myfont"
@@ -129,14 +117,12 @@
                                />
                     <TextBox x:Name="oldPassword" Style="{StaticResource AngledTextBoxStyle}" Width="317" Height="28" Foreground="Black"/>
                 </StackPanel>
-
                 <StackPanel Orientation="Horizontal" Margin="0,5">
                     <TextBlock Margin="10"
                                Text="     New Password :" Width="172" FontSize="20" FontFamily="Fonts/#myfont"
                                Foreground="WhiteSmoke" VerticalAlignment="Center"/>
                     <TextBox x:Name="newPassword" Style="{StaticResource AngledTextBoxStyle}" Width="317" Height="28" Foreground="Black"/>
                 </StackPanel>
-
                 <StackPanel Orientation="Horizontal" Margin="0,5">
                     <TextBlock Margin="10"
                                Text="Confirm Password :" Width="173" FontSize="20" FontFamily="Fonts/#myfont"
@@ -145,30 +131,23 @@
                              Width="316" 
                              Height="28"/>
                 </StackPanel>
-
-
-
                 <!-- Register Button -->
                 <Button x:Name="Update" Content="Update"
                         Width="150" Height="45" Margin="90,40,150,-44"
-                        FontSize="14" FontWeight="Medium"
-                        Foreground="White" Background="#FF801336"
+                        Style="{StaticResource AnimatedRedButton}"
                         HorizontalAlignment="Center" Click="Btn_Update" >
                     <Button.Effect>
                         <DropShadowEffect/>
                     </Button.Effect>
                 </Button>
-
                 <Button Content="Clear"
                         Width="150" Height="45" Margin="270,0,0,0"
-                        FontSize="14" FontWeight="Medium"
-                        Foreground="White" Background="#FF801336"
+                        Style="{StaticResource AnimatedRedButton}"
                         HorizontalAlignment="Center" Click="Button_Click_1" >
                     <Button.Effect>
                         <DropShadowEffect/>
                     </Button.Effect>
                 </Button>
-
             </StackPanel>
         </ScrollViewer>
         <!-- Dashboard Content Panel -->
@@ -177,26 +156,22 @@
             <!-- Copy the StackPanel you already have (with logo, text, buttons) inside this one -->
         </StackPanel>
         <Grid Margin="384,562,-1538,-217" Grid.Row="2" Grid.Column="2"
-	  >
-
+      >
             <Grid.RenderTransform>
                 <RotateTransform Angle ="45" />
             </Grid.RenderTransform>
-
-            <StackPanel Orientation ="Horizontal" Margin="0,0,658,0">
-                <StackPanel/>
-                <StackPanel>
+            <StackPanel Orientation ="Horizontal" Margin="226,-500,432,499">
+                <StackPanel Width="505">
                     <Border Width="682" 
-					Height="35"
-					Background="#EE4540"
-					Margin="150,0,0,0"
-					CornerRadius="20"/>
-
+                    Height="35"
+                    Background="#EE4540"
+                    Margin="150,0,0,0"
+                    CornerRadius="20"/>
                     <Border Width="833"
-					Height="35"
-					Background="white"
-					Margin="0,15,0,0"
-					CornerRadius="20" RenderTransformOrigin="0.5,0.5">
+                    Height="35"
+                    Background="white"
+                    Margin="0,15,0,0"
+                    CornerRadius="20" RenderTransformOrigin="0.5,0.5">
                         <Border.RenderTransform>
                             <TransformGroup>
                                 <ScaleTransform/>
@@ -206,18 +181,14 @@
                             </TransformGroup>
                         </Border.RenderTransform>
                     </Border>
-
                     <Border Width="700"
-					Height="35"
-					Background="#EE4540"
-					Margin="75,15,0,0"
-					CornerRadius="20"/>
+                    Height="35"
+                    Background="#EE4540"
+                    Margin="75,15,0,0"
+                    CornerRadius="20"/>
                 </StackPanel>
-
+                <StackPanel/>
             </StackPanel>
-
         </Grid>
-        <Button FontSize="22" Content="Go To Next Page" HorizontalAlignment="Left" Height="37" Margin="431,0,0,0" Grid.Row="1" VerticalAlignment="Top" Width="190" Click="Button_Click" Grid.RowSpan="2" Grid.Column="2"/>
     </Grid>
-
 </Window>

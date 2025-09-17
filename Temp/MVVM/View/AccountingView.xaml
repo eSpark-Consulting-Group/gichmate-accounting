@@ -139,9 +139,6 @@
                         <MenuItem Header="Account Screens" IsEnabled="False"/>
                         <Separator/>
 
-                        <MenuItem Header="Default Account Screen"
-             Command="{Binding DefaultAccountScreenCommand}"/>
-
                         <MenuItem Header="Bank Payment"
              Command="{Binding BankPaymentCommand}"/>
 

@@ -188,7 +188,7 @@
                       x:Name="dgVouchers"
                       FontSize="14"
                       HorizontalContentAlignment="Center"
-                      TextBlock.TextAlignment="Center"/>
+                      TextBlock.TextAlignment="Center" SelectionChanged="dgVouchers_SelectionChanged_1"/>
 
         </StackPanel>
 

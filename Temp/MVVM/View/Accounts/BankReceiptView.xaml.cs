@@ -325,11 +325,43 @@ namespace FlexMold.MVVM.View.Accounts
         {
             try
             {
+
+                if (VoucherNoBox.Value == null || VoucherNoBox.Value == 0)
+                {
+                    MessageBox.Show("Voucher number is required.");
+                    return;
+                }
+
+                if (string.IsNullOrEmpty(AccountCombo.Text))
+                {
+                    MessageBox.Show("Account name is required");
+                    return;
+                }
+
+                if (string.IsNullOrEmpty(PaidByCombo2.Text))
+                {
+                    MessageBox.Show("Collected By field is required");
+                    return;
+                }
+
+                if (string.IsNullOrEmpty(BankAccountCombo.Text))
+                {
+                    MessageBox.Show("Bank Account Name is required");
+                    return;
+                }
+
                 if (!decimal.TryParse(AmountBox.Text, NumberStyles.Any, CultureInfo.InvariantCulture, out decimal amount) || amount <= 0m)
                 {
                     MessageBox.Show("Enter a valid Amount greater than zero.", "Validation", MessageBoxButton.OK, MessageBoxImage.Warning);
                     return;
                 }
+
+                else if (amount > 99999999.99m)
+                {
+                    MessageBox.Show("Limit Exceeded. Please Enter Valid Amount.");
+                    return;
+                }
+
 
                 int fromAccountId = AccountCombo.SelectedValue != null ? Convert.ToInt32(AccountCombo.SelectedValue) : 0; // party / opposite account
                 int toAccountId = BankAccountCombo.SelectedValue != null ? Convert.ToInt32(BankAccountCombo.SelectedValue) : 0; // bank account

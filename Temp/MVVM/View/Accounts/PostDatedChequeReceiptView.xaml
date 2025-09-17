@@ -113,7 +113,7 @@
             <DataGrid x:Name="postDatedGrid"
                       Height="350"
                       HorizontalContentAlignment="Center"
-                      TextBlock.TextAlignment="Center">
+                      TextBlock.TextAlignment="Center" SelectionChanged="postDatedGrid_SelectionChanged">
 
             </DataGrid>
         </StackPanel>
@@ -183,6 +183,7 @@
             <TextBox Width="250"
                      Style="{StaticResource AccountsTextBox}"
                      Height="30"
+                     Text="0.00"
                      x:Name="txtAmount"
                      VerticalContentAlignment="Center"/>
 

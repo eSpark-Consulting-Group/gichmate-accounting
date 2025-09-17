@@ -165,14 +165,44 @@ namespace FlexMold.MVVM.View.Accounts
 
 
 
-
         #region Save / Edit / Delete / Clear
 
         private void Save_Click(object sender, RoutedEventArgs e)
         {
+            
+            if (VoucherNoBox.Value == null || VoucherNoBox.Value == 0)
+            {
+                MessageBox.Show("Voucher number is required.");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(AccountCombo.Text))
+            {
+                MessageBox.Show("Account name is required");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(PaidByCombo.Text))
+            {
+                MessageBox.Show("Paid By field is required");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(BankAccountCombo.Text))
+            {
+                MessageBox.Show("Cash Account Name is required"); //CashAccountCombo but called BankAcountCombo to reduce the complexity or re0implementing/creating
+                return;
+            }
+
             if (!decimal.TryParse(AmountBox.Text, NumberStyles.Number, CultureInfo.CurrentCulture, out decimal amount) || amount <= 0m)
             {
-                MessageBox.Show("Enter valid amount (>0).", "Validation", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("Enter a valid Amount greater than zero.", "Validation", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+
+            else if (amount > 99999999.99m)
+            {
+                MessageBox.Show("Limit Exceeded. Please Enter Valid Amount.");
                 return;
             }
 
@@ -182,6 +212,7 @@ namespace FlexMold.MVVM.View.Accounts
                 MessageBox.Show("Enter valid discount.", "Validation", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
+
 
             int fromAccountId = AccountCombo.SelectedValue != null ? Convert.ToInt32(AccountCombo.SelectedValue) : 0;
             int toAccountId = BankAccountCombo.SelectedValue != null ? Convert.ToInt32(BankAccountCombo.SelectedValue) : 0;

@@ -21,20 +21,14 @@ namespace FlexMold.MVVM.View.Firm
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            var firmDetails = new FirmDetails();
-            firmDetails.Show();
-            Close();
-        }
+       
        private void Btn_Update(object sender, RoutedEventArgs e)
 {
-    //string connectionString = "Data Source=DESKTOP-E09TG4T\\SQLEXPRESS;Initial Catalog=PSVAT5;Integrated Security=True;TrustServerCertificate=True;";
 
-    string userNameValue = userName.Text.Trim();
-    string oldPasswordValue = oldPassword.Text.Trim();
-    string newPasswordValue = newPassword.Text.Trim();
-    string confirmPasswordValue = confirmPassword.Text.Trim();
+        string userNameValue = userName.Text.Trim();
+        string oldPasswordValue = oldPassword.Text.Trim();
+        string newPasswordValue = newPassword.Text.Trim();
+        string confirmPasswordValue = confirmPassword.Text.Trim();
 
     if (string.IsNullOrWhiteSpace(userNameValue) || string.IsNullOrWhiteSpace(oldPasswordValue) ||
         string.IsNullOrWhiteSpace(newPasswordValue) || string.IsNullOrWhiteSpace(confirmPasswordValue))

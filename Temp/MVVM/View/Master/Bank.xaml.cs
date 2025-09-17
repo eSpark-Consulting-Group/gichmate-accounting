@@ -157,7 +157,7 @@ namespace FlexMold.MVVM.View.Master
             OpeningBalanceTextBox.Text = "0";
             DrCrComboBox.SelectedIndex = 0;
             ActiveCheckbox.IsChecked = false;
-            DatePickBox.SelectedDate = DateTime.Now;
+            DatePickBox.SelectedDate = null;
             DescriptionInputBox.Text = "";
             RoadTextBox.Text = "";
             BuildingTextBox.Text = "";

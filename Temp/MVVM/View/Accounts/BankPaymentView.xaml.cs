@@ -4,12 +4,14 @@ using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
+using System.Diagnostics;
 using System.Globalization;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using static ServiceStack.Diagnostics.Events;
 
 namespace FlexMold.MVVM.View.Accounts
 {
@@ -201,13 +203,45 @@ namespace FlexMold.MVVM.View.Accounts
 
         #region Save / Update / Delete / Clear
 
-        private void Save_Click(object sender, RoutedEventArgs e)
-        {
-            if (!decimal.TryParse(AmountBox.Text, NumberStyles.Any, CultureInfo.InvariantCulture, out decimal amount) || amount <= 0m)
+        private void Save_Click(object sender, RoutedEventArgs e) {
+
+            if (VoucherNoBox.Value == null || VoucherNoBox.Value == 0)
             {
-                MessageBox.Show("Enter valid amount (>0).", "Validation", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("Voucher number is required.");
                 return;
             }
+
+            if (string.IsNullOrEmpty(AccountCombo.Text))
+            {
+                MessageBox.Show("Account name is required");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(PaidByCombo.Text))
+            {
+                MessageBox.Show("Paid By field is required");
+                return;
+            }
+            
+            if (string.IsNullOrEmpty(BankAccountCombo.Text))
+            {
+                MessageBox.Show("Bank Account Name is required");
+                return;
+            }
+                       
+            if (!decimal.TryParse(AmountBox.Text, NumberStyles.Any, CultureInfo.InvariantCulture, out decimal amount) || amount <= 0m)
+            {
+                MessageBox.Show("Enter a valid Amount greater than zero.", "Validation", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+
+            else if (amount > 99999999.99m)
+            {
+                MessageBox.Show("Limit Exceeded. Please Enter Valid Amount.");
+                return;
+            }
+
+
 
             int fromAccountId = AccountCombo.SelectedValue != null ? Convert.ToInt32(AccountCombo.SelectedValue) : 0;
             int toAccountId = BankAccountCombo.SelectedValue != null ? Convert.ToInt32(BankAccountCombo.SelectedValue) : 0;

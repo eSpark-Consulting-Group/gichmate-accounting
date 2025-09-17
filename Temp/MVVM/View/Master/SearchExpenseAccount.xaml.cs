@@ -28,10 +28,10 @@ namespace FlexMold.MVVM.View.Master
                 @"SELECT Account.AccountId AS ID,
                  Account.AccountName AS AccountName,
                  AccountGroup.GroupName AS AccountGroup
-          FROM Account
-          JOIN AccountGroup ON Account.AGroupId = AccountGroup.AGroupId
-          WHERE AccountGroup.GroupName LIKE '%EXPENSE%'
-          ORDER BY Account.AccountName", conn))
+                 FROM Account
+                 JOIN AccountGroup ON Account.AGroupId = AccountGroup.AGroupId
+                 WHERE AccountGroup.GroupName LIKE '%EXPENSE%'
+                 ORDER BY Account.AccountName", conn))
             {
                 conn.Open();
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);

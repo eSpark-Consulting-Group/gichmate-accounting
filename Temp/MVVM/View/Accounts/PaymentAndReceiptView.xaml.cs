@@ -13,7 +13,7 @@ namespace FlexMold.MVVM.View.Accounts
 {
     public partial class PaymentAndReceiptView : UserControl
     {
-        
+
         private readonly string _conn = Settings.Default.strConnetionString;
 
 
@@ -28,8 +28,6 @@ namespace FlexMold.MVVM.View.Accounts
 
             Loaded += PaymentAndReceiptView_Loaded;
             Loaded += (s, e) => WireButtonsByContent();
-
-            dgVouchers.SelectionChanged += DgVouchers_SelectionChanged;
         }
 
         private void PaymentAndReceiptView_Loaded(object sender, RoutedEventArgs e)
@@ -42,7 +40,7 @@ namespace FlexMold.MVVM.View.Accounts
                 LoadEmployees();
                 LoadVoucherTypes();
                 LoadVouchers();
-                
+
                 TrySetNextVoucherNo();
 
                 UpdateLedgerBalanceDisplay();
@@ -96,7 +94,8 @@ namespace FlexMold.MVVM.View.Accounts
             cmbVoucherType.Items.Add("Debit Note");
             cmbVoucherType.Items.Add("Credit Note");
             cmbVoucherType.Items.Add("Journal Voucher");
-            cmbVoucherType.SelectedIndex = 0;
+            //
+            //cmbVoucherType.SelectedIndex = 0;
         }
 
         private void LoadVouchers()
@@ -125,9 +124,9 @@ namespace FlexMold.MVVM.View.Accounts
             }
 
             dgVouchers.ItemsSource = dt.DefaultView;
-                     
+
             var total = dt.AsEnumerable().Sum(r => r.Field<decimal?>("VchrAmount") ?? 0m);
-            TxtAmountInWords.Text = total.ToString("N2", CultureInfo.InvariantCulture); 
+            TxtAmountInWords.Text = total.ToString("N2", CultureInfo.InvariantCulture);
         }
 
         #endregion
@@ -221,6 +220,42 @@ namespace FlexMold.MVVM.View.Accounts
 
         private void SaveVoucher_Click(object sender, RoutedEventArgs e)
         {
+            if (txtVoucherNo.Value == null || txtVoucherNo.Value == 0)
+            {
+                MessageBox.Show("Voucher number is required.");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(cmbVoucherType.Text))
+            {
+                MessageBox.Show("Selection of Voucher type is required (Payment/Receipt)");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(cmbParty.Text))
+            {
+                MessageBox.Show("Party Name is required");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(CashBankAccount.Text))
+            {
+                MessageBox.Show("Selection of Cash/Bank Account is required");
+                return;
+            }
+
+            if (!decimal.TryParse(txtPaidAmount.Text, out decimal amount) || amount <= 0)
+            {
+                MessageBox.Show("Enter a valid Amount greater than zero.");
+                return;
+            }
+
+            else if (amount > 99999999.99m)
+            {
+                MessageBox.Show("Limit Exceeded. Please Enter Valid Amount.");
+                return;
+            }
+
             try
             {
                 SaveOrUpdateVoucher(isUpdate: false);
@@ -348,7 +383,7 @@ namespace FlexMold.MVVM.View.Accounts
 
             MessageBox.Show(isUpdate ? "Voucher updated." : "Voucher saved.", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
 
-           LoadVouchers();
+            LoadVouchers();
             TrySetNextVoucherNo();
             ClearFormFields(keepVoucherNumber: false);
         }
@@ -478,57 +513,7 @@ namespace FlexMold.MVVM.View.Accounts
 
         #region DataGrid selection and UI wiring
 
-        private void DgVouchers_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            try
-            {
-                if (dgVouchers.SelectedItem == null) return;
 
-                var drv = dgVouchers.SelectedItem as DataRowView;
-                if (drv == null) return;
-
-                _currentVchrTranId = drv["VchrTranId"] == DBNull.Value ? (int?)null : Convert.ToInt32(drv["VchrTranId"]);
-                txtVoucherNo.Value = drv["VchrNo"] == DBNull.Value ? 0 : Convert.ToInt32(drv["VchrNo"]);
-                dpVoucherDate.SelectedDate = drv["VchrDate"] == DBNull.Value ? (DateTime?)null : Convert.ToDateTime(drv["VchrDate"]);
-                txtPaidAmount.Text = drv["VchrAmount"] == DBNull.Value ? "0.00" : Convert.ToDecimal(drv["VchrAmount"]).ToString("N2", CultureInfo.InvariantCulture);
-                txtNarration.Text = drv["Narration"]?.ToString() ?? string.Empty;
-
-                
-                if (drv.Row.Table.Columns.Contains("FromAccountName") && drv["FromAccountName"] != DBNull.Value)
-                {
-               
-                    SelectComboBoxItemByText(cmbParty, drv["FromAccountName"].ToString());
-                }
-                else
-                {
-                    cmbParty.SelectedIndex = -1;
-                }
-
-                if (drv.Row.Table.Columns.Contains("ToAccountName") && drv["ToAccountName"] != DBNull.Value)
-                {
-                    SelectComboBoxItemByText(CashBankAccount, drv["ToAccountName"].ToString());
-                }
-                else
-                {
-                    CashBankAccount.SelectedIndex = -1;
-                }
-
-                if (drv.Row.Table.Columns.Contains("SalesManId") && drv["SalesManId"] != DBNull.Value)
-                {
-                    SelectedValue.SelectedValue = drv["SalesManId"];
-                }
-                else
-                {
-                    SelectedValue.SelectedIndex = -1;
-                }
-
-                UpdateLedgerBalanceDisplay();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error selecting voucher: " + ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
-        }
 
         private void SelectComboBoxItemByText(ComboBox cb, string text)
         {
@@ -565,7 +550,7 @@ namespace FlexMold.MVVM.View.Accounts
 
         private void WireButtonsByContent()
         {
-           
+
             var buttons = FindVisualChildren<Button>(this);
             foreach (var b in buttons)
             {
@@ -627,6 +612,152 @@ namespace FlexMold.MVVM.View.Accounts
         {
             MessageBox.Show("Mail requested - not implemented here.", "Info", MessageBoxButton.OK, MessageBoxImage.Information);
         }
+
+
+
+        private void dgVouchers_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
+        {
+            try
+            {
+                if (dgVouchers.SelectedItem == null)
+                {
+                    ClearFormFields(keepVoucherNumber: true);
+                    return;
+                }
+
+                if (!(dgVouchers.SelectedItem is DataRowView drv)) return;
+                if (drv.Row == null || drv["VchrTranId"] == DBNull.Value)
+                {
+                    ClearFormFields(keepVoucherNumber: true);
+                    return;
+                }
+
+                _currentVchrTranId = Convert.ToInt32(drv["VchrTranId"]);
+
+                using (var cn = new SqlConnection(_conn))
+                using (var cmd = new SqlCommand(@"
+                SELECT VchrNo, VchrDate, VchrAmount, VchrType, VchrName,
+                       FromAccountId, ToAccountId, Narration, SalesManId
+                FROM VchrTranLog
+                WHERE VchrTranId = @VchrTranId
+            ", cn))
+                {
+                    cmd.Parameters.AddWithValue("@VchrTranId", _currentVchrTranId.Value);
+                    cn.Open();
+                    using (var rdr = cmd.ExecuteReader())
+                    {
+                        if (!rdr.Read())
+                        {
+                            ClearFormFields(keepVoucherNumber: true);
+                            return;
+                        }
+
+                        txtVoucherNo.Value = rdr["VchrNo"] == DBNull.Value ? GetNextVoucherNo() : Convert.ToInt32(rdr["VchrNo"]);
+                        dpVoucherDate.SelectedDate = rdr["VchrDate"] == DBNull.Value ? (DateTime?)DateTime.Today : Convert.ToDateTime(rdr["VchrDate"]);
+                        cmbVoucherType.Text = rdr["VchrType"] == DBNull.Value ? string.Empty : rdr["VchrType"].ToString();
+                        txtNarration.Text = rdr["Narration"] == DBNull.Value ? string.Empty : rdr["Narration"].ToString();
+
+                        var amt = rdr["VchrAmount"] == DBNull.Value ? 0m : Convert.ToDecimal(rdr["VchrAmount"]);
+                        txtPaidAmount.Text = amt.ToString("N2", CultureInfo.InvariantCulture);
+
+                        object fromAccount = rdr["FromAccountId"] == DBNull.Value ? null : rdr["FromAccountId"];
+                        object toAccount = rdr["ToAccountId"] == DBNull.Value ? null : rdr["ToAccountId"];
+                        object salesMan = rdr["SalesManId"] == DBNull.Value ? null : rdr["SalesManId"];
+
+                        if (fromAccount != null)
+                            cmbParty.SelectedValue = Convert.ToInt32(fromAccount);
+                        else
+                            cmbParty.SelectedIndex = -1;
+
+                        if (toAccount != null)
+                            CashBankAccount.SelectedValue = Convert.ToInt32(toAccount);
+                        else
+                            CashBankAccount.SelectedIndex = -1;
+
+                        if (salesMan != null)
+                            SelectedValue.SelectedValue = Convert.ToInt32(salesMan);
+                        else
+                            SelectedValue.SelectedIndex = -1;
+
+                        UpdateLedgerBalanceDisplay();
+
+                        TxtAmountInWords.Text = AmountToWords(amt);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error populating voucher: " + ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+
+        private static string AmountToWords(decimal amount)
+        {
+            var integral = (long)Math.Floor(amount);
+            var cents = (int)((amount - integral) * 100m);
+            var words = NumberToWords(integral);
+            return string.IsNullOrWhiteSpace(words) ? $"0 and {cents:00}/100" : $"{words} and {cents:00}/100";
+        }
+
+        private static string NumberToWords(long number)
+        {
+            if (number == 0) return "Zero";
+
+            if (number < 0) return "Minus " + NumberToWords(Math.Abs(number));
+
+            string words = "";
+
+            if ((number / 1000000000) > 0)
+            {
+                words += NumberToWords(number / 1000000000) + " Billion ";
+                number %= 1000000000;
+            }
+
+            if ((number / 1000000) > 0)
+            {
+                words += NumberToWords(number / 1000000) + " Million ";
+                number %= 1000000;
+            }
+
+            if ((number / 1000) > 0)
+            {
+                words += NumberToWords(number / 1000) + " Thousand ";
+                number %= 1000;
+            }
+
+            if ((number / 100) > 0)
+            {
+                words += NumberToWords(number / 100) + " Hundred ";
+                number %= 100;
+            }
+
+            if (number > 0)
+            {
+                if (words != "") words += "";
+
+                var unitsMap = new[]
+                {
+            "Zero","One","Two","Three","Four","Five","Six","Seven","Eight","Nine","Ten",
+            "Eleven","Twelve","Thirteen","Fourteen","Fifteen","Sixteen","Seventeen","Eighteen","Nineteen"
+        };
+                var tensMap = new[]
+                {
+            "Zero","Ten","Twenty","Thirty","Forty","Fifty","Sixty","Seventy","Eighty","Ninety"
+        };
+
+                if (number < 20)
+                    words += unitsMap[number];
+                else
+                {
+                    words += tensMap[number / 10];
+                    if ((number % 10) > 0) words += " " + unitsMap[number % 10];
+                }
+            }
+
+            return words.Trim();
+        }
+
 
         #endregion
     }

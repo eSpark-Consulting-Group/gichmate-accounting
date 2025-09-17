@@ -182,7 +182,7 @@
 
 
             <CheckBox x:Name="DiscountChk" 
-                      Content="    Discount : "
+                      Content="   Discount : "
                       VerticalAlignment="Center" 
                       Width="101" 
                       FontSize="15"

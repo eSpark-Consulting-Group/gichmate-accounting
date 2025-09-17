@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Globalization;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
@@ -19,6 +20,7 @@ namespace FlexMold.MVVM.View.Master
             InitializeComponent();
             LoadAccounts();
             LoadVouchers();
+            DatePickBox.SelectedDate = DateTime.Now;
         }
 
         #region Models
@@ -118,9 +120,35 @@ namespace FlexMold.MVVM.View.Master
         #region Button Events
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
-            if (FromAccCreditBox.SelectedValue == null || ToAccDebitBox.SelectedValue == null)
+
+            if (UpDownBox.Value == null || UpDownBox.Value == 0)
             {
-                MessageBox.Show("Please select accounts.");
+                MessageBox.Show("Voucher number is required.");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(FromAccCreditBox.Text))
+            {
+                MessageBox.Show("Account Credit Selection is required");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(ToAccDebitBox.Text))
+            {
+                MessageBox.Show("Account Debit selection is required");
+                return;
+            }
+
+
+            if (!decimal.TryParse(AmountBox.Text, NumberStyles.Any, CultureInfo.InvariantCulture, out decimal amount2) || amount2 <= 0m)
+            {
+                MessageBox.Show("Enter a valid Amount greater than zero.", "Validation", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+
+            else if (amount2 > 99999999.99m)
+            {
+                MessageBox.Show("Limit Exceeded. Please Enter Valid Amount.");
                 return;
             }
 
@@ -261,5 +289,25 @@ namespace FlexMold.MVVM.View.Master
                  
         }
         #endregion
+
+        private void JournalDataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (JournalDataGrid.SelectedItem is JournalEntry selected)
+            {
+                editingVchrId = selected.VchrId;
+                UpDownBox.Value = selected.VoucherNo;
+                DatePickBox.SelectedDate = selected.Date;
+
+                FromAccCreditBox.SelectedValue = GetAccountIdByName(selected.FromAccount);
+                ToAccDebitBox.SelectedValue = GetAccountIdByName(selected.ToAccount);
+
+                AmountBox.Text = selected.Amount.ToString("N2");
+                NarrationBox.Text = selected.Narration;
+            }
+            else
+            {
+                MessageBox.Show("Select a row to edit.");
+            }
+        }
     }
 }

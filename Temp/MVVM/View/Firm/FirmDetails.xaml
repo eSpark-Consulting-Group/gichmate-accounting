@@ -7,7 +7,7 @@
         xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls" x:Class="FlexMold.MVVM.View.Firm.FirmDetails"
         WindowStartupLocation="CenterScreen"
         mc:Ignorable="d"      
-        Title="FirmDetails" Height="900" Width="1123">
+        Title="FirmDetails" Height="770" Width="1200">
 
     <Window.Resources>
         <!-- Label Style -->
@@ -117,7 +117,7 @@
             <ColumnDefinition Width="450"/>
         </Grid.ColumnDefinitions>
 
-        <!-- Left Sidebar / Branding -->
+
         <Grid Grid.Column="0" Margin="0,67,0,10">
             <StackPanel>
                 <TextBlock Text="Company Details"
@@ -133,7 +133,7 @@
                   Margin="0,10,0,0"
                   IsExpanded="False"
                   Foreground="White"
-                  Background="#20FFFFFF">
+                  Background="#20FF0000" BorderBrush="Pink">
 
                     <StackPanel>
                         <Expander Header="📍 Location"
@@ -171,61 +171,67 @@
             </StackPanel>
         </Grid>
 
+        <Button Style="{StaticResource AnimatedRedButton}"
+             Height="30"
+             Width="50"
+             Content="X"
+             Margin="1100,0,0,0" Click="Button_Click"/>
+
         <!-- Column 1 -->
-        <Grid Grid.Column="1" Height="786" VerticalAlignment="Center" Margin="10,0,10,0">
+        <Grid Grid.Column="1" Height="687" VerticalAlignment="Top" Margin="20,57,0,0">
 
             <StackPanel Orientation="Vertical" VerticalAlignment="Top">
 
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="Company Name : " Style="{StaticResource AngledLabelStyle}" Width="130"/>
-                    <TextBox Style="{StaticResource CommonTextBoxStyle}" Margin="13"/>
+                    <TextBox Text="GichMate" Foreground="Black" Style="{StaticResource CommonTextBoxStyle}" Margin="13"/>
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="Place : " Style="{StaticResource AngledLabelStyle}" Width="130"/>
-                    <TextBox Style="{StaticResource CommonTextBoxStyle}" Margin="13"/>
+                    <TextBox Foreground="Black" Style="{StaticResource CommonTextBoxStyle}" Margin="13"/>
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="Address : " Style="{StaticResource AngledLabelStyle}" Width="130"/>
-                    <TextBox Style="{StaticResource CommonTextBoxStyle}" Margin="13" Height="70"  
+                    <TextBox Foreground="Black" Style="{StaticResource CommonTextBoxStyle}" Margin="13" Height="70"  
                       AcceptsReturn="True"
                       VerticalScrollBarVisibility="Auto" Text=""/>
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="State : " Style="{StaticResource AngledLabelStyle}" Width="130"/>
-                    <TextBox Style="{StaticResource CommonTextBoxStyle}" Margin="13"/>
+                    <TextBox Foreground="Black" Style="{StaticResource CommonTextBoxStyle}" Margin="13"/>
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="Country : " Style="{StaticResource AngledLabelStyle}" Width="130"/>
-                    <TextBox Style="{StaticResource CommonTextBoxStyle}" Margin="13"/>
+                    <TextBox Foreground="Black" Style="{StaticResource CommonTextBoxStyle}" Margin="13"/>
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="Phone No : " Style="{StaticResource AngledLabelStyle}" Width="130"/>
-                    <TextBox Style="{StaticResource CommonTextBoxStyle}" Margin="13"/>
+                    <TextBox Foreground="Black" Style="{StaticResource CommonTextBoxStyle}" Margin="13"/>
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="Fax No : " Style="{StaticResource AngledLabelStyle}" Width="130"/>
-                    <TextBox Style="{StaticResource CommonTextBoxStyle}" Margin="13"/>
+                    <TextBox Foreground="Black" Style="{StaticResource CommonTextBoxStyle}" Margin="13"/>
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="Website : " Style="{StaticResource AngledLabelStyle}" Width="130"/>
-                    <TextBox Style="{StaticResource CommonTextBoxStyle}" Margin="13"/>
+                    <TextBox Foreground="Black" Style="{StaticResource CommonTextBoxStyle}" Margin="13"/>
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="Email Address : " Style="{StaticResource AngledLabelStyle}" Width="130"/>
-                    <TextBox Style="{StaticResource CommonTextBoxStyle}" Margin="13"/>
+                    <TextBox Foreground="Black" Style="{StaticResource CommonTextBoxStyle}" Margin="13"/>
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="Type : " Style="{StaticResource AngledLabelStyle}" Width="130"/>
-                    <ComboBox x:Name="MyComboBox" Width="300" Margin="13" Height="30">
+                    <ComboBox x:Name="MyComboBox" Foreground="Black" Width="300" Margin="13" Height="30">
                         <ComboBoxItem Content="Private Ltd"/>
                         <ComboBoxItem Content="Enterprise"/>
                         <ComboBoxItem Content="Corporate"/>
@@ -234,7 +240,7 @@
 
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="GST No : " Style="{StaticResource AngledLabelStyle}" Width="130"/>
-                    <TextBox Style="{StaticResource CommonTextBoxStyle}" Margin="13"/>
+                    <TextBox Foreground="Black" Style="{StaticResource CommonTextBoxStyle}" Margin="13"/>
                 </StackPanel>
 
 
@@ -251,54 +257,36 @@
 
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="Bank : " Style="{StaticResource AngledLabelStyle}" Width="130"/>
-                    <TextBox Style="{StaticResource CommonTextBoxStyle}" Margin="13"/>
+                    <TextBox Foreground="Black" Style="{StaticResource CommonTextBoxStyle}" Margin="13"/>
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="Branch : " Style="{StaticResource AngledLabelStyle}" Width="130"/>
-                    <TextBox Style="{StaticResource CommonTextBoxStyle}" Margin="13"/>
+                    <TextBox Foreground="Black" Style="{StaticResource CommonTextBoxStyle}" Margin="13"/>
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="SWIFT Code : " Style="{StaticResource AngledLabelStyle}" Width="130"/>
-                    <TextBox Style="{StaticResource CommonTextBoxStyle}" Margin="13"/>
+                    <TextBox Foreground="Black" Style="{StaticResource CommonTextBoxStyle}" Margin="13"/>
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="A/C No : " Style="{StaticResource AngledLabelStyle}" Width="130"/>
-                    <TextBox Style="{StaticResource CommonTextBoxStyle}" Margin="13"/>
+                    <TextBox Foreground="Black" Style="{StaticResource CommonTextBoxStyle}" Margin="13"/>
                 </StackPanel>
 
                 <Button Content="Save"
                         Width="150" Height="45" Margin="120,40,150,-44"
-                        FontSize="21" FontWeight="Medium"
-                        Foreground="White"
-                        HorizontalAlignment="Center" >
-                    <Button.Background>
-                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                            <GradientStop Color="#FFDC6969"/>
-                            <GradientStop Color="Red" Offset="1"/>
-                        </LinearGradientBrush>
-                    </Button.Background>
-                    <Button.Effect>
-                        <DropShadowEffect/>
-                    </Button.Effect>
+                        FontWeight="Medium"                        
+                        HorizontalAlignment="Center" 
+                        Style="{StaticResource AnimatedRedButton}">
                 </Button>
 
                 <Button Content="Clear"
                         Width="150" Height="45" Margin="300,0,0,0"
-                        FontSize="21" FontWeight="Medium"
-                        Foreground="White"
-                        HorizontalAlignment="Center" >
-                    <Button.Background>
-                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                            <GradientStop Color="#FFDC6969"/>
-                            <GradientStop Color="Red" Offset="1"/>
-                        </LinearGradientBrush>
-                    </Button.Background>
-                    <Button.Effect>
-                        <DropShadowEffect/>
-                    </Button.Effect>
+                        FontWeight="Medium"                        
+                        HorizontalAlignment="Center" 
+                        Style="{StaticResource AnimatedRedButton}">
                 </Button>
             </StackPanel>
             <Button Content="GO TO NEXT PAGE" 
@@ -309,6 +297,6 @@
                     Width="278"
                     Click="Button_Click"/>
         </Grid>
-      
+
     </Grid>
 </Window>

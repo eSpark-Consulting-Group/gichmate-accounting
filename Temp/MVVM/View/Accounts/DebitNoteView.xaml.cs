@@ -16,6 +16,7 @@ namespace FlexMold.MVVM.View.Accounts
             InitializeComponent();
             LoadAccounts();
             LoadGrid();
+            dpDate.SelectedDate = DateTime.Now;
         }
 
         private void LoadAccounts()
@@ -86,18 +87,36 @@ namespace FlexMold.MVVM.View.Accounts
 
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
-            // Validation
-            if (cmbParty.SelectedIndex < 0 || cmbAccount.SelectedIndex < 0)
+            if (numVoucherNo.Value == null || numVoucherNo.Value == 0)
             {
-                MessageBox.Show("Select Party and Account.");
+                MessageBox.Show("Voucher number is required.");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(cmbParty.Text))
+            {
+                MessageBox.Show("Party Supplier is required");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(cmbAccount.Text))
+            {
+                MessageBox.Show("Account Name is required");
                 return;
             }
 
             if (!decimal.TryParse(txtAmount.Text, out decimal amount) || amount <= 0)
             {
-                MessageBox.Show("Enter valid amount.");
+                MessageBox.Show("Enter a valid Amount greater than zero.");
                 return;
             }
+
+            else if (amount > 99999999.99m)
+            {
+                MessageBox.Show("Limit Exceeded. Please Enter Valid Amount.");
+                return;
+            }
+
 
             try
             {

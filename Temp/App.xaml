@@ -261,6 +261,15 @@
                 <Setter Property="Foreground" Value="#FFEE4540"/>
             </Style>
 
+            <Style TargetType="PasswordBox" x:Key="PasswordTextBox">
+                <Setter Property="FontSize" Value="14"/>
+                <Setter Property="VerticalContentAlignment" Value="Center"/>
+                <Setter Property="Width" Value="250"/>
+                <Setter Property="Height" Value="30"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="Foreground" Value="#FFEE4540"/>
+            </Style>
+
             <Style TargetType="ComboBox" x:Key="AccountsComboBox">
                 <Setter Property="FontSize" Value="14"/>
                 <Setter Property="VerticalContentAlignment" Value="Center"/>

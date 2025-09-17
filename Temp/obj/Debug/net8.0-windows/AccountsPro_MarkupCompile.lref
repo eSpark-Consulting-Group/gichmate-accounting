@@ -1,4 +1,4 @@
-﻿C:\Users\Dotnet_User1\Desktop\12SeptemberUpdate\FlexMold[12-Feb]-AccountingUpdate\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+﻿
 
 FC:\Users\Dotnet_User1\Desktop\12SeptemberUpdate\FlexMold[12-Feb]-AccountingUpdate\MainWindow.xaml;;
 FC:\Users\Dotnet_User1\Desktop\12SeptemberUpdate\FlexMold[12-Feb]-AccountingUpdate\MVVM\View\AccountingView.xaml;;
@@ -34,4 +34,5 @@ FC:\Users\Dotnet_User1\Desktop\12SeptemberUpdate\FlexMold[12-Feb]-AccountingUpda
 FC:\Users\Dotnet_User1\Desktop\12SeptemberUpdate\FlexMold[12-Feb]-AccountingUpdate\MVVM\View\Master\SearchLedger.xaml;;
 FC:\Users\Dotnet_User1\Desktop\12SeptemberUpdate\FlexMold[12-Feb]-AccountingUpdate\MVVM\View\Master\TransactionWithoutInventory.xaml;;
 FC:\Users\Dotnet_User1\Desktop\12SeptemberUpdate\FlexMold[12-Feb]-AccountingUpdate\MVVM\View\Master\UploadBankReceipts.xaml;;
+FC:\Users\Dotnet_User1\Desktop\12SeptemberUpdate\FlexMold[12-Feb]-AccountingUpdate\MVVM\View\StartupPage.xaml;;
 

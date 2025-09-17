@@ -30,7 +30,7 @@
             </LinearGradientBrush>
         </Grid.Background>
 
-        <StackPanel Grid.Row="1" VerticalAlignment="Center"  Height="212" >
+        <StackPanel Grid.Row="1" VerticalAlignment="Center"  Height="400" >
 
             <StackPanel Orientation="Horizontal"  
                         Margin="30" 
@@ -58,8 +58,50 @@
                        Margin="69,-15,0,0"
                        Width="320"/>
 
-            
-            <StackPanel Orientation="Horizontal" Margin="60,10,120,0">
+
+            <StackPanel Orientation="Vertical" Height="200" Margin="0,0,0,0">
+
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center"  Margin="0,50,0,0" Width="400" HorizontalAlignment="Left">
+                    
+                    <Label Content="Enter Username :"
+                           Margin="20,0,0,0"
+                           Style="{StaticResource AccountsLabel}"/>
+
+                    
+                    <TextBox x:Name="txtUserName" 
+                             Style="{StaticResource AccountsTextBox}"/>
+                
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center"  Margin="0,10,0,0" Width="400" HorizontalAlignment="Left">
+
+                    <Label Content="Enter Password :"
+                           Margin="25,0,0,0"
+                           Style="{StaticResource AccountsLabel}"/>
+
+
+                    <PasswordBox x:Name="txtPassword"
+                             Style="{StaticResource PasswordTextBox}"/>
+
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center"  Margin="0,10,0,0" Width="400" HorizontalAlignment="Left">
+
+                    <Label Content="Select Branch :"
+                           Margin="35,0,0,0"
+                           Style="{StaticResource AccountsLabel}"/>
+
+                    <ComboBox x:Name="cmbBranch"
+                              Style="{StaticResource AccountsComboBox}"/>
+
+                </StackPanel>               
+
+
+
+            </StackPanel>        
+                    
+                        
+            <StackPanel Orientation="Horizontal" Margin="150,0,120,0">
                 <Button x:Name="btn_Start"
                         Content="Start"
                         Foreground="White"
@@ -88,7 +130,7 @@
         </StackPanel>
 
 
-        <Grid Margin="82,-424,-476,386"
+        <Grid Margin="130,-368,-524,330"
 			  >
 
             <Grid.RenderTransform>
@@ -106,7 +148,7 @@
                             <TranslateTransform X="1.586"/>
                         </TransformGroup>
                     </StackPanel.RenderTransform>
-                    <Border Width="700" 
+                    <Border Width="646" 
 							Height="35"
 							Background="#FFEE4540"
 							Margin="150,0,0,0"
@@ -140,7 +182,6 @@
             </StackPanel>
 
         </Grid>
-        <StackPanel  Height="53"/>
 
 
     </Grid>

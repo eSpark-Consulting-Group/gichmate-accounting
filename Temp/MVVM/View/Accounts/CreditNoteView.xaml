@@ -103,9 +103,9 @@
                    Style="{StaticResource AccountsLabel}"/>
 
             <TextBox x:Name="txtAmount"
-          Style="{StaticResource AccountsTextBox}"
-          Text="0.00"/>
-        </StackPanel>
+                     Style="{StaticResource AccountsTextBox}"
+                     Text="0.00"/>
+                     </StackPanel>
 
         <StackPanel Grid.Row="4" Orientation="Horizontal" VerticalAlignment="Center" Margin="20,0,0,0">
 

@@ -15,6 +15,7 @@ namespace FlexMold.MVVM.View.Master
         {
             InitializeComponent();
             Loaded += ExpenseAccount_Loaded;
+            DatePickBox.SelectedDate = DateTime.Now;
         }
 
         private void ExpenseAccount_Loaded(object sender, RoutedEventArgs e)

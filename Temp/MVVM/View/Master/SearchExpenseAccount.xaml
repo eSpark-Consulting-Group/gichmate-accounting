@@ -9,7 +9,7 @@
         BorderBrush="Black"
         BorderThickness="3"
         WindowStartupLocation="CenterScreen"
-        Title="Search" Height="770" Width="1200">
+        Title="Search Expense Account" Height="770" Width="1200">
     <Grid>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">

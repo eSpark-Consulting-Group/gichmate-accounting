@@ -6,63 +6,15 @@
         xmlns:local="clr-namespace:FlexMold.MVVM.View.Firm"
         WindowStartupLocation="CenterScreen"
         mc:Ignorable="d"        
+        BorderBrush="White"
+        BorderThickness="3"
         WindowStyle="None"               
-        Title="MainWindow" Height="900" Width="1123">
-
-    <Window.Resources>
-        <!-- this is the Label style-->
-        <Style x:Key="AngledLabelStyle" TargetType="TextBlock">
-            <Setter Property="Foreground" Value="White"/>
-            <Setter Property="FontSize" Value="21"/>
-            <Setter Property="FontFamily" Value="Times New Roman"/>
-            <Setter Property="VerticalAlignment" Value="Center"/>
-            <Setter Property="TextAlignment" Value="Right"/>
-            <Setter Property="Margin" Value="10,5,0,5"/>
-        </Style>
-
-        <Style x:Key="AngledPasswordBoxStyle" TargetType="PasswordBox">
-            <Setter Property="Background" Value="White"/>
-            <Setter Property="BorderBrush" Value="#FF801336"/>
-            <Setter Property="BorderThickness" Value="1"/>
-            <Setter Property="Padding" Value="4"/>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="PasswordBox">
-                        <Grid>
-                            <Border Background="{TemplateBinding Background}"
-                            BorderBrush="{TemplateBinding BorderBrush}"
-                            BorderThickness="{TemplateBinding BorderThickness}"
-                            CornerRadius="4"/>
-                            <Path Data="M0,0 L10,0 L0,10 Z"
-                          Fill="#FF801336"
-                          HorizontalAlignment="Left"
-                          VerticalAlignment="Top"
-                          Margin="2"/>
-                            <Path Data="M0,10 L10,10 L10,0 Z"
-                          Fill="#FF801336"
-                          HorizontalAlignment="Right"
-                          VerticalAlignment="Bottom"
-                          Margin="2"/>
-                            <ScrollViewer x:Name="PART_ContentHost" Margin="2"/>
-                        </Grid>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-
-        <!-- Common PasswordBox Style -->
-        <Style x:Key="CommonPasswordBoxStyle" BasedOn="{StaticResource AngledPasswordBoxStyle}" TargetType="PasswordBox">
-            <Setter Property="Width" Value="300"/>
-            <Setter Property="Height" Value="30"/>
-            <Setter Property="FontSize" Value="14"/>
-            <Setter Property="VerticalContentAlignment" Value="Center"/>
-        </Style>
-
-    </Window.Resources>
+        Title="MainWindow" 
+        Height="770" 
+        Width="1200">
 
 
     <Grid>
-        <!-- Gradient Background -->
         <Grid.Background>
             <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
                 <GradientStop Color="#FFEE4540"/>
@@ -82,106 +34,89 @@
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="100"/>
+            <RowDefinition Height="70"/>
             <RowDefinition Height="300"/>
-            <RowDefinition Height="338"/>
-            <RowDefinition Height="162"/>
+            <RowDefinition Height="300"/>
+            <RowDefinition Height="100"/>
         </Grid.RowDefinitions>
 
 
         <StackPanel Grid.Column="1" Orientation="Horizontal" Grid.ColumnSpan="2">
-            <TextBlock Text="Financial Year" FontSize="50" 
-                       VerticalAlignment="Bottom"                       
-                       Foreground="White" FontWeight="Bold" FontFamily="Times New Roman" Height="63"/>
+            <TextBlock Text="Financial Year" FontSize="50"                       
+                       Foreground="White"
+                       FontWeight="Bold" 
+                       FontFamily="Times New Roman"
+                       Height="62"/>
         </StackPanel>
 
-        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal" Margin="30,50,30,218">
-            <TextBlock Text="From Date : " Style="{StaticResource AngledLabelStyle}" Width="190"/>
-            <DatePicker Height="33" Width="342" FontSize="20"/>
+        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal" Margin="36,56,24,212">
+
+            <Label     Content="From Date : " 
+                       Style="{StaticResource AccountsLabel}"
+                       />
+
+            <DatePicker
+                x:Name="FromDatePicker"
+                Height="30" 
+                Width="250" 
+                FontSize="14"/>
+
         </StackPanel>
-        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal" Margin="30,118,30,150">
-            <TextBlock Text="To Date : " Style="{StaticResource AngledLabelStyle}" Width="191"/>
-            <DatePicker Height="46" Width="342" FontSize="20"/>
+        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal" Margin="36,124,24,144">
+            <Label     Content="From Date : " 
+           Style="{StaticResource AccountsLabel}"
+           />
+            <DatePicker x:Name="ToDatePicker"
+                        Height="30" Width="250" 
+                        FontSize="14"/>
         </StackPanel>
-        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal" Margin="30,180,30,42">
-            <TextBlock Text="Financial Year Name : " Style="{StaticResource AngledLabelStyle}"/>
-            <TextBox Width="335" Height="30" />
+        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal" Margin="36,186,24,75">
+            <Label     Content="From Date : " 
+           Style="{StaticResource AccountsLabel}"
+           />
+            <TextBox x:Name="txtFinancialYear"
+                     Style="{StaticResource AccountsTextBox}" />
         </StackPanel>
 
-        <StackPanel Grid.Column="1"  Grid.Row="2">
-            <DataGrid  HorizontalAlignment="Center" 
+        <StackPanel  Grid.Row="2" Grid.ColumnSpan="3">
+            <DataGrid  x:Name="dgFinancialYear"
+                       HorizontalAlignment="Center" 
                        FontSize="20"
-                       Height="340"  Width="923" 
-                       d:ItemsSource="{d:SampleData ItemCount=20}"/>
+                       Height="363"  Width="1190" />
         </StackPanel>
 
-
-        <StackPanel Grid.Row="3" Grid.Column="1">
-
-            <Button Content="Save"
-                    Width="150" Height="45" Margin="0,40,450,-44"
-                    FontSize="21" FontWeight="Medium"
-                    Foreground="White"
-                    HorizontalAlignment="Center" >
-                <Button.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="#FFDC6969"/>
-                        <GradientStop Color="Red" Offset="1"/>
-                    </LinearGradientBrush>
-                </Button.Background>
-                <Button.Effect>
-                    <DropShadowEffect/>
-                </Button.Effect>
-            </Button>
-            <Button Content="Delete"
-                Width="150" Height="45"
-                FontSize="21" FontWeight="Medium"
-                Foreground="White"
-        >
-                <Button.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="#FFDC6969"/>
-                        <GradientStop Color="Red" Offset="1"/>
-                    </LinearGradientBrush>
-                </Button.Background>
-                <Button.Effect>
-                    <DropShadowEffect/>
-                </Button.Effect>
-            </Button>
-
-            <Button Content="Clear"
-        Width="150" Height="45" Margin="450,-44,0,0"
-        FontSize="21" FontWeight="Medium"
-        Foreground="White"
-        HorizontalAlignment="Center" >
-                <Button.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="#FFDC6969"/>
-                        <GradientStop Color="Red" Offset="1"/>
-                    </LinearGradientBrush>
-                </Button.Background>
-                <Button.Effect>
-                    <DropShadowEffect/>
-                </Button.Effect>
-            </Button>
-
-        </StackPanel>
-        <Button Content="View Reports"
-            FontSize="21" FontWeight="Medium"
-            Foreground="White"
-        Grid.Column="1" Margin="696,196,78,58" Grid.Row="1" Click="Button_Click" >
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FFDC6969"/>
-                    <GradientStop Color="Red" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.Background>
-            <Button.Effect>
-                <DropShadowEffect/>
-            </Button.Effect>
+        <Button x:Name="ViewReportsButton"
+                Click="viewReportsBtn_Click"
+                Content="View Reports"
+                Style="{StaticResource AnimatedRedButton}"
+                Width="190"
+            Grid.Column="1" Margin="780,230,24,35" Grid.Row="1" >
         </Button>
 
 
+        <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    Grid.Column="1" Grid.Row="3">
+
+            <Button Style="{StaticResource AnimatedRedButton}"
+                    Content="Save"
+                    Click="SaveBtn_Click"
+                    x:Name="SaveButton"
+                    Width="90"/>
+
+            <Button Style="{StaticResource AnimatedRedButton}"
+                    Content="Delete"
+                    x:Name="DeleteButton"
+                    Width="90" Click="DeleteButton_Click"/>
+
+            <Button Style="{StaticResource AnimatedRedButton}"
+                    Content="Clear"
+                    Click="ClearBtn_Click"
+                    x:Name="ClearButton"
+                    Width="90"/>
+
+
+        </StackPanel>
 
 
 

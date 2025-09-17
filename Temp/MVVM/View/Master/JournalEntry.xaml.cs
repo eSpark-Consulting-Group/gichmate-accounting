@@ -90,8 +90,14 @@ namespace FlexMold.MVVM.View.Master
                 MessageBox.Show("Please enter Debit or Credit amount.");
                 return;
             }
+            
+            else if(debit > 9999999.99m && credit > 9999999.9m)
+            {
+                MessageBox.Show("Limit Exceeded. Please Enter Valid Amount.");
+                return;
+            }
 
-            int voucherNo = (int)VoucherNoBox.Value;
+                int voucherNo = (int)VoucherNoBox.Value;
             DateTime vDate = DatePickBox.SelectedDate ?? DateTime.Now;
             string narration = NarrationBox.Text.Trim();
             string accountId = PartyAccountBox.SelectedValue.ToString();

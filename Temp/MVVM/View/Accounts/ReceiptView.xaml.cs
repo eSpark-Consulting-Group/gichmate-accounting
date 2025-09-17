@@ -252,6 +252,38 @@ namespace FlexMold.MVVM.View.Accounts
 
         private void SaveAllPayments()
         {
+
+            if (string.IsNullOrEmpty(routeComboBox.Text))
+            {
+                MessageBox.Show("Route selection is required");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(vehicleComboBox.Text))
+            {
+                MessageBox.Show("Route selection is required");
+                return;
+            }
+                        
+            if (ReceiptDateBox.SelectedDate == null)
+            {
+                MessageBox.Show("Please select Receipt date to proceed");
+                return;
+            }
+            if (routeDateBox.SelectedDate == null)
+            {
+                MessageBox.Show("Please select Route date to proceed");
+                return;
+            }
+
+            if (vehicleDateBox.SelectedDate == null)
+            {
+                MessageBox.Show("Please Vehicle date to proceed");
+                return;
+            }
+
+
+
             if (_gridTable.Rows.Count == 0)
             {
                 MessageBox.Show("No invoices loaded.", "Info", MessageBoxButton.OK, MessageBoxImage.Information);
@@ -349,10 +381,10 @@ namespace FlexMold.MVVM.View.Accounts
             var insertSql = @"
                             INSERT INTO VchrTranLog
                             (VchrNo, VchrDate, VchrAmount, VchrType, FromAccountId, ToAccountId,
-                             Narration, SalesManId, UserId, TranDate, VchrName, FK_BranchId, SequenceNo, Terminal, TerminalName)
+                             Narration, SalesManId, UserId, TranDate, VchrName, FK_BranchId, SequenceNo, Terminal)
                             VALUES
                             (@VchrNo, @VchrDate, @VchrAmount, @VchrType, @FromAccountId, @ToAccountId,
-                             @Narration, @SalesManId, @UserId, @TranDate, @VchrName, @FK_BranchId, @SequenceNo, @Terminal, @TerminalName);
+                             @Narration, @SalesManId, @UserId, @TranDate, @VchrName, @FK_BranchId, @SequenceNo, @Terminal;
                           ";
 
             int userId = GetCurrentUserIdOrDefault();
@@ -373,7 +405,6 @@ namespace FlexMold.MVVM.View.Accounts
                 cmd.Parameters.AddWithValue("@FK_BranchId", branchId);
                 cmd.Parameters.AddWithValue("@SequenceNo", DBNull.Value);
                 cmd.Parameters.AddWithValue("@Terminal", DBNull.Value);
-                cmd.Parameters.AddWithValue("@TerminalName", DBNull.Value);
 
                 cmd.ExecuteNonQuery();
             }

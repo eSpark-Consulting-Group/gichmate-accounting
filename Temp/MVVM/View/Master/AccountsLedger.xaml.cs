@@ -17,6 +17,7 @@ namespace FlexMold.MVVM.View.Master
         {
             InitializeComponent();
             Loaded += AccountsLedger_Loaded;
+            DatePickTextBox.SelectedDate = DateTime.Now;
         }
 
         private void AccountsLedger_Loaded(object sender, RoutedEventArgs e)

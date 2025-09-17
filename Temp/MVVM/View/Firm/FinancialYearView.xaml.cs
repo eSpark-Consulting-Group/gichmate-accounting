@@ -30,5 +30,25 @@ namespace FlexMold.MVVM.View.Firm
             
 
         }
+
+        private void viewReportsBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void SaveBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void DeleteButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ClearBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

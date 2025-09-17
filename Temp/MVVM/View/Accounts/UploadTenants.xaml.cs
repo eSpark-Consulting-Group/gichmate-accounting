@@ -20,12 +20,25 @@ namespace FlexMold.MVVM.View.Accounts
             InitializeComponent();
             FilterAccounts("");
 
+            DateTimePicker1.SelectedDate = DateTime.Now;
+
             PopulateComboBox(UnitNoComboBox, "UNIT NO");
             PopulateComboBox(TenantNameComboBox, "TENANT NAME");
         }
 
         private void UploadFileBtn_Click(object sender, RoutedEventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(SheetTextBox.Text))
+            {
+                MessageBox.Show("Please enter a Sheet Number to proceed.");
+                return;
+            }
+        
+            if (DateTimePicker1.SelectedDate == null)
+            {
+                MessageBox.Show("Please Enter Date to proceed");
+            }
+
             ExcelPackage.License.SetNonCommercialPersonal("LocalTest");
 
             string tableName = "UploadsTenantRent";

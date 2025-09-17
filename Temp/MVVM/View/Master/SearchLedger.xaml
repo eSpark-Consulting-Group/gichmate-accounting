@@ -9,7 +9,7 @@
         WindowStartupLocation="CenterScreen"
         BorderBrush="Black"
         BorderThickness="3"
-        Title="SearchLedger" Height="770" Width="1200">
+        Title="Search Ledger" Height="770" Width="1200">
     
     <Grid>
         <Grid.Background>

@@ -9,7 +9,7 @@
         BorderBrush="Black"
         WindowStartupLocation="CenterScreen"
         BorderThickness="3"
-        Title="SearchBank" Height="770" Width="1200">
+        Title="Search Bank" Height="770" Width="1200">
 
     <Grid>
         <Grid.Background>
