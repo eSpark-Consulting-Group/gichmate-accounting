@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.IO;
 
-namespace FlexMold.Utility
+namespace AccountsPRO.Utility
 {
     public interface ICSVHelper
     {

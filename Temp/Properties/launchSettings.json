@@ -1,8 +1,12 @@
 {
   "profiles": {
-    "FlexMold": {
+    "AccountsPro": {
       "commandName": "Project",
-      "workingDirectory": "C:\\Users\\Dotnet_User1\\Desktop\\12SeptemberUpdate\\FlexMold[12-Feb]-AccountingUpdate\\bin\\Debug\\net8.0-windows"
+      "workingDirectory": "$(TargetDir)",
+      "remoteDebugEnabled": false,
+      "sqlDebugging": true,
+      "nativeDebugging": true,
+      "jsWebView2Debugging": false
     }
   }
 }

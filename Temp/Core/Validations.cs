@@ -2,7 +2,7 @@
 using System.Globalization;
 using System.Windows.Controls;
 
-namespace FlexMold.Core
+namespace AccountsPRO.Core
 {
     public class IsCheckedValidationRule : ValidationRule
     {

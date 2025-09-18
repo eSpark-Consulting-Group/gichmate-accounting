@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 
-namespace FlexMold.MVVM.Model
+namespace AccountsPRO.MVVM.Model
 {
     public class DebitNote : INotifyPropertyChanged
     {

@@ -7,7 +7,7 @@ using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 
-namespace FlexMold.MVVM.View.Accounts
+namespace AccountsPRO.MVVM.View.Accounts
 {
     /// <summary>
     /// Interaction logic for PostDatedChequeReceiptView.xaml

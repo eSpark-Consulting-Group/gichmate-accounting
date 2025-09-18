@@ -10,7 +10,7 @@ using System.Windows.Controls;
 using Microsoft.Win32;
 using AccountsLibrary.Properties;
 
-namespace FlexMold.MVVM.View.Accounts
+namespace AccountsPRO.MVVM.View.Accounts
 {
     public partial class UploadTenants : Window
     {
@@ -30,7 +30,7 @@ namespace FlexMold.MVVM.View.Accounts
         {
             if (string.IsNullOrWhiteSpace(SheetTextBox.Text))
             {
-                MessageBox.Show("Please enter a Sheet Number to proceed.");
+                MessageBox.Show("Please enter a Sheet Name to proceed.");
                 return;
             }
         

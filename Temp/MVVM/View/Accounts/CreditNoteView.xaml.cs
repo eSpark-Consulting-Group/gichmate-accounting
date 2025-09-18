@@ -5,7 +5,7 @@ using System.Data.SqlClient;
 using System.Windows;
 using System.Windows.Controls;
 
-namespace FlexMold.MVVM.View.Accounts
+namespace AccountsPRO.MVVM.View.Accounts
 {
     public partial class CreditNoteView : UserControl
     {

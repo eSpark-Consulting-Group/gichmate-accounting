@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace FlexMold.MVVM.View.Accounts
+namespace AccountsPRO.MVVM.View.Accounts
 {
     /// <summary>
     /// Interaction logic for DefaultAccountScreenView.xaml

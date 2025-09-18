@@ -1,6 +1,6 @@
-﻿//using FlexMold.MVVM.Model;
-using FlexMold.MVVM.ViewModel;
-using FlexMold.Utility;
+﻿//using AccountsPRO.MVVM.Model;
+using AccountsPRO.MVVM.ViewModel;
+using AccountsPRO.Utility;
 using MahApps.Metro.Controls;
 using MaterialDesignThemes.Wpf;
 using Microsoft.Extensions.DependencyInjection;
@@ -15,7 +15,7 @@ using System.Windows.Media;
 using TwinCAT;
 using TwinCAT.Ads;
 
-namespace FlexMold
+namespace AccountsPRO
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

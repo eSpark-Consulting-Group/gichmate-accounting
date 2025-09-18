@@ -1,12 +1,14 @@
-﻿using FlexMold.MVVM.View.Accounts;
-using FlexMold.MVVM.View.Firm;
-using FlexMold.MVVM.View.Master;
-using FlexMold.MVVM.ViewModel;
+﻿using AccountsPRO.MVVM.View.Accounts;
+using AccountsPRO.MVVM.View.Firm;
+using AccountsPRO.MVVM.View.Master;
+using AccountsPRO.MVVM.ViewModel;
 using Microsoft.Extensions.DependencyInjection;
+using System;
+using System.Diagnostics;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media.Animation;
-namespace FlexMold.MVVM.View
+namespace AccountsPRO.MVVM.View
 {
     /// <summary>
     /// Interaction logic for AccountingView.xaml
@@ -148,6 +150,24 @@ namespace FlexMold.MVVM.View
         {
             var doubleJournalEntries = new DoubleJournalEntries();
             doubleJournalEntries.Show();
+        }
+
+        private void btn_Help_Click(object sender, RoutedEventArgs e)
+        { 
+            try
+            {
+                string url = "https://docs.google.com/document/d/1m-MggHM1FuUZOLv_MJsqdhIuu8RF6fhSM21YWpsjQfc/edit?usp=sharing"; 
+                ProcessStartInfo psi = new ProcessStartInfo
+                {
+                    FileName = url,
+                    UseShellExecute = true 
+                };
+                Process.Start(psi);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Unable to open document: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
     }
 }

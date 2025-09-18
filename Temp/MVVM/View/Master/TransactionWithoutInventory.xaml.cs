@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace FlexMold.MVVM.View.Master
+namespace AccountsPRO.MVVM.View.Master
 {
     /// <summary>
     /// Interaction logic for TransactionWithoutInventory.xaml

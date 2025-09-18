@@ -8,7 +8,7 @@ using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 
-namespace FlexMold.MVVM.View.Accounts
+namespace AccountsPRO.MVVM.View.Accounts
 {
     public partial class BankReconciliationView : UserControl
     {       

@@ -3,7 +3,7 @@ using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 
-namespace FlexMold.Core
+namespace AccountsPRO.Core
 {
     internal class PropertyValidation : IDataErrorInfo
     {

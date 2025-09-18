@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace FlexMold.MVVM.View.Firm
+namespace AccountsPRO.MVVM.View.Firm
 {
     /// <summary>
     /// Interaction logic for FirmDetails.xaml

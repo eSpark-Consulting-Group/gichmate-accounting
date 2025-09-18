@@ -1,9 +1,9 @@
 ﻿using AccountsPro.MVVM.View;
-using FlexMold.MVVM.View;
-using FlexMold.MVVM.View.Accounts;
-using FlexMold.MVVM.ViewModel;
-using FlexMold.MVVM.ViewModel.SplashScreen;
-using FlexMold.Utility;
+using AccountsPRO.MVVM.View;
+using AccountsPRO.MVVM.View.Accounts;
+using AccountsPRO.MVVM.ViewModel;
+using AccountsPRO.MVVM.ViewModel.SplashScreen;
+using AccountsPRO.Utility;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using NLog;
@@ -13,7 +13,7 @@ using System.Threading;
 using System.Windows;
 using System.Windows.Markup;
 
-namespace FlexMold
+namespace AccountsPRO
 {
     /// <summary>
     /// Interaction logic for App.xaml

@@ -1,5 +1,5 @@
 ﻿using AccountsLibrary.Properties;
-using FlexMold.MVVM.View.Accounts;
+using AccountsPRO.MVVM.View.Accounts;
 using Microsoft.Data.SqlClient;
 using System;
 using System.Collections.Generic;
@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows;
 
 
-namespace FlexMold.MVVM.View.Firm
+namespace AccountsPRO.MVVM.View.Firm
 {
     /// <summary>
     /// Interaction logic for AdminSettingsView.xaml

@@ -40,7 +40,7 @@
                        Height="31"
                        VerticalAlignment="Center"
 					   RenderOptions.BitmapScalingMode="Fant"
-                       Source="C:\Users\Dotnet_User1\Desktop\12SeptemberUpdate\FlexMold[12-Feb]-AccountingUpdate\Accountspro.ico"/>
+                       Source="C:\Users\Dotnet_User1\Desktop\12SeptemberUpdate\AccountsPRO[12-Feb]-AccountingUpdate\Accountspro.ico"/>
 
                 <TextBlock Text="AccountsPRO"
                            Foreground="White"
@@ -111,6 +111,7 @@
                         FontSize="13"
                         Style="{StaticResource AnimatedRedButton}"
                         Click="btn_Start_Click"
+                        IsDefault="True"
                        />
 
 
@@ -122,6 +123,7 @@
                     FontWeight="Medium"
                     Foreground="White"
                     HorizontalAlignment="Center"
+                        Click="btn_Register_Click"
                         Style="{StaticResource AnimatedRedButton}"
                     />
                 
@@ -154,7 +156,7 @@
 							Margin="150,0,0,0"
 							CornerRadius="20"/>
 
-                    <Border Width="700"
+                    <Border Width="575"
 							Height="35"
 							Background="#801336"
 							Margin="0,15,0,0"

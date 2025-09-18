@@ -1,4 +1,4 @@
-﻿namespace FlexMold.StartupHelper
+﻿namespace AccountsPRO.StartupHelper
 {
     public interface IAbstarctFactory<T>
     {

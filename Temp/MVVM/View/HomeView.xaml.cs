@@ -1,8 +1,8 @@
-﻿using FlexMold.MVVM.ViewModel;
+﻿using AccountsPRO.MVVM.ViewModel;
 using Microsoft.Extensions.DependencyInjection;
 using System.Windows.Controls;
 
-namespace FlexMold.MVVM.View
+namespace AccountsPRO.MVVM.View
 {
     /// <summary>
     /// Interaction logic for Home.xaml

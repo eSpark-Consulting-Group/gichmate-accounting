@@ -1,6 +1,6 @@
-﻿using FlexMold.Core;
+﻿using AccountsPRO.Core;
 
-namespace FlexMold.MVVM.ViewModel
+namespace AccountsPRO.MVVM.ViewModel
 {
     public interface IAccountingViewModel
     {

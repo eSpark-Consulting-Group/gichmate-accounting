@@ -1,4 +1,4 @@
-﻿namespace FlexMold.MVVM.View.Firm
+﻿namespace AccountsPRO.MVVM.View.Firm
 {
     internal class SqlConnection
     {

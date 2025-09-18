@@ -1,8 +1,8 @@
-﻿using FlexMold.MVVM.ViewModel;
+﻿using AccountsPRO.MVVM.ViewModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace FlexMold.Core
+namespace AccountsPRO.Core
 {
     public class ObservableObject : INotifyPropertyChanged, IViewModel
     {

@@ -1,4 +1,4 @@
-﻿namespace FlexMold.Contols
+﻿namespace AccountsPRO.Contols
 {
     public enum ErrorMessages
     {

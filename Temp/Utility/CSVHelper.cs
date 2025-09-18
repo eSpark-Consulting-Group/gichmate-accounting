@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 
-namespace FlexMold.Utility
+namespace AccountsPRO.Utility
 {    
     public static class CSVHelper
     {

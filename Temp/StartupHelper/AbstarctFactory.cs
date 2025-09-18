@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace FlexMold.StartupHelper
+namespace AccountsPRO.StartupHelper
 {
     public class AbstarctFactory<T> : IAbstarctFactory<T>
     {

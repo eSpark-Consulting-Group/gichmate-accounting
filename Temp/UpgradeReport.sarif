@@ -12,7 +12,7 @@
             {
               "id": "Microsoft.DotNet.UpgradeAssistant.Steps.Backup.BackupStep",
               "fullDescription": {
-                "text": "Project backed up to C:\\Users\\SmhrazaEspark\\Desktop\\src\\FlexMold.backup"
+                "text": "Project backed up to C:\\Users\\SmhrazaEspark\\Desktop\\src\\AccountsPRO.backup"
               },
               "helpUri": "about:blank"
             }
@@ -23,13 +23,13 @@
         {
           "ruleId": "Microsoft.DotNet.UpgradeAssistant.Steps.Backup.BackupStep",
           "message": {
-            "text": "Complete: Project backed up to C:\\Users\\SmhrazaEspark\\Desktop\\src\\FlexMold.backup"
+            "text": "Complete: Project backed up to C:\\Users\\SmhrazaEspark\\Desktop\\src\\AccountsPRO.backup"
           },
           "locations": [
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "file:///C:/Users/SmhrazaEspark/Desktop/src/FlexMold.backup"
+                  "uri": "file:///C:/Users/SmhrazaEspark/Desktop/src/AccountsPRO.backup"
                 },
                 "region": {}
               }
@@ -66,7 +66,7 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "file:///C:/Users/SmhrazaEspark/Desktop/src/FlexMold/FlexMold.csproj"
+                  "uri": "file:///C:/Users/SmhrazaEspark/Desktop/src/AccountsPRO/AccountsPRO.csproj"
                 },
                 "region": {}
               }
@@ -103,7 +103,7 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "file:///C:/Users/SmhrazaEspark/Desktop/src/FlexMold/FlexMold.csproj"
+                  "uri": "file:///C:/Users/SmhrazaEspark/Desktop/src/AccountsPRO/AccountsPRO.csproj"
                 },
                 "region": {}
               }
@@ -140,7 +140,7 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "file:///C:/Users/SmhrazaEspark/Desktop/src/FlexMold/FlexMold.csproj"
+                  "uri": "file:///C:/Users/SmhrazaEspark/Desktop/src/AccountsPRO/AccountsPRO.csproj"
                 },
                 "region": {}
               }
@@ -177,7 +177,7 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "file:///C:/Users/SmhrazaEspark/Desktop/src/FlexMold/FlexMold.csproj"
+                  "uri": "file:///C:/Users/SmhrazaEspark/Desktop/src/AccountsPRO/AccountsPRO.csproj"
                 },
                 "region": {}
               }
@@ -214,7 +214,7 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "file:///C:/Users/SmhrazaEspark/Desktop/src/FlexMold/FlexMold.csproj"
+                  "uri": "file:///C:/Users/SmhrazaEspark/Desktop/src/AccountsPRO/AccountsPRO.csproj"
                 },
                 "region": {}
               }
@@ -251,7 +251,7 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "file:///C:/Users/SmhrazaEspark/Desktop/src/FlexMold/FlexMold.csproj"
+                  "uri": "file:///C:/Users/SmhrazaEspark/Desktop/src/AccountsPRO/AccountsPRO.csproj"
                 },
                 "region": {}
               }
@@ -288,7 +288,7 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "file:///C:/Users/SmhrazaEspark/Desktop/src/FlexMold/FlexMold.csproj"
+                  "uri": "file:///C:/Users/SmhrazaEspark/Desktop/src/AccountsPRO/AccountsPRO.csproj"
                 },
                 "region": {}
               }
@@ -325,7 +325,7 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "file:///C:/Users/SmhrazaEspark/Desktop/src/FlexMold/FlexMold.csproj"
+                  "uri": "file:///C:/Users/SmhrazaEspark/Desktop/src/AccountsPRO/AccountsPRO.csproj"
                 },
                 "region": {}
               }
@@ -362,7 +362,7 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "file:///C:/Users/SmhrazaEspark/Desktop/src/FlexMold/FlexMold.csproj"
+                  "uri": "file:///C:/Users/SmhrazaEspark/Desktop/src/AccountsPRO/AccountsPRO.csproj"
                 },
                 "region": {}
               }
@@ -399,7 +399,7 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "file:///C:/Users/SmhrazaEspark/Desktop/src/FlexMold/FlexMold.csproj"
+                  "uri": "file:///C:/Users/SmhrazaEspark/Desktop/src/AccountsPRO/AccountsPRO.csproj"
                 },
                 "region": {}
               }
@@ -436,7 +436,7 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "file:///C:/Users/SmhrazaEspark/Desktop/src/FlexMold/FlexMold.csproj"
+                  "uri": "file:///C:/Users/SmhrazaEspark/Desktop/src/AccountsPRO/AccountsPRO.csproj"
                 },
                 "region": {}
               }
@@ -473,7 +473,7 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "file:///C:/Users/SmhrazaEspark/Desktop/src/FlexMold/FlexMold.csproj"
+                  "uri": "file:///C:/Users/SmhrazaEspark/Desktop/src/AccountsPRO/AccountsPRO.csproj"
                 },
                 "region": {}
               }
@@ -510,7 +510,7 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "file:///C:/Users/SmhrazaEspark/Desktop/src/FlexMold/FlexMold.csproj"
+                  "uri": "file:///C:/Users/SmhrazaEspark/Desktop/src/AccountsPRO/AccountsPRO.csproj"
                 },
                 "region": {}
               }
@@ -547,7 +547,7 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "file:///C:/Users/SmhrazaEspark/Desktop/src/FlexMold/FlexMold.csproj"
+                  "uri": "file:///C:/Users/SmhrazaEspark/Desktop/src/AccountsPRO/AccountsPRO.csproj"
                 },
                 "region": {}
               }
@@ -584,7 +584,7 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "file:///C:/Users/SmhrazaEspark/Desktop/src/FlexMold/FlexMold.csproj"
+                  "uri": "file:///C:/Users/SmhrazaEspark/Desktop/src/AccountsPRO/AccountsPRO.csproj"
                 },
                 "region": {}
               }
@@ -621,7 +621,7 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "file:///C:/Users/SmhrazaEspark/Desktop/src/FlexMold/FlexMold.csproj"
+                  "uri": "file:///C:/Users/SmhrazaEspark/Desktop/src/AccountsPRO/AccountsPRO.csproj"
                 },
                 "region": {}
               }
@@ -658,7 +658,7 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "file:///C:/Users/SmhrazaEspark/Desktop/src/FlexMold/FlexMold.csproj"
+                  "uri": "file:///C:/Users/SmhrazaEspark/Desktop/src/AccountsPRO/AccountsPRO.csproj"
                 },
                 "region": {}
               }
@@ -695,7 +695,7 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "file:///C:/Users/SmhrazaEspark/Desktop/src/FlexMold/FlexMold.csproj"
+                  "uri": "file:///C:/Users/SmhrazaEspark/Desktop/src/AccountsPRO/AccountsPRO.csproj"
                 },
                 "region": {}
               }
@@ -732,7 +732,7 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "file:///C:/Users/SmhrazaEspark/Desktop/src/FlexMold/FlexMold.csproj"
+                  "uri": "file:///C:/Users/SmhrazaEspark/Desktop/src/AccountsPRO/AccountsPRO.csproj"
                 },
                 "region": {}
               }
@@ -769,7 +769,7 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "file:///C:/Users/SmhrazaEspark/Desktop/src/FlexMold/FlexMold.csproj"
+                  "uri": "file:///C:/Users/SmhrazaEspark/Desktop/src/AccountsPRO/AccountsPRO.csproj"
                 },
                 "region": {}
               }
@@ -806,7 +806,7 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "file:///C:/Users/SmhrazaEspark/Desktop/src/FlexMold/FlexMold.csproj"
+                  "uri": "file:///C:/Users/SmhrazaEspark/Desktop/src/AccountsPRO/AccountsPRO.csproj"
                 },
                 "region": {}
               }
@@ -843,7 +843,7 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "file:///C:/Users/SmhrazaEspark/Desktop/src/FlexMold/FlexMold.csproj"
+                  "uri": "file:///C:/Users/SmhrazaEspark/Desktop/src/AccountsPRO/AccountsPRO.csproj"
                 },
                 "region": {}
               }
@@ -880,7 +880,7 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "file:///C:/Users/SmhrazaEspark/Desktop/src/FlexMold/FlexMold.csproj"
+                  "uri": "file:///C:/Users/SmhrazaEspark/Desktop/src/AccountsPRO/AccountsPRO.csproj"
                 },
                 "region": {}
               }
@@ -917,7 +917,7 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "file:///C:/Users/SmhrazaEspark/Desktop/src/FlexMold/FlexMold.csproj"
+                  "uri": "file:///C:/Users/SmhrazaEspark/Desktop/src/AccountsPRO/AccountsPRO.csproj"
                 },
                 "region": {}
               }
@@ -954,7 +954,7 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "file:///C:/Users/SmhrazaEspark/Desktop/src/FlexMold/FlexMold.csproj"
+                  "uri": "file:///C:/Users/SmhrazaEspark/Desktop/src/AccountsPRO/AccountsPRO.csproj"
                 },
                 "region": {}
               }
@@ -991,7 +991,7 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "file:///C:/Users/SmhrazaEspark/Desktop/src/FlexMold/FlexMold.csproj"
+                  "uri": "file:///C:/Users/SmhrazaEspark/Desktop/src/AccountsPRO/AccountsPRO.csproj"
                 },
                 "region": {}
               }
@@ -1028,7 +1028,7 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "file:///C:/Users/SmhrazaEspark/Desktop/src/FlexMold/FlexMold.csproj"
+                  "uri": "file:///C:/Users/SmhrazaEspark/Desktop/src/AccountsPRO/AccountsPRO.csproj"
                 },
                 "region": {}
               }
@@ -1065,7 +1065,7 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "file:///C:/Users/SmhrazaEspark/Desktop/src/FlexMold/FlexMold.csproj"
+                  "uri": "file:///C:/Users/SmhrazaEspark/Desktop/src/AccountsPRO/AccountsPRO.csproj"
                 },
                 "region": {}
               }
@@ -1102,7 +1102,7 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "file:///C:/Users/SmhrazaEspark/Desktop/src/FlexMold/FlexMold.csproj"
+                  "uri": "file:///C:/Users/SmhrazaEspark/Desktop/src/AccountsPRO/AccountsPRO.csproj"
                 },
                 "region": {}
               }
@@ -1140,7 +1140,7 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "file:///C:/Users/SmhrazaEspark/Desktop/src/FlexMold/FlexMold.csproj"
+                  "uri": "file:///C:/Users/SmhrazaEspark/Desktop/src/AccountsPRO/AccountsPRO.csproj"
                 },
                 "region": {}
               }

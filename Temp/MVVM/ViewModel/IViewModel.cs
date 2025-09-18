@@ -1,4 +1,4 @@
-﻿namespace FlexMold.MVVM.ViewModel
+﻿namespace AccountsPRO.MVVM.ViewModel
 {
     public  interface IViewModel
     {

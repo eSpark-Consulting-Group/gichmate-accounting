@@ -13,7 +13,7 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using static ServiceStack.Diagnostics.Events;
 
-namespace FlexMold.MVVM.View.Accounts
+namespace AccountsPRO.MVVM.View.Accounts
 {
     public partial class BankPaymentView : UserControl
     {

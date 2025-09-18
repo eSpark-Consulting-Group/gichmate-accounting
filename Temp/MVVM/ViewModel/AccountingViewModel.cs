@@ -1,8 +1,8 @@
-﻿using FlexMold.Core;
-using FlexMold.MVVM.View.Accounts;
-//using FlexMold.MVVM.View.Home;
+﻿using AccountsPRO.Core;
+using AccountsPRO.MVVM.View.Accounts;
+//using AccountsPRO.MVVM.View.Home;
 
-namespace FlexMold.MVVM.ViewModel
+namespace AccountsPRO.MVVM.ViewModel
 {
     public class AccountingViewModel : ObservableObject, IAccountingViewModel
     {

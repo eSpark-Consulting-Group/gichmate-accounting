@@ -9,7 +9,7 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Input;
 
-namespace FlexMold.MVVM.View.Accounts
+namespace AccountsPRO.MVVM.View.Accounts
 {
     public partial class CashReceiptView : UserControl
     {
@@ -114,7 +114,7 @@ namespace FlexMold.MVVM.View.Accounts
                     LEFT JOIN EmployeeDetails ed ON ed.EmpID = v.SalesManId
                     WHERE v.VchrType = @VchrType
                       AND v.VchrName = @VchrName
-                      AND (@SalesManId IS NULL OR v.SalesManId = @SalesManId)
+                      AND (@SalesManId IS NULL OR v.SalesManId = @SalesManId OR (v.SalesManId IS NULL AND @SalesManId IS NULL))
                       AND (@VchrDate IS NULL OR CONVERT(date, v.VchrDate) = @VchrDate)
                     ORDER BY v.VchrDate DESC, v.VchrNo DESC
                 ", cn);

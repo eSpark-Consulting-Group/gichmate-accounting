@@ -1,7 +1,7 @@
 ﻿using AccountsLibrary.Properties;
-using FlexMold;
-using FlexMold.MVVM.View.Firm;
-using FlexMold.MVVM.ViewModel;
+using AccountsPRO;
+using AccountsPRO.MVVM.View.Firm;
+using AccountsPRO.MVVM.ViewModel;
 using System;
 using System.Data.SqlClient;
 using System.Windows;
@@ -15,6 +15,13 @@ namespace AccountsPro.MVVM.View
             InitializeComponent();
             LoadBranches();
         }
+        
+        private void btn_Register_Click(object sender, RoutedEventArgs e)
+        {
+            var adminSettings = new AdminSettingsView();
+            adminSettings.Show();
+        }
+
 
         private void btn_Start_Click(object sender, RoutedEventArgs e)
         {

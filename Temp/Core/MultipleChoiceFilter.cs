@@ -1,4 +1,4 @@
-﻿namespace FlexMold.Core
+﻿namespace AccountsPRO.Core
 {
     using System.Windows;
 

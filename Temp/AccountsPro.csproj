@@ -12,7 +12,7 @@
 		<UseWindowsForms>true</UseWindowsForms>
 		<ApplicationIcon>Accountspro.ico</ApplicationIcon>
 		<NeutralLanguage>en</NeutralLanguage>
-		<StartupObject>FlexMold.App</StartupObject>
+		<StartupObject>AccountsPRO.App</StartupObject>
 	</PropertyGroup>
 	<ItemGroup>
 	  <Compile Remove="AshFramework\**" />
@@ -108,7 +108,7 @@
 	  <Compile Remove="MVVM\Model\PLCMotor.cs" />
 	  <Compile Remove="MVVM\Model\Project.cs" />
 	  <Compile Remove="MVVM\ViewModel\AccessoryViewModel.cs" />
-	  <Compile Remove="MVVM\ViewModel\FlexMoldMachine1.cs" />
+	  <Compile Remove="MVVM\ViewModel\AccountsPROMachine1.cs" />
 	  <Compile Remove="MVVM\ViewModel\HomeViewModel.cs" />
 	  <Compile Remove="MVVM\ViewModel\IMachineTestViewModel.cs" />
 	  <Compile Remove="MVVM\ViewModel\IProjectViewModel.cs" />

@@ -9,7 +9,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 
-namespace FlexMold.MVVM.View.Master
+namespace AccountsPRO.MVVM.View.Master
 {
     public partial class DoubleJournalEntries : Window
     {
@@ -192,6 +192,7 @@ namespace FlexMold.MVVM.View.Master
             }
 
             ClearForm();
+            MessageBox.Show("Entry Successfully saved!");
             LoadVouchers();
         }
 

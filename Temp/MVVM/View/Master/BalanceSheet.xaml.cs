@@ -24,7 +24,7 @@ using Brushes = System.Drawing.Brushes;
 using ListView = System.Windows.Controls.ListView;
 using MessageBox = System.Windows.MessageBox;
 
-namespace FlexMold.MVVM.View.Master
+namespace AccountsPRO.MVVM.View.Master
 {
     /// <summary>
     /// Interaction logic for BalanceSheet.xaml

@@ -8,7 +8,7 @@ using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
 
-namespace FlexMold.MVVM.View.Master
+namespace AccountsPRO.MVVM.View.Master
 {
     /// <summary>
     /// Interaction logic for UploadBankReceipts.xaml

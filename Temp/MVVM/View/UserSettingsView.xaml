@@ -1,4 +1,4 @@
-﻿<Window x:Class="FlexMold.MVVM.View.UserSettingsView"
+﻿<Window x:Class="AccountsPRO.MVVM.View.UserSettingsView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="User Privilege Settings"

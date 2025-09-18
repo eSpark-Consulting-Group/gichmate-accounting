@@ -5,7 +5,7 @@ using System.Windows;
 using System.Windows.Controls;
 using AccountsLibrary.Properties;
 
-namespace FlexMold.MVVM.View.Master
+namespace AccountsPRO.MVVM.View.Master
 {
     public partial class SearchExpenseAccount : Window
     {        

@@ -1,4 +1,4 @@
-﻿//using FlexMold.MVVM.Model;
+﻿//using AccountsPRO.MVVM.Model;
 using Microsoft.Data.SqlClient;
 using System.Linq;
 using OfficeOpenXml;
@@ -11,7 +11,7 @@ using System.Windows.Controls;
 using Microsoft.Win32;
 using AccountsLibrary.Properties;
 
-namespace FlexMold.MVVM.View.Accounts
+namespace AccountsPRO.MVVM.View.Accounts
 {
     /// <summary>
     /// Interaction logic for UploadTenantsUserControl.xaml
