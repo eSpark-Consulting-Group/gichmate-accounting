@@ -98,56 +98,17 @@
 	  <Compile Remove="AccountsLibrary\Messages.cs" />
 	  <Compile Remove="AccountsLibrary\PrintRdlc.cs" />
 	  <Compile Remove="AccountsLibrary\ProductBarcode.cs" />
-	  <Compile Remove="AccountsLibrary\ProductBarcodeEntity.cs" />
-	  <Compile Remove="AccountsLibrary\ProductBarcodeScale.cs" />
-	  <Compile Remove="MVVM\Model\AppSettings.cs" />
-	  <Compile Remove="MVVM\Model\Box.cs" />
-	  <Compile Remove="MVVM\Model\FCAModel.cs" />
-	  <Compile Remove="MVVM\Model\LaserProjector.cs" />
-	  <Compile Remove="MVVM\Model\Machine.cs" />
-	  <Compile Remove="MVVM\Model\PLCMotor.cs" />
-	  <Compile Remove="MVVM\Model\Project.cs" />
-	  <Compile Remove="MVVM\ViewModel\AccessoryViewModel.cs" />
-	  <Compile Remove="MVVM\ViewModel\AccountsPROMachine1.cs" />
-	  <Compile Remove="MVVM\ViewModel\HomeViewModel.cs" />
-	  <Compile Remove="MVVM\ViewModel\IMachineTestViewModel.cs" />
-	  <Compile Remove="MVVM\ViewModel\IProjectViewModel.cs" />
-	  <Compile Remove="MVVM\ViewModel\ISplashScreenViewModel.cs" />
-	  <Compile Remove="MVVM\ViewModel\MachineTestViewModel.cs" />
-	  <Compile Remove="MVVM\ViewModel\MainViewModel.cs" />
-	  <Compile Remove="MVVM\ViewModel\ProjectViewModel.cs" />
-	  <Compile Remove="MVVM\ViewModel\SettingViewModel.cs" />
-	  <Compile Remove="MVVM\ViewModel\SplashScreenViewModel.cs" />
-	  <Compile Remove="MVVM\ViewModel\SplashScreen\FoeViewModel.cs" />
-	  <Compile Remove="MVVM\ViewModel\SplashScreen\IFoe.cs" />
-	  <Compile Remove="MVVM\ViewModel\SplashScreen\IFoeViewModel.cs" />
-	  <Compile Remove="MVVM\ViewModel\SplashScreen\ITwinCatConfigViewModel.cs" />
-	  <Compile Remove="MVVM\ViewModel\SplashScreen\TwinCatConfigViewModel.cs" />
-	  <Compile Remove="MVVM\ViewModel\ToastViewModel.cs" />
-	  <Compile Remove="MVVM\View\AccessoryView.xaml.cs" />
-	  <Compile Remove="MVVM\View\ConnectionLostDialog.xaml.cs" />
-	  <Compile Remove="MVVM\View\MachineTestView.xaml.cs" />
-	  <Compile Remove="MVVM\View\ProjectView.xaml.cs" />
-	  <Compile Remove="MVVM\View\SettingView.xaml.cs" />
-	  <Compile Remove="Properties\AssemblyInfo.cs" />
-	  <Compile Remove="Properties\Resources.Designer.cs" />
-	  <Compile Remove="SplashMachineSlection.xaml.cs" />
-	  <Compile Remove="Utility\ITwinCathelper.cs" />
-	  <Compile Remove="Utility\MixUtil.cs" />
-	  <Compile Remove="Utility\NetworkShareAccesser.cs" />
-	  <Compile Remove="Utility\TelnetClient.cs" />
-	  <Compile Remove="Utility\TelnetHelper.cs" />
-	  <Compile Remove="Utility\TwinCathelper.cs" />
-	  <Compile Remove="Utility\TwinCathelper.Properties.cs" />
 	</ItemGroup>
 	<ItemGroup>
 	  <EmbeddedResource Remove="AccountsLibrary\MasterSerchForm.ar.resx" />
 	  <EmbeddedResource Remove="AccountsLibrary\MasterSerchForm.resx" />
 	</ItemGroup>
 	<ItemGroup>
+	  <None Remove="AccountPRO3.1 Release.rar" />
 	  <None Remove="MVVM\Model\main.cd" />
 	  <None Remove="MVVM\View\dashboard.png" />
 	  <None Remove="Properties\app.manifest" />
+	  <None Remove="UpgradeReport.sarif" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Page Remove="MVVM\View\AccessoryView.xaml" />
@@ -237,7 +198,6 @@
 	  <EmbeddedResource Include="SubProjects\AccountsLibraryFramework\MasterForm.resx" />
 	</ItemGroup>
 	<ItemGroup>
-		<PackageReference Include="Beckhoff.TwinCAT.Ads" Version="6.1.154" />
 		<PackageReference Include="DataGridExtensions" Version="2.5.15" />
 		<PackageReference Include="EPPlus" Version="8.1.0" />
 		<PackageReference Include="ExcelPackage" Version="1.0.0" />

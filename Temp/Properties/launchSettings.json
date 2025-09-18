@@ -1,12 +1,8 @@
 {
   "profiles": {
-    "AccountsPro": {
+    "AccountsPRO": {
       "commandName": "Project",
-      "workingDirectory": "$(TargetDir)",
-      "remoteDebugEnabled": false,
-      "sqlDebugging": true,
-      "nativeDebugging": true,
-      "jsWebView2Debugging": false
+      "workingDirectory": "C:\\Users\\Dotnet_User1\\Desktop\\17sEP (1)\\bin\\Debug\\net8.0-windows"
     }
   }
 }
