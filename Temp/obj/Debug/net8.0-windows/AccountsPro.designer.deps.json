@@ -39,45 +39,6 @@
           }
         }
       },
-      "Beckhoff.TwinCAT.Ads/6.1.154": {
-        "dependencies": {
-          "Beckhoff.TwinCAT.Ads.Server": "6.1.154",
-          "Microsoft.Extensions.Logging.Abstractions": "8.0.2",
-          "System.ComponentModel.Composition": "6.0.0",
-          "System.Reactive": "6.0.0"
-        },
-        "runtime": {
-          "lib/net7.0/TwinCAT.Ads.dll": {
-            "assemblyVersion": "6.0.0.0",
-            "fileVersion": "6.1.154.0"
-          }
-        }
-      },
-      "Beckhoff.TwinCAT.Ads.Abstractions/6.1.154": {
-        "dependencies": {
-          "Microsoft.Extensions.Logging.Abstractions": "8.0.2",
-          "System.Configuration.ConfigurationManager": "8.0.1"
-        },
-        "runtime": {
-          "lib/net7.0/TwinCAT.Ads.Abstractions.dll": {
-            "assemblyVersion": "6.0.0.0",
-            "fileVersion": "6.1.154.0"
-          }
-        }
-      },
-      "Beckhoff.TwinCAT.Ads.Server/6.1.154": {
-        "dependencies": {
-          "Beckhoff.TwinCAT.Ads.Abstractions": "6.1.154",
-          "Microsoft.Extensions.Logging.Abstractions": "8.0.2",
-          "System.Reactive": "6.0.0"
-        },
-        "runtime": {
-          "lib/net7.0/TwinCAT.Ads.Server.dll": {
-            "assemblyVersion": "6.0.0.0",
-            "fileVersion": "6.1.154.0"
-          }
-        }
-      },
       "ControlzEx/4.4.0": {
         "dependencies": {
           "Microsoft.Xaml.Behaviors.Wpf": "1.1.39",
@@ -1693,14 +1654,6 @@
           }
         }
       },
-      "System.ComponentModel.Composition/6.0.0": {
-        "runtime": {
-          "lib/net6.0/System.ComponentModel.Composition.dll": {
-            "assemblyVersion": "4.0.0.0",
-            "fileVersion": "6.0.21.52210"
-          }
-        }
-      },
       "System.Configuration.ConfigurationManager/8.0.1": {
         "dependencies": {
           "System.Diagnostics.EventLog": "8.0.1",
@@ -2161,14 +2114,6 @@
           "lib/netstandard1.3/System.ObjectModel.dll": {
             "assemblyVersion": "4.0.12.0",
             "fileVersion": "1.0.24212.1"
-          }
-        }
-      },
-      "System.Reactive/6.0.0": {
-        "runtime": {
-          "lib/net6.0/System.Reactive.dll": {
-            "assemblyVersion": "6.0.0.0",
-            "fileVersion": "6.0.0.1"
           }
         }
       },
@@ -2844,27 +2789,6 @@
       "sha512": "sha512-CngQVQELdzFmsGSWyGIPIUOCrII7nApMVWxVmJCKQQrWxRXcNquCsZ+njRJRnhFUfD+KMAhpjyRCaceE4EOL6A==",
       "path": "azure.identity/1.13.2",
       "hashPath": "azure.identity.1.13.2.nupkg.sha512"
-    },
-    "Beckhoff.TwinCAT.Ads/6.1.154": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-X/RER/wM8KqxevbtZFWJ5HjZepWs02VNjsh8TnVWFvkEIfwWOimJYOhBi1CAWKNKSKYsZUw/09AmAnfIvgc+LA==",
-      "path": "beckhoff.twincat.ads/6.1.154",
-      "hashPath": "beckhoff.twincat.ads.6.1.154.nupkg.sha512"
-    },
-    "Beckhoff.TwinCAT.Ads.Abstractions/6.1.154": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-z1cOxDnk+szS17NhTYXLUjXh8UUl5bVSW2ltFolK7XHHNFhi32gb+JqM5qOodGmjPGEYfMLhy6wT7ezm4BsV8Q==",
-      "path": "beckhoff.twincat.ads.abstractions/6.1.154",
-      "hashPath": "beckhoff.twincat.ads.abstractions.6.1.154.nupkg.sha512"
-    },
-    "Beckhoff.TwinCAT.Ads.Server/6.1.154": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-88NYjzybbBxdl2Va2Vo/Qt+DgbU3w1xpHENBtD5NXo+9bMUyXtV8Iwf4ptykRPMCAE7VSqL3QljvRIqNT9+X7g==",
-      "path": "beckhoff.twincat.ads.server/6.1.154",
-      "hashPath": "beckhoff.twincat.ads.server.6.1.154.nupkg.sha512"
     },
     "ControlzEx/4.4.0": {
       "type": "package",
@@ -3937,13 +3861,6 @@
       "path": "system.componentmodel.annotations/5.0.0",
       "hashPath": "system.componentmodel.annotations.5.0.0.nupkg.sha512"
     },
-    "System.ComponentModel.Composition/6.0.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-60Qv+F7oxomOjJeTDA5Z4iCyFbQ0B/2Mi5HT+13pxxq0lVnu2ipbWMzFB+RWKr3wWKA8BSncXr9PH/fECwMX5Q==",
-      "path": "system.componentmodel.composition/6.0.0",
-      "hashPath": "system.componentmodel.composition.6.0.0.nupkg.sha512"
-    },
     "System.Configuration.ConfigurationManager/8.0.1": {
       "type": "package",
       "serviceable": true,
@@ -4167,13 +4084,6 @@
       "sha512": "sha512-tAgJM1xt3ytyMoW4qn4wIqgJYm7L7TShRZG4+Q4Qsi2PCcj96pXN7nRywS9KkB3p/xDUjc2HSwP9SROyPYDYKQ==",
       "path": "system.objectmodel/4.0.12",
       "hashPath": "system.objectmodel.4.0.12.nupkg.sha512"
-    },
-    "System.Reactive/6.0.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-31kfaW4ZupZzPsI5PVe77VhnvFF55qgma7KZr/E0iFTs6fmdhhG8j0mgEx620iLTey1EynOkEfnyTjtNEpJzGw==",
-      "path": "system.reactive/6.0.0",
-      "hashPath": "system.reactive.6.0.0.nupkg.sha512"
     },
     "System.Reflection/4.1.0": {
       "type": "package",

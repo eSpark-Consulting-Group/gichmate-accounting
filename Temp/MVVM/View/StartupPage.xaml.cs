@@ -10,6 +10,8 @@ namespace AccountsPro.MVVM.View
 {
     public partial class StartupPage : Window
     {
+        public static MainWindow mainWindow = new MainWindow();
+
         public StartupPage()
         {
             InitializeComponent();
@@ -68,10 +70,8 @@ namespace AccountsPro.MVVM.View
                                     MessageBox.Show("FiscalYear Is Not Currently Set!!!");
                             }
 
-
-                            var mainWindow = new MainWindow();
                             mainWindow.Show();
-
+                            
                             this.Close();
                         }
                         else

@@ -1,7 +1,4 @@
-﻿//using AccountsPRO.MVVM.Model;
-using AccountsPRO.MVVM.ViewModel;
-using AccountsPRO.Utility;
-using MahApps.Metro.Controls;
+﻿using MahApps.Metro.Controls;
 using MaterialDesignThemes.Wpf;
 using Microsoft.Extensions.DependencyInjection;
 using NLog;
@@ -12,8 +9,6 @@ using System.Media;
 using System.Reflection;
 using System.Windows;
 using System.Windows.Media;
-using TwinCAT;
-using TwinCAT.Ads;
 
 namespace AccountsPRO
 {
@@ -24,14 +19,11 @@ namespace AccountsPRO
     {
         private Logger log = LogManager.GetLogger("Main");
         //MainViewModel _vm;
-        //private readonly ITwinCathelper _TwinCathelper;/*{ get { return App.AppHost.Services.GetRequiredService<ITwinCathelper>(); } }*/
-        //private ISplashScreenViewModel _SplashScreenViewModel { get { return App.AppHost.Services.GetRequiredService<ISplashScreenViewModel>(); } }
 
         public MainWindow()
         {
             try
             {
-                //_TwinCathelper = twinCathelper;
                 InitializeComponent();
             }
             catch(Exception ee) { MessageBox.Show("MainApp error: >>> "+ee.Message); }

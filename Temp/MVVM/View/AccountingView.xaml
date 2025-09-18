@@ -272,16 +272,7 @@
                     >
             </Button>
 
-            <Button Content="  🔔  " Grid.Column="15" 
-                    Height="25"
-                    Foreground="WhiteSmoke" 
-                    Background="Transparent" 
-                    Style="{StaticResource AnimatedRedButton}"
-                    BorderThickness="0" 
-                    FontSize="15" 
-                    >
-            </Button>
-            
+
             <Button Content="  HELP  " 
                     Grid.Column="14" 
                     Height="25"
@@ -293,18 +284,31 @@
                     Click="btn_Help_Click"
                     >
             </Button>
-            
+
             <Button Content="  👤  " 
-                    Grid.Column="16" 
+                    Grid.Column="15" 
                     Height="25"
                     Style="{StaticResource AnimatedRedButton}"
                     Foreground="WhiteSmoke" 
                     Background="Transparent" 
                     BorderThickness="0" 
                     FontSize="15" 
-                    Click="Button_Click_1">
+                    Click="CreateUserBtn_Click">
             </Button>
 
+            
+            <Button Content="  LOG OUT  " Grid.Column="17" 
+                    Height="25"
+                    Foreground="WhiteSmoke" 
+                    Background="Transparent" 
+                    Style="{StaticResource AnimatedRedButton}"
+                    BorderThickness="0" 
+                    FontSize="15" 
+                    Click="LogOutBtn_Click"
+                    >
+            </Button>
+            
+          
         </Grid>
 
 

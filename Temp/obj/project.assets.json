@@ -45,60 +45,6 @@
           }
         }
       },
-      "Beckhoff.TwinCAT.Ads/6.1.154": {
-        "type": "package",
-        "dependencies": {
-          "Beckhoff.TwinCAT.Ads.Server": "6.1.154",
-          "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
-          "System.ComponentModel.Composition": "6.0.0",
-          "System.Reactive": "6.0.0"
-        },
-        "compile": {
-          "lib/net7.0/TwinCAT.Ads.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net7.0/TwinCAT.Ads.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Beckhoff.TwinCAT.Ads.Abstractions/6.1.154": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
-          "System.Configuration.ConfigurationManager": "6.0.0"
-        },
-        "compile": {
-          "lib/net7.0/TwinCAT.Ads.Abstractions.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net7.0/TwinCAT.Ads.Abstractions.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Beckhoff.TwinCAT.Ads.Server/6.1.154": {
-        "type": "package",
-        "dependencies": {
-          "Beckhoff.TwinCAT.Ads.Abstractions": "6.1.154",
-          "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
-          "System.Reactive": "6.0.0"
-        },
-        "compile": {
-          "lib/net7.0/TwinCAT.Ads.Server.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net7.0/TwinCAT.Ads.Server.dll": {
-            "related": ".xml"
-          }
-        }
-      },
       "ControlzEx/4.4.0": {
         "type": "package",
         "dependencies": {
@@ -3597,22 +3543,6 @@
           }
         }
       },
-      "System.ComponentModel.Composition/6.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net6.0/System.ComponentModel.Composition.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/System.ComponentModel.Composition.dll": {
-            "related": ".xml"
-          }
-        },
-        "build": {
-          "buildTransitive/netcoreapp3.1/_._": {}
-        }
-      },
       "System.Configuration.ConfigurationManager/8.0.1": {
         "type": "package",
         "dependencies": {
@@ -3620,7 +3550,7 @@
           "System.Security.Cryptography.ProtectedData": "8.0.0"
         },
         "compile": {
-          "lib/net8.0/System.Configuration.ConfigurationManager.dll": {
+          "lib/net8.0/_._": {
             "related": ".xml"
           }
         },
@@ -4245,22 +4175,6 @@
         },
         "runtime": {
           "lib/netstandard1.3/System.ObjectModel.dll": {}
-        }
-      },
-      "System.Reactive/6.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net6.0/System.Reactive.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/System.Reactive.dll": {
-            "related": ".xml"
-          }
-        },
-        "build": {
-          "buildTransitive/net6.0/_._": {}
         }
       },
       "System.Reflection/4.1.0": {
@@ -5138,66 +5052,6 @@
         "lib/net8.0/Azure.Identity.xml",
         "lib/netstandard2.0/Azure.Identity.dll",
         "lib/netstandard2.0/Azure.Identity.xml"
-      ]
-    },
-    "Beckhoff.TwinCAT.Ads/6.1.154": {
-      "sha512": "X/RER/wM8KqxevbtZFWJ5HjZepWs02VNjsh8TnVWFvkEIfwWOimJYOhBi1CAWKNKSKYsZUw/09AmAnfIvgc+LA==",
-      "type": "package",
-      "path": "beckhoff.twincat.ads/6.1.154",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "License.md",
-        "Package.png",
-        "ReadMe.md",
-        "beckhoff.twincat.ads.6.1.154.nupkg.sha512",
-        "beckhoff.twincat.ads.nuspec",
-        "lib/net6.0/TwinCAT.Ads.dll",
-        "lib/net6.0/TwinCAT.Ads.xml",
-        "lib/net7.0/TwinCAT.Ads.dll",
-        "lib/net7.0/TwinCAT.Ads.xml",
-        "lib/netstandard2.0/TwinCAT.Ads.dll",
-        "lib/netstandard2.0/TwinCAT.Ads.xml"
-      ]
-    },
-    "Beckhoff.TwinCAT.Ads.Abstractions/6.1.154": {
-      "sha512": "z1cOxDnk+szS17NhTYXLUjXh8UUl5bVSW2ltFolK7XHHNFhi32gb+JqM5qOodGmjPGEYfMLhy6wT7ezm4BsV8Q==",
-      "type": "package",
-      "path": "beckhoff.twincat.ads.abstractions/6.1.154",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "License.md",
-        "Package.png",
-        "ReadMe.md",
-        "beckhoff.twincat.ads.abstractions.6.1.154.nupkg.sha512",
-        "beckhoff.twincat.ads.abstractions.nuspec",
-        "lib/net6.0/TwinCAT.Ads.Abstractions.dll",
-        "lib/net6.0/TwinCAT.Ads.Abstractions.xml",
-        "lib/net7.0/TwinCAT.Ads.Abstractions.dll",
-        "lib/net7.0/TwinCAT.Ads.Abstractions.xml",
-        "lib/netstandard2.0/TwinCAT.Ads.Abstractions.dll",
-        "lib/netstandard2.0/TwinCAT.Ads.Abstractions.xml"
-      ]
-    },
-    "Beckhoff.TwinCAT.Ads.Server/6.1.154": {
-      "sha512": "88NYjzybbBxdl2Va2Vo/Qt+DgbU3w1xpHENBtD5NXo+9bMUyXtV8Iwf4ptykRPMCAE7VSqL3QljvRIqNT9+X7g==",
-      "type": "package",
-      "path": "beckhoff.twincat.ads.server/6.1.154",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "License.md",
-        "Package.png",
-        "ReadMe.md",
-        "beckhoff.twincat.ads.server.6.1.154.nupkg.sha512",
-        "beckhoff.twincat.ads.server.nuspec",
-        "lib/net6.0/TwinCAT.Ads.Server.dll",
-        "lib/net6.0/TwinCAT.Ads.Server.xml",
-        "lib/net7.0/TwinCAT.Ads.Server.dll",
-        "lib/net7.0/TwinCAT.Ads.Server.xml",
-        "lib/netstandard2.0/TwinCAT.Ads.Server.dll",
-        "lib/netstandard2.0/TwinCAT.Ads.Server.xml"
       ]
     },
     "ControlzEx/4.4.0": {
@@ -9748,30 +9602,6 @@
         "version.txt"
       ]
     },
-    "System.ComponentModel.Composition/6.0.0": {
-      "sha512": "60Qv+F7oxomOjJeTDA5Z4iCyFbQ0B/2Mi5HT+13pxxq0lVnu2ipbWMzFB+RWKr3wWKA8BSncXr9PH/fECwMX5Q==",
-      "type": "package",
-      "path": "system.componentmodel.composition/6.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "buildTransitive/netcoreapp2.0/System.ComponentModel.Composition.targets",
-        "buildTransitive/netcoreapp3.1/_._",
-        "lib/net461/_._",
-        "lib/net6.0/System.ComponentModel.Composition.dll",
-        "lib/net6.0/System.ComponentModel.Composition.xml",
-        "lib/netcoreapp3.1/System.ComponentModel.Composition.dll",
-        "lib/netcoreapp3.1/System.ComponentModel.Composition.xml",
-        "lib/netstandard2.0/System.ComponentModel.Composition.dll",
-        "lib/netstandard2.0/System.ComponentModel.Composition.xml",
-        "system.componentmodel.composition.6.0.0.nupkg.sha512",
-        "system.componentmodel.composition.nuspec",
-        "useSharedDesignerContext.txt"
-      ]
-    },
     "System.Configuration.ConfigurationManager/8.0.1": {
       "sha512": "gPYFPDyohW2gXNhdQRSjtmeS6FymL2crg4Sral1wtvEJ7DUqFCDWDVbbLobASbzxfic8U1hQEdC7hmg9LHncMw==",
       "type": "package",
@@ -11270,34 +11100,6 @@
         "ref/xamarinwatchos10/_._",
         "system.objectmodel.4.0.12.nupkg.sha512",
         "system.objectmodel.nuspec"
-      ]
-    },
-    "System.Reactive/6.0.0": {
-      "sha512": "31kfaW4ZupZzPsI5PVe77VhnvFF55qgma7KZr/E0iFTs6fmdhhG8j0mgEx620iLTey1EynOkEfnyTjtNEpJzGw==",
-      "type": "package",
-      "path": "system.reactive/6.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "build/net6.0-windows10.0.19041/_._",
-        "build/net6.0/_._",
-        "buildTransitive/net6.0-windows10.0.19041/_._",
-        "buildTransitive/net6.0/_._",
-        "icon.png",
-        "lib/net472/System.Reactive.dll",
-        "lib/net472/System.Reactive.xml",
-        "lib/net6.0-windows10.0.19041/System.Reactive.dll",
-        "lib/net6.0-windows10.0.19041/System.Reactive.xml",
-        "lib/net6.0/System.Reactive.dll",
-        "lib/net6.0/System.Reactive.xml",
-        "lib/netstandard2.0/System.Reactive.dll",
-        "lib/netstandard2.0/System.Reactive.xml",
-        "lib/uap10.0.18362/System.Reactive.dll",
-        "lib/uap10.0.18362/System.Reactive.pri",
-        "lib/uap10.0.18362/System.Reactive.xml",
-        "readme.md",
-        "system.reactive.6.0.0.nupkg.sha512",
-        "system.reactive.nuspec"
       ]
     },
     "System.Reflection/4.1.0": {
@@ -13331,7 +13133,6 @@
   },
   "projectFileDependencyGroups": {
     "net8.0-windows7.0": [
-      "Beckhoff.TwinCAT.Ads >= 6.1.154",
       "DataGridExtensions >= 2.5.15",
       "EPPlus >= 8.1.0",
       "ExcelPackage >= 1.0.0",
@@ -13368,11 +13169,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Dotnet_User1\\Desktop\\12SeptemberUpdate\\FlexMold[12-Feb]-AccountingUpdate\\AccountsPro.csproj",
+      "projectUniqueName": "C:\\Users\\Dotnet_User1\\Desktop\\17sEP (1)\\AccountsPro.csproj",
       "projectName": "AccountsPro",
-      "projectPath": "C:\\Users\\Dotnet_User1\\Desktop\\12SeptemberUpdate\\FlexMold[12-Feb]-AccountingUpdate\\AccountsPro.csproj",
+      "projectPath": "C:\\Users\\Dotnet_User1\\Desktop\\17sEP (1)\\AccountsPro.csproj",
       "packagesPath": "C:\\Users\\Dotnet_User1\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Dotnet_User1\\Desktop\\12SeptemberUpdate\\FlexMold[12-Feb]-AccountingUpdate\\obj\\",
+      "outputPath": "C:\\Users\\Dotnet_User1\\Desktop\\17sEP (1)\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -13413,10 +13214,6 @@
       "net8.0-windows7.0": {
         "targetAlias": "net8.0-windows",
         "dependencies": {
-          "Beckhoff.TwinCAT.Ads": {
-            "target": "Package",
-            "version": "[6.1.154, )"
-          },
           "DataGridExtensions": {
             "target": "Package",
             "version": "[2.5.15, )"

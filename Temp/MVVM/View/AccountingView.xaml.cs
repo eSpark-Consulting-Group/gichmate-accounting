@@ -1,4 +1,6 @@
-﻿using AccountsPRO.MVVM.View.Accounts;
+﻿using AccountsPro.MVVM.View;
+using AccountsPro.MVVM.View.Firm;
+using AccountsPRO.MVVM.View.Accounts;
 using AccountsPRO.MVVM.View.Firm;
 using AccountsPRO.MVVM.View.Master;
 using AccountsPRO.MVVM.ViewModel;
@@ -123,8 +125,8 @@ namespace AccountsPRO.MVVM.View
         }
         private void SideBarBtn_UserSettingsClick(object sender, RoutedEventArgs e)
         {
-            var userSettings = new UserSettingsView();
-            userSettings.Show();
+            var createUser = new CreateUser();
+            createUser.Show();
         }
         private void SideBarBtn_AdminSettingsClick(object sender, RoutedEventArgs e)
         {
@@ -169,5 +171,18 @@ namespace AccountsPRO.MVVM.View
                 MessageBox.Show($"Unable to open document: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
+
+        private void CreateUserBtn_Click(object sender, RoutedEventArgs e)
+        {
+            var createUser = new CreateUser();
+            createUser.Show();
+        }
+
+        private void LogOutBtn_Click(object sender, RoutedEventArgs e)
+        {
+             Application.Current.Shutdown();           
+           
+        }
+
     }
 }

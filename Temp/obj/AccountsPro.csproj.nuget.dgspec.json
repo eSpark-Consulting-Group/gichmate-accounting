@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Dotnet_User1\\Desktop\\12SeptemberUpdate\\FlexMold[12-Feb]-AccountingUpdate\\AccountsPro.csproj": {}
+    "C:\\Users\\Dotnet_User1\\Desktop\\17sEP (1)\\AccountsPro.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Dotnet_User1\\Desktop\\12SeptemberUpdate\\FlexMold[12-Feb]-AccountingUpdate\\AccountsPro.csproj": {
+    "C:\\Users\\Dotnet_User1\\Desktop\\17sEP (1)\\AccountsPro.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dotnet_User1\\Desktop\\12SeptemberUpdate\\FlexMold[12-Feb]-AccountingUpdate\\AccountsPro.csproj",
+        "projectUniqueName": "C:\\Users\\Dotnet_User1\\Desktop\\17sEP (1)\\AccountsPro.csproj",
         "projectName": "AccountsPro",
-        "projectPath": "C:\\Users\\Dotnet_User1\\Desktop\\12SeptemberUpdate\\FlexMold[12-Feb]-AccountingUpdate\\AccountsPro.csproj",
+        "projectPath": "C:\\Users\\Dotnet_User1\\Desktop\\17sEP (1)\\AccountsPro.csproj",
         "packagesPath": "C:\\Users\\Dotnet_User1\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dotnet_User1\\Desktop\\12SeptemberUpdate\\FlexMold[12-Feb]-AccountingUpdate\\obj\\",
+        "outputPath": "C:\\Users\\Dotnet_User1\\Desktop\\17sEP (1)\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -52,10 +52,6 @@
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "dependencies": {
-            "Beckhoff.TwinCAT.Ads": {
-              "target": "Package",
-              "version": "[6.1.154, )"
-            },
             "DataGridExtensions": {
               "target": "Package",
               "version": "[2.5.15, )"
