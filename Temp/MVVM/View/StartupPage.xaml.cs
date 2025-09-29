@@ -1,4 +1,5 @@
-﻿using AccountsLibrary.Properties;
+﻿using AccountsLibrary;
+using AccountsLibrary.Properties;
 using AccountsPRO;
 using AccountsPRO.MVVM.View.Firm;
 using AccountsPRO.MVVM.ViewModel;
@@ -57,7 +58,7 @@ namespace AccountsPro.MVVM.View
                         
                         object result = cmd.ExecuteScalar();
                         int count = Convert.ToInt32(result);
-
+                        AniHelper.LoggedInUser = userName;
                         if (count > 0)
                         {
 

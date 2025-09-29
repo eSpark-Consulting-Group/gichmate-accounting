@@ -135,7 +135,7 @@
                         Margin="2"
                         HorizontalScrollBarVisibility="Auto"
                         VerticalScrollBarVisibility="Auto">
-                        <View:MasterTransaction_Click Width="1900" />
+                        <View:MasterTransaction Width="1900" />
                     </ScrollViewer>
                 </TabItem>
 

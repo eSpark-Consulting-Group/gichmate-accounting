@@ -27,6 +27,7 @@ FC:\Users\Dotnet_User1\Desktop\17sEP (1)\MVVM\View\Master\AccountsGroup.xaml;;
 FC:\Users\Dotnet_User1\Desktop\17sEP (1)\MVVM\View\Master\AccountsLedger.xaml;;
 FC:\Users\Dotnet_User1\Desktop\17sEP (1)\MVVM\View\Master\BalanceSheet.xaml;;
 FC:\Users\Dotnet_User1\Desktop\17sEP (1)\MVVM\View\Master\Bank.xaml;;
+FC:\Users\Dotnet_User1\Desktop\17sEP (1)\MVVM\View\Master\ChartDemo.xaml;;
 FC:\Users\Dotnet_User1\Desktop\17sEP (1)\MVVM\View\Master\DoubleJournalEntries.xaml;;
 FC:\Users\Dotnet_User1\Desktop\17sEP (1)\MVVM\View\Master\ExpenseAccount.xaml;;
 FC:\Users\Dotnet_User1\Desktop\17sEP (1)\MVVM\View\Master\JournalEntry.xaml;;
@@ -35,5 +36,10 @@ FC:\Users\Dotnet_User1\Desktop\17sEP (1)\MVVM\View\Master\SearchExpenseAccount.x
 FC:\Users\Dotnet_User1\Desktop\17sEP (1)\MVVM\View\Master\SearchLedger.xaml;;
 FC:\Users\Dotnet_User1\Desktop\17sEP (1)\MVVM\View\Master\TransactionWithoutInventory.xaml;;
 FC:\Users\Dotnet_User1\Desktop\17sEP (1)\MVVM\View\Master\UploadBankReceipts.xaml;;
+FC:\Users\Dotnet_User1\Desktop\17sEP (1)\MVVM\View\PropertyManagement\ArrearsAgingAnalysis.xaml;;
+FC:\Users\Dotnet_User1\Desktop\17sEP (1)\MVVM\View\PropertyManagement\HistoricalBalance.xaml;;
+FC:\Users\Dotnet_User1\Desktop\17sEP (1)\MVVM\View\PropertyManagement\PrepaymentTracking.xaml;;
+FC:\Users\Dotnet_User1\Desktop\17sEP (1)\MVVM\View\PropertyManagement\PropertyManagement.xaml;;
+FC:\Users\Dotnet_User1\Desktop\17sEP (1)\MVVM\View\PropertyManagement\UtilityCostAllocation.xaml;;
 FC:\Users\Dotnet_User1\Desktop\17sEP (1)\MVVM\View\StartupPage.xaml;;
 

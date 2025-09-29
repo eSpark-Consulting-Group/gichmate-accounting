@@ -6,10 +6,10 @@
     xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:viewmodel="clr-namespace:AccountsPRO.MVVM.ViewModel"    
-    x:Class="AccountsPRO.MVVM.View.MasterTransaction_Click"
-    Height="1000" Width="1850"
-    
-    mc:Ignorable="d">
+    x:Class="AccountsPRO.MVVM.View.MasterTransaction"
+    Height="1000" 
+    Width="1850"
+    >
 
 
     <UserControl.Resources>
@@ -53,6 +53,7 @@
                 <GradientStop Color="#FEFFFFFF" Offset="0.682"/>
             </LinearGradientBrush>
         </Grid.Background>
+
         <!-- Top Bar -->
         <Grid Background="#EE4540" Height="39" VerticalAlignment="Top">
             <Grid.ColumnDefinitions>
@@ -60,7 +61,7 @@
                 <ColumnDefinition Width="111"/>
                 <ColumnDefinition Width="190"/>
                 <ColumnDefinition Width="120"/>
-                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="230"/>
                 <ColumnDefinition Width="160"/>
                 <ColumnDefinition Width="100"/>
                 <ColumnDefinition Width="173"/>
@@ -112,7 +113,7 @@
                         <MenuItem Header="Balance Sheet"   Click="MasterBalanceSheetButton_click"/>
                         <MenuItem Header="Double Journal Entries" Click="MasterDoubleJournalEntries_Click"/>
                         <MenuItem Header="Expense Account" Click="MasterExpenseButton_click"/>
-                        <!--<MenuItem Header="Transaction Without Inventory" Click="MasterTransactionButton_Click"/>-->
+                        <!--<MenuItem Header="Transaction Without Inventory" Click="MasterTransactionButton"/>-->
                         <MenuItem Header="Upload Tenants" Click="MasterUploadTenantsButton_Click"/>
                         <MenuItem Header="Upload Bank Receipts" Click="MasterUploadBank_Click"/>
                         <MenuItem Header="Single Journal Entry" Click="MasterJournalEntryButton_Click"/>
@@ -123,18 +124,20 @@
 
 
             <Button x:Name="TopBarAccountsButton"
-        Content="  ACCOUNTS  "
-        Foreground="White"
-        Background="Transparent"                    
-        Grid.Column="3"                    
-        HorizontalAlignment="Center"
-        VerticalAlignment="Center"
-        FontSize="17"           
-        Style="{StaticResource Animation}"
-        Click="TopBarAccountsButton_Click"
+                    Content="  ACCOUNTS  "
+                    Foreground="White"
+                    Background="Transparent"                    
+                    Grid.Column="3"                    
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="17"           
+                    Style="{StaticResource Animation}"
+                    Click="TopBarAccountsButton_Click"
         
-        Width="128" Margin="0,0,0,1">
+                    Width="128" Margin="0,0,0,1">
+
                 <Button.ContextMenu>
+
                     <ContextMenu x:Name="AccountsContextMenu" Margin="0,10,20,20">
                         <MenuItem Header="Account Screens" IsEnabled="False"/>
                         <Separator/>
@@ -173,6 +176,7 @@
             Command="{Binding ReceiptCommand}"/>
                     </ContextMenu>
                 </Button.ContextMenu>
+
             </Button>
 
 
@@ -180,8 +184,8 @@
 
 
 
-            <Button x:Name="TopBarReportsButton"
-                    Content="  REPORTS  "
+            <Button x:Name="TopBarPropertyManagementButton"
+                    Content="  PROPERTY MANAGEMENT  "
                     Foreground="White"
                     Background="Transparent"                    
                     Grid.Column="4"
@@ -189,34 +193,35 @@
                     VerticalAlignment="Center"
                     FontSize="17"         
                     Style="{StaticResource Animation}"
-                    Width="110" 
-                    Click="TopBarReportsButton_Click" Margin="0,0,0,1">
-
+                    Width="222" 
+                    Click="TopBarPropertyManagementButton_Click"
+                    Height="35" >
                 <Button.ContextMenu>
-                    <ContextMenu x:Name="ReportsContextMenu" >
-                        <MenuItem Header="Report Screens" IsEnabled="False"/>
+
+                    <ContextMenu x:Name="PropertyManagementContextMenu" >
+                        <MenuItem Header="Property Management Menu" IsEnabled="False"/>
                         <Separator/>
-                        <MenuItem Header="Reports Demo" />
-                        <MenuItem Header="Reports Menu" />
-                        <MenuItem Header="AdvanceReport" />
-                        <MenuItem Header="Sales Report" />
-                        <MenuItem Header="Sales Return Report" />
-                        <MenuItem Header="Purchase Report" />
-                        <MenuItem Header="Purchase Return Report" />
-                        <MenuItem Header="Sales Estimate Report" />
-                        <MenuItem Header="Sales Order Report" />
-                        <MenuItem Header="Sales Quotation Report"/>
-                        <MenuItem Header="Purchase Order Report" />
-                        <MenuItem Header="Price List" />
-                        <MenuItem Header="Party List" />
-                        <MenuItem Header="Account Payable and Recievable Report" />
-                        <MenuItem Header="Rootwise Collection Report" />
-                        <MenuItem Header="Transaction Report" />
-                        <MenuItem Header="Other Reports" />
-                        <MenuItem Header="Customer Report" />
-                        <MenuItem Header="Supplier Report" />
+
+                        <MenuItem Header="Property Management"
+                                  Command="{Binding PropertyManagementCommand}"/>
+
+                        <MenuItem Header="Arrears Aging Analysis"
+                                  Command="{Binding ArrearsAgingAnalysisCommand}"/>
+
+                        <MenuItem Header="Prepayment Tracking and Application"
+                                  Command="{Binding PrepaymentTrackingCommand}"/>
+
+                        <MenuItem Header="Utility Cost Allocation Per Unit"
+                                  Command="{Binding UtilityCostAllocationCommand}"/>
+
+                        <MenuItem Header="Historical Balance Tracking Across Months"
+                                  Command="{Binding HistoricalBalanceCommand}"/>
+
+
+
                     </ContextMenu>
                 </Button.ContextMenu>
+
             </Button>
 
 
@@ -248,74 +253,75 @@
                     Height="32" Width="90">
             </Button>-->
 
+
             <Button Content="  ADMIN SETTINGS  "
                     Foreground="White"
                     Background="Transparent"                    
                     Grid.Column="5"
                     VerticalAlignment="Center"
                     FontSize="17"                   
-                    Width="NaN" Height="38" Click="Button_Click" 
+                    Width="NaN" Height="38"
+                    Click="Button_Click" 
                     Margin="9,0,3,0" 
-                    Style="{StaticResource Animation}">
-            </Button>
-
+                    Style="{StaticResource Animation}"/>
+            
 
             <Button Content="  VIEW  " 
                     Height="25"
                     Grid.Column="13" 
-                    Foreground="WhiteSmoke" 
-                    Style="{StaticResource AnimatedRedButton}"
+                    Style="{StaticResource Animation}"
                     Background="Transparent"
                     BorderThickness="0" 
                     FontSize="15" 
-                    Click="Button_Click_2"
-                    >
-            </Button>
-
+                    Click="Button_Click_2"/>
+            
 
             <Button Content="  HELP  " 
                     Grid.Column="14" 
                     Height="25"
-                    Style="{StaticResource AnimatedRedButton}"
-                    Foreground="WhiteSmoke" 
+                    Style="{StaticResource Animation}"
                     Background="Transparent" 
                     BorderThickness="0" 
                     FontSize="15" 
-                    Click="btn_Help_Click"
-                    >
-            </Button>
+                    Click="btn_Help_Click"/>
+            
 
             <Button Content="  👤  " 
                     Grid.Column="15" 
                     Height="25"
-                    Style="{StaticResource AnimatedRedButton}"
-                    Foreground="WhiteSmoke" 
+                    Style="{StaticResource Animation}"
                     Background="Transparent" 
                     BorderThickness="0" 
                     FontSize="15" 
-                    Click="CreateUserBtn_Click">
-            </Button>
+                    Click="CreateUserBtn_Click"/>
+            
 
+            <TextBlock x:Name="txtUserLoggedIn" 
+                       Text="{Binding [LoggedInUser]}" 
+                       Foreground="White" 
+                       Grid.Column="16"
+                       FontSize="17"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"/>
             
+
             <Button Content="  LOG OUT  " Grid.Column="17" 
-                    Height="25"
-                    Foreground="WhiteSmoke" 
+                    Height="NaN"
+                    Width="80"
                     Background="Transparent" 
-                    Style="{StaticResource AnimatedRedButton}"
-                    BorderThickness="0" 
+                    Style="{StaticResource Animation}"
                     FontSize="15" 
-                    Click="LogOutBtn_Click"
-                    >
-            </Button>
-            
-          
+                    Click="LogOutBtn_Click" Margin="8,2,7,3"/>
+
         </Grid>
 
 
-        <Grid x:Name="SidebarPanel" Width="94"
+        <Grid x:Name="SidebarPanel" 
+              Width="94"
               Background="{DynamicResource SidebarBrush}"
               Margin="0,30,0,0"
-              HorizontalAlignment="Left" RenderTransformOrigin="1.367,0.57">
+              HorizontalAlignment="Left" 
+              RenderTransformOrigin="1.367,0.57">
 
 
             <StackPanel Margin="10,10,10,0"
@@ -462,6 +468,30 @@
                                    Margin="10,0" 
                                    Visibility="Collapsed"/>
                     </StackPanel>
+
+
+                </Button>
+
+                <Button Background="Transparent"
+                        BorderThickness="0" 
+                        Height="50"
+                        Style="{StaticResource Animation}"
+                        Click="SideBarBtn_TenantsManagementClick">
+
+                    <StackPanel Orientation="Horizontal">
+
+                        <TextBlock Text="🏠🔍" 
+                                   FontSize="18" 
+                                   Foreground="White"/>
+
+                        <TextBlock x:Name="lblButton7"
+                                   Text="Profile"
+                                   FontSize="16"
+                                   Foreground="White"
+                                   Visibility="Collapsed"/>
+                    </StackPanel>
+
+
                 </Button>
             </StackPanel>
         </Grid>
@@ -487,26 +517,26 @@
                                 VerticalAlignment="Top"
                                 HorizontalAlignment="Center" 
                                 Margin="0,0,0,10" />
-
             </Grid>
 
         </Grid>
-        <Grid Margin="148,349,762,51" >
+        <Grid Margin="140,349,762,482" >
             <Grid.RenderTransform>
                 <RotateTransform Angle ="145" />
             </Grid.RenderTransform>
-            <StackPanel Orientation ="Horizontal" Margin="226,-500,432,499">
+            <StackPanel Orientation ="Horizontal" Margin="111,-500,432,499">
                 <StackPanel Width="505">
                     <Border Width="682" 
-              Height="35"
-              Background="#EE4540"
-              Margin="150,0,0,0"
-              CornerRadius="20"/>
+                            Height="35"
+                            Background="#EE4540"
+                            Margin="150,0,0,0"
+                            CornerRadius="20"/>
+
                     <Border Width="970"
-              Height="35"
-              Background="white"
-              Margin="-5,15,0,0"
-              CornerRadius="20" RenderTransformOrigin="0.5,0.5">
+                            Height="35"
+                            Background="white"
+                            Margin="-5,15,0,0"
+                            CornerRadius="20" RenderTransformOrigin="0.5,0.5">
                         <Border.RenderTransform>
                             <TransformGroup>
                                 <ScaleTransform/>

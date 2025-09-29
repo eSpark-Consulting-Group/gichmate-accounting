@@ -1,5 +1,7 @@
-﻿using AccountsPro.MVVM.View;
+﻿using AccountsLibrary;
+using AccountsPro.MVVM.View;
 using AccountsPro.MVVM.View.Firm;
+using AccountsPro.MVVM.View.Master;
 using AccountsPRO.MVVM.View.Accounts;
 using AccountsPRO.MVVM.View.Firm;
 using AccountsPRO.MVVM.View.Master;
@@ -7,34 +9,51 @@ using AccountsPRO.MVVM.ViewModel;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Diagnostics;
+using System.IO;
+using System.Reflection;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Media.Animation;
 namespace AccountsPRO.MVVM.View
 {
-    /// <summary>
-    /// Interaction logic for AccountingView.xaml
-    /// </summary>
-    public partial class MasterTransaction_Click : UserControl
+    public partial class MasterTransaction : UserControl
     {
         private bool isSidebarExpanded = true;
+
+        public static System.Windows.Threading.DispatcherTimer dispatcherTimer = new System.Windows.Threading.DispatcherTimer();
+
+        private void timerReoloaded_starttimer(object sender, EventArgs e)
+        {
+            this.txtUserLoggedIn.Text = AniHelper.LoggedInUser;
+            dispatcherTimer.Stop();
+        }
+
+
         private IAccountingViewModel _AccountingViewModel
         {
             get { return App.AppHost.Services.GetRequiredService<IAccountingViewModel>(); }
+            
         }
-        public MasterTransaction_Click()
+
+
+        //public static string LoggedInUser
+        //{
+        //    get { return AniHelper.LoggedInUser; }
+        //    set { AniHelper.LoggedInUser= value;
+        //        //this.txtUserLoggedIn.Text = value;
+        //        dispatcherTimer.Start();
+        //    }
+        //}
+
+        public MasterTransaction()
         {
             InitializeComponent();
             DataContext = _AccountingViewModel;
+            AniHelper.LoggedInUser = "Demo";
+            this.txtUserLoggedIn.Text = AniHelper.LoggedInUser;
+
+            dispatcherTimer.Tick += timerReoloaded_starttimer;
+            dispatcherTimer.Interval = new TimeSpan(0, 0, 1);
         }
-        //private void ToggleSidebar_Click(object sender, RoutedEventArgs e)
-        //{
-        //    var storyboard = isSidebarExpanded
-        //        ? (Storyboard)FindResource("CollapseSidebar")
-        //        : (Storyboard)FindResource("ExpandSidebar");
-        //    storyboard.Begin();
-        //    isSidebarExpanded = !isSidebarExpanded;
-        //}
         private void TopBarAccountsButton_Click(object sender, RoutedEventArgs e)
         {
 
@@ -44,59 +63,73 @@ namespace AccountsPRO.MVVM.View
             TopBarAccountsButton.ContextMenu.VerticalOffset = 0;
             TopBarAccountsButton.ContextMenu.IsOpen = true;
         }
-        /// ///////////////////////////////////////////////////////////////
-        private void TopBarReportsButton_Click(object sender, RoutedEventArgs e)
+
+        private void TopBarPropertyManagementButton_Click(object sender, RoutedEventArgs e)
         {
-            TopBarReportsButton.ContextMenu.PlacementTarget = TopBarReportsButton;
-            TopBarReportsButton.ContextMenu.Placement = System.Windows.Controls.Primitives.PlacementMode.Bottom;
-            TopBarReportsButton.ContextMenu.IsOpen = true;
+
+            TopBarPropertyManagementButton.ContextMenu.PlacementTarget = TopBarPropertyManagementButton;
+            TopBarPropertyManagementButton.ContextMenu.Placement = System.Windows.Controls.Primitives.PlacementMode.Bottom;
+            TopBarPropertyManagementButton.ContextMenu.HorizontalOffset = 0;
+            TopBarPropertyManagementButton.ContextMenu.VerticalOffset = 0;
+            TopBarPropertyManagementButton.ContextMenu.IsOpen = true;
         }
+
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             var adminSettings = new AdminSettingsView();
             adminSettings.Show();
         }
+
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             var userSettings = new UserSettingsView();
             userSettings.Show();
         }
+
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
             var firmDetails = new FirmDetails();
             firmDetails.Show();
         }
+
         private void TopBarMasterButton_Click(object sender, RoutedEventArgs e)
         {
             TopBarMasterButton.ContextMenu.PlacementTarget = TopBarMasterButton;
             TopBarMasterButton.ContextMenu.Placement = System.Windows.Controls.Primitives.PlacementMode.Bottom;
             TopBarMasterButton.ContextMenu.IsOpen = true;
         }
+
         private void MasterGroupButton_click(object sender, RoutedEventArgs e)
         {
             var accountsGroup = new AccountsGroup();
             accountsGroup.Show();
         }
+
         private void MasterLedgerButton_click(object sender, RoutedEventArgs e)
         {
             var accountsLedger = new AccountsLedger();
             accountsLedger.Show();
         }
+
         private void MasterExpenseButton_click(object sender, RoutedEventArgs e)
         {
             var expenseAccount = new ExpenseAccount();
             expenseAccount.Show();
         }
+
         private void MasterBankButton_click(object sender, RoutedEventArgs e)
         {
             var bankMaster = new Bank();
             bankMaster.Show();
         }
+
         private void MasterBalanceSheetButton_click(object sender, RoutedEventArgs e)
         {
             var balanceSheet = new BalanceSheet();
             balanceSheet.Show();
         }
+
         private void MasterJournalEntryButton_Click(object sender, RoutedEventArgs e)
         {
             var journalEntry = new JournalEntry();
@@ -108,21 +141,19 @@ namespace AccountsPRO.MVVM.View
             var doubleJournalEntries = new DoubleJournalEntries();
             doubleJournalEntries.Show();
         }
-        //private void MasterTransactionButton_Click(object sender, RoutedEventArgs e)
-        //{
-        //    var transactionWithoutInventory = new TransactionWithoutInventory();
-        //    transactionWithoutInventory.Show(); 
-        //}
+
         private void MasterUploadTenantsButton_Click(object sender, RoutedEventArgs e)
         {
             var uploadTenants = new UploadTenants();
             uploadTenants.Show();
         }
+
         private void MasterUploadBank_Click(object sender, RoutedEventArgs e)
         {
             var uploadBankReceipts = new UploadBankReceipts();
             uploadBankReceipts.Show();
         }
+
         private void SideBarBtn_UserSettingsClick(object sender, RoutedEventArgs e)
         {
             var createUser = new CreateUser();
@@ -154,17 +185,22 @@ namespace AccountsPRO.MVVM.View
             doubleJournalEntries.Show();
         }
 
+        private void SideBarBtn_TenantsManagementClick(object sender, RoutedEventArgs e)
+        {
+            var tenantManagement = new TenantManagement();
+            tenantManagement.Show();
+        }
+
+
         private void btn_Help_Click(object sender, RoutedEventArgs e)
         { 
             try
             {
-                string url = "https://docs.google.com/document/d/1m-MggHM1FuUZOLv_MJsqdhIuu8RF6fhSM21YWpsjQfc/edit?usp=sharing"; 
-                ProcessStartInfo psi = new ProcessStartInfo
-                {
-                    FileName = url,
-                    UseShellExecute = true 
-                };
-                Process.Start(psi);
+                //Manual.pdf is in Bin -> /Net8.0Windows folder
+                //just putting the file there will help us view it as a pdf from the given command below!
+                String exepath = Directory.GetParent(Assembly.GetExecutingAssembly().FullName).FullName;
+                Process.Start(new ProcessStartInfo(exepath+"\\Manual.pdf") { UseShellExecute = true });
+                //Process.Start(exepath + "\\Manual.pdf");
             }
             catch (Exception ex)
             {
@@ -184,5 +220,6 @@ namespace AccountsPRO.MVVM.View
            
         }
 
+        
     }
 }

@@ -1,0 +1,175 @@
+﻿<Window x:Class="AccountsPro.MVVM.View.Master.TenantManagement"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namesp ace:AccountsPro.MVVM.View.Master"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        BorderBrush="White"
+        BorderThickness="1.7"
+        Title="TenantManagement"
+        Height="770"
+        Width="1200">
+
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FFEE4540" Offset="0"/>
+                <GradientStop Color="#FFC72C41" Offset="0.2"/>
+                <GradientStop Color="#FF801336" Offset="0.4"/>
+                <GradientStop Color="#FF670E33" Offset="0.6"/>
+                <GradientStop Color="#FF510A32" Offset="0.8"/>
+                <GradientStop Color="#FF2D142C" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="320"/>
+            <RowDefinition Height="300"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <!-- Grid 000000000000000000000000000000000000 -->
+        <StackPanel Grid.Row="0"
+                    Margin="0,10,0,0"
+                    Orientation="Horizontal"
+                    Height="100"
+                    Width="1160"
+                    Background="#22FFFFFF">
+
+            <StackPanel Margin="20,0,0,0" >
+                <Label Content="Filters"
+                       FontSize="35"
+                       FontWeight="Bold"
+                       Foreground="White"/>
+                <Border BorderBrush="White"
+                        BorderThickness="1"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical"
+                        Margin="100,0,0,0"
+                        VerticalAlignment="Center">
+                
+                <TextBlock Text="📅 Month"
+                           HorizontalAlignment="Center"
+                           FontSize="14"
+                           FontWeight="Medium"
+                           Foreground="White"
+                           Margin="0,0,0,4"/>
+                
+                <ComboBox x:Name="MonthsComboBox"
+                          HorizontalContentAlignment="Center"
+                          Style="{StaticResource AccountsComboBox}"
+                          IsEditable="False"
+                          Width="200"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical"
+                        Margin="30,0,0,0"
+                        VerticalAlignment="Center">
+               
+                <TextBlock Text="📊 Arrears Aging"
+                           HorizontalAlignment="Center"
+                           FontSize="14"
+                           FontWeight="Medium"
+                           Foreground="White"
+                           Margin="0,0,0,4"/>
+                
+                <ComboBox x:Name="ArrearsAgingComboBox"
+                          HorizontalContentAlignment="Center"
+                          Style="{StaticResource AccountsComboBox}"
+                          IsEditable="False"
+                          Width="200">
+                    
+                    <ComboBoxItem Content="30 Days"/>
+                    <ComboBoxItem Content="60 Days"/>
+                    <ComboBoxItem Content="90 Days"/>
+                </ComboBox>
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical"
+                        Margin="30,0,0,0"
+                        VerticalAlignment="Center">
+
+                <TextBlock Text="💰 Prepayment"
+                           HorizontalAlignment="Center"
+                           FontSize="14"
+                           FontWeight="Medium"
+                           Foreground="White"
+                           Margin="0,0,0,4"/>
+                
+                <TextBox x:Name="PrepaymentTextBox"
+                          HorizontalContentAlignment="Center"
+                          Style="{StaticResource AccountsTextBox}"
+                          Width="200">
+                </TextBox>
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical"
+                        Margin="30,0,0,0"
+                        VerticalAlignment="Center">
+
+                <TextBlock Text="💲 Utility Cost Allocation Per Unit"
+                           HorizontalAlignment="Center"
+                           FontSize="14"
+                           FontWeight="Medium"
+                           Foreground="White"
+                           Margin="0,0,0,4"/>
+                
+                <TextBox x:Name="UtilityCostTextBox"
+                          HorizontalContentAlignment="Center"
+                          Style="{StaticResource AccountsTextBox}"
+                          Width="200">
+                </TextBox>
+            </StackPanel>
+
+        </StackPanel>
+
+        
+        <!-- Grid 111111111111111111111111111111111111 -->
+        <StackPanel Grid.Row="1"
+                    Orientation="Vertical"
+                    Height="300"
+                    Width="1160"
+                    Background="#22FFFFFF">
+
+            <Label Content="Arrears Aging"
+                   Height="42"
+                   FontSize="20" 
+                   FontWeight="SemiBold"/>
+
+            <DataGrid x:Name="TenantsDataGrid"
+                      Height="240"
+                      Width="1140">
+                
+            </DataGrid>
+        </StackPanel>
+
+        
+        <!-- Grid 22222222222222222222222222222222222222 -->
+        <StackPanel Grid.Row="2"
+                    Orientation="Vertical"
+                    Height="280"
+                    Width="1160"
+                    Background="#22FFFFFF">
+            
+            <Label Content="Utility Cost Allocation"
+                   FontSize="20"
+                   FontWeight="SemiBold"
+                   Height="40"/>
+
+            <DataGrid Height="220"
+                      Width="1140">
+                
+            </DataGrid>
+        </StackPanel>
+        
+        
+        
+        
+        
+    </Grid>
+</Window>

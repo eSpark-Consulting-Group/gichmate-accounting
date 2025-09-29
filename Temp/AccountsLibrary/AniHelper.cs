@@ -35,6 +35,7 @@ namespace AccountsLibrary
 {
 	public class AniHelper
 	{
+		public static string LoggedInUser = "";
 		private static Company company;
 
 		private PrintDocument pDocu = new PrintDocument();

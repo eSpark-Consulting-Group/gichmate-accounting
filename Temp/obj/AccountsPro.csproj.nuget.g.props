@@ -34,5 +34,6 @@
     <PkgMicrosoft_DotNet_UpgradeAssistant_Extensions_Default_Analyzers Condition=" '$(PkgMicrosoft_DotNet_UpgradeAssistant_Extensions_Default_Analyzers)' == '' ">C:\Users\Dotnet_User1\.nuget\packages\microsoft.dotnet.upgradeassistant.extensions.default.analyzers\0.4.421302</PkgMicrosoft_DotNet_UpgradeAssistant_Extensions_Default_Analyzers>
     <PkgMaterialDesignThemes Condition=" '$(PkgMaterialDesignThemes)' == '' ">C:\Users\Dotnet_User1\.nuget\packages\materialdesignthemes\4.9.0</PkgMaterialDesignThemes>
     <PkgMahApps_Metro Condition=" '$(PkgMahApps_Metro)' == '' ">C:\Users\Dotnet_User1\.nuget\packages\mahapps.metro\2.4.10</PkgMahApps_Metro>
+    <PkgLiveCharts_Wpf Condition=" '$(PkgLiveCharts_Wpf)' == '' ">C:\Users\Dotnet_User1\.nuget\packages\livecharts.wpf\0.9.7</PkgLiveCharts_Wpf>
   </PropertyGroup>
 </Project>

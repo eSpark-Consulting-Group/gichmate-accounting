@@ -7,13 +7,12 @@
         mc:Ignorable="d"
         ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen"
-        BorderBrush="White"
-        BorderThickness="1"
+        BorderBrush="Silver"
+        BorderThickness="3"
         Height="450" 
         Width="850"
         WindowStyle="None"
         Background="Beige">
-
 
 
     <Grid UseLayoutRounding="True">
@@ -187,5 +186,5 @@
 
 
     </Grid>
-
+    
 </Window>

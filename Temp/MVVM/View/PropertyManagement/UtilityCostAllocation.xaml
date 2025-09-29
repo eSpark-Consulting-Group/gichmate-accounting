@@ -1,0 +1,175 @@
+﻿<UserControl x:Class="AccountsPro.MVVM.View.PropertyManagement.UtilityCostAllocation"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AccountsPro.MVVM.View.PropertyManagement"
+             mc:Ignorable="d" 
+             BorderBrush="White"
+             BorderThickness="1.7"
+             Height="770" 
+             Width="1200">
+
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FFEE4540" Offset="0"/>
+                <GradientStop Color="#FFC72C41" Offset="0.2"/>
+                <GradientStop Color="#FF801336" Offset="0.4"/>
+                <GradientStop Color="#FF670E33" Offset="0.6"/>
+                <GradientStop Color="#FF510A32" Offset="0.8"/>
+                <GradientStop Color="#FF2D142C" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="350"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        
+        
+        <StackPanel Grid.Row="0"
+                    Orientation="Horizontal"
+                    Height="50"
+                    Width="1170" 
+                    Background="#22FFFFFF">
+
+            <Label Content="Utility Cost Allocation Per Unit"
+                   FontSize="25"
+                   FontWeight="Bold"/>
+
+            <Button Content="X" 
+                    FontSize="20"
+                    Width="40"
+                    Style="{StaticResource AnimatedRedButton}"                    
+                    Command="{Binding DefaultAccountScreenCommand}"
+                    Margin="740,0,0,0" />            
+        </StackPanel>
+
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Height="50"
+                    Width="1170" 
+                    Background="#22FFFFFF">
+
+            <Label Content="📅 Month : "
+                   Style="{StaticResource AccountsLabel}"
+                   Margin="30,0,0,0"/>
+
+            <ComboBox x:Name="MonthsComboBox"
+                      HorizontalContentAlignment="Center"
+                      Style="{StaticResource AccountsComboBox}"
+                      IsEditable="False"/>
+
+            <Label Content="👤  Tenant Name :"
+                   Margin="20,0,0,0"
+                   Style="{StaticResource AccountsLabel}"/>
+
+            <ComboBox x:Name="TenantNameTextBox"
+                      Margin="0,0,0,0"
+                      Style="{StaticResource AccountsComboBox}"/>
+        </StackPanel>
+
+
+        <StackPanel Grid.Row="2" 
+                    Style="{StaticResource AccountsStackPanel}">
+
+            <Label Content="Expected Rent :"
+                   Margin="5,0,0,0"
+                   Style="{StaticResource AccountsLabel}"/>
+
+            <TextBox x:Name="ExpectedRentTextBox"
+                     Margin="5,0,0,0"
+                     Style="{StaticResource AccountsTextBox}"/>
+
+
+            <Label Content="Water Cost :"
+                   Margin="57,0,0,0"
+                   Style="{StaticResource AccountsLabel}"/>
+
+            <TextBox x:Name="WaterCostTextBox"
+                     Style="{StaticResource AccountsTextBox}"/>
+
+            
+            <Label Content="Sanitation Cost :"
+                   Margin="30,0,0,0"
+                   Style="{StaticResource AccountsLabel}"/>
+
+            <TextBox x:Name="SanitationCostTextBox"
+                     Style="{StaticResource AccountsTextBox}"/>
+
+        </StackPanel>
+
+
+        <StackPanel Grid.Row="3" 
+                    Style="{StaticResource AccountsStackPanel}">
+
+            <Label Content="Rent Received :"
+                   Margin="10,0,0,0"
+                   Style="{StaticResource AccountsLabel}"/>
+
+            <TextBox x:Name="RentReceivedTextBox"
+                     Style="{StaticResource AccountsTextBox}"/>
+
+            <Label Content="Deposit :"
+                   Margin="79,0,0,0"
+                   Style="{StaticResource AccountsLabel}"/>
+
+            <TextBox x:Name="DepositTextBox"
+                     Style="{StaticResource AccountsTextBox}"/>
+
+        </StackPanel>
+
+
+        <StackPanel Grid.Row="4"
+                    Height="330"
+                    Width="1170" 
+                    Background="#22FFFFFF">
+
+            <DataGrid x:Name="TenantsDataGrid"
+                      Height="310" 
+                      Margin="0,10,0,0"
+                      Width="1150">
+                
+            </DataGrid>            
+        </StackPanel>
+
+
+        <StackPanel Grid.Row="5" Style="{StaticResource AccountsStackPanel}"
+                    >
+
+            <Label Content="Total Per Unit : "
+                   Style="{StaticResource AccountsLabel}"/>
+
+            <TextBox x:Name="TotalPerUnitTextBox"
+                     Text="0.00"
+                     Style="{StaticResource AccountsTextBox}"/>
+        </StackPanel>
+
+
+        <StackPanel Grid.Row="6" Style="{StaticResource AccountsStackPanel}"
+             >
+
+            <Button Content="Save"
+                    Margin="450,0,0,0"
+                    Style="{StaticResource AnimatedRedButton}"/>
+            
+            <Button Content="Update"
+                    Margin="10,0,0,0"
+                    Style="{StaticResource AnimatedRedButton}"/>
+            
+            <Button Content="Clear"
+                    Margin="10,0,0,0"
+                    Style="{StaticResource AnimatedRedButton}"/>
+            
+        </StackPanel>
+
+
+    </Grid>
+</UserControl>

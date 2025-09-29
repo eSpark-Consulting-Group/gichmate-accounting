@@ -3,6 +3,7 @@ using Microsoft.Data.SqlClient;
 using Microsoft.Win32;
 using Spire.Pdf.Texts;
 using System;
+using System.Collections;
 using System.Data;
 using System.Text.RegularExpressions;
 using System.Windows;
@@ -70,7 +71,7 @@ namespace AccountsPRO.MVVM.View.Master
 
             }
             catch { }
-            
+
             //List<UploadBankReceiptsObj> myList = new List<UploadBankReceiptsObj>();
             //UploadBankReceiptsObj myObj = new UploadBankReceiptsObj();
             System.Data.DataTable dataTable = new System.Data.DataTable("UploadBankReceipts");
@@ -106,7 +107,7 @@ namespace AccountsPRO.MVVM.View.Master
                     //    Console.WriteLine("******************************************");
                     Console.WriteLine(m.Groups[0].Value);
                     String sst = m.Groups[0].Value.Trim();
-                    Console.WriteLine(string.Join(Environment.NewLine, Regex.Split(sst, "\\s\\s\\s*")));
+                    Console.WriteLine(string.Join(Environment.NewLine, Regex.Split(sst, "\\s\\s\\s")));
                     //foreach (String st in Regex.Split(sst, "\\s\\s\\s*")) {
                     //[0]	"MPS 254797636391 TG113XGRQ1 Jane wangui mwangi 024"    string
                     //[1] "r83Ryn7JmIzF"  string
@@ -116,7 +117,7 @@ namespace AccountsPRO.MVVM.View.Master
                     //[5] "309,102.19"    string
                     //[6] "0240192004109" string
                     //myObj = new UploadBankReceiptsObj();
-                    String[] st = Regex.Split(sst, "\\s\\s\\s*");
+                    String[] st = Regex.Split(sst, "\\s\\s\\s");
                     //myObj.TransactionDetails = st[0].ToString();
                     //myObj.PaymentReference = st[1].ToString() + "---" + st[2].ToString();
                     //myObj.ValueDate = st[3].ToString();
@@ -125,18 +126,100 @@ namespace AccountsPRO.MVVM.View.Master
                     //myObj.Balance = st[6].ToString();
                     //myList.Add(myObj);
                     //}
+
+                    //26/08/2025     Page 5/20
+                    if (sst.Contains("Page "))
+                    { m = m.NextMatch(); continue; }
+
                     DataRow dr = dataTable.NewRow();
-                    try
+                    ArrayList al = new ArrayList();
+
+                    foreach (String str in st)
                     {
-                        dr[0] = st[0].ToString();
-                        dr[1] = st[1].ToString() + "---" + st[2].ToString();
-                        dr[2] = st[2].ToString();
-                        dr[3] = st[3].ToString();
-                        dr[4] = st[4].ToString();
-                        dr[5] = st[5].ToString();
-                        dataTable.Rows.Add(dr);
+                        if (str.Length > 3)
+                            al.Add(str);
                     }
-                    catch { }
+
+                    //if(sst.Contains("APP/RODAH KEMUNTO MORAA OSUMO"))
+                    //    Console.WriteLine("");
+
+                    DateTime chkRecs = DateTime.Now;
+                    int dateloc = 1;
+                    if (!DateTime.TryParse(al[dateloc].ToString().Trim(), out chkRecs))
+                    {
+                        dateloc = 2;
+                        if (!DateTime.TryParse(al[dateloc].ToString().Trim(), out chkRecs))
+                        {
+                            dateloc = 3;
+                            if (!DateTime.TryParse(al[dateloc].ToString().Trim(), out chkRecs))
+                                dateloc = 4;
+                        }
+                    }
+
+                    if (dateloc == 1)//if (sst.Contains("BY:"))
+                    {
+                        //           PAYED BY:HSE - 23 / 250413289208 / 01 - 07 - 2025 19:33:36
+
+                        //                                                                              54556384                  01 / 07 / 2025                   13,650.00                              313,479.20
+                        //250413289208
+                        try
+                        {
+                            dr[0] = al[0].ToString().Trim();//tran details
+                            dr[1] = al[5].ToString().Trim();// + "---" + st[2].ToString(); // payment ref
+                            dr[2] = al[2].ToString().Trim();//val date
+                                                            //*****************dr[44] and dr[45] and dr[46] must not be null for confirm debit values present
+                            if ((st[48].Length > 3 && st[49].Length > 3) || (st[49].Length > 3 && st[50].Length > 3) || (st[50].Length > 3 && st[51].Length > 3))
+                            { dr[3] = "0"; dr[4] = al[3].ToString().Trim(); }//debit
+                            else
+                            { dr[3] = al[3].ToString().Trim(); dr[4] = "0"; }//credit
+
+                            dr[5] = al[4].ToString().Trim();//balance
+                            dataTable.Rows.Add(dr);
+                        }
+                        catch { }
+                    }
+                    else if (dateloc == 2)//if (sst.Contains("BY:"))
+                    {
+                        //           PAYED BY:HSE - 23 / 250413289208 / 01 - 07 - 2025 19:33:36
+
+                        //                                                                              54556384                  01 / 07 / 2025                   13,650.00                              313,479.20
+                        //250413289208
+                        try
+                        {
+                            dr[0] = al[0].ToString().Trim();//tran details
+                            dr[1] = al[5].ToString().Trim();// + "---" + st[2].ToString(); // payment ref
+                            dr[2] = al[2].ToString().Trim();//val date
+                                                            //*****************dr[44] and dr[45] and dr[46] must not be null for confirm debit values present
+                            if ((st[48].Length > 3 && st[49].Length > 3) || (st[49].Length > 3 && st[50].Length > 3) || (st[50].Length > 3 && st[51].Length > 3))
+                            { dr[3] = "0"; dr[4] = al[3].ToString().Trim(); }//debit
+                            else
+                            { dr[3] = al[3].ToString().Trim(); dr[4] = "0"; }//credit
+
+                            dr[5] = al[4].ToString().Trim();//balance
+                            dataTable.Rows.Add(dr);
+                        }
+                        catch { }
+                    }
+                    else
+                    {
+                        try
+                        {
+                            dr[0] = al[0].ToString().Trim();//tran details
+                            dr[1] = al[2].ToString().Trim();// + "---" + st[2].ToString(); // payment ref
+                            dr[2] = al[dateloc].ToString().Trim();//val date
+                                                                  //*****************dr[44] and dr[45] and dr[46] must not be null for confirm debit values present
+                            if ((st[43].Length > 3 && st[44].Length > 3) || (st[44].Length > 3 && st[45].Length > 3) || (st[45].Length > 3 && st[46].Length > 3))
+                            { dr[3] = "0"; dr[dateloc + 1] = al[4].ToString().Trim(); }//debit
+                            else
+                            { dr[3] = al[dateloc + 1].ToString().Trim(); dr[4] = "0"; }//credit
+
+                            dr[5] = al[dateloc + 2].ToString().Trim();//balance
+                            dataTable.Rows.Add(dr);
+                        }
+                        catch { }
+                    }
+                    dr = dataTable.NewRow();
+
                     m = m.NextMatch();
                 }
                 using (SqlConnection connection = new SqlConnection(Settings.Default.strConnetionString))

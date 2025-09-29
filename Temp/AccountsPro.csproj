@@ -202,6 +202,7 @@
 		<PackageReference Include="EPPlus" Version="8.1.0" />
 		<PackageReference Include="ExcelPackage" Version="1.0.0" />
 		<PackageReference Include="Humanizer" Version="2.14.1" />
+		<PackageReference Include="LiveCharts.Wpf" Version="0.9.7" />
 		<PackageReference Include="MahApps.Metro" Version="2.4.10" />
 		<PackageReference Include="MahApps.Metro.IconPacks" Version="4.11.0" />
 		<PackageReference Include="MaterialDesignThemes.MahApps" Version="0.3.0" />

@@ -1,4 +1,7 @@
-﻿using AccountsPRO.Core;
+﻿using AccountsLibrary;
+using AccountsPro.MVVM.View.PropertyManagement;
+using AccountsPRO.Core;
+using AccountsPRO.MVVM.View;
 using AccountsPRO.MVVM.View.Accounts;
 //using AccountsPRO.MVVM.View.Home;
 
@@ -22,6 +25,13 @@ namespace AccountsPRO.MVVM.ViewModel
         public RelayCommand PostDatedChequeReceiptCommand { get; set; }
         public RelayCommand ReceiptCommand { get; set; }
         public RelayCommand UploadTenantsCommand { get; set; }
+
+        //property management
+        public RelayCommand PropertyManagementCommand { get; set; }
+        public RelayCommand ArrearsAgingAnalysisCommand { get; set; }
+        public RelayCommand PrepaymentTrackingCommand { get; set; }
+        public RelayCommand UtilityCostAllocationCommand { get; set; }
+        public RelayCommand HistoricalBalanceCommand { get; set; }
 
         private object _currentView;
         public object CurrentView
@@ -47,10 +57,17 @@ namespace AccountsPRO.MVVM.ViewModel
             PostDatedChequePaymentView postDatedChequePayment,
             PostDatedChequeReceiptView postDatedChequeReceipt,
             ReceiptView receiptView,
-            UploadTenantsUserControl uploadTenantsUserControl
+            UploadTenantsUserControl uploadTenantsUserControl,
+            //propertymanagement
+            PropertyManagement propertyManagement,
+            ArrearsAgingAnalysis arrearsAgingAnalysis,
+            PrepaymentTracking prepaymentTracking,
+            UtilityCostAllocation utilityCostAllocation,
+            HistoricalBalance historicalBalance
+
             )
         {
-            //set currentview from here!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
             CurrentView = uploadTenantsUserControl;
 
 
@@ -69,9 +86,9 @@ namespace AccountsPRO.MVVM.ViewModel
             CreditNoteCommand = new RelayCommand(o => { CurrentView = creditNoteView; });
 
             DebitNoteCommand = new RelayCommand(o => { CurrentView = debitNoteView; });
-             
+
             PaymentAndReceiptCommand = new RelayCommand(o => { CurrentView = paymentAndReceiptView; });
-            
+
             PostDatedChequePaymentCommand = new RelayCommand(o => { CurrentView = postDatedChequePayment; });
 
             PostDatedChequeReceiptCommand = new RelayCommand(o => { CurrentView = postDatedChequeReceipt; });
@@ -79,8 +96,18 @@ namespace AccountsPRO.MVVM.ViewModel
             ReceiptCommand = new RelayCommand(o => { CurrentView = receiptView; });
 
             UploadTenantsCommand = new RelayCommand(o => { CurrentView = uploadTenantsUserControl; });
-            //MachineDetailCommand = new RelayCommand(o => { CurrentView = machineDetailView; });
-            //MotorStatusCommand = new RelayCommand(o => { CurrentView = motorStatusView; });
+
+            //propertymanagement
+            PropertyManagementCommand = new RelayCommand(o => { CurrentView = propertyManagement; });
+
+            ArrearsAgingAnalysisCommand = new RelayCommand(o => { CurrentView = arrearsAgingAnalysis; });
+            
+            PrepaymentTrackingCommand = new RelayCommand(o => { CurrentView = prepaymentTracking; });
+
+            UtilityCostAllocationCommand = new RelayCommand(o => { CurrentView = utilityCostAllocation; });
+
+            HistoricalBalanceCommand = new RelayCommand(o => { CurrentView = historicalBalance; });
+
         }
     }
 }

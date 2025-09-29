@@ -1,9 +1,8 @@
 ﻿using AccountsPro.MVVM.View;
+using AccountsPro.MVVM.View.PropertyManagement;
 using AccountsPRO.MVVM.View;
 using AccountsPRO.MVVM.View.Accounts;
 using AccountsPRO.MVVM.ViewModel;
-using AccountsPRO.MVVM.ViewModel.SplashScreen;
-using AccountsPRO.Utility;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using NLog;
@@ -29,27 +28,40 @@ namespace AccountsPRO
                 AppHost = Host.CreateDefaultBuilder()
                     .ConfigureServices((hostContext, services) =>
                     {
-                        // Windows & Startup page
-                        services.AddSingleton<MainWindow>();
-                        services.AddSingleton<StartupPage>();
+                    // Windows & Startup page
+                    services.AddSingleton<MainWindow>();
+                    services.AddSingleton<StartupPage>();
 
-                        // ViewModels
-                        services.AddSingleton<IAccountingViewModel, AccountingViewModel>();
+                    // ViewModels
 
-                        // Views
-                        services.AddSingleton<DefaultAccountScreenView>();
-                        services.AddSingleton<BankPaymentView>();
-                        services.AddSingleton<BankReceiptView>();
-                        services.AddSingleton<BankReconciliationView>();
-                        services.AddSingleton<CashPaymentView>();
-                        services.AddSingleton<CashReceiptView>();
-                        services.AddSingleton<CreditNoteView>();
-                        services.AddSingleton<DebitNoteView>();
-                        services.AddSingleton<PaymentAndReceiptView>();
-                        services.AddSingleton<PostDatedChequePaymentView>();
-                        services.AddSingleton<PostDatedChequeReceiptView>();
-                        services.AddSingleton<ReceiptView>();
-                        services.AddSingleton<UploadTenantsUserControl>();
+                    //Accounts
+                    services.AddSingleton<IAccountingViewModel, AccountingViewModel>();
+
+                    // Views
+
+                    //Account User Controls
+                    services.AddSingleton<DefaultAccountScreenView>();
+                    services.AddSingleton<BankPaymentView>();
+                    services.AddSingleton<BankReceiptView>();
+                    services.AddSingleton<BankReconciliationView>();
+                    services.AddSingleton<CashPaymentView>();
+                    services.AddSingleton<CashReceiptView>();
+                    services.AddSingleton<CreditNoteView>();
+                    services.AddSingleton<DebitNoteView>();
+                    services.AddSingleton<PaymentAndReceiptView>();
+                    services.AddSingleton<PostDatedChequePaymentView>();
+                    services.AddSingleton<PostDatedChequeReceiptView>();
+                    services.AddSingleton<ReceiptView>();
+                    services.AddSingleton<UploadTenantsUserControl>();
+
+                    //propertymanagement
+                    services.AddSingleton<PropertyManagement>();
+                    services.AddSingleton<ArrearsAgingAnalysis>();
+                    services.AddSingleton<PrepaymentTracking>();
+                    services.AddSingleton<UtilityCostAllocation>();
+                    services.AddSingleton<HistoricalBalance>();
+                        //
+
                     })
                     .Build();
             }
@@ -96,10 +108,6 @@ namespace AccountsPRO
             // Resolve and show StartupPage
             var startupScreen = AppHost.Services.GetRequiredService<StartupPage>();
             startupScreen.Show();
-
-            // Optionally show main window instead:
-            // var mainWindow = AppHost.Services.GetRequiredService<MainWindow>();
-            // mainWindow.Show();
 
             base.OnStartup(e);
         }

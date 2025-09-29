@@ -1,4 +1,5 @@
 ﻿using AccountsPRO.Core;
+using AccountsPRO.MVVM.View.Accounts;
 
 namespace AccountsPRO.MVVM.ViewModel
 {
@@ -18,6 +19,13 @@ namespace AccountsPRO.MVVM.ViewModel
         public RelayCommand PostDatedChequePaymentCommand { get; set; }
         public RelayCommand PostDatedChequeReceiptCommand { get; set; }
         public RelayCommand ReceiptCommand { get; set; }
-        public RelayCommand UploadTenantsCommand { get; set; }  
+        public RelayCommand UploadTenantsCommand { get; set; } 
+
+        //propertymanagement
+        public RelayCommand PropertyManagementCommand {  get; set; }
+        public RelayCommand ArrearsAgingAnalysisCommand { get; set; }
+        public RelayCommand PrepaymentTrackingCommand { get; set; }
+        public RelayCommand UtilityCostAllocationCommand { get; set; }
+        public RelayCommand HistoricalBalanceCommand { get; set; }
     }
 }

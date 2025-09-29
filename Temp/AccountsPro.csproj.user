@@ -46,6 +46,18 @@
     <Compile Update="MVVM\View\Accounts\PostDatedChequeReceiptView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="MVVM\View\PropertyManagement\ArrearsAgingAnalysis.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MVVM\View\PropertyManagement\HistoricalBalance.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MVVM\View\PropertyManagement\PrepaymentTracking.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MVVM\View\PropertyManagement\PropertyManagement.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="MVVM\View\Accounts\ReceiptView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -76,6 +88,9 @@
     <Compile Update="MVVM\View\Master\Bank.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="MVVM\View\Master\ChartDemo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="MVVM\View\Master\DoubleJournalEntries.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -94,10 +109,16 @@
     <Compile Update="MVVM\View\Master\SearchLedger.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="MVVM\View\Master\TenantManagement.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="MVVM\View\Master\TransactionWithoutInventory.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="MVVM\View\Master\UploadBankReceipts.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MVVM\View\PropertyManagement\UtilityCostAllocation.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="MVVM\View\StartupPage.xaml.cs">
