@@ -411,6 +411,7 @@ namespace AccountsPro.MVVM.View.PropertyManagement
                     conn.Open();
 
                     //Now records will show those where expected rent is greater than paid, it shows that it isn't paid in full
+                    //It will show records where Expected rent, water, sanitation bills are greater than the value of total money paid for the user to take action
                     string sql = @"                               
                                        SELECT [UNIT NO],
                                        [TENANT NAME],
@@ -420,12 +421,15 @@ namespace AccountsPro.MVVM.View.PropertyManagement
                                        [RENT RECEIVED],
                                        DEPOSIT,
                                        PREPAYMENT,
-                                       [TOTAL MONEY PAID]
+                                       [ARREAS B/F],
+                                       [ARREAS PAID(UTILITIES)],
+                                       [TOTAL MONEY PAID],
+                                       [ARREAS C/F]
 
  	                                FROM UploadsTenantRent
-                                WHERE [EXPECTED RENT] > [TOTAL MONEY PAID]  
+                                WHERE Coalesce(IsVchrProcesd,0) = 0   AND [EXPECTED RENT] + WATER + SANITATION < [TOTAL MONEY PAID] 
                                         "; 
-
+                   
                     using (SqlCommand cmd = new SqlCommand(sql, conn))
                     using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
                     {
