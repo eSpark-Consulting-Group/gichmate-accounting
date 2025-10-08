@@ -12,7 +12,6 @@
           "EPPlus": "8.1.0",
           "ExcelPackage": "1.0.0",
           "Humanizer": "2.14.1",
-          "LiveCharts.Wpf": "0.9.7",
           "MahApps.Metro": "2.4.10",
           "MahApps.Metro.IconPacks": "4.11.0",
           "MaterialDesignThemes.MahApps": "0.3.0",
@@ -463,25 +462,6 @@
       "Humanizer.Core.zh-Hant/2.14.1": {
         "dependencies": {
           "Humanizer.Core": "2.14.1"
-        }
-      },
-      "LiveCharts/0.9.7": {
-        "runtime": {
-          "lib/net45/LiveCharts.dll": {
-            "assemblyVersion": "0.9.7.0",
-            "fileVersion": "0.9.7.0"
-          }
-        }
-      },
-      "LiveCharts.Wpf/0.9.7": {
-        "dependencies": {
-          "LiveCharts": "0.9.7"
-        },
-        "runtime": {
-          "lib/net45/LiveCharts.Wpf.dll": {
-            "assemblyVersion": "0.9.7.0",
-            "fileVersion": "0.9.7.0"
-          }
         }
       },
       "MahApps.Metro/2.4.10": {
@@ -2930,20 +2910,6 @@
       "sha512": "sha512-VIXB7HCUC34OoaGnO3HJVtSv2/wljPhjV7eKH4+TFPgQdJj2lvHNKY41Dtg0Bphu7X5UaXFR4zrYYyo+GNOjbA==",
       "path": "humanizer.core.zh-hant/2.14.1",
       "hashPath": "humanizer.core.zh-hant.2.14.1.nupkg.sha512"
-    },
-    "LiveCharts/0.9.7": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-p4xyBrUaNNfkWZSNsIle0r51cyVyFg0Yi0uBRZM5GQtdFiA/7guZHlffFyNUILIdux10Ch2hUaJpcZENVU9aaQ==",
-      "path": "livecharts/0.9.7",
-      "hashPath": "livecharts.0.9.7.nupkg.sha512"
-    },
-    "LiveCharts.Wpf/0.9.7": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-lv6YZoK0B4yWykMq5b9grZXtIbTj+OWu4sVN9GDpdgV6zffu64m4d5CW8KSjfSl9rB8VU649x1NZvhoU67hCDg==",
-      "path": "livecharts.wpf/0.9.7",
-      "hashPath": "livecharts.wpf.0.9.7.nupkg.sha512"
     },
     "MahApps.Metro/2.4.10": {
       "type": "package",

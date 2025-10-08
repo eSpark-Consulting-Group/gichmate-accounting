@@ -54,14 +54,14 @@
 
             <Label Content="📅 Month : "
                    Style="{StaticResource AccountsLabel}"
-                   Margin="30,0,0,0"/>
+                   Margin="65,0,0,0"/>
 
             <ComboBox x:Name="MonthsComboBox"
                       HorizontalContentAlignment="Center"
                       Style="{StaticResource AccountsComboBox}"
                       IsEditable="False"/>
 
-            <Label     Content="Unit No :"
+            <Label     Content="🔍 Unit No :"
                        Style="{StaticResource AccountsLabel}"
                        Margin="30,0,0,0"/>
 
@@ -74,8 +74,8 @@
                    Style="{StaticResource AccountsLabel}"
                    Margin="30,0,0,0"/>
 
-            <TextBox x:Name="TenantNameTextBox"
-                     Style="{StaticResource AccountsTextBox}"/>
+            <ComboBox x:Name="TenantNameComboBox"
+                     Style="{StaticResource AccountsComboBox}"/>
             
          </StackPanel>
 
@@ -100,15 +100,21 @@
 
             <Button Content="Send Reminder Emails"
                     Width="170"
-                    Height="45"
-                    Margin="400,0,0,0"
-                    Style="{StaticResource AnimatedRedButton}"/>
+                    Margin="360,0,0,0"
+                    Style="{StaticResource AnimatedRedButton}"
+                    Click="SendReminderEmails_Click"/>
+
+            <Button x:Name="ClearBtn"
+                    Content="Clear"
+                    Margin="30,0,0,0"
+                    Style="{StaticResource AnimatedRedButton}"
+                    Click="ClearBtn_Click"/>
 
             <Button Content="Export to CSV"
                     Width="170"
-                    Height="45"
-                    Margin="20,0,0,0"
-                    Style="{StaticResource AnimatedRedButton}"/>
+                    Margin="30,0,0,0"
+                    Style="{StaticResource AnimatedRedButton}"
+                    Click="ExportToCsv_Click"/>
 
         </StackPanel>
         

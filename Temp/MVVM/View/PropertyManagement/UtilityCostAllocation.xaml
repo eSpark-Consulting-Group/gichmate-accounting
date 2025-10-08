@@ -10,6 +10,7 @@
              Height="770" 
              Width="1200">
 
+    
     <Grid>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -24,13 +25,13 @@
 
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="70"/>
-            <RowDefinition Height="70"/>
-            <RowDefinition Height="70"/>
-            <RowDefinition Height="70"/>
-            <RowDefinition Height="350"/>
             <RowDefinition Height="60"/>
             <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="370"/>
+            <RowDefinition Height="50"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
         
@@ -67,12 +68,11 @@
                       Style="{StaticResource AccountsComboBox}"
                       IsEditable="False"/>
 
-            <Label Content="👤  Tenant Name :"
-                   Margin="20,0,0,0"
+            <Label Content="🔍  Unit No : "
+                   Margin="50,0,0,0"
                    Style="{StaticResource AccountsLabel}"/>
 
-            <ComboBox x:Name="TenantNameTextBox"
-                      Margin="0,0,0,0"
+            <ComboBox x:Name="UnitNoComboBox"
                       Style="{StaticResource AccountsComboBox}"/>
         </StackPanel>
 
@@ -80,20 +80,23 @@
         <StackPanel Grid.Row="2" 
                     Style="{StaticResource AccountsStackPanel}">
 
-            <Label Content="Expected Rent :"
-                   Margin="5,0,0,0"
+            <Label Content="Expected Rent : "
+                   Margin="5,0,0,0"                   
                    Style="{StaticResource AccountsLabel}"/>
 
             <TextBox x:Name="ExpectedRentTextBox"
-                     Margin="5,0,0,0"
+                     PreviewTextInput="NumericOnly"
+                     MaxLength="5"
                      Style="{StaticResource AccountsTextBox}"/>
 
 
-            <Label Content="Water Cost :"
+            <Label Content="Water Cost : "
                    Margin="57,0,0,0"
                    Style="{StaticResource AccountsLabel}"/>
 
             <TextBox x:Name="WaterCostTextBox"
+                     PreviewTextInput="NumericOnly"
+                     MaxLength="5"
                      Style="{StaticResource AccountsTextBox}"/>
 
             
@@ -102,74 +105,119 @@
                    Style="{StaticResource AccountsLabel}"/>
 
             <TextBox x:Name="SanitationCostTextBox"
+                     PreviewTextInput="NumericOnly"
+                     MaxLength="5"
                      Style="{StaticResource AccountsTextBox}"/>
 
         </StackPanel>
 
+        
 
         <StackPanel Grid.Row="3" 
                     Style="{StaticResource AccountsStackPanel}">
 
-            <Label Content="Rent Received :"
-                   Margin="10,0,0,0"
+            <Label Content="Rent Received : "
+                   Margin="5,0,0,0"
                    Style="{StaticResource AccountsLabel}"/>
 
             <TextBox x:Name="RentReceivedTextBox"
+                     PreviewTextInput="NumericOnly"
+                     MaxLength="5"
                      Style="{StaticResource AccountsTextBox}"/>
 
-            <Label Content="Deposit :"
+            <Label Content="Deposit : "
                    Margin="79,0,0,0"
                    Style="{StaticResource AccountsLabel}"/>
 
             <TextBox x:Name="DepositTextBox"
+                     PreviewTextInput="NumericOnly"
+                     MaxLength="5"
                      Style="{StaticResource AccountsTextBox}"/>
 
+            <CheckBox x:Name="IsPaidCheckBox" 
+                      Content="IsPaid ?"
+                      Height="30" Width="100"
+                      FontSize="14"
+                      Margin="55,0,0,0" 
+                      Checked="IsPaidCheckBox_Checked"
+                      Unchecked="IsPaidCheckBox_Unchecked"/>
+            
+            <!--Create something here for "ISPAID" to filter data according to this-->
+            
         </StackPanel>
 
+        <StackPanel Grid.Row="4" Style="{StaticResource AccountsStackPanel}">
 
-        <StackPanel Grid.Row="4"
-                    Height="330"
-                    Width="1170" 
-                    Background="#22FFFFFF">
-
-            <DataGrid x:Name="TenantsDataGrid"
-                      Height="310" 
-                      Margin="0,10,0,0"
-                      Width="1150">
-                
-            </DataGrid>            
-        </StackPanel>
-
-
-        <StackPanel Grid.Row="5" Style="{StaticResource AccountsStackPanel}"
-                    >
-
-            <Label Content="Total Per Unit : "
+            <Label Content="Total Per Unit : "                   
+                   Margin="10,0,0,0"
                    Style="{StaticResource AccountsLabel}"/>
 
             <TextBox x:Name="TotalPerUnitTextBox"
                      Text="0.00"
                      Style="{StaticResource AccountsTextBox}"/>
+
+            <Button x:Name="ImportExcelBtn"
+                    Content="Import From Excel"
+                    Width="150"
+                    Margin="460,0,0,0"
+                    Style="{StaticResource AnimatedRedButton}"
+                    Click="ImportExcelBtn_Click"/>
+            
+            <Button x:Name="ProcessBtn"
+                    Content="Process"
+                    Margin="30,0,0,0"
+                    Width="150"
+                    Style="{StaticResource AnimatedRedButton}"
+                    Click="ProcessBtn_Click"/>
+        </StackPanel>
+
+
+        <StackPanel Grid.Row="5"
+                    Height="350"
+                    Width="1170" 
+                    Background="#22FFFFFF">
+
+            <DataGrid x:Name="TenantsDataGrid"
+                      Height="330" 
+                      Margin="0,10,0,0"
+                      Width="1150">
+
+            </DataGrid>
         </StackPanel>
 
 
         <StackPanel Grid.Row="6" Style="{StaticResource AccountsStackPanel}"
              >
-
-            <Button Content="Save"
+            <!--<Button Content="Save"
                     Margin="450,0,0,0"
-                    Style="{StaticResource AnimatedRedButton}"/>
+                    Style="{StaticResource AnimatedRedButton}"
+                    Click="Save_Click"/>-->
             
             <Button Content="Update"
-                    Margin="10,0,0,0"
-                    Style="{StaticResource AnimatedRedButton}"/>
+                    Margin="450,0,0,0"
+                    Style="{StaticResource AnimatedRedButton}"
+                    Click="Update_Click"/>
             
             <Button Content="Clear"
                     Margin="10,0,0,0"
-                    Style="{StaticResource AnimatedRedButton}"/>
-            
+                    Style="{StaticResource AnimatedRedButton}"
+                    Click="Clear_Click"/>
+
+            <Button Content="Export To CSV"
+                    Margin="10,0,0,0"
+                    Style="{StaticResource AnimatedRedButton}"
+                    Width="150"
+                    Click="ExportToCsv_Click"/>
+
+            <Button Content="Utility Cost Per Unit"
+                    Margin="243,0,0,0"
+                    Width="150"
+                    Style="{StaticResource AnimatedRedButton}" 
+                    Click="UtilityPerUnitBtn_Click"
+                    />
         </StackPanel>
 
 
+        
     </Grid>
 </UserControl>

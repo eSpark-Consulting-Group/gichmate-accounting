@@ -71,7 +71,7 @@ namespace AccountsPRO.MVVM.View.Master
 
             }
             catch { }
-
+            
             //List<UploadBankReceiptsObj> myList = new List<UploadBankReceiptsObj>();
             //UploadBankReceiptsObj myObj = new UploadBankReceiptsObj();
             System.Data.DataTable dataTable = new System.Data.DataTable("UploadBankReceipts");
@@ -133,7 +133,7 @@ namespace AccountsPRO.MVVM.View.Master
 
                     DataRow dr = dataTable.NewRow();
                     ArrayList al = new ArrayList();
-
+                    
                     foreach (String str in st)
                     {
                         if (str.Length > 3)
@@ -149,8 +149,7 @@ namespace AccountsPRO.MVVM.View.Master
                     {
                         dateloc = 2;
                         if (!DateTime.TryParse(al[dateloc].ToString().Trim(), out chkRecs))
-                        {
-                            dateloc = 3;
+                        { dateloc = 3;
                             if (!DateTime.TryParse(al[dateloc].ToString().Trim(), out chkRecs))
                                 dateloc = 4;
                         }
@@ -178,13 +177,13 @@ namespace AccountsPRO.MVVM.View.Master
                         }
                         catch { }
                     }
-                    else if (dateloc == 2)//if (sst.Contains("BY:"))
+                    else if (dateloc==2)//if (sst.Contains("BY:"))
                     {
                         //           PAYED BY:HSE - 23 / 250413289208 / 01 - 07 - 2025 19:33:36
 
                         //                                                                              54556384                  01 / 07 / 2025                   13,650.00                              313,479.20
                         //250413289208
-                        try
+                       try
                         {
                             dr[0] = al[0].ToString().Trim();//tran details
                             dr[1] = al[5].ToString().Trim();// + "---" + st[2].ToString(); // payment ref
@@ -207,9 +206,9 @@ namespace AccountsPRO.MVVM.View.Master
                             dr[0] = al[0].ToString().Trim();//tran details
                             dr[1] = al[2].ToString().Trim();// + "---" + st[2].ToString(); // payment ref
                             dr[2] = al[dateloc].ToString().Trim();//val date
-                                                                  //*****************dr[44] and dr[45] and dr[46] must not be null for confirm debit values present
+                                                            //*****************dr[44] and dr[45] and dr[46] must not be null for confirm debit values present
                             if ((st[43].Length > 3 && st[44].Length > 3) || (st[44].Length > 3 && st[45].Length > 3) || (st[45].Length > 3 && st[46].Length > 3))
-                            { dr[3] = "0"; dr[dateloc + 1] = al[4].ToString().Trim(); }//debit
+                            { dr[3] = "0"; dr[dateloc+1] = al[4].ToString().Trim(); }//debit
                             else
                             { dr[3] = al[dateloc + 1].ToString().Trim(); dr[4] = "0"; }//credit
 

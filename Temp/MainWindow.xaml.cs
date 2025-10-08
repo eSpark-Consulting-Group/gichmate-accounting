@@ -1,4 +1,7 @@
-﻿using MahApps.Metro.Controls;
+﻿using AccountsLibrary;
+using AccountsPRO.MVVM.View;
+using AccountsPRO.MVVM.ViewModel;
+using MahApps.Metro.Controls;
 using MaterialDesignThemes.Wpf;
 using Microsoft.Extensions.DependencyInjection;
 using NLog;
@@ -150,6 +153,11 @@ private void Connection_ConnectionStatusChanged(object sender, EventArgs e)
         private void logCtrl_Loaded(object sender, System.Windows.RoutedEventArgs e)
         {
 
+        }
+
+        private void MetroWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            MasterTransaction.dispatcherTimer.Start();
         }
     }
 }

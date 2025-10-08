@@ -53,8 +53,8 @@
                 <GradientStop Color="#FEFFFFFF" Offset="0.682"/>
             </LinearGradientBrush>
         </Grid.Background>
-
-        <!-- Top Bar -->
+        
+            <!-- Top Bar -->
         <Grid Background="#EE4540" Height="39" VerticalAlignment="Top">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="7"/>
@@ -124,20 +124,18 @@
 
 
             <Button x:Name="TopBarAccountsButton"
-                    Content="  ACCOUNTS  "
-                    Foreground="White"
-                    Background="Transparent"                    
-                    Grid.Column="3"                    
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Center"
-                    FontSize="17"           
-                    Style="{StaticResource Animation}"
-                    Click="TopBarAccountsButton_Click"
+        Content="  ACCOUNTS  "
+        Foreground="White"
+        Background="Transparent"                    
+        Grid.Column="3"                    
+        HorizontalAlignment="Center"
+        VerticalAlignment="Center"
+        FontSize="17"           
+        Style="{StaticResource Animation}"
+        Click="TopBarAccountsButton_Click"
         
-                    Width="128" Margin="0,0,0,1">
-
+        Width="128" Margin="0,0,0,1">
                 <Button.ContextMenu>
-
                     <ContextMenu x:Name="AccountsContextMenu" Margin="0,10,20,20">
                         <MenuItem Header="Account Screens" IsEnabled="False"/>
                         <Separator/>
@@ -176,7 +174,6 @@
             Command="{Binding ReceiptCommand}"/>
                     </ContextMenu>
                 </Button.ContextMenu>
-
             </Button>
 
 
@@ -202,7 +199,7 @@
                         <MenuItem Header="Property Management Menu" IsEnabled="False"/>
                         <Separator/>
 
-                        <MenuItem Header="Property Management"
+                        <MenuItem Header="Tenant Management"
                                   Command="{Binding PropertyManagementCommand}"/>
 
                         <MenuItem Header="Arrears Aging Analysis"
@@ -253,15 +250,13 @@
                     Height="32" Width="90">
             </Button>-->
 
-
             <Button Content="  ADMIN SETTINGS  "
                     Foreground="White"
                     Background="Transparent"                    
                     Grid.Column="5"
                     VerticalAlignment="Center"
                     FontSize="17"                   
-                    Width="NaN" Height="38"
-                    Click="Button_Click" 
+                    Width="NaN" Height="38" Click="Button_Click" 
                     Margin="9,0,3,0" 
                     Style="{StaticResource Animation}"/>
             
@@ -316,12 +311,10 @@
         </Grid>
 
 
-        <Grid x:Name="SidebarPanel" 
-              Width="94"
+        <Grid x:Name="SidebarPanel" Width="94"
               Background="{DynamicResource SidebarBrush}"
               Margin="0,30,0,0"
-              HorizontalAlignment="Left" 
-              RenderTransformOrigin="1.367,0.57">
+              HorizontalAlignment="Left" RenderTransformOrigin="1.367,0.57">
 
 
             <StackPanel Margin="10,10,10,0"
@@ -517,6 +510,7 @@
                                 VerticalAlignment="Top"
                                 HorizontalAlignment="Center" 
                                 Margin="0,0,0,10" />
+
             </Grid>
 
         </Grid>
@@ -527,16 +521,15 @@
             <StackPanel Orientation ="Horizontal" Margin="111,-500,432,499">
                 <StackPanel Width="505">
                     <Border Width="682" 
-                            Height="35"
-                            Background="#EE4540"
-                            Margin="150,0,0,0"
-                            CornerRadius="20"/>
-
+              Height="35"
+              Background="#EE4540"
+              Margin="150,0,0,0"
+              CornerRadius="20"/>
                     <Border Width="970"
-                            Height="35"
-                            Background="white"
-                            Margin="-5,15,0,0"
-                            CornerRadius="20" RenderTransformOrigin="0.5,0.5">
+              Height="35"
+              Background="white"
+              Margin="-5,15,0,0"
+              CornerRadius="20" RenderTransformOrigin="0.5,0.5">
                         <Border.RenderTransform>
                             <TransformGroup>
                                 <ScaleTransform/>

@@ -86,8 +86,8 @@
                    Style="{StaticResource AccountsLabel}"
                    />
 
-            <TextBox x:Name="TenantNameTextBox"
-                     Style="{StaticResource AccountsTextBox}"/>
+            <ComboBox x:Name="TenantNameComboBox"
+                     Style="{StaticResource AccountsComboBox}"/>
         </StackPanel>
 
 

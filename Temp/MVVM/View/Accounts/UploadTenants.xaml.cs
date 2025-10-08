@@ -9,7 +9,6 @@ using System.Windows;
 using System.Windows.Controls;
 using Microsoft.Win32;
 using AccountsLibrary.Properties;
-using AccountsPro.MVVM.View.Master;
 
 namespace AccountsPRO.MVVM.View.Accounts
 {
@@ -432,12 +431,6 @@ namespace AccountsPRO.MVVM.View.Accounts
             {
                 textColumn.ElementStyle = this.FindResource("CenterTextStyle") as Style;
             }
-        }
-
-        private void TenantManagementBtn_Click(object sender, RoutedEventArgs e)
-        {
-            var tenantManagement = new TenantManagement();
-            tenantManagement.Show();
         }
     }
 }

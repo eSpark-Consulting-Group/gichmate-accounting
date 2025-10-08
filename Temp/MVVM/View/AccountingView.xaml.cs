@@ -15,14 +15,19 @@ using System.Windows;
 using System.Windows.Controls;
 namespace AccountsPRO.MVVM.View
 {
+    /// <summary>
+    /// Interaction logic for AccountingView.xaml
+    /// </summary>
     public partial class MasterTransaction : UserControl
     {
         private bool isSidebarExpanded = true;
+        //public static Timer timerReoloaded = new Timer(TimerCallback timerReoloaded_starttimer, Timeout.Infinite, Timeout.Infinite, 1);
 
         public static System.Windows.Threading.DispatcherTimer dispatcherTimer = new System.Windows.Threading.DispatcherTimer();
 
         private void timerReoloaded_starttimer(object sender, EventArgs e)
         {
+            // code goes here
             this.txtUserLoggedIn.Text = AniHelper.LoggedInUser;
             dispatcherTimer.Stop();
         }
@@ -31,9 +36,7 @@ namespace AccountsPRO.MVVM.View
         private IAccountingViewModel _AccountingViewModel
         {
             get { return App.AppHost.Services.GetRequiredService<IAccountingViewModel>(); }
-            
         }
-
 
         //public static string LoggedInUser
         //{
@@ -54,6 +57,15 @@ namespace AccountsPRO.MVVM.View
             dispatcherTimer.Tick += timerReoloaded_starttimer;
             dispatcherTimer.Interval = new TimeSpan(0, 0, 1);
         }
+        //private void ToggleSidebar_Click(object sender, RoutedEventArgs e)
+        //{
+        //    var storyboard = isSidebarExpanded
+        //        ? (Storyboard)FindResource("CollapseSidebar")
+        //        : (Storyboard)FindResource("ExpandSidebar");
+        //    storyboard.Begin();
+        //    isSidebarExpanded = !isSidebarExpanded;
+        //}
+
         private void TopBarAccountsButton_Click(object sender, RoutedEventArgs e)
         {
 
@@ -80,56 +92,47 @@ namespace AccountsPRO.MVVM.View
             var adminSettings = new AdminSettingsView();
             adminSettings.Show();
         }
-
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             var userSettings = new UserSettingsView();
             userSettings.Show();
         }
-
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
             var firmDetails = new FirmDetails();
             firmDetails.Show();
         }
-
         private void TopBarMasterButton_Click(object sender, RoutedEventArgs e)
         {
             TopBarMasterButton.ContextMenu.PlacementTarget = TopBarMasterButton;
             TopBarMasterButton.ContextMenu.Placement = System.Windows.Controls.Primitives.PlacementMode.Bottom;
             TopBarMasterButton.ContextMenu.IsOpen = true;
         }
-
         private void MasterGroupButton_click(object sender, RoutedEventArgs e)
         {
             var accountsGroup = new AccountsGroup();
             accountsGroup.Show();
         }
-
         private void MasterLedgerButton_click(object sender, RoutedEventArgs e)
         {
             var accountsLedger = new AccountsLedger();
             accountsLedger.Show();
         }
-
         private void MasterExpenseButton_click(object sender, RoutedEventArgs e)
         {
             var expenseAccount = new ExpenseAccount();
             expenseAccount.Show();
         }
-
         private void MasterBankButton_click(object sender, RoutedEventArgs e)
         {
             var bankMaster = new Bank();
             bankMaster.Show();
         }
-
         private void MasterBalanceSheetButton_click(object sender, RoutedEventArgs e)
         {
             var balanceSheet = new BalanceSheet();
             balanceSheet.Show();
         }
-
         private void MasterJournalEntryButton_Click(object sender, RoutedEventArgs e)
         {
             var journalEntry = new JournalEntry();
@@ -141,19 +144,21 @@ namespace AccountsPRO.MVVM.View
             var doubleJournalEntries = new DoubleJournalEntries();
             doubleJournalEntries.Show();
         }
-
+        //private void MasterTransactionButton_Click(object sender, RoutedEventArgs e)
+        //{
+        //    var transactionWithoutInventory = new TransactionWithoutInventory();
+        //    transactionWithoutInventory.Show(); 
+        //}
         private void MasterUploadTenantsButton_Click(object sender, RoutedEventArgs e)
         {
             var uploadTenants = new UploadTenants();
             uploadTenants.Show();
         }
-
         private void MasterUploadBank_Click(object sender, RoutedEventArgs e)
         {
             var uploadBankReceipts = new UploadBankReceipts();
             uploadBankReceipts.Show();
         }
-
         private void SideBarBtn_UserSettingsClick(object sender, RoutedEventArgs e)
         {
             var createUser = new CreateUser();
@@ -220,6 +225,5 @@ namespace AccountsPRO.MVVM.View
            
         }
 
-        
     }
 }

@@ -46,18 +46,6 @@
     <Compile Update="MVVM\View\Accounts\PostDatedChequeReceiptView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="MVVM\View\PropertyManagement\ArrearsAgingAnalysis.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="MVVM\View\PropertyManagement\HistoricalBalance.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="MVVM\View\PropertyManagement\PrepaymentTracking.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="MVVM\View\PropertyManagement\PropertyManagement.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="MVVM\View\Accounts\ReceiptView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -88,9 +76,6 @@
     <Compile Update="MVVM\View\Master\Bank.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="MVVM\View\Master\ChartDemo.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="MVVM\View\Master\DoubleJournalEntries.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -109,16 +94,13 @@
     <Compile Update="MVVM\View\Master\SearchLedger.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="MVVM\View\Master\TenantManagement.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="MVVM\View\Master\TransactionWithoutInventory.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="MVVM\View\Master\UploadBankReceipts.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="MVVM\View\PropertyManagement\UtilityCostAllocation.xaml.cs">
+    <Compile Update="MVVM\View\PropertyManagement\UtilityPerUnitCostCharges.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="MVVM\View\StartupPage.xaml.cs">
@@ -199,5 +181,25 @@
     <Compile Update="SubProjects\AccountsUserControls\TexboxEx.cs">
       <SubType>Component</SubType>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="MVVM\View\Master\TenantManagement.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MVVM\View\PropertyManagement\ArrearsAgingAnalysis.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MVVM\View\PropertyManagement\HistoricalBalance.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MVVM\View\PropertyManagement\PrepaymentTracking.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MVVM\View\PropertyManagement\PropertyManagement.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MVVM\View\PropertyManagement\UtilityCostAllocation.xaml">
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
 </Project>
