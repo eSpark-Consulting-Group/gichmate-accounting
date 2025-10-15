@@ -1,4 +1,6 @@
-﻿using AccountsLibrary.Properties;
+﻿using AccountsLibrary;
+using AccountsLibrary.Properties;
+using Microsoft.VisualBasic;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -13,7 +15,12 @@ namespace AccountsPRO.MVVM.View.Master
 {
     public partial class DoubleJournalEntries : Window
     {
-        private int? editingVchrId = null; 
+        private int? editingVchrId = null;
+        private string VoucherType = "Journal Voucher";
+        private int? iVchrTranId;
+        private bool blCredit = false;
+        private decimal dmlClosingBalance;
+        private decimal dmlPaidAmount;
 
         public DoubleJournalEntries()
         {
@@ -46,6 +53,10 @@ namespace AccountsPRO.MVVM.View.Master
         #region Load Data
         private void LoadAccounts()
         {
+            if (AniHelper.vchrTranLog == null)
+                AniHelper.vchrTranLog = new VchrTranLog();
+
+            iVchrTranId = AniHelper.vchrTranLog.VchrTranId;
             var accounts = new List<Account>();
             using (var con = new SqlConnection(Settings.Default.strConnetionString))
             {
@@ -156,7 +167,7 @@ namespace AccountsPRO.MVVM.View.Master
             int toId = (int)ToAccDebitBox.SelectedValue;
             int vNo = (int)UpDownBox.Value;
             DateTime vDate = DatePickBox.SelectedDate ?? DateTime.Now;
-            double amount = double.TryParse(AmountBox.Text, out double a) ? a : 0;
+            decimal amount = decimal.TryParse(AmountBox.Text, out decimal a) ? a : 0;
             string narration = NarrationBox.Text;
 
             using (var con = new SqlConnection(Settings.Default.strConnetionString))
@@ -173,27 +184,89 @@ namespace AccountsPRO.MVVM.View.Master
                                                VchrAmount=@amount, Narration=@narr
                                            WHERE VchrTranId=@id", con);
                     cmd.Parameters.AddWithValue("@id", editingVchrId.Value);
+
+                    cmd.Parameters.AddWithValue("@vNo", vNo);
+                    cmd.Parameters.AddWithValue("@vDate", vDate);
+                    cmd.Parameters.AddWithValue("@fromId", fromId);
+                    cmd.Parameters.AddWithValue("@toId", toId);
+                    cmd.Parameters.AddWithValue("@amount", (decimal)amount);
+                    cmd.Parameters.AddWithValue("@narr", narration);
+                    cmd.ExecuteNonQuery();
                 }
                 else
                 {
                     // Insert new
-                    cmd = new SqlCommand(@"INSERT INTO VchrTranLog 
-                                           (VchrNo, VchrDate, FromAccountId, ToAccountId, VchrAmount, Narration) 
-                                           VALUES(@vNo,@vDate,@fromId,@toId,@amount,@narr)", con);
+                    //cmd = new SqlCommand(@"INSERT INTO VchrTranLog 
+                    //                       (VchrNo, VchrDate, FromAccountId, ToAccountId, VchrAmount, Narration) 
+                    //                       VALUES(@vNo,@vDate,@fromId,@toId,@amount,@narr)", con);
+
+                    if (AniHelper.vchrTranLog == null)
+                        AniHelper.vchrTranLog = new VchrTranLog();
+                    //if (btnSave.Text == "Save")
+                    //{
+                    //    if (plgDtls != null && !plgDtls.SaveData)
+                    //    {
+                    //        Messages.ErrorMessage("You have no authorisation to Save the record. Please Contact the Admin.");
+                    //        return;
+                    //    }
+
+
+                    if (AniHelper.dBContext == null)
+                        AniHelper.dBContext = new DBContext();
+
+
+                    int iVchrNo = (AniHelper.dBContext.VchrTransaction(new
+                    {
+                        VchrType = VoucherType,
+                        FK_BranchId = Settings.Default.iBranchId
+                    }).Max((VchrTranLog x) => x.VchrNo) + 1) ?? 1;
+
+                    EntityLoadMethod(AniHelper.vchrTranLog, iVchrNo);
+                    AniHelper.vchrTranLog.VchrTranId = null;
+                    if (AshproCommon.InsertToDatabaseObj(AniHelper.vchrTranLog, "VchrTranLog"))
+                    {
+                        iVchrTranId = (from x in AniHelper.dBContext.VchrTransaction()
+                                       where x.VchrNo == AniHelper.vchrTranLog.VchrNo && x.VchrType == AniHelper.vchrTranLog.VchrType
+                                       select x).FirstOrDefault().VchrTranId;
+                        if (blCredit)
+                        {
+                            POSHelper.TranLogMethod(@amount, 0m, @fromId, @toId, iVchrTranId, @vNo, AniHelper.vchrTranLog.VchrType, AniHelper.vchrTranLog.UserId, "Main", AniHelper.vchrTranLog.VchrType, DatePickBox.SelectedDate.ToString());
+                            POSHelper.TranLogMethod(0m, @amount, @toId, @fromId, iVchrTranId, @vNo, AniHelper.vchrTranLog.VchrType, AniHelper.vchrTranLog.UserId, "Sub", AniHelper.vchrTranLog.VchrType, DatePickBox.SelectedDate.ToString());
+                        }
+                        else
+                        {
+                            POSHelper.TranLogMethod(0m, @amount, @fromId, @toId, iVchrTranId, @vNo, AniHelper.vchrTranLog.VchrType, AniHelper.vchrTranLog.UserId, "Main", AniHelper.vchrTranLog.VchrType, DatePickBox.SelectedDate.ToString());
+                            POSHelper.TranLogMethod(@amount, 0m, @toId, @fromId, iVchrTranId, @vNo, AniHelper.vchrTranLog.VchrType, AniHelper.vchrTranLog.UserId, "Sub", AniHelper.vchrTranLog.VchrType, DatePickBox.SelectedDate.ToString());
+                        }
+                        //btnClear_Click(null, null);
+                    }
+                    //    return;
+                    //}
+
                 }
 
-                cmd.Parameters.AddWithValue("@vNo", vNo);
-                cmd.Parameters.AddWithValue("@vDate", vDate);
-                cmd.Parameters.AddWithValue("@fromId", fromId);
-                cmd.Parameters.AddWithValue("@toId", toId);
-                cmd.Parameters.AddWithValue("@amount", (decimal)amount);
-                cmd.Parameters.AddWithValue("@narr", narration);
-                cmd.ExecuteNonQuery();
             }
 
             ClearForm();
             MessageBox.Show("Entry Successfully saved!");
             LoadVouchers();
+        }
+
+        private void EntityLoadMethod(VchrTranLog vchrTranLog, int iVchrNo)
+        {
+            vchrTranLog.VchrDate = (DateTime)DatePickBox.SelectedDate;
+            vchrTranLog.VchrTranId = iVchrTranId;
+            vchrTranLog.VchrNo = iVchrNo;
+            vchrTranLog.VchrAmount = Decimal.Parse(AmountBox.Text);
+            vchrTranLog.VchrType = VoucherType;
+            vchrTranLog.VchrName = VoucherType;
+            vchrTranLog.SalesManId = Settings.Default.intLogOnId;
+            vchrTranLog.FromAccountId = (int?)FromAccCreditBox.SelectedValue;
+            vchrTranLog.ToAccountId = (int?)ToAccDebitBox.SelectedValue;
+            vchrTranLog.TranDate = DateTime.Now.Date;
+            vchrTranLog.UserId = Settings.Default.intLogOnId;
+            vchrTranLog.Narration = NarrationBox.Text;
+            vchrTranLog.FK_BranchId = Settings.Default.iBranchId;
         }
 
         private void EditButton_Click(object sender, RoutedEventArgs e)
@@ -212,7 +285,7 @@ namespace AccountsPRO.MVVM.View.Master
             }
             else
             {
-                MessageBox.Show("Select a row to edit.");
+               // MessageBox.Show("Select a row to edit.");
             }
         }
 
@@ -235,7 +308,7 @@ namespace AccountsPRO.MVVM.View.Master
             }
             else
             {
-                MessageBox.Show("Select a row to delete.");
+                //MessageBox.Show("Select a row to delete.");
             }
         }
 
@@ -271,7 +344,7 @@ namespace AccountsPRO.MVVM.View.Master
 
         private void Amount_TextPreviewInput(object sender, TextCompositionEventArgs e)
         {
-            
+
             e.Handled = !e.Text.All(char.IsDigit); // this is here because it will now only allow numeric data to be enterered.
 
             // Allow only digits and optionally one dot for decimal
@@ -286,8 +359,8 @@ namespace AccountsPRO.MVVM.View.Master
             //    e.Handled = true; // block input
             //    MessageBox.Show("Please Enter Valid Numeric Data");
             //}
-        
-                 
+
+
         }
         #endregion
 
@@ -304,10 +377,96 @@ namespace AccountsPRO.MVVM.View.Master
 
                 AmountBox.Text = selected.Amount.ToString("N2");
                 NarrationBox.Text = selected.Narration;
+
+
+                //VchrTransaction vchrTransaction = selected;//(VchrTransaction)dgDetails.CurrentRow.DataBoundItem;
+                iVchrTranId = selected.VchrId;
+                //UpDownBox.Value = vchrTransaction.VchrNo;
+                LoadSingleObjectMethod();
+
             }
             else
             {
-                MessageBox.Show("Select a row to edit.");
+               // MessageBox.Show("Select a row to edit.");
+            }
+        }
+
+        private void FromAccCreditBox_SelectedIndexChanged(object sender, SelectionChangedEventArgs e)
+        {
+            //LabelsVisibleMethod(isToVisible: true);
+            String lblTransactionType = "";
+            //lblBeforeFrom//UpDownBox
+            if (FromAccCreditBox.SelectedValue == null)
+            {
+                if (AniHelper.dBContext == null)
+                    AniHelper.dBContext = new DBContext();
+
+
+                int iVchrNo = (AniHelper.dBContext.VchrTransaction(new
+                {
+                    VchrType = VoucherType,
+                    FK_BranchId = Settings.Default.iBranchId
+                }).Max((VchrTranLog x) => x.VchrNo) + 1) ?? 1;
+
+                UpDownBox.Value = iVchrNo;
+
+                LoadSingleObjectMethod();
+            }
+            try
+            {
+                (dmlClosingBalance, lblTransactionType) = AniHelper.AccountBalanceFindMethod(0m, 0m, FromAccCreditBox.SelectedValue.ToString(), DatePickBox.SelectedDate.Value.AddHours(24.0).AddSeconds(-1.0));
+                lblBeforeFrom.Content = lblTransactionType;
+                //lblAfterFrom
+                (dmlClosingBalance, lblTransactionType) = AniHelper.AccountBalanceFindMethod(0m, 0m, FromAccCreditBox.SelectedValue.ToString(), DatePickBox.SelectedDate.Value.AddHours(24.0).AddSeconds(-1.0));
+                lblAfterFrom.Content = lblTransactionType;
+
+                if (dmlClosingBalance < 0m)
+                {
+                    blCredit = true;
+                }
+                else
+                {
+                    blCredit = false;
+                }
+            }
+            catch { }
+        }
+
+        private void LoadSingleObjectMethod()
+        {
+            //LabelsVisibleMethod(isToVisible: true);
+            //isEditing = true;
+            iVchrTranId = AniHelper.vchrTranLog.VchrTranId;
+            DatePickBox.SelectedDate = AniHelper.vchrTranLog.VchrDate;
+            dmlPaidAmount = AniHelper.vchrTranLog.VchrAmount;
+            AmountBox.Text = dmlPaidAmount.ToString();
+            ToAccDebitBox.SelectedValue = AniHelper.vchrTranLog.ToAccountId.GetValueOrDefault();
+            FromAccCreditBox.SelectedValue = AniHelper.vchrTranLog.FromAccountId.GetValueOrDefault();
+            NarrationBox.Text = AniHelper.vchrTranLog.Narration;
+            //(dmlClosingBalance, lblTransactionType) = AniHelper.AccountBalanceFindMethod(0m, 0m, FromAccCreditBox.SelectedValue.ToString(), DatePickBox.SelectedDate.Value.AddHours(24.0).AddSeconds(-1.0));
+            decimal tempdec;
+            (tempdec, lblBeforeFrom.Content) = AniHelper.AccountBalanceFindMethod(dmlPaidAmount, 0m, FromAccCreditBox.SelectedValue.ToString(), DatePickBox.SelectedDate.Value.AddHours(24.0).AddSeconds(-1.0));
+            (tempdec, lblAfterFrom.Content) = AniHelper.AccountBalanceFindMethod(0m, 0m, FromAccCreditBox.SelectedValue.ToString(), DatePickBox.SelectedDate.Value.AddHours(24.0).AddSeconds(-1.0));
+            (tempdec, lblBeforeTo.Content) = AniHelper.AccountBalanceFindMethod(0m, dmlPaidAmount, ToAccDebitBox.SelectedValue.ToString(), DatePickBox.SelectedDate.Value.AddHours(24.0).AddSeconds(-1.0));
+            (tempdec, lblAfterTo.Content) = AniHelper.AccountBalanceFindMethod(0m, 0m, ToAccDebitBox.SelectedValue.ToString(), DatePickBox.SelectedDate.Value.AddHours(24.0).AddSeconds(-1.0));
+            //EnableMethod();
+        }
+
+        private void UpDownBox_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double?> e)
+        {
+            if (AniHelper.dBContext == null)
+                AniHelper.dBContext = new DBContext();
+
+            AniHelper.vchrTranLog = (from x in AniHelper.dBContext.VchrTransaction()
+                                     where x.VchrType == VoucherType && x.VchrNo == UpDownBox.Value
+                                     select x).FirstOrDefault();
+            if (AniHelper.vchrTranLog != null)
+            {
+                LoadSingleObjectMethod();
+            }
+            else
+            {
+                //btnClearMethod();
             }
         }
     }

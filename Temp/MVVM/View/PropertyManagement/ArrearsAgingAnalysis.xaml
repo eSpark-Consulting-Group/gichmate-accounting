@@ -43,7 +43,7 @@
                     Width="40"
                     Style="{StaticResource AnimatedRedButton}"                    
                     Command="{Binding DefaultAccountScreenCommand}"
-                    Margin="840,0,0,0" />
+                    Margin="840,0,0,0" Click="Close_Click" />
         </StackPanel>
 
 
@@ -69,7 +69,7 @@
                 <ComboBoxItem Content=" All"/>
                 <ComboBoxItem Content=" 1 - 30 Days"/>
                 <ComboBoxItem Content=" 31 - 60 Days"/>
-                <ComboBoxItem Content=" 60 - 90 Days"/>
+                <ComboBoxItem Content=" 61 - 90 Days"/>
                 <ComboBoxItem Content=" 90+ Days"/>
             </ComboBox>
 
@@ -109,13 +109,20 @@
                       Margin="0,10,0,0"
                       VerticalAlignment="Center"
                       HorizontalAlignment="Center"
-                      HorizontalContentAlignment="Stretch"
+                      HorizontalContentAlignment="Center"
                       Height="360" Width="1150"
                       AutoGenerateColumns="True"
                       SelectionMode="Single"
                       SelectionUnit="FullRow"
                       CanUserAddRows="False"
                       IsReadOnly="True">
+                <DataGrid.CellStyle>
+                    <Style TargetType="DataGridCell">
+                        <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                        <Setter Property="VerticalAlignment" Value="Center"/>
+                        <Setter Property="TextBlock.TextAlignment" Value="Center"/>
+                    </Style>
+                </DataGrid.CellStyle>
             </DataGrid>
 
 

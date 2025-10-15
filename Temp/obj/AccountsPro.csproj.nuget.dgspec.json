@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Dotnet_User1\\Desktop\\30SepMerged\\AccountsPro.csproj": {}
+    "C:\\Users\\Dotnet_User1\\Desktop\\15OctoberMerged\\AccountsPro.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Dotnet_User1\\Desktop\\30SepMerged\\AccountsPro.csproj": {
+    "C:\\Users\\Dotnet_User1\\Desktop\\15OctoberMerged\\AccountsPro.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dotnet_User1\\Desktop\\30SepMerged\\AccountsPro.csproj",
+        "projectUniqueName": "C:\\Users\\Dotnet_User1\\Desktop\\15OctoberMerged\\AccountsPro.csproj",
         "projectName": "AccountsPro",
-        "projectPath": "C:\\Users\\Dotnet_User1\\Desktop\\30SepMerged\\AccountsPro.csproj",
+        "projectPath": "C:\\Users\\Dotnet_User1\\Desktop\\15OctoberMerged\\AccountsPro.csproj",
         "packagesPath": "C:\\Users\\Dotnet_User1\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dotnet_User1\\Desktop\\30SepMerged\\obj\\",
+        "outputPath": "C:\\Users\\Dotnet_User1\\Desktop\\15OctoberMerged\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

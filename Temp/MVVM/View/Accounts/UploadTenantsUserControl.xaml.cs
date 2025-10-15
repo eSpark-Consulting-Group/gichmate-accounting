@@ -10,6 +10,15 @@ using System.Windows;
 using System.Windows.Controls;
 using Microsoft.Win32;
 using AccountsLibrary.Properties;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using System.Windows.Shapes;
+using AccountsLibrary;
+using System.Diagnostics.Metrics;
+using Humanizer;
+using Microsoft.Office.Interop.Excel;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+using System.Diagnostics.Eventing.Reader;
+//using System.Windows.Forms;
 
 namespace AccountsPRO.MVVM.View.Accounts
 {
@@ -18,8 +27,8 @@ namespace AccountsPRO.MVVM.View.Accounts
     /// </summary>
     public partial class UploadTenantsUserControl : System.Windows.Controls.UserControl
     {
-        private DataTable currentDataTable = null;
-       
+        private System.Data.DataTable currentDataTable = null;
+
         public UploadTenantsUserControl()
         {
             InitializeComponent();
@@ -36,7 +45,7 @@ namespace AccountsPRO.MVVM.View.Accounts
             string tableName = "UploadsTenantRent";
             int headerRowNumber = 3, dataStartRowNumber = 4;
 
-            DataTable dataTable = null;
+            System.Data.DataTable dataTable = null;
             OpenFileDialog openFileDialog = new OpenFileDialog();
 
             try
@@ -50,7 +59,7 @@ namespace AccountsPRO.MVVM.View.Accounts
                 if (openFileDialog.ShowDialog() == true)
                 {
                     string selectedFileName = openFileDialog.FileName;
-                    string fileExtension = Path.GetExtension(selectedFileName).ToLowerInvariant();
+                    string fileExtension = System.IO.Path.GetExtension(selectedFileName).ToLowerInvariant();
 
                     if (fileExtension == ".xlsx")
                         dataTable = ReadExcelData(selectedFileName, this.SheetTextBox.Text, headerRowNumber, dataStartRowNumber);
@@ -74,7 +83,7 @@ namespace AccountsPRO.MVVM.View.Accounts
             }
         }
 
-        private void InsertDataIntoSql(DataTable dataTable, string tableName)
+        private void InsertDataIntoSql(System.Data.DataTable dataTable, string tableName)
         {
             try
             {
@@ -141,9 +150,9 @@ namespace AccountsPRO.MVVM.View.Accounts
                    columnName == "ARREAS C/F";
         }
 
-        private DataTable ReadExcelData(string filePath, string sheetName, int headerRow, int dataStartRow)
+        private System.Data.DataTable ReadExcelData(string filePath, string sheetName, int headerRow, int dataStartRow)
         {
-            DataTable dt = new DataTable();
+            System.Data.DataTable dt = new System.Data.DataTable();
             FileInfo fileInfo = new FileInfo(filePath);
 
             if (!fileInfo.Exists)
@@ -330,7 +339,7 @@ namespace AccountsPRO.MVVM.View.Accounts
                     cmd.Parameters.AddWithValue("@SearchText", "%" + searchText + "%");
 
                     SqlDataAdapter da = new SqlDataAdapter(cmd);
-                    DataTable dt = new DataTable();
+                    System.Data.DataTable dt = new System.Data.DataTable();
                     da.Fill(dt);
 
                     TenantsDataGrid.ItemsSource = dt.DefaultView;
@@ -360,7 +369,7 @@ namespace AccountsPRO.MVVM.View.Accounts
                                       ORDER BY [{columnName}]";
 
                     SqlDataAdapter da = new SqlDataAdapter(query, conn);
-                    DataTable dt = new DataTable();
+                    System.Data.DataTable dt = new System.Data.DataTable();
                     da.Fill(dt);
 
                     comboBox.ItemsSource = dt.DefaultView;
@@ -388,7 +397,7 @@ namespace AccountsPRO.MVVM.View.Accounts
 
         private void ArreasTxtBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            var textBox = sender as TextBox;
+            var textBox = sender as System.Windows.Controls.TextBox;
             if (textBox == null) return;
 
             if (!textBox.Text.All(char.IsDigit))
@@ -412,5 +421,68 @@ namespace AccountsPRO.MVVM.View.Accounts
             FilterAccounts("");
         }
 
+        private void LoadReconciliationBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Console.WriteLine("");
+
+            try
+            {
+                System.Data.DataTable dt = new System.Data.DataTable();
+
+                using (SqlConnection conn = new SqlConnection(Settings.Default.strConnetionString))
+                {
+                    conn.Open();
+                    string whereClause = " WHERE t.DATAFORMONTH = (SELECT LEFT(DATENAME(MONTH, CONVERT(date, '08/07/2025', 103)), 3) + ' ' + CAST(YEAR(CONVERT(date, '08/07/2025', 103)) AS VARCHAR(4)) AS[MonthYear]) ";
+                    string query = " SELECT r.[Transaction Details],r.[Payment reference],r.[Value Date],r.[Credit (Money In)],r.[Debit (Money Out)],r.[Balance],r.[UTR_ID],t.UTR_ID AS MAPPEDUTR,t.[TOTAL MONEY PAID],t.DATAFORMONTH,(SELECT LEFT(DATENAME(MONTH, CONVERT(date, '08/07/2025', 103)), 3) + ' ' + CAST(YEAR(CONVERT(date, '08/07/2025', 103)) AS VARCHAR(4)) AS[MonthYear]) AS convDATAFORMONTH " +
+                                    " FROM UploadBankReceipts r " +
+                                    " JOIN UploadsTenantRent t " +
+                                        " ON r.[Transaction Details] LIKE '%' + REPLACE(t.[TENANT NAME], ' ', '%') + '%' ";
+                    if ((bool)LoadTempchk.IsChecked)
+                        query += " UNION ALL select *,NULL AS MAPPEDUTR,NULL AS[TOTAL MONEY PAID],'' AS DATAFORMONTH,(SELECT LEFT(DATENAME(MONTH, CONVERT(date, '08/07/2025', 103)), 3) + ' ' + CAST(YEAR(CONVERT(date, '08/07/2025', 103)) AS VARCHAR(4)) AS[MonthYear]) AS convDATAFORMONTH from UploadBankReceipts where [Transaction Details] LIKE '%BY:%' ORDER BY r.[Payment reference]  desc ";
+                    else
+                        query += whereClause + " UNION ALL select *,NULL AS MAPPEDUTR,NULL AS[TOTAL MONEY PAID],'' AS DATAFORMONTH,(SELECT LEFT(DATENAME(MONTH, CONVERT(date, '08/07/2025', 103)), 3) + ' ' + CAST(YEAR(CONVERT(date, '08/07/2025', 103)) AS VARCHAR(4)) AS[MonthYear]) AS convDATAFORMONTH from UploadBankReceipts where [Transaction Details] LIKE '%BY:%' ORDER BY r.[Payment reference]  desc ";
+
+
+
+
+
+                        //Then new query required for each unit
+                        //PAYED BY:HSE.36/111758384273/10-07-2025 17:52:12
+
+                        //SELECT SUM(TRY_CAST(REPLACE([Debit (Money Out)], ',', '') AS DECIMAL(18,2))) AS TotalAmount
+                        //FROM UploadBankReceipts where[Transaction Details] like '%BENARD MUNDI%'
+
+                        SqlCommand cmd = new SqlCommand(query, conn);
+                    //cmd.Parameters.AddWithValue("@SearchText", "%All%");
+
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    da.Fill(dt);
+
+                    dgBankReconciliation.ItemsSource = dt.DefaultView;
+                }
+
+                //foreach (DataRow row_UploadBankReceipts in dt.Rows)
+                //{
+                //    if (DateTime.TryParse(Convert.ToString(row_UploadBankReceipts["Value Date"]), out var start))
+                //    {
+                //        //string sqlINS = @"INSERT INTO TenantsUnitRelation ([UNIT NO],[TENANT NAME],[TENANT ISACTIVE],[UPDATETIME]) VALUES (@UnitNo,@TenantName,1,@dtNow)";
+                //        //using (SqlCommand cmd = new SqlCommand(sqlINS, conn))
+                //        //{
+                //        //    cmd.Parameters.AddWithValue("@UnitNo", dr["UNIT NO"].ToString());
+                //        //    cmd.Parameters.AddWithValue("@TenantName", dr["TENANT NAME"].ToString());
+                //        //    cmd.Parameters.AddWithValue("@dtNow", DateTime.Now.ToString());
+                //        //    cmd.ExecuteNonQuery();
+                //        //    counter++;
+                //        //}
+                //    }
+                //}
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error searching accounts: {ex.Message}");
+            }
+
+        }
     }
 }

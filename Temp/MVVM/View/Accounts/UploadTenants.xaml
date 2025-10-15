@@ -118,7 +118,7 @@
                    Margin="30,0,0,0"
                    Style="{StaticResource AccountsLabel}"/>
 
-            <TextBox x:Name="SheetTextBox" Width="150"
+            <TextBox x:Name="SheetTextBox" Width="150" Text="Sheet1"
                      Height="30"
                      VerticalContentAlignment="Center"
                      FontSize="14"/>

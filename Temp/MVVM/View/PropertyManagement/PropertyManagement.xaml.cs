@@ -2,10 +2,12 @@
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows;
+using static AccountsPro.MVVM.View.PropertyManagement.ArrearsAgingAnalysis;
 using System.Windows.Controls;
 using AccountsLibrary.Properties; 
 using System.Text.RegularExpressions;
 using System.Windows.Input;
+using System.Diagnostics.Metrics;
 
 namespace AccountsPro.MVVM.View.PropertyManagement
 {
@@ -206,6 +208,45 @@ namespace AccountsPro.MVVM.View.PropertyManagement
             }
         }
 
+        private void DeleteButton_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                string unitNo = GetUnitNoFromControl();
+                if (string.IsNullOrWhiteSpace(unitNo))
+                {
+                    MessageBox.Show("Please provide a Unit No to delete.", "Validation", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    return;
+                }
+
+                var result = MessageBox.Show($"Are you sure you want to delete the record for Unit No '{unitNo}'?", "Confirm Delete", MessageBoxButton.YesNo, MessageBoxImage.Question);
+                if (result != MessageBoxResult.Yes) return;
+
+                using (SqlConnection conn = new SqlConnection(Settings.Default.strConnetionString))
+                {
+                    conn.Open();
+                    string sql = "DELETE FROM TenantsUnitRelation WHERE [UNIT NO] = @UnitNo";
+                    using (SqlCommand cmd = new SqlCommand(sql, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@UnitNo", unitNo);
+                        int rows = cmd.ExecuteNonQuery();
+                        if (rows == 0)
+                            MessageBox.Show("No rows deleted (record not found).", "Delete", MessageBoxButton.OK, MessageBoxImage.Information);
+                        else
+                            MessageBox.Show("Deleted successfully.", "Deleted", MessageBoxButton.OK, MessageBoxImage.Information);
+                    }
+                }
+
+                ClearFields();
+                LoadAllTenants();
+                PopulateUnitComboBox();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error deleting tenant: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
         private void ClearButton_Click(object sender, RoutedEventArgs e)
         {
             ClearFields();
@@ -274,6 +315,7 @@ namespace AccountsPro.MVVM.View.PropertyManagement
             StartDatePickerBox.SelectedDate = null;
             EndDatePickerBox.SelectedDate = null;
             TenantActiveCheckBox.IsChecked = false;
+            LoadAllTenants();
         }
         #endregion
 
@@ -336,14 +378,14 @@ namespace AccountsPro.MVVM.View.PropertyManagement
                 {
                     dv.RowFilter = string.Empty;
                 }
-                else
-                {
-                    string unit = UnitNoComboBox.SelectedValue.ToString().Replace("'", "''");
-                    dv.RowFilter = $"[UNIT NO] LIKE '%{unit}%'";
-                }
+                //else
+                //{
+                //    string unit = UnitNoComboBox.SelectedValue.ToString().Replace("'", "''");
+                //    dv.RowFilter = $"[UNIT NO] LIKE '%{unit}%'";
+                //}
 
-                PropertyManagementDataGrid.ItemsSource = dv;
-                PropertyManagementDataGrid.SelectedIndex = -1;
+                //PropertyManagementDataGrid.ItemsSource = dv;
+                //PropertyManagementDataGrid.SelectedIndex = -1;
             }
             catch (Exception ex)
             {
@@ -351,5 +393,97 @@ namespace AccountsPro.MVVM.View.PropertyManagement
             }
         }
         #endregion
+
+        private void Close_Click(object sender, RoutedEventArgs e)
+        {
+            ClearFields();
+            PropertyManagementDataGrid.SelectedIndex = -1;
+        }
+
+        private void UploadButton_Click(object sender, RoutedEventArgs e)
+        {
+            //Upload all tenants from UploadsTenantRent
+            
+
+            try
+            {
+                DataTable dt = new DataTable();
+                int counter = 0;
+
+                using (SqlConnection conn = new SqlConnection(Settings.Default.strConnetionString))
+                {
+                    conn.Open();
+                    string sql = @"SELECT DISTINCT [UNIT NO],[TENANT NAME] FROM UploadsTenantRent UTR WHERE [UNIT NO]+[TENANT NAME] NOT IN (SELECT DISTINCT [UNIT NO]+[TENANT NAME] FROM TenantsUnitRelation) AND [TENANT NAME] NOT LIKE '%VACANT%'";
+
+                    using (SqlDataAdapter da = new SqlDataAdapter(sql, conn))
+                    {                        
+                        da.Fill(dt);
+                    }
+
+                    //([UNIT NO],[TENANT NAME],[TENANT IDENTITY],[TENANT PHONE],[TENANT EMAIL],[TENANT STARTDATE],[TENANT ENDDATE],[TENANT ISACTIVE],[UPDATETIME])
+                    //,@TenantIdentity,@TenantPhone,@TenantEmail,@StartDate,@EndDate,@IsActive,@UpdateTime
+                    
+                    if (dt.Rows.Count > 0)
+                        foreach (DataRow dr in dt.Rows)
+                        {
+
+                            string sqlINS = @"INSERT INTO TenantsUnitRelation ([UNIT NO],[TENANT NAME],[TENANT ISACTIVE],[UPDATETIME]) VALUES (@UnitNo,@TenantName,1,@dtNow)";
+                            using (SqlCommand cmd = new SqlCommand(sqlINS, conn))
+                            {
+                                cmd.Parameters.AddWithValue("@UnitNo", dr["UNIT NO"].ToString());
+                                cmd.Parameters.AddWithValue("@TenantName", dr["TENANT NAME"].ToString());
+                                cmd.Parameters.AddWithValue("@dtNow", DateTime.Now.ToString());
+                                cmd.ExecuteNonQuery();
+                                counter++;
+                            }
+
+                        }
+                }
+                MessageBox.Show("Successfully Added ("+ counter + ")  records!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error populating UnitNoComboBox: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+
+        }
+
+        //load Arrears = Load ArrearsAgingAnalysis UserControl with
+        //selected data of tenant(the one which is selected in the grid of Tenant Management)
+        // Command = "{Binding ArrearsAgingAnalysisCommand}" 
+        private void LoadArrearsBtn_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                if (PropertyManagementDataGrid.SelectedItem == null)
+                {
+                    MessageBox.Show("Please select a tenant record first.", "Validation", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    return;
+                }
+
+                var rowView = PropertyManagementDataGrid.SelectedItem as DataRowView;
+                if (rowView == null) return;
+
+                string unitNo = rowView["UNIT NO"] != DBNull.Value ? rowView["UNIT NO"].ToString() : null;
+                string tenantName = rowView["TENANT NAME"] != DBNull.Value ? rowView["TENANT NAME"].ToString() : null;
+
+            
+                ArrearsAgingAnalysis.InitialUnitNo = unitNo;
+                ArrearsAgingAnalysis.InitialTenantName = tenantName;
+
+                var commandProp = DataContext?.GetType().GetProperty("ArrearsAgingAnalysisCommand");
+                var command = commandProp?.GetValue(DataContext) as ICommand;
+                if (command != null && command.CanExecute(unitNo))
+                {
+                    command.Execute(unitNo);
+                    command.Execute(tenantName);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading Arrears: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
     }
 }

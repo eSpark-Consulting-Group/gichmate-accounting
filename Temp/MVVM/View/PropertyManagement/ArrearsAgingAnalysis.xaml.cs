@@ -15,6 +15,10 @@ namespace AccountsPro.MVVM.View.PropertyManagement
 {
     public partial class ArrearsAgingAnalysis : UserControl
     {
+        public static ArrearsAgingAnalysis ArrearsAgingAnalysisUserDefined; //single instance worked
+        public static string InitialUnitNo = "";
+        public static string InitialTenantName = "";
+
         public ArrearsAgingAnalysis()
         {
             InitializeComponent();
@@ -24,6 +28,7 @@ namespace AccountsPro.MVVM.View.PropertyManagement
             TenantNameComboBox.SelectionChanged += FilterControl_Changed;
             UnitNoComboBox.SelectionChanged += FilterControl_Changed;
             ArrearsAgingComboBox.SelectedIndex = 0;
+            ArrearsAgingAnalysisUserDefined = this;
         }
 
         private void ArrearsAgingAnalysis_Loaded(object sender, RoutedEventArgs e)
@@ -32,6 +37,17 @@ namespace AccountsPro.MVVM.View.PropertyManagement
             PopulateTenants();
             PopulateUnits();
             LoadTenants();
+
+            Dispatcher.BeginInvoke(new Action(() =>
+            {
+                // Pre-select Unit No if provided
+                if (!string.IsNullOrEmpty(InitialUnitNo) && UnitNoComboBox.Items.Contains(InitialUnitNo))
+                    UnitNoComboBox.SelectedItem = InitialUnitNo;
+
+                // Pre-select Tenant Name if provided
+                if (!string.IsNullOrEmpty(InitialTenantName) && TenantNameComboBox.Items.Contains(InitialTenantName))
+                    TenantNameComboBox.SelectedItem = InitialTenantName;
+            }), System.Windows.Threading.DispatcherPriority.Loaded);
         }
 
         #region Populate Dropdowns
@@ -60,7 +76,7 @@ namespace AccountsPro.MVVM.View.PropertyManagement
                             int mn = rdr.IsDBNull(1) ? 0 : rdr.GetInt32(1);
                             if (yr != 0 && mn != 0)
                             {
-                                var monthName = new DateTime(yr, mn, 1).ToString("MMMM yyyy");
+                                var monthName = new DateTime(yr, mn, 1).ToString("MMM yyyy");
                                 MonthsComboBox.Items.Add(monthName);
                             }
                         }
@@ -83,8 +99,8 @@ namespace AccountsPro.MVVM.View.PropertyManagement
                 using (SqlConnection conn = new SqlConnection(Settings.Default.strConnetionString))
                 {
                     conn.Open();
-                    string q = "SELECT DISTINCT [TENANT NAME] FROM UploadsTenantRent ORDER BY [TENANT NAME]";
-                    using (SqlCommand cmd = new SqlCommand(q, conn))
+                    string query = "SELECT DISTINCT [TENANT NAME] FROM UploadsTenantRent ORDER BY [TENANT NAME]"; //WHERE COALESCE(Vchrid,0) = 0
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
                     using (SqlDataReader rdr = cmd.ExecuteReader())
                     {
                         while (rdr.Read())
@@ -111,8 +127,8 @@ namespace AccountsPro.MVVM.View.PropertyManagement
                 using (SqlConnection conn = new SqlConnection(Settings.Default.strConnetionString))
                 {
                     conn.Open();
-                    string q = "SELECT DISTINCT [UNIT NO] FROM UploadsTenantRent ORDER BY [UNIT NO]";
-                    using (SqlCommand cmd = new SqlCommand(q, conn))
+                    string query = "SELECT DISTINCT [UNIT NO] FROM UploadsTenantRent ORDER BY [UNIT NO]"; //WHERE COALESCE(Vchrid,0) = 0
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
                     using (SqlDataReader rdr = cmd.ExecuteReader())
                     {
                         while (rdr.Read())
@@ -208,7 +224,7 @@ namespace AccountsPro.MVVM.View.PropertyManagement
 
                     if (MonthsComboBox.SelectedItem != null && MonthsComboBox.SelectedItem.ToString() != "All")
                     {
-                        if (DateTime.TryParseExact(MonthsComboBox.SelectedItem.ToString(), "MMMM yyyy",
+                        if (DateTime.TryParseExact(MonthsComboBox.SelectedItem.ToString(), "MMM yyyy",
                             System.Globalization.CultureInfo.InvariantCulture,
                             System.Globalization.DateTimeStyles.None, out DateTime chosenMonth))
                         {
@@ -220,13 +236,16 @@ namespace AccountsPro.MVVM.View.PropertyManagement
                         }
                     }
 
-                    string whereClause = whereParts.Count > 0 ? "WHERE " + string.Join(" AND ", whereParts) : "";
+                    // string whereClause = whereParts.Count > 0 ? "WHERE " + string.Join(" AND ", whereParts) : "";
+                    string whereClause = whereParts.Count > 0 ? "WHERE " + string.Join(" AND ", whereParts)+"":"" ;// + " AND COALESCE(Vchrid,0)=0 " : " WHERE COALESCE(Vchrid,0)=0 ";
 
                     string query = $@"
                         SELECT 
                             [UNIT NO], 
                             [TENANT NAME], 
                             [EXPECTED RENT],
+                            WATER,
+                            SANITATION,
                             [RENT RECEIVED], 
                             DEPOSIT, 
                             [ARREAS PAID (RENT)] AS [ARREARS PAID (RENT)], 
@@ -236,10 +255,11 @@ namespace AccountsPro.MVVM.View.PropertyManagement
                             [ARREAS C/F] AS [ARREARS C/F], 
                             PREPAYMENT, 
                             [TOTAL MONEY PAID], 
-                            DATEDIFF(day, TRY_CONVERT(date, DATAFORMONTH), GETDATE()) AS OverdueDays
+                            DATEDIFF(day, TRY_CONVERT(date, DATAFORMONTH), GETDATE()) AS OutstandingDays,
+                            DATAFORMONTH AS Month
                         FROM UploadsTenantRent
-                        {whereClause}
-                        ORDER BY OverdueDays DESC, [TENANT NAME]";
+                        {whereClause} 
+                        ORDER BY OutstandingDays DESC, [TENANT NAME]";
 
                     cmd.CommandText = query;
                     var da = new SqlDataAdapter(cmd);
@@ -272,7 +292,7 @@ namespace AccountsPro.MVVM.View.PropertyManagement
                         }
                     }
 
-                    //  Add a totals row at the end
+                    //  Add a row at the end named "Total" to show Total amount of Arrears Aging. 
                     var totalsRow = dt.NewRow();
                     if (dt.Columns.Contains("UNIT NO")) totalsRow["UNIT NO"] = "Total";
                     if (dt.Columns.Contains("TENANT NAME")) totalsRow["TENANT NAME"] = string.Empty;
@@ -404,10 +424,20 @@ namespace AccountsPro.MVVM.View.PropertyManagement
 
         private void ClearBtn_Click(object sender, RoutedEventArgs e)
         {
+            Clear();
+        }
+
+        private void Clear()
+        {
             MonthsComboBox.SelectedIndex = -1;
             ArrearsAgingComboBox.SelectedIndex = -1;
             TenantNameComboBox.SelectedIndex = -1;
             UnitNoComboBox.SelectedIndex = -1;
+        }
+
+        private void Close_Click(object sender, RoutedEventArgs e)
+        {
+            Clear();
         }
     }
 }

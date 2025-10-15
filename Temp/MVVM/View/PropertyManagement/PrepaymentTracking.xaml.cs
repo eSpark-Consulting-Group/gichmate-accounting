@@ -54,7 +54,7 @@ namespace AccountsPro.MVVM.View.PropertyManagement
                             int mn = rdr.IsDBNull(1) ? 0 : rdr.GetInt32(1);
                             if (yr != 0 && mn != 0)
                             {
-                                var monthName = new DateTime(yr, mn, 1).ToString("MMMM yyyy");
+                                var monthName = new DateTime(yr, mn, 1).ToString("MMM yyyy");
                                 MonthsComboBox.Items.Add(monthName);
                             }
                         }
@@ -157,7 +157,7 @@ namespace AccountsPro.MVVM.View.PropertyManagement
                     // Month filter
                     if (MonthsComboBox.SelectedItem != null && MonthsComboBox.SelectedItem.ToString() != "All")
                     {
-                        if (DateTime.TryParseExact(MonthsComboBox.SelectedItem.ToString(), "MMMM yyyy",
+                        if (DateTime.TryParseExact(MonthsComboBox.SelectedItem.ToString(), "MMM yyyy",
                             System.Globalization.CultureInfo.InvariantCulture,
                             System.Globalization.DateTimeStyles.None, out DateTime chosenMonth))
                         {
@@ -169,7 +169,8 @@ namespace AccountsPro.MVVM.View.PropertyManagement
                         }
                     }
 
-                    string whereClause = filters.Count > 0 ? "WHERE " + string.Join(" AND ", filters) : "";
+                  //  string whereClause = filters.Count > 0 ? "WHERE " + string.Join(" AND ", filters) : "";
+                    string whereClause = filters.Count > 0 ? "WHERE " + string.Join(" AND ", filters) + " AND COALESCE(Vchrid,0)=0 " : " WHERE COALESCE(Vchrid,0)=0 ";
                     string query = $@"
                                     SELECT
                                         [UNIT NO],
@@ -266,9 +267,19 @@ namespace AccountsPro.MVVM.View.PropertyManagement
 
         private void ClearBtn_Click(object sender, RoutedEventArgs e)
         {
+            Click();
+        }
+
+        private void Click()
+        {
+
             MonthsComboBox.SelectedIndex = -1;
             UnitNoComboBox.SelectedIndex = -1;
-        TenantNameComboBox.SelectedIndex = -1;
+            TenantNameComboBox.SelectedIndex = -1;
+        }
+        private void Close_Click(object sender, RoutedEventArgs e)
+        {
+            Click();
         }
     }
 }

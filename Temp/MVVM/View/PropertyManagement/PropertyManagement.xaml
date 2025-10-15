@@ -50,7 +50,7 @@
                     Width="40"
                     Style="{StaticResource AnimatedRedButton}"                    
                     Command="{Binding DefaultAccountScreenCommand}"
-                    Margin="830,0,0,0" />
+                    Margin="830,0,0,0" Click="Close_Click" />
         </StackPanel>
 
 
@@ -58,15 +58,43 @@
 
             <DataGrid x:Name="PropertyManagementDataGrid"
                       Height="350" Width="1180"
-                      Margin="0,10,0,0" >                
+                      CanUserAddRows="False"
+                      IsReadOnly="True"
+                      Margin="0,10,0,0"  >
+
+                <DataGrid.CellStyle>
+                    <Style TargetType="DataGridCell">
+                        <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                        <Setter Property="VerticalAlignment" Value="Center"/>
+                        <Setter Property="TextBlock.TextAlignment" Value="Center"/>
+                    </Style>
+                </DataGrid.CellStyle>
             </DataGrid>
+            
             
         </StackPanel>
 
 
-        <StackPanel Grid.Row="3">
+        <StackPanel Grid.Row="3" 
+                    Orientation="Horizontal">
+            
             <Label Content="Tenant Information"
                    FontWeight="SemiBold"/>
+            
+            <Button x:Name="UploadButton" 
+                    Content="Load All Tenants"
+                    Width="120" 
+                    Style="{StaticResource AnimatedRedButton}" 
+                    Click="UploadButton_Click"/>
+
+
+            <Button x:Name="LoadArrearsBtn" 
+                    Content="Load Arrears"
+                    Width="120"
+                    Click="LoadArrearsBtn_Click"
+                    Style="{StaticResource AnimatedRedButton}"
+                    />
+
         </StackPanel>
 
 

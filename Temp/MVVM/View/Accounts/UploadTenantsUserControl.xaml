@@ -126,7 +126,8 @@
             <Button x:Name="LoadReconciliationBtn" 
                      Content="Load" 
                      Style="{StaticResource AnimatedRedButton}"
-                     Margin="60,0,0,0"/>
+                     Margin="60,0,0,0" Click="LoadReconciliationBtn_Click"/>
+            <CheckBox x:Name="LoadTempchk" Content="Load Temp" Margin="50,0,0,0" VerticalAlignment="Center"/>
 
         </StackPanel>
 

@@ -43,7 +43,8 @@
                     Width="40"
                     Style="{StaticResource AnimatedRedButton}"                    
                     Command="{Binding DefaultAccountScreenCommand}"
-                    Margin="650,0,0,0" />
+                    Margin="650,0,0,0"
+                    Click="Close_Click"/>
 
         </StackPanel>
 
@@ -87,8 +88,17 @@
 
             <DataGrid x:Name="PrepaymentDataGrid"
                       Margin="0,10,0,0"
+                      CanUserAddRows="False"
+                      IsReadOnly="True"
                       Height="360">
-                
+                <DataGrid.CellStyle>
+                    <Style TargetType="DataGridCell">
+                        <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                        <Setter Property="VerticalAlignment" Value="Center"/>
+                        <Setter Property="TextBlock.TextAlignment" Value="Center"/>
+                    </Style>
+                </DataGrid.CellStyle>
+
             </DataGrid>                        
         </StackPanel>
 

@@ -35,7 +35,10 @@ namespace AccountsLibrary
 {
 	public class AniHelper
 	{
-		public static string LoggedInUser = "";
+        public static VchrTranLog vchrTranLog;
+        public static DBContext dBContext;
+
+        public static string LoggedInUser = "";
 		private static Company company;
 
 		private PrintDocument pDocu = new PrintDocument();
@@ -331,26 +334,26 @@ namespace AccountsLibrary
 			AshproCommon.FillCombo(cmb, "Select Id as Id,KOTName as Name From KOTPrinter");
 		}
 
-		public static async Task<string> GetValueForChart(string sAGroup, string dtm)
-		{
-			decimal dValue = default(decimal);
-			DataTable dt = new DataTable();
-			DBContext db = new DBContext();
-			return await Task.Run(delegate
-			{
-				var entity = new
-				{
-					GroupId = db.AccountGroup().FirstOrDefault((AccountGroupEntity x) => x.GroupName == sAGroup).AGroupId,
-					Date = DateTime.Now.Date
-				};
-				dt = AshproCommon.GetDataTableWithIdParameter_SP("spGetValueForChart", entity);
-				foreach (DataRow row in dt.Rows)
-				{
-					dValue += row[0].ToString2().ToDecimal();
-				}
-				return (dValue >= 0m) ? (dValue.ToString(CommonSettings.strCurencyFormat) + "  Dr") : (Math.Abs(dValue).ToString(CommonSettings.strCurencyFormat) + "  Cr");
-			});
-		}
+		//public static async Task<string> GetValueForChart(string sAGroup, string dtm)
+		//{
+		//	decimal dValue = default(decimal);
+		//	DataTable dt = new DataTable();
+		//	DBContext db = new DBContext();
+		//	return await Task.Run(delegate
+		//	{
+		//		var entity = new
+		//		{
+		//			GroupId = db.AccountGroup().FirstOrDefault((AccountGroupEntity x) => x.GroupName == sAGroup).AGroupId,
+		//			Date = DateTime.Now.Date
+		//		};
+		//		dt = AshproCommon.GetDataTableWithIdParameter_SP("spGetValueForChart", entity);
+		//		foreach (DataRow row in dt.Rows)
+		//		{
+		//			dValue += row[0].ToString2().ToDecimal();
+		//		}
+		//		return (dValue >= 0m) ? (dValue.ToString(CommonSettings.strCurencyFormat) + "  Dr") : (Math.Abs(dValue).ToString(CommonSettings.strCurencyFormat) + "  Cr");
+		//	});
+		//}
 
 		public static async Task<string> GetValueForChart(string sAGroup, string dFrom, string dTo, string DebitOrCredit)
 		{
@@ -1342,29 +1345,29 @@ namespace AccountsLibrary
             }
 		}
 
-		public static void SerialNumberMethod(int iSN)
-		{
-			DBContext dBContext = new DBContext();
-			MasterValue masterValue = dBContext.MasterValues(new
-			{
-				MasterType = "SN",
-				Name = Utility.uTerminal
-			}).FirstOrDefault();
-			if (masterValue == null)
-			{
-				AshproCommon.InsertToDatabaseObj(new MasterValue
-				{
-					MasterType = "SN",
-					Name = Utility.uTerminal,
-					Description = iSN.ToString()
-				});
-			}
-			else
-			{
-				masterValue.Description = iSN.ToString();
-				AshproCommon.UpdateToDatabaseObj(masterValue, "MasterValue", "Id", masterValue.Id.toInt32());
-			}
-		}
+		//public static void SerialNumberMethod(int iSN)
+		//{
+		//	DBContext dBContext = new DBContext();
+		//	MasterValue masterValue = dBContext.MasterValues(new
+		//	{
+		//		MasterType = "SN",
+		//		Name = Utility.uTerminal
+		//	}).FirstOrDefault();
+		//	if (masterValue == null)
+		//	{
+		//		AshproCommon.InsertToDatabaseObj(new MasterValue
+		//		{
+		//			MasterType = "SN",
+		//			Name = Utility.uTerminal,
+		//			Description = iSN.ToString()
+		//		});
+		//	}
+		//	else
+		//	{
+		//		masterValue.Description = iSN.ToString();
+		//		AshproCommon.UpdateToDatabaseObj(masterValue, "MasterValue", "Id", masterValue.Id.toInt32());
+		//	}
+		//}
 
 		public static void IconChangeMethod(Form frm)
 		{
@@ -1392,7 +1395,10 @@ namespace AccountsLibrary
 		public static string GetPriceCode(string dValue)
 		{
 			string text = null;
-			DBContext dBContext = new DBContext();
+
+			if(dBContext==null)
+				dBContext = new DBContext();
+
 			char[] array = dValue.ToDecimal().ToString("G29").ToCharArray();
 			char[] array2 = array;
 			for (int i = 0; i < array2.Length; i++)
@@ -1528,39 +1534,43 @@ namespace AccountsLibrary
 			});
 		}
 
-		public static void OpeningBalanceVoucherMethod(decimal dmlOppening, string sDrOrCr, DBContext db, string sAccount, DateTime date)
-		{
-			string sVchrType = "Opening Voucher";
-			string text = null;
-			int intVchrNo = ((from x in db.VchrTransaction()
-				where x.VchrType == sVchrType
-				select x).Max((VchrTranLog y) => y.VchrNo) + 1) ?? 1;
-			if (sDrOrCr == "CR")
-			{
-				dmlOppening *= -1m;
-				text = "Credit Voucher";
-			}
-			else
-			{
-				dmlOppening = Math.Abs(dmlOppening);
-				text = "Debit Voucher";
-			}
-			int num = (from x in db.Accounts()
-				where x.AccountName == sAccount
-				select x).FirstOrDefault().AccountId.ToInt32();
-			POSHelper.VoucherTranLog(intVchrNo, date, dmlOppening, sVchrType, "Opening Account Entry", num.ToInt32(), 0, 0, Settings.Default.intLogOnId, text);
-			int iVoucherID = (from x in db.VchrTransaction()
-				where x.VchrNo == intVchrNo && x.VchrType == sVchrType
-				select x).FirstOrDefault().VchrTranId.ToInt32();
-			if (sDrOrCr == "DR")
-			{
-				POSHelper.TranLogMethod(Math.Abs(dmlOppening), 0m, num.ToInt32(), num.ToInt32(), iVoucherID, intVchrNo, sVchrType, Settings.Default.intLogOnId, "Main", text, GetDate(date));
-			}
-			else
-			{
-				POSHelper.TranLogMethod(0m, Math.Abs(dmlOppening), num.ToInt32(), num.ToInt32(), iVoucherID, intVchrNo, sVchrType, Settings.Default.intLogOnId, "Main", text, GetDate(date));
-			}
-		}
+		//public static void OpeningBalanceVoucherMethod(decimal dmlOppening, string sDrOrCr, string sAccount, DateTime date)
+		//{
+		//	string sVchrType = "Opening Voucher";
+		//	string text = null;
+  //          if (dBContext == null)
+  //              dBContext = new DBContext();
+
+  //          int intVchrNo = ((from x in dBContext.VchrTransaction()
+		//		where x.VchrType == sVchrType
+  //              select x).Max((VchrTranLog y) => y.VchrNo) + 1) ?? 1;
+  //          //select x).Max((VchrTranLog y) => y.VchrNo) + 1) ?? 1;
+  //          if (sDrOrCr == "CR")
+		//	{
+		//		dmlOppening *= -1m;
+		//		text = "Credit Voucher";
+		//	}
+		//	else
+		//	{
+		//		dmlOppening = Math.Abs(dmlOppening);
+		//		text = "Debit Voucher";
+		//	}
+		//	int num = (from x in dBContext.Accounts()
+		//		where x.AccountName == sAccount
+		//		select x).FirstOrDefault().AccountId.ToInt32();
+		//	POSHelper.VoucherTranLog(intVchrNo, date, dmlOppening, sVchrType, "Opening Account Entry", num.ToInt32(), 0, 0, Settings.Default.intLogOnId, text);
+		//	int iVoucherID = (from x in dBContext.VchrTransaction()
+		//		where x.VchrNo == intVchrNo && x.VchrType == sVchrType
+		//		select x).FirstOrDefault().VchrTranId.ToInt32();
+		//	if (sDrOrCr == "DR")
+		//	{
+		//		POSHelper.TranLogMethod(Math.Abs(dmlOppening), 0m, num.ToInt32(), num.ToInt32(), iVoucherID, intVchrNo, sVchrType, Settings.Default.intLogOnId, "Main", text, GetDate(date));
+		//	}
+		//	else
+		//	{
+		//		POSHelper.TranLogMethod(0m, Math.Abs(dmlOppening), num.ToInt32(), num.ToInt32(), iVoucherID, intVchrNo, sVchrType, Settings.Default.intLogOnId, "Main", text, GetDate(date));
+		//	}
+		//}
 
 		public static void InsertToProPriceCategory(List<ProductPriceCategory> entpCategory, int iProductId, int iProGroupId)
 		{
@@ -1895,19 +1905,21 @@ namespace AccountsLibrary
 			return string.Empty;
 		}
 
-		public static decimal AccountBalanceFindMethod(decimal AddAmnt, decimal MnsAmnt, ComboBox cmb, Control lblResult, DateTime dtmDate)
+		public static (decimal,string) AccountBalanceFindMethod(decimal AddAmnt, decimal MnsAmnt, string cmb_AccountId, DateTime dtmDate)
 		{
-			decimal num = AshproCommon.ValueFindMethod("SELECT SUM(DebitAmount-CreditAmount) as Balance FROM TransactionLog where AccountId='" + cmb.SelectedValue.ToInt32() + "' and VchrDate <= '" + GetDate(dtmDate) + "'");
+			decimal num = AshproCommon.ValueFindMethod("SELECT COALESCE(SUM(DebitAmount-CreditAmount),0) as Balance FROM TransactionLog where AccountId='" + cmb_AccountId.ToInt32() + "' and VchrDate <= '" + GetDate(dtmDate) + "'");
+			string TransactionType = "Dr";
+
 			num = num + AddAmnt - MnsAmnt;
 			if (num >= 0m)
 			{
-				lblResult.Text = num.ToString(CommonSettings.strCurencyFormat) + " Dr";
-			}
+				TransactionType = num.ToString(CommonSettings.strCurencyFormat) + " Dr";
+            }
 			else
 			{
-				lblResult.Text = Math.Abs(num).ToString(CommonSettings.strCurencyFormat) + " Cr";
-			}
-			return num;
+                TransactionType = Math.Abs(num).ToString(CommonSettings.strCurencyFormat) + " Cr";
+            }
+			return (num,TransactionType);
 		}
 
 		public static string AccountBalanceFindMethod(int iAccountId, string sDate, decimal? dAdd = null, decimal? dMinus = null)
@@ -1927,27 +1939,27 @@ namespace AccountsLibrary
 			return Math.Abs(num).ToString(CommonSettings.strCurencyFormat) + " Cr";
 		}
 
-		public static UserPrevilegeDtl GetPrevilageMethod(string sForm = null, string FomName = null)
-		{
-			MenuDetails menuDetails = new MenuDetails();
-			DBContext dBContext = new DBContext();
-			menuDetails = ((sForm == null) ? dBContext.MenuDetails(new
-			{
-				Name = FomName
-			}).FirstOrDefault() : dBContext.MenuDetails(new
-			{
-				ClassName = sForm
-			}).FirstOrDefault());
-			if (menuDetails != null)
-			{
-				return dBContext.UserPrevilegeDtls(new
-				{
-					FK_UserPrevilegeHdrId = Utility.uPrevilageId.ToInt32(),
-					FK_MenuDetailsId = menuDetails.Id
-				}).FirstOrDefault();
-			}
-			return null;
-		}
+		//public static UserPrevilegeDtl GetPrevilageMethod(string sForm = null, string FomName = null)
+		//{
+		//	MenuDetails menuDetails = new MenuDetails();
+		//	DBContext dBContext = new DBContext();
+		//	menuDetails = ((sForm == null) ? dBContext.MenuDetails(new
+		//	{
+		//		Name = FomName
+		//	}).FirstOrDefault() : dBContext.MenuDetails(new
+		//	{
+		//		ClassName = sForm
+		//	}).FirstOrDefault());
+		//	if (menuDetails != null)
+		//	{
+		//		return dBContext.UserPrevilegeDtls(new
+		//		{
+		//			FK_UserPrevilegeHdrId = Utility.uPrevilageId.ToInt32(),
+		//			FK_MenuDetailsId = menuDetails.Id
+		//		}).FirstOrDefault();
+		//	}
+		//	return null;
+		//}
 
 		//public static void ItemCreationMethod(int? iProductId = null)
 		//{

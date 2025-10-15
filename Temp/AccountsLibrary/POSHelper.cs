@@ -1676,7 +1676,7 @@ namespace AccountsLibrary
 			return true;
 		}
 
-		public static bool TranLogMethod(decimal dmlDebit, decimal dmlCredit, int iOnAccountId, int iOpAccountId, int iVoucherID, int? iVouchrNo, string sVoucherType, int iUserId, string sStatus, string vName = null, string VchrDate = null, string Narration = null)
+		public static bool TranLogMethod(decimal dmlDebit, decimal dmlCredit, int iOnAccountId, int iOpAccountId, int? iVoucherID, int? iVouchrNo, string sVoucherType, int? iUserId, string sStatus, string vName = null, string VchrDate = null, string Narration = null)
 		{
 			if (VchrDate == null)
 			{

@@ -68,8 +68,8 @@ namespace AccountsPro.MVVM.View.PropertyManagement
 
                 var cmd = new SqlCommand(@"
                     INSERT INTO UtilityUnitCost
-                    (UUCostID, WATER, SANITATION, GAS, ELECTRICITY, INTERNET, TV, LAUNDRY, MISC, UPDATETIME)
-                    VALUES (@ID, @WATER, @SANITATION, @GAS, @ELECTRICITY, @INTERNET, @TV, @LAUNDRY, @MISC, @UPDATETIME)", conn);
+                    (UUCostID, WATER,[WATERUnitRange], SANITATION,[SANITATIONUnitRange], GAS,[GASUnitRange], ELECTRICITY,[ELECTRICITYUnitRange], INTERNET,[INTERNETUnitRange], TV,[TVUnitRange], LAUNDRY,[LAUNDRYUnitRange], MISC,[MISCUnitRange], UPDATETIME)
+                    VALUES (@ID, @WATER,1, @SANITATION,1, @GAS,1, @ELECTRICITY,1, @INTERNET,1, @TV,1, @LAUNDRY,1, @MISC,1, @UPDATETIME)", conn);
 
                 cmd.Parameters.AddWithValue("@ID", GenerateShortID());
                 cmd.Parameters.AddWithValue("@WATER", ParseOrNull(WaterChargesPerUnitTxtBox.Text));

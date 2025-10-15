@@ -61,7 +61,7 @@
 
             <Label Content="📅 Month : "
                    Style="{StaticResource AccountsLabel}"
-                   Margin="30,0,0,0"/>
+                   Margin="43,0,0,0"/>
 
             <ComboBox x:Name="MonthsComboBox"
                       HorizontalContentAlignment="Center"
@@ -74,6 +74,16 @@
 
             <ComboBox x:Name="UnitNoComboBox"
                       Style="{StaticResource AccountsComboBox}"/>
+
+            <!--<Label Content="Total Money Paid :"
+                   Margin="15,0,0,0"
+                   Style="{StaticResource AccountsLabel}"/>
+
+            <TextBox x:Name="TotalMoneyPaidTextBox"
+                     PreviewTextInput="NumericOnly"
+                     MaxLength="10"
+                     Style="{StaticResource AccountsTextBox}"/>-->
+
         </StackPanel>
 
 
@@ -81,32 +91,43 @@
                     Style="{StaticResource AccountsStackPanel}">
 
             <Label Content="Expected Rent : "
-                   Margin="5,0,0,0"                   
+                   Margin="20,0,0,0"                   
                    Style="{StaticResource AccountsLabel}"/>
 
             <TextBox x:Name="ExpectedRentTextBox"
                      PreviewTextInput="NumericOnly"
-                     MaxLength="5"
+                     MaxLength="8"
                      Style="{StaticResource AccountsTextBox}"/>
 
 
-            <Label Content="Water Cost : "
-                   Margin="57,0,0,0"
+            <Label Content="Water/Sanitation : "
+                   Margin="20,0,0,0"
                    Style="{StaticResource AccountsLabel}"/>
 
             <TextBox x:Name="WaterCostTextBox"
                      PreviewTextInput="NumericOnly"
-                     MaxLength="5"
+                     MaxLength="8"
+                     Width="120"
                      Style="{StaticResource AccountsTextBox}"/>
 
             
-            <Label Content="Sanitation Cost :"
+            <!--<Label Content="Sanitation Cost :"
                    Margin="30,0,0,0"
-                   Style="{StaticResource AccountsLabel}"/>
+                   Style="{StaticResource AccountsLabel}"/>-->
 
             <TextBox x:Name="SanitationCostTextBox"
                      PreviewTextInput="NumericOnly"
-                     MaxLength="5"
+                     MaxLength="8"
+                     Margin="10,0,0,0"
+                     Width="120"
+                     Style="{StaticResource AccountsTextBox}"/>
+
+            <Label Content="Arrears : "
+                   Style="{StaticResource AccountsLabel}"
+                   Margin="35,0,0,0"/>
+
+            <TextBox x:Name="ArrearsTextBox"
+                     MaxLength="8"
                      Style="{StaticResource AccountsTextBox}"/>
 
         </StackPanel>
@@ -117,12 +138,12 @@
                     Style="{StaticResource AccountsStackPanel}">
 
             <Label Content="Rent Received : "
-                   Margin="5,0,0,0"
+                   Margin="20,0,0,0"
                    Style="{StaticResource AccountsLabel}"/>
 
             <TextBox x:Name="RentReceivedTextBox"
                      PreviewTextInput="NumericOnly"
-                     MaxLength="5"
+                     MaxLength="8"
                      Style="{StaticResource AccountsTextBox}"/>
 
             <Label Content="Deposit : "
@@ -131,7 +152,7 @@
 
             <TextBox x:Name="DepositTextBox"
                      PreviewTextInput="NumericOnly"
-                     MaxLength="5"
+                     MaxLength="8"
                      Style="{StaticResource AccountsTextBox}"/>
 
             <CheckBox x:Name="IsPaidCheckBox" 
@@ -148,23 +169,31 @@
 
         <StackPanel Grid.Row="4" Style="{StaticResource AccountsStackPanel}">
 
-            <Label Content="Total Per Unit : "                   
-                   Margin="10,0,0,0"
+            <Label Content="Total Money Paid : "                   
+                   Margin="0,0,0,0"
                    Style="{StaticResource AccountsLabel}"/>
 
             <TextBox x:Name="TotalPerUnitTextBox"
                      Text="0.00"
+                     MaxLength="8"
                      Style="{StaticResource AccountsTextBox}"/>
+            
+            <Label Content="Extra Comments : "                   
+                    Margin="25,0,0,0"
+                    Style="{StaticResource AccountsLabel}"/>
+
+            <TextBox x:Name="ExtraComments"                    
+                    Style="{StaticResource AccountsTextBox}"/>
 
             <Button x:Name="ImportExcelBtn"
-                    Content="Import From Excel"
+                    Content="Pre-Payement"
                     Width="150"
-                    Margin="460,0,0,0"
+                    Margin="50,0,0,0"
                     Style="{StaticResource AnimatedRedButton}"
                     Click="ImportExcelBtn_Click"/>
             
             <Button x:Name="ProcessBtn"
-                    Content="Process"
+                    Content="Accountable Records"
                     Margin="30,0,0,0"
                     Width="150"
                     Style="{StaticResource AnimatedRedButton}"
@@ -181,6 +210,13 @@
                       Height="350" 
                       Margin="0,10,0,0"
                       Width="1150">
+                <DataGrid.CellStyle>
+                    <Style TargetType="DataGridCell">
+                        <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                        <Setter Property="VerticalAlignment" Value="Center"/>
+                        <Setter Property="TextBlock.TextAlignment" Value="Center"/>
+                    </Style>
+                </DataGrid.CellStyle>
 
             </DataGrid>
         </StackPanel>
@@ -208,9 +244,15 @@
                     Style="{StaticResource AnimatedRedButton}"
                     Width="150"
                     Click="ExportToCsv_Click"/>
+            
+            <Button Content="Compare Expected"
+                    Margin="70,0,0,0"
+                    Width="150"
+                    Click="Compare_Click"
+                    Style="{StaticResource AnimatedRedButton}"/>
 
             <Button Content="Utility Cost Per Unit"
-                    Margin="243,0,0,0"
+                    Margin="20,0,0,0"
                     Width="150"
                     Style="{StaticResource AnimatedRedButton}" 
                     Click="UtilityPerUnitBtn_Click"

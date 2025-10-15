@@ -172,8 +172,17 @@
 
             <DataGrid  x:Name="UtilityCostPerUnitChargesGrid"
                        Height="250"
-                Margin="0,10,0,0">
-                
+                       CanUserAddRows="False"
+                       IsReadOnly="True"
+                       Margin="0,10,0,0">
+
+                <DataGrid.CellStyle>
+                    <Style TargetType="DataGridCell">
+                        <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                        <Setter Property="VerticalAlignment" Value="Center"/>
+                        <Setter Property="TextBlock.TextAlignment" Value="Center"/>
+                    </Style>
+                </DataGrid.CellStyle>
             </DataGrid>
         </StackPanel>
         
