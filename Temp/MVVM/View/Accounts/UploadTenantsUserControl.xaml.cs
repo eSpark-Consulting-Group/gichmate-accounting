@@ -407,7 +407,7 @@ namespace AccountsPRO.MVVM.View.Accounts
                 textBox.CaretIndex = Math.Max(caretIndex, 0);
             }
 
-            FilterAccounts(SearchTextBox.Text); // keep your filter call
+            FilterAccounts(SearchTextBox.Text); 
         }
 
         private void ClearSearchBtn_Click(object sender, RoutedEventArgs e)
@@ -432,19 +432,15 @@ namespace AccountsPRO.MVVM.View.Accounts
                 using (SqlConnection conn = new SqlConnection(Settings.Default.strConnetionString))
                 {
                     conn.Open();
-                    string whereClause = " WHERE t.DATAFORMONTH = (SELECT LEFT(DATENAME(MONTH, CONVERT(date, '08/07/2025', 103)), 3) + ' ' + CAST(YEAR(CONVERT(date, '08/07/2025', 103)) AS VARCHAR(4)) AS[MonthYear]) ";
-                    string query = " SELECT r.[Transaction Details],r.[Payment reference],r.[Value Date],r.[Credit (Money In)],r.[Debit (Money Out)],r.[Balance],r.[UTR_ID],t.UTR_ID AS MAPPEDUTR,t.[TOTAL MONEY PAID],t.DATAFORMONTH,(SELECT LEFT(DATENAME(MONTH, CONVERT(date, '08/07/2025', 103)), 3) + ' ' + CAST(YEAR(CONVERT(date, '08/07/2025', 103)) AS VARCHAR(4)) AS[MonthYear]) AS convDATAFORMONTH " +
+                    string whereClause = " WHERE t.DATAFORMONTH = (SELECT LEFT(DATENAME(MONTH, CONVERT(date, [Value Date], 103)), 3) + ' ' + CAST(YEAR(CONVERT(date, [Value Date], 103)) AS VARCHAR(4)) AS[MonthYear]) ";
+                    string query = " SELECT r.[Transaction Details],r.[Payment reference],r.[Value Date],r.[Credit (Money In)],r.[Debit (Money Out)],r.[Balance],r.[UTR_ID],t.UTR_ID AS MAPPEDUTR,t.[TOTAL MONEY PAID],t.DATAFORMONTH,(SELECT LEFT(DATENAME(MONTH, CONVERT(date, [Value Date], 103)), 3) + ' ' + CAST(YEAR(CONVERT(date, [Value Date], 103)) AS VARCHAR(4)) AS[MonthYear]) AS convDATAFORMONTH " +
                                     " FROM UploadBankReceipts r " +
                                     " JOIN UploadsTenantRent t " +
                                         " ON r.[Transaction Details] LIKE '%' + REPLACE(t.[TENANT NAME], ' ', '%') + '%' ";
                     if ((bool)LoadTempchk.IsChecked)
-                        query += " UNION ALL select *,NULL AS MAPPEDUTR,NULL AS[TOTAL MONEY PAID],'' AS DATAFORMONTH,(SELECT LEFT(DATENAME(MONTH, CONVERT(date, '08/07/2025', 103)), 3) + ' ' + CAST(YEAR(CONVERT(date, '08/07/2025', 103)) AS VARCHAR(4)) AS[MonthYear]) AS convDATAFORMONTH from UploadBankReceipts where [Transaction Details] LIKE '%BY:%' ORDER BY r.[Payment reference]  desc ";
+                        query += " UNION ALL select *,NULL AS MAPPEDUTR,NULL AS[TOTAL MONEY PAID],'' AS DATAFORMONTH,(SELECT LEFT(DATENAME(MONTH, CONVERT(date, [Value Date], 103)), 3) + ' ' + CAST(YEAR(CONVERT(date, [Value Date], 103)) AS VARCHAR(4)) AS[MonthYear]) AS convDATAFORMONTH from UploadBankReceipts where [Transaction Details] LIKE '%BY:%' ORDER BY r.[Payment reference]  desc ";
                     else
-                        query += whereClause + " UNION ALL select *,NULL AS MAPPEDUTR,NULL AS[TOTAL MONEY PAID],'' AS DATAFORMONTH,(SELECT LEFT(DATENAME(MONTH, CONVERT(date, '08/07/2025', 103)), 3) + ' ' + CAST(YEAR(CONVERT(date, '08/07/2025', 103)) AS VARCHAR(4)) AS[MonthYear]) AS convDATAFORMONTH from UploadBankReceipts where [Transaction Details] LIKE '%BY:%' ORDER BY r.[Payment reference]  desc ";
-
-
-
-
+                        query += whereClause + " UNION ALL select *,NULL AS MAPPEDUTR,NULL AS[TOTAL MONEY PAID],'' AS DATAFORMONTH,(SELECT LEFT(DATENAME(MONTH, CONVERT(date, [Value Date], 103)), 3) + ' ' + CAST(YEAR(CONVERT(date, [Value Date], 103)) AS VARCHAR(4)) AS[MonthYear]) AS convDATAFORMONTH from UploadBankReceipts where [Transaction Details] LIKE '%BY:%' ORDER BY r.[Payment reference]  desc ";
 
                         //Then new query required for each unit
                         //PAYED BY:HSE.36/111758384273/10-07-2025 17:52:12

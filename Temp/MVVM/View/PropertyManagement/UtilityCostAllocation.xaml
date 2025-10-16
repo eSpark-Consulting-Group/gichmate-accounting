@@ -186,7 +186,7 @@
                     Style="{StaticResource AccountsTextBox}"/>
 
             <Button x:Name="ImportExcelBtn"
-                    Content="Pre-Payement"
+                    Content="Pre-Payment"
                     Width="150"
                     Margin="50,0,0,0"
                     Style="{StaticResource AnimatedRedButton}"

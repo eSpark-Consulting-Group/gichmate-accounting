@@ -33,7 +33,7 @@
             <RowDefinition Height="0"/>
         </Grid.RowDefinitions>
 
-        <StackPanel Grid.Row="0" Orientation="Horizontal">
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Background="#22FFFFFF">
             <Label Style="{StaticResource AccountsLabel}"
                    Content="Property Portfolio Dashboard"
                    FontSize="22" FontWeight="Bold"/>
@@ -47,7 +47,11 @@
             
         </StackPanel>
 
-        <StackPanel Grid.Row="1" Orientation="Horizontal" VerticalAlignment="Center" Grid.ColumnSpan="2">
+        <StackPanel Grid.Row="1" 
+                    Orientation="Horizontal" 
+                    Background="#22FFFFFF"
+                    VerticalAlignment="Center"
+                    Grid.ColumnSpan="2">
             <Label Content="Unit No : "
                    Margin="25,0,0,0"
                    Style="{StaticResource AccountsLabel}"/>
@@ -81,7 +85,7 @@
         </StackPanel>
 
 
-        <StackPanel Grid.Row="2" Margin="10,10,10,10" >
+        <StackPanel Grid.Row="2" Margin="10,10,10,10" Background="#22FFFFFF" >
 
             <DockPanel LastChildFill="True">
 
@@ -101,7 +105,7 @@
 
                 </StackPanel>
 
-                <DataGrid x:Name="TenantsDataGrid"
+                <DataGrid x:Name="TenantsDataGrid" 
                           AutoGenerateColumns="True"
                           CanUserAddRows="False"
                           IsReadOnly="True"
@@ -111,12 +115,21 @@
                           HorizontalContentAlignment="Center"
                           TextBlock.TextAlignment="Center"
                           Margin="0,0,0,0"
-                          />
+                          >
+                    <DataGrid.CellStyle>
+                        <Style TargetType="DataGridCell">
+                            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                            <Setter Property="VerticalAlignment" Value="Center"/>
+                            <Setter Property="TextBlock.TextAlignment" Value="Left"/>
+                        </Style>
+                    </DataGrid.CellStyle>
+
+                </DataGrid>
             </DockPanel>
         </StackPanel>
 
 
-        <StackPanel Grid.Row="3" Orientation="Horizontal">
+        <StackPanel Grid.Row="3" Orientation="Horizontal" Background="#22FFFFFF">
 
 
             <Label Style="{StaticResource AccountsLabel}"
@@ -127,11 +140,11 @@
                      Content="Load" 
                      Style="{StaticResource AnimatedRedButton}"
                      Margin="60,0,0,0" Click="LoadReconciliationBtn_Click"/>
-            <CheckBox x:Name="LoadTempchk" Content="Load Temp" Margin="50,0,0,0" VerticalAlignment="Center"/>
+            <CheckBox x:Name="LoadTempchk" Content="Load All Matched" Margin="50,0,0,0" VerticalAlignment="Center"/>
 
         </StackPanel>
 
-        <StackPanel Grid.Row="4" >
+        <StackPanel Grid.Row="4"  Background="#22FFFFFF">
             <DataGrid x:Name="dgBankReconciliation"
                       Height="280"
                       AutoGenerateColumns="True"
@@ -139,22 +152,23 @@
                       IsReadOnly="True"                      
                       BorderBrush="White"
                       BorderThickness="2"
-                      HorizontalContentAlignment="Center"
-                      TextBlock.TextAlignment="Center"
                       ScrollViewer.HorizontalScrollBarVisibility="Auto"
                       ScrollViewer.VerticalScrollBarVisibility="Auto"
                       Margin="0,0,0,0"
                       SelectionMode="Extended" Width="1174" >
-                
+
+                <DataGrid.CellStyle>
+                    <Style TargetType="DataGridCell">
+                        <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                        <Setter Property="VerticalAlignment" Value="Center"/>
+                        <Setter Property="TextBlock.TextAlignment" Value="Left"/>
+                    </Style>
+                </DataGrid.CellStyle>
             </DataGrid>
             
         </StackPanel>
         
         
-        
-
-
-
         <StackPanel Grid.Row="5"
                     Orientation="Horizontal"
                     VerticalAlignment="Center" 

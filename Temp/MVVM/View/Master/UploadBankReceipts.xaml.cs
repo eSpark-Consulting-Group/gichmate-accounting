@@ -4,6 +4,7 @@ using Microsoft.Win32;
 using Spire.Pdf.Texts;
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.Data;
 using System.Text.RegularExpressions;
 using System.Windows;
@@ -16,28 +17,37 @@ namespace AccountsPRO.MVVM.View.Master
     /// </summary>
     public partial class UploadBankReceipts : Window
     {
+        private DataTable dt = new DataTable();
+
         public UploadBankReceipts()
         {
             InitializeComponent();
-            LoadDataFromDatabase();   // ✅ load data by default when window opens
+            LoadDataFromDatabase();   
         }
 
         private void LoadDataFromDatabase()
         {
             try
             {
+                dt.Clear();
                 using (SqlConnection con = new SqlConnection(Settings.Default.strConnetionString))
                 {
                     con.Open();
-                    string query = "SELECT [Transaction Details], [Payment Reference], [Value Date], [Credit (Money In)], [Debit (Money Out)], Balance FROM UploadBankReceipts";
+                    string query = "SELECT [Transaction Details], [Payment Reference], [Value Date], [Credit (Money In)], [Debit (Money Out)], Balance, UTR_ID FROM UploadBankReceipts WHERE UTR_ID IS NULL";
 
                     SqlDataAdapter da = new SqlDataAdapter(query, con);
-                    DataTable dt = new DataTable();
                     da.Fill(dt);
 
                     if (dt != null && dt.Rows.Count > 0)
                     {
+                        //dt.Columns.Add("IsSelected", Type.GetType("CheckBox"));
+                        dt.Columns.Add("IsSelected", typeof(bool));
+
                         BankReceiptsDataGrid.ItemsSource = dt.DefaultView;
+                        AddTotalRow(true); //the true is the reason total row would appear the the top btw
+
+                        MessageBox.Show($"Rows in DT: {dt.Rows.Count}");
+
                     }
                 }
             }
@@ -81,6 +91,8 @@ namespace AccountsPRO.MVVM.View.Master
             dataTable.Columns.Add("Credit(Money In)");
             dataTable.Columns.Add("Debit(Money Out)");
             dataTable.Columns.Add("Balance");
+
+
             for (int i = 0; i <= doc.Pages.Count - 1; i++)
             {
                 //Create a PdfTextExtractot object
@@ -266,9 +278,155 @@ namespace AccountsPRO.MVVM.View.Master
 
         }
 
-        private void SearchBtn_Click(object sender, RoutedEventArgs e)
+        private void SearchTextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-
+            FilterAccounts(SearchTextBox.Text);
         }
+
+        private void FilterAccounts(string searchText)
+        {
+            try
+            {
+                if (BankReceiptsDataGrid.ItemsSource is DataView view)
+                {
+                    if (string.IsNullOrWhiteSpace(searchText))
+                    {
+                        view.RowFilter = "";
+                        return;
+                    }
+
+                    string text = searchText.Replace("'", "''"); 
+
+                    // to update the values in rowfilter by reconcile button
+                    //on click check check boxes in datagrid
+
+                    view.RowFilter = string.Format(
+                        "CONVERT([Transaction Details], 'System.String') LIKE '%{0}%' OR " +
+                        "CONVERT([Payment Reference], 'System.String') LIKE '%{0}%' OR " +
+                        "CONVERT([Value Date], 'System.String') LIKE '%{0}%' OR " +
+                        "CONVERT([Credit (Money In)], 'System.String') LIKE '%{0}%' OR " +
+                        "CONVERT([Debit (Money Out)], 'System.String') LIKE '%{0}%' OR " +
+                        "CONVERT([Balance], 'System.String') LIKE '%{0}%'",
+                        text
+                    );
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error while filtering: " + ex.Message);
+            }
+        }
+
+        //reconcile records
+        private void ReconcileBtn_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                if (dt == null || dt.Rows.Count == 0)
+                {
+                    MessageBox.Show("No data available to reconcile.");
+                    return;
+                }
+
+                using (SqlConnection con = new SqlConnection(Settings.Default.strConnetionString))
+                {
+                    con.Open();
+
+                    int updatedCount = 0;
+
+                    foreach (DataRow row in dt.Rows)
+                    {
+                        if (dt.Columns.Contains("IsSelected") &&
+                            row["IsSelected"] != DBNull.Value &&
+                            Convert.ToBoolean(row["IsSelected"]))
+                        {
+                            string paymentRef = row["Payment Reference"]?.ToString()?.Trim() ?? "";
+                            string valueDate = row["Value Date"]?.ToString()?.Trim() ?? "";
+
+                            if (string.IsNullOrEmpty(paymentRef) || string.IsNullOrEmpty(valueDate))
+                                continue;
+
+                            string query = @"
+                        UPDATE TOP (1) UploadBankReceipts
+                        SET UTR_ID = 0
+                        WHERE UTR_ID IS NULL
+                          AND [Payment Reference] = @PaymentRef
+                          AND [Value Date] = @ValueDate";
+
+                            using (SqlCommand cmd = new SqlCommand(query, con))
+                            {
+                                cmd.Parameters.AddWithValue("@PaymentRef", paymentRef);
+                                cmd.Parameters.AddWithValue("@ValueDate", valueDate);
+                                updatedCount += cmd.ExecuteNonQuery();
+                            }
+                        }
+                    }
+
+                    // Reload table after reconciliation
+                    string reloadQuery = "SELECT [Transaction Details], [Payment Reference], [Value Date], [Credit (Money In)], [Debit (Money Out)], Balance, UTR_ID FROM UploadBankReceipts WHERE UTR_ID IS NULL";
+                    SqlDataAdapter da = new SqlDataAdapter(reloadQuery, con);
+                    dt.Clear();
+                    da.Fill(dt);
+
+                    if (!dt.Columns.Contains("IsSelected"))
+                        dt.Columns.Add("IsSelected", typeof(bool));
+
+                    BankReceiptsDataGrid.ItemsSource = dt.DefaultView;
+                    AddTotalRow(true);
+
+                    MessageBox.Show($"{updatedCount} record(s) reconciled successfully.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error Reconciling: " + ex.Message);
+            }
+        }
+
+        //this will add total rows in the column fields
+        private void AddTotalRow(bool showOnTop = false)
+        {
+            try
+            {
+                if (dt == null || dt.Rows.Count == 0)
+                    return;
+
+                //Remove theold TOTAL row if exists
+                foreach (DataRow row in dt.Select("[Transaction Details] = 'TOTAL'"))
+                    dt.Rows.Remove(row);
+
+                // Compute totals
+                double totalCredit = 0, totalDebit = 0, totalBalance = 0;
+                foreach (DataRow row in dt.Rows)
+                {
+                    double.TryParse(row["Credit (Money In)"]?.ToString().Replace(",", ""), out double credit);
+                    double.TryParse(row["Debit (Money Out)"]?.ToString().Replace(",", ""), out double debit);
+                    double.TryParse(row["Balance"]?.ToString().Replace(",", ""), out double balance);
+
+                    totalCredit += credit;
+                    totalDebit += debit;
+                    totalBalance += balance;
+                }
+
+                // Create total row
+                DataRow totalRow = dt.NewRow();
+                totalRow["Transaction Details"] = "TOTAL";
+                totalRow["Credit (Money In)"] = totalCredit.ToString("N2");
+                totalRow["Debit (Money Out)"] = totalDebit.ToString("N2");
+                totalRow["Balance"] = totalBalance.ToString("N2");
+
+                //Add to top or bottom 
+                if (showOnTop)
+                    dt.Rows.InsertAt(totalRow, 0);
+                else
+                    dt.Rows.Add(totalRow);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error adding total row: " + ex.Message);
+            }
+        }
+
+
     }
 }

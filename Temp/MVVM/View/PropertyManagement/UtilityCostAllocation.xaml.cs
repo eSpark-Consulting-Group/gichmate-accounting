@@ -438,7 +438,7 @@ namespace AccountsPro.MVVM.View.PropertyManagement
                     using (SqlConnection conn = new SqlConnection(Settings.Default.strConnetionString))
                     {
                         string query = "SELECT [UTR_ID],[UNIT NO],[TENANT NAME],COALESCE([EXPECTED RENT],0) AS [EXPECTED RENT],COALESCE([WATER],0) AS [WATER],COALESCE([SANITATION],0) AS [SANITATION],COALESCE([RENT RECEIVED],0) AS [RENT RECEIVED],COALESCE([DEPOSIT],0) AS [DEPOSIT],COALESCE([ARREAS PAID (RENT)],0) AS [ARREAS PAID (RENT)],COALESCE([ARREAS PAID(UTILITIES)],0) AS [ARREAS PAID(UTILITIES)],COALESCE([PREPAYMENT],0) AS [PREPAYMENT],COALESCE([TOTAL MONEY PAID],0) AS [TOTAL MONEY PAID],COALESCE([ARREAS B/F],0) AS [ARREAS B/F],COALESCE([ARREAS],0) AS [ARREAS],COALESCE([ARREAS C/F],0) AS [ARREAS C/F],[BANK PAID],[EXTRA COMMENTS],[FILE PATH],[UPLOADTIME],[DATAFORMONTH],[IsVchrProcesd],[GAS],[ELECTRICITY],[INTERNET],[TV],[LAUNDRY],[MISC] " +
-                            " FROM UploadsTenantRent WHERE [UNIT NO] = '" + dr["UNIT NO"].ToString() + "' AND [DATAFORMONTH] LIKE '" + new DateTime(chosenMonth.Year, chosenMonth.Month + 1, 1).ToString("MMM yyyy") + "' AND Coalesce(IsVchrProcesd,0) = 0 ";//AND COALESCE(Vchrid,0)=0
+                            " FROM UploadsTenantRent WHERE [UNIT NO] = '" + dr["UNIT NO"].ToString() + "' AND [DATAFORMONTH] LIKE '" + chosenMonth.AddMonths(1).ToString("MMM yyyy") + "' AND Coalesce(IsVchrProcesd,0) = 0 ";//AND COALESCE(Vchrid,0)=0
                         SqlCommand cmd = new SqlCommand(query, conn);
                         conn.Open();
                         SqlDataAdapter da = new SqlDataAdapter(query, conn);
@@ -489,7 +489,7 @@ namespace AccountsPro.MVVM.View.PropertyManagement
                                 cmd.Parameters.AddWithValue("@ExtraComments", dr["EXTRA COMMENTS"].ToString() + "--ProcessUploaded");
                                 cmd.Parameters.AddWithValue("@filePath", dr["FILE PATH"].ToString());
                                 cmd.Parameters.AddWithValue("@uploadTime", DateTime.Now);
-                                cmd.Parameters.AddWithValue("@Month", new DateTime(chosenMonth.Year, chosenMonth.Month + 1, 1).ToString("MMM yyyy")); //dr["DATAFORMONTH"].ToString()//new DateTime(chosenMonth.Year, chosenMonth.Month + 1, 1)
+                                cmd.Parameters.AddWithValue("@Month", chosenMonth.AddMonths(1).ToString("MMM yyyy")); //dr["DATAFORMONTH"].ToString()//new DateTime(chosenMonth.Year, chosenMonth.Month + 1, 1)
                                 cmd.Parameters.AddWithValue("@Gas", 0m);
                                 cmd.Parameters.AddWithValue("@Electric", 0m);
                                 cmd.Parameters.AddWithValue("@internet", 0m);
@@ -508,7 +508,7 @@ namespace AccountsPro.MVVM.View.PropertyManagement
                         using (SqlConnection conn = new SqlConnection(Settings.Default.strConnetionString))
                         {
                             string query = "SELECT [UTR_ID],[UNIT NO],[TENANT NAME],COALESCE([EXPECTED RENT],0) AS [EXPECTED RENT],COALESCE([WATER],0) AS [WATER],COALESCE([SANITATION],0) AS [SANITATION],COALESCE([RENT RECEIVED],0) AS [RENT RECEIVED],COALESCE([DEPOSIT],0) AS [DEPOSIT],COALESCE([ARREAS PAID (RENT)],0) AS [ARREAS PAID (RENT)],COALESCE([ARREAS PAID(UTILITIES)],0) AS [ARREAS PAID(UTILITIES)],COALESCE([PREPAYMENT],0) AS [PREPAYMENT],COALESCE([TOTAL MONEY PAID],0) AS [TOTAL MONEY PAID],COALESCE([ARREAS B/F],0) AS [ARREAS B/F],COALESCE([ARREAS],0) AS [ARREAS],COALESCE([ARREAS C/F],0) AS [ARREAS C/F],[BANK PAID],[EXTRA COMMENTS],[FILE PATH],[UPLOADTIME],[DATAFORMONTH],[IsVchrProcesd],[GAS],[ELECTRICITY],[INTERNET],[TV],[LAUNDRY],[MISC] " +
-                                " FROM UploadsTenantRent WHERE [UNIT NO] = '" + dr["UNIT NO"].ToString() + "' AND [DATAFORMONTH] LIKE '" + new DateTime(chosenMonth.Year, chosenMonth.Month + 1, 1).ToString("MMM yyyy") + "' AND Coalesce(IsVchrProcesd,0) = 0 ";//AND COALESCE(Vchrid,0)=0
+                                " FROM UploadsTenantRent WHERE [UNIT NO] = '" + dr["UNIT NO"].ToString() + "' AND [DATAFORMONTH] LIKE '" + chosenMonth.AddMonths(1).ToString("MMM yyyy") + "' AND Coalesce(IsVchrProcesd,0) = 0 ";//AND COALESCE(Vchrid,0)=0
                             SqlCommand cmd = new SqlCommand(query, conn);
                             conn.Open();
                             SqlDataAdapter da = new SqlDataAdapter(query, conn);
@@ -559,7 +559,7 @@ namespace AccountsPro.MVVM.View.PropertyManagement
                                     cmd.Parameters.AddWithValue("@ExtraComments", dr["EXTRA COMMENTS"].ToString() + "--ProcessUploaded");
                                     cmd.Parameters.AddWithValue("@filePath", dr["FILE PATH"].ToString());
                                     cmd.Parameters.AddWithValue("@uploadTime", DateTime.Now);
-                                    cmd.Parameters.AddWithValue("@Month", new DateTime(chosenMonth.Year, chosenMonth.Month + 1, 1).ToString("MMM yyyy")); //dr["DATAFORMONTH"].ToString()//new DateTime(chosenMonth.Year, chosenMonth.Month + 1, 1)
+                                    cmd.Parameters.AddWithValue("@Month", chosenMonth.AddMonths(1).ToString("MMM yyyy")); //dr["DATAFORMONTH"].ToString()//new DateTime(chosenMonth.Year, chosenMonth.Month + 1, 1)
                                     cmd.Parameters.AddWithValue("@Gas", 0m);
                                     cmd.Parameters.AddWithValue("@Electric", 0m);
                                     cmd.Parameters.AddWithValue("@internet", 0m);
@@ -689,7 +689,6 @@ namespace AccountsPro.MVVM.View.PropertyManagement
                         POSHelper.TranLogMethod(0m, amount, FromAccountId, ToAccountId, iVchrTranId, iVchrNo, AniHelper.vchrTranLog.VchrType, AniHelper.vchrTranLog.UserId, "Main", AniHelper.vchrTranLog.VchrType, chosenMonth.ToString());
                         POSHelper.TranLogMethod(amount, 0m, ToAccountId, FromAccountId, iVchrTranId, iVchrNo, AniHelper.vchrTranLog.VchrType, AniHelper.vchrTranLog.UserId, "Sub", AniHelper.vchrTranLog.VchrType, chosenMonth.ToString());
                     }
-                    //btnClear_Click(null, null);
 
                     using (SqlConnection conn = new SqlConnection(Settings.Default.strConnetionString))
                     {
@@ -723,9 +722,7 @@ namespace AccountsPro.MVVM.View.PropertyManagement
             
                 if(mrs== MessageBoxResult.Yes)
                     ProcessPrepaymentVouchers();
-
         }
-
 
 
         //below added fucntion will create a csv file
